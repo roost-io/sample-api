@@ -1,0 +1,11 @@
+sessionId,userId,externalReferenceId,authenticated,locale,currency,cartId,clientIpAddress,domain,expiresIn,themeId,sessionTag
+S12345,U12345,ER12345,true,en_US,USD,C12345,192.168.1.1,drh-api-ot04.digitalriverws.net,86397,T12345,session_tag1
+S12346,U12346,ER12346,false,en_GB,EUR,C12346,192.168.1.2,drh-api-ot04.digitalriverws.net,86397,T12346,session_tag2
+S12347,U12347,ER12347,true,fr_FR,GBP,C12347,192.168.1.3,drh-api-ot04.digitalriverws.net,86397,T12347,session_tag3
+S12348,U12348,ER12348,false,en_US,CAD,C12348,192.168.1.4,drh-api-ot04.digitalriverws.net,86397,T12348,session_tag4
+S12349,U12349,ER12349,true,es_ES,AUD,C12349,192.168.1.5,drh-api-ot04.digitalriverws.net,86397,T12349,session_tag5
+S12350,U12350,ER12350,false,de_DE,JPY,C12350,192.168.1.6,drh-api-ot04.digitalriverws.net,86397,T12350,session_tag6
+S12351,U12351,ER12351,true,it_IT,INR,C12351,192.168.1.7,drh-api-ot04.digitalriverws.net,86397,T12351,session_tag7
+S12352,U12352,ER12352,false,pt_BR,CNY,C12352,192.168.1.8,drh-api-ot04.digitalriverws.net,86397,T12352,session_tag8
+S12353,U12353,ER12353,true,ru_RU,BRL,C12353,192.168.1.9,drh-api-ot04.digitalriverws.net,86397,T12353,session_tag9
+S12354,U12354,ER12354,false,ja_JP,ZAR,C12354,192.168.1.10,drh-api-ot04.digitalriverws.net,86397,T12354,session_tag10

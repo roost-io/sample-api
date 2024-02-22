@@ -1,0 +1,11 @@
+token,expand,fields,statusCode
+123abc,users,firstName,200
+456def,profiles,lastName,200
+789ghi,users,externalReferenceId,200
+012jkl,profiles,emailAddress,200
+345mno,users,locale,200
+678pqr,profiles,currency,200
+901stu,users,sendMail,200
+234vwx,profiles,sendEmail,200
+567yz,users,firstName,200
+890ab,profiles,lastName,200
