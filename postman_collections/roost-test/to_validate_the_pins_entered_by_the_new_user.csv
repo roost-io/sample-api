@@ -1,0 +1,11 @@
+sourcePin,targetPin,customerId,accountNumber,ssn,statusCode,scenario
+sourcePin1,targetPin1,1045300,1042345,104531234,200,PINs matched
+sourcePin2,targetPin2,1045301,1042346,104531235,401,Error: Authorisation failed.
+sourcePin3,targetPin3,1045302,1042347,104531236,404,Error: Not Found
+sourcePin4,targetPin4,1045303,1042348,104531237,200,PINs matched
+sourcePin5,targetPin5,1045304,1042349,104531238,401,Error: Authorisation failed.
+sourcePin6,targetPin6,1045305,1042350,104531239,404,Error: Not Found
+sourcePin7,targetPin7,1045306,1042351,104531240,200,PINs matched
+sourcePin8,targetPin8,1045307,1042352,104531241,401,Error: Authorisation failed.
+sourcePin9,targetPin9,1045308,1042353,104531242,404,Error: Not Found
+sourcePin10,targetPin10,1045309,1042354,104531243,200,PINs matched

@@ -1,0 +1,1166 @@
+{
+  "item": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    {
+      "id": "501fb413-39f1-4ba1-8725-f337508fba61",
+      "name": "to validate the exiting user",
+      "request": {
+        "name": "to validate the exiting user",
+        "description": {
+          "content": "to validate the in of existing user",
+          "type": "text/plain"
+        },
+        "url": {
+          "path": [
+            "validateUser"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "header": [
+          {
+            "disabled": false,
+            "key": "koreUserId",
+            "value": "{{koreUserId}}",
+            "description": ""
+          },
+          {
+            "disabled": false,
+            "description": "(Required) ",
+            "key": "botId",
+            "value": "{{botId}}"
+          },
+          {
+            "disabled": false,
+            "description": "(Required) ",
+            "key": "accountId",
+            "value": "{{accountId}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "POST",
+        "auth": null,
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"sourcePin\": \"{{sourcePin}}\",\n    \"targetPin\": \"{{targetPin}}\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": [
+        {
+          "id": "8923ad1b-df42-4a50-80f4-3cfd34e4c0f8",
+          "name": "PINs matched",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "validateUser"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: bearer",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "{{Authorization}}"
+              },
+              {
+                "disabled": false,
+                "key": "koreUserId",
+                "value": "{{koreUserId}}",
+                "description": ""
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "botId",
+                "value": "{{botId}}"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "accountId",
+                "value": "{{accountId}}"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "Authorization",
+                "value": "{{Authorization}}"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"sourcePin\": \"{{sourcePin}}\",\n    \"targetPin\": \"{{targetPin}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        },
+        {
+          "id": "f299e84f-0d88-4662-af07-16487246a924",
+          "name": "Error: Authorisation failed.",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "validateUser"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: bearer",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "{{Authorization}}"
+              },
+              {
+                "disabled": false,
+                "key": "koreUserId",
+                "value": "{{koreUserId}}",
+                "description": ""
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "botId",
+                "value": "{{botId}}"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "accountId",
+                "value": "{{accountId}}"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "Authorization",
+                "value": "{{Authorization}}"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"sourcePin\": \"{{sourcePin}}\",\n    \"targetPin\": \"{{targetPin}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "Unauthorized",
+          "code": 401,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"err\": {\n    \"message\": \"sint ea cillum consequat sit\"\n  }\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "id": "bb6c31ee-b5e1-4bd3-a876-f25b55be19ea",
+          "name": "Error: Not Found",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "validateUser"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: bearer",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "{{Authorization}}"
+              },
+              {
+                "disabled": false,
+                "key": "koreUserId",
+                "value": "{{koreUserId}}",
+                "description": ""
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "botId",
+                "value": "{{botId}}"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "accountId",
+                "value": "{{accountId}}"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "Authorization",
+                "value": "{{Authorization}}"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"sourcePin\": \"{{sourcePin}}\",\n    \"targetPin\": \"{{targetPin}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "Not Found",
+          "code": 404,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"err\": {\n    \"message\": \"sint ea cillum consequat sit\"\n  }\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              " \n// ********RoostGPT********\n/*\nTest generated by RoostGPT for test roost-test using AI Type Open AI and AI Model gpt-4\n\n\nTest generated for /validateUser for http method type post in postman framework\n\n*/\n\n// ********RoostGPT********\n\nlet responseData;\nconst contentType = pm.response.headers.get('Content-Type');\nif(contentType === \"application/xml\"){\n    responseData = xml2Json(responseBody);\n} else{\n    responseData = pm.response.json();\n}\nif (pm.variables.get(\"statusCode\")) {\n  // Compare the statusCode variable with the response code for assertion\n  pm.expect(parseInt(pm.variables.get(\"statusCode\"))).to.be.equal(pm.response.code);\n}\n\n// let responseTime = 800\n// pm.expect(pm.response.responseTime).to.be.below(responseTime);\n\nif (pm.response.code == 200){\n    pm.test(\"PINs matched\", function () {\n      pm.expect(pm.response.status).to.be.eql(\"OK\");});\n}\n\nif (pm.response.code == 401){\n    pm.test(\"Error: Authorisation failed.\", function () {\n      pm.expect(pm.response.status).to.be.eql(\"Unauthorized\");\n    if(Array.isArray(responseData)) {\n      pm.test('Response has the `err` field',function(){\n        if(pm.expect(responseData[0]).to.have.nested.property(`err`)){\n          if(pm.expect(_.get(responseData[0], `err`, 200)).to.exist){\n            pm.expect(typeof _.get(responseData[0], `err`, 200)).to.equal(\"object\");\n          }\n        }\n\n      })\n    } else {\n      pm.test('Response has the `err` field',function(){\n        if(pm.expect(pm.response.json()).to.have.nested.property(`err`)){\n          if(pm.expect(_.get(pm.response.json(), `err`, 200)).to.exist){\n            pm.expect(typeof _.get(pm.response.json(), `err`, 200)).to.equal(\"object\");\n          }\n        }\n\n      })\n    }\n\n    if(Array.isArray(responseData)) {\n      pm.test('Response has the `err.message` field',function(){\n        if(pm.expect(responseData[0]).to.have.nested.property(`err.message`)){\n          if(pm.expect(_.get(responseData[0], `err.message`, 200)).to.exist){\n            pm.expect(typeof _.get(responseData[0], `err.message`, 200)).to.equal(\"string\");\n          }\n        }\n\n      })\n    } else {\n      pm.test('Response has the `err.message` field',function(){\n        if(pm.expect(pm.response.json()).to.have.nested.property(`err.message`)){\n          if(pm.expect(_.get(pm.response.json(), `err.message`, 200)).to.exist){\n            pm.expect(typeof _.get(pm.response.json(), `err.message`, 200)).to.equal(\"string\");\n          }\n        }\n\n      })\n    }\n});\n}\n\nif (pm.response.code == 404){\n    pm.test(\"Error: Not Found\", function () {\n      pm.expect(pm.response.status).to.be.eql(\"Not Found\");\n    if(Array.isArray(responseData)) {\n      pm.test('Response has the `err` field',function(){\n        if(pm.expect(responseData[0]).to.have.nested.property(`err`)){\n          if(pm.expect(_.get(responseData[0], `err`, 200)).to.exist){\n            pm.expect(typeof _.get(responseData[0], `err`, 200)).to.equal(\"object\");\n          }\n        }\n\n      })\n    } else {\n      pm.test('Response has the `err` field',function(){\n        if(pm.expect(pm.response.json()).to.have.nested.property(`err`)){\n          if(pm.expect(_.get(pm.response.json(), `err`, 200)).to.exist){\n            pm.expect(typeof _.get(pm.response.json(), `err`, 200)).to.equal(\"object\");\n          }\n        }\n\n      })\n    }\n\n    if(Array.isArray(responseData)) {\n      pm.test('Response has the `err.message` field',function(){\n        if(pm.expect(responseData[0]).to.have.nested.property(`err.message`)){\n          if(pm.expect(_.get(responseData[0], `err.message`, 200)).to.exist){\n            pm.expect(typeof _.get(responseData[0], `err.message`, 200)).to.equal(\"string\");\n          }\n        }\n\n      })\n    } else {\n      pm.test('Response has the `err.message` field',function(){\n        if(pm.expect(pm.response.json()).to.have.nested.property(`err.message`)){\n          if(pm.expect(_.get(pm.response.json(), `err.message`, 200)).to.exist){\n            pm.expect(typeof _.get(pm.response.json(), `err.message`, 200)).to.equal(\"string\");\n          }\n        }\n\n      })\n    }\n});\n}\n"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "1994cbe2-4d8b-4d9a-8287-543be8c659cb",
+      "name": "to validate the pins entered by the new user",
+      "request": {
+        "name": "to validate the pins entered by the new user",
+        "description": {
+          "content": "to validate the pins entered by the new user",
+          "type": "text/plain"
+        },
+        "url": {
+          "path": [
+            "validatePIN"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "header": [
+          {
+            "disabled": false,
+            "key": "koreUserId",
+            "value": "{{koreUserId}}",
+            "description": ""
+          },
+          {
+            "disabled": false,
+            "description": "(Required) ",
+            "key": "botId",
+            "value": "{{botId}}"
+          },
+          {
+            "disabled": false,
+            "description": "(Required) ",
+            "key": "accountId",
+            "value": "{{accountId}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "POST",
+        "auth": null,
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"sourcePin\": \"{{sourcePin}}\",\n    \"targetPin\": \"{{targetPin}}\",\n    \"profileInfo\": {\n        \"customerId\": \"{{customerId}}\",\n        \"accountNumber\": \"{{accountNumber}}\",\n        \"ssn\": \"{{ssn}}\"\n    }\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": [
+        {
+          "id": "470cf23c-c02f-4c8d-b14b-ad6d5aa6688e",
+          "name": "PINs matched",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "validatePIN"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: bearer",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "{{Authorization}}"
+              },
+              {
+                "disabled": false,
+                "key": "koreUserId",
+                "value": "{{koreUserId}}",
+                "description": ""
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "botId",
+                "value": "{{botId}}"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "accountId",
+                "value": "{{accountId}}"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "Authorization",
+                "value": "{{Authorization}}"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"sourcePin\": \"{{sourcePin}}\",\n    \"targetPin\": \"{{targetPin}}\",\n    \"profileInfo\": {\n        \"customerId\": \"{{customerId}}\",\n        \"accountNumber\": \"{{accountNumber}}\",\n        \"ssn\": \"{{ssn}}\"\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        },
+        {
+          "id": "9c6cd4da-a434-406d-96ae-017a304d5e07",
+          "name": "Error: Authorisation failed.",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "validatePIN"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: bearer",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "{{Authorization}}"
+              },
+              {
+                "disabled": false,
+                "key": "koreUserId",
+                "value": "{{koreUserId}}",
+                "description": ""
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "botId",
+                "value": "{{botId}}"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "accountId",
+                "value": "{{accountId}}"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "Authorization",
+                "value": "{{Authorization}}"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"sourcePin\": \"{{sourcePin}}\",\n    \"targetPin\": \"{{targetPin}}\",\n    \"profileInfo\": {\n        \"customerId\": \"{{customerId}}\",\n        \"accountNumber\": \"{{accountNumber}}\",\n        \"ssn\": \"{{ssn}}\"\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "Unauthorized",
+          "code": 401,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"err\": {\n    \"message\": \"sint ea cillum consequat sit\"\n  }\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "id": "00884c7f-b016-4e45-9307-c5963310aa05",
+          "name": "Error: Not Found",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "validatePIN"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: bearer",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "{{Authorization}}"
+              },
+              {
+                "disabled": false,
+                "key": "koreUserId",
+                "value": "{{koreUserId}}",
+                "description": ""
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "botId",
+                "value": "{{botId}}"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "accountId",
+                "value": "{{accountId}}"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "Authorization",
+                "value": "{{Authorization}}"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"sourcePin\": \"{{sourcePin}}\",\n    \"targetPin\": \"{{targetPin}}\",\n    \"profileInfo\": {\n        \"customerId\": \"{{customerId}}\",\n        \"accountNumber\": \"{{accountNumber}}\",\n        \"ssn\": \"{{ssn}}\"\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "Not Found",
+          "code": 404,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"err\": {\n    \"message\": \"sint ea cillum consequat sit\"\n  }\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              " \n// ********RoostGPT********\n/*\nTest generated by RoostGPT for test roost-test using AI Type Open AI and AI Model gpt-4\n\n\nTest generated for /validatePIN for http method type post in postman framework\n\n*/\n\n// ********RoostGPT********\n\nlet responseData;\nconst contentType = pm.response.headers.get('Content-Type');\nif(contentType === \"application/xml\"){\n    responseData = xml2Json(responseBody);\n} else{\n    responseData = pm.response.json();\n}\nif (pm.variables.get(\"statusCode\")) {\n  // Compare the statusCode variable with the response code for assertion\n  pm.expect(parseInt(pm.variables.get(\"statusCode\"))).to.be.equal(pm.response.code);\n}\n\n// let responseTime = 800\n// pm.expect(pm.response.responseTime).to.be.below(responseTime);\n\nif (pm.response.code == 200){\n    pm.test(\"PINs matched\", function () {\n      pm.expect(pm.response.status).to.be.eql(\"OK\");});\n}\n\nif (pm.response.code == 401){\n    pm.test(\"Error: Authorisation failed.\", function () {\n      pm.expect(pm.response.status).to.be.eql(\"Unauthorized\");\n    if(Array.isArray(responseData)) {\n      pm.test('Response has the `err` field',function(){\n        if(pm.expect(responseData[0]).to.have.nested.property(`err`)){\n          if(pm.expect(_.get(responseData[0], `err`, 200)).to.exist){\n            pm.expect(typeof _.get(responseData[0], `err`, 200)).to.equal(\"object\");\n          }\n        }\n\n      })\n    } else {\n      pm.test('Response has the `err` field',function(){\n        if(pm.expect(pm.response.json()).to.have.nested.property(`err`)){\n          if(pm.expect(_.get(pm.response.json(), `err`, 200)).to.exist){\n            pm.expect(typeof _.get(pm.response.json(), `err`, 200)).to.equal(\"object\");\n          }\n        }\n\n      })\n    }\n\n    if(Array.isArray(responseData)) {\n      pm.test('Response has the `err.message` field',function(){\n        if(pm.expect(responseData[0]).to.have.nested.property(`err.message`)){\n          if(pm.expect(_.get(responseData[0], `err.message`, 200)).to.exist){\n            pm.expect(typeof _.get(responseData[0], `err.message`, 200)).to.equal(\"string\");\n          }\n        }\n\n      })\n    } else {\n      pm.test('Response has the `err.message` field',function(){\n        if(pm.expect(pm.response.json()).to.have.nested.property(`err.message`)){\n          if(pm.expect(_.get(pm.response.json(), `err.message`, 200)).to.exist){\n            pm.expect(typeof _.get(pm.response.json(), `err.message`, 200)).to.equal(\"string\");\n          }\n        }\n\n      })\n    }\n});\n}\n\nif (pm.response.code == 404){\n    pm.test(\"Error: Not Found\", function () {\n      pm.expect(pm.response.status).to.be.eql(\"Not Found\");\n    if(Array.isArray(responseData)) {\n      pm.test('Response has the `err` field',function(){\n        if(pm.expect(responseData[0]).to.have.nested.property(`err`)){\n          if(pm.expect(_.get(responseData[0], `err`, 200)).to.exist){\n            pm.expect(typeof _.get(responseData[0], `err`, 200)).to.equal(\"object\");\n          }\n        }\n\n      })\n    } else {\n      pm.test('Response has the `err` field',function(){\n        if(pm.expect(pm.response.json()).to.have.nested.property(`err`)){\n          if(pm.expect(_.get(pm.response.json(), `err`, 200)).to.exist){\n            pm.expect(typeof _.get(pm.response.json(), `err`, 200)).to.equal(\"object\");\n          }\n        }\n\n      })\n    }\n\n    if(Array.isArray(responseData)) {\n      pm.test('Response has the `err.message` field',function(){\n        if(pm.expect(responseData[0]).to.have.nested.property(`err.message`)){\n          if(pm.expect(_.get(responseData[0], `err.message`, 200)).to.exist){\n            pm.expect(typeof _.get(responseData[0], `err.message`, 200)).to.equal(\"string\");\n          }\n        }\n\n      })\n    } else {\n      pm.test('Response has the `err.message` field',function(){\n        if(pm.expect(pm.response.json()).to.have.nested.property(`err.message`)){\n          if(pm.expect(_.get(pm.response.json(), `err.message`, 200)).to.exist){\n            pm.expect(typeof _.get(pm.response.json(), `err.message`, 200)).to.equal(\"string\");\n          }\n        }\n\n      })\n    }\n});\n}\n"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "954e4a07-6757-4e5e-b0e1-e128ad3504b3",
+      "name": "to validate if pin entered by new user follows pin rules",
+      "request": {
+        "name": "to validate if pin entered by new user follows pin rules",
+        "description": {
+          "content": "to validate if pin entered by new user follows pin rules",
+          "type": "text/plain"
+        },
+        "url": {
+          "path": [
+            "validatePINRules"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "header": [
+          {
+            "disabled": false,
+            "key": "koreUserId",
+            "value": "{{koreUserId}}",
+            "description": ""
+          },
+          {
+            "disabled": false,
+            "description": "(Required) ",
+            "key": "botId",
+            "value": "{{botId}}"
+          },
+          {
+            "disabled": false,
+            "description": "(Required) ",
+            "key": "accountId",
+            "value": "{{accountId}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "POST",
+        "auth": null,
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"sourcePin\": \"{{sourcePin}}\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": [
+        {
+          "id": "a91d6119-76dc-4d6b-9cdf-eed166841808",
+          "name": "PIN rules satisfied",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "validatePINRules"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: bearer",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "{{Authorization}}"
+              },
+              {
+                "disabled": false,
+                "key": "koreUserId",
+                "value": "{{koreUserId}}",
+                "description": ""
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "botId",
+                "value": "{{botId}}"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "accountId",
+                "value": "{{accountId}}"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "Authorization",
+                "value": "{{Authorization}}"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"sourcePin\": \"{{sourcePin}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        },
+        {
+          "id": "66ae9f65-a51e-41f1-8f80-6e9defc4a217",
+          "name": "Error: Authorisation failed.",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "validatePINRules"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: bearer",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "{{Authorization}}"
+              },
+              {
+                "disabled": false,
+                "key": "koreUserId",
+                "value": "{{koreUserId}}",
+                "description": ""
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "botId",
+                "value": "{{botId}}"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "accountId",
+                "value": "{{accountId}}"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "Authorization",
+                "value": "{{Authorization}}"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"sourcePin\": \"{{sourcePin}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "Unauthorized",
+          "code": 401,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"err\": {\n    \"message\": \"sint ea cillum consequat sit\"\n  }\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "id": "7ea7c2bc-088f-4c7a-ab0e-0199669941e1",
+          "name": "Error: Not Found",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "validatePINRules"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: bearer",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "{{Authorization}}"
+              },
+              {
+                "disabled": false,
+                "key": "koreUserId",
+                "value": "{{koreUserId}}",
+                "description": ""
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "botId",
+                "value": "{{botId}}"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "accountId",
+                "value": "{{accountId}}"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "Authorization",
+                "value": "{{Authorization}}"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"sourcePin\": \"{{sourcePin}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "Not Found",
+          "code": 404,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"err\": {\n    \"message\": \"sint ea cillum consequat sit\"\n  }\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              " \n// ********RoostGPT********\n/*\nTest generated by RoostGPT for test roost-test using AI Type Open AI and AI Model gpt-4\n\n\nTest generated for /validatePINRules for http method type post in postman framework\n\n*/\n\n// ********RoostGPT********\n\nlet responseData;\nconst contentType = pm.response.headers.get('Content-Type');\nif(contentType === \"application/xml\"){\n    responseData = xml2Json(responseBody);\n} else{\n    responseData = pm.response.json();\n}\nif (pm.variables.get(\"statusCode\")) {\n  // Compare the statusCode variable with the response code for assertion\n  pm.expect(parseInt(pm.variables.get(\"statusCode\"))).to.be.equal(pm.response.code);\n}\n\n// let responseTime = 800\n// pm.expect(pm.response.responseTime).to.be.below(responseTime);\n\nif (pm.response.code == 200){\n    pm.test(\"PIN rules satisfied\", function () {\n      pm.expect(pm.response.status).to.be.eql(\"OK\");});\n}\n\nif (pm.response.code == 401){\n    pm.test(\"Error: Authorisation failed.\", function () {\n      pm.expect(pm.response.status).to.be.eql(\"Unauthorized\");\n    if(Array.isArray(responseData)) {\n      pm.test('Response has the `err` field',function(){\n        if(pm.expect(responseData[0]).to.have.nested.property(`err`)){\n          if(pm.expect(_.get(responseData[0], `err`, 200)).to.exist){\n            pm.expect(typeof _.get(responseData[0], `err`, 200)).to.equal(\"object\");\n          }\n        }\n\n      })\n    } else {\n      pm.test('Response has the `err` field',function(){\n        if(pm.expect(pm.response.json()).to.have.nested.property(`err`)){\n          if(pm.expect(_.get(pm.response.json(), `err`, 200)).to.exist){\n            pm.expect(typeof _.get(pm.response.json(), `err`, 200)).to.equal(\"object\");\n          }\n        }\n\n      })\n    }\n\n    if(Array.isArray(responseData)) {\n      pm.test('Response has the `err.message` field',function(){\n        if(pm.expect(responseData[0]).to.have.nested.property(`err.message`)){\n          if(pm.expect(_.get(responseData[0], `err.message`, 200)).to.exist){\n            pm.expect(typeof _.get(responseData[0], `err.message`, 200)).to.equal(\"string\");\n          }\n        }\n\n      })\n    } else {\n      pm.test('Response has the `err.message` field',function(){\n        if(pm.expect(pm.response.json()).to.have.nested.property(`err.message`)){\n          if(pm.expect(_.get(pm.response.json(), `err.message`, 200)).to.exist){\n            pm.expect(typeof _.get(pm.response.json(), `err.message`, 200)).to.equal(\"string\");\n          }\n        }\n\n      })\n    }\n});\n}\n\nif (pm.response.code == 404){\n    pm.test(\"Error: Not Found\", function () {\n      pm.expect(pm.response.status).to.be.eql(\"Not Found\");\n    if(Array.isArray(responseData)) {\n      pm.test('Response has the `err` field',function(){\n        if(pm.expect(responseData[0]).to.have.nested.property(`err`)){\n          if(pm.expect(_.get(responseData[0], `err`, 200)).to.exist){\n            pm.expect(typeof _.get(responseData[0], `err`, 200)).to.equal(\"object\");\n          }\n        }\n\n      })\n    } else {\n      pm.test('Response has the `err` field',function(){\n        if(pm.expect(pm.response.json()).to.have.nested.property(`err`)){\n          if(pm.expect(_.get(pm.response.json(), `err`, 200)).to.exist){\n            pm.expect(typeof _.get(pm.response.json(), `err`, 200)).to.equal(\"object\");\n          }\n        }\n\n      })\n    }\n\n    if(Array.isArray(responseData)) {\n      pm.test('Response has the `err.message` field',function(){\n        if(pm.expect(responseData[0]).to.have.nested.property(`err.message`)){\n          if(pm.expect(_.get(responseData[0], `err.message`, 200)).to.exist){\n            pm.expect(typeof _.get(responseData[0], `err.message`, 200)).to.equal(\"string\");\n          }\n        }\n\n      })\n    } else {\n      pm.test('Response has the `err.message` field',function(){\n        if(pm.expect(pm.response.json()).to.have.nested.property(`err.message`)){\n          if(pm.expect(_.get(pm.response.json(), `err.message`, 200)).to.exist){\n            pm.expect(typeof _.get(pm.response.json(), `err.message`, 200)).to.equal(\"string\");\n          }\n        }\n\n      })\n    }\n});\n}\n"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    null,
+    null,
+    null,
+    null,
+    null,
+    {
+      "id": "64faff60-1e95-4ae5-b959-31776ebfb71f",
+      "name": "verifyOTP",
+      "request": {
+        "name": "verifyOTP",
+        "description": {
+          "content": " to verify OTP for reset password",
+          "type": "text/plain"
+        },
+        "url": {
+          "path": [
+            "verifyOTP"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "POST",
+        "auth": null,
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"code\": \"{{code}}\",\n    \"customerId\": \"{{customerId}}\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": [
+        {
+          "id": "0366b50d-7f25-4554-94e8-cbe1b7cff0f4",
+          "name": "OTP verifid successfully",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "verifyOTP"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: bearer",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "{{Authorization}}"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"code\": \"{{code}}\",\n    \"customerId\": \"{{customerId}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        },
+        {
+          "id": "59eb496f-7594-45c1-a261-5161b4dd78e2",
+          "name": "Error: Authorisation failed.",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "verifyOTP"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: bearer",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "{{Authorization}}"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"code\": \"{{code}}\",\n    \"customerId\": \"{{customerId}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "Unauthorized",
+          "code": 401,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"err\": {\n    \"message\": \"sint ea cillum consequat sit\"\n  }\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "id": "e24799e6-f06b-482a-a5f0-c5816f8b20b2",
+          "name": "Error: Not Found",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "verifyOTP"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: bearer",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "{{Authorization}}"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"code\": \"{{code}}\",\n    \"customerId\": \"{{customerId}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "Not Found",
+          "code": 404,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"err\": {\n    \"message\": \"sint ea cillum consequat sit\"\n  }\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              " \n// ********RoostGPT********\n/*\nTest generated by RoostGPT for test roost-test using AI Type Open AI and AI Model gpt-4\n\n\nTest generated for /verifyOTP for http method type post in postman framework\n\n*/\n\n// ********RoostGPT********\n\nlet responseData;\nconst contentType = pm.response.headers.get('Content-Type');\nif(contentType === \"application/xml\"){\n    responseData = xml2Json(responseBody);\n} else{\n    responseData = pm.response.json();\n}\nif (pm.variables.get(\"statusCode\")) {\n  // Compare the statusCode variable with the response code for assertion\n  pm.expect(parseInt(pm.variables.get(\"statusCode\"))).to.be.equal(pm.response.code);\n}\n\n// let responseTime = 800\n// pm.expect(pm.response.responseTime).to.be.below(responseTime);\n\nif (pm.response.code == 200){\n    pm.test(\"OTP verifid successfully\", function () {\n      pm.expect(pm.response.status).to.be.eql(\"OK\");});\n}\n\nif (pm.response.code == 401){\n    pm.test(\"Error: Authorisation failed.\", function () {\n      pm.expect(pm.response.status).to.be.eql(\"Unauthorized\");\n    if(Array.isArray(responseData)) {\n      pm.test('Response has the `err` field',function(){\n        if(pm.expect(responseData[0]).to.have.nested.property(`err`)){\n          if(pm.expect(_.get(responseData[0], `err`, 200)).to.exist){\n            pm.expect(typeof _.get(responseData[0], `err`, 200)).to.equal(\"object\");\n          }\n        }\n\n      })\n    } else {\n      pm.test('Response has the `err` field',function(){\n        if(pm.expect(pm.response.json()).to.have.nested.property(`err`)){\n          if(pm.expect(_.get(pm.response.json(), `err`, 200)).to.exist){\n            pm.expect(typeof _.get(pm.response.json(), `err`, 200)).to.equal(\"object\");\n          }\n        }\n\n      })\n    }\n\n    if(Array.isArray(responseData)) {\n      pm.test('Response has the `err.message` field',function(){\n        if(pm.expect(responseData[0]).to.have.nested.property(`err.message`)){\n          if(pm.expect(_.get(responseData[0], `err.message`, 200)).to.exist){\n            pm.expect(typeof _.get(responseData[0], `err.message`, 200)).to.equal(\"string\");\n          }\n        }\n\n      })\n    } else {\n      pm.test('Response has the `err.message` field',function(){\n        if(pm.expect(pm.response.json()).to.have.nested.property(`err.message`)){\n          if(pm.expect(_.get(pm.response.json(), `err.message`, 200)).to.exist){\n            pm.expect(typeof _.get(pm.response.json(), `err.message`, 200)).to.equal(\"string\");\n          }\n        }\n\n      })\n    }\n});\n}\n\nif (pm.response.code == 404){\n    pm.test(\"Error: Not Found\", function () {\n      pm.expect(pm.response.status).to.be.eql(\"Not Found\");\n    if(Array.isArray(responseData)) {\n      pm.test('Response has the `err` field',function(){\n        if(pm.expect(responseData[0]).to.have.nested.property(`err`)){\n          if(pm.expect(_.get(responseData[0], `err`, 200)).to.exist){\n            pm.expect(typeof _.get(responseData[0], `err`, 200)).to.equal(\"object\");\n          }\n        }\n\n      })\n    } else {\n      pm.test('Response has the `err` field',function(){\n        if(pm.expect(pm.response.json()).to.have.nested.property(`err`)){\n          if(pm.expect(_.get(pm.response.json(), `err`, 200)).to.exist){\n            pm.expect(typeof _.get(pm.response.json(), `err`, 200)).to.equal(\"object\");\n          }\n        }\n\n      })\n    }\n\n    if(Array.isArray(responseData)) {\n      pm.test('Response has the `err.message` field',function(){\n        if(pm.expect(responseData[0]).to.have.nested.property(`err.message`)){\n          if(pm.expect(_.get(responseData[0], `err.message`, 200)).to.exist){\n            pm.expect(typeof _.get(responseData[0], `err.message`, 200)).to.equal(\"string\");\n          }\n        }\n\n      })\n    } else {\n      pm.test('Response has the `err.message` field',function(){\n        if(pm.expect(pm.response.json()).to.have.nested.property(`err.message`)){\n          if(pm.expect(_.get(pm.response.json(), `err.message`, 200)).to.exist){\n            pm.expect(typeof _.get(pm.response.json(), `err.message`, 200)).to.equal(\"string\");\n          }\n        }\n\n      })\n    }\n});\n}\n"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    null
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://localhost:8080/smt",
+      "key": "baseUrl"
+    },
+    {
+      "type": "integer",
+      "value": 200,
+      "key": "statusCode"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "f9a8f295-d8b8-4e8d-8bb4-61982339ab7c",
+    "name": "BankAssist SMT Core Banking API Specification",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "kore.ai banking bot apis.",
+      "type": "text/plain"
+    }
+  }
+}

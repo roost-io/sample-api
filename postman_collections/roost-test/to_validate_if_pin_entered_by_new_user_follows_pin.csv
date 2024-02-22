@@ -1,0 +1,8 @@
+sourcePin,statusCode,scenario
+random_string_1,200,PIN rules satisfied
+random_string_2,401,Error: Authorisation failed.
+random_string_3,404,Error: Not Found
+random_string_4,201,"{\n  \"err\": {\n    \"message\": \"sint ea cillum consequat sit\"\n  }\n}"
+random_string_5,250,"{\n  \"err\": {\n    \"message\": \"sint ea cillum consequat sit\"\n  }\n}"
+random_string_6,300,random_invalid_value_1
+random_string_7,350,random_invalid_value_2

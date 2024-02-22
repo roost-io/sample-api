@@ -1,0 +1,10 @@
+sourcePin,targetPin,statusCode,scenario
+ABC123,XYZ789,200,PINs matched
+XYZ456,ABC789,401,Error: Authorisation failed.
+XYZ123,ABC456,404,Error: Not Found
+ABC789,XYZ123,200,PINs matched
+XYZ789,ABC123,401,Error: Authorisation failed.
+ABC456,XYZ123,404,Error: Not Found
+XYZ789,ABC456,200,PINs matched
+ABC123,XYZ456,401,Error: Authorisation failed.
+XYZ456,ABC123,404,Error: Not Found
