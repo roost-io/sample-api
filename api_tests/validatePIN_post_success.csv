@@ -1,0 +1,11 @@
+koreUserId,botId,accountId,Authorization,statusCode
+user1,botA,acc001,authXYZ,200
+user2,botB,acc002,authABC,201
+user3,botC,acc003,authDEF,202
+user4,botD,acc004,authGHI,203
+user5,botE,acc005,authJKL,204
+user6,botF,acc006,authMNO,205
+user7,botG,acc007,authPQR,206
+user8,botH,acc008,authSTU,207
+user9,botI,acc009,authVWX,208
+user10,botJ,acc010,authYZA,209
