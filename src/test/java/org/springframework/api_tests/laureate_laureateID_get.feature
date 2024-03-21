@@ -43,7 +43,7 @@ Examples:
 | 200        | 422        |
 | 300        | 400        |
 
-Scenario: Verify different data types for laureateID return correct error
+Scenario Outline: Verify different data types for laureateID return correct error
 
 Given path '/2.1/laureate/', 'string'
 When method get
