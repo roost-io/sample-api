@@ -13,7 +13,7 @@
 
       @Test
       void testAll() {
-          String apiHostServer = System.getenv().getOrDefault("API_HOST", https://api.nobelprize.org/);
+          String apiHostServer = System.getenv().getOrDefault("API_HOST", "https://api.nobelprize.org/");
           Results results = Runner.path("classpath:org/springframework/api_tests")
                   .systemProperty("url.base", apiHostServer)
                   .parallel(1);
