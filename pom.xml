@@ -61,5 +61,24 @@
       <scope>compile</scope>
       <!--Dependency added by RoostGPT-->
     </dependency>
+    <dependency>
+      <groupId>com.intuit.karate</groupId>
+      <artifactId>karate-core</artifactId>
+      <version>1.4.1</version>
+      <!--Dependency added by RoostGPT-->
+    </dependency>
+    <dependency>
+      <groupId>io.karatelabs</groupId>
+      <artifactId>karate-debugserver</artifactId>
+      <version>0.1.0</version>
+      <!--Dependency added by RoostGPT-->
+    </dependency>
+    <dependency>
+      <groupId>com.intuit.karate</groupId>
+      <artifactId>karate-junit5</artifactId>
+      <version>1.4.1</version>
+      <scope>test</scope>
+      <!--Dependency added by RoostGPT-->
+    </dependency>
   </dependencies>
 </project>
