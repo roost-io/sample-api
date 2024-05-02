@@ -17,14 +17,14 @@ Solution: Remove any debugging code or make sure it is correctly protected. Ensu
 ================================================================================
 Scenario 1: Standard Success Scenario
 
-Details:  
+Details:
   TestName: testSayHelloReturnsCorrectMessage.
-  Description: This test is meant to check whether the `sayHello` method returns the correct message "Hello world!". 
+  Description: This test is meant to check whether the `sayHello` method returns the correct message "Hello world!".
 Execution:
   Arrange: No setup or mocks required.
   Act: Invoke `sayHello` method.
   Assert: Use JUnit assertions to compare the returned string with the expected string "Hello world!".
-Validation: 
+Validation:
   The assertion aims to verify that `sayHello` method returns the correct output. If the expected result is returned, it means the method works correctly. This test validates the basic functionality of the method.
 */
 
@@ -36,12 +36,13 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class GreeterSayHelloTest {
 
-    @Test
-    public void testSayHelloReturnsCorrectMessage() {
-        Greeter greeter = new Greeter();
-        String expectedMessage = "Hello world!";
-        String actualMessage = greeter.sayHello();
-        
-        assertEquals(expectedMessage, actualMessage, "Expected sayHello method to return 'Hello world!'");
-    }
+	@Test
+	public void testSayHelloReturnsCorrectMessage() {
+		Greeter greeter = new Greeter();
+		String expectedMessage = "Hello world!";
+		String actualMessage = greeter.sayHello();
+
+		assertEquals(expectedMessage, actualMessage, "Expected sayHello method to return 'Hello world!'");
+	}
+
 }
