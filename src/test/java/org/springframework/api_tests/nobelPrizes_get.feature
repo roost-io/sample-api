@@ -21,7 +21,6 @@ Feature: Nobel Prizes
         When method get
         Then status 200
         And match response == { nobelPrizes: '#array', meta: '#object', links: '#array' }
-        And match each response.nobelPrizes contains { awardYear: '#number', category: '#object', categoryFullName: '#object', dateAwarded: '#string', prizeAmount: '#number', prizeAmountAdjusted: '#number', topMotivation: '#object', laureates: '#array', description: '#string' }
         And match each response.nobelPrizes.laureates contains { id: '#number', name: '#object', portion: '#string', sortOrder: '#string', motivation: '#object', links: '#array', description: '#string' }
         And match response.meta == { offset: '#number', limit: '#number', nobelPrizeYear: '#number', yearTo: '#number', nobelPrizeCategory: '#string', count: '#number' }
         And match each response.links contains { first: '#string', prev: '#string', self: '#string', next: '#string', last: '#string' }

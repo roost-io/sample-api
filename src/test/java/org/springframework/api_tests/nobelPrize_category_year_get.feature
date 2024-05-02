@@ -8,39 +8,37 @@
 # 
 
 # ********RoostGPT********
- Feature: Nobel Prize API
+Feature: Nobel Prize API
 
-Background:
-  * def urlBase = '#(karate.properties['url.base'] || karate.get('urlBase', 'http://localhost:8080'))'
-  * url urlBase
-  * def authToken = karate.properties['AUTH_TOKEN']
-  * def headers = { Authorization: '#(authToken)' }
+  Background:
+    * def urlBase = '#(karate.properties['url.base'] || karate.get('urlBase', 'http://localhost:8080'))'
+    * url urlBase
 
-Scenario Outline: Get Nobel Prize by category and year
-  Given path "2.1/nobelPrize", '<category>', '<year>'
-  And headers headers
-  When method get
-  Then status 200
-  And match response == { nobelPrize: '#object' }
-  And match response.nobelPrize.awardYear == '<year>' 
-  And match response.nobelPrize.category == '<category>' 
-  And match response.nobelPrize.categoryFullName == '#string' 
-  And match response.nobelPrize.dateAwarded == '#string'
-  And match response.nobelPrize.prizeAmount == '#number' 
-  And match response.nobelPrize.prizeAmountAdjusted == '#number' 
-  And match response.nobelPrize.topMotivation == '#string' 
-  And match response.nobelPrize.laureates[*].id contains only '#number' 
-  And match response.nobelPrize.laureates[*].name == '#string' 
-  And match response.nobelPrize.laureates[*].portion == '#string' 
-  And match response.nobelPrize.laureates[*].sortOrder == '#string' 
-  And match response.nobelPrize.laureates[*].motivation == '#string' 
-  And match response.nobelPrize.laureates[*].links[*].rel == '#string' 
-  And match response.nobelPrize.laureates[*].links[*].href == '#string' 
-  And match response.nobelPrize.laureates[*].links[*].action == '#string' 
-  And match response.nobelPrize.laureates[*].links[*].types == '#string'
-
-  Examples:
-    | category   | year |
-    | 'physics'  | 1901 |
-    | 'chemistry'| 1902 |
-    | 'medicine' | 1903 |
+  Scenario Outline: Get Nobel Prize by category and year
+    Given path "2.1/nobelPrize", '<category>', '<year>'
+    And headers headers
+    When method get
+    Then status 200
+    And match response == { nobelPrize: '#object' }
+    And match response.nobelPrize.awardYear == '<year>' 
+    And match response.nobelPrize.category == '<category>' 
+    And match response.nobelPrize.categoryFullName == '#string' 
+    And match response.nobelPrize.dateAwarded == '#string'
+    And match response.nobelPrize.prizeAmount == '#number' 
+    And match response.nobelPrize.prizeAmountAdjusted == '#number' 
+    And match response.nobelPrize.topMotivation == '#string' 
+    And match response.nobelPrize.laureates[*].id contains only '#number' 
+    And match response.nobelPrize.laureates[*].name == '#string' 
+    And match response.nobelPrize.laureates[*].portion == '#string' 
+    And match response.nobelPrize.laureates[*].sortOrder == '#string' 
+    And match response.nobelPrize.laureates[*].motivation == '#string' 
+    And match response.nobelPrize.laureates[*].links[*].rel == '#string' 
+    And match response.nobelPrize.laureates[*].links[*].href == '#string' 
+    And match response.nobelPrize.laureates[*].links[*].action == '#string' 
+    And match response.nobelPrize.laureates[*].links[*].types == '#string'
+  
+    Examples:
+      | category   | year |
+      | 'physics'  | 1901 |
+      | 'chemistry'| 1902 |
+      | 'medicine' | 1903 |
