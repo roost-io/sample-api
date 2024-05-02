@@ -1,0 +1,11 @@
+offset^|^limit^|^sort^|^nobelPrizeYear^|^yearTo^|^nobelPrizeCategory^|^format^|^csvLang^|^statusCode
+1^|^10^|^asc^|^2001^|^2010^|^che^|^json^|^en^|^200
+2^|^20^|^desc^|^1991^|^2000^|^eco^|^csv^|^se^|^200
+3^|^30^|^asc^|^1981^|^1990^|^lit^|^json^|^no^|^200
+4^|^40^|^desc^|^1971^|^1980^|^pea^|^csv^|^en^|^200
+5^|^50^|^asc^|^1961^|^1970^|^phy^|^json^|^se^|^400
+6^|^60^|^desc^|^1951^|^1960^|^med^|^csv^|^no^|^400
+7^|^70^|^asc^|^1941^|^1950^|^che^|^json^|^en^|^404
+8^|^80^|^desc^|^1931^|^1940^|^eco^|^csv^|^se^|^404
+9^|^90^|^asc^|^1921^|^1930^|^lit^|^json^|^no^|^422
+10^|^100^|^desc^|^1911^|^1920^|^pea^|^csv^|^en^|^422
