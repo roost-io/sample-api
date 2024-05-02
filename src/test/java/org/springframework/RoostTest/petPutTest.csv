@@ -1,0 +1,11 @@
+id^|^category^|^name^|^photoUrls^|^tags^|^status^|^statusCode
+1^|^{"id": 1, "name": "Dogs"}^|^Max^|^["http://example.com/photo1.jpg", "http://example.com/photo2.jpg"]^|^["tag1", "tag2"]^|^available^|^400
+2^|^{"id": 2, "name": "Cats"}^|^Bella^|^["http://example.com/photo3.jpg", "http://example.com/photo4.jpg"]^|^["tag3", "tag4"]^|^pending^|^404
+3^|^{"id": 3, "name": "Birds"}^|^Charlie^|^["http://example.com/photo5.jpg", "http://example.com/photo6.jpg"]^|^["tag5", "tag6"]^|^sold^|^405
+4^|^{"id": 4, "name": "Fish"}^|^Luna^|^["http://example.com/photo7.jpg", "http://example.com/photo8.jpg"]^|^["tag7", "tag8"]^|^available^|^400
+5^|^{"id": 5, "name": "Reptiles"}^|^Lucy^|^["http://example.com/photo9.jpg", "http://example.com/photo10.jpg"]^|^["tag9", "tag10"]^|^pending^|^404
+6^|^{"id": 6, "name": "Rodents"}^|^Oliver^|^["http://example.com/photo11.jpg", "http://example.com/photo12.jpg"]^|^["tag11", "tag12"]^|^sold^|^405
+7^|^{"id": 7, "name": "Ferrets"}^|^Milo^|^["http://example.com/photo13.jpg", "http://example.com/photo14.jpg"]^|^["tag13", "tag14"]^|^available^|^400
+8^|^{"id": 8, "name": "Rabbits"}^|^Chloe^|^["http://example.com/photo15.jpg", "http://example.com/photo16.jpg"]^|^["tag15", "tag16"]^|^pending^|^404
+9^|^{"id": 9, "name": "Horses"}^|^Simba^|^["http://example.com/photo17.jpg", "http://example.com/photo18.jpg"]^|^["tag17", "tag18"]^|^sold^|^405
+10^|^{"id": 10, "name": "Insects"}^|^Lily^|^["http://example.com/photo19.jpg", "http://example.com/photo20.jpg"]^|^["tag19", "tag20"]^|^available^|^400

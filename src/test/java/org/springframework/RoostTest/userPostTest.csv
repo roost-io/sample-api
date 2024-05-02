@@ -1,0 +1,11 @@
+id^|^username^|^firstName^|^lastName^|^email^|^password^|^phone^|^userStatus^|^statusCode
+1^|^user1^|^John^|^Doe^|^johndoe@example.com^|^pass1234^|^1234567890^|^1^|^successful operation
+2^|^user2^|^Jane^|^Doe^|^janedoe@example.com^|^pass5678^|^0987654321^|^1^|^successful operation
+3^|^user3^|^Bob^|^Smith^|^bobsmith@example.com^|^pass9012^|^1122334455^|^1^|^successful operation
+4^|^user4^|^Alice^|^Johnson^|^alicejohnson@example.com^|^pass3456^|^2233445566^|^1^|^successful operation
+5^|^user5^|^Charlie^|^Brown^|^charliebrown@example.com^|^pass7890^|^3344556677^|^1^|^successful operation
+6^|^user6^|^David^|^Williams^|^davidwilliams@example.com^|^pass2345^|^4455667788^|^1^|^successful operation
+7^|^user7^|^Eva^|^Taylor^|^evataylor@example.com^|^pass6789^|^5566778899^|^1^|^successful operation
+8^|^user8^|^Frank^|^Anderson^|^frankanderson@example.com^|^pass0123^|^6677889900^|^1^|^successful operation
+9^|^user9^|^Grace^|^Thomas^|^gracethomas@example.com^|^pass4567^|^7788990011^|^1^|^successful operation
+10^|^user10^|^Henry^|^Jackson^|^henryjackson@example.com^|^pass8910^|^8899001122^|^1^|^successful operation
