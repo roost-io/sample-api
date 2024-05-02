@@ -1,0 +1,11 @@
+offset,limit,sort,nobelPrizeYear,yearTo,nobelPrizeCategory,format,csvLang,statusCode,scenario
+1,10,asc,1989,2020,phy,json,en,200,Successful call of Nobel Prize(s) according to the filled fields
+2,20,desc,2001,2021,med,csv,se,200,Successful call of Nobel Prize(s) according to the filled fields
+3,30,asc,3000,1980,che,json,no,400,Bad request.The request could not be understood by the server due to malformed syntax, modifications needed.
+4,40,desc,1890,1899,lit,csv,en,404,Not Found. The requested resource could not be found but may be available again in the future.
+5,50,asc,2000,1999,eco,json,se,422,Unprocessable Entity. The request was well-formed but was unable to be followed due to semantic errors.
+6,60,desc,1900,1900,pea,csv,no,400,Bad request.The request could not be understood by the server due to malformed syntax, modifications needed.
+7,70,asc,2022,2023,phy,json,en,404,Not Found. The requested resource could not be found but may be available again in the future.
+8,80,desc,2023,2022,med,csv,se,422,Unprocessable Entity. The request was well-formed but was unable to be followed due to semantic errors.
+9,90,asc,1900,1899,che,json,no,400,Bad request.The request could not be understood by the server due to malformed syntax, modifications needed.
+10,100,desc,1899,1900,lit,csv,en,404,Not Found. The requested resource could not be found but may be available again in the future.
