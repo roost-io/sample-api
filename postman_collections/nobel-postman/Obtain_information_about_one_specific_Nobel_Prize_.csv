@@ -1,0 +1,13 @@
+category,year,statusCode,scenario
+"che",1989,200,"Successful call of the Nobel Prize giving the category and year"
+"eco",1988,400,"Bad request. The request could not be understood by the server due to malformed syntax, modifications needed."
+"lit",1990,404,"Not Found. The requested resource could not be found but may be available again in the future."
+"pea",1901,422,"Unprocessable Entity. The request was well-formed but was unable to be followed due to semantic errors."
+"phy",1999,200,"Successful call of the Nobel Prize giving the category and year"
+"med",2000,400,"Bad request. The request could not be understood by the server due to malformed syntax, modifications needed."
+"che",1998,404,"Not Found. The requested resource could not be found but may be available again in the future."
+"eco",2001,422,"Unprocessable Entity. The request was well-formed but was unable to be followed due to semantic errors."
+"lit",2002,200,"Successful call of the Nobel Prize giving the category and year"
+"pea",2003,400,"Bad request. The request could not be understood by the server due to malformed syntax, modifications needed."
+"phy",2004,404,"Not Found. The requested resource could not be found but may be available again in the future."
+"med",2005,422,"Unprocessable Entity. The request was well-formed but was unable to be followed due to semantic errors."
