@@ -1,0 +1,11 @@
+consentId^|^AdditionalCSVvaluInfo^|^Authorization^|^x-fapi-auth-date^|^x-fapi-customer-ip-address^|^x-fapi-interaction-id^|^Accept-Language^|^RequestBody^|^statusCode^|^bearer
+cns12345^|^169.254.169.254^|^Auth12345^|^2023-04-01T10:15:30Z^|^192.168.1.1^|^intid12345^|^en-HK^|^{\"account_id\":\"123\",\"amount\":\"100.00\",\"currency\":\"USD\"}^|^200^|^BearerToken1
+cns12346^|^169.254.169.254^|^Auth12346^|^2023-04-02T11:20:35Z^|^192.168.1.2^|^intid12346^|^zh-HK^|^{\"account_id\":\"124\",\"amount\":\"200.00\",\"currency\":\"EUR\"}^|^400^|^BearerToken2
+cns12347^|^169.254.169.254^|^Auth12347^|^2023-04-03T12:25:40Z^|^192.168.1.3^|^intid12347^|^zh-CN^|^{\"account_id\":\"125\",\"amount\":\"300.00\",\"currency\":\"GBP\"}^|^405^|^BearerToken3
+cns12348^|^169.254.169.254^|^Auth12348^|^2023-04-04T13:30:45Z^|^192.168.1.4^|^intid12348^|^en-HK^|^{\"account_id\":\"126\",\"amount\":\"400.00\",\"currency\":\"JPY\"}^|^406^|^BearerToken4
+cns12349^|^169.254.169.254^|^Auth12349^|^2023-04-05T14:35:50Z^|^192.168.1.5^|^intid12349^|^zh-HK^|^{\"account_id\":\"127\",\"amount\":\"500.00\",\"currency\":\"CNY\"}^|^429^|^BearerToken5
+cns12350^|^169.254.169.254^|^Auth12350^|^2023-04-06T15:40:55Z^|^192.168.1.6^|^intid12350^|^zh-CN^|^{\"account_id\":\"128\",\"amount\":\"600.00\",\"currency\":\"AUD\"}^|^500^|^BearerToken6
+cns12351^|^169.254.169.254^|^Auth12351^|^2023-04-07T16:45:00Z^|^192.168.1.7^|^intid12351^|^en-HK^|^{\"account_id\":\"129\",\"amount\":\"700.00\",\"currency\":\"CAD\"}^|^503^|^BearerToken7
+cns12352^|^169.254.169.254^|^Auth12352^|^2023-04-08T17:50:05Z^|^192.168.1.8^|^intid12352^|^zh-HK^|^{\"account_id\":\"130\",\"amount\":\"800.00\",\"currency\":\"CHF\"}^|^504^|^BearerToken8
+cns12353^|^169.254.169.254^|^Auth12353^|^2023-04-09T18:55:10Z^|^192.168.1.9^|^intid12353^|^zh-CN^|^{\"account_id\":\"131\",\"amount\":\"900.00\",\"currency\":\"SEK\"}^|^200^|^BearerToken9
+cns12354^|^169.254.169.254^|^Auth12354^|^2023-04-10T19:00:15Z^|^192.168.1.10^|^intid12354^|^en-HK^|^{\"account_id\":\"132\",\"amount\":\"1000.00\",\"currency\":\"NZD\"}^|^400^|^BearerToken10
