@@ -1,0 +1,11 @@
+category,year,expectedStatus,category,year,expectedStatus
+"lit",1983,200,"med",1956,200
+"eco",1992,200,"phy",1974,200
+"pea",2014,200,"che",1943,200
+"phy",2011,200,"lit",1907,200
+"med",1998,200,"eco",2005,200
+"che",1987,200,"pea",1931,200
+"lit",1962,200,"med",2019,200
+"eco",1978,200,"phy",1901,200
+"pea",2001,200,"che",1922,200
+"phy",1935,200,"lit",1946,200

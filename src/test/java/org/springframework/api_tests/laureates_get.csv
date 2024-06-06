@@ -1,0 +1,11 @@
+ID,name,gender,motivation,affiliation,residence,birthDate,birthDateTo,deathDate,deathDateTo,foundedDate,birthCity,birthCountry,birthContinent,deathCity,deathCountry,deathContinent,foundedCity,foundedCountry,foundedContinent,HeadquartersCity,HeadquartersCountry,HeadquartersContinent,nobelPrizeYear,yearTo,nobelPrizeCategory
+1,"John Smith","male","groundbreaking research in quantum physics","Harvard University","Cambridge, MA",1950-03-15,1955-12-31,2020-11-02,2022-06-30,,"New York","USA","North America","Boston","USA","North America",,,,,,,2010,2015,"phy"
+2,"Jane Doe","female","pioneering work in molecular biology","Stanford University","Palo Alto, CA",1962-09-22,1968-07-10,,,,"London","UK","Europe",,,,,,,,,,2005,2012,"med"
+3,"Acme Corporation",,"development of innovative renewable energy technologies",,"San Francisco, CA",,,,,1998-01-01,,,,,,,,"San Francisco","USA","North America","Los Angeles","USA","North America",2018,2020,"che"
+4,"Robert Johnson","male","influential contributions to modern literature","University of Oxford","Oxford, UK",1940-11-30,1945-08-20,2015-04-05,2018-09-10,,"Chicago","USA","North America","Paris","France","Europe",,,,,,,2000,2005,"lit"
+5,"Globex Corporation",,"advancements in sustainable agriculture practices",,"Berlin, Germany",,,,,2005-06-15,,,,,,,,"Berlin","Germany","Europe","Frankfurt","Germany","Europe",2022,,
+6,"Emily Davis","female","groundbreaking economic theories","MIT","Cambridge, MA",1978-02-28,1982-10-05,,,,"Sydney","Australia","Oceania",,,,,,,,,,2015,2018,"eco"
+7,"Michael Lee","male","promotion of global peace initiatives","United Nations","New York, NY",1955-07-12,1960-04-30,,,,"Tokyo","Japan","Asia",,,,,,,,,,2008,2012,"pea"
+8,"Initech Corporation",,"innovations in information technology",,"Seattle, WA",,,,,1995-09-20,,,,,,,,"Seattle","USA","North America","San Jose","USA","North America",2020,,
+9,"Sarah Wilson","female","seminal works of postmodern philosophy","Princeton University","Princeton, NJ",1972-12-08,1978-06-25,,,,"Toronto","Canada","North America",,,,,,,,,,2018,2022,
+10,"David Brown","male","discovery of novel chemical compounds","Caltech","Pasadena, CA",1965-05-18,1970-01-31,2022-08-10,2025-03-15,,"Manchester","UK","Europe","Los Angeles","USA","North America",,,,,,,2012,2015,"che"
