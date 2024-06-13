@@ -1,0 +1,11 @@
+petId^|^additionalMetadata^|^file^|^RequestBody^|^statusCode
+12345^|^Metadata1^|^file1.jpg^|^{"name": "Fluffy", "species": "Cat"}^|^200
+67890^|^Metadata2^|^file2.jpg^|^{"name": "Spot", "species": "Dog"}^|^200
+11121^|^Metadata3^|^file3.jpg^|^{"name": "Whiskers", "species": "Cat"}^|^200
+31415^|^Metadata4^|^file4.jpg^|^{"name": "Rover", "species": "Dog"}^|^200
+16171^|^Metadata5^|^file5.jpg^|^{"name": "Mittens", "species": "Cat"}^|^200
+81818^|^Metadata6^|^file6.jpg^|^{"name": "Fido", "species": "Dog"}^|^200
+21212^|^Metadata7^|^file7.jpg^|^{"name": "Snowball", "species": "Cat"}^|^200
+42424^|^Metadata8^|^file8.jpg^|^{"name": "Max", "species": "Dog"}^|^200
+84848^|^Metadata9^|^file9.jpg^|^{"name": "Bella", "species": "Cat"}^|^200
+96969^|^Metadata10^|^file10.jpg^|^{"name": "Charlie", "species": "Dog"}^|^200
