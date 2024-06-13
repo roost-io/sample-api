@@ -1,0 +1,11 @@
+id^|^category^|^name^|^photoUrls^|^tags^|^status^|^RequestBody^|^statusCode
+1^|^{ "type": "dog"}^|^Bobby^|^["url1","url2"]^|^["tag1","tag2"]^|^available^|^{ "request": "body"}^|^400
+2^|^{ "type": "cat"}^|^Whiskers^|^["url3","url4"]^|^["tag3","tag4"]^|^pending^|^{ "request": "body2"}^|^404
+3^|^{ "type": "bird"}^|^Chirpy^|^["url5","url6"]^|^["tag5","tag6"]^|^sold^|^{ "request": "body3"}^|^405
+4^|^{ "type": "fish"}^|^Goldie^|^["url7","url8"]^|^["tag7","tag8"]^|^available^|^{ "request": "body4"}^|^400
+5^|^{ "type": "rabbit"}^|^Thumper^|^["url9","url10"]^|^["tag9","tag10"]^|^pending^|^{ "request": "body5"}^|^404
+6^|^{ "type": "hamster"}^|^Nibbles^|^["url11","url12"]^|^["tag11","tag12"]^|^sold^|^{ "request": "body6"}^|^405
+7^|^{ "type": "turtle"}^|^Shelly^|^["url13","url14"]^|^["tag13","tag14"]^|^available^|^{ "request": "body7"}^|^400
+8^|^{ "type": "snake"}^|^Slither^|^["url15","url16"]^|^["tag15","tag16"]^|^pending^|^{ "request": "body8"}^|^404
+9^|^{ "type": "lizard"}^|^Lizzy^|^["url17","url18"]^|^["tag17","tag18"]^|^sold^|^{ "request": "body9"}^|^405
+10^|^{ "type": "frog"}^|^Hoppy^|^["url19","url20"]^|^["tag19","tag20"]^|^available^|^{ "request": "body10"}^|^400
