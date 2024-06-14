@@ -1,0 +1,11 @@
+username^|^RequestBody^|^statusCode
+user1^|^{"key1":"value1","key2":"value2"}^|^400
+user2^|^{"key1":"value3","key2":"value4"}^|^404
+user3^|^{"key1":"value5","key2":"value6"}^|^400
+user4^|^{"key1":"value7","key2":"value8"}^|^404
+user5^|^{"key1":"value9","key2":"value10"}^|^400
+user6^|^{"key1":"value11","key2":"value12"}^|^404
+user7^|^{"key1":"value13","key2":"value14"}^|^400
+user8^|^{"key1":"value15","key2":"value16"}^|^404
+user9^|^{"key1":"value17","key2":"value18"}^|^400
+user10^|^{"key1":"value19","key2":"value20"}^|^404
