@@ -1,0 +1,11 @@
+petId^|^name^|^status^|^RequestBody^|^statusCode
+1^|^Rex^|^available^|^{"id":1,"category":{"id":1,"name":"dog"},"name":"Rex","photoUrls":["http://rex.com"],"tags":[{"id":1,"name":"tag1"}],"status":"available"}^|^200
+2^|^Milo^|^sold^|^{"id":2,"category":{"id":2,"name":"cat"},"name":"Milo","photoUrls":["http://milo.com"],"tags":[{"id":2,"name":"tag2"}],"status":"sold"}^|^200
+3^|^Bella^|^pending^|^{"id":3,"category":{"id":3,"name":"dog"},"name":"Bella","photoUrls":["http://bella.com"],"tags":[{"id":3,"name":"tag3"}],"status":"pending"}^|^200
+4^|^Max^|^available^|^{"id":4,"category":{"id":4,"name":"dog"},"name":"Max","photoUrls":["http://max.com"],"tags":[{"id":4,"name":"tag4"}],"status":"available"}^|^200
+5^|^Charlie^|^sold^|^{"id":5,"category":{"id":5,"name":"cat"},"name":"Charlie","photoUrls":["http://charlie.com"],"tags":[{"id":5,"name":"tag5"}],"status":"sold"}^|^200
+6^|^Luna^|^pending^|^{"id":6,"category":{"id":6,"name":"dog"},"name":"Luna","photoUrls":["http://luna.com"],"tags":[{"id":6,"name":"tag6"}],"status":"pending"}^|^200
+7^|^Lucy^|^available^|^{"id":7,"category":{"id":7,"name":"dog"},"name":"Lucy","photoUrls":["http://lucy.com"],"tags":[{"id":7,"name":"tag7"}],"status":"available"}^|^200
+8^|^Cooper^|^sold^|^{"id":8,"category":{"id":8,"name":"cat"},"name":"Cooper","photoUrls":["http://cooper.com"],"tags":[{"id":8,"name":"tag8"}],"status":"sold"}^|^200
+9^|^Buddy^|^pending^|^{"id":9,"category":{"id":9,"name":"dog"},"name":"Buddy","photoUrls":["http://buddy.com"],"tags":[{"id":9,"name":"tag9"}],"status":"pending"}^|^200
+10^|^Daisy^|^available^|^{"id":10,"category":{"id":10,"name":"dog"},"name":"Daisy","photoUrls":["http://daisy.com"],"tags":[{"id":10,"name":"tag10"}],"status":"available"}^|^200
