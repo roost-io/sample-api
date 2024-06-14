@@ -1,0 +1,11 @@
+username^|^id^|^firstName^|^lastName^|^email^|^password^|^phone^|^userStatus^|^RequestBody^|^statusCode
+john_doe^|^1^|^John^|^Doe^|^john_doe@example.com^|^Password123^|^1234567890^|^1^|^{"key":"value"}^|^400
+jane_doe^|^2^|^Jane^|^Doe^|^jane_doe@example.com^|^Password123^|^1234567891^|^1^|^{"key":"value"}^|^404
+bob_smith^|^3^|^Bob^|^Smith^|^bob_smith@example.com^|^Password123^|^1234567892^|^1^|^{"key":"value"}^|^400
+alice_jones^|^4^|^Alice^|^Jones^|^alice_jones@example.com^|^Password123^|^1234567893^|^1^|^{"key":"value"}^|^404
+charlie_brown^|^5^|^Charlie^|^Brown^|^charlie_brown@example.com^|^Password123^|^1234567894^|^1^|^{"key":"value"}^|^400
+david_johnson^|^6^|^David^|^Johnson^|^david_johnson@example.com^|^Password123^|^1234567895^|^1^|^{"key":"value"}^|^404
+emma_watson^|^7^|^Emma^|^Watson^|^emma_watson@example.com^|^Password123^|^1234567896^|^1^|^{"key":"value"}^|^400
+frank_sinatra^|^8^|^Frank^|^Sinatra^|^frank_sinatra@example.com^|^Password123^|^1234567897^|^1^|^{"key":"value"}^|^404
+george_bush^|^9^|^George^|^Bush^|^george_bush@example.com^|^Password123^|^1234567898^|^1^|^{"key":"value"}^|^400
+harry_potter^|^10^|^Harry^|^Potter^|^harry_potter@example.com^|^Password123^|^1234567899^|^1^|^{"key":"value"}^|^404

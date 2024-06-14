@@ -1,0 +1,11 @@
+username^|^RequestBody^|^statusCode
+user1^|^{"id": 1, "value": "sample1"}^|^200
+user2^|^{"id": 2, "value": "sample2"}^|^400
+user3^|^{"id": 3, "value": "sample3"}^|^404
+user4^|^{"id": 4, "value": "sample4"}^|^200
+user5^|^{"id": 5, "value": "sample5"}^|^400
+user6^|^{"id": 6, "value": "sample6"}^|^404
+user7^|^{"id": 7, "value": "sample7"}^|^200
+user8^|^{"id": 8, "value": "sample8"}^|^400
+user9^|^{"id": 9, "value": "sample9"}^|^404
+user10^|^{"id": 10, "value": "sample10"}^|^200

@@ -1,0 +1,11 @@
+petId^|^RequestBody^|^statusCode
+12345^|^{"name":"Max","type":"Dog","age":10,"weight":22.2,"color":"black"}^|^200
+23456^|^{"name":"Bella","type":"Cat","age":3,"weight":9.1,"color":"white"}^|^200
+34567^|^{"name":"Charlie","type":"Dog","age":5,"weight":30.0,"color":"brown"}^|^200
+45678^|^{"name":"Lucy","type":"Cat","age":7,"weight":8.5,"color":"black"}^|^200
+56789^|^{"name":"Cooper","type":"Dog","age":1,"weight":10.0,"color":"white"}^|^200
+67890^|^{"name":"Lily","type":"Cat","age":2,"weight":5.5,"color":"gray"}^|^200
+78901^|^{"name":"Rocky","type":"Dog","age":6,"weight":25.3,"color":"black"}^|^200
+89012^|^{"name":"Molly","type":"Cat","age":4,"weight":6.0,"color":"white"}^|^200
+90123^|^{"name":"Jack","type":"Dog","age":8,"weight":28.0,"color":"brown"}^|^200
+01234^|^{"name":"Sophie","type":"Cat","age":9,"weight":8.0,"color":"black"}^|^200
