@@ -1,0 +1,11 @@
+category,year,invalidCategory,invalidYear,invalidCategory,year,category,invalidYear,category,invalidYear
+"lit",1947,"unknown",1800,"other",1901,"eco",1900,"phy",1899
+"eco",1975,"invalid",1850,"test",1950,"med",1800,"che",1700
+"pea",2015,"wrong",1700,"dummy",1975,"lit",1600,"med",1500
+"med",1990,"error",1600,"fake",2000,"pea",1400,"eco",1300
+"phy",1930,"mistake",1500,"bogus",1925,"phy",1200,"lit",1100
+"che",2005,"fault",1400,"false",1960,"che",1000,"pea",900
+"lit",1965,"blunder",1300,"pseudo",1980,"med",800,"phy",700
+"eco",2010,"slip",1200,"sham",1935,"lit",600,"che",500
+"pea",1985,"lapse",1100,"phony",1955,"eco",400,"med",300
+"med",1920,"oversight",1000,"mock",1970,"pea",200,"lit",100
