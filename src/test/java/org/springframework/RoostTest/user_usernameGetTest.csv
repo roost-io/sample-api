@@ -1,0 +1,11 @@
+username^|^RequestBody^|^statusCode
+user1^|^{"id": 1, "name": "John", "email": "john@example.com"}^|^200
+user2^|^{"id": 2, "name": "Jane", "email": "jane@example.com"}^|^400
+user3^|^{"id": 3, "name": "Doe", "email": "doe@example.com"}^|^404
+user4^|^{"id": 4, "name": "Alice", "email": "alice@example.com"}^|^200
+user5^|^{"id": 5, "name": "Bob", "email": "bob@example.com"}^|^400
+user6^|^{"id": 6, "name": "Charlie", "email": "charlie@example.com"}^|^404
+user7^|^{"id": 7, "name": "David", "email": "david@example.com"}^|^200
+user8^|^{"id": 8, "name": "Emma", "email": "emma@example.com"}^|^400
+user9^|^{"id": 9, "name": "Frank", "email": "frank@example.com"}^|^404
+user10^|^{"id": 10, "name": "Grace", "email": "grace@example.com"}^|^200
