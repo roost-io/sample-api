@@ -1,0 +1,11 @@
+id^|^username^|^firstName^|^lastName^|^email^|^password^|^phone^|^userStatus^|^RequestBody^|^statusCode
+1^|^john123^|^John^|^Doe^|^john.doe@example.com^|^pass123^|^123456789^|^1^|^{"key": "value"}^|^200
+2^|^jane123^|^Jane^|^Doe^|^jane.doe@example.com^|^pass456^|^987654321^|^0^|^{"key": "value2"}^|^201
+3^|^bob123^|^Bob^|^Smith^|^bob.smith@example.com^|^pass789^|^456123789^|^1^|^{"key": "value3"}^|^202
+4^|^alice123^|^Alice^|^Johnson^|^alice.johnson@example.com^|^pass012^|^321654987^|^0^|^{"key": "value4"}^|^203
+5^|^charlie123^|^Charlie^|^Brown^|^charlie.brown@example.com^|^pass345^|^789123456^|^1^|^{"key": "value5"}^|^204
+6^|^lucy123^|^Lucy^|^Van Pelt^|^lucy.vanpelt@example.com^|^pass678^|^654321789^|^0^|^{"key": "value6"}^|^205
+7^|^linus123^|^Linus^|^Van Pelt^|^linus.vanpelt@example.com^|^pass901^|^789456123^|^1^|^{"key": "value7"}^|^206
+8^|^sally123^|^Sally^|^Brown^|^sally.brown@example.com^|^pass234^|^123789456^|^0^|^{"key": "value8"}^|^207
+9^|^peppermint123^|^Peppermint^|^Patty^|^peppermint.patty@example.com^|^pass567^|^456789123^|^1^|^{"key": "value9"}^|^208
+10^|^marcie123^|^Marcie^|^Johnson^|^marcie.johnson@example.com^|^pass890^|^321987654^|^0^|^{"key": "value10"}^|^209

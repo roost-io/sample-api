@@ -1,0 +1,11 @@
+api_key^|^petId^|^RequestBody^|^statusCode
+a1b2c3d4e5^|^12345^|^{"name":"Fluffy","type":"cat","age":3,"color":"white"}^|^400
+f6g7h8i9j0^|^67890^|^{"name":"Rover","type":"dog","age":5,"color":"brown"}^|^404
+k1l2m3n4o5^|^23456^|^{"name":"Bella","type":"dog","age":2,"color":"black"}^|^400
+p6q7r8s9t0^|^78901^|^{"name":"Milo","type":"cat","age":4,"color":"grey"}^|^404
+u1v2w3x4y5^|^34567^|^{"name":"Charlie","type":"dog","age":3,"color":"white"}^|^400
+z6a7b8c9d0^|^89012^|^{"name":"Max","type":"dog","age":6,"color":"black"}^|^404
+e1f2g3h4i5^|^45678^|^{"name":"Daisy","type":"cat","age":2,"color":"white"}^|^400
+j6k7l8m9n0^|^90123^|^{"name":"Lucy","type":"cat","age":1,"color":"grey"}^|^404
+o1p2q3r4s5^|^56789^|^{"name":"Buddy","type":"dog","age":4,"color":"brown"}^|^400
+t6u7v8w9x0^|^01234^|^{"name":"Lola","type":"cat","age":3,"color":"white"}^|^404
