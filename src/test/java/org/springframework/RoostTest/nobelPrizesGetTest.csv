@@ -1,0 +1,11 @@
+offset^|^limit^|^sort^|^nobelPrizeYear^|^yearTo^|^nobelPrizeCategory^|^format^|^csvLang^|^RequestBody^|^statusCode
+1^|^5^|^asc^|^2001^|^2005^|^che^|^json^|^en^|^{"method":"GET","url":"/nobelprizes","headers":{},"body":{}}^|^200
+2^|^10^|^desc^|^1995^|^2000^|^eco^|^csv^|^se^|^{"method":"POST","url":"/nobelprizes","headers":{},"body":{}}^|^400
+3^|^8^|^asc^|^2010^|^2015^|^lit^|^json^|^no^|^{"method":"PUT","url":"/nobelprizes","headers":{},"body":{}}^|^404
+4^|^6^|^desc^|^2007^|^2012^|^pea^|^csv^|^en^|^{"method":"DELETE","url":"/nobelprizes","headers":{},"body":{}}^|^422
+5^|^7^|^asc^|^2003^|^2008^|^phy^|^json^|^se^|^{"method":"GET","url":"/nobelprizes","headers":{},"body":{}}^|^200
+6^|^9^|^desc^|^1988^|^1993^|^med^|^csv^|^no^|^{"method":"POST","url":"/nobelprizes","headers":{},"body":{}}^|^400
+7^|^4^|^asc^|^2000^|^2005^|^che^|^json^|^en^|^{"method":"PUT","url":"/nobelprizes","headers":{},"body":{}}^|^404
+8^|^2^|^desc^|^1990^|^1995^|^eco^|^csv^|^se^|^{"method":"DELETE","url":"/nobelprizes","headers":{},"body":{}}^|^422
+9^|^3^|^asc^|^2005^|^2010^|^lit^|^json^|^no^|^{"method":"GET","url":"/nobelprizes","headers":{},"body":{}}^|^200
+10^|^1^|^desc^|^2015^|^2020^|^pea^|^csv^|^en^|^{"method":"POST","url":"/nobelprizes","headers":{},"body":{}}^|^400
