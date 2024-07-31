@@ -1,0 +1,11 @@
+category^|^year^|^RequestBody^|^statusCode
+che^|^2001^|^{"name":"John", "age":30, "city":"New York"}^|^200
+eco^|^1996^|^{"name":"Jane", "age":28, "city":"Los Angeles"}^|^404
+lit^|^2010^|^{"name":"Jim", "age":35, "city":"Chicago"}^|^400
+pea^|^2005^|^{"name":"Jill", "age":32, "city":"San Francisco"}^|^422
+phy^|^1999^|^{"name":"Jack", "age":34, "city":"Houston"}^|^200
+med^|^2020^|^{"name":"Julia", "age":29, "city":"Boston"}^|^404
+che^|^2003^|^{"name":"Jerry", "age":40, "city":"Seattle"}^|^200
+eco^|^2008^|^{"name":"Jessica", "age":27, "city":"Austin"}^|^422
+lit^|^2015^|^{"name":"Joe", "age":38, "city":"Denver"}^|^400
+pea^|^2000^|^{"name":"Jasmine", "age":33, "city":"Phoenix"}^|^200
