@@ -1,0 +1,11 @@
+token,currency,ipAddress,locale,expand,fields,applyEmailToSubscriptions,statusCode
+123abc,USD,192.0.2.1,en-US,true,username|email|password,true,200
+456def,EUR,198.51.100.1,fr-FR,false,username|email|password,false,201
+789ghi,GBP,203.0.113.1,de-DE,true,username|email|password,true,202
+012jkl,YEN,192.0.2.2,ja-JP,false,username|email|password,true,203
+345mno,CAD,198.51.100.2,en-CA,true,username|email|password,false,204
+678pqr,AUD,203.0.113.2,en-AU,false,username|email|password,true,205
+901stu,NZD,192.0.2.3,en-NZ,true,username|email|password,false,206
+234vwx,CHF,198.51.100.3,de-CH,false,username|email|password,true,207
+567yz,SEK,203.0.113.3,sv-SE,true,username|email|password,false,208
+890abc,DKK,192.0.2.4,da-DK,false,username|email|password,true,209
