@@ -1,0 +1,11 @@
+headerVersion,timestamp,sourceId,applicationId,transactionId,messageContentType,messageContentEncoding,payloadHashValue,hashingAlgorithm,augmentationKey,augmentationValue,remark,documentNumber,issuanceDate,refundIndicator,refundUID,relatedRefundUID,oadCode,cityPointOfSale,areaPointOfSale,countryPointOfSale,issuerSystem
+1.0,2021-07-21T10:15:30Z,src1234,app5678,trans9012,text/plain,UTF-8,abcd1234,SHA256,key1,val1,remark1,doc1234,2021-07-21T10:15:30Z,refInd1,refUID1,relRefUID1,oad1234,city1,area1,country1,sys1
+1.0,2021-07-21T10:15:31Z,src1235,app5679,trans9013,text/plain,UTF-8,abcd1235,SHA256,key2,val2,remark2,doc1235,2021-07-21T10:15:31Z,refInd2,refUID2,relRefUID2,oad1235,city2,area2,country2,sys2
+1.0,2021-07-21T10:15:32Z,src1236,app5680,trans9014,text/plain,UTF-8,abcd1236,SHA256,key3,val3,remark3,doc1236,2021-07-21T10:15:32Z,refInd3,refUID3,relRefUID3,oad1236,city3,area3,country3,sys3
+1.0,2021-07-21T10:15:33Z,src1237,app5681,trans9015,text/plain,UTF-8,abcd1237,SHA256,key4,val4,remark4,doc1237,2021-07-21T10:15:33Z,refInd4,refUID4,relRefUID4,oad1237,city4,area4,country4,sys4
+1.0,2021-07-21T10:15:34Z,src1238,app5682,trans9016,text/plain,UTF-8,abcd1238,SHA256,key5,val5,remark5,doc1238,2021-07-21T10:15:34Z,refInd5,refUID5,relRefUID5,oad1238,city5,area5,country5,sys5
+1.0,2021-07-21T10:15:35Z,src1239,app5683,trans9017,text/plain,UTF-8,abcd1239,SHA256,key6,val6,remark6,doc1239,2021-07-21T10:15:35Z,refInd6,refUID6,relRefUID6,oad1239,city6,area6,country6,sys6
+1.0,2021-07-21T10:15:36Z,src1240,app5684,trans9018,text/plain,UTF-8,abcd1240,SHA256,key7,val7,remark7,doc1240,2021-07-21T10:15:36Z,refInd7,refUID7,relRefUID7,oad1240,city7,area7,country7,sys7
+1.0,2021-07-21T10:15:37Z,src1241,app5685,trans9019,text/plain,UTF-8,abcd1241,SHA256,key8,val8,remark8,doc1241,2021-07-21T10:15:37Z,refInd8,refUID8,relRefUID8,oad1241,city8,area8,country8,sys8
+1.0,2021-07-21T10:15:38Z,src1242,app5686,trans9020,text/plain,UTF-8,abcd1242,SHA256,key9,val9,remark9,doc1242,2021-07-21T10:15:38Z,refInd9,refUID9,relRefUID9,oad1242,city9,area9,country9,sys9
+1.0,2021-07-21T10:15:39Z,src1243,app5687,trans9021,text/plain,UTF-8,abcd1243,SHA256,key10,val10,remark10,doc1243,2021-07-21T10:15:39Z,refInd10,refUID10,relRefUID10,oad1243,city10,area10,country10,sys10
