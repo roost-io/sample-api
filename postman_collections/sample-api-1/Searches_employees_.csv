@@ -1,0 +1,9 @@
+searchString,statusCode,scenario
+d290f1ee-6c54-4b01-90e6-d701748f0851,200,Successful responses: OK
+System Analyst,200,Successful responses: OK
+John Smith,200,Successful responses: OK
+john.smith@acme-corp.com,200,Successful responses: OK
+d290f1ee-6c54-4b01-90e6-d701748f0851,400,Client error responses: Bad Request
+System Analyst,400,Client error responses: Bad Request
+John Smith,400,Client error responses: Bad Request
+john.smith@acme-corp.com,400,Client error responses: Bad Request
