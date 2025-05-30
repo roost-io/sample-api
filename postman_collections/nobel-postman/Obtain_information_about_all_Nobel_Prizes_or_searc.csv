@@ -1,0 +1,10 @@
+offset,limit,sort,nobelPrizeYear,yearTo,nobelPrizeCategory,format,csvLang,statusCode,scenario
+"0","10","asc","1989","2015","peace","json","en","200","Successful call of Nobel Prize(s) according to the filled fields"
+"20","5","desc","1995","2020","literature","xml","se","200","Successful call of Nobel Prize(s) according to the filled fields"
+"-1","abcd","random","invalidYear","yearX","science","undefined","fr","400","Bad request.The request could not be understood by the server due to malformed syntax, modifications needed."
+"null","xyz","none","negative","future","chemistry","unsupported","de","404","Not Found. The requested resource could not be found but may be available again in the future."
+"9999","overload","error","9999","9999","missing","formatless","sp","422","Unprocessable Entity. The request was well-formed but was unable to be followed due to semantic errors."
+"30","15","asc","2000","2021","economics","json","en","200","Successful call of Nobel Prize(s) according to the filled fields"
+"-5","something","invalidSort","x1990","badYear","physics","none","it","400","Bad request.The request could not be understood by the server due to malformed syntax, modifications needed."
+"15","25","desc","1970","1985","medicine","xml","sv","200","Successful call of Nobel Prize(s) according to the filled fields"
+"0","abc","incorrect","1875","invalid","unknown","undefined","no","404","Not Found. The requested resource could not be found but may be available again in the future."
