@@ -1,0 +1,19 @@
+Verify the successful creation of BambooHR and Okta clients
+Verify the successful fetch of employees from BambooHR
+Verify the successful check of a user's existence in Okta
+Verify the successful generation of a temporary password
+Verify the successful creation of an Okta user profile from BambooHR employee data
+Verify the successful creation of a user in Okta
+Verify the successful update of an existing Okta user
+Verify the successful assignment of a user to groups based on department or role
+Verify the successful provisioning of users
+Verify the successful sync of a single employee by ID
+Verify the system's performance under load
+Verify the system's response time
+Verify the system's security
+Verify the system's error handling
+Verify the system's compatibility
+Verify the system's usability
+Verify the system's reliability
+Verify the system's maintainability
+Verify the system's scalability
