@@ -1,0 +1,79 @@
+Functional Test Cases:
+
+1. Test Case: Verify the successful creation of BambooHR and Okta clients
+   - Input: bambooHRConfig, oktaConfig
+   - Expected Output: Successful creation of BambooHR and Okta clients with the provided configurations
+
+2. Test Case: Verify the successful fetch of employees from BambooHR
+   - Input: Fields (firstName, lastName, workEmail, department, jobTitle, employeeNumber, status)
+   - Expected Output: Array of employee objects
+
+3. Test Case: Verify the successful check of a user's existence in Okta
+   - Input: User email
+   - Expected Output: Okta user object or null
+
+4. Test Case: Verify the successful generation of a temporary password
+   - Input: None
+   - Expected Output: A temporary password string
+
+5. Test Case: Verify the successful creation of an Okta user profile from BambooHR employee data
+   - Input: BambooHR employee object
+   - Expected Output: Okta user profile
+
+6. Test Case: Verify the successful creation of a user in Okta
+   - Input: Okta user profile
+   - Expected Output: Created Okta user
+
+7. Test Case: Verify the successful update of an existing Okta user
+   - Input: Okta user ID, Updated profile data
+   - Expected Output: Updated Okta user
+
+8. Test Case: Verify the successful assignment of a user to groups based on department or role
+   - Input: Okta user ID, Employee department, Employee job title
+   - Expected Output: User assigned to the correct groups
+
+9. Test Case: Verify the successful provisioning of users
+   - Input: Provisioning options
+   - Expected Output: Provisioning results
+
+10. Test Case: Verify the successful sync of a single employee by ID
+    - Input: BambooHR employee ID
+    - Expected Output: Updated or created user in Okta
+
+Non-Functional Test Cases:
+
+1. Test Case: Verify the system's performance under load
+   - Input: Large number of employee data
+   - Expected Output: System should be able to handle the load and process all the data without crashing
+
+2. Test Case: Verify the system's response time
+   - Input: Employee data
+   - Expected Output: System should process the data and respond within an acceptable time frame
+
+3. Test Case: Verify the system's security
+   - Input: Unauthorized access attempts
+   - Expected Output: System should prevent unauthorized access and protect sensitive data
+
+4. Test Case: Verify the system's error handling
+   - Input: Incorrect or missing data
+   - Expected Output: System should handle errors gracefully and provide meaningful error messages
+
+5. Test Case: Verify the system's compatibility
+   - Input: Different operating systems and browsers
+   - Expected Output: System should function correctly across all tested platforms
+
+6. Test Case: Verify the system's usability
+   - Input: User interactions
+   - Expected Output: System should be user-friendly and intuitive to use
+
+7. Test Case: Verify the system's reliability
+   - Input: Continuous operation over a period of time
+   - Expected Output: System should operate without failure over the specified period of time
+
+8. Test Case: Verify the system's maintainability
+   - Input: Code changes and updates
+   - Expected Output: System should be easy to maintain and update without causing issues
+
+9. Test Case: Verify the system's scalability
+   - Input: Increasing amounts of data and users
+   - Expected Output: System should be able to scale and handle the increased load efficiently
