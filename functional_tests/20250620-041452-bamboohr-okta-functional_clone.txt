@@ -1,0 +1,63 @@
+Functional Test Cases:
+
+1. Test the BambooHROktaProvisioning constructor
+   - Input: bambooHRConfig = {subdomain: 'test', apiKey: 'testKey'}, oktaConfig = {domain: 'testDomain', apiToken: 'testToken'}
+   - Expected Output: An instance of BambooHROktaProvisioning with the provided configuration
+
+2. Test the fetchBambooHREmployees function
+   - Input: fields = ['firstName', 'lastName', 'workEmail', 'department', 'jobTitle', 'employeeNumber', 'status']
+   - Expected Output: An array of employee objects
+
+3. Test the checkOktaUserExists function
+   - Input: email = 'test@test.com'
+   - Expected Output: An Okta user object or null
+
+4. Test the generateTemporaryPassword function
+   - Input: None
+   - Expected Output: A string of 16 characters
+
+5. Test the createOktaUserProfile function
+   - Input: employee = {firstName: 'John', lastName: 'Doe', workEmail: 'john.doe@test.com', department: 'Engineering', jobTitle: 'Engineer', employeeNumber: '123', status: 'Active'}
+   - Expected Output: An Okta user profile object
+
+6. Test the createOktaUser function
+   - Input: userProfile = {profile: {firstName: 'John', lastName: 'Doe', email: 'john.doe@test.com', login: 'john.doe@test.com', employeeNumber: '123', title: 'Engineer', department: 'Engineering', primaryPhone: '1234567890', manager: 'Manager'}, credentials: {password: {value: 'password'}}, groupIds: [], activate: true}
+   - Expected Output: A created Okta user object
+
+7. Test the updateOktaUser function
+   - Input: userId = '123', profile = {firstName: 'John', lastName: 'Doe', email: 'john.doe@test.com', login: 'john.doe@test.com', employeeNumber: '123', title: 'Engineer', department: 'Engineering', primaryPhone: '1234567890', manager: 'Manager'}
+   - Expected Output: An updated Okta user object
+
+8. Test the assignUserToGroups function
+   - Input: userId = '123', department = 'Engineering', jobTitle = 'Engineer'
+   - Expected Output: None
+
+9. Test the provisionUsers function
+   - Input: options = {dryRun: false, updateExisting: true}
+   - Expected Output: A results object
+
+10. Test the syncSingleEmployee function
+    - Input: employeeId = '123'
+    - Expected Output: None
+
+Non-Functional Test Cases:
+
+1. Test the performance of the fetchBambooHREmployees function with a large number of employees
+   - Input: fields = ['firstName', 'lastName', 'workEmail', 'department', 'jobTitle', 'employeeNumber', 'status']
+   - Expected Output: The function should complete within a reasonable time frame
+
+2. Test the resilience of the checkOktaUserExists function when the Okta API is down
+   - Input: email = 'test@test.com'
+   - Expected Output: The function should handle the error gracefully
+
+3. Test the security of the generateTemporaryPassword function
+   - Input: None
+   - Expected Output: The generated password should be secure
+
+4. Test the scalability of the provisionUsers function with a large number of users
+   - Input: options = {dryRun: false, updateExisting: true}
+   - Expected Output: The function should complete within a reasonable time frame
+
+5. Test the usability of the BambooHROktaProvisioning class
+   - Input: bambooHRConfig = {subdomain: 'test', apiKey: 'testKey'}, oktaConfig = {domain: 'testDomain', apiToken: 'testToken'}
+   - Expected Output: The class should be easy to use and understand
