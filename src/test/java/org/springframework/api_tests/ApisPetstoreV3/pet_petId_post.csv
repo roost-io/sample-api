@@ -1,0 +1,4 @@
+petId,name,status
+"1","Fido","available"
+"2","Max","pending"
+"3","Charlie","sold"
