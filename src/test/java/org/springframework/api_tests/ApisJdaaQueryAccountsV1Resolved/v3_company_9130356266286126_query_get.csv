@@ -1,0 +1,3 @@
+query,minorversion
+"select * from Account where Id = '7912'","69"
+"select * from Account where Id = '1234'","70"
