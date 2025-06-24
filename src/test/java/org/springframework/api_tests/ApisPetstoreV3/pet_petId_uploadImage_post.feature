@@ -46,7 +46,8 @@ Feature: Testing Upload Image API for /pet/{petId}/uploadImage
 
   Scenario: Unexpected error response
     Given path 'pet', 12345, 'uploadImage'
-    And request """
+    And request 
+    """
     INVALID_BINARY_CONTENT
     """
     When method POST
