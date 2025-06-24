@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Buddy",
+    "status": "available",
+    "petId": 12345,
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "name": "Max",
+    "status": "pending",
+    "petId": 67890,
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "name": "Charlie_invalid",
+    "status": "unknown",
+    "petId": "abc123",
+    "statusCode": 400,
+    "scenario": "Invalid input"
+  },
+  {
+    "name": "Oscar",
+    "status": "sold",
+    "petId": 98765,
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "name": "",
+    "status": "",
+    "petId": -1,
+    "statusCode": 500,
+    "scenario": "Unexpected error"
+  }
+]
