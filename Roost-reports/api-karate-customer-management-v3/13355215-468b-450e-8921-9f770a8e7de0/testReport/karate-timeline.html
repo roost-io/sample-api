@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="res/vis.min.js"></script>
+    <link href="res/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"main","id":1}];
+var items = [{"id":1,"group":1,"content":"src\/test\/java\/org\/springframework\/api_tests\/ApisJdaaQueryAccountsV1Resolved\/v3_company_9130356266286126_query_get[1.1:33]","start":1750841934638,"end":1750841934716,"title":"src\/test\/java\/org\/springframework\/api_tests\/ApisJdaaQueryAccountsV1Resolved\/v3_company_9130356266286126_query_get[1.1:33] 08:58:54.638-08:58:54.716 Validate GET request for \/v3\/company\/9130356266286126\/query with query parameters","className":"failed"},{"id":2,"group":1,"content":"src\/test\/java\/org\/springframework\/api_tests\/ApisJdaaQueryAccountsV1Resolved\/v3_company_9130356266286126_query_get[1.2:33]","start":1750841934727,"end":1750841936687,"title":"src\/test\/java\/org\/springframework\/api_tests\/ApisJdaaQueryAccountsV1Resolved\/v3_company_9130356266286126_query_get[1.2:33] 08:58:54.727-08:58:56.687 Validate GET request for \/v3\/company\/9130356266286126\/query with query parameters","className":"failed"},{"id":3,"group":1,"content":"src\/test\/java\/org\/springframework\/api_tests\/ApisJdaaQueryAccountsV1Resolved\/v3_company_9130356266286126_query_get[2:35]","start":1750841936698,"end":1750841937451,"title":"src\/test\/java\/org\/springframework\/api_tests\/ApisJdaaQueryAccountsV1Resolved\/v3_company_9130356266286126_query_get[2:35] 08:58:56.698-08:58:57.451 Validate GET request for \/v3\/company\/9130356266286126\/query without parameters","className":"failed"},{"id":4,"group":1,"content":"src\/test\/java\/org\/springframework\/api_tests\/ApisJdaaQueryAccountsV1Resolved\/v3_company_9130356266286126_query_get[3:42]","start":1750841937460,"end":1750841938204,"title":"src\/test\/java\/org\/springframework\/api_tests\/ApisJdaaQueryAccountsV1Resolved\/v3_company_9130356266286126_query_get[3:42] 08:58:57.460-08:58:58.204 Verify authorization failure without token","className":"failed"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>
