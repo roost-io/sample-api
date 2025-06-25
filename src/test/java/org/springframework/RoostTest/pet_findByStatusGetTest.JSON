@@ -1,0 +1,66 @@
+[
+    {
+        "testCaseID": "TC001",
+        "description": "Verify user can log in with valid credentials",
+        "input": {
+            "username": "testuser",
+            "password": "TestPassword123"
+        },
+        "expectedOutput": {
+            "success": true,
+            "message": "Login successful"
+        }
+    },
+    {
+        "testCaseID": "TC002",
+        "description": "Verify user cannot log in with invalid credentials",
+        "input": {
+            "username": "testuser",
+            "password": "WrongPassword"
+        },
+        "expectedOutput": {
+            "success": false,
+            "message": "Invalid username or password"
+        }
+    },
+    {
+        "testCaseID": "TC003",
+        "description": "Verify password recovery prompts user for email",
+        "input": {
+            "action": "Password Recovery",
+            "email": null
+        },
+        "expectedOutput": {
+            "success": false,
+            "message": "Email address is required"
+        }
+    },
+    {
+        "testCaseID": "TC004",
+        "description": "Verify password recovery sends email for valid email",
+        "input": {
+            "action": "Password Recovery",
+            "email": "user@example.com"
+        },
+        "expectedOutput": {
+            "success": true,
+            "message": "Recovery email sent"
+        }
+    },
+    {
+        "testCaseID": "TC005",
+        "description": "Verify user profile displays after successful login",
+        "input": {
+            "action": "View Profile",
+            "sessionToken": "valid_token_123"
+        },
+        "expectedOutput": {
+            "success": true,
+            "profileData": {
+                "username": "testuser",
+                "email": "user@example.com",
+                "accountStatus": "Active"
+            }
+        }
+    }
+]
