@@ -122,6 +122,8 @@ RoostTestHash=d029ea767b
 
 
 roost_feedback [26/06/2025, 6:39:13 AM]:Fix\sthe\scompilation\serror
+
+roost_feedback [26/06/2025, 6:59:42 AM]:Fix\sthe\scompilation\serror.
 */
 
 // ********RoostGPT********
@@ -146,8 +148,8 @@ public class PetFindByStatusGetTest {
 
     @BeforeEach
     public void setUp() {
-        TestdataLoader dataloader = new TestdataLoader();
-        testCases = dataloader.loadJson("src/test/java/org/springframework/RoostTest/pet_findByStatusGetTest.JSON");
+        TestdataLoader dataLoader = new TestdataLoader();
+        testCases = dataLoader.loadJson("src/test/java/org/springframework/RoostTest/pet_findByStatusGetTest.JSON");
     }
 
     @Test
@@ -178,7 +180,7 @@ public class PetFindByStatusGetTest {
                 Iterator<String> keys = requestHeader.keys();
                 while (keys.hasNext()) {
                     String key = keys.next();
-                    String value = requestHeader.getString(key);
+                    String value = requestHeader.optString(key);
 
                     if (key.equalsIgnoreCase("Authorization")) {
                         req.header("Authorization", value.equalsIgnoreCase("${AUTH_TOKEN}") ? "Bearer " + resolvedAuthToken : value);
@@ -192,7 +194,7 @@ public class PetFindByStatusGetTest {
 
             if (queryParams != null) {
                 for (String key : queryParams.keySet()) {
-                    req.queryParam(key, queryParams.get(key));
+                    req.queryParam(key, queryParams.optString(key));
                 }
             }
 
@@ -225,7 +227,7 @@ public class PetFindByStatusGetTest {
             System.out.println("Status Code: " + responseObj.statusCode());
 
             if (testData.has("expected_status_code")) {
-                int expectedCode = testData.getInt("expected_status_code");
+                int expectedCode = testData.optInt("expected_status_code");
                 MatcherAssert.assertThat(
                     "Expected status code " + expectedCode + " but got " + responseObj.statusCode(),
                     responseObj.statusCode(),
