@@ -1,0 +1,1750 @@
+openapi: 3.0.0
+info:
+  title: Kuvera
+  version: ''
+  contact:
+    name: Nemo
+    url: 'https://captnemo.in/contact/'
+    email: kuvera.api@captnemo.in
+  termsOfService: 'https://github.com/captn3m0/kuvera-unofficial-api-specification'
+  description: Unofficial read API specification for Kuvera.  See Introduction on left to get a summary.
+servers:
+  - url: 'https://api.kuvera.in'
+    description: Kuvera Production API Server
+paths:
+  /mf/api/v4/fund_schemes/list.json:
+    get:
+      summary: Get Mutual Funds
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                description: List of Mutual Fund Plans. Each key is a category
+                additionalProperties:
+                  type: object
+                  description: List of sub-categories. Each key is sub-category
+                  additionalProperties:
+                    type: object
+                    description: List of AMCs in this sub-category. Each key is a Mutual Fund House
+                    additionalProperties:
+                      type: array
+                      items:
+                        $ref: '#/components/schemas/Mutual-Fund'
+      operationId: fund_scheme_list
+      description: |
+        Get a list of Mutual Funds in Compressed Format. While it looks like this is not documented, it is documented using `additionalProperties` (OpenAPI v3.0) which doesn't render correctly.
+      tags:
+        - Mutual Funds
+  /api/v3/funds/amc_list.json:
+    get:
+      summary: List all AMCs
+      tags:
+        - Mutual Funds
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                description: List of AMCs
+                minItems: 1
+                uniqueItems: true
+                items:
+                  type: object
+                  description: AMC
+                  properties:
+                    AMC_code:
+                      type: string
+                      minLength: 1
+                      description: AMC Code
+                    available_for_purchase:
+                      type: number
+                      default: 2
+                      enum:
+                        - 0
+                        - 1
+                        - 2
+                      example: 2
+                      description: 'Whether the AMC has schemes available for purchase. 0=No, 1=Temporarily restricted, 2=Yes'
+                      readOnly: true
+                    amc_name:
+                      type: string
+                      minLength: 1
+                      description: AMC Name
+                    image:
+                      type: string
+                      minLength: 1
+                      description: AMC Logo Image filename
+                    short_code:
+                      type: string
+                      minLength: 1
+                      description: AMC short code
+                    rta_info:
+                      type: string
+                      minLength: 1
+                      description: Registrar and Transfer Agent
+                      example: Karvy
+                    address:
+                      type: string
+                      minLength: 1
+                      description: AMC Address
+                    phone_number:
+                      type: string
+                      minLength: 1
+                      description: AMC Phone number
+                    website:
+                      type: string
+                      minLength: 1
+                      description: AMC Website
+                    login_url:
+                      type: string
+                      minLength: 1
+                      description: Login URL for the AMC
+                    contact_email:
+                      type: string
+                      minLength: 1
+                      description: AMC email address
+                    description:
+                      type: string
+                      minLength: 1
+                      description: AMC Description
+                  required:
+                    - AMC_code
+                    - available_for_purchase
+                    - amc_name
+                    - image
+                    - short_code
+                    - rta_info
+                    - address
+                    - phone_number
+                    - website
+                    - login_url
+                    - contact_email
+                    - description
+      operationId: amc_list
+      description: Get a list of AMCs along with their shortcodes.
+  /api/v3/funds/tags/top_bought.json:
+    get:
+      summary: Top Bought Funds
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Mutual-Fund-Code'
+      operationId: top_bought_funds
+      description: List of top bought Mutual Funds
+      tags:
+        - Top Funds
+    parameters: []
+  /api/v3/funds/tags/top_sold.json:
+    get:
+      summary: Top Sold Funds
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Mutual-Fund-Code'
+      operationId: top_sold_funds
+      description: List of top sold Mutual Funds
+      tags:
+        - Top Funds
+    parameters: []
+  /api/v3/funds/tags/top_watchlist.json:
+    get:
+      summary: Top Watched Funds
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Mutual-Fund-Code'
+      operationId: top_watched_funds
+      description: List of top watched Mutual Funds
+      tags:
+        - Top Funds
+    parameters: []
+  /api/v3/funds/index_nav/NIFTY50.json:
+    get:
+      summary: NIFTY 50 Historical Value
+      tags:
+        - Index Data
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: array
+                  minItems: 2
+                  maxItems: 2
+                  items:
+                    allOf:
+                      - properties: {}
+                        description: Unix Epoch Timestamp
+                        multipleOf: 86400
+                      - properties: {}
+                        description: NIFTY Value
+                        minimum: 2500
+                        maximum: 88888
+                        multipleOf: 0.1
+                    description: each array has 2 items
+                    type: number
+      operationId: nifty_50_value
+      description: 'Returns historical value for NIFTY50, one value per day'
+  /mf/api/v4/fund_categories.json:
+    get:
+      summary: Get Fund Category Returns
+      tags:
+        - Mutual Funds
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                description: ''
+                minItems: 1
+                uniqueItems: true
+                items:
+                  type: object
+                  properties:
+                    category_name:
+                      type: string
+                      minLength: 1
+                      description: Category Name
+                    report_date:
+                      type: string
+                      minLength: 1
+                      description: Date last updated
+                    week_1:
+                      type: number
+                      description: Returns in last 1 week
+                    month_1:
+                      type: number
+                      description: Returns in last 1 month
+                    month_3:
+                      type: number
+                      description: Returns in last 3 months
+                    month_6:
+                      type: number
+                      description: Returns in last 6 months
+                    year_1:
+                      type: number
+                      description: Returns in last 1 year
+                    year_3:
+                      type: number
+                      description: Returns in last 3 years
+                    year_5:
+                      type: number
+                      description: Returns in last 5 years
+                    year_10:
+                      type: number
+                      description: 10 year returns for this category
+                    inception:
+                      type: number
+                      description: Returns since inception
+                  required:
+                    - category_name
+                    - report_date
+                    - week_1
+                    - month_1
+                    - month_3
+                    - month_6
+                    - year_1
+                    - year_3
+                    - year_5
+                    - year_10
+                    - inception
+      operationId: get-mf-api-v4-fund_categories.json
+      description: |
+        Returns list of fund categories with their returns across a range of time periods.
+  '/mf/api/v4/fund_schemes/{codes}.json':
+    get:
+      summary: Mutual Fund Plan Details
+      tags:
+        - Mutual Funds
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                description: ''
+                minItems: 1
+                uniqueItems: true
+                items:
+                  type: object
+                  required:
+                    - code
+                    - name
+                    - short_name
+                    - lump_available
+                    - sip_available
+                    - lump_min
+                    - lump_min_additional
+                    - lump_max
+                    - lump_multiplier
+                    - sip_min
+                    - sip_max
+                    - sip_multiplier
+                    - sip_dates
+                    - redemption_allowed
+                    - redemption_amount_multiple
+                    - redemption_amount_minimum
+                    - redemption_quantity_multiple
+                    - redemption_quantity_minimum
+                    - category
+                    - lock_in_period
+                    - upsizecode_sip_dates
+                    - sip_maximum_gap
+                    - fund_house
+                    - fund_name
+                    - short_code
+                    - detail_info
+                    - ISIN
+                    - direct
+                    - switch_allowed
+                    - stp_flag
+                    - swp_flag
+                    - sips
+                    - instant
+                    - reinvestment
+                    - tags
+                    - slug
+                    - channel_partner_code
+                    - tax_period
+                    - nav
+                    - last_nav
+                    - jan_31_nav
+                    - volatility
+                    - returns
+                    - start_date
+                    - fund_type
+                    - fund_category
+                    - plan
+                    - expense_ratio
+                    - expense_ratio_date
+                    - fund_manager
+                    - crisil_rating
+                    - investment_objective
+                    - maturity_type
+                    - aum
+                  properties:
+                    code:
+                      type: string
+                      minLength: 1
+                    name:
+                      type: string
+                      minLength: 1
+                    short_name:
+                      type: string
+                      minLength: 1
+                    lump_available:
+                      type: string
+                      minLength: 1
+                    sip_available:
+                      type: string
+                      minLength: 1
+                    lump_min:
+                      type: number
+                    lump_min_additional:
+                      type: number
+                    lump_max:
+                      type: number
+                    lump_multiplier:
+                      type: number
+                    sip_min:
+                      type: number
+                    sip_max:
+                      type: number
+                    sip_multiplier:
+                      type: number
+                    sip_dates:
+                      type: array
+                      items:
+                        properties: {}
+                    redemption_allowed:
+                      type: string
+                      minLength: 1
+                    redemption_amount_multiple:
+                      type: number
+                    redemption_amount_minimum:
+                      type: number
+                    redemption_quantity_multiple:
+                      type: number
+                    redemption_quantity_minimum:
+                      type: number
+                    category:
+                      type: string
+                      minLength: 1
+                    lock_in_period:
+                      type: number
+                    upsizecode_sip_dates:
+                      type: array
+                      items:
+                        properties: {}
+                    sip_maximum_gap:
+                      type: number
+                    fund_house:
+                      type: string
+                      minLength: 1
+                    fund_name:
+                      type: string
+                      minLength: 1
+                    short_code:
+                      type: string
+                      minLength: 1
+                    detail_info:
+                      type: string
+                      minLength: 1
+                    ISIN:
+                      type: string
+                      minLength: 1
+                    direct:
+                      type: string
+                      minLength: 1
+                    switch_allowed:
+                      type: string
+                      minLength: 1
+                    stp_flag:
+                      type: string
+                      minLength: 1
+                    swp_flag:
+                      type: string
+                      minLength: 1
+                    sips:
+                      type: array
+                      uniqueItems: true
+                      minItems: 1
+                      items:
+                        required:
+                          - sip_frequency
+                          - sip_minimum_gap
+                          - sip_maximum_gap
+                        properties:
+                          sip_frequency:
+                            type: string
+                            minLength: 1
+                          sip_dates:
+                            type: array
+                            items:
+                              properties: {}
+                          sip_minimum_gap:
+                            type: string
+                            minLength: 1
+                          sip_maximum_gap:
+                            type: string
+                            minLength: 1
+                    instant:
+                      type: string
+                      minLength: 1
+                    reinvestment:
+                      type: string
+                      minLength: 1
+                    tags:
+                      type: array
+                      items:
+                        properties: {}
+                    slug:
+                      type: string
+                      minLength: 1
+                    channel_partner_code:
+                      type: string
+                      minLength: 1
+                    tax_period:
+                      type: number
+                    nav:
+                      type: object
+                      properties:
+                        nav:
+                          type: number
+                        date:
+                          type: string
+                          minLength: 1
+                      required:
+                        - nav
+                        - date
+                    last_nav:
+                      type: object
+                      properties:
+                        nav:
+                          type: number
+                        date:
+                          type: string
+                          minLength: 1
+                      required:
+                        - nav
+                        - date
+                    jan_31_nav:
+                      type: number
+                    volatility:
+                      type: number
+                    returns:
+                      type: object
+                      properties:
+                        week_1:
+                          type: number
+                        year_1:
+                          type: number
+                        year_3:
+                          type: number
+                        year_5:
+                          type: number
+                        inception:
+                          type: number
+                        date:
+                          type: string
+                          minLength: 1
+                      required:
+                        - week_1
+                        - year_1
+                        - year_3
+                        - year_5
+                        - inception
+                        - date
+                    start_date:
+                      type: string
+                      minLength: 1
+                    face_value: {}
+                    fund_type:
+                      type: string
+                      minLength: 1
+                    fund_category:
+                      type: string
+                      minLength: 1
+                    plan:
+                      type: string
+                      minLength: 1
+                    expense_ratio:
+                      type: string
+                      minLength: 1
+                    expense_ratio_date:
+                      type: string
+                      minLength: 1
+                    fund_manager:
+                      type: string
+                      minLength: 1
+                    crisil_rating:
+                      type: string
+                      minLength: 1
+                    investment_objective:
+                      type: string
+                      minLength: 1
+                    portfolio_turnover: {}
+                    maturity_type:
+                      type: string
+                      minLength: 1
+                    aum:
+                      type: number
+      operationId: mutual_fund_details
+      description: Get details about a specific Mutual Fund Plans
+    parameters:
+      - $ref: '#/components/parameters/Mutual-Fund-Codes'
+  /fixed_deposit/api/v1/plans.json:
+    get:
+      summary: Fixed Deposit Plans
+      tags:
+        - Fixed Deposit
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                description: ''
+                type: object
+                properties:
+                  data:
+                    type: array
+                    uniqueItems: true
+                    minItems: 1
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: string
+                          minLength: 1
+                          description: Plan ID (Integer as String)
+                        type:
+                          type: string
+                          minLength: 1
+                          description: Usually just "plan"
+                        attributes:
+                          type: object
+                          description: Attributes of the FD Plan
+                          properties:
+                            name:
+                              type: string
+                              minLength: 1
+                              description: Name of the Lender
+                            risk_level:
+                              type: string
+                              minLength: 1
+                              description: Risk Level (as string)
+                              example: lowest
+                            partner_id:
+                              type: string
+                              minLength: 1
+                              description: Lender ID (slug)
+                            interest_rate:
+                              type: number
+                              description: Interst Rate offered on FD
+                            senior_citizen_interest_rate:
+                              type: number
+                              description: Interest Rate for Senior Citizens
+                            offer_code:
+                              description: Always null
+                            tenure_from:
+                              type: number
+                              description: Minimum FD Tenure in days
+                            tenure_to:
+                              type: number
+                              description: Maximum FD Tenure in days
+                            tenure_from_in_months:
+                              type: number
+                              description: Minimum FD Tenure in months
+                            tenure_to_in_months:
+                              type: number
+                              description: Maximum FD Tenure in months
+                            start_date:
+                              description: null so far
+                            end_date:
+                              description: null so far
+                            min_amount:
+                              type: string
+                              minLength: 1
+                              description: Minimum Amount to open the FD as a string in INR. Can contain decimal.
+                              pattern: '\d+[.\d{2}]?'
+                              example: '2500.0'
+                            compounding:
+                              type: string
+                              minLength: 1
+                              description: Compounding Interval. Usually annually
+                              enum:
+                                - annually
+                                - monthly
+                                - daily
+                            max_amount:
+                              type: string
+                              minLength: 1
+                              description: Maximum amount for opening the FD. Amount in INR. Can contain decimal point
+                              pattern: '\d+[.\d{2}]?'
+                            status:
+                              type: string
+                              minLength: 1
+                              description: Status of this FD Plan on Kuvera
+                              enum:
+                                - registered
+                                - active
+                            lockin_period:
+                              type: string
+                              minLength: 1
+                              description: Locking period in days
+                              pattern: \d+
+                              maxLength: 3
+                              example: '90'
+                          required:
+                            - name
+                            - risk_level
+                            - partner_id
+                            - interest_rate
+                            - senior_citizen_interest_rate
+                            - tenure_from
+                            - tenure_to
+                            - tenure_from_in_months
+                            - tenure_to_in_months
+                            - min_amount
+                            - compounding
+                            - max_amount
+                            - status
+                            - lockin_period
+                      required:
+                        - id
+                        - type
+                required:
+                  - data
+      operationId: get_fixed_deposit_plans
+      description: 'Get Fixed Deposit Plans from various lenders. The data from this is used to render https://kuvera.in/explore/fixed-deposit/c/all'
+  /crypto/api/v1/coins.json:
+    get:
+      summary: Get Crypto Rates
+      tags:
+        - Crypto
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                description: ''
+                type: object
+                properties:
+                  status:
+                    type: string
+                    minLength: 1
+                    description: Response status. Usually "success"
+                  data:
+                    type: array
+                    uniqueItems: true
+                    minItems: 1
+                    items:
+                      $ref: '#/components/schemas/Crypto-Token'
+                required:
+                  - status
+                  - data
+      operationId: get_crypto
+      description: 'Used to render https://kuvera.in/explore/crypto/c/all/others'
+  /vested/api/v1/exchange_rates/live.json:
+    get:
+      summary: USD Exchange Rate
+      tags:
+        - International
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                description: ''
+                type: object
+                properties:
+                  status:
+                    type: string
+                    minLength: 1
+                    description: Usually success
+                  data:
+                    type: object
+                    required:
+                      - id
+                      - date
+                      - price
+                      - source_currency
+                      - target_currency
+                    properties:
+                      id:
+                        type: number
+                        description: Currency ID
+                      date:
+                        type: string
+                        minLength: 1
+                        description: date last updated
+                        format: date-time
+                      price:
+                        type: number
+                        description: Price in INR
+                      source_currency:
+                        type: string
+                        minLength: 1
+                        description: 3-letter currency code. Expect USD
+                      target_currency:
+                        type: string
+                        minLength: 1
+                        description: 3 letter currency code. Expect INR
+                required:
+                  - status
+                  - data
+              examples:
+                example-1:
+                  value:
+                    status: string
+                    data:
+                      id: 0
+                      date: '2019-08-24T14:15:22Z'
+                      price: 0
+                      source_currency: string
+                      target_currency: string
+      operationId: get_exchange_rate
+      description: Returns USD exchange rate
+  /api/v3/gold/prices.json:
+    get:
+      summary: Gold Prices
+      tags:
+        - Gold
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                description: ''
+                type: object
+                properties:
+                  gold_prices:
+                    type: array
+                    uniqueItems: true
+                    minItems: 1
+                    description: List of gold prices over time
+                    items:
+                      type: object
+                      properties:
+                        date:
+                          type: string
+                          minLength: 1
+                          description: Date in YYYY-MM-DD format
+                          format: date
+                        price:
+                          type: number
+                          description: Price in INR
+                      required:
+                        - date
+                        - price
+                required:
+                  - gold_prices
+      operationId: get_gold_prices
+      description: 'Returns Gold Prices, as per Kuvera''s partners'
+  /api/v3/gold/current_price.json:
+    get:
+      summary: Current Gold Price
+      tags:
+        - Gold
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                description: ''
+                type: object
+                properties:
+                  taxes:
+                    type: object
+                    required:
+                      - cgst
+                      - sgst
+                      - igst
+                    description: The government will take this much
+                    properties:
+                      cgst:
+                        type: number
+                        description: Central GST
+                      sgst:
+                        type: number
+                        description: State GST
+                      igst:
+                        type: number
+                        description: IGST
+                  block_id:
+                    type: string
+                    minLength: 1
+                  fetched_at:
+                    type: string
+                    minLength: 1
+                    format: date-time
+                    description: Date time. Includes timezone
+                  current_gold_price:
+                    type: object
+                    required:
+                      - buy
+                      - sell
+                    properties:
+                      buy:
+                        type: number
+                        description: Buy price in INR
+                      sell:
+                        type: number
+                        description: Sell price in INR
+                required:
+                  - taxes
+                  - block_id
+                  - fetched_at
+                  - current_gold_price
+      operationId: current_gold_price
+      description: Returns current gold price at which you can buy/sell Gold on Kuvera
+  /api/v3/users/authenticate.json:
+    post:
+      summary: Login User
+      operationId: authenticate_user
+      description: Authenticates a use and gets a JWT token
+      requestBody:
+        content:
+          application/json:
+            schema:
+              description: ''
+              type: object
+              properties:
+                email:
+                  type: string
+                  minLength: 1
+                  format: email
+                password:
+                  type: string
+                  minLength: 1
+                  format: password
+                v:
+                  type: string
+                  minLength: 1
+                  description: Application Version
+                  example: 1.179.14
+              required:
+                - email
+                - password
+            examples:
+              Sample Input:
+                value:
+                  email: user@example.com
+                  password: pa$$word
+                  v: 1.179.14
+        description: Email and Password
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                description: ''
+                type: object
+                properties:
+                  status:
+                    type: string
+                    minLength: 1
+                    description: '"success" if login worked'
+                  token:
+                    type: string
+                    minLength: 1
+                    description: JWT Token
+                  name:
+                    type: string
+                    minLength: 1
+                    description: User's name
+                  email:
+                    type: string
+                    minLength: 1
+                    description: User's email address
+                  profile:
+                    description: Set to null
+                  new_user:
+                    type: boolean
+                    description: ''
+                required:
+                  - status
+                  - token
+                  - name
+                  - email
+                  - new_user
+      tags:
+        - Kuvera
+  /api/v3/user/info.json:
+    get:
+      summary: '[A] Get User Info'
+      tags:
+        - Kuvera
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                description: ''
+                type: object
+                properties:
+                  id:
+                    type: number
+                  current_portfolio:
+                    type: object
+                    required:
+                      - onboarding_state
+                      - id
+                      - name
+                      - mode_of_investment
+                      - smart_switch
+                      - trade_smart
+                      - tax_harvesting
+                      - applicant_signature
+                      - aof_status
+                    properties:
+                      onboarding_state:
+                        type: number
+                      id:
+                        type: number
+                      name:
+                        type: string
+                        minLength: 1
+                      mode_of_investment:
+                        type: string
+                        minLength: 1
+                      smart_switch:
+                        type: boolean
+                      trade_smart:
+                        type: boolean
+                      tax_harvesting:
+                        type: boolean
+                      applicant_signature:
+                        type: array
+                        items: {}
+                      aof_status:
+                        type: string
+                        minLength: 1
+                  email:
+                    type: string
+                    minLength: 1
+                  fname:
+                    type: string
+                    minLength: 1
+                  mname:
+                    type: string
+                    minLength: 0
+                  lname:
+                    type: string
+                    minLength: 1
+                  name:
+                    type: string
+                    minLength: 1
+                  onboarding_state:
+                    type: number
+                  provider:
+                    type: string
+                    minLength: 1
+                  referral_code:
+                    type: string
+                    minLength: 1
+                  referred:
+                    type: boolean
+                  preferences:
+                    type: object
+                    required:
+                      - coins_preferences
+                      - display_sort_preference
+                      - equity_beta
+                      - fd_beta
+                      - dont_prompt_m1
+                      - dont_prompt_mandate
+                      - dont_prompt_import_cas
+                      - dont_prompt_insurance
+                      - 2fa_on
+                      - dashboard_returns
+                      - dont_prompt_asset_allocation
+                    properties:
+                      coins_preferences:
+                        type: object
+                        required:
+                          - smart_switch
+                          - family_account
+                          - smart_switch_2
+                        properties:
+                          smart_switch:
+                            type: boolean
+                          family_account:
+                            type: boolean
+                          smart_switch_2:
+                            type: boolean
+                      display_sort_preference:
+                        type: string
+                        minLength: 1
+                      equity_beta:
+                        type: boolean
+                      fd_beta:
+                        type: boolean
+                      dont_prompt_m1:
+                        type: boolean
+                      dont_prompt_mandate:
+                        type: boolean
+                      dont_prompt_import_cas:
+                        type: boolean
+                      dont_prompt_insurance:
+                        type: boolean
+                      2fa_on:
+                        type: boolean
+                      dashboard_returns:
+                        type: string
+                        minLength: 1
+                      dont_prompt_asset_allocation:
+                        type: boolean
+                  newsletter:
+                    type: string
+                    minLength: 1
+                  mobile_phone:
+                    type: string
+                    minLength: 1
+                  state:
+                    type: number
+                  has_imported:
+                    type: boolean
+                  big_investor:
+                    type: boolean
+                  holiday:
+                    type: string
+                    minLength: 1
+                  dob:
+                    type: string
+                    minLength: 1
+                    description: Date of Birth
+                    format: date
+                  kayako:
+                    type: object
+                    properties:
+                      timestamp:
+                        type: string
+                      token:
+                        type: string
+                required:
+                  - id
+                  - current_portfolio
+                  - email
+                  - fname
+                  - mname
+                  - lname
+                  - name
+                  - onboarding_state
+                  - provider
+                  - referral_code
+                  - referred
+                  - preferences
+                  - newsletter
+                  - mobile_phone
+                  - state
+                  - has_imported
+                  - big_investor
+                  - holiday
+                  - dob
+              examples:
+                Sample Response:
+                  value:
+                    id: 123
+                    current_portfolio:
+                      onboarding_state: 13
+                      id: 123
+                      name: Personal
+                      mode_of_investment: sole
+                      smart_switch: true
+                      trade_smart: false
+                      tax_harvesting: false
+                      applicant_signature: []
+                      aof_status: approved
+                    email: user@example.com
+                    fname: Gaurav
+                    mname: ''
+                    lname: Kumar
+                    name: Gaurav Kumar
+                    onboarding_state: 13
+                    provider: local
+                    referral_code: AVC71
+                    referred: false
+                    preferences:
+                      coins_preferences:
+                        smart_switch: true
+                        family_account: true
+                        smart_switch_2: true
+                      display_sort_preference: totAmount
+                      equity_beta: false
+                      fd_beta: true
+                      dont_prompt_m1: true
+                      dont_prompt_mandate: true
+                      dont_prompt_import_cas: true
+                      dont_prompt_insurance: true
+                      2fa_on: true
+                      dashboard_returns: XIRR
+                      dont_prompt_asset_allocation: true
+                    newsletter: unsubscribed
+                    mobile_phone: '9911991199'
+                    state: 2
+                    has_imported: true
+                    big_investor: true
+                    holiday: 'N'
+                    dob: '1970-01-01'
+                    kayako:
+                      timestamp: '1621578614'
+                      token: ''
+      operationId: get_user_info
+      security:
+        - Authorization: []
+      description: Returns information about the currently logged in user. This requires the Authorization header to be set as Bearer Token. See the Login User API on how to get the token.
+  /equity/api/v1/stock/prices.json:
+    get:
+      summary: Stock Prices
+      tags:
+        - Stocks
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                description: sdsd
+                type: object
+                x-examples:
+                  example-1:
+                    status: success
+                    data:
+                      INE330H01018:
+                        last_price: '2.81'
+                        last_volume: '71'
+                        total_volume: '6279348'
+                        open_price: '2.81'
+                        high_price: '2.81'
+                        low_price: '2.81'
+                        last_close_price: '2.68'
+                        buy_volume: '0'
+                        sell_volume: '0'
+                        last_updated_time: '06:30:01.000'
+                        last_updated_date: 03-06-2021
+                        pe_ratio: '-2.422414'
+                        fw_pe_ratio: '0.311463'
+                        market_capitalisation: '7711353880.5'
+                        return_1w: '45.5958549'
+                        return_1m: '77.8481013'
+                        return_1y: '251.25'
+                        return_ytd: '39.800995'
+                        pb_ratio: '-0.0151351'
+                        52_week_high: '4.33'
+                        52_week_low: '0.77'
+                        52_week_high_date: 29.07.2020
+                        52_week_low_date: 03.06.2020
+                        ticker: '532712'
+                        exchange: BSE
+                        net_percent_change: '4.8507'
+                        adjusted_net_change: '0.13'
+                        adjusted_net_percent_change: '4.8507'
+                        isin: INE330H01018
+                        avg_volume: '12534378.9836065583'
+                        dividend_yield: '-'
+                        eps: '-1.16'
+                        last_updated_date_time: '2021-06-03T16:00:01.000+05:30'
+                        is_live: false
+                      INE114A01011:
+                        last_price: '122.35'
+                        last_volume: '1'
+                        total_volume: '1771373'
+                        open_price: '123.45'
+                        high_price: '124.65'
+                        low_price: '122.1'
+                        last_close_price: '121.85'
+                        buy_volume: '0'
+                        sell_volume: '0'
+                        last_updated_time: '06:30:00.000'
+                        last_updated_date: 03-06-2021
+                        pe_ratio: '15.198758'
+                        fw_pe_ratio: '6.202159'
+                        market_capitalisation: '505369769109.1500244141'
+                        return_1w: '3.0315789'
+                        return_1m: '2.4277941'
+                        return_1y: '292.776886'
+                        return_ytd: '65.1147099'
+                        pb_ratio: '1.2435801'
+                        52_week_high: '151.1'
+                        52_week_low: '28.5'
+                        52_week_high_date: 10.05.2021
+                        52_week_low_date: 12.06.2020
+                        ticker: '500113'
+                        exchange: BSE
+                        net_percent_change: '0.4103'
+                        adjusted_net_change: '0.5'
+                        adjusted_net_percent_change: '0.4103'
+                        isin: INE114A01011
+                        avg_volume: '4952760.590163934'
+                        dividend_yield: '0.82'
+                        eps: '8.05'
+                        last_updated_date_time: '2021-06-03T16:00:00.000+05:30'
+                        is_live: false
+                properties:
+                  status:
+                    type: string
+                    description: Response status. "success"
+                  data:
+                    type: object
+                    additionalProperties:
+                      type: object
+                      properties:
+                        last_price:
+                          type: string
+                          pattern: '\d+\.\d{0,2}'
+                        last_volume:
+                          type: string
+                          pattern: \d+
+                          minLength: 1
+                        total_volume:
+                          type: string
+                          pattern: \d+
+                          minLength: 1
+                        open_price:
+                          type: string
+                          minLength: 3
+                          pattern: '\d+\.\d{0,2}'
+                        high_price:
+                          type: string
+                          minLength: 3
+                          pattern: '\d+\.\d{0,2}'
+                        low_price:
+                          type: string
+                          minLength: 3
+                          pattern: '\d+\.\d{0,2}'
+                        last_close_price:
+                          type: string
+                          minLength: 3
+                          pattern: '\d+\.\d{0,2}'
+                        buy_volume:
+                          type: string
+                          minLength: 1
+                          pattern: \d+
+                        sell_volume:
+                          type: string
+                          minLength: 1
+                          pattern: \d+
+                        last_updated_time:
+                          type: string
+                          minLength: 1
+                          pattern: '\d{2}:\d{2}:\d{2}\.000'
+                        last_updated_date:
+                          type: string
+                          minLength: 1
+                          format: date
+                        pe_ratio:
+                          type: string
+                          minLength: 1
+                          pattern: '\-?\d{0,3}\.\d{0,5}'
+                        fw_pe_ratio:
+                          type: string
+                          minLength: 1
+                          pattern: '\-?\d{0,3}\.\d{0,5}'
+                        market_capitalisation:
+                          type: string
+                          minLength: 1
+                          pattern: '\d{0,12}\.\d{0,2}'
+                        return_1w:
+                          type: string
+                          minLength: 1
+                          pattern: '\-?\d{0,3}\.\d{0,5}'
+                        return_1m:
+                          type: string
+                          minLength: 1
+                          pattern: '\-?\d{0,3}\.\d{0,5}'
+                        return_1y:
+                          type: string
+                          minLength: 1
+                          pattern: '\-?\d{0,3}\.\d{0,5}'
+                        return_ytd:
+                          type: string
+                          minLength: 1
+                          pattern: '\-?\d{0,3}\.\d{0,5}'
+                        pb_ratio:
+                          type: string
+                          minLength: 1
+                          pattern: '\-?\d{0,3}\.\d{0,5}'
+                        52_week_high:
+                          type: string
+                          minLength: 1
+                          pattern: '\d{0,5}\.\d{0,2}'
+                        52_week_low:
+                          type: string
+                          minLength: 1
+                          pattern: '\d{0,5}\.\d{0,2}'
+                        52_week_high_date:
+                          type: string
+                          minLength: 1
+                          pattern: '\d{0,5}\.\d{0,2}'
+                        52_week_low_date:
+                          type: string
+                          minLength: 1
+                          pattern: '\d{0,5}\.\d{0,2}'
+                        ticker:
+                          type: string
+                          minLength: 1
+                          pattern: '\d{5}'
+                        exchange:
+                          type: string
+                          minLength: 1
+                          pattern: '[N|B]SE'
+                        net_percent_change:
+                          type: string
+                          minLength: 1
+                          pattern: '\-?\d{0,3}\.\d{0,5}'
+                        adjusted_net_change:
+                          type: string
+                          minLength: 1
+                          pattern: '\-?\d{0,3}\.\d{0,5}'
+                        adjusted_net_percent_change:
+                          type: string
+                          minLength: 1
+                          pattern: '\-?\d{0,3}\.\d{0,5}'
+                        isin:
+                          type: string
+                          minLength: 1
+                          pattern: 'INE[A-Z0-9]{9}\d{1}'
+                        avg_volume:
+                          type: string
+                          minLength: 1
+                          pattern: '\d{0,8}\.\d{0,6}'
+                        dividend_yield:
+                          type: string
+                          minLength: 1
+                          pattern: '\-?\d{0,3}\.\d{0,5}'
+                        eps:
+                          type: string
+                          minLength: 1
+                          pattern: '\-?\d{0,3}.\d{0,5}'
+                        last_updated_date_time:
+                          type: string
+                          format: datetime
+                          minLength: 1
+                        is_live:
+                          type: boolean
+                      required:
+                        - last_price
+                        - last_volume
+                        - total_volume
+                        - open_price
+                        - high_price
+                        - low_price
+                        - last_close_price
+                        - buy_volume
+                        - sell_volume
+                        - last_updated_time
+                        - last_updated_date
+                        - pe_ratio
+                        - fw_pe_ratio
+                        - market_capitalisation
+                        - return_1w
+                        - return_1m
+                        - return_1y
+                        - return_ytd
+                        - pb_ratio
+                        - 52_week_high
+                        - 52_week_low
+                        - 52_week_high_date
+                        - 52_week_low_date
+                        - ticker
+                        - exchange
+                        - net_percent_change
+                        - adjusted_net_change
+                        - adjusted_net_percent_change
+                        - isin
+                        - avg_volume
+                        - dividend_yield
+                        - eps
+                        - last_updated_date_time
+                        - is_live
+                required:
+                  - status
+                  - data
+              examples:
+                example-1:
+                  value:
+                    status: success
+                    data:
+                      INE330H01018:
+                        last_price: '2.81'
+                        last_volume: '71'
+                        total_volume: '6279348'
+                        open_price: '2.81'
+                        high_price: '2.81'
+                        low_price: '2.81'
+                        last_close_price: '2.68'
+                        buy_volume: '0'
+                        sell_volume: '0'
+                        last_updated_time: '06:30:01.000'
+                        last_updated_date: 03-06-2021
+                        pe_ratio: '-2.422414'
+                        fw_pe_ratio: '0.311463'
+                        market_capitalisation: '7711353880.5'
+                        return_1w: '45.5958549'
+                        return_1m: '77.8481013'
+                        return_1y: '251.25'
+                        return_ytd: '39.800995'
+                        pb_ratio: '-0.0151351'
+                        52_week_high: '4.33'
+                        52_week_low: '0.77'
+                        52_week_high_date: 29.07.2020
+                        52_week_low_date: 03.06.2020
+                        ticker: '532712'
+                        exchange: BSE
+                        net_percent_change: '4.8507'
+                        adjusted_net_change: '0.13'
+                        adjusted_net_percent_change: '4.8507'
+                        isin: INE330H01018
+                        avg_volume: '12534378.9836065583'
+                        dividend_yield: '-'
+                        eps: '-1.16'
+                        last_updated_date_time: '2021-06-03T16:00:01.000+05:30'
+                        is_live: false
+                      INE114A01011:
+                        last_price: '122.35'
+                        last_volume: '1'
+                        total_volume: '1771373'
+                        open_price: '123.45'
+                        high_price: '124.65'
+                        low_price: '122.1'
+                        last_close_price: '121.85'
+                        buy_volume: '0'
+                        sell_volume: '0'
+                        last_updated_time: '06:30:00.000'
+                        last_updated_date: 03-06-2021
+                        pe_ratio: '15.198758'
+                        fw_pe_ratio: '6.202159'
+                        market_capitalisation: '505369769109.1500244141'
+                        return_1w: '3.0315789'
+                        return_1m: '2.4277941'
+                        return_1y: '292.776886'
+                        return_ytd: '65.1147099'
+                        pb_ratio: '1.2435801'
+                        52_week_high: '151.1'
+                        52_week_low: '28.5'
+                        52_week_high_date: 10.05.2021
+                        52_week_low_date: 12.06.2020
+                        ticker: '500113'
+                        exchange: BSE
+                        net_percent_change: '0.4103'
+                        adjusted_net_change: '0.5'
+                        adjusted_net_percent_change: '0.4103'
+                        isin: INE114A01011
+                        avg_volume: '4952760.590163934'
+                        dividend_yield: '0.82'
+                        eps: '8.05'
+                        last_updated_date_time: '2021-06-03T16:00:00.000+05:30'
+                        is_live: false
+      operationId: get-stock-prices
+      description: 'Returns Stock prices for stocks in NSE/BSE. Equity ISIN Codes in India will typically start from `INE`. You can look them up on [NSDL Website](https://nsdl.co.in/master_search.php).'
+      parameters:
+        - $ref: '#/components/parameters/ISIN-Codes'
+components:
+  schemas:
+    Mutual-Fund:
+      description: A compressed representation of a Mutual Fund Plan
+      type: object
+      title: Mutual Fund Mini
+      x-examples:
+        Sample Equity Plan:
+          c: PLPL56-GR
+          'n': Essel Large Cap Equity Growth Direct Plan
+          re: Z
+          r:
+            '1': 66.34
+            '3': 11.74
+            '5': 13.7
+            inception: 13
+            date: '2021-05-19'
+          v: 16.88
+          kc: Equity
+        Sample Debt Bond:
+          c: IDD298-DR
+          'n': IDFC All Seasons Bond Periodic IDCW Reinvest Direct Plan
+          re: 'Y'
+          r:
+            '1': 6.22
+            '3': 5.65
+            '5': 0
+            inception: 5.56
+            date: '2021-05-19'
+          v: 1.89
+          kc: Debt - Bonds
+      properties:
+        c:
+          $ref: '#/components/schemas/Mutual-Fund-Code'
+        'n':
+          type: string
+          minLength: 1
+          description: Scheme Name
+        re:
+          type: string
+          minLength: 0
+          description: Reinvestment
+          enum:
+            - Z
+            - 'N'
+            - 'Y'
+          maxLength: 1
+        r:
+          type: object
+          description: Returns
+          required:
+            - inception
+            - date
+          properties:
+            '1':
+              type: number
+              description: 1 Year returns
+              multipleOf: 0.01
+              exclusiveMinimum: false
+            '3':
+              type: number
+              description: 3 Year returns
+              multipleOf: 0.01
+              format: float
+            '5':
+              type: number
+              description: 5 Year returns
+              multipleOf: 0.01
+            inception:
+              type: number
+              description: Fund returns since inception
+            date:
+              type: string
+              minLength: 1
+              description: Date Last Updated
+              example: '2021-05-19'
+              format: date
+        v:
+          type: number
+          description: Volatility
+        kc:
+          type: string
+          minLength: 1
+          description: Category
+      required:
+        - c
+        - 'n'
+        - re
+        - r
+        - v
+        - kc
+      x-tags:
+        - Schemas
+    Mutual-Fund-Code:
+      type: string
+      title: Mutual-Fund-Code
+      example: LFAG-GR
+      pattern: '^[A-Z0-9-]+'
+      minLength: 4
+      description: Mutual Fund Code
+      x-examples:
+        Example 1: 418-GR
+        example-2: KO178D-DP
+      x-tags:
+        - Schemas
+    Crypto-Token:
+      title: Crypto-Token
+      type: object
+      properties:
+        id:
+          type: number
+          description: Crypto Token ID
+        name:
+          type: string
+          minLength: 1
+          description: Crypto Token Name
+        ticker:
+          type: string
+          minLength: 1
+          description: Crypto Token Ticker
+        slug:
+          type: string
+          minLength: 1
+          description: Crypto Token Slug
+        icon:
+          type: string
+          minLength: 1
+          description: Absolute URL for Crypto Token Icon Image
+        hash_link:
+          type: string
+          minLength: 1
+          description: Official URL for the Crypto Token
+        min_trade_amount:
+          type: number
+        inr_tradeable:
+          type: boolean
+        usdt_tradeable:
+          type: boolean
+        created_at:
+          type: string
+          minLength: 1
+          format: date-time
+        updated_at:
+          type: string
+          minLength: 1
+          format: date-time
+        is_active:
+          type: boolean
+        highest_buy_bid:
+          type: number
+        lowest_sell_bid:
+          type: number
+        last_traded_price:
+          type: number
+        yes_price:
+          type: number
+        volume:
+          type: object
+          properties:
+            max:
+              type: string
+              minLength: 1
+            min:
+              type: string
+              minLength: 1
+            volume:
+              type: number
+          required:
+            - max
+            - min
+            - volume
+        last_updated:
+          type: string
+          minLength: 1
+        returns_1y:
+          type: number
+      required:
+        - id
+        - name
+        - ticker
+        - slug
+        - icon
+        - hash_link
+        - min_trade_amount
+        - inr_tradeable
+        - usdt_tradeable
+        - created_at
+        - updated_at
+        - is_active
+        - highest_buy_bid
+        - lowest_sell_bid
+        - last_traded_price
+        - yes_price
+        - last_updated
+        - returns_1y
+      x-tags:
+        - Schemas
+      description: ''
+  securitySchemes:
+    Authorization:
+      type: http
+      scheme: bearer
+      description: Authorization Header contains a JWT token
+  parameters:
+    Mutual-Fund-Codes:
+      name: codes
+      in: path
+      required: true
+      schema:
+        type: string
+        pattern: '(([A-Z0-9-]+)\|?)'
+        minLength: 4
+        example: FRAG-GR|SBD028G-GR
+      description: 'Multiple Mutual Fund Codes, delimited by a pipe'
+    ISIN-Codes:
+      name: stocks
+      in: query
+      required: true
+      schema:
+        type: string
+        pattern: '(IN([A-Z0-9-]+)\,?)'
+        minLength: 12
+        example: INE330H01018
+      description: 'Multiple ISIN Codes, delimited by a comma'
+  responses: {}
+tags:
+  - name: Kuvera
+  - name: Mutual Funds
+  - name: Top Funds
+  - name: International
+  - name: Gold
+  - name: Index Data
+  - name: Fixed Deposit
+  - name: Crypto
+  - name: Stocks
