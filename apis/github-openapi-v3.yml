@@ -1,0 +1,123 @@
+openapi: 3.0.0
+info:
+  title: Github API
+  description: >-
+    The requests in this collection use the [GitHub
+    API](https://docs.github.com/en/rest) to fetch repo and user data, and
+    create a new repo and upload a `README.md` file.
+
+
+    ### Authorization
+
+
+    We are using Basic Auth (username and password) to authorize the API. This
+    is fine in non-production scenarios, but if you are making a production app
+    read the [recommendations in the GitHub API
+    documentation](https://docs.github.com/en/rest/overview/other-authentication-methods).
+
+
+    Your personal access token can be obtained from your GitHub `Settings >
+    Developer settings > Personal access tokens`. Treat this token like a
+    password and keep it secret.
+
+
+    Save your `personalAccessToken` as a variable of the same name on this
+    collection. Click on the collection `Github API` then the `Variables` tab to
+    access the collection variables.
+
+
+    ONLY PUT IN THE "CURRENT VALUE" COLUMN OF THE `personalAccessToken`
+    collection variable - this will prevent the value from being visible our
+    shared to others who view your collection.
+
+
+    ### Converting to code
+
+
+    Click the icon on the far right of any request to see code snippet examples
+    for how to make the request in various coding languages.
+  version: 1.0.0
+servers:
+  - url: http://{{baseurl}}
+  - url: https://api.github.com
+components:
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
+security:
+  - basicAuth: []
+paths:
+  /users/{username}:
+    get:
+      tags:
+        - default
+      summary: get repos for user
+      parameters:
+        - name: username
+          in: path
+          schema:
+            type: string
+          required: true
+          example: clairefro
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /user/repos:
+    post:
+      tags:
+        - default
+      summary: create a repo
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example: |-
+                {
+                    "name": {{repoName}}
+                }
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /repos/{owner}/{repo}/contents/{path}:
+    put:
+      tags:
+        - default
+      summary: add readme
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                message: committed with API!
+                content: '{{contentb64}}'
+      parameters:
+        - name: owner
+          in: path
+          schema:
+            type: string
+          required: true
+          example: clairefro
+        - name: repo
+          in: path
+          schema:
+            type: string
+          required: true
+          example: '{{repoName}}'
+        - name: path
+          in: path
+          schema:
+            type: string
+          required: true
+          example: README.md
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
