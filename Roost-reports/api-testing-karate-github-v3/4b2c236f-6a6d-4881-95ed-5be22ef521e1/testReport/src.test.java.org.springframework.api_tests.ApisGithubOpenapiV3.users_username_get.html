@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="res/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="res/karate-report.css" type="text/css"/>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <script type="text/javascript" src="res/jquery.min.js"></script>
+    <script type="text/javascript" src="res/jquery.tablesorter.min.js"></script>
+    <script type="text/javascript" src="res/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="res/bootstrap.min.js"></script>
+    <script type="text/javascript" src="res/karate-report.js"></script>
+    <script type="text/javascript" src="res/Resemble.js"></script>
+    <script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
+  api_host:'https://app.posthog.com',
+  persistence:'localStorage',
+  autocapture:false,
+  capture_pageview:false,
+  api_transport:'sendBeacon',
+  loaded: function(posthog) { 
+    posthog.capture("report_feature",{distinct_id:"9d4194e1-3fcb-4227-9282-101d3700cc9a",karate_version:"1.4.1",karate_meta:null});
+  }
+});
+</script>
+
+    <title>src.test.java.org.springframework.api_tests.ApisGithubOpenapiV3.users_username_get</title>
+  </head>
+  <body>
+    <div id="root-container">
+      <div id="leftnav">
+        
+        <div>
+  <div class="nav-logo">
+    <a href="https://karatelabs.io">
+      <img src="karate-labs-logo-ring.svg" alt="Karate Labs"/>
+    </a>
+    <div class="nav-count">
+      <div id="nav-pass" class="bg-success">0</div>
+      <div id="nav-fail" class="bg-danger">1</div>
+    </div>
+  </div>
+  <div id="nav-env">
+    <div></div>
+  </div>
+  <div id="nav-type">
+    <div>Scenarios</div>
+  </div>
+  <div id="nav-date">
+    <div>2025-06-29 02:59:00 PM</div>
+  </div>
+</div>
+
+        <div class="nav-container">
+          <div class="nav-item failed">
+            <a href="#[1.1:48]"><span>[1.1:48]</span> <span>Test GET method to fetch repositories for a user with valid username</span></a>
+          </div>
+        </div>
+      </div>
+      <div id="content">
+        <div class="page-heading alert alert-primary">
+          <a href="karate-summary.html">Summary</a><span class="feature-label">|</span>
+          <a href="karate-tags.html">Tags</a><span class="feature-label">|</span>
+          <span class="feature-label">Feature:</span>
+          <span class="feature-path">src/test/java/org/springframework/api_tests/ApisGithubOpenapiV3/users_username_get.feature</span><span class="feature-label">|</span>
+          <span class="feature-name">Get Repositories for User</span>
+          <span class="feature-description"></span>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1.1:48]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1.1:48]</span>
+                <span class="scenario-name">Test GET method to fetch repositories for a user with valid username</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>1080</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[1.1:48]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[1.1:48]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def urlBase = karate.properties[&#39;API_HOST&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.1:48]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url urlBase</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.18">
+      <div class="step-ref passed">18</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;users&#39;, &#39;clairefro&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">4</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.19">
+      <div class="step-ref passed">19</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method GET</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1050</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.19">14:58:59.237 request:
+1 &gt; GET https://github-api.mock.beeceptor.com/users/clairefro
+1 &gt; Host: github-api.mock.beeceptor.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.7)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+14:59:00.283 response time in milliseconds: 1044
+1 &lt; 200
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Alt-Svc: h3=&quot;:443&quot;; ma=2592000
+1 &lt; Content-Length: 1734
+1 &lt; Content-Type: application/json
+1 &lt; Date: Sun, 29 Jun 2025 14:59:00 GMT
+1 &lt; Vary: Accept-Encoding
+{&quot;avatar_url&quot;:&quot;https://NdbxtvXxWfWzBta.jdUSPTxTCV&quot;,&quot;bio&quot;:&quot;ea do&quot;,&quot;blog&quot;:&quot;ex&quot;,&quot;business_plus&quot;:true,&quot;collaborators&quot;:8858404,&quot;company&quot;:&quot;dolore ipsum voluptate&quot;,&quot;created_at&quot;:&quot;1958-06-04T08:37:08.0Z&quot;,&quot;disk_usage&quot;:-79708275,&quot;email&quot;:&quot;RnrZivq72GZl6@UtSVkYkAdEgKg.le&quot;,&quot;events_url&quot;:&quot;adipisicing&quot;,&quot;followers&quot;:8560630,&quot;followers_url&quot;:&quot;https://jlr.cxaptCcyojB1hSpLQeyRXT,tugI+PI8Z3eehzhpRvfB3n1yb1vIO45tMj-E0X-KXrMD.XWOh9&quot;,&quot;following&quot;:-62385164,&quot;following_url&quot;:&quot;non dolore nulla sunt sint&quot;,&quot;gists_url&quot;:&quot;cupidatat mollit&quot;,&quot;gravatar_id&quot;:null,&quot;hireable&quot;:null,&quot;html_url&quot;:&quot;http://Jw.outfHWCuAjIAf8RnxfM+Krd14maUO6,Se9tKFNu4dVRQSoXzXF1GzppWgMSUtPPWjx,EQoyFYJoaGhf&quot;,&quot;id&quot;:39169348,&quot;ldap_dn&quot;:&quot;sit&quot;,&quot;location&quot;:null,&quot;login&quot;:&quot;sint laboris Excepteur&quot;,&quot;name&quot;:null,&quot;node_id&quot;:&quot;elit id velit aliquip occaecat&quot;,&quot;organizations_url&quot;:&quot;https://XzGOxlTDhuxhdAvNTEnNwAFkPkbDywMd.klYC0rwRQl.ZZy3RsvJg4vRLfB1H2BxqziE&quot;,&quot;owned_private_repos&quot;:-71181400,&quot;plan&quot;:{&quot;collaborators&quot;:-76631184,&quot;name&quot;:&quot;velit eiusmod aliquip esse exercitation&quot;,&quot;private_repos&quot;:70024044,&quot;space&quot;:20781564},&quot;private_gists&quot;:40708722,&quot;public_gists&quot;:-76934971,&quot;public_repos&quot;:-74382355,&quot;received_events_url&quot;:&quot;https://bIMvQpDPoDjtDBNVZqxBMxcSRUvd.ooX5EVhGySDHd7T3BaIN&quot;,&quot;repos_url&quot;:&quot;https://YkrspEZnNgOyVizpHxfGl.iyexdyAQjBriK-hOZst7g+D9&quot;,&quot;site_admin&quot;:false,&quot;starred_url&quot;:&quot;proident id&quot;,&quot;subscriptions_url&quot;:&quot;http://uxUvZtcRZIVrdeoweELVqlLFuueuXr.frQcYiNHml5KmXTOiTyXLQk,ZgtxTFempsXXb4ZbAhCwdbOJFDAHCUi55aNBcB&quot;,&quot;suspended_at&quot;:null,&quot;total_private_repos&quot;:1834180,&quot;twitter_username&quot;:&quot;labore aliquip dolore&quot;,&quot;two_factor_authentication&quot;:false,&quot;type&quot;:&quot;aliquip laboris amet elit id&quot;,&quot;updated_at&quot;:&quot;1906-02-05T17:34:30.0Z&quot;,&quot;url&quot;:&quot;https://BBIfFDNETmEPvvuCuZNlMVymQDaRQ.uhyPw-mDQMMfM7C3pMOlFQf+6rPVv0fPueaPUneKRtNpvTtNara&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.20">
+      <div class="step-ref passed">20</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.21">
+      <div class="step-ref failed">21</div>
+      
+      <div class="step-cell failed">
+        <span>And</span>&nbsp;<span>match response == &#39;#array&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell failed">24</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.21">14:59:00.311 src/test/java/org/springframework/api_tests/ApisGithubOpenapiV3/users_username_get.feature:21
+And match response == &#39;#array&#39;
+match failed: EQUALS
+  $ | not an array or list (MAP:STRING)
+  {&quot;avatar_url&quot;:&quot;https://NdbxtvXxWfWzBta.jdUSPTxTCV&quot;,&quot;bio&quot;:&quot;ea do&quot;,&quot;blog&quot;:&quot;ex&quot;,&quot;business_plus&quot;:true,&quot;collaborators&quot;:8858404,&quot;company&quot;:&quot;dolore ipsum voluptate&quot;,&quot;created_at&quot;:&quot;1958-06-04T08:37:08.0Z&quot;,&quot;disk_usage&quot;:-79708275,&quot;email&quot;:&quot;RnrZivq72GZl6@UtSVkYkAdEgKg.le&quot;,&quot;events_url&quot;:&quot;adipisicing&quot;,&quot;followers&quot;:8560630,&quot;followers_url&quot;:&quot;https://jlr.cxaptCcyojB1hSpLQeyRXT,tugI+PI8Z3eehzhpRvfB3n1yb1vIO45tMj-E0X-KXrMD.XWOh9&quot;,&quot;following&quot;:-62385164,&quot;following_url&quot;:&quot;non dolore nulla sunt sint&quot;,&quot;gists_url&quot;:&quot;cupidatat mollit&quot;,&quot;gravatar_id&quot;:null,&quot;hireable&quot;:null,&quot;html_url&quot;:&quot;http://Jw.outfHWCuAjIAf8RnxfM+Krd14maUO6,Se9tKFNu4dVRQSoXzXF1GzppWgMSUtPPWjx,EQoyFYJoaGhf&quot;,&quot;id&quot;:39169348,&quot;ldap_dn&quot;:&quot;sit&quot;,&quot;location&quot;:null,&quot;login&quot;:&quot;sint laboris Excepteur&quot;,&quot;name&quot;:null,&quot;node_id&quot;:&quot;elit id velit aliquip occaecat&quot;,&quot;organizations_url&quot;:&quot;https://XzGOxlTDhuxhdAvNTEnNwAFkPkbDywMd.klYC0rwRQl.ZZy3RsvJg4vRLfB1H2BxqziE&quot;,&quot;owned_private_repos&quot;:-71181400,&quot;plan&quot;:{&quot;collaborators&quot;:-76631184,&quot;name&quot;:&quot;velit eiusmod aliquip esse exercitation&quot;,&quot;private_repos&quot;:70024044,&quot;space&quot;:20781564},&quot;private_gists&quot;:40708722,&quot;public_gists&quot;:-76934971,&quot;public_repos&quot;:-74382355,&quot;received_events_url&quot;:&quot;https://bIMvQpDPoDjtDBNVZqxBMxcSRUvd.ooX5EVhGySDHd7T3BaIN&quot;,&quot;repos_url&quot;:&quot;https://YkrspEZnNgOyVizpHxfGl.iyexdyAQjBriK-hOZst7g+D9&quot;,&quot;site_admin&quot;:false,&quot;starred_url&quot;:&quot;proident id&quot;,&quot;subscriptions_url&quot;:&quot;http://uxUvZtcRZIVrdeoweELVqlLFuueuXr.frQcYiNHml5KmXTOiTyXLQk,ZgtxTFempsXXb4ZbAhCwdbOJFDAHCUi55aNBcB&quot;,&quot;suspended_at&quot;:null,&quot;total_private_repos&quot;:1834180,&quot;twitter_username&quot;:&quot;labore aliquip dolore&quot;,&quot;two_factor_authentication&quot;:false,&quot;type&quot;:&quot;aliquip laboris amet elit id&quot;,&quot;updated_at&quot;:&quot;1906-02-05T17:34:30.0Z&quot;,&quot;url&quot;:&quot;https://BBIfFDNETmEPvvuCuZNlMVymQDaRQ.uhyPw-mDQMMfM7C3pMOlFQf+6rPVv0fPueaPUneKRtNpvTtNara&quot;}
+  &#39;#array&#39;
+
+src/test/java/org/springframework/api_tests/ApisGithubOpenapiV3/users_username_get.feature:21
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.22">
+      <div class="step-ref skipped">22</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response[*].id == &#39;#number&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.23">
+      <div class="step-ref skipped">23</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response[*].name == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.24">
+      <div class="step-ref skipped">24</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response[*].full_name == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.25">
+      <div class="step-ref skipped">25</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response[*].private == &#39;#boolean&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.26">
+      <div class="step-ref skipped">26</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response[*].owner ==</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="1.26">{
+  id: &#39;#number&#39;,
+  login: &#39;#string&#39;,
+  url: &#39;#string&#39;
+}</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.34">
+      <div class="step-ref skipped">34</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>response[*].owner.url contains &#39;users/clairefro&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.35">
+      <div class="step-ref skipped">35</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response[*].html_url == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.36">
+      <div class="step-ref skipped">36</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response[*].description == &#39;#string?&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.37">
+      <div class="step-ref skipped">37</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response[*].fork == &#39;#boolean&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.38">
+      <div class="step-ref skipped">38</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response[*].url == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.39">
+      <div class="step-ref skipped">39</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>response[*].url contains &#39;users/clairefro/repos&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.40">
+      <div class="step-ref skipped">40</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.headers ==</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="1.40">{
+  Content-Type: &#39;#string&#39;
+}</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="res/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="res/karate-report.css" type="text/css"/>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <script type="text/javascript" src="res/jquery.min.js"></script>
+    <script type="text/javascript" src="res/jquery.tablesorter.min.js"></script>
+    <script type="text/javascript" src="res/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="res/bootstrap.min.js"></script>
+    <script type="text/javascript" src="res/karate-report.js"></script>
+    <script type="text/javascript" src="res/Resemble.js"></script>
+    <script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
+  api_host:'https://app.posthog.com',
+  persistence:'localStorage',
+  autocapture:false,
+  capture_pageview:false,
+  api_transport:'sendBeacon',
+  loaded: function(posthog) { 
+    posthog.capture("report_feature",{distinct_id:"9d4194e1-3fcb-4227-9282-101d3700cc9a",karate_version:"1.4.1",karate_meta:null});
+  }
+});
+</script>
+
+    <title>src.test.java.org.springframework.api_tests.ApisGithubOpenapiV3.user_repos_post</title>
+  </head>
+  <body>
+    <div id="root-container">
+      <div id="leftnav">
+        
+        <div>
+  <div class="nav-logo">
+    <a href="https://karatelabs.io">
+      <img src="karate-labs-logo-ring.svg" alt="Karate Labs"/>
+    </a>
+    <div class="nav-count">
+      <div id="nav-pass" class="bg-success">0</div>
+      <div id="nav-fail" class="bg-danger">1</div>
+    </div>
+  </div>
+  <div id="nav-env">
+    <div></div>
+  </div>
+  <div id="nav-type">
+    <div>Scenarios</div>
+  </div>
+  <div id="nav-date">
+    <div>2025-06-29 02:58:58 PM</div>
+  </div>
+</div>
+
+        <div class="nav-container">
+          <div class="nav-item failed">
+            <a href="#[1.1:37]"><span>[1.1:37]</span> <span>Create a repository with valid payload</span></a>
+          </div>
+        </div>
+      </div>
+      <div id="content">
+        <div class="page-heading alert alert-primary">
+          <a href="karate-summary.html">Summary</a><span class="feature-label">|</span>
+          <a href="karate-tags.html">Tags</a><span class="feature-label">|</span>
+          <span class="feature-label">Feature:</span>
+          <span class="feature-path">src/test/java/org/springframework/api_tests/ApisGithubOpenapiV3/user_repos_post.feature</span><span class="feature-label">|</span>
+          <span class="feature-name">Testing the /user/repos API endpoint</span>
+          <span class="feature-description"></span>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1.1:37]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1.1:37]</span>
+                <span class="scenario-name">Create a repository with valid payload</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>1806</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[1.1:37]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[1.1:37]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def urlBase = karate.properties[&#39;API_HOST&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">23</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.1:37]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url urlBase</span>
+      </div>
+    </div>
+    <div class="time-cell passed">5</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.18">
+      <div class="step-ref passed">18</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;user/repos&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.19">
+      <div class="step-ref passed">19</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request</span>
+      </div>
+    </div>
+    <div class="time-cell passed">16</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="1.19">{
+  &quot;name&quot;: test-repo-12345
+}</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.25">
+      <div class="step-ref passed">25</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1753</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.25">14:58:57.026 request:
+1 &gt; POST https://github-api.mock.beeceptor.com/user/repos
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 26
+1 &gt; Host: github-api.mock.beeceptor.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.7)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;name&quot;:&quot;test-repo-12345&quot;}
+
+14:58:58.540 response time in milliseconds: 1510
+1 &lt; 201
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Alt-Svc: h3=&quot;:443&quot;; ma=2592000
+1 &lt; Content-Length: 6359
+1 &lt; Content-Type: application/json
+1 &lt; Date: Sun, 29 Jun 2025 14:58:58 GMT
+1 &lt; Location: https://api.github.com/repos/octocat/Hello-World
+1 &lt; Vary: Accept-Encoding
+{&quot;allow_auto_merge&quot;:false,&quot;allow_forking&quot;:false,&quot;allow_merge_commit&quot;:false,&quot;allow_rebase_merge&quot;:false,&quot;allow_squash_merge&quot;:true,&quot;allow_update_branch&quot;:true,&quot;anonymous_access_enabled&quot;:false,&quot;archive_url&quot;:&quot;sint ullamco commodo&quot;,&quot;archived&quot;:true,&quot;assignees_url&quot;:&quot;eu sit elit proident&quot;,&quot;blobs_url&quot;:&quot;laboris ea dolor anim Duis&quot;,&quot;branches_url&quot;:&quot;tempor minim&quot;,&quot;clone_url&quot;:&quot;exercitation reprehenderit consectetur&quot;,&quot;collaborators_url&quot;:&quot;occaecat est&quot;,&quot;comments_url&quot;:&quot;esse Excepteur&quot;,&quot;commits_url&quot;:&quot;sit exercitation occaecat&quot;,&quot;compare_url&quot;:&quot;dolore fugiat consequat&quot;,&quot;contents_url&quot;:&quot;non in&quot;,&quot;contributors_url&quot;:&quot;http://ZHhfCs.zvtS4tfy0mbPuU2Xc7-uVEHUubu,Y&quot;,&quot;created_at&quot;:&quot;1893-03-30T14:30:12.0Z&quot;,&quot;default_branch&quot;:&quot;velit id sed&quot;,&quot;delete_branch_on_merge&quot;:true,&quot;deployments_url&quot;:&quot;http://ewNxlvaoJkeUc.jki7zngUVjRY,HbT4t&quot;,&quot;description&quot;:&quot;nulla incididunt commodo&quot;,&quot;disabled&quot;:false,&quot;downloads_url&quot;:&quot;https://UZZlpZqCVYIgLTLqPCETgyXliwVefDjaN.gsuxThGJMHPAUZgE5tvRumBgM9wnW,te8LxGH,Sz4SUmtLZImofPfo0o7ysLIX1zX-Qu&quot;,&quot;events_url&quot;:&quot;http://LrbdTjedlWXcVmNa.lqCVOcy.90ECgFUS8z56D5zNx,BttTw,jVuQD7wC2Y&quot;,&quot;fork&quot;:false,&quot;forks&quot;:-95802017,&quot;forks_count&quot;:-69550630,&quot;forks_url&quot;:&quot;https://EyPvmzfHDJoU.dvuxffZyjjntN7u2r-Bt5Zo6-.yFfUmx,XW4mF1Jca3,cTkramqg8qiFQqlzuFKDzhR5MXE.G7,zz.uy&quot;,&quot;full_name&quot;:&quot;dolore cillum do labore&quot;,&quot;git_commits_url&quot;:&quot;veniam sint voluptate ut dolor&quot;,&quot;git_refs_url&quot;:&quot;magna culpa consectetur nulla pariatur&quot;,&quot;git_tags_url&quot;:&quot;ex aute&quot;,&quot;git_url&quot;:&quot;enim dolor culpa consequat cupidatat&quot;,&quot;has_discussions&quot;:false,&quot;has_downloads&quot;:true,&quot;has_issues&quot;:true,&quot;has_pages&quot;:false,&quot;has_projects&quot;:true,&quot;has_wiki&quot;:true,&quot;homepage&quot;:&quot;https://XKTFrZoyMVndnQSHAv.aksQ73cWoXdHmq,QEZRu+hO9A-HSG.Z0SR.0dYgmiBlFH0i3mT5Ro7&quot;,&quot;hooks_url&quot;:&quot;https://FBQgl.icDtujmIEJOzSFnonb&quot;,&quot;html_url&quot;:&quot;http://JQBqWCTddQTmHndax.qqKhpMfJfuU,42,3kWm,b-o0S4elrAneBvI+AigA4yN-+QnfVypgXDk9pyGZzz6d&quot;,&quot;id&quot;:-66207002,&quot;is_template&quot;:false,&quot;issue_comment_url&quot;:&quot;est eu esse&quot;,&quot;issue_events_url&quot;:&quot;reprehenderit dolore voluptate&quot;,&quot;issues_url&quot;:&quot;Lorem nulla magna&quot;,&quot;keys_url&quot;:&quot;nisi fugiat non occaecat&quot;,&quot;labels_url&quot;:&quot;culpa&quot;,&quot;language&quot;:null,&quot;languages_url&quot;:&quot;https://r.hqqjaof-hroHUVce&quot;,&quot;license&quot;:{&quot;html_url&quot;:&quot;https://aAwIGqQMHOPmiSpMBe.ncTSQSsjNhrZvxnwS1gyp7QJcrc2GCXh+yopEMVP3Tw&quot;,&quot;key&quot;:&quot;adipisicing reprehenderit eiusmod commodo&quot;,&quot;name&quot;:&quot;veniam commodo est irure ut&quot;,&quot;node_id&quot;:&quot;consequat minim consectetur incididunt Ut&quot;,&quot;spdx_id&quot;:&quot;eiusmod id fugiat Lorem dolor&quot;,&quot;url&quot;:&quot;https://rGsgJ.rhgtL3y2FC9p9U9o24zYvVx.j-9NoqFG.FpEVDNGXSVwhZYEpmP6htWg1lp5ofJ+kfwJTE79Iuq5&quot;},&quot;master_branch&quot;:&quot;cillum sed ut labore&quot;,&quot;merge_commit_message&quot;:&quot;PR_BODY&quot;,&quot;merge_commit_title&quot;:&quot;MERGE_MESSAGE&quot;,&quot;merges_url&quot;:&quot;https://CBVTowwWxHAXWLGtaXKFIlxHkBTACj.mypA,Rb6Kzh4BYU5PUoiwNEf2r88QRed1hEB4VUstr4zbT0L&quot;,&quot;milestones_url&quot;:&quot;enim adipisicing reprehenderit in veniam&quot;,&quot;mirror_url&quot;:&quot;https://cfVxTyXLKmIICEZlKsaGsDvnf.rrzzbmbFk,ROkKlZPJndJEah+jBUNTwtN8GU2kQFL4C-w&quot;,&quot;name&quot;:&quot;test-repo-12345&quot;,&quot;network_count&quot;:51245548,&quot;node_id&quot;:&quot;ut pariatur laborum eiusmod&quot;,&quot;notifications_url&quot;:&quot;et proident&quot;,&quot;open_issues&quot;:47050570,&quot;open_issues_count&quot;:-70329323,&quot;organization&quot;:{&quot;avatar_url&quot;:&quot;http://gt.vbbP.&quot;,&quot;email&quot;:null,&quot;events_url&quot;:&quot;in aliqua veniam&quot;,&quot;followers_url&quot;:&quot;http://daSNmwxgXCbLSNG.cjuremX+sxWqHKRWiqzIeDyn+sLQ-QWK4Vj5sbboFBPy+cy7UCj+v1rwtyx&quot;,&quot;following_url&quot;:&quot;exercitation sint&quot;,&quot;gists_url&quot;:&quot;consectetur aliquip&quot;,&quot;gravatar_id&quot;:&quot;aliquip dolore voluptate&quot;,&quot;html_url&quot;:&quot;http://NkZwfTGXUrwE.zrzorkMXWF8Ckq9LRtWDMLZY-NwaXEc&quot;,&quot;id&quot;:78653114,&quot;login&quot;:&quot;cillum Duis minim aliqua velit&quot;,&quot;name&quot;:null,&quot;node_id&quot;:&quot;anim&quot;,&quot;organizations_url&quot;:&quot;https://fhqZGIVv.ngutZDk8rQghae4Pa5tvzesxV6k.JM6CPBUIfDTLaVxTiYL&quot;,&quot;received_events_url&quot;:&quot;http://JYonSregqgoycOJUYG.dvuVLs,m5JmGrpLQlG4h3bU&quot;,&quot;repos_url&quot;:&quot;http://ainp.sspgD-C-NuD2&quot;,&quot;site_admin&quot;:false,&quot;starred_at&quot;:&quot;ut est et&quot;,&quot;starred_url&quot;:&quot;mollit dolor pariatur&quot;,&quot;subscriptions_url&quot;:&quot;http://LdVuFLfFHxCgZlhKbDLDSWF.lsik3A14jiFm-yg9KN5UOgprUfGyJ0xyZdw93WLj&quot;,&quot;type&quot;:&quot;deserunt ullamco voluptate&quot;,&quot;url&quot;:&quot;http://QwmlBVwqAckUMe.eiz+F9wj4+Nkcyz-IvkQc9+uegJ2S7K3zTH.eXauKZGaehBoplQGtNPXO9oE5TaIEweLiWQrbDnw&quot;},&quot;owner&quot;:{&quot;avatar_url&quot;:&quot;https://gpbpiUcMHIiHYbedGAUgxB.wkzGyaNfdVv9g3MYXGkf72ryk&quot;,&quot;email&quot;:null,&quot;events_url&quot;:&quot;culpa consectetur&quot;,&quot;followers_url&quot;:&quot;http://beYSgDfOa.tskrACdIgxCresQ9cozuyh8jwg1Ow6Is4ZadF+yc3ccUN6JFNv3wyFtEdlnac6kHzsMq&quot;,&quot;following_url&quot;:&quot;cillum elit in esse nisi&quot;,&quot;gists_url&quot;:&quot;ad&quot;,&quot;gravatar_id&quot;:&quot;mollit in laborum reprehenderit&quot;,&quot;html_url&quot;:&quot;http://jaO.vnhckC7S2tv8aq-PuNQqK&quot;,&quot;id&quot;:843569,&quot;login&quot;:&quot;esse&quot;,&quot;name&quot;:&quot;Excepteur&quot;,&quot;node_id&quot;:&quot;ullamco officia eu qui&quot;,&quot;organizations_url&quot;:&quot;https://inCdwzUNXwNTRMylWSBDjuhIdwFprJrLp.sxmO+zB84uC6Bi8&quot;,&quot;received_events_url&quot;:&quot;http://rezIzDDfdAUBMuhlSFbGgZiLxYtzMvF.dotdghhWE0YZb.bgbwdyvEIV31AtRBs6nEDanrzKe0wC&quot;,&quot;repos_url&quot;:&quot;http://EiMmppUef.tdlfZAvPIWf1LhJJDw6I&quot;,&quot;site_admin&quot;:true,&quot;starred_at&quot;:&quot;aliquip esse ex do culpa&quot;,&quot;starred_url&quot;:&quot;nostrud exercitation fugiat&quot;,&quot;subscriptions_url&quot;:&quot;https://vBYFhLSdqSvjim.apP.z&quot;,&quot;type&quot;:&quot;sint&quot;,&quot;url&quot;:&quot;http://oUtE.kylnoHtau,.wHisr5Ok6AQqGrkix-X3dwLQ+0&quot;},&quot;permissions&quot;:{&quot;admin&quot;:true,&quot;maintain&quot;:true,&quot;pull&quot;:false,&quot;push&quot;:true,&quot;triage&quot;:false},&quot;private&quot;:false,&quot;pulls_url&quot;:&quot;occaecat Excepteur cillum ut fugiat&quot;,&quot;pushed_at&quot;:null,&quot;releases_url&quot;:&quot;minim est aliquip&quot;,&quot;size&quot;:21802506,&quot;squash_merge_commit_message&quot;:&quot;COMMIT_MESSAGES&quot;,&quot;squash_merge_commit_title&quot;:&quot;PR_TITLE&quot;,&quot;ssh_url&quot;:&quot;Lorem&quot;,&quot;stargazers_count&quot;:9092775,&quot;stargazers_url&quot;:&quot;https://qCSNnaFHgDFTeOKSXitcILThHsUXi.addobpH5x64AzAjLO8Q,4OkmCUfPI5sul97egFOIGPRVFQXPyFk&quot;,&quot;starred_at&quot;:&quot;culpa occaecat&quot;,&quot;statuses_url&quot;:&quot;exercitation&quot;,&quot;subscribers_count&quot;:-31717673,&quot;subscribers_url&quot;:&quot;http://LpRbSvUdmjigWuvuq.vcfLhA9PBdtrs0OJ4ifNe-mZcc1Ub&quot;,&quot;subscription_url&quot;:&quot;https://pMfRlRYvKuUuktLKTPDYtGyEgOWE.cnnhM3GlPZIyLGBLRY.ThGih7OJTEqmaZ6JA-pBx2hMBbBwra3jVbgI&quot;,&quot;svn_url&quot;:&quot;http://eMmoTNCBKLchoDHTOrQEbTvP.jejZJtR1lnw2017Gh2U5-eEDr1BtNr5eDXOZzNQ0c.GfTGXpXR13FLo5MjM&quot;,&quot;tags_url&quot;:&quot;https://ugrBmTHiZvFlHxauxLmsEELYMtGS.radsFJi68gdR7uhJO5YsA4dl0o+0NNmDQXEaoKb5qqIZn,-hBYhP&quot;,&quot;teams_url&quot;:&quot;https://PaHPhubzKfLGOs.zddMV5jUY&quot;,&quot;temp_clone_token&quot;:&quot;exercitation consequat mollit tempor&quot;,&quot;template_repository&quot;:null,&quot;topics&quot;:[&quot;fugiat laborum&quot;,&quot;veniam reprehenderit nulla amet&quot;,&quot;in do&quot;],&quot;trees_url&quot;:&quot;Lorem&quot;,&quot;updated_at&quot;:null,&quot;url&quot;:&quot;https://DiVqiSXEnuMnINGG.soO7hoOsdJW0JjRKpdYGep-GRNcIeTDPjLLS.IW7CZztcxwyIrShjQ73WWcJVFvdfZBdZMY&quot;,&quot;use_squash_pr_title_as_default&quot;:false,&quot;visibility&quot;:&quot;esse ut&quot;,&quot;watchers&quot;:79037514,&quot;watchers_count&quot;:31358657,&quot;web_commit_signoff_required&quot;:false}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.26">
+      <div class="step-ref failed">26</div>
+      
+      <div class="step-cell failed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell failed">9</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.26">14:58:58.555 src/test/java/org/springframework/api_tests/ApisGithubOpenapiV3/user_repos_post.feature:26
+Then status 200
+status code was: 201, expected: 200, response time in milliseconds: 1510, url: https://github-api.mock.beeceptor.com/user/repos, response: 
+{&quot;allow_auto_merge&quot;:false,&quot;allow_forking&quot;:false,&quot;allow_merge_commit&quot;:false,&quot;allow_rebase_merge&quot;:false,&quot;allow_squash_merge&quot;:true,&quot;allow_update_branch&quot;:true,&quot;anonymous_access_enabled&quot;:false,&quot;archive_url&quot;:&quot;sint ullamco commodo&quot;,&quot;archived&quot;:true,&quot;assignees_url&quot;:&quot;eu sit elit proident&quot;,&quot;blobs_url&quot;:&quot;laboris ea dolor anim Duis&quot;,&quot;branches_url&quot;:&quot;tempor minim&quot;,&quot;clone_url&quot;:&quot;exercitation reprehenderit consectetur&quot;,&quot;collaborators_url&quot;:&quot;occaecat est&quot;,&quot;comments_url&quot;:&quot;esse Excepteur&quot;,&quot;commits_url&quot;:&quot;sit exercitation occaecat&quot;,&quot;compare_url&quot;:&quot;dolore fugiat consequat&quot;,&quot;contents_url&quot;:&quot;non in&quot;,&quot;contributors_url&quot;:&quot;http://ZHhfCs.zvtS4tfy0mbPuU2Xc7-uVEHUubu,Y&quot;,&quot;created_at&quot;:&quot;1893-03-30T14:30:12.0Z&quot;,&quot;default_branch&quot;:&quot;velit id sed&quot;,&quot;delete_branch_on_merge&quot;:true,&quot;deployments_url&quot;:&quot;http://ewNxlvaoJkeUc.jki7zngUVjRY,HbT4t&quot;,&quot;description&quot;:&quot;nulla incididunt commodo&quot;,&quot;disabled&quot;:false,&quot;downloads_url&quot;:&quot;https://UZZlpZqCVYIgLTLqPCETgyXliwVefDjaN.gsuxThGJMHPAUZgE5tvRumBgM9wnW,te8LxGH,Sz4SUmtLZImofPfo0o7ysLIX1zX-Qu&quot;,&quot;events_url&quot;:&quot;http://LrbdTjedlWXcVmNa.lqCVOcy.90ECgFUS8z56D5zNx,BttTw,jVuQD7wC2Y&quot;,&quot;fork&quot;:false,&quot;forks&quot;:-95802017,&quot;forks_count&quot;:-69550630,&quot;forks_url&quot;:&quot;https://EyPvmzfHDJoU.dvuxffZyjjntN7u2r-Bt5Zo6-.yFfUmx,XW4mF1Jca3,cTkramqg8qiFQqlzuFKDzhR5MXE.G7,zz.uy&quot;,&quot;full_name&quot;:&quot;dolore cillum do labore&quot;,&quot;git_commits_url&quot;:&quot;veniam sint voluptate ut dolor&quot;,&quot;git_refs_url&quot;:&quot;magna culpa consectetur nulla pariatur&quot;,&quot;git_tags_url&quot;:&quot;ex aute&quot;,&quot;git_url&quot;:&quot;enim dolor culpa consequat cupidatat&quot;,&quot;has_discussions&quot;:false,&quot;has_downloads&quot;:true,&quot;has_issues&quot;:true,&quot;has_pages&quot;:false,&quot;has_projects&quot;:true,&quot;has_wiki&quot;:true,&quot;homepage&quot;:&quot;https://XKTFrZoyMVndnQSHAv.aksQ73cWoXdHmq,QEZRu+hO9A-HSG.Z0SR.0dYgmiBlFH0i3mT5Ro7&quot;,&quot;hooks_url&quot;:&quot;https://FBQgl.icDtujmIEJOzSFnonb&quot;,&quot;html_url&quot;:&quot;http://JQBqWCTddQTmHndax.qqKhpMfJfuU,42,3kWm,b-o0S4elrAneBvI+AigA4yN-+QnfVypgXDk9pyGZzz6d&quot;,&quot;id&quot;:-66207002,&quot;is_template&quot;:false,&quot;issue_comment_url&quot;:&quot;est eu esse&quot;,&quot;issue_events_url&quot;:&quot;reprehenderit dolore voluptate&quot;,&quot;issues_url&quot;:&quot;Lorem nulla magna&quot;,&quot;keys_url&quot;:&quot;nisi fugiat non occaecat&quot;,&quot;labels_url&quot;:&quot;culpa&quot;,&quot;language&quot;:null,&quot;languages_url&quot;:&quot;https://r.hqqjaof-hroHUVce&quot;,&quot;license&quot;:{&quot;html_url&quot;:&quot;https://aAwIGqQMHOPmiSpMBe.ncTSQSsjNhrZvxnwS1gyp7QJcrc2GCXh+yopEMVP3Tw&quot;,&quot;key&quot;:&quot;adipisicing reprehenderit eiusmod commodo&quot;,&quot;name&quot;:&quot;veniam commodo est irure ut&quot;,&quot;node_id&quot;:&quot;consequat minim consectetur incididunt Ut&quot;,&quot;spdx_id&quot;:&quot;eiusmod id fugiat Lorem dolor&quot;,&quot;url&quot;:&quot;https://rGsgJ.rhgtL3y2FC9p9U9o24zYvVx.j-9NoqFG.FpEVDNGXSVwhZYEpmP6htWg1lp5ofJ+kfwJTE79Iuq5&quot;},&quot;master_branch&quot;:&quot;cillum sed ut labore&quot;,&quot;merge_commit_message&quot;:&quot;PR_BODY&quot;,&quot;merge_commit_title&quot;:&quot;MERGE_MESSAGE&quot;,&quot;merges_url&quot;:&quot;https://CBVTowwWxHAXWLGtaXKFIlxHkBTACj.mypA,Rb6Kzh4BYU5PUoiwNEf2r88QRed1hEB4VUstr4zbT0L&quot;,&quot;milestones_url&quot;:&quot;enim adipisicing reprehenderit in veniam&quot;,&quot;mirror_url&quot;:&quot;https://cfVxTyXLKmIICEZlKsaGsDvnf.rrzzbmbFk,ROkKlZPJndJEah+jBUNTwtN8GU2kQFL4C-w&quot;,&quot;name&quot;:&quot;test-repo-12345&quot;,&quot;network_count&quot;:51245548,&quot;node_id&quot;:&quot;ut pariatur laborum eiusmod&quot;,&quot;notifications_url&quot;:&quot;et proident&quot;,&quot;open_issues&quot;:47050570,&quot;open_issues_count&quot;:-70329323,&quot;organization&quot;:{&quot;avatar_url&quot;:&quot;http://gt.vbbP.&quot;,&quot;email&quot;:null,&quot;events_url&quot;:&quot;in aliqua veniam&quot;,&quot;followers_url&quot;:&quot;http://daSNmwxgXCbLSNG.cjuremX+sxWqHKRWiqzIeDyn+sLQ-QWK4Vj5sbboFBPy+cy7UCj+v1rwtyx&quot;,&quot;following_url&quot;:&quot;exercitation sint&quot;,&quot;gists_url&quot;:&quot;consectetur aliquip&quot;,&quot;gravatar_id&quot;:&quot;aliquip dolore voluptate&quot;,&quot;html_url&quot;:&quot;http://NkZwfTGXUrwE.zrzorkMXWF8Ckq9LRtWDMLZY-NwaXEc&quot;,&quot;id&quot;:78653114,&quot;login&quot;:&quot;cillum Duis minim aliqua velit&quot;,&quot;name&quot;:null,&quot;node_id&quot;:&quot;anim&quot;,&quot;organizations_url&quot;:&quot;https://fhqZGIVv.ngutZDk8rQghae4Pa5tvzesxV6k.JM6CPBUIfDTLaVxTiYL&quot;,&quot;received_events_url&quot;:&quot;http://JYonSregqgoycOJUYG.dvuVLs,m5JmGrpLQlG4h3bU&quot;,&quot;repos_url&quot;:&quot;http://ainp.sspgD-C-NuD2&quot;,&quot;site_admin&quot;:false,&quot;starred_at&quot;:&quot;ut est et&quot;,&quot;starred_url&quot;:&quot;mollit dolor pariatur&quot;,&quot;subscriptions_url&quot;:&quot;http://LdVuFLfFHxCgZlhKbDLDSWF.lsik3A14jiFm-yg9KN5UOgprUfGyJ0xyZdw93WLj&quot;,&quot;type&quot;:&quot;deserunt ullamco voluptate&quot;,&quot;url&quot;:&quot;http://QwmlBVwqAckUMe.eiz+F9wj4+Nkcyz-IvkQc9+uegJ2S7K3zTH.eXauKZGaehBoplQGtNPXO9oE5TaIEweLiWQrbDnw&quot;},&quot;owner&quot;:{&quot;avatar_url&quot;:&quot;https://gpbpiUcMHIiHYbedGAUgxB.wkzGyaNfdVv9g3MYXGkf72ryk&quot;,&quot;email&quot;:null,&quot;events_url&quot;:&quot;culpa consectetur&quot;,&quot;followers_url&quot;:&quot;http://beYSgDfOa.tskrACdIgxCresQ9cozuyh8jwg1Ow6Is4ZadF+yc3ccUN6JFNv3wyFtEdlnac6kHzsMq&quot;,&quot;following_url&quot;:&quot;cillum elit in esse nisi&quot;,&quot;gists_url&quot;:&quot;ad&quot;,&quot;gravatar_id&quot;:&quot;mollit in laborum reprehenderit&quot;,&quot;html_url&quot;:&quot;http://jaO.vnhckC7S2tv8aq-PuNQqK&quot;,&quot;id&quot;:843569,&quot;login&quot;:&quot;esse&quot;,&quot;name&quot;:&quot;Excepteur&quot;,&quot;node_id&quot;:&quot;ullamco officia eu qui&quot;,&quot;organizations_url&quot;:&quot;https://inCdwzUNXwNTRMylWSBDjuhIdwFprJrLp.sxmO+zB84uC6Bi8&quot;,&quot;received_events_url&quot;:&quot;http://rezIzDDfdAUBMuhlSFbGgZiLxYtzMvF.dotdghhWE0YZb.bgbwdyvEIV31AtRBs6nEDanrzKe0wC&quot;,&quot;repos_url&quot;:&quot;http://EiMmppUef.tdlfZAvPIWf1LhJJDw6I&quot;,&quot;site_admin&quot;:true,&quot;starred_at&quot;:&quot;aliquip esse ex do culpa&quot;,&quot;starred_url&quot;:&quot;nostrud exercitation fugiat&quot;,&quot;subscriptions_url&quot;:&quot;https://vBYFhLSdqSvjim.apP.z&quot;,&quot;type&quot;:&quot;sint&quot;,&quot;url&quot;:&quot;http://oUtE.kylnoHtau,.wHisr5Ok6AQqGrkix-X3dwLQ+0&quot;},&quot;permissions&quot;:{&quot;admin&quot;:true,&quot;maintain&quot;:true,&quot;pull&quot;:false,&quot;push&quot;:true,&quot;triage&quot;:false},&quot;private&quot;:false,&quot;pulls_url&quot;:&quot;occaecat Excepteur cillum ut fugiat&quot;,&quot;pushed_at&quot;:null,&quot;releases_url&quot;:&quot;minim est aliquip&quot;,&quot;size&quot;:21802506,&quot;squash_merge_commit_message&quot;:&quot;COMMIT_MESSAGES&quot;,&quot;squash_merge_commit_title&quot;:&quot;PR_TITLE&quot;,&quot;ssh_url&quot;:&quot;Lorem&quot;,&quot;stargazers_count&quot;:9092775,&quot;stargazers_url&quot;:&quot;https://qCSNnaFHgDFTeOKSXitcILThHsUXi.addobpH5x64AzAjLO8Q,4OkmCUfPI5sul97egFOIGPRVFQXPyFk&quot;,&quot;starred_at&quot;:&quot;culpa occaecat&quot;,&quot;statuses_url&quot;:&quot;exercitation&quot;,&quot;subscribers_count&quot;:-31717673,&quot;subscribers_url&quot;:&quot;http://LpRbSvUdmjigWuvuq.vcfLhA9PBdtrs0OJ4ifNe-mZcc1Ub&quot;,&quot;subscription_url&quot;:&quot;https://pMfRlRYvKuUuktLKTPDYtGyEgOWE.cnnhM3GlPZIyLGBLRY.ThGih7OJTEqmaZ6JA-pBx2hMBbBwra3jVbgI&quot;,&quot;svn_url&quot;:&quot;http://eMmoTNCBKLchoDHTOrQEbTvP.jejZJtR1lnw2017Gh2U5-eEDr1BtNr5eDXOZzNQ0c.GfTGXpXR13FLo5MjM&quot;,&quot;tags_url&quot;:&quot;https://ugrBmTHiZvFlHxauxLmsEELYMtGS.radsFJi68gdR7uhJO5YsA4dl0o+0NNmDQXEaoKb5qqIZn,-hBYhP&quot;,&quot;teams_url&quot;:&quot;https://PaHPhubzKfLGOs.zddMV5jUY&quot;,&quot;temp_clone_token&quot;:&quot;exercitation consequat mollit tempor&quot;,&quot;template_repository&quot;:null,&quot;topics&quot;:[&quot;fugiat laborum&quot;,&quot;veniam reprehenderit nulla amet&quot;,&quot;in do&quot;],&quot;trees_url&quot;:&quot;Lorem&quot;,&quot;updated_at&quot;:null,&quot;url&quot;:&quot;https://DiVqiSXEnuMnINGG.soO7hoOsdJW0JjRKpdYGep-GRNcIeTDPjLLS.IW7CZztcxwyIrShjQ73WWcJVFvdfZBdZMY&quot;,&quot;use_squash_pr_title_as_default&quot;:false,&quot;visibility&quot;:&quot;esse ut&quot;,&quot;watchers&quot;:79037514,&quot;watchers_count&quot;:31358657,&quot;web_commit_signoff_required&quot;:false}
+src/test/java/org/springframework/api_tests/ApisGithubOpenapiV3/user_repos_post.feature:26
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.27">
+      <div class="step-ref skipped">27</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response == &#39;#object&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.28">
+      <div class="step-ref skipped">28</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.name == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.29">
+      <div class="step-ref skipped">29</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.url == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.30">
+      <div class="step-ref skipped">30</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.id == &#39;#number&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.31">
+      <div class="step-ref skipped">31</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.permissions == &#39;#object&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.32">
+      <div class="step-ref skipped">32</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.permissions.admin == &#39;#boolean&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.33">
+      <div class="step-ref skipped">33</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.permissions.push == &#39;#boolean&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.34">
+      <div class="step-ref skipped">34</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.permissions.pull == &#39;#boolean&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
