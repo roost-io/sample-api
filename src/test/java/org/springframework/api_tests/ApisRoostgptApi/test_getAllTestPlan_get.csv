@@ -1,0 +1,12 @@
+get_for_all,getAll,searchTerm,isCaseSensitive,isWholeWord,take,skip,license_key,label_filter,test_type_filter
+"true","true","test","true","true","10","0","test-key-1","label1,label2","unit,functional"
+"false","false","plan","false","false","20","5","test-key-2","production,staging","artillery,integration"
+"true","false","search","true","false","15","10","full-key","label1","api-spec-test,ui-test"
+"true","true","test","true","true","10","0","test-key-2","production,staging","unit,functional"
+"false","false","plan","false","false","20","5","full-key","label1","api-spec-test,ui-test"
+"true","true","test","true","true","10","0","test-key-2","production,staging","unit,functional"
+"false","false","plan","false","false","20","5","full-key","label1","api-spec-test,ui-test"
+"true","true","test","true","true","10","0","test-key-2","production,staging","unit,functional"
+"false","false","plan","false","false","20","5","full-key","label1","api-spec-test,ui-test"
+"true","false","search","true","false","15","10","test-key-2","production,staging","unit,functional"
+"true","true","test","true","true","10","0","full-key","label1","api-spec-test,ui-test"
