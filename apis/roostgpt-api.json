@@ -1,0 +1,2594 @@
+{
+   "components" : {
+      "schemas" : {
+         "AddTestDto" : {
+            "properties" : {
+               "additional_info" : {
+                  "$ref" : "#/components/schemas/TestAdditionalInfoDto"
+               },
+               "ai_model_info" : {
+                  "$ref" : "#/components/schemas/TestAiModelInfoDto"
+               },
+               "app_id" : {
+                  "description" : "Client ID",
+                  "type" : "string"
+               },
+               "git_info" : {
+                  "$ref" : "#/components/schemas/TestGitInfoDto"
+               },
+               "git_ops" : {
+                  "type" : "boolean"
+               },
+               "git_type" : {
+                  "enum" : [
+                     "github",
+                     "gitlab",
+                     "bitbucket",
+                     "azure"
+                  ],
+                  "type" : "string"
+               },
+               "integration_info" : {
+                  "$ref" : "#/components/schemas/TestIntegrationInfoDto"
+               },
+               "license_key" : {
+                  "type" : "string"
+               },
+               "source_branch" : {
+                  "type" : "string"
+               },
+               "source_repo" : {
+                  "pattern" : "GitRepoRegex",
+                  "type" : "string"
+               },
+               "test_framework" : {
+                  "type" : "string"
+               },
+               "test_name" : {
+                  "type" : "string"
+               },
+               "test_scope" : {
+                  "type" : "object"
+               },
+               "test_timeout" : {
+                  "type" : "number"
+               },
+               "test_type" : {
+                  "type" : "string"
+               },
+               "trigger_events" : {
+                  "items" : {
+                     "enum" : [
+                        "push",
+                        "pr_create"
+                     ],
+                     "type" : "string"
+                  },
+                  "type" : "array"
+               }
+            },
+            "required" : [
+               "app_id",
+               "test_name",
+               "git_type",
+               "ai_model_info",
+               "git_info",
+               "integration_info",
+               "additional_info",
+               "test_timeout",
+               "test_scope"
+            ],
+            "type" : "object"
+         },
+         "ApiRepoInfoDto" : {
+            "properties" : {
+               "git_path" : {
+                  "items" : {
+                     "type" : "string"
+                  },
+                  "type" : "array"
+               },
+               "repo_branch" : {
+                  "type" : "string"
+               },
+               "repo_name" : {
+                  "$ref" : "#/components/schemas/GitSelectedRepoDto"
+               }
+            },
+            "required" : [
+               "repo_name",
+               "repo_branch",
+               "git_path"
+            ],
+            "type" : "object"
+         },
+         "ApiSpecDto" : {
+            "properties" : {
+               "api_repo_info" : {
+                  "$ref" : "#/components/schemas/ApiRepoInfoDto"
+               },
+               "fileContent" : {
+                  "items" : {
+                     "$ref" : "#/components/schemas/FileContentDto"
+                  },
+                  "type" : "array"
+               },
+               "gitpath" : {
+                  "items" : {
+                     "type" : "string"
+                  },
+                  "type" : "array"
+               },
+               "sourceType" : {
+                  "type" : "string"
+               },
+               "type" : {
+                  "type" : "string"
+               },
+               "url" : {
+                  "items" : {
+                     "type" : "string"
+                  },
+                  "type" : "array"
+               }
+            },
+            "required" : [
+               "type",
+               "sourceType",
+               "url",
+               "gitpath",
+               "fileContent",
+               "api_repo_info"
+            ],
+            "type" : "object"
+         },
+         "AppEnvConfigDto" : {
+            "properties" : {
+               "file" : {
+                  "default" : false,
+                  "type" : "boolean"
+               },
+               "file_details" : {
+                  "$ref" : "#/components/schemas/FileConfigObject"
+               },
+               "key" : {
+                  "type" : "string"
+               },
+               "secret" : {
+                  "default" : false,
+                  "type" : "boolean"
+               },
+               "type" : {
+                  "type" : "string"
+               },
+               "value" : {
+                  "type" : "string"
+               }
+            },
+            "type" : "object"
+         },
+         "AwsCredentialsDto" : {
+            "properties" : {
+               "access_key_id" : {
+                  "type" : "string"
+               },
+               "credentials_file" : {
+                  "$ref" : "#/components/schemas/FileConfigObject"
+               },
+               "credentials_input_type" : {
+                  "enum" : [
+                     "file",
+                     "input",
+                     "command"
+                  ],
+                  "type" : "string"
+               },
+               "enabled" : {
+                  "default" : false,
+                  "type" : "boolean"
+               },
+               "region" : {
+                  "type" : "string"
+               },
+               "secret_access_key" : {
+                  "type" : "string"
+               },
+               "session_token" : {
+                  "type" : "string"
+               },
+               "use_admin_creds" : {
+                  "type" : "boolean"
+               }
+            },
+            "type" : "object"
+         },
+         "CloudWatchDto" : {
+            "properties" : {
+               "cw_credentials" : {
+                  "$ref" : "#/components/schemas/AwsCredentialsDto"
+               },
+               "cw_log_group_name" : {
+                  "type" : "string"
+               },
+               "cw_region" : {
+                  "type" : "string"
+               },
+               "enabled" : {
+                  "type" : "boolean"
+               }
+            },
+            "required" : [
+               "enabled",
+               "cw_credentials"
+            ],
+            "type" : "object"
+         },
+         "CreateTestPlanDto" : {
+            "properties" : {
+               "aiModelConfiguration" : {
+                  "$ref" : "#/components/schemas/TestAiModelInfoDto"
+               },
+               "appId" : {
+                  "type" : "string"
+               },
+               "enableGitOperations" : {
+                  "type" : "boolean"
+               },
+               "gitConfiguration" : {
+                  "$ref" : "#/components/schemas/TestGitInfoDto"
+               },
+               "integrationConfiguration" : {
+                  "$ref" : "#/components/schemas/TestIntegrationInfoDto"
+               },
+               "licenseKey" : {
+                  "type" : "string"
+               },
+               "scopeType" : {
+                  "type" : "object"
+               },
+               "testConfiguration" : {
+                  "$ref" : "#/components/schemas/TestAdditionalInfoDto"
+               },
+               "testName" : {
+                  "type" : "string"
+               },
+               "timeoutInHours" : {
+                  "type" : "number"
+               },
+               "triggerEvents" : {
+                  "items" : {
+                     "type" : "object"
+                  },
+                  "type" : "array"
+               }
+            },
+            "required" : [
+               "appId",
+               "testName",
+               "aiModelConfiguration",
+               "gitConfiguration",
+               "testConfiguration",
+               "timeoutInHours",
+               "scopeType"
+            ],
+            "type" : "object"
+         },
+         "DeleteTestPlansDto" : {
+            "properties" : {
+               "license_key" : {
+                  "type" : "string"
+               },
+               "olderThan" : {
+                  "pattern" : "/^\\d+[dwmy]$/",
+                  "type" : "string"
+               }
+            },
+            "required" : [
+               "license_key",
+               "olderThan"
+            ],
+            "type" : "object"
+         },
+         "DependencyVersionsDto" : {
+            "properties" : {
+               "cpp_version" : {
+                  "$ref" : "#/components/schemas/TitleKeyPairDto"
+               },
+               "dotnet_version" : {
+                  "$ref" : "#/components/schemas/TitleKeyPairDto"
+               },
+               "go_version" : {
+                  "$ref" : "#/components/schemas/TitleKeyPairDto"
+               },
+               "gradle_version" : {
+                  "$ref" : "#/components/schemas/TitleKeyPairDto"
+               },
+               "java_version" : {
+                  "$ref" : "#/components/schemas/TitleKeyPairDto"
+               },
+               "maven_version" : {
+                  "$ref" : "#/components/schemas/TitleKeyPairDto"
+               },
+               "node_version" : {
+                  "$ref" : "#/components/schemas/TitleKeyPairDto"
+               },
+               "python_version" : {
+                  "$ref" : "#/components/schemas/TitleKeyPairDto"
+               }
+            },
+            "type" : "object"
+         },
+         "EditEventDto" : {
+            "properties" : {
+               "completion_time" : {
+                  "type" : "string"
+               },
+               "modification_time" : {
+                  "type" : "string"
+               },
+               "status" : {
+                  "type" : "string"
+               },
+               "status_details" : {
+                  "type" : "string"
+               },
+               "test_endpoints" : {
+                  "type" : "string"
+               },
+               "test_report" : {
+                  "type" : "string"
+               }
+            },
+            "type" : "object"
+         },
+         "EditTestDto" : {
+            "properties" : {
+               "additional_info" : {
+                  "$ref" : "#/components/schemas/TestAdditionalInfoDto"
+               },
+               "ai_model_info" : {
+                  "$ref" : "#/components/schemas/TestAiModelInfoDto"
+               },
+               "git_info" : {
+                  "$ref" : "#/components/schemas/TestGitInfoDto"
+               },
+               "git_ops" : {
+                  "type" : "boolean"
+               },
+               "git_type" : {
+                  "type" : "string"
+               },
+               "integration_info" : {
+                  "$ref" : "#/components/schemas/TestIntegrationInfoDto"
+               },
+               "source_branch" : {
+                  "type" : "string"
+               },
+               "source_repo" : {
+                  "pattern" : "GitRepoRegex",
+                  "type" : "string"
+               },
+               "test_framework" : {
+                  "type" : "string"
+               },
+               "test_scope" : {
+                  "type" : "object"
+               },
+               "test_timeout" : {
+                  "type" : "number"
+               },
+               "trigger_events" : {
+                  "items" : {
+                     "type" : "string"
+                  },
+                  "type" : "array"
+               }
+            },
+            "required" : [
+               "ai_model_info",
+               "git_info",
+               "integration_info",
+               "additional_info",
+               "test_timeout",
+               "trigger_events",
+               "test_framework",
+               "git_type",
+               "source_repo",
+               "source_branch",
+               "git_ops",
+               "test_scope"
+            ],
+            "type" : "object"
+         },
+         "EmailConfigDto" : {
+            "properties" : {
+               "inviteAll" : {
+                  "type" : "boolean"
+               },
+               "inviteRoosterEmails" : {
+                  "items" : {
+                     "type" : "string"
+                  },
+                  "type" : "array"
+               }
+            },
+            "required" : [
+               "inviteAll",
+               "inviteRoosterEmails"
+            ],
+            "type" : "object"
+         },
+         "ErrorResponseDto" : {
+            "properties" : {
+               "code" : {
+                  "example" : 404,
+                  "type" : "number"
+               },
+               "message" : {
+                  "example" : "Not found",
+                  "type" : "string"
+               },
+               "method" : {
+                  "enum" : [
+                     "GET",
+                     "DELETE",
+                     "HEAD",
+                     "OPTIONS",
+                     "POST",
+                     "PUT",
+                     "PATCH",
+                     "PURGE",
+                     "LINK",
+                     "UNLINK"
+                  ],
+                  "type" : "string"
+               },
+               "path" : {
+                  "example" : "/application/client/git/eaas/trigger",
+                  "type" : "string"
+               },
+               "timestamp" : {
+                  "format" : "date-time",
+                  "type" : "string"
+               }
+            },
+            "required" : [
+               "code",
+               "timestamp",
+               "path",
+               "method",
+               "message"
+            ],
+            "type" : "object"
+         },
+         "ExecuteTestDto" : {
+            "properties" : {
+               "arrival_rate" : {
+                  "minimum" : 1,
+                  "type" : "number"
+               },
+               "csv_file_path" : {
+                  "type" : "string"
+               },
+               "duration" : {
+                  "minimum" : 1,
+                  "type" : "number"
+               },
+               "endpoint" : {
+                  "type" : "string"
+               },
+               "env_config" : {
+                  "items" : {
+                     "$ref" : "#/components/schemas/AppEnvConfigDto"
+                  },
+                  "type" : "array"
+               },
+               "file_path" : {
+                  "items" : {
+                     "type" : "object"
+                  },
+                  "type" : "array"
+               },
+               "status_code" : {
+                  "type" : "number"
+               },
+               "target_url" : {
+                  "type" : "string"
+               },
+               "test_framework" : {
+                  "type" : "string"
+               }
+            },
+            "required" : [
+               "target_url",
+               "file_path"
+            ],
+            "type" : "object"
+         },
+         "FileConfigObject" : {
+            "properties" : {
+               "file_content" : {
+                  "type" : "string"
+               },
+               "file_name" : {
+                  "type" : "string"
+               }
+            },
+            "type" : "object"
+         },
+         "FileContentDto" : {
+            "properties" : {
+               "file_content" : {
+                  "type" : "string"
+               },
+               "file_name" : {
+                  "type" : "string"
+               },
+               "file_path" : {
+                  "type" : "string"
+               }
+            },
+            "type" : "object"
+         },
+         "GitSelectedRepoDto" : {
+            "properties" : {
+               "default_branch" : {
+                  "type" : "string"
+               },
+               "id" : {
+                  "type" : "string"
+               },
+               "key" : {
+                  "type" : "string"
+               },
+               "owner" : {
+                  "type" : "string"
+               },
+               "project_id" : {
+                  "type" : "string"
+               },
+               "project_name" : {
+                  "type" : "string"
+               },
+               "title" : {
+                  "pattern" : "GitRepoRegex",
+                  "type" : "string"
+               }
+            },
+            "required" : [
+               "key",
+               "title",
+               "id",
+               "owner",
+               "default_branch"
+            ],
+            "type" : "object"
+         },
+         "GitSourceRepoDto" : {
+            "properties" : {
+               "access_token" : {
+                  "type" : "string"
+               },
+               "application_entrypoint" : {
+                  "type" : "string"
+               },
+               "connector_id" : {
+                  "type" : "string"
+               },
+               "org_name" : {
+                  "type" : "string"
+               },
+               "public_repo_url" : {
+                  "type" : "string"
+               },
+               "repository_type" : {
+                  "type" : "object"
+               },
+               "selected_branch" : {
+                  "type" : "string"
+               },
+               "selected_repo" : {
+                  "$ref" : "#/components/schemas/GitSelectedRepoDto"
+               },
+               "username" : {
+                  "type" : "string"
+               }
+            },
+            "required" : [
+               "access_token",
+               "selected_branch",
+               "repository_type",
+               "selected_repo"
+            ],
+            "type" : "object"
+         },
+         "GitTargetRepoDto" : {
+            "properties" : {
+               "access_token" : {
+                  "type" : "string"
+               },
+               "connector_id" : {
+                  "type" : "string"
+               },
+               "org_name" : {
+                  "type" : "string"
+               },
+               "selected_branch" : {
+                  "type" : "string"
+               },
+               "selected_repo" : {
+                  "$ref" : "#/components/schemas/GitSelectedRepoDto"
+               },
+               "username" : {
+                  "type" : "string"
+               }
+            },
+            "required" : [
+               "access_token",
+               "selected_branch",
+               "selected_repo"
+            ],
+            "type" : "object"
+         },
+         "ImproveDataDto" : {
+            "properties" : {
+               "file_path" : {
+                  "type" : "string"
+               },
+               "testscript_endpoint" : {
+                  "type" : "string"
+               },
+               "user_content" : {
+                  "type" : "string"
+               }
+            },
+            "required" : [
+               "file_path",
+               "user_content",
+               "testscript_endpoint"
+            ],
+            "type" : "object"
+         },
+         "ImproveEventDto" : {
+            "properties" : {
+               "event_type" : {
+                  "type" : "string"
+               },
+               "head_branch" : {
+                  "type" : "string"
+               },
+               "improve_data" : {
+                  "items" : {
+                     "$ref" : "#/components/schemas/ImproveDataDto"
+                  },
+                  "type" : "array"
+               }
+            },
+            "required" : [
+               "improve_data",
+               "head_branch",
+               "event_type"
+            ],
+            "type" : "object"
+         },
+         "MsTeamsConfigDto" : {
+            "properties" : {
+               "ms_teams_access_token" : {
+                  "type" : "string"
+               },
+               "ms_teams_channel" : {
+                  "$ref" : "#/components/schemas/TitleKeyPairDto"
+               },
+               "ms_teams_name" : {
+                  "$ref" : "#/components/schemas/TitleKeyPairDto"
+               },
+               "ms_teams_tenant_id" : {
+                  "type" : "string"
+               }
+            },
+            "required" : [
+               "ms_teams_name",
+               "ms_teams_channel"
+            ],
+            "type" : "object"
+         },
+         "ScreenshotDto" : {
+            "properties" : {
+               "screenshotGitpath" : {
+                  "items" : {
+                     "type" : "string"
+                  },
+                  "type" : "array"
+               },
+               "screenshotSourceType" : {
+                  "type" : "string"
+               },
+               "screenshotUrl" : {
+                  "items" : {
+                     "type" : "string"
+                  },
+                  "type" : "array"
+               }
+            },
+            "required" : [
+               "screenshotSourceType",
+               "screenshotUrl",
+               "screenshotGitpath"
+            ],
+            "type" : "object"
+         },
+         "SlackConfigDto" : {
+            "properties" : {
+               "slackChannel" : {
+                  "$ref" : "#/components/schemas/TitleKeyPairDto"
+               },
+               "slackChannelId" : {
+                  "type" : "string"
+               },
+               "slackToken" : {
+                  "type" : "string"
+               }
+            },
+            "required" : [
+               "slackChannel"
+            ],
+            "type" : "object"
+         },
+         "TestAdditionalInfoDto" : {
+            "properties" : {
+               "apiSpec" : {
+                  "$ref" : "#/components/schemas/ApiSpecDto"
+               },
+               "api_filter" : {
+                  "type" : "string"
+               },
+               "behaviouralTest" : {
+                  "$ref" : "#/components/schemas/ApiSpecDto"
+               },
+               "cloudWatchConfig" : {
+                  "$ref" : "#/components/schemas/CloudWatchDto"
+               },
+               "consider_existing_test" : {
+                  "type" : "boolean"
+               },
+               "create_api_spec" : {
+                  "type" : "boolean"
+               },
+               "custom_prompt" : {
+                  "type" : "string"
+               },
+               "custom_tags" : {
+                  "items" : {
+                     "type" : "string"
+                  },
+                  "type" : "array"
+               },
+               "dependency_versions" : {
+                  "$ref" : "#/components/schemas/DependencyVersionsDto"
+               },
+               "elastic_search_connector_id" : {
+                  "type" : "string"
+               },
+               "emailConfig" : {
+                  "$ref" : "#/components/schemas/EmailConfigDto"
+               },
+               "env_config" : {
+                  "items" : {
+                     "$ref" : "#/components/schemas/AppEnvConfigDto"
+                  },
+                  "type" : "array"
+               },
+               "functions_to_test" : {
+                  "type" : "string"
+               },
+               "http_filters" : {
+                  "items" : {
+                     "type" : "string"
+                  },
+                  "type" : "array"
+               },
+               "iterations" : {
+                  "type" : "string"
+               },
+               "java_project_type" : {
+                  "enum" : [
+                     "gradle",
+                     "maven"
+                  ],
+                  "type" : "string"
+               },
+               "language" : {
+                  "type" : "string"
+               },
+               "log_file" : {
+                  "$ref" : "#/components/schemas/FileContentDto"
+               },
+               "log_stash_api_key" : {
+                  "type" : "string"
+               },
+               "log_stash_token" : {
+                  "type" : "string"
+               },
+               "log_stash_type" : {
+                  "type" : "object"
+               },
+               "log_stash_url" : {
+                  "type" : "string"
+               },
+               "log_stash_username" : {
+                  "type" : "string"
+               },
+               "log_type" : {
+                  "type" : "string"
+               },
+               "msTeamsConfig" : {
+                  "$ref" : "#/components/schemas/MsTeamsConfigDto"
+               },
+               "notificationTypeArray" : {
+                  "items" : {
+                     "type" : "object"
+                  },
+                  "type" : "array"
+               },
+               "packages" : {
+                  "type" : "string"
+               },
+               "roost_user_input" : {
+                  "type" : "string"
+               },
+               "roost_user_input_file" : {
+                  "items" : {
+                     "$ref" : "#/components/schemas/FileContentDto"
+                  },
+                  "type" : "array"
+               },
+               "roost_user_input_type" : {
+                  "type" : "string"
+               },
+               "screenshot" : {
+                  "$ref" : "#/components/schemas/ScreenshotDto"
+               },
+               "single_test_file" : {
+                  "type" : "boolean"
+               },
+               "slackConfig" : {
+                  "$ref" : "#/components/schemas/SlackConfigDto"
+               },
+               "slack_connector_id" : {
+                  "type" : "string"
+               },
+               "teams_connector_id" : {
+                  "type" : "string"
+               },
+               "test_framework" : {
+                  "type" : "string"
+               },
+               "test_type" : {
+                  "enum" : [
+                     "unit",
+                     "functional",
+                     "artillery",
+                     "artillery-api-spec",
+                     "integration",
+                     "api-spec-test",
+                     "ui-test",
+                     "grpc"
+                  ],
+                  "type" : "string"
+               },
+               "use_assistant" : {
+                  "type" : "boolean"
+               },
+               "user_language" : {
+                  "enum" : [
+                     "english",
+                     "hebrew"
+                  ],
+                  "type" : "string"
+               },
+               "user_scenarios" : {
+                  "type" : "string"
+               },
+               "verify_test" : {
+                  "type" : "boolean"
+               },
+               "vulnerability_gen" : {
+                  "type" : "boolean"
+               }
+            },
+            "required" : [
+               "language",
+               "iterations",
+               "test_type",
+               "user_language",
+               "log_type",
+               "log_file",
+               "dependency_versions",
+               "apiSpec",
+               "screenshot",
+               "behaviouralTest",
+               "env_config"
+            ],
+            "type" : "object"
+         },
+         "TestAiModelInfoDto" : {
+            "properties" : {
+               "access_token" : {
+                  "type" : "string"
+               },
+               "ai_temperature" : {
+                  "type" : "number"
+               },
+               "connector_id" : {
+                  "type" : "string"
+               },
+               "model" : {
+                  "type" : "object"
+               },
+               "selected_model" : {
+                  "enum" : [
+                     "openai",
+                     "vertexai",
+                     "dbrx",
+                     "azure_open_ai",
+                     "open_source_model",
+                     "claude_ai_model",
+                     "deepseek_ai",
+                     "llama_model",
+                     "star_chat_ai",
+                     "bedrock_ai"
+                  ],
+                  "type" : "string"
+               }
+            },
+            "required" : [
+               "selected_model",
+               "model"
+            ],
+            "type" : "object"
+         },
+         "TestGitInfoDto" : {
+            "properties" : {
+               "host_type" : {
+                  "type" : "object"
+               },
+               "max_depth" : {
+                  "type" : "number"
+               },
+               "selected_path" : {
+                  "type" : "string"
+               },
+               "source" : {
+                  "$ref" : "#/components/schemas/GitSourceRepoDto"
+               },
+               "source_repo_pr" : {
+                  "type" : "boolean"
+               },
+               "target" : {
+                  "$ref" : "#/components/schemas/GitTargetRepoDto"
+               },
+               "type" : {
+                  "type" : "object"
+               },
+               "user_ip" : {
+                  "type" : "string"
+               }
+            },
+            "required" : [
+               "type",
+               "source_repo_pr",
+               "selected_path",
+               "host_type",
+               "source",
+               "target",
+               "max_depth"
+            ],
+            "type" : "object"
+         },
+         "TestGptEntity" : {
+            "properties" : {
+               "additional_info" : {
+                  "type" : "string"
+               },
+               "ai_model_info" : {
+                  "type" : "string"
+               },
+               "connector_ids" : {
+                  "type" : "string"
+               },
+               "created_on" : {
+                  "format" : "date-time",
+                  "type" : "string"
+               },
+               "deleted" : {
+                  "type" : "number"
+               },
+               "git_info" : {
+                  "type" : "string"
+               },
+               "git_ops" : {
+                  "type" : "number"
+               },
+               "git_type" : {
+                  "type" : "string"
+               },
+               "id" : {
+                  "default" : "2c1143eb-bb12-4456-9e26-b1fa50c17fe6",
+                  "type" : "string"
+               },
+               "integration_info" : {
+                  "type" : "string"
+               },
+               "labels" : {
+                  "type" : "string"
+               },
+               "source_branch" : {
+                  "type" : "string"
+               },
+               "source_repo" : {
+                  "type" : "string"
+               },
+               "test_framework" : {
+                  "type" : "string"
+               },
+               "test_name" : {
+                  "type" : "string"
+               },
+               "test_scope" : {
+                  "type" : "string"
+               },
+               "test_source" : {
+                  "enum" : [
+                     "jira_plugin"
+                  ],
+                  "type" : "string"
+               },
+               "test_timeout" : {
+                  "type" : "number"
+               },
+               "thirdparty_app_id" : {
+                  "type" : "string"
+               },
+               "trigger_events" : {
+                  "type" : "string"
+               },
+               "updated_on" : {
+                  "format" : "date-time",
+                  "type" : "string"
+               },
+               "user_id" : {
+                  "type" : "string"
+               },
+               "webhook_error" : {
+                  "type" : "string"
+               }
+            },
+            "required" : [
+               "id",
+               "user_id",
+               "thirdparty_app_id",
+               "test_name",
+               "git_info",
+               "ai_model_info",
+               "integration_info",
+               "additional_info",
+               "trigger_events",
+               "created_on",
+               "updated_on",
+               "deleted",
+               "test_timeout",
+               "webhook_error",
+               "test_framework",
+               "git_type",
+               "source_repo",
+               "source_branch",
+               "connector_ids",
+               "git_ops",
+               "labels",
+               "test_source",
+               "test_scope"
+            ],
+            "type" : "object"
+         },
+         "TestIntegrationInfoDto" : {
+            "properties" : {
+               "azure_org" : {
+                  "type" : "string"
+               },
+               "azure_project" : {
+                  "type" : "string"
+               },
+               "azure_project_id" : {
+                  "type" : "string"
+               },
+               "azure_token" : {
+                  "type" : "string"
+               },
+               "azure_work_item_id" : {
+                  "type" : "string"
+               },
+               "connector_id" : {
+                  "type" : "string"
+               },
+               "jira_email" : {
+                  "type" : "string"
+               },
+               "jira_host_name" : {
+                  "type" : "string"
+               },
+               "jira_id" : {
+                  "type" : "string"
+               },
+               "jira_password" : {
+                  "type" : "string"
+               },
+               "ticket_files" : {
+                  "items" : {
+                     "$ref" : "#/components/schemas/FileContentDto"
+                  },
+                  "type" : "array"
+               },
+               "ticket_input_type" : {
+                  "enum" : [
+                     "id",
+                     "file"
+                  ],
+                  "type" : "string"
+               },
+               "type" : {
+                  "enum" : [
+                     "jira",
+                     "azure",
+                     "none"
+                  ],
+                  "type" : "string"
+               }
+            },
+            "required" : [
+               "type"
+            ],
+            "type" : "object"
+         },
+         "TitleKeyPairDto" : {
+            "properties" : {
+               "key" : {
+                  "type" : "string"
+               },
+               "title" : {
+                  "type" : "string"
+               }
+            },
+            "type" : "object"
+         },
+         "TriggerTestDto" : {
+            "properties" : {
+               "event_type" : {
+                  "type" : "string"
+               },
+               "license_key" : {
+                  "type" : "string"
+               },
+               "runtime_variables" : {
+                  "type" : "object"
+               }
+            },
+            "required" : [
+               "event_type",
+               "runtime_variables",
+               "license_key"
+            ],
+            "type" : "object"
+         }
+      },
+      "securitySchemes" : {
+         "bearer" : {
+            "bearerFormat" : "JWT",
+            "scheme" : "bearer",
+            "type" : "http"
+         }
+      }
+   },
+   "info" : {
+      "contact" : {},
+      "description" : "This document is an OpenAPI reference for the RoostAI APIs that you can explore. ",
+      "title" : "RoostAI APIs",
+      "version" : "v1.1.15"
+   },
+   "openapi" : "3.0.0",
+   "paths" : {
+      "/test" : {
+         "get" : {
+            "operationId" : "TestGptController_getAllTest",
+            "parameters" : [
+               {
+                  "in" : "query",
+                  "name" : "license_key",
+                  "required" : false,
+                  "schema" : {
+                     "type" : "string"
+                  }
+               },
+               {
+                  "in" : "query",
+                  "name" : "get_for_all",
+                  "required" : true,
+                  "schema" : {
+                     "enum" : [
+                        "true",
+                        "false"
+                     ],
+                     "type" : "string"
+                  }
+               },
+               {
+                  "in" : "query",
+                  "name" : "getAll",
+                  "required" : true,
+                  "schema" : {
+                     "enum" : [
+                        "true",
+                        "false"
+                     ],
+                     "type" : "string"
+                  }
+               },
+               {
+                  "in" : "query",
+                  "name" : "searchTerm",
+                  "required" : true,
+                  "schema" : {
+                     "minLength" : 3,
+                     "type" : "string"
+                  }
+               },
+               {
+                  "in" : "query",
+                  "name" : "isCaseSensitive",
+                  "required" : true,
+                  "schema" : {
+                     "enum" : [
+                        "true",
+                        "false"
+                     ],
+                     "type" : "string"
+                  }
+               },
+               {
+                  "in" : "query",
+                  "name" : "isWholeWord",
+                  "required" : true,
+                  "schema" : {
+                     "enum" : [
+                        "true",
+                        "false"
+                     ],
+                     "type" : "string"
+                  }
+               },
+               {
+                  "in" : "query",
+                  "name" : "take",
+                  "required" : true,
+                  "schema" : {
+                     "type" : "string"
+                  }
+               },
+               {
+                  "in" : "query",
+                  "name" : "skip",
+                  "required" : true,
+                  "schema" : {
+                     "type" : "string"
+                  }
+               },
+               {
+                  "in" : "query",
+                  "name" : "label_filter",
+                  "required" : false,
+                  "schema" : {
+                     "items" : {
+                        "type" : "string"
+                     },
+                     "type" : "array"
+                  }
+               },
+               {
+                  "in" : "query",
+                  "name" : "test_type_filter",
+                  "required" : false,
+                  "schema" : {
+                     "items" : {
+                        "enum" : [
+                           "unit",
+                           "functional",
+                           "artillery",
+                           "artillery-api-spec",
+                           "integration",
+                           "api-spec-test",
+                           "ui-test",
+                           "grpc"
+                        ],
+                        "type" : "string"
+                     },
+                     "type" : "array"
+                  }
+               }
+            ],
+            "responses" : {
+               "200" : {
+                  "description" : ""
+               },
+               "default" : {
+                  "content" : {
+                     "application/json" : {
+                        "schema" : {
+                           "$ref" : "#/components/schemas/ErrorResponseDto"
+                        }
+                     }
+                  },
+                  "description" : ""
+               }
+            },
+            "security" : [
+               {
+                  "bearer" : []
+               }
+            ],
+            "tags" : [
+               "RoostGPT"
+            ]
+         },
+         "post" : {
+            "description" : "Creates a new application with its configuration.",
+            "operationId" : "TestGptController_addTest",
+            "parameters" : [],
+            "requestBody" : {
+               "content" : {
+                  "application/json" : {
+                     "schema" : {
+                        "$ref" : "#/components/schemas/AddTestDto"
+                     }
+                  }
+               },
+               "required" : true
+            },
+            "responses" : {
+               "201" : {
+                  "content" : {
+                     "application/json" : {
+                        "schema" : {
+                           "$ref" : "#/components/schemas/TestGptEntity"
+                        }
+                     }
+                  },
+                  "description" : ""
+               },
+               "default" : {
+                  "content" : {
+                     "application/json" : {
+                        "schema" : {
+                           "$ref" : "#/components/schemas/ErrorResponseDto"
+                        }
+                     }
+                  },
+                  "description" : ""
+               }
+            },
+            "security" : [
+               {
+                  "bearer" : []
+               }
+            ],
+            "summary" : "Create a Test App",
+            "tags" : [
+               "RoostGPT"
+            ]
+         }
+      },
+      "/test/createTestPlan" : {
+         "post" : {
+            "operationId" : "TestGptController_createTestPlan",
+            "parameters" : [],
+            "requestBody" : {
+               "content" : {
+                  "application/json" : {
+                     "schema" : {
+                        "$ref" : "#/components/schemas/CreateTestPlanDto"
+                     }
+                  }
+               },
+               "required" : true
+            },
+            "responses" : {
+               "201" : {
+                  "content" : {
+                     "application/json" : {
+                        "schema" : {
+                           "$ref" : "#/components/schemas/TestGptEntity"
+                        }
+                     }
+                  },
+                  "description" : ""
+               },
+               "default" : {
+                  "content" : {
+                     "application/json" : {
+                        "schema" : {
+                           "$ref" : "#/components/schemas/ErrorResponseDto"
+                        }
+                     }
+                  },
+                  "description" : ""
+               }
+            },
+            "security" : [
+               {
+                  "bearer" : []
+               }
+            ],
+            "tags" : [
+               "RoostGPT"
+            ]
+         }
+      },
+      "/test/deleteTest" : {
+         "delete" : {
+            "operationId" : "TestGptController_deleteTestPlans",
+            "parameters" : [],
+            "requestBody" : {
+               "content" : {
+                  "application/json" : {
+                     "schema" : {
+                        "$ref" : "#/components/schemas/DeleteTestPlansDto"
+                     }
+                  }
+               },
+               "required" : true
+            },
+            "responses" : {
+               "200" : {
+                  "description" : ""
+               },
+               "default" : {
+                  "content" : {
+                     "application/json" : {
+                        "schema" : {
+                           "$ref" : "#/components/schemas/ErrorResponseDto"
+                        }
+                     }
+                  },
+                  "description" : ""
+               }
+            },
+            "security" : [
+               {
+                  "bearer" : []
+               }
+            ],
+            "tags" : [
+               "RoostGPT"
+            ]
+         }
+      },
+      "/test/event" : {
+         "get" : {
+            "operationId" : "TestGptController_getAllEvent",
+            "parameters" : [
+               {
+                  "in" : "query",
+                  "name" : "searchTerm",
+                  "required" : false,
+                  "schema" : {
+                     "minLength" : 3,
+                     "type" : "string"
+                  }
+               },
+               {
+                  "in" : "query",
+                  "name" : "isCaseSensitive",
+                  "required" : false,
+                  "schema" : {
+                     "enum" : [
+                        "true",
+                        "false"
+                     ],
+                     "type" : "string"
+                  }
+               },
+               {
+                  "in" : "query",
+                  "name" : "isWholeWord",
+                  "required" : false,
+                  "schema" : {
+                     "enum" : [
+                        "true",
+                        "false"
+                     ],
+                     "type" : "string"
+                  }
+               },
+               {
+                  "in" : "query",
+                  "name" : "take",
+                  "required" : false,
+                  "schema" : {
+                     "type" : "string"
+                  }
+               },
+               {
+                  "in" : "query",
+                  "name" : "skip",
+                  "required" : false,
+                  "schema" : {
+                     "type" : "string"
+                  }
+               },
+               {
+                  "in" : "query",
+                  "name" : "test_id",
+                  "required" : false,
+                  "schema" : {
+                     "type" : "string"
+                  }
+               },
+               {
+                  "in" : "query",
+                  "name" : "status_filter",
+                  "required" : false,
+                  "schema" : {
+                     "items" : {
+                        "enum" : [
+                           "installing_dependencies",
+                           "in_progress",
+                           "failed",
+                           "aborted",
+                           "timeout",
+                           "completed",
+                           "in_queue",
+                           "aborting"
+                        ],
+                        "type" : "string"
+                     },
+                     "type" : "array"
+                  }
+               },
+               {
+                  "in" : "query",
+                  "name" : "test_type_filter",
+                  "required" : false,
+                  "schema" : {
+                     "items" : {
+                        "enum" : [
+                           "unit",
+                           "functional",
+                           "artillery",
+                           "artillery-api-spec",
+                           "integration",
+                           "api-spec-test",
+                           "ui-test",
+                           "grpc"
+                        ],
+                        "type" : "string"
+                     },
+                     "type" : "array"
+                  }
+               },
+               {
+                  "in" : "query",
+                  "name" : "event_type_filter",
+                  "required" : false,
+                  "schema" : {
+                     "items" : {
+                        "type" : "string"
+                     },
+                     "type" : "array"
+                  }
+               },
+               {
+                  "in" : "query",
+                  "name" : "order_by",
+                  "required" : false,
+                  "schema" : {
+                     "enum" : [
+                        "creation_time",
+                        "completion_time",
+                        "modification_time"
+                     ],
+                     "type" : "string"
+                  }
+               },
+               {
+                  "in" : "query",
+                  "name" : "time_filter",
+                  "required" : false,
+                  "schema" : {
+                     "enum" : [
+                        "Last-1Day",
+                        "Last-7Days",
+                        "Last-14Days",
+                        "Last-30Days"
+                     ],
+                     "type" : "string"
+                  }
+               },
+               {
+                  "in" : "query",
+                  "name" : "label_filter",
+                  "required" : false,
+                  "schema" : {
+                     "items" : {
+                        "type" : "string"
+                     },
+                     "type" : "array"
+                  }
+               },
+               {
+                  "in" : "query",
+                  "name" : "show_my_events",
+                  "required" : false,
+                  "schema" : {
+                     "enum" : [
+                        "true",
+                        "false"
+                     ],
+                     "type" : "string"
+                  }
+               }
+            ],
+            "responses" : {
+               "200" : {
+                  "content" : {
+                     "application/json" : {
+                        "schema" : {
+                           "type" : "object"
+                        }
+                     }
+                  },
+                  "description" : ""
+               },
+               "default" : {
+                  "content" : {
+                     "application/json" : {
+                        "schema" : {
+                           "$ref" : "#/components/schemas/ErrorResponseDto"
+                        }
+                     }
+                  },
+                  "description" : ""
+               }
+            },
+            "security" : [
+               {
+                  "bearer" : []
+               }
+            ],
+            "tags" : [
+               "RoostGPT"
+            ]
+         }
+      },
+      "/test/event/{trigger_id}" : {
+         "delete" : {
+            "operationId" : "TestGptController_deleteEvent",
+            "parameters" : [
+               {
+                  "in" : "path",
+                  "name" : "trigger_id",
+                  "required" : true,
+                  "schema" : {
+                     "type" : "string"
+                  }
+               }
+            ],
+            "responses" : {
+               "200" : {
+                  "description" : ""
+               },
+               "default" : {
+                  "content" : {
+                     "application/json" : {
+                        "schema" : {
+                           "$ref" : "#/components/schemas/ErrorResponseDto"
+                        }
+                     }
+                  },
+                  "description" : ""
+               }
+            },
+            "security" : [
+               {
+                  "bearer" : []
+               }
+            ],
+            "tags" : [
+               "RoostGPT"
+            ]
+         },
+         "get" : {
+            "operationId" : "TestGptController_getOneEvent",
+            "parameters" : [
+               {
+                  "in" : "path",
+                  "name" : "trigger_id",
+                  "required" : true,
+                  "schema" : {
+                     "type" : "string"
+                  }
+               }
+            ],
+            "responses" : {
+               "200" : {
+                  "content" : {
+                     "application/json" : {
+                        "schema" : {
+                           "type" : "object"
+                        }
+                     }
+                  },
+                  "description" : ""
+               },
+               "default" : {
+                  "content" : {
+                     "application/json" : {
+                        "schema" : {
+                           "$ref" : "#/components/schemas/ErrorResponseDto"
+                        }
+                     }
+                  },
+                  "description" : ""
+               }
+            },
+            "security" : [
+               {
+                  "bearer" : []
+               }
+            ],
+            "tags" : [
+               "RoostGPT"
+            ]
+         },
+         "patch" : {
+            "operationId" : "TestGptController_editTriggerEvent",
+            "parameters" : [
+               {
+                  "in" : "path",
+                  "name" : "trigger_id",
+                  "required" : true,
+                  "schema" : {
+                     "type" : "string"
+                  }
+               }
+            ],
+            "requestBody" : {
+               "content" : {
+                  "application/json" : {
+                     "schema" : {
+                        "$ref" : "#/components/schemas/EditEventDto"
+                     }
+                  }
+               },
+               "required" : true
+            },
+            "responses" : {
+               "200" : {
+                  "description" : ""
+               },
+               "default" : {
+                  "content" : {
+                     "application/json" : {
+                        "schema" : {
+                           "$ref" : "#/components/schemas/ErrorResponseDto"
+                        }
+                     }
+                  },
+                  "description" : ""
+               }
+            },
+            "security" : [
+               {
+                  "bearer" : []
+               }
+            ],
+            "tags" : [
+               "RoostGPT"
+            ]
+         }
+      },
+      "/test/event/{trigger_id}/abort" : {
+         "post" : {
+            "operationId" : "TestGptController_abortTrigger",
+            "parameters" : [
+               {
+                  "in" : "path",
+                  "name" : "trigger_id",
+                  "required" : true,
+                  "schema" : {
+                     "type" : "string"
+                  }
+               }
+            ],
+            "responses" : {
+               "201" : {
+                  "description" : ""
+               },
+               "default" : {
+                  "content" : {
+                     "application/json" : {
+                        "schema" : {
+                           "$ref" : "#/components/schemas/ErrorResponseDto"
+                        }
+                     }
+                  },
+                  "description" : ""
+               }
+            },
+            "security" : [
+               {
+                  "bearer" : []
+               }
+            ],
+            "tags" : [
+               "RoostGPT"
+            ]
+         }
+      },
+      "/test/event/{trigger_id}/execute" : {
+         "post" : {
+            "operationId" : "TestGptController_executeTest",
+            "parameters" : [
+               {
+                  "in" : "path",
+                  "name" : "trigger_id",
+                  "required" : true,
+                  "schema" : {
+                     "type" : "string"
+                  }
+               }
+            ],
+            "requestBody" : {
+               "content" : {
+                  "application/json" : {
+                     "schema" : {
+                        "$ref" : "#/components/schemas/ExecuteTestDto"
+                     }
+                  }
+               },
+               "required" : true
+            },
+            "responses" : {
+               "201" : {
+                  "content" : {
+                     "application/json" : {
+                        "schema" : {
+                           "type" : "object"
+                        }
+                     }
+                  },
+                  "description" : ""
+               },
+               "default" : {
+                  "content" : {
+                     "application/json" : {
+                        "schema" : {
+                           "$ref" : "#/components/schemas/ErrorResponseDto"
+                        }
+                     }
+                  },
+                  "description" : ""
+               }
+            },
+            "security" : [
+               {
+                  "bearer" : []
+               }
+            ],
+            "tags" : [
+               "RoostGPT"
+            ]
+         }
+      },
+      "/test/event/{trigger_id}/execute/abort" : {
+         "post" : {
+            "operationId" : "TestGptController_abortTestExecute",
+            "parameters" : [
+               {
+                  "in" : "path",
+                  "name" : "trigger_id",
+                  "required" : true,
+                  "schema" : {
+                     "type" : "string"
+                  }
+               }
+            ],
+            "responses" : {
+               "201" : {
+                  "content" : {
+                     "application/json" : {
+                        "schema" : {
+                           "type" : "string"
+                        }
+                     }
+                  },
+                  "description" : ""
+               },
+               "default" : {
+                  "content" : {
+                     "application/json" : {
+                        "schema" : {
+                           "$ref" : "#/components/schemas/ErrorResponseDto"
+                        }
+                     }
+                  },
+                  "description" : ""
+               }
+            },
+            "security" : [
+               {
+                  "bearer" : []
+               }
+            ],
+            "tags" : [
+               "RoostGPT"
+            ]
+         }
+      },
+      "/test/event/{trigger_id}/execute/report" : {
+         "get" : {
+            "operationId" : "TestGptController_testExecutionReport",
+            "parameters" : [
+               {
+                  "in" : "path",
+                  "name" : "trigger_id",
+                  "required" : true,
+                  "schema" : {
+                     "type" : "string"
+                  }
+               },
+               {
+                  "in" : "query",
+                  "name" : "file_choice",
+                  "required" : true,
+                  "schema" : {
+                     "type" : "string"
+                  }
+               },
+               {
+                  "in" : "query",
+                  "name" : "file_path",
+                  "required" : true,
+                  "schema" : {
+                     "type" : "string"
+                  }
+               }
+            ],
+            "responses" : {
+               "200" : {
+                  "content" : {
+                     "application/json" : {
+                        "schema" : {
+                           "type" : "object"
+                        }
+                     }
+                  },
+                  "description" : ""
+               },
+               "default" : {
+                  "content" : {
+                     "application/json" : {
+                        "schema" : {
+                           "$ref" : "#/components/schemas/ErrorResponseDto"
+                        }
+                     }
+                  },
+                  "description" : ""
+               }
+            },
+            "security" : [
+               {
+                  "bearer" : []
+               }
+            ],
+            "tags" : [
+               "RoostGPT"
+            ]
+         }
+      },
+      "/test/event/{trigger_id}/execute/status" : {
+         "get" : {
+            "operationId" : "TestGptController_testExecutionFileStatus",
+            "parameters" : [
+               {
+                  "in" : "path",
+                  "name" : "trigger_id",
+                  "required" : true,
+                  "schema" : {
+                     "type" : "string"
+                  }
+               },
+               {
+                  "in" : "query",
+                  "name" : "file_path",
+                  "required" : true,
+                  "schema" : {
+                     "type" : "string"
+                  }
+               }
+            ],
+            "responses" : {
+               "200" : {
+                  "content" : {
+                     "application/json" : {
+                        "schema" : {
+                           "type" : "string"
+                        }
+                     }
+                  },
+                  "description" : ""
+               },
+               "default" : {
+                  "content" : {
+                     "application/json" : {
+                        "schema" : {
+                           "$ref" : "#/components/schemas/ErrorResponseDto"
+                        }
+                     }
+                  },
+                  "description" : ""
+               }
+            },
+            "security" : [
+               {
+                  "bearer" : []
+               }
+            ],
+            "tags" : [
+               "RoostGPT"
+            ]
+         }
+      },
+      "/test/event/{trigger_id}/logs" : {
+         "get" : {
+            "operationId" : "TestGptController_getLogs",
+            "parameters" : [
+               {
+                  "in" : "path",
+                  "name" : "trigger_id",
+                  "required" : true,
+                  "schema" : {
+                     "type" : "string"
+                  }
+               }
+            ],
+            "responses" : {
+               "200" : {
+                  "content" : {
+                     "application/json" : {
+                        "schema" : {
+                           "type" : "object"
+                        }
+                     }
+                  },
+                  "description" : ""
+               },
+               "default" : {
+                  "content" : {
+                     "application/json" : {
+                        "schema" : {
+                           "$ref" : "#/components/schemas/ErrorResponseDto"
+                        }
+                     }
+                  },
+                  "description" : ""
+               }
+            },
+            "security" : [
+               {
+                  "bearer" : []
+               }
+            ],
+            "tags" : [
+               "RoostGPT"
+            ]
+         }
+      },
+      "/test/event/{trigger_id}/retrigger" : {
+         "post" : {
+            "operationId" : "TestGptController_retrigger",
+            "parameters" : [
+               {
+                  "in" : "path",
+                  "name" : "trigger_id",
+                  "required" : true,
+                  "schema" : {
+                     "type" : "string"
+                  }
+               }
+            ],
+            "requestBody" : {
+               "content" : {
+                  "application/json" : {
+                     "schema" : {
+                        "$ref" : "#/components/schemas/ImproveEventDto"
+                     }
+                  }
+               },
+               "required" : true
+            },
+            "responses" : {
+               "201" : {
+                  "description" : ""
+               },
+               "default" : {
+                  "content" : {
+                     "application/json" : {
+                        "schema" : {
+                           "$ref" : "#/components/schemas/ErrorResponseDto"
+                        }
+                     }
+                  },
+                  "description" : ""
+               }
+            },
+            "security" : [
+               {
+                  "bearer" : []
+               }
+            ],
+            "tags" : [
+               "RoostGPT"
+            ]
+         }
+      },
+      "/test/getAllTestPlan" : {
+         "get" : {
+            "operationId" : "TestGptController_getAllTestPlan",
+            "parameters" : [
+               {
+                  "in" : "query",
+                  "name" : "license_key",
+                  "required" : false,
+                  "schema" : {
+                     "type" : "string"
+                  }
+               },
+               {
+                  "in" : "query",
+                  "name" : "get_for_all",
+                  "required" : true,
+                  "schema" : {
+                     "enum" : [
+                        "true",
+                        "false"
+                     ],
+                     "type" : "string"
+                  }
+               },
+               {
+                  "in" : "query",
+                  "name" : "getAll",
+                  "required" : true,
+                  "schema" : {
+                     "enum" : [
+                        "true",
+                        "false"
+                     ],
+                     "type" : "string"
+                  }
+               },
+               {
+                  "in" : "query",
+                  "name" : "searchTerm",
+                  "required" : true,
+                  "schema" : {
+                     "minLength" : 3,
+                     "type" : "string"
+                  }
+               },
+               {
+                  "in" : "query",
+                  "name" : "isCaseSensitive",
+                  "required" : true,
+                  "schema" : {
+                     "enum" : [
+                        "true",
+                        "false"
+                     ],
+                     "type" : "string"
+                  }
+               },
+               {
+                  "in" : "query",
+                  "name" : "isWholeWord",
+                  "required" : true,
+                  "schema" : {
+                     "enum" : [
+                        "true",
+                        "false"
+                     ],
+                     "type" : "string"
+                  }
+               },
+               {
+                  "in" : "query",
+                  "name" : "take",
+                  "required" : true,
+                  "schema" : {
+                     "type" : "string"
+                  }
+               },
+               {
+                  "in" : "query",
+                  "name" : "skip",
+                  "required" : true,
+                  "schema" : {
+                     "type" : "string"
+                  }
+               },
+               {
+                  "in" : "query",
+                  "name" : "label_filter",
+                  "required" : false,
+                  "schema" : {
+                     "items" : {
+                        "type" : "string"
+                     },
+                     "type" : "array"
+                  }
+               },
+               {
+                  "in" : "query",
+                  "name" : "test_type_filter",
+                  "required" : false,
+                  "schema" : {
+                     "items" : {
+                        "enum" : [
+                           "unit",
+                           "functional",
+                           "artillery",
+                           "artillery-api-spec",
+                           "integration",
+                           "api-spec-test",
+                           "ui-test",
+                           "grpc"
+                        ],
+                        "type" : "string"
+                     },
+                     "type" : "array"
+                  }
+               }
+            ],
+            "responses" : {
+               "200" : {
+                  "description" : ""
+               },
+               "default" : {
+                  "content" : {
+                     "application/json" : {
+                        "schema" : {
+                           "$ref" : "#/components/schemas/ErrorResponseDto"
+                        }
+                     }
+                  },
+                  "description" : ""
+               }
+            },
+            "security" : [
+               {
+                  "bearer" : []
+               }
+            ],
+            "tags" : [
+               "RoostGPT"
+            ]
+         }
+      },
+      "/test/support" : {
+         "post" : {
+            "operationId" : "TestGptController_sendEventDiagnosisToSlack",
+            "parameters" : [],
+            "responses" : {
+               "201" : {
+                  "content" : {
+                     "application/json" : {
+                        "schema" : {
+                           "type" : "object"
+                        }
+                     }
+                  },
+                  "description" : ""
+               },
+               "default" : {
+                  "content" : {
+                     "application/json" : {
+                        "schema" : {
+                           "$ref" : "#/components/schemas/ErrorResponseDto"
+                        }
+                     }
+                  },
+                  "description" : ""
+               }
+            },
+            "security" : [
+               {
+                  "bearer" : []
+               }
+            ],
+            "tags" : [
+               "RoostGPT"
+            ]
+         }
+      },
+      "/test/verifyTestName" : {
+         "post" : {
+            "operationId" : "TestGptController_verifyTestName",
+            "parameters" : [],
+            "responses" : {
+               "201" : {
+                  "description" : ""
+               },
+               "default" : {
+                  "content" : {
+                     "application/json" : {
+                        "schema" : {
+                           "$ref" : "#/components/schemas/ErrorResponseDto"
+                        }
+                     }
+                  },
+                  "description" : ""
+               }
+            },
+            "security" : [
+               {
+                  "bearer" : []
+               }
+            ],
+            "tags" : [
+               "RoostGPT"
+            ]
+         }
+      },
+      "/test/{test_id}" : {
+         "delete" : {
+            "operationId" : "TestGptController_deleteTest",
+            "parameters" : [
+               {
+                  "in" : "path",
+                  "name" : "test_id",
+                  "required" : true,
+                  "schema" : {
+                     "type" : "string"
+                  }
+               }
+            ],
+            "responses" : {
+               "200" : {
+                  "description" : ""
+               },
+               "default" : {
+                  "content" : {
+                     "application/json" : {
+                        "schema" : {
+                           "$ref" : "#/components/schemas/ErrorResponseDto"
+                        }
+                     }
+                  },
+                  "description" : ""
+               }
+            },
+            "security" : [
+               {
+                  "bearer" : []
+               }
+            ],
+            "tags" : [
+               "RoostGPT"
+            ]
+         },
+         "get" : {
+            "operationId" : "TestGptController_getOneTest",
+            "parameters" : [
+               {
+                  "in" : "path",
+                  "name" : "test_id",
+                  "required" : true,
+                  "schema" : {
+                     "type" : "string"
+                  }
+               },
+               {
+                  "in" : "query",
+                  "name" : "clone_test",
+                  "required" : true,
+                  "schema" : {
+                     "type" : "string"
+                  }
+               }
+            ],
+            "responses" : {
+               "200" : {
+                  "content" : {
+                     "application/json" : {
+                        "schema" : {
+                           "type" : "object"
+                        }
+                     }
+                  },
+                  "description" : ""
+               },
+               "default" : {
+                  "content" : {
+                     "application/json" : {
+                        "schema" : {
+                           "$ref" : "#/components/schemas/ErrorResponseDto"
+                        }
+                     }
+                  },
+                  "description" : ""
+               }
+            },
+            "security" : [
+               {
+                  "bearer" : []
+               }
+            ],
+            "tags" : [
+               "RoostGPT"
+            ]
+         },
+         "patch" : {
+            "operationId" : "TestGptController_editTest",
+            "parameters" : [
+               {
+                  "in" : "path",
+                  "name" : "test_id",
+                  "required" : true,
+                  "schema" : {
+                     "type" : "string"
+                  }
+               }
+            ],
+            "requestBody" : {
+               "content" : {
+                  "application/json" : {
+                     "schema" : {
+                        "$ref" : "#/components/schemas/EditTestDto"
+                     }
+                  }
+               },
+               "required" : true
+            },
+            "responses" : {
+               "200" : {
+                  "description" : ""
+               },
+               "default" : {
+                  "content" : {
+                     "application/json" : {
+                        "schema" : {
+                           "$ref" : "#/components/schemas/ErrorResponseDto"
+                        }
+                     }
+                  },
+                  "description" : ""
+               }
+            },
+            "security" : [
+               {
+                  "bearer" : []
+               }
+            ],
+            "tags" : [
+               "RoostGPT"
+            ]
+         }
+      },
+      "/test/{test_id}/trigger" : {
+         "post" : {
+            "operationId" : "TestGptController_triggerTest",
+            "parameters" : [
+               {
+                  "in" : "path",
+                  "name" : "test_id",
+                  "required" : true,
+                  "schema" : {
+                     "type" : "string"
+                  }
+               }
+            ],
+            "requestBody" : {
+               "content" : {
+                  "application/json" : {
+                     "schema" : {
+                        "$ref" : "#/components/schemas/TriggerTestDto"
+                     }
+                  }
+               },
+               "required" : true
+            },
+            "responses" : {
+               "201" : {
+                  "description" : ""
+               },
+               "default" : {
+                  "content" : {
+                     "application/json" : {
+                        "schema" : {
+                           "$ref" : "#/components/schemas/ErrorResponseDto"
+                        }
+                     }
+                  },
+                  "description" : ""
+               }
+            },
+            "security" : [
+               {
+                  "bearer" : []
+               }
+            ],
+            "tags" : [
+               "RoostGPT"
+            ]
+         }
+      },
+      "/test/{test_id}/triggerTest" : {
+         "post" : {
+            "operationId" : "TestGptController_triggerTestWithLicenseKey",
+            "parameters" : [
+               {
+                  "in" : "path",
+                  "name" : "test_id",
+                  "required" : true,
+                  "schema" : {
+                     "type" : "string"
+                  }
+               }
+            ],
+            "requestBody" : {
+               "content" : {
+                  "application/json" : {
+                     "schema" : {
+                        "$ref" : "#/components/schemas/TriggerTestDto"
+                     }
+                  }
+               },
+               "required" : true
+            },
+            "responses" : {
+               "201" : {
+                  "description" : ""
+               },
+               "default" : {
+                  "content" : {
+                     "application/json" : {
+                        "schema" : {
+                           "$ref" : "#/components/schemas/ErrorResponseDto"
+                        }
+                     }
+                  },
+                  "description" : ""
+               }
+            },
+            "security" : [
+               {
+                  "bearer" : []
+               }
+            ],
+            "tags" : [
+               "RoostGPT"
+            ]
+         }
+      }
+   },
+   "servers" : [
+      {
+         "description" : "default",
+         "url" : "/api"
+      }
+   ],
+   "tags" : [
+      {
+         "description" : "Automated Test Case Generation using LLMs       \n       Add more details...       ",
+         "name" : "RoostGPT"
+      }
+   ]
+}
