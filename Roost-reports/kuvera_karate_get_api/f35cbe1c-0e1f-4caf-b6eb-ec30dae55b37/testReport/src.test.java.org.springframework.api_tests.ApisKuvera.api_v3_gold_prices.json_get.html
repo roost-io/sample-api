@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="res/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="res/karate-report.css" type="text/css"/>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <script type="text/javascript" src="res/jquery.min.js"></script>
+    <script type="text/javascript" src="res/jquery.tablesorter.min.js"></script>
+    <script type="text/javascript" src="res/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="res/bootstrap.min.js"></script>
+    <script type="text/javascript" src="res/karate-report.js"></script>
+    <script type="text/javascript" src="res/Resemble.js"></script>
+    <script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
+  api_host:'https://app.posthog.com',
+  persistence:'localStorage',
+  autocapture:false,
+  capture_pageview:false,
+  api_transport:'sendBeacon',
+  loaded: function(posthog) { 
+    posthog.capture("report_feature",{distinct_id:"88c6a1aa-96bd-4627-8ef1-ca071ba60884",karate_version:"1.4.1",karate_meta:null});
+  }
+});
+</script>
+
+    <title>src.test.java.org.springframework.api_tests.ApisKuvera.api_v3_gold_prices.json_get</title>
+  </head>
+  <body>
+    <div id="root-container">
+      <div id="leftnav">
+        
+        <div>
+  <div class="nav-logo">
+    <a href="https://karatelabs.io">
+      <img src="karate-labs-logo-ring.svg" alt="Karate Labs"/>
+    </a>
+    <div class="nav-count">
+      <div id="nav-pass" class="bg-success">0</div>
+      <div id="nav-fail" class="bg-danger">1</div>
+    </div>
+  </div>
+  <div id="nav-env">
+    <div></div>
+  </div>
+  <div id="nav-type">
+    <div>Scenarios</div>
+  </div>
+  <div id="nav-date">
+    <div>2025-06-29 08:59:03 AM</div>
+  </div>
+</div>
+
+        <div class="nav-container">
+          <div class="nav-item failed">
+            <a href="#[1:17]"><span>[1:17]</span> <span>Retrieve Gold Prices with GET request</span></a>
+          </div>
+        </div>
+      </div>
+      <div id="content">
+        <div class="page-heading alert alert-primary">
+          <a href="karate-summary.html">Summary</a><span class="feature-label">|</span>
+          <a href="karate-tags.html">Tags</a><span class="feature-label">|</span>
+          <span class="feature-label">Feature:</span>
+          <span class="feature-path">src/test/java/org/springframework/api_tests/ApisKuvera/api_v3_gold_prices.json_get.feature</span><span class="feature-label">|</span>
+          <span class="feature-name">Gold Prices API Tests</span>
+          <span class="feature-description"></span>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1:17]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1:17]</span>
+                <span class="scenario-name">Retrieve Gold Prices with GET request</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>80</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[1:17]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[1:17]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def urlBase = karate.properties[&#39;KUVERA_API_HOST&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1:17]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url urlBase</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.18">
+      <div class="step-ref passed">18</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;api/v3/gold/prices.json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.19">
+      <div class="step-ref passed">19</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method GET</span>
+      </div>
+    </div>
+    <div class="time-cell passed">41</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.19">08:59:03.082 request:
+1 &gt; GET https://api.kuvera.in/api/v3/gold/prices.json
+1 &gt; Host: api.kuvera.in
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.7)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+08:59:03.120 response time in milliseconds: 37
+1 &lt; 200
+1 &lt; Date: Sun, 29 Jun 2025 08:59:03 GMT
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Connection: keep-alive
+1 &lt; Server: nginx/1.23.3
+1 &lt; X-Frame-Options: SAMEORIGIN
+1 &lt; X-Frame-Options: SAMEORIGIN
+1 &lt; X-XSS-Protection: 1; mode=block
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; X-Download-Options: noopen
+1 &lt; X-Permitted-Cross-Domain-Policies: none
+1 &lt; Referrer-Policy: strict-origin-when-cross-origin
+1 &lt; ETag: W/&quot;39fd5c89eeb894628436351da9dc3cc3&quot;
+1 &lt; Cache-Control: max-age=0, private, must-revalidate
+1 &lt; X-Request-Id: 86188024-d2ff-4baa-82e7-a912424cb3e5
+1 &lt; X-Runtime: 0.008646
+1 &lt; Vary: Accept-Encoding
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Methods: PUT,POST,DELETE,GET
+1 &lt; Access-Control-Allow-Headers: Authorization,X-Requested-With,content-type
+1 &lt; Access-Control-Max-Age: : 86400
+1 &lt; Strict-Transport-Security: max-age=31536000; includeSubDomains
+{&quot;gold_prices&quot;:[{&quot;date&quot;:&quot;2025-03-31&quot;,&quot;price&quot;:9034.36},{&quot;date&quot;:&quot;2025-04-01&quot;,&quot;price&quot;:9086.23},{&quot;date&quot;:&quot;2025-04-02&quot;,&quot;price&quot;:9070.17},{&quot;date&quot;:&quot;2025-04-03&quot;,&quot;price&quot;:9018.4},{&quot;date&quot;:&quot;2025-04-04&quot;,&quot;price&quot;:8827.18},{&quot;date&quot;:&quot;2025-04-05&quot;,&quot;price&quot;:8854.31},{&quot;date&quot;:&quot;2025-04-06&quot;,&quot;price&quot;:8854.31},{&quot;date&quot;:&quot;2025-04-07&quot;,&quot;price&quot;:8755.76},{&quot;date&quot;:&quot;2025-04-08&quot;,&quot;price&quot;:8821.2},{&quot;date&quot;:&quot;2025-04-09&quot;,&quot;price&quot;:9049.62},{&quot;date&quot;:&quot;2025-04-10&quot;,&quot;price&quot;:9220.7},{&quot;date&quot;:&quot;2025-04-11&quot;,&quot;price&quot;:9362.34},{&quot;date&quot;:&quot;2025-04-12&quot;,&quot;price&quot;:9369.32},{&quot;date&quot;:&quot;2025-04-13&quot;,&quot;price&quot;:9369.32},{&quot;date&quot;:&quot;2025-04-14&quot;,&quot;price&quot;:9281.24},{&quot;date&quot;:&quot;2025-04-15&quot;,&quot;price&quot;:9289.22},{&quot;date&quot;:&quot;2025-04-16&quot;,&quot;price&quot;:9475.66},{&quot;date&quot;:&quot;2025-04-17&quot;,&quot;price&quot;:9421.96},{&quot;date&quot;:&quot;2025-04-18&quot;,&quot;price&quot;:9492.3},{&quot;date&quot;:&quot;2025-04-19&quot;,&quot;price&quot;:9515.19},{&quot;date&quot;:&quot;2025-04-20&quot;,&quot;price&quot;:9515.19},{&quot;date&quot;:&quot;2025-04-21&quot;,&quot;price&quot;:9684.24},{&quot;date&quot;:&quot;2025-04-22&quot;,&quot;price&quot;:9722.35},{&quot;date&quot;:&quot;2025-04-23&quot;,&quot;price&quot;:9446.34},{&quot;date&quot;:&quot;2025-04-24&quot;,&quot;price&quot;:9553.0},{&quot;date&quot;:&quot;2025-04-25&quot;,&quot;price&quot;:9452.9},{&quot;date&quot;:&quot;2025-04-26&quot;,&quot;price&quot;:9571.21},{&quot;date&quot;:&quot;2025-04-27&quot;,&quot;price&quot;:9571.21},{&quot;date&quot;:&quot;2025-04-28&quot;,&quot;price&quot;:9574.59},{&quot;date&quot;:&quot;2025-04-29&quot;,&quot;price&quot;:9536.08},{&quot;date&quot;:&quot;2025-04-30&quot;,&quot;price&quot;:9478.45},{&quot;date&quot;:&quot;2025-05-01&quot;,&quot;price&quot;:9278.55},{&quot;date&quot;:&quot;2025-05-02&quot;,&quot;price&quot;:9344.49},{&quot;date&quot;:&quot;2025-05-03&quot;,&quot;price&quot;:9331.62},{&quot;date&quot;:&quot;2025-05-04&quot;,&quot;price&quot;:9331.62},{&quot;date&quot;:&quot;2025-05-05&quot;,&quot;price&quot;:9480.44},{&quot;date&quot;:&quot;2025-05-06&quot;,&quot;price&quot;:9706.08},{&quot;date&quot;:&quot;2025-05-07&quot;,&quot;price&quot;:9714.76},{&quot;date&quot;:&quot;2025-05-08&quot;,&quot;price&quot;:9703.19},{&quot;date&quot;:&quot;2025-05-09&quot;,&quot;price&quot;:9656.2},{&quot;date&quot;:&quot;2025-05-10&quot;,&quot;price&quot;:9637.85},{&quot;date&quot;:&quot;2025-05-11&quot;,&quot;price&quot;:9637.85},{&quot;date&quot;:&quot;2025-05-12&quot;,&quot;price&quot;:9336.9},{&quot;date&quot;:&quot;2025-05-13&quot;,&quot;price&quot;:9386.58},{&quot;date&quot;:&quot;2025-05-14&quot;,&quot;price&quot;:9242.04},{&quot;date&quot;:&quot;2025-05-15&quot;,&quot;price&quot;:9322.14},{&quot;date&quot;:&quot;2025-05-16&quot;,&quot;price&quot;:9225.28},{&quot;date&quot;:&quot;2025-05-17&quot;,&quot;price&quot;:9299.6},{&quot;date&quot;:&quot;2025-05-18&quot;,&quot;price&quot;:9299.6},{&quot;date&quot;:&quot;2025-05-19&quot;,&quot;price&quot;:9334.51},{&quot;date&quot;:&quot;2025-05-20&quot;,&quot;price&quot;:9448.72},{&quot;date&quot;:&quot;2025-05-21&quot;,&quot;price&quot;:9517.75},{&quot;date&quot;:&quot;2025-05-22&quot;,&quot;price&quot;:9519.95},{&quot;date&quot;:&quot;2025-05-23&quot;,&quot;price&quot;:9571.12},{&quot;date&quot;:&quot;2025-05-24&quot;,&quot;price&quot;:9574.51},{&quot;date&quot;:&quot;2025-05-25&quot;,&quot;price&quot;:9574.51},{&quot;date&quot;:&quot;2025-05-26&quot;,&quot;price&quot;:9545.38},{&quot;date&quot;:&quot;2025-05-27&quot;,&quot;price&quot;:9504.48},{&quot;date&quot;:&quot;2025-05-28&quot;,&quot;price&quot;:9513.26},{&quot;date&quot;:&quot;2025-05-29&quot;,&quot;price&quot;:9545.58},{&quot;date&quot;:&quot;2025-05-30&quot;,&quot;price&quot;:9496.6},{&quot;date&quot;:&quot;2025-05-31&quot;,&quot;price&quot;:9496.01},{&quot;date&quot;:&quot;2025-06-01&quot;,&quot;price&quot;:9496.01},{&quot;date&quot;:&quot;2025-06-02&quot;,&quot;price&quot;:9692.71},{&quot;date&quot;:&quot;2025-06-03&quot;,&quot;price&quot;:9638.85},{&quot;date&quot;:&quot;2025-06-04&quot;,&quot;price&quot;:9728.12},{&quot;date&quot;:&quot;2025-06-05&quot;,&quot;price&quot;:9703.68},{&quot;date&quot;:&quot;2025-06-06&quot;,&quot;price&quot;:9613.01},{&quot;date&quot;:&quot;2025-06-07&quot;,&quot;price&quot;:9580.79},{&quot;date&quot;:&quot;2025-06-08&quot;,&quot;price&quot;:9580.79},{&quot;date&quot;:&quot;2025-06-09&quot;,&quot;price&quot;:9598.45},{&quot;date&quot;:&quot;2025-06-10&quot;,&quot;price&quot;:9584.98},{&quot;date&quot;:&quot;2025-06-11&quot;,&quot;price&quot;:9612.41},{&quot;date&quot;:&quot;2025-06-12&quot;,&quot;price&quot;:9743.09},{&quot;date&quot;:&quot;2025-06-13&quot;,&quot;price&quot;:9905.88},{&quot;date&quot;:&quot;2025-06-14&quot;,&quot;price&quot;:9941.59},{&quot;date&quot;:&quot;2025-06-15&quot;,&quot;price&quot;:9941.59},{&quot;date&quot;:&quot;2025-06-16&quot;,&quot;price&quot;:9869.07},{&quot;date&quot;:&quot;2025-06-17&quot;,&quot;price&quot;:9859.29},{&quot;date&quot;:&quot;2025-06-18&quot;,&quot;price&quot;:9910.87},{&quot;date&quot;:&quot;2025-06-19&quot;,&quot;price&quot;:9894.41},{&quot;date&quot;:&quot;2025-06-20&quot;,&quot;price&quot;:9871.76},{&quot;date&quot;:&quot;2025-06-21&quot;,&quot;price&quot;:9875.55},{&quot;date&quot;:&quot;2025-06-22&quot;,&quot;price&quot;:9875.55},{&quot;date&quot;:&quot;2025-06-23&quot;,&quot;price&quot;:9921.74},{&quot;date&quot;:&quot;2025-06-24&quot;,&quot;price&quot;:9655.31},{&quot;date&quot;:&quot;2025-06-25&quot;,&quot;price&quot;:9679.35},{&quot;date&quot;:&quot;2025-06-26&quot;,&quot;price&quot;:9653.91},{&quot;date&quot;:&quot;2025-06-27&quot;,&quot;price&quot;:9516.15},{&quot;date&quot;:&quot;2025-06-28&quot;,&quot;price&quot;:9521.44},{&quot;date&quot;:&quot;2025-06-29&quot;,&quot;price&quot;:9521.44}]}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.20">
+      <div class="step-ref passed">20</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.21">
+      <div class="step-ref passed">21</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response == &#39;#object&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.22">
+      <div class="step-ref passed">22</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.gold_prices == &#39;#array&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.23">
+      <div class="step-ref passed">23</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.gold_prices[0] == &#39;#object&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.24">
+      <div class="step-ref passed">24</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.gold_prices[0].date == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.25">
+      <div class="step-ref passed">25</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.gold_prices[0].price == &#39;#number&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.26">
+      <div class="step-ref failed">26</div>
+      
+      <div class="step-cell failed">
+        <span>And</span>&nbsp;<span>match response.gold_prices[0].date == /^\\d{4}-\\d{2}-\\d{2}$/</span>
+      </div>
+    </div>
+    <div class="time-cell failed">34</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.26">08:59:03.160 src/test/java/org/springframework/api_tests/ApisKuvera/api_v3_gold_prices.json_get.feature:26
+And match response.gold_prices[0].date == /^\\d{4}-\\d{2}-\\d{2}$/
+javax.xml.xpath.XPathExpressionException: javax.xml.transform.TransformerException: Extra illegal tokens: &#39;^&#39;, &#39;\&#39;, &#39;\&#39;, &#39;d{4}-&#39;, &#39;\&#39;, &#39;\&#39;, &#39;d{2}-&#39;, &#39;\&#39;, &#39;\&#39;, &#39;d{2}&#39;, &#39;$&#39;, &#39;/&#39;
+src/test/java/org/springframework/api_tests/ApisKuvera/api_v3_gold_prices.json_get.feature:26
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.27">
+      <div class="step-ref skipped">27</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.gold_prices contains { date: &#39;#string&#39;, price: &#39;#number&#39; }</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

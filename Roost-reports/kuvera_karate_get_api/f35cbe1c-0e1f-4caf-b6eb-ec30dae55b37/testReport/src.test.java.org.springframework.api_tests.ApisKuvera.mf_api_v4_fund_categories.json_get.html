@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="res/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="res/karate-report.css" type="text/css"/>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <script type="text/javascript" src="res/jquery.min.js"></script>
+    <script type="text/javascript" src="res/jquery.tablesorter.min.js"></script>
+    <script type="text/javascript" src="res/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="res/bootstrap.min.js"></script>
+    <script type="text/javascript" src="res/karate-report.js"></script>
+    <script type="text/javascript" src="res/Resemble.js"></script>
+    <script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
+  api_host:'https://app.posthog.com',
+  persistence:'localStorage',
+  autocapture:false,
+  capture_pageview:false,
+  api_transport:'sendBeacon',
+  loaded: function(posthog) { 
+    posthog.capture("report_feature",{distinct_id:"88c6a1aa-96bd-4627-8ef1-ca071ba60884",karate_version:"1.4.1",karate_meta:null});
+  }
+});
+</script>
+
+    <title>src.test.java.org.springframework.api_tests.ApisKuvera.mf_api_v4_fund_categories.json_get</title>
+  </head>
+  <body>
+    <div id="root-container">
+      <div id="leftnav">
+        
+        <div>
+  <div class="nav-logo">
+    <a href="https://karatelabs.io">
+      <img src="karate-labs-logo-ring.svg" alt="Karate Labs"/>
+    </a>
+    <div class="nav-count">
+      <div id="nav-pass" class="bg-success">1</div>
+      <div id="nav-fail" class="bg-danger">0</div>
+    </div>
+  </div>
+  <div id="nav-env">
+    <div></div>
+  </div>
+  <div id="nav-type">
+    <div>Scenarios</div>
+  </div>
+  <div id="nav-date">
+    <div>2025-06-29 08:59:04 AM</div>
+  </div>
+</div>
+
+        <div class="nav-container">
+          <div class="nav-item passed">
+            <a href="#[1:17]"><span>[1:17]</span> <span>Get Fund Category Returns with valid request</span></a>
+          </div>
+        </div>
+      </div>
+      <div id="content">
+        <div class="page-heading alert alert-primary">
+          <a href="karate-summary.html">Summary</a><span class="feature-label">|</span>
+          <a href="karate-tags.html">Tags</a><span class="feature-label">|</span>
+          <span class="feature-label">Feature:</span>
+          <span class="feature-path">src/test/java/org/springframework/api_tests/ApisKuvera/mf_api_v4_fund_categories.json_get.feature</span><span class="feature-label">|</span>
+          <span class="feature-name">Mutual Funds API - Fund Categories</span>
+          <span class="feature-description"></span>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1:17]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1:17]</span>
+                <span class="scenario-name">Get Fund Category Returns with valid request</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>44</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[1:17]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[1:17]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def urlBase = karate.properties[&#39;KUVERA_API_HOST&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1:17]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url urlBase</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.18">
+      <div class="step-ref passed">18</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;mf/api/v4/fund_categories.json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.19">
+      <div class="step-ref passed">19</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method GET</span>
+      </div>
+    </div>
+    <div class="time-cell passed">38</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.19">08:59:04.318 request:
+1 &gt; GET https://api.kuvera.in/mf/api/v4/fund_categories.json
+1 &gt; Host: api.kuvera.in
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.7)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+08:59:04.355 response time in milliseconds: 36
+1 &lt; 200
+1 &lt; Date: Sun, 29 Jun 2025 08:59:04 GMT
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Connection: keep-alive
+1 &lt; Server: nginx
+1 &lt; X-Frame-Options: SAMEORIGIN
+1 &lt; X-Frame-Options: SAMEORIGIN
+1 &lt; X-XSS-Protection: 1; mode=block
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; X-Download-Options: noopen
+1 &lt; X-Permitted-Cross-Domain-Policies: none
+1 &lt; Referrer-Policy: strict-origin-when-cross-origin
+1 &lt; ETag: W/&quot;52f7efd8b6b01f4dfee6415a3ca2595e&quot;
+1 &lt; Cache-Control: max-age=0, private, must-revalidate
+1 &lt; X-Request-Id: f09c1a58-7235-4ac6-927a-13a71418e406
+1 &lt; X-Runtime: 0.009723
+1 &lt; Vary: Accept-Encoding
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Methods: PUT,POST,DELETE,GET
+1 &lt; Access-Control-Allow-Headers: Authorization,X-Requested-With,content-type
+1 &lt; Access-Control-Max-Age: : 86400
+1 &lt; Strict-Transport-Security: max-age=31536000; includeSubDomains
+[{&quot;category_name&quot;:&quot;Aggressive Hybrid Fund&quot;,&quot;report_date&quot;:&quot;2025-06-27&quot;,&quot;week_1&quot;:1.80807,&quot;month_1&quot;:2.81683,&quot;month_3&quot;:8.23645,&quot;month_6&quot;:3.96828,&quot;year_1&quot;:6.6611,&quot;year_3&quot;:18.9844,&quot;year_5&quot;:20.4762,&quot;year_10&quot;:13.8272,&quot;inception&quot;:16.5782},{&quot;category_name&quot;:&quot;Arbitrage Fund&quot;,&quot;report_date&quot;:&quot;2025-06-27&quot;,&quot;week_1&quot;:-0.00676,&quot;month_1&quot;:0.56967,&quot;month_3&quot;:1.62718,&quot;month_6&quot;:3.22151,&quot;year_1&quot;:6.60758,&quot;year_3&quot;:6.78518,&quot;year_5&quot;:5.48919,&quot;year_10&quot;:5.79905,&quot;inception&quot;:6.34898},{&quot;category_name&quot;:&quot;Balanced Hybrid Fund&quot;,&quot;report_date&quot;:&quot;2025-06-27&quot;,&quot;week_1&quot;:1.37323,&quot;month_1&quot;:1.76174,&quot;month_3&quot;:6.60051,&quot;month_6&quot;:4.81665,&quot;year_1&quot;:8.75453,&quot;year_3&quot;:13.5729,&quot;year_5&quot;:15.0562,&quot;year_10&quot;:9.5051,&quot;inception&quot;:9.59518},{&quot;category_name&quot;:&quot;Banking and PSU Fund&quot;,&quot;report_date&quot;:&quot;2025-06-27&quot;,&quot;week_1&quot;:-0.06685,&quot;month_1&quot;:-0.15915,&quot;month_3&quot;:2.50234,&quot;month_6&quot;:4.56995,&quot;year_1&quot;:8.62778,&quot;year_3&quot;:7.36954,&quot;year_5&quot;:5.92273,&quot;year_10&quot;:6.50191,&quot;inception&quot;:6.81191},{&quot;category_name&quot;:&quot;Conservative Hybrid Fund&quot;,&quot;report_date&quot;:&quot;2025-06-27&quot;,&quot;week_1&quot;:0.2715,&quot;month_1&quot;:0.13665,&quot;month_3&quot;:3.28897,&quot;month_6&quot;:3.71228,&quot;year_1&quot;:7.35395,&quot;year_3&quot;:10.4253,&quot;year_5&quot;:10.5453,&quot;year_10&quot;:8.55655,&quot;inception&quot;:8.98212},{&quot;category_name&quot;:&quot;Contra Fund&quot;,&quot;report_date&quot;:&quot;2025-06-27&quot;,&quot;week_1&quot;:2.56461,&quot;month_1&quot;:4.16916,&quot;month_3&quot;:10.6979,&quot;month_6&quot;:3.07381,&quot;year_1&quot;:7.09884,&quot;year_3&quot;:26.7409,&quot;year_5&quot;:26.1999,&quot;year_10&quot;:15.3586,&quot;inception&quot;:13.9294},{&quot;category_name&quot;:&quot;Corporate Bond Fund&quot;,&quot;report_date&quot;:&quot;2025-06-27&quot;,&quot;week_1&quot;:-0.05923,&quot;month_1&quot;:-0.16039,&quot;month_3&quot;:2.44901,&quot;month_6&quot;:4.59355,&quot;year_1&quot;:8.76883,&quot;year_3&quot;:7.59088,&quot;year_5&quot;:6.33333,&quot;year_10&quot;:7.9062,&quot;inception&quot;:8.703},{&quot;category_name&quot;:&quot;Credit Risk Fund&quot;,&quot;report_date&quot;:&quot;2025-06-27&quot;,&quot;week_1&quot;:-0.00814,&quot;month_1&quot;:0.27376,&quot;month_3&quot;:3.11944,&quot;month_6&quot;:6.63213,&quot;year_1&quot;:11.0146,&quot;year_3&quot;:8.86057,&quot;year_5&quot;:9.58265,&quot;year_10&quot;:6.32911,&quot;inception&quot;:6.71885},{&quot;category_name&quot;:&quot;Dividend Yield Fund&quot;,&quot;report_date&quot;:&quot;2025-06-27&quot;,&quot;week_1&quot;:1.95322,&quot;month_1&quot;:2.96165,&quot;month_3&quot;:8.03916,&quot;month_6&quot;:2.72761,&quot;year_1&quot;:2.94456,&quot;year_3&quot;:24.6287,&quot;year_5&quot;:25.1748,&quot;year_10&quot;:14.6614,&quot;inception&quot;:13.92},{&quot;category_name&quot;:&quot;Dynamic Asset Allocation or Balanced Advantage&quot;,&quot;report_date&quot;:&quot;2025-06-27&quot;,&quot;week_1&quot;:1.406,&quot;month_1&quot;:2.16203,&quot;month_3&quot;:5.94588,&quot;month_6&quot;:3.68403,&quot;year_1&quot;:5.80507,&quot;year_3&quot;:15.2072,&quot;year_5&quot;:14.4132,&quot;year_10&quot;:9.96002,&quot;inception&quot;:13.8712},{&quot;category_name&quot;:&quot;Dynamic Bond&quot;,&quot;report_date&quot;:&quot;2025-06-27&quot;,&quot;week_1&quot;:0.02614,&quot;month_1&quot;:-1.16653,&quot;month_3&quot;:1.72098,&quot;month_6&quot;:4.21104,&quot;year_1&quot;:8.30458,&quot;year_3&quot;:7.78278,&quot;year_5&quot;:6.09037,&quot;year_10&quot;:6.6761,&quot;inception&quot;:6.53317},{&quot;category_name&quot;:&quot;ELSS&quot;,&quot;report_date&quot;:&quot;2025-06-27&quot;,&quot;week_1&quot;:2.49831,&quot;month_1&quot;:3.61996,&quot;month_3&quot;:9.74014,&quot;month_6&quot;:2.80956,&quot;year_1&quot;:4.94136,&quot;year_3&quot;:22.2981,&quot;year_5&quot;:23.6324,&quot;year_10&quot;:14.4525,&quot;inception&quot;:14.4893},{&quot;category_name&quot;:&quot;Equity Savings&quot;,&quot;report_date&quot;:&quot;2025-06-27&quot;,&quot;week_1&quot;:0.58119,&quot;month_1&quot;:1.17917,&quot;month_3&quot;:3.91365,&quot;month_6&quot;:3.24818,&quot;year_1&quot;:6.69524,&quot;year_3&quot;:11.3172,&quot;year_5&quot;:11.5769,&quot;year_10&quot;:8.16189,&quot;inception&quot;:8.01819},{&quot;category_name&quot;:&quot;Floater Fund&quot;,&quot;report_date&quot;:&quot;2025-06-27&quot;,&quot;week_1&quot;:0.09718,&quot;month_1&quot;:0.2188,&quot;month_3&quot;:2.6474,&quot;month_6&quot;:4.74045,&quot;year_1&quot;:8.91227,&quot;year_3&quot;:7.92281,&quot;year_5&quot;:6.45987,&quot;year_10&quot;:6.58641,&quot;inception&quot;:6.2672},{&quot;category_name&quot;:&quot;Focused Fund&quot;,&quot;report_date&quot;:&quot;2025-06-27&quot;,&quot;week_1&quot;:2.32349,&quot;month_1&quot;:3.63784,&quot;month_3&quot;:9.71373,&quot;month_6&quot;:3.45865,&quot;year_1&quot;:5.79192,&quot;year_3&quot;:21.5352,&quot;year_5&quot;:22.316,&quot;year_10&quot;:13.7776,&quot;inception&quot;:15.6474},{&quot;category_name&quot;:&quot;Gilt Fund with 10 year constant duration&quot;,&quot;report_date&quot;:&quot;2025-06-27&quot;,&quot;week_1&quot;:0.01635,&quot;month_1&quot;:-0.62533,&quot;month_3&quot;:2.6621,&quot;month_6&quot;:5.60647,&quot;year_1&quot;:10.1029,&quot;year_3&quot;:8.81385,&quot;year_5&quot;:5.46818,&quot;year_10&quot;:7.19021,&quot;inception&quot;:6.41104},{&quot;category_name&quot;:&quot;Large \u0026 Mid Cap fund&quot;,&quot;report_date&quot;:&quot;2025-06-27&quot;,&quot;week_1&quot;:2.53356,&quot;month_1&quot;:4.14337,&quot;month_3&quot;:10.7317,&quot;month_6&quot;:3.12729,&quot;year_1&quot;:6.2778,&quot;year_3&quot;:24.3548,&quot;year_5&quot;:25.5819,&quot;year_10&quot;:14.8916,&quot;inception&quot;:15.5865},{&quot;category_name&quot;:&quot;Large Cap Fund&quot;,&quot;report_date&quot;:&quot;2025-06-27&quot;,&quot;week_1&quot;:2.38719,&quot;month_1&quot;:3.46785,&quot;month_3&quot;:8.83251,&quot;month_6&quot;:6.03485,&quot;year_1&quot;:5.58997,&quot;year_3&quot;:19.9908,&quot;year_5&quot;:21.2784,&quot;year_10&quot;:13.0796,&quot;inception&quot;:13.9439},{&quot;category_name&quot;:&quot;Liquid Fund&quot;,&quot;report_date&quot;:&quot;2025-06-27&quot;,&quot;week_1&quot;:0.04797,&quot;month_1&quot;:0.41157,&quot;month_3&quot;:1.4846,&quot;month_6&quot;:3.05778,&quot;year_1&quot;:6.19303,&quot;year_3&quot;:6.28985,&quot;year_5&quot;:4.98698,&quot;year_10&quot;:5.29889,&quot;inception&quot;:5.65443},{&quot;category_name&quot;:&quot;Long Duration Fund&quot;,&quot;report_date&quot;:&quot;2025-06-27&quot;,&quot;week_1&quot;:-0.27053,&quot;month_1&quot;:-2.51835,&quot;month_3&quot;:0.52038,&quot;month_6&quot;:2.82999,&quot;year_1&quot;:6.20962,&quot;year_3&quot;:8.9514,&quot;year_5&quot;:5.45941,&quot;year_10&quot;:6.7487,&quot;inception&quot;:6.87738},{&quot;category_name&quot;:&quot;Low Duration Fund&quot;,&quot;report_date&quot;:&quot;2025-06-27&quot;,&quot;week_1&quot;:0.0625,&quot;month_1&quot;:0.47541,&quot;month_3&quot;:2.22821,&quot;month_6&quot;:4.06476,&quot;year_1&quot;:7.78155,&quot;year_3&quot;:7.09898,&quot;year_5&quot;:6.13257,&quot;year_10&quot;:5.85254,&quot;inception&quot;:6.14886},{&quot;category_name&quot;:&quot;Medium to Long Duration Fund&quot;,&quot;report_date&quot;:&quot;2025-06-27&quot;,&quot;week_1&quot;:-0.19493,&quot;month_1&quot;:-0.93738,&quot;month_3&quot;:1.88238,&quot;month_6&quot;:4.32947,&quot;year_1&quot;:8.28935,&quot;year_3&quot;:7.76886,&quot;year_5&quot;:5.75196,&quot;year_10&quot;:6.20178,&quot;inception&quot;:6.26952},{&quot;category_name&quot;:&quot;Mid Cap Fund&quot;,&quot;report_date&quot;:&quot;2025-06-27&quot;,&quot;week_1&quot;:2.55107,&quot;month_1&quot;:4.36159,&quot;month_3&quot;:13.058,&quot;month_6&quot;:2.14906,&quot;year_1&quot;:5.93307,&quot;year_3&quot;:27.9012,&quot;year_5&quot;:29.4526,&quot;year_10&quot;:16.4844,&quot;inception&quot;:17.994},{&quot;category_name&quot;:&quot;Money Market Fund&quot;,&quot;report_date&quot;:&quot;2025-06-27&quot;,&quot;week_1&quot;:0.05801,&quot;month_1&quot;:0.55525,&quot;month_3&quot;:2.05922,&quot;month_6&quot;:3.83099,&quot;year_1&quot;:7.35668,&quot;year_3&quot;:6.98463,&quot;year_5&quot;:5.80707,&quot;year_10&quot;:6.46275,&quot;inception&quot;:5.9415},{&quot;category_name&quot;:&quot;Multi Cap Fund&quot;,&quot;report_date&quot;:&quot;2025-06-27&quot;,&quot;week_1&quot;:2.52838,&quot;month_1&quot;:3.89253,&quot;month_3&quot;:11.1124,&quot;month_6&quot;:2.37151,&quot;year_1&quot;:6.15439,&quot;year_3&quot;:25.0085,&quot;year_5&quot;:26.7514,&quot;year_10&quot;:15.5822,&quot;inception&quot;:15.856},{&quot;category_name&quot;:&quot;Small Cap Fund&quot;,&quot;report_date&quot;:&quot;2025-06-27&quot;,&quot;week_1&quot;:3.0851,&quot;month_1&quot;:4.60208,&quot;month_3&quot;:13.887,&quot;month_6&quot;:-1.76018,&quot;year_1&quot;:4.65638,&quot;year_3&quot;:26.8577,&quot;year_5&quot;:33.8579,&quot;year_10&quot;:17.8767,&quot;inception&quot;:16.6698},{&quot;category_name&quot;:&quot;Value Fund&quot;,&quot;report_date&quot;:&quot;2025-06-27&quot;,&quot;week_1&quot;:2.52322,&quot;month_1&quot;:3.026,&quot;month_3&quot;:8.68537,&quot;month_6&quot;:2.05135,&quot;year_1&quot;:2.71321,&quot;year_3&quot;:24.5758,&quot;year_5&quot;:25.8171,&quot;year_10&quot;:15.001,&quot;inception&quot;:15.5288},{&quot;category_name&quot;:&quot;Flexi Cap Fund&quot;,&quot;report_date&quot;:&quot;2025-06-27&quot;,&quot;week_1&quot;:2.52251,&quot;month_1&quot;:3.91569,&quot;month_3&quot;:10.229,&quot;month_6&quot;:2.30203,&quot;year_1&quot;:4.84767,&quot;year_3&quot;:22.1943,&quot;year_5&quot;:23.102,&quot;year_10&quot;:14.5443,&quot;inception&quot;:20.85},{&quot;category_name&quot;:&quot;Equity - ESG Fund&quot;,&quot;report_date&quot;:&quot;2025-06-27&quot;,&quot;week_1&quot;:2.35213,&quot;month_1&quot;:3.27863,&quot;month_3&quot;:9.74712,&quot;month_6&quot;:4.28606,&quot;year_1&quot;:5.9633,&quot;year_3&quot;:19.236,&quot;year_5&quot;:19.4958,&quot;year_10&quot;:12.9267,&quot;inception&quot;:15.6024}]
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.20">
+      <div class="step-ref passed">20</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.21">
+      <div class="step-ref passed">21</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response == &#39;#[]&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.22">
+      <div class="step-ref passed">22</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response[0].category_name == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.23">
+      <div class="step-ref passed">23</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response[0].report_date == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.24">
+      <div class="step-ref passed">24</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response[0].week_1 == &#39;#number&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.25">
+      <div class="step-ref passed">25</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response[0].month_1 == &#39;#number&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.26">
+      <div class="step-ref passed">26</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response[0].month_3 == &#39;#number&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.27">
+      <div class="step-ref passed">27</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response[0].month_6 == &#39;#number&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.28">
+      <div class="step-ref passed">28</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response[0].year_1 == &#39;#number&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.29">
+      <div class="step-ref passed">29</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response[0].year_3 == &#39;#number&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.30">
+      <div class="step-ref passed">30</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response[0].year_5 == &#39;#number&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.31">
+      <div class="step-ref passed">31</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response[0].year_10 == &#39;#number&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.32">
+      <div class="step-ref passed">32</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response[0].inception == &#39;#number&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
