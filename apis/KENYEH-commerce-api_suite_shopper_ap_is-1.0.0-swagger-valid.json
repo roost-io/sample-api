@@ -1044,8 +1044,8 @@
             "type" : "string"
           }
         }, {
-          "name" : "paymentOptionId",
           "in" : "path",
+          "name" : "paymentOptionId",
           "description" : "Payment Option ID.",
           "required" : true,
           "schema" : {
@@ -3105,14 +3105,6 @@
           "name" : "fields",
           "in" : "query",
           "description" : "Specify the fields that you want to appear in the response. Filtering the fields returned in the response can conserve bandwidth and accelerate response time.",
-          "required" : false,
-          "schema" : {
-            "type" : "string"
-          }
-        }, {
-          "name" : "format",
-          "in" : "query",
-          "description" : "Override the default format of XML for the Authorize Shopper API. Valid values are XML and JSON.",
           "required" : false,
           "schema" : {
             "type" : "string"
