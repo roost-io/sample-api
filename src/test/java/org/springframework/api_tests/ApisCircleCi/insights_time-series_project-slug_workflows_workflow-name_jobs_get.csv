@@ -1,0 +1,3 @@
+project-slug,workflow-name,branch,granularity,start-date,end-date
+"gh/CircleCI-Public/api-preview-docs","build-and-test","main","daily",2020,2020
+"gh/CircleCI-Public/api-preview-docs","build-and-test","dev","hourly",2020,2020

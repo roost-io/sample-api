@@ -1,0 +1,2 @@
+customerId,amount,sourceAccountId,targetAccountId,currency,status,scheduledDate,amountType,iterate,numberOfTransfers
+"1045304","39","1042347","1043699","USD","Pending","1616544000000","Fixed","Weekly","3"

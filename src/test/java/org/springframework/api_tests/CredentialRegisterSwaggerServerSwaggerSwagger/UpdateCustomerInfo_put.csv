@@ -1,0 +1,2 @@
+customerId,email,alternatePhoneNumber,isAlternateMobileNumber,phone,isPrimaryMobileNumber,location
+"1045300","John@gmail.com","1234567890","true","9876543210","false","New York"

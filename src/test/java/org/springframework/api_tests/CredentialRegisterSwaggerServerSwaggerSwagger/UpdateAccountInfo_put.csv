@@ -1,0 +1,2 @@
+accountNumber,customerId,email,alternatePhoneNumber,isAlternateMobileNumber,phone,isPrimaryMobileNumber,location,isStatement
+"1042345","1045300","John@gmail.com","1234567890","true","9876543210","false","NY","true"

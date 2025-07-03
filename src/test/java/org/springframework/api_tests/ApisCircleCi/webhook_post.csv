@@ -1,0 +1,3 @@
+name,events,url,verifyTls,signingSecret,scopeId,scopeType
+"""Webhook1""","[""workflow-completed""]","""https://example.com""","true","""secret123""","""497f6eca-6276-4993-bfeb-53cbbbba6f08""","""project"""
+"""Webhook2""","[""job-completed""]","""https://example.org""","false","""secret456""","""497f6eca-6276-4993-bfeb-53cbbbba6f09""","""project"""

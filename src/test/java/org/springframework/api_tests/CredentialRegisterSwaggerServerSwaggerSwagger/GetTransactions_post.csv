@@ -1,0 +1,2 @@
+requestBody
+"{""customerId"":""1045300"",""accountNumber"":[""1045301""],""category"":[{""codeType"":""MCC"",""value"":[[""5811"",""5814""]],""source"":""Internal""}],""startDate"":""2021-04-01T00:00:00.000+0000"",""endDate"":""2021-04-30T00:00:00.000+0000"",""status"":""Posted"",""transactionAmount"":{""amount"":{""gt"":1000},""currency"":""USD""}}"
