@@ -1,0 +1,4060 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="res/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="res/karate-report.css" type="text/css"/>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <script type="text/javascript" src="res/jquery.min.js"></script>
+    <script type="text/javascript" src="res/jquery.tablesorter.min.js"></script>
+    <script type="text/javascript" src="res/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="res/bootstrap.min.js"></script>
+    <script type="text/javascript" src="res/karate-report.js"></script>
+    <script type="text/javascript" src="res/Resemble.js"></script>
+    <script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
+  api_host:'https://app.posthog.com',
+  persistence:'localStorage',
+  autocapture:false,
+  capture_pageview:false,
+  api_transport:'sendBeacon',
+  loaded: function(posthog) { 
+    posthog.capture("report_feature",{distinct_id:"fbd7db51-da08-4f3d-a50b-5b8b7096ef4b",karate_version:"1.4.1",karate_meta:null});
+  }
+});
+</script>
+
+    <title>src.test.java.org.springframework.api_tests.ApisNobel.nobelPrize_category_year_get</title>
+  </head>
+  <body>
+    <div id="root-container">
+      <div id="leftnav">
+        
+        <div>
+  <div class="nav-logo">
+    <a href="https://karatelabs.io">
+      <img src="karate-labs-logo-ring.svg" alt="Karate Labs"/>
+    </a>
+    <div class="nav-count">
+      <div id="nav-pass" class="bg-success">0</div>
+      <div id="nav-fail" class="bg-danger">6</div>
+    </div>
+  </div>
+  <div id="nav-env">
+    <div></div>
+  </div>
+  <div id="nav-type">
+    <div>Scenarios</div>
+  </div>
+  <div id="nav-date">
+    <div>2025-07-03 09:52:19 AM</div>
+  </div>
+</div>
+
+        <div class="nav-container">
+          <div class="nav-item failed">
+            <a href="#[1.1:53]"><span>[1.1:53]</span> <span>Test GET Nobel Prize by Category and Year</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[1.2:53]"><span>[1.2:53]</span> <span>Test GET Nobel Prize by Category and Year</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[1.3:53]"><span>[1.3:53]</span> <span>Test GET Nobel Prize by Category and Year</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[2.1:65]"><span>[2.1:65]</span> <span>Test Invalid Category or Year</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[2.2:66]"><span>[2.2:66]</span> <span>Test Invalid Category or Year</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[2.3:67]"><span>[2.3:67]</span> <span>Test Invalid Category or Year</span></a>
+          </div>
+        </div>
+      </div>
+      <div id="content">
+        <div class="page-heading alert alert-primary">
+          <a href="karate-summary.html">Summary</a><span class="feature-label">|</span>
+          <a href="karate-tags.html">Tags</a><span class="feature-label">|</span>
+          <span class="feature-label">Feature:</span>
+          <span class="feature-path">src/test/java/org/springframework/api_tests/ApisNobel/nobelPrize_category_year_get.feature</span><span class="feature-label">|</span>
+          <span class="feature-name">Test Nobel Prize API</span>
+          <span class="feature-description"></span>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1.1:53]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1.1:53]</span>
+                <span class="scenario-name">Test GET Nobel Prize by Category and Year</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>47</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[1.1:53]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[1.1:53]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def urlBase = karate.properties[&#39;API_HOST&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.1:53]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url urlBase</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.18">
+      <div class="step-ref passed">18</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;2.1/nobelPrize&#39;, &#39;phy&#39;, &#39;2020&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.19">
+      <div class="step-ref passed">19</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method GET</span>
+      </div>
+    </div>
+    <div class="time-cell passed">45</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.19">09:52:19.030 request:
+1 &gt; GET https://api.nobelprize.org/2.1/nobelPrize/phy/2020
+1 &gt; Host: api.nobelprize.org
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.7)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+09:52:19.074 response time in milliseconds: 44
+1 &lt; 200
+1 &lt; Date: Thu, 03 Jul 2025 09:52:19 GMT
+1 &lt; Content-Type: application/json
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Connection: keep-alive
+1 &lt; access-control-allow-headers: X-Requested-With, Content-Type, Accept, Origin, Authorization
+1 &lt; access-control-allow-methods: GET
+1 &lt; access-control-allow-origin: *
+1 &lt; Cache-Control: public, max-age=60
+1 &lt; expires: Thu, 03 Jul 2025 09:53:19 GMT
+1 &lt; pragma: no-cache
+1 &lt; x-powered-by: PHP/8.2.28
+1 &lt; Last-Modified: Thu, 03 Jul 2025 09:48:22 GMT
+1 &lt; CF-Cache-Status: HIT
+1 &lt; Vary: Accept-Encoding
+1 &lt; Server: cloudflare
+1 &lt; CF-RAY: 95957d46e99e47f1-BOM
+1 &lt; alt-svc: h3=&quot;:443&quot;; ma=86400
+[{&quot;awardYear&quot;:&quot;2020&quot;,&quot;category&quot;:{&quot;en&quot;:&quot;Physics&quot;,&quot;no&quot;:&quot;Fysikk&quot;,&quot;se&quot;:&quot;Fysik&quot;},&quot;categoryFullName&quot;:{&quot;en&quot;:&quot;The Nobel Prize in Physics&quot;,&quot;no&quot;:&quot;Nobelprisen i fysikk&quot;,&quot;se&quot;:&quot;Nobelpriset i fysik&quot;},&quot;dateAwarded&quot;:&quot;2020-10-06&quot;,&quot;prizeAmount&quot;:10000000,&quot;prizeAmountAdjusted&quot;:12361835,&quot;links&quot;:[{&quot;rel&quot;:&quot;nobelPrize&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/nobelPrize/phy/2020&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}],&quot;laureates&quot;:[{&quot;id&quot;:&quot;988&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Roger Penrose&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Roger Penrose&quot;},&quot;portion&quot;:&quot;1/2&quot;,&quot;sortOrder&quot;:&quot;1&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;for the discovery that black hole formation is a robust prediction of the general theory of relativity&quot;,&quot;se&quot;:&quot;för upptäckten att bildandet av svarta hål är en robust förutsägelse av den allmänna relativitetsteorin&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/988&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]},{&quot;id&quot;:&quot;989&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Reinhard Genzel&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Reinhard Genzel&quot;},&quot;portion&quot;:&quot;1/4&quot;,&quot;sortOrder&quot;:&quot;2&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;for the discovery of a supermassive compact object at the centre of our galaxy&quot;,&quot;se&quot;:&quot;för upptäckten av ett supermassivt kompakt objekt i Vintergatans centrum&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/989&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]},{&quot;id&quot;:&quot;990&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Andrea Ghez&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Andrea Ghez&quot;},&quot;portion&quot;:&quot;1/4&quot;,&quot;sortOrder&quot;:&quot;3&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;for the discovery of a supermassive compact object at the centre of our galaxy&quot;,&quot;se&quot;:&quot;för upptäckten av ett supermassivt kompakt objekt i Vintergatans centrum&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/990&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]}],&quot;meta&quot;:{&quot;terms&quot;:&quot;https://www.nobelprize.org/about/terms-of-use-for-api-nobelprize-org-and-data-nobelprize-org/&quot;,&quot;license&quot;:&quot;https://www.nobelprize.org/about/terms-of-use-for-api-nobelprize-org-and-data-nobelprize-org/#licence&quot;,&quot;disclaimer&quot;:&quot;https://www.nobelprize.org/about/terms-of-use-for-api-nobelprize-org-and-data-nobelprize-org/#disclaimer&quot;}}]
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.20">
+      <div class="step-ref passed">20</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.21">
+      <div class="step-ref failed">21</div>
+      
+      <div class="step-cell failed">
+        <span>And</span>&nbsp;<span>match response == &#39;#object&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell failed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.21">09:52:19.076 src/test/java/org/springframework/api_tests/ApisNobel/nobelPrize_category_year_get.feature:21
+And match response == &#39;#object&#39;
+match failed: EQUALS
+  $ | not an object or map (LIST:STRING)
+  [{&quot;awardYear&quot;:&quot;2020&quot;,&quot;category&quot;:{&quot;en&quot;:&quot;Physics&quot;,&quot;no&quot;:&quot;Fysikk&quot;,&quot;se&quot;:&quot;Fysik&quot;},&quot;categoryFullName&quot;:{&quot;en&quot;:&quot;The Nobel Prize in Physics&quot;,&quot;no&quot;:&quot;Nobelprisen i fysikk&quot;,&quot;se&quot;:&quot;Nobelpriset i fysik&quot;},&quot;dateAwarded&quot;:&quot;2020-10-06&quot;,&quot;prizeAmount&quot;:10000000,&quot;prizeAmountAdjusted&quot;:12361835,&quot;links&quot;:[{&quot;rel&quot;:&quot;nobelPrize&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/nobelPrize/phy/2020&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}],&quot;laureates&quot;:[{&quot;id&quot;:&quot;988&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Roger Penrose&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Roger Penrose&quot;},&quot;portion&quot;:&quot;1/2&quot;,&quot;sortOrder&quot;:&quot;1&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;for the discovery that black hole formation is a robust prediction of the general theory of relativity&quot;,&quot;se&quot;:&quot;för upptäckten att bildandet av svarta hål är en robust förutsägelse av den allmänna relativitetsteorin&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/988&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]},{&quot;id&quot;:&quot;989&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Reinhard Genzel&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Reinhard Genzel&quot;},&quot;portion&quot;:&quot;1/4&quot;,&quot;sortOrder&quot;:&quot;2&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;for the discovery of a supermassive compact object at the centre of our galaxy&quot;,&quot;se&quot;:&quot;för upptäckten av ett supermassivt kompakt objekt i Vintergatans centrum&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/989&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]},{&quot;id&quot;:&quot;990&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Andrea Ghez&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Andrea Ghez&quot;},&quot;portion&quot;:&quot;1/4&quot;,&quot;sortOrder&quot;:&quot;3&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;for the discovery of a supermassive compact object at the centre of our galaxy&quot;,&quot;se&quot;:&quot;för upptäckten av ett supermassivt kompakt objekt i Vintergatans centrum&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/990&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]}],&quot;meta&quot;:{&quot;terms&quot;:&quot;https://www.nobelprize.org/about/terms-of-use-for-api-nobelprize-org-and-data-nobelprize-org/&quot;,&quot;license&quot;:&quot;https://www.nobelprize.org/about/terms-of-use-for-api-nobelprize-org-and-data-nobelprize-org/#licence&quot;,&quot;disclaimer&quot;:&quot;https://www.nobelprize.org/about/terms-of-use-for-api-nobelprize-org-and-data-nobelprize-org/#disclaimer&quot;}}]
+  &#39;#object&#39;
+
+src/test/java/org/springframework/api_tests/ApisNobel/nobelPrize_category_year_get.feature:21
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.22">
+      <div class="step-ref skipped">22</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize == &#39;#object&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.23">
+      <div class="step-ref skipped">23</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.awardYear == &#39;#number&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.24">
+      <div class="step-ref skipped">24</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.category == &#39;#object&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.25">
+      <div class="step-ref skipped">25</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.category.en == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.26">
+      <div class="step-ref skipped">26</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.category.se == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.27">
+      <div class="step-ref skipped">27</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.categoryFullName == &#39;#object&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.28">
+      <div class="step-ref skipped">28</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.categoryFullName.en == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.29">
+      <div class="step-ref skipped">29</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.categoryFullName.se == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.30">
+      <div class="step-ref skipped">30</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.dateAwarded == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.31">
+      <div class="step-ref skipped">31</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.prizeAmount == &#39;#number&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.32">
+      <div class="step-ref skipped">32</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.prizeAmountAdjusted == &#39;#number&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.33">
+      <div class="step-ref skipped">33</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.topMotivation == &#39;#object&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.34">
+      <div class="step-ref skipped">34</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.topMotivation.en == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.35">
+      <div class="step-ref skipped">35</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.topMotivation.se == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.36">
+      <div class="step-ref skipped">36</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.laureates == &#39;#array&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.37">
+      <div class="step-ref skipped">37</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.laureates[0].id == &#39;#number&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.38">
+      <div class="step-ref skipped">38</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.laureates[0].name == &#39;#object&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.39">
+      <div class="step-ref skipped">39</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.laureates[0].name.en == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.40">
+      <div class="step-ref skipped">40</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.laureates[0].name.se == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.41">
+      <div class="step-ref skipped">41</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.laureates[0].portion == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.42">
+      <div class="step-ref skipped">42</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.laureates[0].sortOrder == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.43">
+      <div class="step-ref skipped">43</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.laureates[0].motivation == &#39;#object&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.44">
+      <div class="step-ref skipped">44</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.laureates[0].motivation.en == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.45">
+      <div class="step-ref skipped">45</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.laureates[0].motivation.se == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.46">
+      <div class="step-ref skipped">46</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.laureates[0].links == &#39;#array&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.47">
+      <div class="step-ref skipped">47</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.laureates[0].links[0].rel == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.48">
+      <div class="step-ref skipped">48</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.laureates[0].links[0].href == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.49">
+      <div class="step-ref skipped">49</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.laureates[0].links[0].action == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.50">
+      <div class="step-ref skipped">50</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.laureates[0].links[0].types == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1.2:53]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1.2:53]</span>
+                <span class="scenario-name">Test GET Nobel Prize by Category and Year</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>51</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[1.2:53]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[1.2:53]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def urlBase = karate.properties[&#39;API_HOST&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.2:53]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url urlBase</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.18">
+      <div class="step-ref passed">18</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;2.1/nobelPrize&#39;, &#39;che&#39;, &#39;2019&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.19">
+      <div class="step-ref passed">19</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method GET</span>
+      </div>
+    </div>
+    <div class="time-cell passed">49</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="2.19">09:52:19.079 request:
+1 &gt; GET https://api.nobelprize.org/2.1/nobelPrize/che/2019
+1 &gt; Host: api.nobelprize.org
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.7)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+09:52:19.128 response time in milliseconds: 47
+1 &lt; 200
+1 &lt; Date: Thu, 03 Jul 2025 09:52:19 GMT
+1 &lt; Content-Type: application/json
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Connection: keep-alive
+1 &lt; access-control-allow-headers: X-Requested-With, Content-Type, Accept, Origin, Authorization
+1 &lt; access-control-allow-methods: GET
+1 &lt; access-control-allow-origin: *
+1 &lt; Cache-Control: public, max-age=60
+1 &lt; expires: Thu, 03 Jul 2025 09:53:19 GMT
+1 &lt; pragma: no-cache
+1 &lt; x-powered-by: PHP/8.2.28
+1 &lt; Last-Modified: Thu, 03 Jul 2025 09:48:22 GMT
+1 &lt; CF-Cache-Status: HIT
+1 &lt; Vary: Accept-Encoding
+1 &lt; Server: cloudflare
+1 &lt; CF-RAY: 95957d472dcec628-BOM
+1 &lt; alt-svc: h3=&quot;:443&quot;; ma=86400
+[{&quot;awardYear&quot;:&quot;2019&quot;,&quot;category&quot;:{&quot;en&quot;:&quot;Chemistry&quot;,&quot;no&quot;:&quot;Kjemi&quot;,&quot;se&quot;:&quot;Kemi&quot;},&quot;categoryFullName&quot;:{&quot;en&quot;:&quot;The Nobel Prize in Chemistry&quot;,&quot;no&quot;:&quot;Nobelprisen i kjemi&quot;,&quot;se&quot;:&quot;Nobelpriset i kemi&quot;},&quot;dateAwarded&quot;:&quot;2019-10-09&quot;,&quot;prizeAmount&quot;:9000000,&quot;prizeAmountAdjusted&quot;:11178104,&quot;links&quot;:[{&quot;rel&quot;:&quot;nobelPrize&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/nobelPrize/che/2019&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}],&quot;laureates&quot;:[{&quot;id&quot;:&quot;976&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;John B. Goodenough&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;John B. Goodenough&quot;},&quot;portion&quot;:&quot;1/3&quot;,&quot;sortOrder&quot;:&quot;1&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;for the development of lithium-ion batteries&quot;,&quot;se&quot;:&quot;för utveckling av litiumjonbatterier&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/976&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]},{&quot;id&quot;:&quot;977&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;M. Stanley Whittingham&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;M. Stanley Whittingham&quot;},&quot;portion&quot;:&quot;1/3&quot;,&quot;sortOrder&quot;:&quot;2&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;for the development of lithium-ion batteries&quot;,&quot;se&quot;:&quot;för utveckling av litiumjonbatterier&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/977&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]},{&quot;id&quot;:&quot;978&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Akira Yoshino&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Akira Yoshino&quot;},&quot;portion&quot;:&quot;1/3&quot;,&quot;sortOrder&quot;:&quot;3&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;for the development of lithium-ion batteries&quot;,&quot;se&quot;:&quot;för utveckling av litiumjonbatterier&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/978&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]}],&quot;meta&quot;:{&quot;terms&quot;:&quot;https://www.nobelprize.org/about/terms-of-use-for-api-nobelprize-org-and-data-nobelprize-org/&quot;,&quot;license&quot;:&quot;https://www.nobelprize.org/about/terms-of-use-for-api-nobelprize-org-and-data-nobelprize-org/#licence&quot;,&quot;disclaimer&quot;:&quot;https://www.nobelprize.org/about/terms-of-use-for-api-nobelprize-org-and-data-nobelprize-org/#disclaimer&quot;}}]
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.20">
+      <div class="step-ref passed">20</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.21">
+      <div class="step-ref failed">21</div>
+      
+      <div class="step-cell failed">
+        <span>And</span>&nbsp;<span>match response == &#39;#object&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell failed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="2.21">09:52:19.129 src/test/java/org/springframework/api_tests/ApisNobel/nobelPrize_category_year_get.feature:21
+And match response == &#39;#object&#39;
+match failed: EQUALS
+  $ | not an object or map (LIST:STRING)
+  [{&quot;awardYear&quot;:&quot;2019&quot;,&quot;category&quot;:{&quot;en&quot;:&quot;Chemistry&quot;,&quot;no&quot;:&quot;Kjemi&quot;,&quot;se&quot;:&quot;Kemi&quot;},&quot;categoryFullName&quot;:{&quot;en&quot;:&quot;The Nobel Prize in Chemistry&quot;,&quot;no&quot;:&quot;Nobelprisen i kjemi&quot;,&quot;se&quot;:&quot;Nobelpriset i kemi&quot;},&quot;dateAwarded&quot;:&quot;2019-10-09&quot;,&quot;prizeAmount&quot;:9000000,&quot;prizeAmountAdjusted&quot;:11178104,&quot;links&quot;:[{&quot;rel&quot;:&quot;nobelPrize&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/nobelPrize/che/2019&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}],&quot;laureates&quot;:[{&quot;id&quot;:&quot;976&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;John B. Goodenough&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;John B. Goodenough&quot;},&quot;portion&quot;:&quot;1/3&quot;,&quot;sortOrder&quot;:&quot;1&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;for the development of lithium-ion batteries&quot;,&quot;se&quot;:&quot;för utveckling av litiumjonbatterier&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/976&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]},{&quot;id&quot;:&quot;977&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;M. Stanley Whittingham&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;M. Stanley Whittingham&quot;},&quot;portion&quot;:&quot;1/3&quot;,&quot;sortOrder&quot;:&quot;2&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;for the development of lithium-ion batteries&quot;,&quot;se&quot;:&quot;för utveckling av litiumjonbatterier&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/977&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]},{&quot;id&quot;:&quot;978&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Akira Yoshino&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Akira Yoshino&quot;},&quot;portion&quot;:&quot;1/3&quot;,&quot;sortOrder&quot;:&quot;3&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;for the development of lithium-ion batteries&quot;,&quot;se&quot;:&quot;för utveckling av litiumjonbatterier&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/978&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]}],&quot;meta&quot;:{&quot;terms&quot;:&quot;https://www.nobelprize.org/about/terms-of-use-for-api-nobelprize-org-and-data-nobelprize-org/&quot;,&quot;license&quot;:&quot;https://www.nobelprize.org/about/terms-of-use-for-api-nobelprize-org-and-data-nobelprize-org/#licence&quot;,&quot;disclaimer&quot;:&quot;https://www.nobelprize.org/about/terms-of-use-for-api-nobelprize-org-and-data-nobelprize-org/#disclaimer&quot;}}]
+  &#39;#object&#39;
+
+src/test/java/org/springframework/api_tests/ApisNobel/nobelPrize_category_year_get.feature:21
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.22">
+      <div class="step-ref skipped">22</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize == &#39;#object&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.23">
+      <div class="step-ref skipped">23</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.awardYear == &#39;#number&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.24">
+      <div class="step-ref skipped">24</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.category == &#39;#object&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.25">
+      <div class="step-ref skipped">25</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.category.en == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.26">
+      <div class="step-ref skipped">26</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.category.se == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.27">
+      <div class="step-ref skipped">27</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.categoryFullName == &#39;#object&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.28">
+      <div class="step-ref skipped">28</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.categoryFullName.en == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.29">
+      <div class="step-ref skipped">29</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.categoryFullName.se == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.30">
+      <div class="step-ref skipped">30</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.dateAwarded == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.31">
+      <div class="step-ref skipped">31</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.prizeAmount == &#39;#number&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.32">
+      <div class="step-ref skipped">32</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.prizeAmountAdjusted == &#39;#number&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.33">
+      <div class="step-ref skipped">33</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.topMotivation == &#39;#object&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.34">
+      <div class="step-ref skipped">34</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.topMotivation.en == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.35">
+      <div class="step-ref skipped">35</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.topMotivation.se == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.36">
+      <div class="step-ref skipped">36</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.laureates == &#39;#array&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.37">
+      <div class="step-ref skipped">37</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.laureates[0].id == &#39;#number&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.38">
+      <div class="step-ref skipped">38</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.laureates[0].name == &#39;#object&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.39">
+      <div class="step-ref skipped">39</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.laureates[0].name.en == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.40">
+      <div class="step-ref skipped">40</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.laureates[0].name.se == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.41">
+      <div class="step-ref skipped">41</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.laureates[0].portion == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.42">
+      <div class="step-ref skipped">42</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.laureates[0].sortOrder == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.43">
+      <div class="step-ref skipped">43</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.laureates[0].motivation == &#39;#object&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.44">
+      <div class="step-ref skipped">44</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.laureates[0].motivation.en == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.45">
+      <div class="step-ref skipped">45</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.laureates[0].motivation.se == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.46">
+      <div class="step-ref skipped">46</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.laureates[0].links == &#39;#array&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.47">
+      <div class="step-ref skipped">47</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.laureates[0].links[0].rel == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.48">
+      <div class="step-ref skipped">48</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.laureates[0].links[0].href == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.49">
+      <div class="step-ref skipped">49</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.laureates[0].links[0].action == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.50">
+      <div class="step-ref skipped">50</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.laureates[0].links[0].types == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1.3:53]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1.3:53]</span>
+                <span class="scenario-name">Test GET Nobel Prize by Category and Year</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>44</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[1.3:53]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[1.3:53]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def urlBase = karate.properties[&#39;API_HOST&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.3:53]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url urlBase</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.18">
+      <div class="step-ref passed">18</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;2.1/nobelPrize&#39;, &#39;lit&#39;, &#39;2018&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.19">
+      <div class="step-ref passed">19</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method GET</span>
+      </div>
+    </div>
+    <div class="time-cell passed">42</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="3.19">09:52:19.133 request:
+1 &gt; GET https://api.nobelprize.org/2.1/nobelPrize/lit/2018
+1 &gt; Host: api.nobelprize.org
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.7)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+09:52:19.174 response time in milliseconds: 40
+1 &lt; 200
+1 &lt; Date: Thu, 03 Jul 2025 09:52:19 GMT
+1 &lt; Content-Type: application/json
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Connection: keep-alive
+1 &lt; access-control-allow-headers: X-Requested-With, Content-Type, Accept, Origin, Authorization
+1 &lt; access-control-allow-methods: GET
+1 &lt; access-control-allow-origin: *
+1 &lt; Cache-Control: public, max-age=60
+1 &lt; expires: Thu, 03 Jul 2025 09:53:19 GMT
+1 &lt; pragma: no-cache
+1 &lt; x-powered-by: PHP/8.2.28
+1 &lt; Last-Modified: Thu, 03 Jul 2025 09:48:23 GMT
+1 &lt; CF-Cache-Status: HIT
+1 &lt; Age: 12
+1 &lt; Vary: Accept-Encoding
+1 &lt; Server: cloudflare
+1 &lt; CF-RAY: 95957d478cda47de-BOM
+1 &lt; alt-svc: h3=&quot;:443&quot;; ma=86400
+[{&quot;awardYear&quot;:&quot;2018&quot;,&quot;category&quot;:{&quot;en&quot;:&quot;Literature&quot;,&quot;no&quot;:&quot;Litteratur&quot;,&quot;se&quot;:&quot;Litteratur&quot;},&quot;categoryFullName&quot;:{&quot;en&quot;:&quot;The Nobel Prize in Literature&quot;,&quot;no&quot;:&quot;Nobelprisen i litteratur&quot;,&quot;se&quot;:&quot;Nobelpriset i litteratur&quot;},&quot;dateAwarded&quot;:&quot;2019-10-10&quot;,&quot;prizeAmount&quot;:9000000,&quot;prizeAmountAdjusted&quot;:11178104,&quot;links&quot;:[{&quot;rel&quot;:&quot;nobelPrize&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/nobelPrize/lit/2018&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}],&quot;laureates&quot;:[{&quot;id&quot;:&quot;979&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Olga Tokarczuk&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Olga Tokarczuk&quot;},&quot;portion&quot;:&quot;1&quot;,&quot;sortOrder&quot;:&quot;1&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;for a narrative imagination that with encyclopedic passion represents the crossing of boundaries as a form of life&quot;,&quot;se&quot;:&quot;för en berättarkonst som med encyklopedisk lust gestaltar gränsöverskridandet som livsform&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/979&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]}],&quot;meta&quot;:{&quot;terms&quot;:&quot;https://www.nobelprize.org/about/terms-of-use-for-api-nobelprize-org-and-data-nobelprize-org/&quot;,&quot;license&quot;:&quot;https://www.nobelprize.org/about/terms-of-use-for-api-nobelprize-org-and-data-nobelprize-org/#licence&quot;,&quot;disclaimer&quot;:&quot;https://www.nobelprize.org/about/terms-of-use-for-api-nobelprize-org-and-data-nobelprize-org/#disclaimer&quot;}}]
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.20">
+      <div class="step-ref passed">20</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.21">
+      <div class="step-ref failed">21</div>
+      
+      <div class="step-cell failed">
+        <span>And</span>&nbsp;<span>match response == &#39;#object&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="3.21">09:52:19.175 src/test/java/org/springframework/api_tests/ApisNobel/nobelPrize_category_year_get.feature:21
+And match response == &#39;#object&#39;
+match failed: EQUALS
+  $ | not an object or map (LIST:STRING)
+  [{&quot;awardYear&quot;:&quot;2018&quot;,&quot;category&quot;:{&quot;en&quot;:&quot;Literature&quot;,&quot;no&quot;:&quot;Litteratur&quot;,&quot;se&quot;:&quot;Litteratur&quot;},&quot;categoryFullName&quot;:{&quot;en&quot;:&quot;The Nobel Prize in Literature&quot;,&quot;no&quot;:&quot;Nobelprisen i litteratur&quot;,&quot;se&quot;:&quot;Nobelpriset i litteratur&quot;},&quot;dateAwarded&quot;:&quot;2019-10-10&quot;,&quot;prizeAmount&quot;:9000000,&quot;prizeAmountAdjusted&quot;:11178104,&quot;links&quot;:[{&quot;rel&quot;:&quot;nobelPrize&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/nobelPrize/lit/2018&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}],&quot;laureates&quot;:[{&quot;id&quot;:&quot;979&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Olga Tokarczuk&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Olga Tokarczuk&quot;},&quot;portion&quot;:&quot;1&quot;,&quot;sortOrder&quot;:&quot;1&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;for a narrative imagination that with encyclopedic passion represents the crossing of boundaries as a form of life&quot;,&quot;se&quot;:&quot;för en berättarkonst som med encyklopedisk lust gestaltar gränsöverskridandet som livsform&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/979&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]}],&quot;meta&quot;:{&quot;terms&quot;:&quot;https://www.nobelprize.org/about/terms-of-use-for-api-nobelprize-org-and-data-nobelprize-org/&quot;,&quot;license&quot;:&quot;https://www.nobelprize.org/about/terms-of-use-for-api-nobelprize-org-and-data-nobelprize-org/#licence&quot;,&quot;disclaimer&quot;:&quot;https://www.nobelprize.org/about/terms-of-use-for-api-nobelprize-org-and-data-nobelprize-org/#disclaimer&quot;}}]
+  &#39;#object&#39;
+
+src/test/java/org/springframework/api_tests/ApisNobel/nobelPrize_category_year_get.feature:21
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.22">
+      <div class="step-ref skipped">22</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize == &#39;#object&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.23">
+      <div class="step-ref skipped">23</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.awardYear == &#39;#number&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.24">
+      <div class="step-ref skipped">24</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.category == &#39;#object&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.25">
+      <div class="step-ref skipped">25</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.category.en == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.26">
+      <div class="step-ref skipped">26</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.category.se == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.27">
+      <div class="step-ref skipped">27</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.categoryFullName == &#39;#object&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.28">
+      <div class="step-ref skipped">28</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.categoryFullName.en == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.29">
+      <div class="step-ref skipped">29</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.categoryFullName.se == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.30">
+      <div class="step-ref skipped">30</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.dateAwarded == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.31">
+      <div class="step-ref skipped">31</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.prizeAmount == &#39;#number&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.32">
+      <div class="step-ref skipped">32</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.prizeAmountAdjusted == &#39;#number&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.33">
+      <div class="step-ref skipped">33</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.topMotivation == &#39;#object&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.34">
+      <div class="step-ref skipped">34</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.topMotivation.en == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.35">
+      <div class="step-ref skipped">35</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.topMotivation.se == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.36">
+      <div class="step-ref skipped">36</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.laureates == &#39;#array&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.37">
+      <div class="step-ref skipped">37</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.laureates[0].id == &#39;#number&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.38">
+      <div class="step-ref skipped">38</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.laureates[0].name == &#39;#object&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.39">
+      <div class="step-ref skipped">39</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.laureates[0].name.en == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.40">
+      <div class="step-ref skipped">40</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.laureates[0].name.se == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.41">
+      <div class="step-ref skipped">41</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.laureates[0].portion == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.42">
+      <div class="step-ref skipped">42</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.laureates[0].sortOrder == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.43">
+      <div class="step-ref skipped">43</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.laureates[0].motivation == &#39;#object&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.44">
+      <div class="step-ref skipped">44</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.laureates[0].motivation.en == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.45">
+      <div class="step-ref skipped">45</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.laureates[0].motivation.se == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.46">
+      <div class="step-ref skipped">46</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.laureates[0].links == &#39;#array&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.47">
+      <div class="step-ref skipped">47</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.laureates[0].links[0].rel == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.48">
+      <div class="step-ref skipped">48</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.laureates[0].links[0].href == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.49">
+      <div class="step-ref skipped">49</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.laureates[0].links[0].action == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.50">
+      <div class="step-ref skipped">50</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.nobelPrize.laureates[0].links[0].types == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[2.1:65]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[2.1:65]</span>
+                <span class="scenario-name">Test Invalid Category or Year</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>42</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[2.1:65]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[2.1:65]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def urlBase = karate.properties[&#39;API_HOST&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.1:65]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url urlBase</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.56">
+      <div class="step-ref passed">56</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;2.1/nobelPrize&#39;, &#39;xyz&#39;, &#39;2020&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.57">
+      <div class="step-ref passed">57</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method GET</span>
+      </div>
+    </div>
+    <div class="time-cell passed">42</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.57">09:52:19.178 request:
+1 &gt; GET https://api.nobelprize.org/2.1/nobelPrize/xyz/2020
+1 &gt; Host: api.nobelprize.org
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.7)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+09:52:19.219 response time in milliseconds: 39
+1 &lt; 200
+1 &lt; Date: Thu, 03 Jul 2025 09:52:19 GMT
+1 &lt; Content-Type: application/json
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Connection: keep-alive
+1 &lt; access-control-allow-headers: X-Requested-With, Content-Type, Accept, Origin, Authorization
+1 &lt; access-control-allow-methods: GET
+1 &lt; access-control-allow-origin: *
+1 &lt; Cache-Control: public, max-age=60
+1 &lt; expires: Thu, 03 Jul 2025 09:53:19 GMT
+1 &lt; pragma: no-cache
+1 &lt; x-powered-by: PHP/8.2.28
+1 &lt; Last-Modified: Thu, 03 Jul 2025 09:48:24 GMT
+1 &lt; CF-Cache-Status: HIT
+1 &lt; Vary: Accept-Encoding
+1 &lt; Server: cloudflare
+1 &lt; CF-RAY: 95957d47dfcf3a3c-BOM
+1 &lt; alt-svc: h3=&quot;:443&quot;; ma=86400
+[{&quot;awardYear&quot;:&quot;2020&quot;,&quot;category&quot;:{&quot;en&quot;:&quot;Chemistry&quot;,&quot;no&quot;:&quot;Kjemi&quot;,&quot;se&quot;:&quot;Kemi&quot;},&quot;categoryFullName&quot;:{&quot;en&quot;:&quot;The Nobel Prize in Chemistry&quot;,&quot;no&quot;:&quot;Nobelprisen i kjemi&quot;,&quot;se&quot;:&quot;Nobelpriset i kemi&quot;},&quot;dateAwarded&quot;:&quot;2020-10-07&quot;,&quot;prizeAmount&quot;:10000000,&quot;prizeAmountAdjusted&quot;:12361835,&quot;links&quot;:[{&quot;rel&quot;:&quot;nobelPrize&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/nobelPrize/che/2020&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}],&quot;laureates&quot;:[{&quot;id&quot;:&quot;991&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Emmanuelle Charpentier&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Emmanuelle Charpentier&quot;},&quot;portion&quot;:&quot;1/2&quot;,&quot;sortOrder&quot;:&quot;1&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;for the development of a method for genome editing&quot;,&quot;se&quot;:&quot;för utveckling av en metod för genomeditering&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/991&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]},{&quot;id&quot;:&quot;992&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Jennifer A. Doudna&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Jennifer A. Doudna&quot;},&quot;portion&quot;:&quot;1/2&quot;,&quot;sortOrder&quot;:&quot;2&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;for the development of a method for genome editing&quot;,&quot;se&quot;:&quot;för utveckling av en metod för genomeditering&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/992&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]}],&quot;meta&quot;:{&quot;terms&quot;:&quot;https://www.nobelprize.org/about/terms-of-use-for-api-nobelprize-org-and-data-nobelprize-org/&quot;,&quot;license&quot;:&quot;https://www.nobelprize.org/about/terms-of-use-for-api-nobelprize-org-and-data-nobelprize-org/#licence&quot;,&quot;disclaimer&quot;:&quot;https://www.nobelprize.org/about/terms-of-use-for-api-nobelprize-org-and-data-nobelprize-org/#disclaimer&quot;}},{&quot;awardYear&quot;:&quot;2020&quot;,&quot;category&quot;:{&quot;en&quot;:&quot;Economic Sciences&quot;,&quot;no&quot;:&quot;Økonomi&quot;,&quot;se&quot;:&quot;Ekonomi&quot;},&quot;categoryFullName&quot;:{&quot;en&quot;:&quot;The Sveriges Riksbank Prize in Economic Sciences in Memory of Alfred Nobel&quot;,&quot;no&quot;:&quot;Sveriges Riksbanks pris i økonomisk vitenskap til minne om Alfred Nobel&quot;,&quot;se&quot;:&quot;Sveriges Riksbanks pris i ekonomisk vetenskap till Alfred Nobels minne&quot;},&quot;dateAwarded&quot;:&quot;2020-10-12&quot;,&quot;prizeAmount&quot;:10000000,&quot;prizeAmountAdjusted&quot;:12361835,&quot;links&quot;:[{&quot;rel&quot;:&quot;nobelPrize&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/nobelPrize/eco/2020&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}],&quot;laureates&quot;:[{&quot;id&quot;:&quot;995&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Paul R. Milgrom&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Paul R. Milgrom&quot;},&quot;portion&quot;:&quot;1/2&quot;,&quot;sortOrder&quot;:&quot;1&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;for improvements to auction theory and inventions of new auction formats&quot;,&quot;se&quot;:&quot;för förbättringar av auktionsteorin och uppfinningar av nya auktionsformat&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/995&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]},{&quot;id&quot;:&quot;996&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Robert B. Wilson&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Robert B. Wilson&quot;},&quot;portion&quot;:&quot;1/2&quot;,&quot;sortOrder&quot;:&quot;2&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;for improvements to auction theory and inventions of new auction formats&quot;,&quot;se&quot;:&quot;för förbättringar av auktionsteorin och uppfinningar av nya auktionsformat&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/996&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]}]},{&quot;awardYear&quot;:&quot;2020&quot;,&quot;category&quot;:{&quot;en&quot;:&quot;Literature&quot;,&quot;no&quot;:&quot;Litteratur&quot;,&quot;se&quot;:&quot;Litteratur&quot;},&quot;categoryFullName&quot;:{&quot;en&quot;:&quot;The Nobel Prize in Literature&quot;,&quot;no&quot;:&quot;Nobelprisen i litteratur&quot;,&quot;se&quot;:&quot;Nobelpriset i litteratur&quot;},&quot;dateAwarded&quot;:&quot;2020-10-08&quot;,&quot;prizeAmount&quot;:10000000,&quot;prizeAmountAdjusted&quot;:12361835,&quot;links&quot;:[{&quot;rel&quot;:&quot;nobelPrize&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/nobelPrize/lit/2020&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}],&quot;laureates&quot;:[{&quot;id&quot;:&quot;993&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Louise Glück&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Louise Glück&quot;},&quot;portion&quot;:&quot;1&quot;,&quot;sortOrder&quot;:&quot;1&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;for her unmistakable poetic voice that with austere beauty makes individual existence universal&quot;,&quot;se&quot;:&quot;för hennes omisskännliga poetiska röst, som med sträng skönhet gör den enskilda människans existens universell&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/993&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]}]},{&quot;awardYear&quot;:&quot;2020&quot;,&quot;category&quot;:{&quot;en&quot;:&quot;Peace&quot;,&quot;no&quot;:&quot;Fred&quot;,&quot;se&quot;:&quot;Fred&quot;},&quot;categoryFullName&quot;:{&quot;en&quot;:&quot;The Nobel Peace Prize&quot;,&quot;no&quot;:&quot;Nobels fredspris&quot;,&quot;se&quot;:&quot;Nobels fredspris&quot;},&quot;dateAwarded&quot;:&quot;2020-10-09&quot;,&quot;prizeAmount&quot;:10000000,&quot;prizeAmountAdjusted&quot;:12361835,&quot;links&quot;:[{&quot;rel&quot;:&quot;nobelPrize&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/nobelPrize/pea/2020&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}],&quot;laureates&quot;:[{&quot;id&quot;:&quot;994&quot;,&quot;orgName&quot;:{&quot;en&quot;:&quot;World Food Programme&quot;,&quot;no&quot;:&quot;Verdens matvareprogram&quot;},&quot;acronym&quot;:&quot;WFP&quot;,&quot;portion&quot;:&quot;1&quot;,&quot;sortOrder&quot;:&quot;1&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;for its efforts to combat hunger, for its contribution to bettering conditions for peace in conflict-affected areas and for acting as a driving force in efforts to prevent the use of hunger as a weapon of war and conflict&quot;,&quot;no&quot;:&quot;for dets innsats i kampen mot sult, for dets bidrag til å skape forutsetninger for fred i konfliktutsatte områder, og for å være en pådriver i arbeidet mot bruken av sult som et våpen i krig og konflikt&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/994&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]}]},{&quot;awardYear&quot;:&quot;2020&quot;,&quot;category&quot;:{&quot;en&quot;:&quot;Physics&quot;,&quot;no&quot;:&quot;Fysikk&quot;,&quot;se&quot;:&quot;Fysik&quot;},&quot;categoryFullName&quot;:{&quot;en&quot;:&quot;The Nobel Prize in Physics&quot;,&quot;no&quot;:&quot;Nobelprisen i fysikk&quot;,&quot;se&quot;:&quot;Nobelpriset i fysik&quot;},&quot;dateAwarded&quot;:&quot;2020-10-06&quot;,&quot;prizeAmount&quot;:10000000,&quot;prizeAmountAdjusted&quot;:12361835,&quot;links&quot;:[{&quot;rel&quot;:&quot;nobelPrize&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/nobelPrize/phy/2020&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}],&quot;laureates&quot;:[{&quot;id&quot;:&quot;988&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Roger Penrose&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Roger Penrose&quot;},&quot;portion&quot;:&quot;1/2&quot;,&quot;sortOrder&quot;:&quot;1&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;for the discovery that black hole formation is a robust prediction of the general theory of relativity&quot;,&quot;se&quot;:&quot;för upptäckten att bildandet av svarta hål är en robust förutsägelse av den allmänna relativitetsteorin&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/988&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]},{&quot;id&quot;:&quot;989&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Reinhard Genzel&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Reinhard Genzel&quot;},&quot;portion&quot;:&quot;1/4&quot;,&quot;sortOrder&quot;:&quot;2&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;for the discovery of a supermassive compact object at the centre of our galaxy&quot;,&quot;se&quot;:&quot;för upptäckten av ett supermassivt kompakt objekt i Vintergatans centrum&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/989&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]},{&quot;id&quot;:&quot;990&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Andrea Ghez&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Andrea Ghez&quot;},&quot;portion&quot;:&quot;1/4&quot;,&quot;sortOrder&quot;:&quot;3&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;for the discovery of a supermassive compact object at the centre of our galaxy&quot;,&quot;se&quot;:&quot;för upptäckten av ett supermassivt kompakt objekt i Vintergatans centrum&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/990&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]}]},{&quot;awardYear&quot;:&quot;2020&quot;,&quot;category&quot;:{&quot;en&quot;:&quot;Physiology or Medicine&quot;,&quot;no&quot;:&quot;Fysiologi eller medisin&quot;,&quot;se&quot;:&quot;Fysiologi eller medicin&quot;},&quot;categoryFullName&quot;:{&quot;en&quot;:&quot;The Nobel Prize in Physiology or Medicine&quot;,&quot;no&quot;:&quot;Nobelprisen i fysiologi eller medisin&quot;,&quot;se&quot;:&quot;Nobelpriset i fysiologi eller medicin&quot;},&quot;dateAwarded&quot;:&quot;2020-10-05&quot;,&quot;prizeAmount&quot;:10000000,&quot;prizeAmountAdjusted&quot;:12361835,&quot;links&quot;:[{&quot;rel&quot;:&quot;nobelPrize&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/nobelPrize/med/2020&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}],&quot;laureates&quot;:[{&quot;id&quot;:&quot;985&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Harvey J. Alter&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Harvey J. Alter&quot;},&quot;portion&quot;:&quot;1/3&quot;,&quot;sortOrder&quot;:&quot;1&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;for the discovery of Hepatitis C virus&quot;,&quot;se&quot;:&quot;för upptäckten av hepatit C-virus&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/985&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]},{&quot;id&quot;:&quot;986&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Michael Houghton&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Michael Houghton&quot;},&quot;portion&quot;:&quot;1/3&quot;,&quot;sortOrder&quot;:&quot;2&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;for the discovery of Hepatitis C virus&quot;,&quot;se&quot;:&quot;för upptäckten av hepatit C-virus&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/986&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]},{&quot;id&quot;:&quot;987&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Charles M. Rice&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Charles M. Rice&quot;},&quot;portion&quot;:&quot;1/3&quot;,&quot;sortOrder&quot;:&quot;3&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;for the discovery of Hepatitis C virus&quot;,&quot;se&quot;:&quot;för upptäckten av hepatit C-virus&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/987&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]}]}]
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.58">
+      <div class="step-ref failed">58</div>
+      
+      <div class="step-cell failed">
+        <span>Then</span>&nbsp;<span>status 404</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.58">09:52:19.219 src/test/java/org/springframework/api_tests/ApisNobel/nobelPrize_category_year_get.feature:58
+Then status 404
+status code was: 200, expected: 404, response time in milliseconds: 39, url: https://api.nobelprize.org/2.1/nobelPrize/xyz/2020, response: 
+[{&quot;awardYear&quot;:&quot;2020&quot;,&quot;category&quot;:{&quot;en&quot;:&quot;Chemistry&quot;,&quot;no&quot;:&quot;Kjemi&quot;,&quot;se&quot;:&quot;Kemi&quot;},&quot;categoryFullName&quot;:{&quot;en&quot;:&quot;The Nobel Prize in Chemistry&quot;,&quot;no&quot;:&quot;Nobelprisen i kjemi&quot;,&quot;se&quot;:&quot;Nobelpriset i kemi&quot;},&quot;dateAwarded&quot;:&quot;2020-10-07&quot;,&quot;prizeAmount&quot;:10000000,&quot;prizeAmountAdjusted&quot;:12361835,&quot;links&quot;:[{&quot;rel&quot;:&quot;nobelPrize&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/nobelPrize/che/2020&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}],&quot;laureates&quot;:[{&quot;id&quot;:&quot;991&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Emmanuelle Charpentier&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Emmanuelle Charpentier&quot;},&quot;portion&quot;:&quot;1/2&quot;,&quot;sortOrder&quot;:&quot;1&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;for the development of a method for genome editing&quot;,&quot;se&quot;:&quot;för utveckling av en metod för genomeditering&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/991&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]},{&quot;id&quot;:&quot;992&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Jennifer A. Doudna&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Jennifer A. Doudna&quot;},&quot;portion&quot;:&quot;1/2&quot;,&quot;sortOrder&quot;:&quot;2&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;for the development of a method for genome editing&quot;,&quot;se&quot;:&quot;för utveckling av en metod för genomeditering&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/992&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]}],&quot;meta&quot;:{&quot;terms&quot;:&quot;https://www.nobelprize.org/about/terms-of-use-for-api-nobelprize-org-and-data-nobelprize-org/&quot;,&quot;license&quot;:&quot;https://www.nobelprize.org/about/terms-of-use-for-api-nobelprize-org-and-data-nobelprize-org/#licence&quot;,&quot;disclaimer&quot;:&quot;https://www.nobelprize.org/about/terms-of-use-for-api-nobelprize-org-and-data-nobelprize-org/#disclaimer&quot;}},{&quot;awardYear&quot;:&quot;2020&quot;,&quot;category&quot;:{&quot;en&quot;:&quot;Economic Sciences&quot;,&quot;no&quot;:&quot;Økonomi&quot;,&quot;se&quot;:&quot;Ekonomi&quot;},&quot;categoryFullName&quot;:{&quot;en&quot;:&quot;The Sveriges Riksbank Prize in Economic Sciences in Memory of Alfred Nobel&quot;,&quot;no&quot;:&quot;Sveriges Riksbanks pris i økonomisk vitenskap til minne om Alfred Nobel&quot;,&quot;se&quot;:&quot;Sveriges Riksbanks pris i ekonomisk vetenskap till Alfred Nobels minne&quot;},&quot;dateAwarded&quot;:&quot;2020-10-12&quot;,&quot;prizeAmount&quot;:10000000,&quot;prizeAmountAdjusted&quot;:12361835,&quot;links&quot;:[{&quot;rel&quot;:&quot;nobelPrize&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/nobelPrize/eco/2020&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}],&quot;laureates&quot;:[{&quot;id&quot;:&quot;995&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Paul R. Milgrom&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Paul R. Milgrom&quot;},&quot;portion&quot;:&quot;1/2&quot;,&quot;sortOrder&quot;:&quot;1&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;for improvements to auction theory and inventions of new auction formats&quot;,&quot;se&quot;:&quot;för förbättringar av auktionsteorin och uppfinningar av nya auktionsformat&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/995&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]},{&quot;id&quot;:&quot;996&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Robert B. Wilson&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Robert B. Wilson&quot;},&quot;portion&quot;:&quot;1/2&quot;,&quot;sortOrder&quot;:&quot;2&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;for improvements to auction theory and inventions of new auction formats&quot;,&quot;se&quot;:&quot;för förbättringar av auktionsteorin och uppfinningar av nya auktionsformat&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/996&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]}]},{&quot;awardYear&quot;:&quot;2020&quot;,&quot;category&quot;:{&quot;en&quot;:&quot;Literature&quot;,&quot;no&quot;:&quot;Litteratur&quot;,&quot;se&quot;:&quot;Litteratur&quot;},&quot;categoryFullName&quot;:{&quot;en&quot;:&quot;The Nobel Prize in Literature&quot;,&quot;no&quot;:&quot;Nobelprisen i litteratur&quot;,&quot;se&quot;:&quot;Nobelpriset i litteratur&quot;},&quot;dateAwarded&quot;:&quot;2020-10-08&quot;,&quot;prizeAmount&quot;:10000000,&quot;prizeAmountAdjusted&quot;:12361835,&quot;links&quot;:[{&quot;rel&quot;:&quot;nobelPrize&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/nobelPrize/lit/2020&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}],&quot;laureates&quot;:[{&quot;id&quot;:&quot;993&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Louise Glück&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Louise Glück&quot;},&quot;portion&quot;:&quot;1&quot;,&quot;sortOrder&quot;:&quot;1&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;for her unmistakable poetic voice that with austere beauty makes individual existence universal&quot;,&quot;se&quot;:&quot;för hennes omisskännliga poetiska röst, som med sträng skönhet gör den enskilda människans existens universell&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/993&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]}]},{&quot;awardYear&quot;:&quot;2020&quot;,&quot;category&quot;:{&quot;en&quot;:&quot;Peace&quot;,&quot;no&quot;:&quot;Fred&quot;,&quot;se&quot;:&quot;Fred&quot;},&quot;categoryFullName&quot;:{&quot;en&quot;:&quot;The Nobel Peace Prize&quot;,&quot;no&quot;:&quot;Nobels fredspris&quot;,&quot;se&quot;:&quot;Nobels fredspris&quot;},&quot;dateAwarded&quot;:&quot;2020-10-09&quot;,&quot;prizeAmount&quot;:10000000,&quot;prizeAmountAdjusted&quot;:12361835,&quot;links&quot;:[{&quot;rel&quot;:&quot;nobelPrize&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/nobelPrize/pea/2020&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}],&quot;laureates&quot;:[{&quot;id&quot;:&quot;994&quot;,&quot;orgName&quot;:{&quot;en&quot;:&quot;World Food Programme&quot;,&quot;no&quot;:&quot;Verdens matvareprogram&quot;},&quot;acronym&quot;:&quot;WFP&quot;,&quot;portion&quot;:&quot;1&quot;,&quot;sortOrder&quot;:&quot;1&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;for its efforts to combat hunger, for its contribution to bettering conditions for peace in conflict-affected areas and for acting as a driving force in efforts to prevent the use of hunger as a weapon of war and conflict&quot;,&quot;no&quot;:&quot;for dets innsats i kampen mot sult, for dets bidrag til å skape forutsetninger for fred i konfliktutsatte områder, og for å være en pådriver i arbeidet mot bruken av sult som et våpen i krig og konflikt&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/994&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]}]},{&quot;awardYear&quot;:&quot;2020&quot;,&quot;category&quot;:{&quot;en&quot;:&quot;Physics&quot;,&quot;no&quot;:&quot;Fysikk&quot;,&quot;se&quot;:&quot;Fysik&quot;},&quot;categoryFullName&quot;:{&quot;en&quot;:&quot;The Nobel Prize in Physics&quot;,&quot;no&quot;:&quot;Nobelprisen i fysikk&quot;,&quot;se&quot;:&quot;Nobelpriset i fysik&quot;},&quot;dateAwarded&quot;:&quot;2020-10-06&quot;,&quot;prizeAmount&quot;:10000000,&quot;prizeAmountAdjusted&quot;:12361835,&quot;links&quot;:[{&quot;rel&quot;:&quot;nobelPrize&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/nobelPrize/phy/2020&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}],&quot;laureates&quot;:[{&quot;id&quot;:&quot;988&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Roger Penrose&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Roger Penrose&quot;},&quot;portion&quot;:&quot;1/2&quot;,&quot;sortOrder&quot;:&quot;1&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;for the discovery that black hole formation is a robust prediction of the general theory of relativity&quot;,&quot;se&quot;:&quot;för upptäckten att bildandet av svarta hål är en robust förutsägelse av den allmänna relativitetsteorin&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/988&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]},{&quot;id&quot;:&quot;989&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Reinhard Genzel&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Reinhard Genzel&quot;},&quot;portion&quot;:&quot;1/4&quot;,&quot;sortOrder&quot;:&quot;2&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;for the discovery of a supermassive compact object at the centre of our galaxy&quot;,&quot;se&quot;:&quot;för upptäckten av ett supermassivt kompakt objekt i Vintergatans centrum&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/989&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]},{&quot;id&quot;:&quot;990&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Andrea Ghez&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Andrea Ghez&quot;},&quot;portion&quot;:&quot;1/4&quot;,&quot;sortOrder&quot;:&quot;3&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;for the discovery of a supermassive compact object at the centre of our galaxy&quot;,&quot;se&quot;:&quot;för upptäckten av ett supermassivt kompakt objekt i Vintergatans centrum&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/990&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]}]},{&quot;awardYear&quot;:&quot;2020&quot;,&quot;category&quot;:{&quot;en&quot;:&quot;Physiology or Medicine&quot;,&quot;no&quot;:&quot;Fysiologi eller medisin&quot;,&quot;se&quot;:&quot;Fysiologi eller medicin&quot;},&quot;categoryFullName&quot;:{&quot;en&quot;:&quot;The Nobel Prize in Physiology or Medicine&quot;,&quot;no&quot;:&quot;Nobelprisen i fysiologi eller medisin&quot;,&quot;se&quot;:&quot;Nobelpriset i fysiologi eller medicin&quot;},&quot;dateAwarded&quot;:&quot;2020-10-05&quot;,&quot;prizeAmount&quot;:10000000,&quot;prizeAmountAdjusted&quot;:12361835,&quot;links&quot;:[{&quot;rel&quot;:&quot;nobelPrize&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/nobelPrize/med/2020&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}],&quot;laureates&quot;:[{&quot;id&quot;:&quot;985&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Harvey J. Alter&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Harvey J. Alter&quot;},&quot;portion&quot;:&quot;1/3&quot;,&quot;sortOrder&quot;:&quot;1&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;for the discovery of Hepatitis C virus&quot;,&quot;se&quot;:&quot;för upptäckten av hepatit C-virus&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/985&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]},{&quot;id&quot;:&quot;986&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Michael Houghton&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Michael Houghton&quot;},&quot;portion&quot;:&quot;1/3&quot;,&quot;sortOrder&quot;:&quot;2&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;for the discovery of Hepatitis C virus&quot;,&quot;se&quot;:&quot;för upptäckten av hepatit C-virus&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/986&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]},{&quot;id&quot;:&quot;987&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Charles M. Rice&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Charles M. Rice&quot;},&quot;portion&quot;:&quot;1/3&quot;,&quot;sortOrder&quot;:&quot;3&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;for the discovery of Hepatitis C virus&quot;,&quot;se&quot;:&quot;för upptäckten av hepatit C-virus&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/987&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]}]}]
+src/test/java/org/springframework/api_tests/ApisNobel/nobelPrize_category_year_get.feature:58
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.59">
+      <div class="step-ref skipped">59</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response == &#39;#object&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.60">
+      <div class="step-ref skipped">60</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.code == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.61">
+      <div class="step-ref skipped">61</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.message == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[2.2:66]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[2.2:66]</span>
+                <span class="scenario-name">Test Invalid Category or Year</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>46</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[2.2:66]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[2.2:66]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def urlBase = karate.properties[&#39;API_HOST&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.2:66]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url urlBase</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.56">
+      <div class="step-ref passed">56</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;2.1/nobelPrize&#39;, &#39;phy&#39;, &#39;1800&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.57">
+      <div class="step-ref passed">57</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method GET</span>
+      </div>
+    </div>
+    <div class="time-cell passed">46</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="2.57">09:52:19.223 request:
+1 &gt; GET https://api.nobelprize.org/2.1/nobelPrize/phy/1800
+1 &gt; Host: api.nobelprize.org
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.7)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+09:52:19.267 response time in milliseconds: 44
+1 &lt; 200
+1 &lt; Date: Thu, 03 Jul 2025 09:52:19 GMT
+1 &lt; Content-Type: application/json
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Connection: keep-alive
+1 &lt; access-control-allow-headers: X-Requested-With, Content-Type, Accept, Origin, Authorization
+1 &lt; access-control-allow-methods: GET
+1 &lt; access-control-allow-origin: *
+1 &lt; Cache-Control: public, max-age=60
+1 &lt; expires: Thu, 03 Jul 2025 09:53:19 GMT
+1 &lt; pragma: no-cache
+1 &lt; x-powered-by: PHP/8.2.28
+1 &lt; Last-Modified: Thu, 03 Jul 2025 09:48:25 GMT
+1 &lt; CF-Cache-Status: HIT
+1 &lt; Vary: Accept-Encoding
+1 &lt; Server: cloudflare
+1 &lt; CF-RAY: 95957d481b8248f2-BOM
+1 &lt; alt-svc: h3=&quot;:443&quot;; ma=86400
+[{&quot;awardYear&quot;:&quot;1901&quot;,&quot;category&quot;:{&quot;en&quot;:&quot;Physics&quot;,&quot;no&quot;:&quot;Fysikk&quot;,&quot;se&quot;:&quot;Fysik&quot;},&quot;categoryFullName&quot;:{&quot;en&quot;:&quot;The Nobel Prize in Physics&quot;,&quot;no&quot;:&quot;Nobelprisen i fysikk&quot;,&quot;se&quot;:&quot;Nobelpriset i fysik&quot;},&quot;dateAwarded&quot;:&quot;1901-11-12&quot;,&quot;prizeAmount&quot;:150782,&quot;prizeAmountAdjusted&quot;:10833458,&quot;links&quot;:[{&quot;rel&quot;:&quot;nobelPrize&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/nobelPrize/phy/1901&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}],&quot;laureates&quot;:[{&quot;id&quot;:&quot;1&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Wilhelm Conrad Röntgen&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Wilhelm Conrad Röntgen&quot;},&quot;portion&quot;:&quot;1&quot;,&quot;sortOrder&quot;:&quot;1&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;in recognition of the extraordinary services he has rendered by the discovery of the remarkable rays subsequently named after him&quot;,&quot;se&quot;:&quot;såsom ett erkännande av den utomordentliga förtjänst han inlagt genom upptäckten av de egendomliga strålar, som sedermera uppkallats efter honom&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/1&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]}],&quot;meta&quot;:{&quot;terms&quot;:&quot;https://www.nobelprize.org/about/terms-of-use-for-api-nobelprize-org-and-data-nobelprize-org/&quot;,&quot;license&quot;:&quot;https://www.nobelprize.org/about/terms-of-use-for-api-nobelprize-org-and-data-nobelprize-org/#licence&quot;,&quot;disclaimer&quot;:&quot;https://www.nobelprize.org/about/terms-of-use-for-api-nobelprize-org-and-data-nobelprize-org/#disclaimer&quot;}},{&quot;awardYear&quot;:&quot;1902&quot;,&quot;category&quot;:{&quot;en&quot;:&quot;Physics&quot;,&quot;no&quot;:&quot;Fysikk&quot;,&quot;se&quot;:&quot;Fysik&quot;},&quot;categoryFullName&quot;:{&quot;en&quot;:&quot;The Nobel Prize in Physics&quot;,&quot;no&quot;:&quot;Nobelprisen i fysikk&quot;,&quot;se&quot;:&quot;Nobelpriset i fysik&quot;},&quot;dateAwarded&quot;:&quot;1902-11-11&quot;,&quot;prizeAmount&quot;:141847,&quot;prizeAmountAdjusted&quot;:10191492,&quot;links&quot;:[{&quot;rel&quot;:&quot;nobelPrize&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/nobelPrize/phy/1902&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}],&quot;laureates&quot;:[{&quot;id&quot;:&quot;2&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Hendrik A. Lorentz&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Hendrik Antoon Lorentz&quot;},&quot;portion&quot;:&quot;1/2&quot;,&quot;sortOrder&quot;:&quot;1&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;in recognition of the extraordinary service they rendered by their researches into the influence of magnetism upon radiation phenomena&quot;,&quot;se&quot;:&quot;såsom ett erkännande av den utomordentliga förtjänst de inlagt genom sina undersökningar över magnetismens inflytande på strålningsfenomenen&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/2&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]},{&quot;id&quot;:&quot;3&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Pieter Zeeman&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Pieter Zeeman&quot;},&quot;portion&quot;:&quot;1/2&quot;,&quot;sortOrder&quot;:&quot;2&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;in recognition of the extraordinary service they rendered by their researches into the influence of magnetism upon radiation phenomena&quot;,&quot;se&quot;:&quot;såsom ett erkännande av den utomordentliga förtjänst de inlagt genom sina undersökningar över magnetismens inflytande på strålningsfenomenen&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/3&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]}]},{&quot;awardYear&quot;:&quot;1903&quot;,&quot;category&quot;:{&quot;en&quot;:&quot;Physics&quot;,&quot;no&quot;:&quot;Fysikk&quot;,&quot;se&quot;:&quot;Fysik&quot;},&quot;categoryFullName&quot;:{&quot;en&quot;:&quot;The Nobel Prize in Physics&quot;,&quot;no&quot;:&quot;Nobelprisen i fysikk&quot;,&quot;se&quot;:&quot;Nobelpriset i fysik&quot;},&quot;dateAwarded&quot;:&quot;1903-11-12&quot;,&quot;prizeAmount&quot;:141358,&quot;prizeAmountAdjusted&quot;:9857642,&quot;links&quot;:[{&quot;rel&quot;:&quot;nobelPrize&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/nobelPrize/phy/1903&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}],&quot;laureates&quot;:[{&quot;id&quot;:&quot;4&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Henri Becquerel&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Antoine Henri Becquerel&quot;},&quot;portion&quot;:&quot;1/2&quot;,&quot;sortOrder&quot;:&quot;1&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;in recognition of the extraordinary services he has rendered by his discovery of spontaneous radioactivity&quot;,&quot;se&quot;:&quot;såsom ett erkännande av den utomordentliga förtjänst han inlagt genom upptäckten av den spontana radioaktiviteten&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/4&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]},{&quot;id&quot;:&quot;5&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Pierre Curie&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Pierre Curie&quot;},&quot;portion&quot;:&quot;1/4&quot;,&quot;sortOrder&quot;:&quot;2&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;in recognition of the extraordinary services they have rendered by their joint researches on the radiation phenomena discovered by Professor Henri Becquerel&quot;,&quot;se&quot;:&quot;såsom ett erkännande av den utomordentliga förtjänst de inlagt genom sina gemensamt utförda arbeten rörande de av Professor Henri Becquerel upptäckta strålningsfenomenen&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/5&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]},{&quot;id&quot;:&quot;6&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Marie Curie&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Marie Curie, née Skłodowska&quot;},&quot;portion&quot;:&quot;1/4&quot;,&quot;sortOrder&quot;:&quot;3&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;in recognition of the extraordinary services they have rendered by their joint researches on the radiation phenomena discovered by Professor Henri Becquerel&quot;,&quot;se&quot;:&quot;såsom ett erkännande av den utomordentliga förtjänst de inlagt genom sina gemensamt utförda arbeten rörande de av Professor Henri Becquerel upptäckta strålningsfenomenen&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/6&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]}]},{&quot;awardYear&quot;:&quot;1904&quot;,&quot;category&quot;:{&quot;en&quot;:&quot;Physics&quot;,&quot;no&quot;:&quot;Fysikk&quot;,&quot;se&quot;:&quot;Fysik&quot;},&quot;categoryFullName&quot;:{&quot;en&quot;:&quot;The Nobel Prize in Physics&quot;,&quot;no&quot;:&quot;Nobelprisen i fysikk&quot;,&quot;se&quot;:&quot;Nobelpriset i fysik&quot;},&quot;dateAwarded&quot;:&quot;1904-11-08&quot;,&quot;prizeAmount&quot;:140859,&quot;prizeAmountAdjusted&quot;:9822844,&quot;links&quot;:[{&quot;rel&quot;:&quot;nobelPrize&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/nobelPrize/phy/1904&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}],&quot;laureates&quot;:[{&quot;id&quot;:&quot;8&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Lord Rayleigh&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Lord Rayleigh (John William Strutt)&quot;},&quot;portion&quot;:&quot;1&quot;,&quot;sortOrder&quot;:&quot;1&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;for his investigations of the densities of the most important gases and for his discovery of argon in connection with these studies&quot;,&quot;se&quot;:&quot;för hans undersökningar rörande de viktigaste gasernas täthet samt hans i sammanhang med dessa undersökningar gjorda upptäckt av argon&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/8&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]}]},{&quot;awardYear&quot;:&quot;1905&quot;,&quot;category&quot;:{&quot;en&quot;:&quot;Physics&quot;,&quot;no&quot;:&quot;Fysikk&quot;,&quot;se&quot;:&quot;Fysik&quot;},&quot;categoryFullName&quot;:{&quot;en&quot;:&quot;The Nobel Prize in Physics&quot;,&quot;no&quot;:&quot;Nobelprisen i fysikk&quot;,&quot;se&quot;:&quot;Nobelpriset i fysik&quot;},&quot;dateAwarded&quot;:&quot;1905-11-09&quot;,&quot;prizeAmount&quot;:138089,&quot;prizeAmountAdjusted&quot;:9629677,&quot;links&quot;:[{&quot;rel&quot;:&quot;nobelPrize&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/nobelPrize/phy/1905&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}],&quot;laureates&quot;:[{&quot;id&quot;:&quot;9&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Philipp Lenard&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Philipp Eduard Anton von Lenard&quot;},&quot;portion&quot;:&quot;1&quot;,&quot;sortOrder&quot;:&quot;1&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;for his work on cathode rays&quot;,&quot;se&quot;:&quot;för hans arbeten över katodstrålarna&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/9&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]}]},{&quot;awardYear&quot;:&quot;1906&quot;,&quot;category&quot;:{&quot;en&quot;:&quot;Physics&quot;,&quot;no&quot;:&quot;Fysikk&quot;,&quot;se&quot;:&quot;Fysik&quot;},&quot;categoryFullName&quot;:{&quot;en&quot;:&quot;The Nobel Prize in Physics&quot;,&quot;no&quot;:&quot;Nobelprisen i fysikk&quot;,&quot;se&quot;:&quot;Nobelpriset i fysik&quot;},&quot;dateAwarded&quot;:&quot;1906-11-12&quot;,&quot;prizeAmount&quot;:138536,&quot;prizeAmountAdjusted&quot;:9384824,&quot;links&quot;:[{&quot;rel&quot;:&quot;nobelPrize&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/nobelPrize/phy/1906&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}],&quot;laureates&quot;:[{&quot;id&quot;:&quot;10&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;J.J. Thomson&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Joseph John Thomson&quot;},&quot;portion&quot;:&quot;1&quot;,&quot;sortOrder&quot;:&quot;1&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;in recognition of the great merits of his theoretical and experimental investigations on the conduction of electricity by gases&quot;,&quot;se&quot;:&quot;såsom ett erkännande av den stora förtjänst han inlagt genom sina teoretiska och experimentella undersökningar över elektricitetens gång genom gaser&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/10&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]}]},{&quot;awardYear&quot;:&quot;1907&quot;,&quot;category&quot;:{&quot;en&quot;:&quot;Physics&quot;,&quot;no&quot;:&quot;Fysikk&quot;,&quot;se&quot;:&quot;Fysik&quot;},&quot;categoryFullName&quot;:{&quot;en&quot;:&quot;The Nobel Prize in Physics&quot;,&quot;no&quot;:&quot;Nobelprisen i fysikk&quot;,&quot;se&quot;:&quot;Nobelpriset i fysik&quot;},&quot;dateAwarded&quot;:&quot;1907-11-12&quot;,&quot;prizeAmount&quot;:138796,&quot;prizeAmountAdjusted&quot;:8894198,&quot;links&quot;:[{&quot;rel&quot;:&quot;nobelPrize&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/nobelPrize/phy/1907&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}],&quot;laureates&quot;:[{&quot;id&quot;:&quot;11&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Albert A. Michelson&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Albert Abraham Michelson&quot;},&quot;portion&quot;:&quot;1&quot;,&quot;sortOrder&quot;:&quot;1&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;for his optical precision instruments and the spectroscopic and metrological investigations carried out with their aid&quot;,&quot;se&quot;:&quot;för hans optiska precisionsinstrument och hans därmed utförda spektroskopiska och metrologiska undersökningar&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/11&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]}]},{&quot;awardYear&quot;:&quot;1908&quot;,&quot;category&quot;:{&quot;en&quot;:&quot;Physics&quot;,&quot;no&quot;:&quot;Fysikk&quot;,&quot;se&quot;:&quot;Fysik&quot;},&quot;categoryFullName&quot;:{&quot;en&quot;:&quot;The Nobel Prize in Physics&quot;,&quot;no&quot;:&quot;Nobelprisen i fysikk&quot;,&quot;se&quot;:&quot;Nobelpriset i fysik&quot;},&quot;dateAwarded&quot;:&quot;1908-11-10&quot;,&quot;prizeAmount&quot;:139800,&quot;prizeAmountAdjusted&quot;:8958535,&quot;links&quot;:[{&quot;rel&quot;:&quot;nobelPrize&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/nobelPrize/phy/1908&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}],&quot;laureates&quot;:[{&quot;id&quot;:&quot;12&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Gabriel Lippmann&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Gabriel Lippmann&quot;},&quot;portion&quot;:&quot;1&quot;,&quot;sortOrder&quot;:&quot;1&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;for his method of reproducing colours photographically based on the phenomenon of interference&quot;,&quot;se&quot;:&quot;för hans på interferensfenomenet grundade metod att fotografiskt återgiva färger&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/12&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]}]},{&quot;awardYear&quot;:&quot;1909&quot;,&quot;category&quot;:{&quot;en&quot;:&quot;Physics&quot;,&quot;no&quot;:&quot;Fysikk&quot;,&quot;se&quot;:&quot;Fysik&quot;},&quot;categoryFullName&quot;:{&quot;en&quot;:&quot;The Nobel Prize in Physics&quot;,&quot;no&quot;:&quot;Nobelprisen i fysikk&quot;,&quot;se&quot;:&quot;Nobelpriset i fysik&quot;},&quot;dateAwarded&quot;:&quot;1909-11-09&quot;,&quot;prizeAmount&quot;:139800,&quot;prizeAmountAdjusted&quot;:8958535,&quot;links&quot;:[{&quot;rel&quot;:&quot;nobelPrize&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/nobelPrize/phy/1909&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}],&quot;laureates&quot;:[{&quot;id&quot;:&quot;13&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Guglielmo Marconi&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Guglielmo Marconi&quot;},&quot;portion&quot;:&quot;1/2&quot;,&quot;sortOrder&quot;:&quot;1&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;in recognition of their contributions to the development of wireless telegraphy&quot;,&quot;se&quot;:&quot;såsom ett erkännande av deras förtjänster om den trådlösa telegrafiens utveckling&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/13&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]},{&quot;id&quot;:&quot;14&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Ferdinand Braun&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Karl Ferdinand Braun&quot;},&quot;portion&quot;:&quot;1/2&quot;,&quot;sortOrder&quot;:&quot;2&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;in recognition of their contributions to the development of wireless telegraphy&quot;,&quot;se&quot;:&quot;såsom ett erkännande av deras förtjänster om den trådlösa telegrafiens utveckling&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/14&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]}]},{&quot;awardYear&quot;:&quot;1910&quot;,&quot;category&quot;:{&quot;en&quot;:&quot;Physics&quot;,&quot;no&quot;:&quot;Fysikk&quot;,&quot;se&quot;:&quot;Fysik&quot;},&quot;categoryFullName&quot;:{&quot;en&quot;:&quot;The Nobel Prize in Physics&quot;,&quot;no&quot;:&quot;Nobelprisen i fysikk&quot;,&quot;se&quot;:&quot;Nobelpriset i fysik&quot;},&quot;dateAwarded&quot;:&quot;1910-11-05&quot;,&quot;prizeAmount&quot;:140703,&quot;prizeAmountAdjusted&quot;:9016400,&quot;links&quot;:[{&quot;rel&quot;:&quot;nobelPrize&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/nobelPrize/phy/1910&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}],&quot;laureates&quot;:[{&quot;id&quot;:&quot;15&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Johannes Diderik van der Waals&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Johannes Diderik van der Waals&quot;},&quot;portion&quot;:&quot;1&quot;,&quot;sortOrder&quot;:&quot;1&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;for his work on the equation of state for gases and liquids&quot;,&quot;se&quot;:&quot;för hans arbeten angående gasers och vätskors tillståndsekvation&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/15&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]}]},{&quot;awardYear&quot;:&quot;1911&quot;,&quot;category&quot;:{&quot;en&quot;:&quot;Physics&quot;,&quot;no&quot;:&quot;Fysikk&quot;,&quot;se&quot;:&quot;Fysik&quot;},&quot;categoryFullName&quot;:{&quot;en&quot;:&quot;The Nobel Prize in Physics&quot;,&quot;no&quot;:&quot;Nobelprisen i fysikk&quot;,&quot;se&quot;:&quot;Nobelpriset i fysik&quot;},&quot;dateAwarded&quot;:&quot;1911-11-07&quot;,&quot;prizeAmount&quot;:140695,&quot;prizeAmountAdjusted&quot;:9266329,&quot;links&quot;:[{&quot;rel&quot;:&quot;nobelPrize&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/nobelPrize/phy/1911&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}],&quot;laureates&quot;:[{&quot;id&quot;:&quot;16&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Wilhelm Wien&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Wilhelm Wien&quot;},&quot;portion&quot;:&quot;1&quot;,&quot;sortOrder&quot;:&quot;1&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;for his discoveries regarding the laws governing the radiation of heat&quot;,&quot;se&quot;:&quot;för hans upptäckter angående värmestrålningens lagar&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/16&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]}]},{&quot;awardYear&quot;:&quot;1912&quot;,&quot;category&quot;:{&quot;en&quot;:&quot;Physics&quot;,&quot;no&quot;:&quot;Fysikk&quot;,&quot;se&quot;:&quot;Fysik&quot;},&quot;categoryFullName&quot;:{&quot;en&quot;:&quot;The Nobel Prize in Physics&quot;,&quot;no&quot;:&quot;Nobelprisen i fysikk&quot;,&quot;se&quot;:&quot;Nobelpriset i fysik&quot;},&quot;dateAwarded&quot;:&quot;1912-11-12&quot;,&quot;prizeAmount&quot;:140476,&quot;prizeAmountAdjusted&quot;:8540220,&quot;links&quot;:[{&quot;rel&quot;:&quot;nobelPrize&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/nobelPrize/phy/1912&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}],&quot;laureates&quot;:[{&quot;id&quot;:&quot;17&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Gustaf Dalén&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Nils Gustaf Dalén&quot;},&quot;portion&quot;:&quot;1&quot;,&quot;sortOrder&quot;:&quot;1&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;for his invention of automatic regulators for use in conjunction with gas accumulators for illuminating lighthouses and buoys&quot;,&quot;se&quot;:&quot;för hans uppfinningar av självverkande regulatorer att i kombination med gasaccumulatorer användas till belysning av fyrar och lysbojar&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/17&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]}]},{&quot;awardYear&quot;:&quot;1913&quot;,&quot;category&quot;:{&quot;en&quot;:&quot;Physics&quot;,&quot;no&quot;:&quot;Fysikk&quot;,&quot;se&quot;:&quot;Fysik&quot;},&quot;categoryFullName&quot;:{&quot;en&quot;:&quot;The Nobel Prize in Physics&quot;,&quot;no&quot;:&quot;Nobelprisen i fysikk&quot;,&quot;se&quot;:&quot;Nobelpriset i fysik&quot;},&quot;dateAwarded&quot;:&quot;1913-11-11&quot;,&quot;prizeAmount&quot;:143010,&quot;prizeAmountAdjusted&quot;:8694275,&quot;links&quot;:[{&quot;rel&quot;:&quot;nobelPrize&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/nobelPrize/phy/1913&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}],&quot;laureates&quot;:[{&quot;id&quot;:&quot;18&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Heike Kamerlingh Onnes&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Heike Kamerlingh Onnes&quot;},&quot;portion&quot;:&quot;1&quot;,&quot;sortOrder&quot;:&quot;1&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;for his investigations on the properties of matter at low temperatures which led, inter alia, to the production of liquid helium&quot;,&quot;se&quot;:&quot;i anledning av hans undersökningar över kroppars egenskaper vid låga temperaturer, vilka bland annat lett till framställningen av flytande helium&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/18&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]}]},{&quot;awardYear&quot;:&quot;1914&quot;,&quot;category&quot;:{&quot;en&quot;:&quot;Physics&quot;,&quot;no&quot;:&quot;Fysikk&quot;,&quot;se&quot;:&quot;Fysik&quot;},&quot;categoryFullName&quot;:{&quot;en&quot;:&quot;The Nobel Prize in Physics&quot;,&quot;no&quot;:&quot;Nobelprisen i fysikk&quot;,&quot;se&quot;:&quot;Nobelpriset i fysik&quot;},&quot;dateAwarded&quot;:&quot;1915-11-11&quot;,&quot;prizeAmount&quot;:146900,&quot;prizeAmountAdjusted&quot;:8930767,&quot;links&quot;:[{&quot;rel&quot;:&quot;nobelPrize&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/nobelPrize/phy/1914&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}],&quot;laureates&quot;:[{&quot;id&quot;:&quot;19&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Max von Laue&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Max von Laue&quot;},&quot;portion&quot;:&quot;1&quot;,&quot;sortOrder&quot;:&quot;1&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;for his discovery of the diffraction of X-rays by crystals&quot;,&quot;se&quot;:&quot;för hans upptäckt av röntgenstrålarnas diffraktion i kristaller&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/19&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]}]},{&quot;awardYear&quot;:&quot;1915&quot;,&quot;category&quot;:{&quot;en&quot;:&quot;Physics&quot;,&quot;no&quot;:&quot;Fysikk&quot;,&quot;se&quot;:&quot;Fysik&quot;},&quot;categoryFullName&quot;:{&quot;en&quot;:&quot;The Nobel Prize in Physics&quot;,&quot;no&quot;:&quot;Nobelprisen i fysikk&quot;,&quot;se&quot;:&quot;Nobelpriset i fysik&quot;},&quot;dateAwarded&quot;:&quot;1915-11-12&quot;,&quot;prizeAmount&quot;:149223,&quot;prizeAmountAdjusted&quot;:7862394,&quot;links&quot;:[{&quot;rel&quot;:&quot;nobelPrize&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/nobelPrize/phy/1915&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}],&quot;laureates&quot;:[{&quot;id&quot;:&quot;20&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;William Bragg&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Sir William Henry Bragg&quot;},&quot;portion&quot;:&quot;1/2&quot;,&quot;sortOrder&quot;:&quot;1&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;for their services in the analysis of crystal structure by means of X-rays&quot;,&quot;se&quot;:&quot;för deras förtjänster om utforskandet av kristallstrukturer medelst röntgenstrålar&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/20&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]},{&quot;id&quot;:&quot;21&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Lawrence Bragg&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;William Lawrence Bragg&quot;},&quot;portion&quot;:&quot;1/2&quot;,&quot;sortOrder&quot;:&quot;2&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;for their services in the analysis of crystal structure by means of X-rays&quot;,&quot;se&quot;:&quot;för deras förtjänster om utforskandet av kristallstrukturer medelst röntgenstrålar&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/21&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]}]},{&quot;awardYear&quot;:&quot;1916&quot;,&quot;category&quot;:{&quot;en&quot;:&quot;Physics&quot;,&quot;no&quot;:&quot;Fysikk&quot;,&quot;se&quot;:&quot;Fysik&quot;},&quot;categoryFullName&quot;:{&quot;en&quot;:&quot;The Nobel Prize in Physics&quot;,&quot;no&quot;:&quot;Nobelprisen i fysikk&quot;,&quot;se&quot;:&quot;Nobelpriset i fysik&quot;},&quot;dateAwarded&quot;:&quot;1916-10-01&quot;,&quot;topMotivation&quot;:{&quot;en&quot;:&quot;No Nobel Prize was awarded this year. The prize money was allocated to the Special Fund of this prize section.&quot;},&quot;prizeAmount&quot;:131793,&quot;prizeAmountAdjusted&quot;:6127082,&quot;links&quot;:[{&quot;rel&quot;:&quot;nobelPrize&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/nobelPrize/phy/1916&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]},{&quot;awardYear&quot;:&quot;1917&quot;,&quot;category&quot;:{&quot;en&quot;:&quot;Physics&quot;,&quot;no&quot;:&quot;Fysikk&quot;,&quot;se&quot;:&quot;Fysik&quot;},&quot;categoryFullName&quot;:{&quot;en&quot;:&quot;The Nobel Prize in Physics&quot;,&quot;no&quot;:&quot;Nobelprisen i fysikk&quot;,&quot;se&quot;:&quot;Nobelpriset i fysik&quot;},&quot;dateAwarded&quot;:&quot;1918-11-12&quot;,&quot;prizeAmount&quot;:133823,&quot;prizeAmountAdjusted&quot;:4957724,&quot;links&quot;:[{&quot;rel&quot;:&quot;nobelPrize&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/nobelPrize/phy/1917&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}],&quot;laureates&quot;:[{&quot;id&quot;:&quot;22&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Charles Glover Barkla&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Charles Glover Barkla&quot;},&quot;portion&quot;:&quot;1&quot;,&quot;sortOrder&quot;:&quot;1&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;for his discovery of the characteristic R&amp;ouml;ntgen radiation of the elements&quot;,&quot;se&quot;:&quot;för hans upptäckt av den karakteristiska röntgenstrålningen hos elementen&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/22&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]}]},{&quot;awardYear&quot;:&quot;1918&quot;,&quot;category&quot;:{&quot;en&quot;:&quot;Physics&quot;,&quot;no&quot;:&quot;Fysikk&quot;,&quot;se&quot;:&quot;Fysik&quot;},&quot;categoryFullName&quot;:{&quot;en&quot;:&quot;The Nobel Prize in Physics&quot;,&quot;no&quot;:&quot;Nobelprisen i fysikk&quot;,&quot;se&quot;:&quot;Nobelpriset i fysik&quot;},&quot;dateAwarded&quot;:&quot;1919-11-13&quot;,&quot;prizeAmount&quot;:138198,&quot;prizeAmountAdjusted&quot;:3600741,&quot;links&quot;:[{&quot;rel&quot;:&quot;nobelPrize&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/nobelPrize/phy/1918&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}],&quot;laureates&quot;:[{&quot;id&quot;:&quot;23&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Max Planck&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Max Karl Ernst Ludwig Planck&quot;},&quot;portion&quot;:&quot;1&quot;,&quot;sortOrder&quot;:&quot;1&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;in recognition of the services he rendered to the advancement of Physics by his discovery of energy quanta&quot;,&quot;se&quot;:&quot;såsom ett erkännande av den förtjänst han genom upptäckten av elementarkvanta inlagt om fysikens utveckling&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/23&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]}]},{&quot;awardYear&quot;:&quot;1919&quot;,&quot;category&quot;:{&quot;en&quot;:&quot;Physics&quot;,&quot;no&quot;:&quot;Fysikk&quot;,&quot;se&quot;:&quot;Fysik&quot;},&quot;categoryFullName&quot;:{&quot;en&quot;:&quot;The Nobel Prize in Physics&quot;,&quot;no&quot;:&quot;Nobelprisen i fysikk&quot;,&quot;se&quot;:&quot;Nobelpriset i fysik&quot;},&quot;dateAwarded&quot;:&quot;1919-11-13&quot;,&quot;prizeAmount&quot;:133127,&quot;prizeAmountAdjusted&quot;:3006134,&quot;links&quot;:[{&quot;rel&quot;:&quot;nobelPrize&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/nobelPrize/phy/1919&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}],&quot;laureates&quot;:[{&quot;id&quot;:&quot;24&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Johannes Stark&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Johannes Stark&quot;},&quot;portion&quot;:&quot;1&quot;,&quot;sortOrder&quot;:&quot;1&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;for his discovery of the Doppler effect in canal rays and the splitting of spectral lines in electric fields&quot;,&quot;se&quot;:&quot;för hans upptäckt av dopplereffekten hos kanalstrålar och av spektrallinjers uppdelning i elektriska fält&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/24&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]}]},{&quot;awardYear&quot;:&quot;1920&quot;,&quot;category&quot;:{&quot;en&quot;:&quot;Physics&quot;,&quot;no&quot;:&quot;Fysikk&quot;,&quot;se&quot;:&quot;Fysik&quot;},&quot;categoryFullName&quot;:{&quot;en&quot;:&quot;The Nobel Prize in Physics&quot;,&quot;no&quot;:&quot;Nobelprisen i fysikk&quot;,&quot;se&quot;:&quot;Nobelpriset i fysik&quot;},&quot;dateAwarded&quot;:&quot;1920-11-11&quot;,&quot;prizeAmount&quot;:134100,&quot;prizeAmountAdjusted&quot;:3028106,&quot;links&quot;:[{&quot;rel&quot;:&quot;nobelPrize&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/nobelPrize/phy/1920&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}],&quot;laureates&quot;:[{&quot;id&quot;:&quot;25&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Charles Edouard Guillaume&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Charles Edouard Guillaume&quot;},&quot;portion&quot;:&quot;1&quot;,&quot;sortOrder&quot;:&quot;1&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;in recognition of the service he has rendered to precision measurements in Physics by his discovery of anomalies in nickel steel alloys&quot;,&quot;se&quot;:&quot;såsom ett erkännande av den förtjänst han genom upptäckten av nickelstållegeringarnas anomalier inlagt om precisionsfysiken&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/25&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]}]},{&quot;awardYear&quot;:&quot;1921&quot;,&quot;category&quot;:{&quot;en&quot;:&quot;Physics&quot;,&quot;no&quot;:&quot;Fysikk&quot;,&quot;se&quot;:&quot;Fysik&quot;},&quot;categoryFullName&quot;:{&quot;en&quot;:&quot;The Nobel Prize in Physics&quot;,&quot;no&quot;:&quot;Nobelprisen i fysikk&quot;,&quot;se&quot;:&quot;Nobelpriset i fysik&quot;},&quot;dateAwarded&quot;:&quot;1922-11-09&quot;,&quot;prizeAmount&quot;:121573,&quot;prizeAmountAdjusted&quot;:3202773,&quot;links&quot;:[{&quot;rel&quot;:&quot;nobelPrize&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/nobelPrize/phy/1921&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}],&quot;laureates&quot;:[{&quot;id&quot;:&quot;26&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Albert Einstein&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Albert Einstein&quot;},&quot;portion&quot;:&quot;1&quot;,&quot;sortOrder&quot;:&quot;1&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;for his services to Theoretical Physics, and especially for his discovery of the law of the photoelectric effect&quot;,&quot;se&quot;:&quot;för hans förtjänster om den teoretiska fysiken, särskilt hans upptäckt av lagen för den fotoelektriska effekten&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/26&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]}]},{&quot;awardYear&quot;:&quot;1922&quot;,&quot;category&quot;:{&quot;en&quot;:&quot;Physics&quot;,&quot;no&quot;:&quot;Fysikk&quot;,&quot;se&quot;:&quot;Fysik&quot;},&quot;categoryFullName&quot;:{&quot;en&quot;:&quot;The Nobel Prize in Physics&quot;,&quot;no&quot;:&quot;Nobelprisen i fysikk&quot;,&quot;se&quot;:&quot;Nobelpriset i fysik&quot;},&quot;dateAwarded&quot;:&quot;1922-11-09&quot;,&quot;prizeAmount&quot;:122483,&quot;prizeAmountAdjusted&quot;:3978181,&quot;links&quot;:[{&quot;rel&quot;:&quot;nobelPrize&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/nobelPrize/phy/1922&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}],&quot;laureates&quot;:[{&quot;id&quot;:&quot;27&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Niels Bohr&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Niels Henrik David Bohr&quot;},&quot;portion&quot;:&quot;1&quot;,&quot;sortOrder&quot;:&quot;1&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;for his services in the investigation of the structure of atoms and of the radiation emanating from them&quot;,&quot;se&quot;:&quot;för hans förtjänster om utforskandet av atomernas struktur och den från dem utgående strålningen&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/27&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]}]},{&quot;awardYear&quot;:&quot;1923&quot;,&quot;category&quot;:{&quot;en&quot;:&quot;Physics&quot;,&quot;no&quot;:&quot;Fysikk&quot;,&quot;se&quot;:&quot;Fysik&quot;},&quot;categoryFullName&quot;:{&quot;en&quot;:&quot;The Nobel Prize in Physics&quot;,&quot;no&quot;:&quot;Nobelprisen i fysikk&quot;,&quot;se&quot;:&quot;Nobelpriset i fysik&quot;},&quot;dateAwarded&quot;:&quot;1923-11-13&quot;,&quot;prizeAmount&quot;:114935,&quot;prizeAmountAdjusted&quot;:4007513,&quot;links&quot;:[{&quot;rel&quot;:&quot;nobelPrize&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/nobelPrize/phy/1923&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}],&quot;laureates&quot;:[{&quot;id&quot;:&quot;28&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Robert A. Millikan&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Robert Andrews Millikan&quot;},&quot;portion&quot;:&quot;1&quot;,&quot;sortOrder&quot;:&quot;1&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;for his work on the elementary charge of electricity and on the photoelectric effect&quot;,&quot;se&quot;:&quot;för hans arbeten rörande den elektriska enhetsladdningen samt den fotoelektriska effekten&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/28&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]}]},{&quot;awardYear&quot;:&quot;1924&quot;,&quot;category&quot;:{&quot;en&quot;:&quot;Physics&quot;,&quot;no&quot;:&quot;Fysikk&quot;,&quot;se&quot;:&quot;Fysik&quot;},&quot;categoryFullName&quot;:{&quot;en&quot;:&quot;The Nobel Prize in Physics&quot;,&quot;no&quot;:&quot;Nobelprisen i fysikk&quot;,&quot;se&quot;:&quot;Nobelpriset i fysik&quot;},&quot;dateAwarded&quot;:&quot;1925-11-12&quot;,&quot;prizeAmount&quot;:116719,&quot;prizeAmountAdjusted&quot;:4069717,&quot;links&quot;:[{&quot;rel&quot;:&quot;nobelPrize&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/nobelPrize/phy/1924&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}],&quot;laureates&quot;:[{&quot;id&quot;:&quot;29&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Manne Siegbahn&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Karl Manne Georg Siegbahn&quot;},&quot;portion&quot;:&quot;1&quot;,&quot;sortOrder&quot;:&quot;1&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;for his discoveries and research in the field of X-ray spectroscopy&quot;,&quot;se&quot;:&quot;för hans röntgenspektroskopiska upptäckter och forskningar&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/29&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]}]},{&quot;awardYear&quot;:&quot;1925&quot;,&quot;category&quot;:{&quot;en&quot;:&quot;Physics&quot;,&quot;no&quot;:&quot;Fysikk&quot;,&quot;se&quot;:&quot;Fysik&quot;},&quot;categoryFullName&quot;:{&quot;en&quot;:&quot;The Nobel Prize in Physics&quot;,&quot;no&quot;:&quot;Nobelprisen i fysikk&quot;,&quot;se&quot;:&quot;Nobelpriset i fysik&quot;},&quot;dateAwarded&quot;:&quot;1926-11-11&quot;,&quot;prizeAmount&quot;:118165,&quot;prizeAmountAdjusted&quot;:4060423,&quot;links&quot;:[{&quot;rel&quot;:&quot;nobelPrize&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/nobelPrize/phy/1925&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}],&quot;laureates&quot;:[{&quot;id&quot;:&quot;30&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;James Franck&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;James Franck&quot;},&quot;portion&quot;:&quot;1/2&quot;,&quot;sortOrder&quot;:&quot;1&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;for their discovery of the laws governing the impact of an electron upon an atom&quot;,&quot;se&quot;:&quot;med anledning av deras upptäckt av lagarna för stöten mellan en elektron och en atom&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/30&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]},{&quot;id&quot;:&quot;31&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Gustav Hertz&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Gustav Ludwig Hertz&quot;},&quot;portion&quot;:&quot;1/2&quot;,&quot;sortOrder&quot;:&quot;2&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;for their discovery of the laws governing the impact of an electron upon an atom&quot;,&quot;se&quot;:&quot;med anledning av deras upptäckt av lagarna för stöten mellan en elektron och en atom&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/31&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]}]}]
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.58">
+      <div class="step-ref failed">58</div>
+      
+      <div class="step-cell failed">
+        <span>Then</span>&nbsp;<span>status 422</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="2.58">09:52:19.268 src/test/java/org/springframework/api_tests/ApisNobel/nobelPrize_category_year_get.feature:58
+Then status 422
+status code was: 200, expected: 422, response time in milliseconds: 44, url: https://api.nobelprize.org/2.1/nobelPrize/phy/1800, response: 
+[{&quot;awardYear&quot;:&quot;1901&quot;,&quot;category&quot;:{&quot;en&quot;:&quot;Physics&quot;,&quot;no&quot;:&quot;Fysikk&quot;,&quot;se&quot;:&quot;Fysik&quot;},&quot;categoryFullName&quot;:{&quot;en&quot;:&quot;The Nobel Prize in Physics&quot;,&quot;no&quot;:&quot;Nobelprisen i fysikk&quot;,&quot;se&quot;:&quot;Nobelpriset i fysik&quot;},&quot;dateAwarded&quot;:&quot;1901-11-12&quot;,&quot;prizeAmount&quot;:150782,&quot;prizeAmountAdjusted&quot;:10833458,&quot;links&quot;:[{&quot;rel&quot;:&quot;nobelPrize&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/nobelPrize/phy/1901&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}],&quot;laureates&quot;:[{&quot;id&quot;:&quot;1&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Wilhelm Conrad Röntgen&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Wilhelm Conrad Röntgen&quot;},&quot;portion&quot;:&quot;1&quot;,&quot;sortOrder&quot;:&quot;1&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;in recognition of the extraordinary services he has rendered by the discovery of the remarkable rays subsequently named after him&quot;,&quot;se&quot;:&quot;såsom ett erkännande av den utomordentliga förtjänst han inlagt genom upptäckten av de egendomliga strålar, som sedermera uppkallats efter honom&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/1&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]}],&quot;meta&quot;:{&quot;terms&quot;:&quot;https://www.nobelprize.org/about/terms-of-use-for-api-nobelprize-org-and-data-nobelprize-org/&quot;,&quot;license&quot;:&quot;https://www.nobelprize.org/about/terms-of-use-for-api-nobelprize-org-and-data-nobelprize-org/#licence&quot;,&quot;disclaimer&quot;:&quot;https://www.nobelprize.org/about/terms-of-use-for-api-nobelprize-org-and-data-nobelprize-org/#disclaimer&quot;}},{&quot;awardYear&quot;:&quot;1902&quot;,&quot;category&quot;:{&quot;en&quot;:&quot;Physics&quot;,&quot;no&quot;:&quot;Fysikk&quot;,&quot;se&quot;:&quot;Fysik&quot;},&quot;categoryFullName&quot;:{&quot;en&quot;:&quot;The Nobel Prize in Physics&quot;,&quot;no&quot;:&quot;Nobelprisen i fysikk&quot;,&quot;se&quot;:&quot;Nobelpriset i fysik&quot;},&quot;dateAwarded&quot;:&quot;1902-11-11&quot;,&quot;prizeAmount&quot;:141847,&quot;prizeAmountAdjusted&quot;:10191492,&quot;links&quot;:[{&quot;rel&quot;:&quot;nobelPrize&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/nobelPrize/phy/1902&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}],&quot;laureates&quot;:[{&quot;id&quot;:&quot;2&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Hendrik A. Lorentz&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Hendrik Antoon Lorentz&quot;},&quot;portion&quot;:&quot;1/2&quot;,&quot;sortOrder&quot;:&quot;1&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;in recognition of the extraordinary service they rendered by their researches into the influence of magnetism upon radiation phenomena&quot;,&quot;se&quot;:&quot;såsom ett erkännande av den utomordentliga förtjänst de inlagt genom sina undersökningar över magnetismens inflytande på strålningsfenomenen&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/2&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]},{&quot;id&quot;:&quot;3&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Pieter Zeeman&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Pieter Zeeman&quot;},&quot;portion&quot;:&quot;1/2&quot;,&quot;sortOrder&quot;:&quot;2&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;in recognition of the extraordinary service they rendered by their researches into the influence of magnetism upon radiation phenomena&quot;,&quot;se&quot;:&quot;såsom ett erkännande av den utomordentliga förtjänst de inlagt genom sina undersökningar över magnetismens inflytande på strålningsfenomenen&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/3&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]}]},{&quot;awardYear&quot;:&quot;1903&quot;,&quot;category&quot;:{&quot;en&quot;:&quot;Physics&quot;,&quot;no&quot;:&quot;Fysikk&quot;,&quot;se&quot;:&quot;Fysik&quot;},&quot;categoryFullName&quot;:{&quot;en&quot;:&quot;The Nobel Prize in Physics&quot;,&quot;no&quot;:&quot;Nobelprisen i fysikk&quot;,&quot;se&quot;:&quot;Nobelpriset i fysik&quot;},&quot;dateAwarded&quot;:&quot;1903-11-12&quot;,&quot;prizeAmount&quot;:141358,&quot;prizeAmountAdjusted&quot;:9857642,&quot;links&quot;:[{&quot;rel&quot;:&quot;nobelPrize&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/nobelPrize/phy/1903&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}],&quot;laureates&quot;:[{&quot;id&quot;:&quot;4&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Henri Becquerel&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Antoine Henri Becquerel&quot;},&quot;portion&quot;:&quot;1/2&quot;,&quot;sortOrder&quot;:&quot;1&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;in recognition of the extraordinary services he has rendered by his discovery of spontaneous radioactivity&quot;,&quot;se&quot;:&quot;såsom ett erkännande av den utomordentliga förtjänst han inlagt genom upptäckten av den spontana radioaktiviteten&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/4&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]},{&quot;id&quot;:&quot;5&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Pierre Curie&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Pierre Curie&quot;},&quot;portion&quot;:&quot;1/4&quot;,&quot;sortOrder&quot;:&quot;2&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;in recognition of the extraordinary services they have rendered by their joint researches on the radiation phenomena discovered by Professor Henri Becquerel&quot;,&quot;se&quot;:&quot;såsom ett erkännande av den utomordentliga förtjänst de inlagt genom sina gemensamt utförda arbeten rörande de av Professor Henri Becquerel upptäckta strålningsfenomenen&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/5&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]},{&quot;id&quot;:&quot;6&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Marie Curie&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Marie Curie, née Skłodowska&quot;},&quot;portion&quot;:&quot;1/4&quot;,&quot;sortOrder&quot;:&quot;3&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;in recognition of the extraordinary services they have rendered by their joint researches on the radiation phenomena discovered by Professor Henri Becquerel&quot;,&quot;se&quot;:&quot;såsom ett erkännande av den utomordentliga förtjänst de inlagt genom sina gemensamt utförda arbeten rörande de av Professor Henri Becquerel upptäckta strålningsfenomenen&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/6&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]}]},{&quot;awardYear&quot;:&quot;1904&quot;,&quot;category&quot;:{&quot;en&quot;:&quot;Physics&quot;,&quot;no&quot;:&quot;Fysikk&quot;,&quot;se&quot;:&quot;Fysik&quot;},&quot;categoryFullName&quot;:{&quot;en&quot;:&quot;The Nobel Prize in Physics&quot;,&quot;no&quot;:&quot;Nobelprisen i fysikk&quot;,&quot;se&quot;:&quot;Nobelpriset i fysik&quot;},&quot;dateAwarded&quot;:&quot;1904-11-08&quot;,&quot;prizeAmount&quot;:140859,&quot;prizeAmountAdjusted&quot;:9822844,&quot;links&quot;:[{&quot;rel&quot;:&quot;nobelPrize&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/nobelPrize/phy/1904&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}],&quot;laureates&quot;:[{&quot;id&quot;:&quot;8&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Lord Rayleigh&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Lord Rayleigh (John William Strutt)&quot;},&quot;portion&quot;:&quot;1&quot;,&quot;sortOrder&quot;:&quot;1&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;for his investigations of the densities of the most important gases and for his discovery of argon in connection with these studies&quot;,&quot;se&quot;:&quot;för hans undersökningar rörande de viktigaste gasernas täthet samt hans i sammanhang med dessa undersökningar gjorda upptäckt av argon&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/8&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]}]},{&quot;awardYear&quot;:&quot;1905&quot;,&quot;category&quot;:{&quot;en&quot;:&quot;Physics&quot;,&quot;no&quot;:&quot;Fysikk&quot;,&quot;se&quot;:&quot;Fysik&quot;},&quot;categoryFullName&quot;:{&quot;en&quot;:&quot;The Nobel Prize in Physics&quot;,&quot;no&quot;:&quot;Nobelprisen i fysikk&quot;,&quot;se&quot;:&quot;Nobelpriset i fysik&quot;},&quot;dateAwarded&quot;:&quot;1905-11-09&quot;,&quot;prizeAmount&quot;:138089,&quot;prizeAmountAdjusted&quot;:9629677,&quot;links&quot;:[{&quot;rel&quot;:&quot;nobelPrize&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/nobelPrize/phy/1905&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}],&quot;laureates&quot;:[{&quot;id&quot;:&quot;9&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Philipp Lenard&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Philipp Eduard Anton von Lenard&quot;},&quot;portion&quot;:&quot;1&quot;,&quot;sortOrder&quot;:&quot;1&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;for his work on cathode rays&quot;,&quot;se&quot;:&quot;för hans arbeten över katodstrålarna&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/9&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]}]},{&quot;awardYear&quot;:&quot;1906&quot;,&quot;category&quot;:{&quot;en&quot;:&quot;Physics&quot;,&quot;no&quot;:&quot;Fysikk&quot;,&quot;se&quot;:&quot;Fysik&quot;},&quot;categoryFullName&quot;:{&quot;en&quot;:&quot;The Nobel Prize in Physics&quot;,&quot;no&quot;:&quot;Nobelprisen i fysikk&quot;,&quot;se&quot;:&quot;Nobelpriset i fysik&quot;},&quot;dateAwarded&quot;:&quot;1906-11-12&quot;,&quot;prizeAmount&quot;:138536,&quot;prizeAmountAdjusted&quot;:9384824,&quot;links&quot;:[{&quot;rel&quot;:&quot;nobelPrize&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/nobelPrize/phy/1906&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}],&quot;laureates&quot;:[{&quot;id&quot;:&quot;10&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;J.J. Thomson&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Joseph John Thomson&quot;},&quot;portion&quot;:&quot;1&quot;,&quot;sortOrder&quot;:&quot;1&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;in recognition of the great merits of his theoretical and experimental investigations on the conduction of electricity by gases&quot;,&quot;se&quot;:&quot;såsom ett erkännande av den stora förtjänst han inlagt genom sina teoretiska och experimentella undersökningar över elektricitetens gång genom gaser&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/10&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]}]},{&quot;awardYear&quot;:&quot;1907&quot;,&quot;category&quot;:{&quot;en&quot;:&quot;Physics&quot;,&quot;no&quot;:&quot;Fysikk&quot;,&quot;se&quot;:&quot;Fysik&quot;},&quot;categoryFullName&quot;:{&quot;en&quot;:&quot;The Nobel Prize in Physics&quot;,&quot;no&quot;:&quot;Nobelprisen i fysikk&quot;,&quot;se&quot;:&quot;Nobelpriset i fysik&quot;},&quot;dateAwarded&quot;:&quot;1907-11-12&quot;,&quot;prizeAmount&quot;:138796,&quot;prizeAmountAdjusted&quot;:8894198,&quot;links&quot;:[{&quot;rel&quot;:&quot;nobelPrize&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/nobelPrize/phy/1907&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}],&quot;laureates&quot;:[{&quot;id&quot;:&quot;11&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Albert A. Michelson&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Albert Abraham Michelson&quot;},&quot;portion&quot;:&quot;1&quot;,&quot;sortOrder&quot;:&quot;1&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;for his optical precision instruments and the spectroscopic and metrological investigations carried out with their aid&quot;,&quot;se&quot;:&quot;för hans optiska precisionsinstrument och hans därmed utförda spektroskopiska och metrologiska undersökningar&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/11&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]}]},{&quot;awardYear&quot;:&quot;1908&quot;,&quot;category&quot;:{&quot;en&quot;:&quot;Physics&quot;,&quot;no&quot;:&quot;Fysikk&quot;,&quot;se&quot;:&quot;Fysik&quot;},&quot;categoryFullName&quot;:{&quot;en&quot;:&quot;The Nobel Prize in Physics&quot;,&quot;no&quot;:&quot;Nobelprisen i fysikk&quot;,&quot;se&quot;:&quot;Nobelpriset i fysik&quot;},&quot;dateAwarded&quot;:&quot;1908-11-10&quot;,&quot;prizeAmount&quot;:139800,&quot;prizeAmountAdjusted&quot;:8958535,&quot;links&quot;:[{&quot;rel&quot;:&quot;nobelPrize&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/nobelPrize/phy/1908&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}],&quot;laureates&quot;:[{&quot;id&quot;:&quot;12&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Gabriel Lippmann&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Gabriel Lippmann&quot;},&quot;portion&quot;:&quot;1&quot;,&quot;sortOrder&quot;:&quot;1&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;for his method of reproducing colours photographically based on the phenomenon of interference&quot;,&quot;se&quot;:&quot;för hans på interferensfenomenet grundade metod att fotografiskt återgiva färger&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/12&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]}]},{&quot;awardYear&quot;:&quot;1909&quot;,&quot;category&quot;:{&quot;en&quot;:&quot;Physics&quot;,&quot;no&quot;:&quot;Fysikk&quot;,&quot;se&quot;:&quot;Fysik&quot;},&quot;categoryFullName&quot;:{&quot;en&quot;:&quot;The Nobel Prize in Physics&quot;,&quot;no&quot;:&quot;Nobelprisen i fysikk&quot;,&quot;se&quot;:&quot;Nobelpriset i fysik&quot;},&quot;dateAwarded&quot;:&quot;1909-11-09&quot;,&quot;prizeAmount&quot;:139800,&quot;prizeAmountAdjusted&quot;:8958535,&quot;links&quot;:[{&quot;rel&quot;:&quot;nobelPrize&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/nobelPrize/phy/1909&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}],&quot;laureates&quot;:[{&quot;id&quot;:&quot;13&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Guglielmo Marconi&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Guglielmo Marconi&quot;},&quot;portion&quot;:&quot;1/2&quot;,&quot;sortOrder&quot;:&quot;1&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;in recognition of their contributions to the development of wireless telegraphy&quot;,&quot;se&quot;:&quot;såsom ett erkännande av deras förtjänster om den trådlösa telegrafiens utveckling&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/13&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]},{&quot;id&quot;:&quot;14&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Ferdinand Braun&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Karl Ferdinand Braun&quot;},&quot;portion&quot;:&quot;1/2&quot;,&quot;sortOrder&quot;:&quot;2&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;in recognition of their contributions to the development of wireless telegraphy&quot;,&quot;se&quot;:&quot;såsom ett erkännande av deras förtjänster om den trådlösa telegrafiens utveckling&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/14&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]}]},{&quot;awardYear&quot;:&quot;1910&quot;,&quot;category&quot;:{&quot;en&quot;:&quot;Physics&quot;,&quot;no&quot;:&quot;Fysikk&quot;,&quot;se&quot;:&quot;Fysik&quot;},&quot;categoryFullName&quot;:{&quot;en&quot;:&quot;The Nobel Prize in Physics&quot;,&quot;no&quot;:&quot;Nobelprisen i fysikk&quot;,&quot;se&quot;:&quot;Nobelpriset i fysik&quot;},&quot;dateAwarded&quot;:&quot;1910-11-05&quot;,&quot;prizeAmount&quot;:140703,&quot;prizeAmountAdjusted&quot;:9016400,&quot;links&quot;:[{&quot;rel&quot;:&quot;nobelPrize&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/nobelPrize/phy/1910&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}],&quot;laureates&quot;:[{&quot;id&quot;:&quot;15&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Johannes Diderik van der Waals&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Johannes Diderik van der Waals&quot;},&quot;portion&quot;:&quot;1&quot;,&quot;sortOrder&quot;:&quot;1&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;for his work on the equation of state for gases and liquids&quot;,&quot;se&quot;:&quot;för hans arbeten angående gasers och vätskors tillståndsekvation&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/15&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]}]},{&quot;awardYear&quot;:&quot;1911&quot;,&quot;category&quot;:{&quot;en&quot;:&quot;Physics&quot;,&quot;no&quot;:&quot;Fysikk&quot;,&quot;se&quot;:&quot;Fysik&quot;},&quot;categoryFullName&quot;:{&quot;en&quot;:&quot;The Nobel Prize in Physics&quot;,&quot;no&quot;:&quot;Nobelprisen i fysikk&quot;,&quot;se&quot;:&quot;Nobelpriset i fysik&quot;},&quot;dateAwarded&quot;:&quot;1911-11-07&quot;,&quot;prizeAmount&quot;:140695,&quot;prizeAmountAdjusted&quot;:9266329,&quot;links&quot;:[{&quot;rel&quot;:&quot;nobelPrize&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/nobelPrize/phy/1911&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}],&quot;laureates&quot;:[{&quot;id&quot;:&quot;16&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Wilhelm Wien&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Wilhelm Wien&quot;},&quot;portion&quot;:&quot;1&quot;,&quot;sortOrder&quot;:&quot;1&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;for his discoveries regarding the laws governing the radiation of heat&quot;,&quot;se&quot;:&quot;för hans upptäckter angående värmestrålningens lagar&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/16&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]}]},{&quot;awardYear&quot;:&quot;1912&quot;,&quot;category&quot;:{&quot;en&quot;:&quot;Physics&quot;,&quot;no&quot;:&quot;Fysikk&quot;,&quot;se&quot;:&quot;Fysik&quot;},&quot;categoryFullName&quot;:{&quot;en&quot;:&quot;The Nobel Prize in Physics&quot;,&quot;no&quot;:&quot;Nobelprisen i fysikk&quot;,&quot;se&quot;:&quot;Nobelpriset i fysik&quot;},&quot;dateAwarded&quot;:&quot;1912-11-12&quot;,&quot;prizeAmount&quot;:140476,&quot;prizeAmountAdjusted&quot;:8540220,&quot;links&quot;:[{&quot;rel&quot;:&quot;nobelPrize&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/nobelPrize/phy/1912&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}],&quot;laureates&quot;:[{&quot;id&quot;:&quot;17&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Gustaf Dalén&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Nils Gustaf Dalén&quot;},&quot;portion&quot;:&quot;1&quot;,&quot;sortOrder&quot;:&quot;1&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;for his invention of automatic regulators for use in conjunction with gas accumulators for illuminating lighthouses and buoys&quot;,&quot;se&quot;:&quot;för hans uppfinningar av självverkande regulatorer att i kombination med gasaccumulatorer användas till belysning av fyrar och lysbojar&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/17&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]}]},{&quot;awardYear&quot;:&quot;1913&quot;,&quot;category&quot;:{&quot;en&quot;:&quot;Physics&quot;,&quot;no&quot;:&quot;Fysikk&quot;,&quot;se&quot;:&quot;Fysik&quot;},&quot;categoryFullName&quot;:{&quot;en&quot;:&quot;The Nobel Prize in Physics&quot;,&quot;no&quot;:&quot;Nobelprisen i fysikk&quot;,&quot;se&quot;:&quot;Nobelpriset i fysik&quot;},&quot;dateAwarded&quot;:&quot;1913-11-11&quot;,&quot;prizeAmount&quot;:143010,&quot;prizeAmountAdjusted&quot;:8694275,&quot;links&quot;:[{&quot;rel&quot;:&quot;nobelPrize&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/nobelPrize/phy/1913&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}],&quot;laureates&quot;:[{&quot;id&quot;:&quot;18&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Heike Kamerlingh Onnes&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Heike Kamerlingh Onnes&quot;},&quot;portion&quot;:&quot;1&quot;,&quot;sortOrder&quot;:&quot;1&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;for his investigations on the properties of matter at low temperatures which led, inter alia, to the production of liquid helium&quot;,&quot;se&quot;:&quot;i anledning av hans undersökningar över kroppars egenskaper vid låga temperaturer, vilka bland annat lett till framställningen av flytande helium&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/18&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]}]},{&quot;awardYear&quot;:&quot;1914&quot;,&quot;category&quot;:{&quot;en&quot;:&quot;Physics&quot;,&quot;no&quot;:&quot;Fysikk&quot;,&quot;se&quot;:&quot;Fysik&quot;},&quot;categoryFullName&quot;:{&quot;en&quot;:&quot;The Nobel Prize in Physics&quot;,&quot;no&quot;:&quot;Nobelprisen i fysikk&quot;,&quot;se&quot;:&quot;Nobelpriset i fysik&quot;},&quot;dateAwarded&quot;:&quot;1915-11-11&quot;,&quot;prizeAmount&quot;:146900,&quot;prizeAmountAdjusted&quot;:8930767,&quot;links&quot;:[{&quot;rel&quot;:&quot;nobelPrize&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/nobelPrize/phy/1914&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}],&quot;laureates&quot;:[{&quot;id&quot;:&quot;19&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Max von Laue&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Max von Laue&quot;},&quot;portion&quot;:&quot;1&quot;,&quot;sortOrder&quot;:&quot;1&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;for his discovery of the diffraction of X-rays by crystals&quot;,&quot;se&quot;:&quot;för hans upptäckt av röntgenstrålarnas diffraktion i kristaller&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/19&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]}]},{&quot;awardYear&quot;:&quot;1915&quot;,&quot;category&quot;:{&quot;en&quot;:&quot;Physics&quot;,&quot;no&quot;:&quot;Fysikk&quot;,&quot;se&quot;:&quot;Fysik&quot;},&quot;categoryFullName&quot;:{&quot;en&quot;:&quot;The Nobel Prize in Physics&quot;,&quot;no&quot;:&quot;Nobelprisen i fysikk&quot;,&quot;se&quot;:&quot;Nobelpriset i fysik&quot;},&quot;dateAwarded&quot;:&quot;1915-11-12&quot;,&quot;prizeAmount&quot;:149223,&quot;prizeAmountAdjusted&quot;:7862394,&quot;links&quot;:[{&quot;rel&quot;:&quot;nobelPrize&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/nobelPrize/phy/1915&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}],&quot;laureates&quot;:[{&quot;id&quot;:&quot;20&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;William Bragg&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Sir William Henry Bragg&quot;},&quot;portion&quot;:&quot;1/2&quot;,&quot;sortOrder&quot;:&quot;1&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;for their services in the analysis of crystal structure by means of X-rays&quot;,&quot;se&quot;:&quot;för deras förtjänster om utforskandet av kristallstrukturer medelst röntgenstrålar&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/20&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]},{&quot;id&quot;:&quot;21&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Lawrence Bragg&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;William Lawrence Bragg&quot;},&quot;portion&quot;:&quot;1/2&quot;,&quot;sortOrder&quot;:&quot;2&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;for their services in the analysis of crystal structure by means of X-rays&quot;,&quot;se&quot;:&quot;för deras förtjänster om utforskandet av kristallstrukturer medelst röntgenstrålar&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/21&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]}]},{&quot;awardYear&quot;:&quot;1916&quot;,&quot;category&quot;:{&quot;en&quot;:&quot;Physics&quot;,&quot;no&quot;:&quot;Fysikk&quot;,&quot;se&quot;:&quot;Fysik&quot;},&quot;categoryFullName&quot;:{&quot;en&quot;:&quot;The Nobel Prize in Physics&quot;,&quot;no&quot;:&quot;Nobelprisen i fysikk&quot;,&quot;se&quot;:&quot;Nobelpriset i fysik&quot;},&quot;dateAwarded&quot;:&quot;1916-10-01&quot;,&quot;topMotivation&quot;:{&quot;en&quot;:&quot;No Nobel Prize was awarded this year. The prize money was allocated to the Special Fund of this prize section.&quot;},&quot;prizeAmount&quot;:131793,&quot;prizeAmountAdjusted&quot;:6127082,&quot;links&quot;:[{&quot;rel&quot;:&quot;nobelPrize&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/nobelPrize/phy/1916&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]},{&quot;awardYear&quot;:&quot;1917&quot;,&quot;category&quot;:{&quot;en&quot;:&quot;Physics&quot;,&quot;no&quot;:&quot;Fysikk&quot;,&quot;se&quot;:&quot;Fysik&quot;},&quot;categoryFullName&quot;:{&quot;en&quot;:&quot;The Nobel Prize in Physics&quot;,&quot;no&quot;:&quot;Nobelprisen i fysikk&quot;,&quot;se&quot;:&quot;Nobelpriset i fysik&quot;},&quot;dateAwarded&quot;:&quot;1918-11-12&quot;,&quot;prizeAmount&quot;:133823,&quot;prizeAmountAdjusted&quot;:4957724,&quot;links&quot;:[{&quot;rel&quot;:&quot;nobelPrize&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/nobelPrize/phy/1917&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}],&quot;laureates&quot;:[{&quot;id&quot;:&quot;22&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Charles Glover Barkla&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Charles Glover Barkla&quot;},&quot;portion&quot;:&quot;1&quot;,&quot;sortOrder&quot;:&quot;1&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;for his discovery of the characteristic R&amp;ouml;ntgen radiation of the elements&quot;,&quot;se&quot;:&quot;för hans upptäckt av den karakteristiska röntgenstrålningen hos elementen&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/22&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]}]},{&quot;awardYear&quot;:&quot;1918&quot;,&quot;category&quot;:{&quot;en&quot;:&quot;Physics&quot;,&quot;no&quot;:&quot;Fysikk&quot;,&quot;se&quot;:&quot;Fysik&quot;},&quot;categoryFullName&quot;:{&quot;en&quot;:&quot;The Nobel Prize in Physics&quot;,&quot;no&quot;:&quot;Nobelprisen i fysikk&quot;,&quot;se&quot;:&quot;Nobelpriset i fysik&quot;},&quot;dateAwarded&quot;:&quot;1919-11-13&quot;,&quot;prizeAmount&quot;:138198,&quot;prizeAmountAdjusted&quot;:3600741,&quot;links&quot;:[{&quot;rel&quot;:&quot;nobelPrize&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/nobelPrize/phy/1918&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}],&quot;laureates&quot;:[{&quot;id&quot;:&quot;23&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Max Planck&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Max Karl Ernst Ludwig Planck&quot;},&quot;portion&quot;:&quot;1&quot;,&quot;sortOrder&quot;:&quot;1&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;in recognition of the services he rendered to the advancement of Physics by his discovery of energy quanta&quot;,&quot;se&quot;:&quot;såsom ett erkännande av den förtjänst han genom upptäckten av elementarkvanta inlagt om fysikens utveckling&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/23&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]}]},{&quot;awardYear&quot;:&quot;1919&quot;,&quot;category&quot;:{&quot;en&quot;:&quot;Physics&quot;,&quot;no&quot;:&quot;Fysikk&quot;,&quot;se&quot;:&quot;Fysik&quot;},&quot;categoryFullName&quot;:{&quot;en&quot;:&quot;The Nobel Prize in Physics&quot;,&quot;no&quot;:&quot;Nobelprisen i fysikk&quot;,&quot;se&quot;:&quot;Nobelpriset i fysik&quot;},&quot;dateAwarded&quot;:&quot;1919-11-13&quot;,&quot;prizeAmount&quot;:133127,&quot;prizeAmountAdjusted&quot;:3006134,&quot;links&quot;:[{&quot;rel&quot;:&quot;nobelPrize&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/nobelPrize/phy/1919&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}],&quot;laureates&quot;:[{&quot;id&quot;:&quot;24&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Johannes Stark&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Johannes Stark&quot;},&quot;portion&quot;:&quot;1&quot;,&quot;sortOrder&quot;:&quot;1&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;for his discovery of the Doppler effect in canal rays and the splitting of spectral lines in electric fields&quot;,&quot;se&quot;:&quot;för hans upptäckt av dopplereffekten hos kanalstrålar och av spektrallinjers uppdelning i elektriska fält&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/24&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]}]},{&quot;awardYear&quot;:&quot;1920&quot;,&quot;category&quot;:{&quot;en&quot;:&quot;Physics&quot;,&quot;no&quot;:&quot;Fysikk&quot;,&quot;se&quot;:&quot;Fysik&quot;},&quot;categoryFullName&quot;:{&quot;en&quot;:&quot;The Nobel Prize in Physics&quot;,&quot;no&quot;:&quot;Nobelprisen i fysikk&quot;,&quot;se&quot;:&quot;Nobelpriset i fysik&quot;},&quot;dateAwarded&quot;:&quot;1920-11-11&quot;,&quot;prizeAmount&quot;:134100,&quot;prizeAmountAdjusted&quot;:3028106,&quot;links&quot;:[{&quot;rel&quot;:&quot;nobelPrize&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/nobelPrize/phy/1920&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}],&quot;laureates&quot;:[{&quot;id&quot;:&quot;25&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Charles Edouard Guillaume&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Charles Edouard Guillaume&quot;},&quot;portion&quot;:&quot;1&quot;,&quot;sortOrder&quot;:&quot;1&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;in recognition of the service he has rendered to precision measurements in Physics by his discovery of anomalies in nickel steel alloys&quot;,&quot;se&quot;:&quot;såsom ett erkännande av den förtjänst han genom upptäckten av nickelstållegeringarnas anomalier inlagt om precisionsfysiken&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/25&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]}]},{&quot;awardYear&quot;:&quot;1921&quot;,&quot;category&quot;:{&quot;en&quot;:&quot;Physics&quot;,&quot;no&quot;:&quot;Fysikk&quot;,&quot;se&quot;:&quot;Fysik&quot;},&quot;categoryFullName&quot;:{&quot;en&quot;:&quot;The Nobel Prize in Physics&quot;,&quot;no&quot;:&quot;Nobelprisen i fysikk&quot;,&quot;se&quot;:&quot;Nobelpriset i fysik&quot;},&quot;dateAwarded&quot;:&quot;1922-11-09&quot;,&quot;prizeAmount&quot;:121573,&quot;prizeAmountAdjusted&quot;:3202773,&quot;links&quot;:[{&quot;rel&quot;:&quot;nobelPrize&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/nobelPrize/phy/1921&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}],&quot;laureates&quot;:[{&quot;id&quot;:&quot;26&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Albert Einstein&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Albert Einstein&quot;},&quot;portion&quot;:&quot;1&quot;,&quot;sortOrder&quot;:&quot;1&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;for his services to Theoretical Physics, and especially for his discovery of the law of the photoelectric effect&quot;,&quot;se&quot;:&quot;för hans förtjänster om den teoretiska fysiken, särskilt hans upptäckt av lagen för den fotoelektriska effekten&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/26&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]}]},{&quot;awardYear&quot;:&quot;1922&quot;,&quot;category&quot;:{&quot;en&quot;:&quot;Physics&quot;,&quot;no&quot;:&quot;Fysikk&quot;,&quot;se&quot;:&quot;Fysik&quot;},&quot;categoryFullName&quot;:{&quot;en&quot;:&quot;The Nobel Prize in Physics&quot;,&quot;no&quot;:&quot;Nobelprisen i fysikk&quot;,&quot;se&quot;:&quot;Nobelpriset i fysik&quot;},&quot;dateAwarded&quot;:&quot;1922-11-09&quot;,&quot;prizeAmount&quot;:122483,&quot;prizeAmountAdjusted&quot;:3978181,&quot;links&quot;:[{&quot;rel&quot;:&quot;nobelPrize&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/nobelPrize/phy/1922&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}],&quot;laureates&quot;:[{&quot;id&quot;:&quot;27&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Niels Bohr&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Niels Henrik David Bohr&quot;},&quot;portion&quot;:&quot;1&quot;,&quot;sortOrder&quot;:&quot;1&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;for his services in the investigation of the structure of atoms and of the radiation emanating from them&quot;,&quot;se&quot;:&quot;för hans förtjänster om utforskandet av atomernas struktur och den från dem utgående strålningen&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/27&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]}]},{&quot;awardYear&quot;:&quot;1923&quot;,&quot;category&quot;:{&quot;en&quot;:&quot;Physics&quot;,&quot;no&quot;:&quot;Fysikk&quot;,&quot;se&quot;:&quot;Fysik&quot;},&quot;categoryFullName&quot;:{&quot;en&quot;:&quot;The Nobel Prize in Physics&quot;,&quot;no&quot;:&quot;Nobelprisen i fysikk&quot;,&quot;se&quot;:&quot;Nobelpriset i fysik&quot;},&quot;dateAwarded&quot;:&quot;1923-11-13&quot;,&quot;prizeAmount&quot;:114935,&quot;prizeAmountAdjusted&quot;:4007513,&quot;links&quot;:[{&quot;rel&quot;:&quot;nobelPrize&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/nobelPrize/phy/1923&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}],&quot;laureates&quot;:[{&quot;id&quot;:&quot;28&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Robert A. Millikan&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Robert Andrews Millikan&quot;},&quot;portion&quot;:&quot;1&quot;,&quot;sortOrder&quot;:&quot;1&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;for his work on the elementary charge of electricity and on the photoelectric effect&quot;,&quot;se&quot;:&quot;för hans arbeten rörande den elektriska enhetsladdningen samt den fotoelektriska effekten&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/28&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]}]},{&quot;awardYear&quot;:&quot;1924&quot;,&quot;category&quot;:{&quot;en&quot;:&quot;Physics&quot;,&quot;no&quot;:&quot;Fysikk&quot;,&quot;se&quot;:&quot;Fysik&quot;},&quot;categoryFullName&quot;:{&quot;en&quot;:&quot;The Nobel Prize in Physics&quot;,&quot;no&quot;:&quot;Nobelprisen i fysikk&quot;,&quot;se&quot;:&quot;Nobelpriset i fysik&quot;},&quot;dateAwarded&quot;:&quot;1925-11-12&quot;,&quot;prizeAmount&quot;:116719,&quot;prizeAmountAdjusted&quot;:4069717,&quot;links&quot;:[{&quot;rel&quot;:&quot;nobelPrize&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/nobelPrize/phy/1924&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}],&quot;laureates&quot;:[{&quot;id&quot;:&quot;29&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Manne Siegbahn&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Karl Manne Georg Siegbahn&quot;},&quot;portion&quot;:&quot;1&quot;,&quot;sortOrder&quot;:&quot;1&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;for his discoveries and research in the field of X-ray spectroscopy&quot;,&quot;se&quot;:&quot;för hans röntgenspektroskopiska upptäckter och forskningar&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/29&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]}]},{&quot;awardYear&quot;:&quot;1925&quot;,&quot;category&quot;:{&quot;en&quot;:&quot;Physics&quot;,&quot;no&quot;:&quot;Fysikk&quot;,&quot;se&quot;:&quot;Fysik&quot;},&quot;categoryFullName&quot;:{&quot;en&quot;:&quot;The Nobel Prize in Physics&quot;,&quot;no&quot;:&quot;Nobelprisen i fysikk&quot;,&quot;se&quot;:&quot;Nobelpriset i fysik&quot;},&quot;dateAwarded&quot;:&quot;1926-11-11&quot;,&quot;prizeAmount&quot;:118165,&quot;prizeAmountAdjusted&quot;:4060423,&quot;links&quot;:[{&quot;rel&quot;:&quot;nobelPrize&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/nobelPrize/phy/1925&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}],&quot;laureates&quot;:[{&quot;id&quot;:&quot;30&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;James Franck&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;James Franck&quot;},&quot;portion&quot;:&quot;1/2&quot;,&quot;sortOrder&quot;:&quot;1&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;for their discovery of the laws governing the impact of an electron upon an atom&quot;,&quot;se&quot;:&quot;med anledning av deras upptäckt av lagarna för stöten mellan en elektron och en atom&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/30&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]},{&quot;id&quot;:&quot;31&quot;,&quot;knownName&quot;:{&quot;en&quot;:&quot;Gustav Hertz&quot;},&quot;fullName&quot;:{&quot;en&quot;:&quot;Gustav Ludwig Hertz&quot;},&quot;portion&quot;:&quot;1/2&quot;,&quot;sortOrder&quot;:&quot;2&quot;,&quot;motivation&quot;:{&quot;en&quot;:&quot;for their discovery of the laws governing the impact of an electron upon an atom&quot;,&quot;se&quot;:&quot;med anledning av deras upptäckt av lagarna för stöten mellan en elektron och en atom&quot;},&quot;links&quot;:[{&quot;rel&quot;:&quot;laureate&quot;,&quot;href&quot;:&quot;https://api.nobelprize.org/2/laureate/31&quot;,&quot;action&quot;:&quot;GET&quot;,&quot;types&quot;:&quot;application/json&quot;}]}]}]
+src/test/java/org/springframework/api_tests/ApisNobel/nobelPrize_category_year_get.feature:58
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.59">
+      <div class="step-ref skipped">59</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response == &#39;#object&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.60">
+      <div class="step-ref skipped">60</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.code == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.61">
+      <div class="step-ref skipped">61</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.message == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[2.3:67]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[2.3:67]</span>
+                <span class="scenario-name">Test Invalid Category or Year</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>33</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[2.3:67]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[2.3:67]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def urlBase = karate.properties[&#39;API_HOST&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.3:67]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url urlBase</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.56">
+      <div class="step-ref passed">56</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;2.1/nobelPrize&#39;, &#39;med&#39;, &#39;2025&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.57">
+      <div class="step-ref passed">57</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method GET</span>
+      </div>
+    </div>
+    <div class="time-cell passed">32</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="3.57">09:52:19.272 request:
+1 &gt; GET https://api.nobelprize.org/2.1/nobelPrize/med/2025
+1 &gt; Host: api.nobelprize.org
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.7)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+09:52:19.303 response time in milliseconds: 31
+1 &lt; 200
+1 &lt; Date: Thu, 03 Jul 2025 09:52:19 GMT
+1 &lt; Content-Type: application/json
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Connection: keep-alive
+1 &lt; access-control-allow-headers: X-Requested-With, Content-Type, Accept, Origin, Authorization
+1 &lt; access-control-allow-methods: GET
+1 &lt; access-control-allow-origin: *
+1 &lt; Cache-Control: public, max-age=60
+1 &lt; expires: Thu, 03 Jul 2025 09:53:19 GMT
+1 &lt; pragma: no-cache
+1 &lt; x-powered-by: PHP/8.2.28
+1 &lt; Last-Modified: Thu, 03 Jul 2025 09:48:25 GMT
+1 &lt; CF-Cache-Status: HIT
+1 &lt; Vary: Accept-Encoding
+1 &lt; Server: cloudflare
+1 &lt; CF-RAY: 95957d486ede26a7-BOM
+1 &lt; alt-svc: h3=&quot;:443&quot;; ma=86400
+[{&quot;meta&quot;:{&quot;terms&quot;:&quot;https://www.nobelprize.org/about/terms-of-use-for-api-nobelprize-org-and-data-nobelprize-org/&quot;,&quot;license&quot;:&quot;https://www.nobelprize.org/about/terms-of-use-for-api-nobelprize-org-and-data-nobelprize-org/#licence&quot;,&quot;disclaimer&quot;:&quot;https://www.nobelprize.org/about/terms-of-use-for-api-nobelprize-org-and-data-nobelprize-org/#disclaimer&quot;}}]
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.58">
+      <div class="step-ref failed">58</div>
+      
+      <div class="step-cell failed">
+        <span>Then</span>&nbsp;<span>status 400</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="3.58">09:52:19.304 src/test/java/org/springframework/api_tests/ApisNobel/nobelPrize_category_year_get.feature:58
+Then status 400
+status code was: 200, expected: 400, response time in milliseconds: 31, url: https://api.nobelprize.org/2.1/nobelPrize/med/2025, response: 
+[{&quot;meta&quot;:{&quot;terms&quot;:&quot;https://www.nobelprize.org/about/terms-of-use-for-api-nobelprize-org-and-data-nobelprize-org/&quot;,&quot;license&quot;:&quot;https://www.nobelprize.org/about/terms-of-use-for-api-nobelprize-org-and-data-nobelprize-org/#licence&quot;,&quot;disclaimer&quot;:&quot;https://www.nobelprize.org/about/terms-of-use-for-api-nobelprize-org-and-data-nobelprize-org/#disclaimer&quot;}}]
+src/test/java/org/springframework/api_tests/ApisNobel/nobelPrize_category_year_get.feature:58
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.59">
+      <div class="step-ref skipped">59</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response == &#39;#object&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.60">
+      <div class="step-ref skipped">60</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.code == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.61">
+      <div class="step-ref skipped">61</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.message == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
