@@ -1,0 +1,2 @@
+requestBody,authorization,koreUserId,botId,accountId
+"{}","Bearer token","user123","bot456","account789"

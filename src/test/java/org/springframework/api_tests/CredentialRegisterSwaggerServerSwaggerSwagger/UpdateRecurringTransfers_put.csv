@@ -1,0 +1,2 @@
+customerId,paymentId,sourceAccountId,targetAccountId,scheduledDate,amountType,iterate,numberOfTransfers,updateTransferType
+"1045304",744,"1042347","1043699","1617148800000","Fixed","Weekly","3","Next"

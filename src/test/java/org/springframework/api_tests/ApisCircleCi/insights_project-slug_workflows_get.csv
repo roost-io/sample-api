@@ -1,0 +1,3 @@
+project-slug,page-token,all-branches,branch,reporting-window
+"gh/CircleCI-Public/api-preview-docs","","true","","last-90-days"
+"gh/CircleCI-Public/api-preview-docs","","false","main","last-30-days"

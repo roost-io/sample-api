@@ -1,0 +1,3 @@
+customerId,email,secondaryEmail,subscribe
+"1045300","John@gmail.com","John1@gmail.com","true"
+"1045301","Jane@gmail.com","Jane1@gmail.com","false"

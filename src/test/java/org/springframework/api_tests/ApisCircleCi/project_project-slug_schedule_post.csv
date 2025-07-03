@@ -1,0 +1,2 @@
+project-slug,name,timetable,attribution-actor,parameters,description
+"gh/CircleCI-Public/api-preview-docs","Test Schedule","{""per-hour"":5,""hours-of-day"":[9,15],""days-of-week"":[""MON"",""WED""],""months"":[""JAN"",""JUL""]}","current","{""deploy_prod"":true,""branch"":""feature/design-new-api""}","Test description"

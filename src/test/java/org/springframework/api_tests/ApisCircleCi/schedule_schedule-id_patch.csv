@@ -1,0 +1,2 @@
+schedule-id,description,name,per-hour,hours-of-day,days-of-week,days-of-month,months,attribution-actor,parameters
+123,"Test Desc","Test","5","[9,15]","[MON, FRI]","[1,15]","[JAN, JUL]","current","{""deploy_prod"":true,""branch"":""feature/design-new-api""}"

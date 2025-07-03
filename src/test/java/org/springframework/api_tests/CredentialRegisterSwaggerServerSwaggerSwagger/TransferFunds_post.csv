@@ -1,0 +1,2 @@
+amount,currency,customerId,date,sourceAccountId,targetAccountId,description,TransactionType,PaymentType
+"3","USD","1045300",3,"1042345","1042222","Internal Transfer","1063","Minimum Payment"
