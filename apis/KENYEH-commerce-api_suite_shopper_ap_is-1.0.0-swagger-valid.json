@@ -1035,19 +1035,19 @@
         "tags" : [ "Payment-Options" ],
         "summary" : "Get the shopper payment option",
         "description" : "Get a payment option by the ID specified in the URI path parameter.\n",
-        "parameters" : [ {
-          "name" : "token",
-          "in" : "query",
-          "description" : "Provide the authorized token for a shopper.",
-          "required" : false,
-          "schema" : {
-            "type" : "string"
-          }
-        }, {
+        "parameters" : [{
           "in" : "path",
           "name" : "paymentOptionId",
           "description" : "Payment Option ID.",
           "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "token",
+          "in" : "query",
+          "description" : "Provide the authorized token for a shopper.",
+          "required" : false,
           "schema" : {
             "type" : "string"
           }
