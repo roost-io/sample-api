@@ -1,0 +1,4 @@
+envVarName,envVarValue
+"POSTGRES_USER","some-secret-value"
+"API_KEY","api-key-12345"
+"DEBUG_MODE","true"
