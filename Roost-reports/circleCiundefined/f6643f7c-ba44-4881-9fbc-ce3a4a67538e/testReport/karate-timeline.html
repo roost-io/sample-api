@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="res/vis.min.js"></script>
+    <link href="res/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"main","id":1}];
+var items = [{"id":1,"group":1,"content":"src\/test\/java\/org\/springframework\/api_tests\/CircleCi\/pipeline_pipeline-id_config_get[1.1:31]","start":1751539082547,"end":1751539082686,"title":"src\/test\/java\/org\/springframework\/api_tests\/CircleCi\/pipeline_pipeline-id_config_get[1.1:31] 10:38:02.547-10:38:02.686 Validate the pipeline configuration retrieval by pipeline ID","className":"failed"},{"id":2,"group":1,"content":"src\/test\/java\/org\/springframework\/api_tests\/CircleCi\/pipeline_pipeline-id_config_get[1.2:32]","start":1751539082696,"end":1751539082698,"title":"src\/test\/java\/org\/springframework\/api_tests\/CircleCi\/pipeline_pipeline-id_config_get[1.2:32] 10:38:02.696-10:38:02.698 Validate the pipeline configuration retrieval by pipeline ID","className":"failed"},{"id":3,"group":1,"content":"src\/test\/java\/org\/springframework\/api_tests\/CircleCi\/pipeline_pipeline-id_config_get[1.3:33]","start":1751539082705,"end":1751539082707,"title":"src\/test\/java\/org\/springframework\/api_tests\/CircleCi\/pipeline_pipeline-id_config_get[1.3:33] 10:38:02.705-10:38:02.707 Validate the pipeline configuration retrieval by pipeline ID","className":"failed"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>
