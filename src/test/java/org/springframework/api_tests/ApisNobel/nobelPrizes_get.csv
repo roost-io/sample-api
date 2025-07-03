@@ -1,0 +1,3 @@
+offset,limit,sort,nobelPrizeYear,yearTo,nobelPrizeCategory,format,csvLang
+"0","10","asc","2020","2021","eco","json","en"
+"5","5","desc","2019","2020","phy","csv","se"
