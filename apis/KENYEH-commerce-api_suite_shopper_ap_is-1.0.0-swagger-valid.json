@@ -3086,8 +3086,8 @@
             "type" : "string"
           }
         }, {
-          "name" : "offerId",
           "in" : "path",
+          "name" : "offerId",
           "description" : "Provide the offer's identifier to limit the response to the products that are eligible for the offer.",
           "required" : true,
           "schema" : {
