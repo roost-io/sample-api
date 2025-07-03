@@ -8,7 +8,7 @@
       "backgroundColor" : "#FFFFFF",
       "altText" : "Digital River logo"
     },
-    "version" : "3.0.0"
+    "version" : "1.0.26"
   },
   "servers" : [ {
     "url" : "https://api.digitalriver.com"
