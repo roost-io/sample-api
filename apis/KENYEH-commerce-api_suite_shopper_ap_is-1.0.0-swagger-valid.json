@@ -2429,8 +2429,8 @@
             "type" : "string"
           }
         }, {
-          "name" : "productOfferId",
           "in" : "path",
+          "name" : "productOfferId",
           "description" : "Provide the product identifer. You must use the productId parameter with the offerId parameter. When you use these two parameters together, only the specified product appears in the response. You can only provide one product identifier. Multiple product identifiers are not supported.",
           "required" : true,
           "schema" : {
