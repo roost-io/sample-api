@@ -1,0 +1,3 @@
+id,username,firstName,lastName,email,password,phone,userStatus
+"1",`user1`,`John`,`Doe`,`john.doe@xyz.com`,`pass123`,"1234567890","1"
+"2",`user2`,`Jane`,`Smith`,`jane.smith@xyz.com`,`pass456`,987654321,"2"
