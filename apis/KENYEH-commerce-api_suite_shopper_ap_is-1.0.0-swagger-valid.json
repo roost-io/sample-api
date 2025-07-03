@@ -1030,14 +1030,14 @@
         }
       }
     },
-    "/v1/shoppers/me/payment-options/{paymentOptionId}" : {
+    "/v1/shoppers/me/payment-options/{paymentOptionID}" : {
       "get" : {
         "tags" : [ "Payment-Options" ],
         "summary" : "Get the shopper payment option",
         "description" : "Get a payment option by the ID specified in the URI path parameter.\n",
         "parameters" : [{
           "in" : "path",
-          "name" : "paymentOptionId",
+          "name" : "paymentOptionID",
           "description" : "Payment Option ID.",
           "required" : true,
           "schema" : {
