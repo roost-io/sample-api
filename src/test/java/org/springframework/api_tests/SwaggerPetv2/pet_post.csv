@@ -1,0 +1,4 @@
+id,category,name,photoUrls,tags,status
+"1","{""id"":1,""name"":""Dogs""}",`doggie`,"[""http://example.com/photo1.jpg""]","[{""id"":1,""name"":""friendly""}]",`available`
+"2","{""id"":2,""name"":""Cats""}",`kitty`,"[""http://example.com/photo2.jpg"",""http://example.com/photo3.jpg""]","[{""id"":2,""name"":""playful""},{""id"":3,""name"":""cute""}]",`pending`
+"null","null",`birdie`,"[""http://example.com/photo4.jpg""]","null",`sold`
