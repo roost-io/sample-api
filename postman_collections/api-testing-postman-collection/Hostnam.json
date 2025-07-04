@@ -1,0 +1,27 @@
+[
+  {
+    "hostname": "072-229-028-185.res.spectrum.com",
+    "statusCode": 200,
+    "scenario": "200 OK – Hostname"
+  },
+  {
+    "hostname": "198.51.100.1.example.invalid",
+    "statusCode": 400,
+    "scenario": "Bad Request"
+  },
+  {
+    "hostname": "203.0.113.0.fake.invalid",
+    "statusCode": 500,
+    "scenario": "Internal Server Error"
+  },
+  {
+    "hostname": "192.0.2.255.invalid",
+    "statusCode": 404,
+    "scenario": "Not Found"
+  },
+  {
+    "hostname": "072-229-028-185.res.spectrum.com",
+    "statusCode": 201,
+    "scenario": "200 OK – Hostname"
+  }
+]
