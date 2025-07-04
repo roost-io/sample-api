@@ -1,0 +1,6 @@
+id,username,userStatus
+"501",`statususer1`,"0"
+"502",`statususer2`,"1"
+"503",`statususer3`,"2"
+"504",`statususer4`,"-1"
+"505",`statususer5`,"999"
