@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="res/vis.min.js"></script>
+    <link href="res/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"main","id":1}];
+var items = [{"id":1,"group":1,"content":"src\/test\/java\/org\/springframework\/api_tests\/SlackapiSlackApiSpecsRefsHeadsMasterWebApiSlackWebOpenapiV2\/team.info_get[1.1:39]","start":1751877122868,"end":1751877123537,"title":"src\/test\/java\/org\/springframework\/api_tests\/SlackapiSlackApiSpecsRefsHeadsMasterWebApiSlackWebOpenapiV2\/team.info_get[1.1:39] 08:32:02.868-08:32:03.537 Fetch team information with valid parameters","className":"failed"},{"id":2,"group":1,"content":"src\/test\/java\/org\/springframework\/api_tests\/SlackapiSlackApiSpecsRefsHeadsMasterWebApiSlackWebOpenapiV2\/team.info_get[1.2:39]","start":1751877123548,"end":1751877123787,"title":"src\/test\/java\/org\/springframework\/api_tests\/SlackapiSlackApiSpecsRefsHeadsMasterWebApiSlackWebOpenapiV2\/team.info_get[1.2:39] 08:32:03.548-08:32:03.787 Fetch team information with valid parameters","className":"failed"},{"id":3,"group":1,"content":"src\/test\/java\/org\/springframework\/api_tests\/SlackapiSlackApiSpecsRefsHeadsMasterWebApiSlackWebOpenapiV2\/team.info_get[2.1:51]","start":1751877123794,"end":1751877124029,"title":"src\/test\/java\/org\/springframework\/api_tests\/SlackapiSlackApiSpecsRefsHeadsMasterWebApiSlackWebOpenapiV2\/team.info_get[2.1:51] 08:32:03.794-08:32:04.029 Fetch team information with missing token","className":"failed"},{"id":4,"group":1,"content":"src\/test\/java\/org\/springframework\/api_tests\/SlackapiSlackApiSpecsRefsHeadsMasterWebApiSlackWebOpenapiV2\/team.info_get[2.2:52]","start":1751877124035,"end":1751877124051,"title":"src\/test\/java\/org\/springframework\/api_tests\/SlackapiSlackApiSpecsRefsHeadsMasterWebApiSlackWebOpenapiV2\/team.info_get[2.2:52] 08:32:04.035-08:32:04.051 Fetch team information with missing token","className":"failed"},{"id":5,"group":1,"content":"src\/test\/java\/org\/springframework\/api_tests\/SlackapiSlackApiSpecsRefsHeadsMasterWebApiSlackWebOpenapiV2\/team.info_get[3.1:65]","start":1751877124057,"end":1751877124058,"title":"src\/test\/java\/org\/springframework\/api_tests\/SlackapiSlackApiSpecsRefsHeadsMasterWebApiSlackWebOpenapiV2\/team.info_get[3.1:65] 08:32:04.057-08:32:04.058 Fetch team information with invalid token","className":"failed"},{"id":6,"group":1,"content":"src\/test\/java\/org\/springframework\/api_tests\/SlackapiSlackApiSpecsRefsHeadsMasterWebApiSlackWebOpenapiV2\/team.info_get[3.2:66]","start":1751877124064,"end":1751877124066,"title":"src\/test\/java\/org\/springframework\/api_tests\/SlackapiSlackApiSpecsRefsHeadsMasterWebApiSlackWebOpenapiV2\/team.info_get[3.2:66] 08:32:04.064-08:32:04.066 Fetch team information with invalid token","className":"failed"},{"id":7,"group":1,"content":"src\/test\/java\/org\/springframework\/api_tests\/SlackapiSlackApiSpecsRefsHeadsMasterWebApiSlackWebOpenapiV2\/team.info_get[4.1:79]","start":1751877124071,"end":1751877124073,"title":"src\/test\/java\/org\/springframework\/api_tests\/SlackapiSlackApiSpecsRefsHeadsMasterWebApiSlackWebOpenapiV2\/team.info_get[4.1:79] 08:32:04.071-08:32:04.073 Fetch team information for a team not accessible by the token","className":"failed"},{"id":8,"group":1,"content":"src\/test\/java\/org\/springframework\/api_tests\/SlackapiSlackApiSpecsRefsHeadsMasterWebApiSlackWebOpenapiV2\/team.info_get[5:81]","start":1751877124078,"end":1751877124327,"title":"src\/test\/java\/org\/springframework\/api_tests\/SlackapiSlackApiSpecsRefsHeadsMasterWebApiSlackWebOpenapiV2\/team.info_get[5:81] 08:32:04.078-08:32:04.327 Fetch team information with default team ID when team param is omitted","className":"failed"},{"id":9,"group":1,"content":"src\/test\/java\/org\/springframework\/api_tests\/SlackapiSlackApiSpecsRefsHeadsMasterWebApiSlackWebOpenapiV2\/team.info_get[6:99]","start":1751877124332,"end":1751877124563,"title":"src\/test\/java\/org\/springframework\/api_tests\/SlackapiSlackApiSpecsRefsHeadsMasterWebApiSlackWebOpenapiV2\/team.info_get[6:99] 08:32:04.332-08:32:04.563 Validate error response for unexpected query parameter","className":"failed"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>
