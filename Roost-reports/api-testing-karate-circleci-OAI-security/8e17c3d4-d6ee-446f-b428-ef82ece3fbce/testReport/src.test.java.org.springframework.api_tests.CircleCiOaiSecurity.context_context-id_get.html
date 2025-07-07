@@ -1,0 +1,1567 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="res/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="res/karate-report.css" type="text/css"/>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <script type="text/javascript" src="res/jquery.min.js"></script>
+    <script type="text/javascript" src="res/jquery.tablesorter.min.js"></script>
+    <script type="text/javascript" src="res/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="res/bootstrap.min.js"></script>
+    <script type="text/javascript" src="res/karate-report.js"></script>
+    <script type="text/javascript" src="res/Resemble.js"></script>
+    <script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
+  api_host:'https://app.posthog.com',
+  persistence:'localStorage',
+  autocapture:false,
+  capture_pageview:false,
+  api_transport:'sendBeacon',
+  loaded: function(posthog) { 
+    posthog.capture("report_feature",{distinct_id:"98089eba-7a94-4dde-9bc0-f93adb25c334",karate_version:"1.5.1",karate_meta:null});
+  }
+});
+</script>
+
+    <title>src.test.java.org.springframework.api_tests.CircleCiOaiSecurity.context_context-id_get</title>
+  </head>
+  <body>
+    <div id="root-container">
+      <div id="leftnav">
+        
+        <div>
+  <div class="nav-logo">
+    <a href="https://karatelabs.io">
+      <img src="karate-labs-logo-ring.svg" alt="Karate Labs"/>
+    </a>
+    <div class="nav-count">
+      <div id="nav-pass" class="bg-success">2</div>
+      <div id="nav-fail" class="bg-danger">3</div>
+    </div>
+  </div>
+  <div id="nav-env">
+    <div></div>
+  </div>
+  <div id="nav-type">
+    <div>Scenarios</div>
+  </div>
+  <div id="nav-date">
+    <div>2025-07-07 11:13:18 AM</div>
+  </div>
+</div>
+
+        <div class="nav-container">
+          <div class="nav-item failed">
+            <a href="#[1.1:29]"><span>[1.1:29]</span> <span>Validate GET /context/{context-id} endpoint with valid inputs</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[1.2:30]"><span>[1.2:30]</span> <span>Validate GET /context/{context-id} endpoint with valid inputs</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[2.1:41]"><span>[2.1:41]</span> <span>Validate GET /context/{context-id} with invalid inputs</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[2.2:42]"><span>[2.2:42]</span> <span>Validate GET /context/{context-id} with invalid inputs</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[3:44]"><span>[3:44]</span> <span>Validate response headers for GET /context/{context-id}</span></a>
+          </div>
+        </div>
+      </div>
+      <div id="content">
+        <div class="page-heading alert alert-primary">
+          <a href="karate-summary.html">Summary</a><span class="feature-label">|</span>
+          <a href="karate-tags.html">Tags</a><span class="feature-label">|</span>
+          <span class="feature-label">Feature:</span>
+          <span class="feature-path">src/test/java/org/springframework/api_tests/CircleCiOaiSecurity/context_context-id_get.feature</span><span class="feature-label">|</span>
+          <span class="feature-name">Validations for the Context API endpoint</span>
+          <span class="feature-description"></span>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1.1:29]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1.1:29]</span>
+                <span class="scenario-name">Validate GET /context/{context-id} endpoint with valid inputs</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>947</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[1.1:29]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[1.1:29]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def urlBase = karate.properties[&#39;API_HOST_URL&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">129</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.1:29]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url urlBase</span>
+      </div>
+    </div>
+    <div class="time-cell passed">7</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.18">
+      <div class="step-ref passed">18</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;context&#39;, &#39;123e4567-e89b-12d3-a456-426614174000&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">8</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.19">
+      <div class="step-ref passed">19</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>param circle-token = karate.properties[&#39;circle-token&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">6</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.20">
+      <div class="step-ref passed">20</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method GET</span>
+      </div>
+    </div>
+    <div class="time-cell passed">786</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.20">11:13:17.354 request:
+1 &gt; GET https://circleci.com/api/v1.1/context/123e4567-e89b-12d3-a456-426614174000
+1 &gt; Host: circleci.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.7)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+11:13:17.868 response time in milliseconds: 509
+1 &lt; 404
+1 &lt; Content-Type: text/plain;charset=utf-8
+1 &lt; Content-Length: 29
+1 &lt; Connection: keep-alive
+1 &lt; Date: Mon, 07 Jul 2025 11:13:17 GMT
+1 &lt; Vary: Origin
+1 &lt; X-Frame-Options: DENY
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; X-Ratelimit-Reset: 0
+1 &lt; x-request-id: ad3463f3-756b-4dc7-8754-adfb2684d734
+1 &lt; X-Ratelimit-Remaining: 50
+1 &lt; X-Ratelimit-Limit: 51
+1 &lt; Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+1 &lt; Feature-Policy: autoplay &#39;none&#39;; camera &#39;none&#39;
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; X-XSS-Protection: 1; mode=block
+1 &lt; X-Cache: Error from cloudfront
+1 &lt; Via: 1.1 473a7327891bdce42eed5ffe7062b9f6.cloudfront.net (CloudFront)
+1 &lt; X-Amz-Cf-Pop: BOM78-P9
+1 &lt; X-Amz-Cf-Id: V_5DCJiNfQVBI6ATx1bw4-4c1HlKUi5Feby7o5yQQzqVG7nzkpuiWg==
+{
+  &quot;message&quot; : &quot;Not Found&quot;
+}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.21">
+      <div class="step-ref failed">21</div>
+      
+      <div class="step-cell failed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell failed">12</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.21">11:13:17.911 src/test/java/org/springframework/api_tests/CircleCiOaiSecurity/context_context-id_get.feature:21
+Then status 200
+status code was: 404, expected: 200, response time in milliseconds: 509, url: https://circleci.com/api/v1.1/context/123e4567-e89b-12d3-a456-426614174000, response: 
+{
+  &quot;message&quot; : &quot;Not Found&quot;
+}
+src/test/java/org/springframework/api_tests/CircleCiOaiSecurity/context_context-id_get.feature:21
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.22">
+      <div class="step-ref skipped">22</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.id == &#39;##string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.23">
+      <div class="step-ref skipped">23</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.name == &#39;##string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.24">
+      <div class="step-ref skipped">24</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.created_at == &#39;##string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.25">
+      <div class="step-ref skipped">25</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.created_at == &#39;#regex ^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\.\\d{3}Z$&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1.2:30]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1.2:30]</span>
+                <span class="scenario-name">Validate GET /context/{context-id} endpoint with valid inputs</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>290</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[1.2:30]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[1.2:30]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def urlBase = karate.properties[&#39;API_HOST_URL&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.2:30]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url urlBase</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.18">
+      <div class="step-ref passed">18</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;context&#39;, &#39;not-valid-context-id&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.19">
+      <div class="step-ref passed">19</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>param circle-token = karate.properties[&#39;circle-token&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.20">
+      <div class="step-ref passed">20</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method GET</span>
+      </div>
+    </div>
+    <div class="time-cell passed">252</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="2.20">11:13:17.936 request:
+1 &gt; GET https://circleci.com/api/v1.1/context/not-valid-context-id
+1 &gt; Host: circleci.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.7)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+11:13:18.183 response time in milliseconds: 246
+1 &lt; 404
+1 &lt; Content-Type: text/plain;charset=utf-8
+1 &lt; Content-Length: 29
+1 &lt; Connection: keep-alive
+1 &lt; Date: Mon, 07 Jul 2025 11:13:18 GMT
+1 &lt; Vary: Origin
+1 &lt; X-Frame-Options: DENY
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; X-Ratelimit-Reset: 0
+1 &lt; x-request-id: b425f2d1-d787-48b0-95e7-367899e8520a
+1 &lt; X-Ratelimit-Remaining: 50
+1 &lt; X-Ratelimit-Limit: 51
+1 &lt; Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+1 &lt; Feature-Policy: autoplay &#39;none&#39;; camera &#39;none&#39;
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; X-XSS-Protection: 1; mode=block
+1 &lt; X-Cache: Error from cloudfront
+1 &lt; Via: 1.1 0e077edae0164077a900619ab0f7924e.cloudfront.net (CloudFront)
+1 &lt; X-Amz-Cf-Pop: BOM78-P9
+1 &lt; X-Amz-Cf-Id: xtPSAcVfPvOXDRvttUyfn3hh2JjkOg8S3KjZrJ5MOV3_jSkFhPgLKg==
+{
+  &quot;message&quot; : &quot;Not Found&quot;
+}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.21">
+      <div class="step-ref passed">21</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 404</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.22">
+      <div class="step-ref passed">22</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.id == &#39;##string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">28</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.23">
+      <div class="step-ref passed">23</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.name == &#39;##string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.24">
+      <div class="step-ref passed">24</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.created_at == &#39;##string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.25">
+      <div class="step-ref failed">25</div>
+      
+      <div class="step-cell failed">
+        <span>And</span>&nbsp;<span>match response.created_at == &#39;#regex ^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\.\\d{3}Z$&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell failed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="2.25">11:13:18.219 src/test/java/org/springframework/api_tests/CircleCiOaiSecurity/context_context-id_get.feature:25
+And match response.created_at == &#39;#regex ^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\.\\d{3}Z$&#39;
+match failed: EQUALS
+
+src/test/java/org/springframework/api_tests/CircleCiOaiSecurity/context_context-id_get.feature:25
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[2.1:41]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[2.1:41]</span>
+                <span class="scenario-name">Validate GET /context/{context-id} with invalid inputs</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>255</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[2.1:41]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[2.1:41]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def urlBase = karate.properties[&#39;API_HOST_URL&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.1:41]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url urlBase</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.33">
+      <div class="step-ref passed">33</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;context&#39;, &#39;123e4567-e89b-12d3-a456-notvalid&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.34">
+      <div class="step-ref passed">34</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>param circle-token = karate.properties[&#39;circle-token&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.35">
+      <div class="step-ref passed">35</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method GET</span>
+      </div>
+    </div>
+    <div class="time-cell passed">249</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.35">11:13:18.236 request:
+1 &gt; GET https://circleci.com/api/v1.1/context/123e4567-e89b-12d3-a456-notvalid
+1 &gt; Host: circleci.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.7)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+11:13:18.481 response time in milliseconds: 244
+1 &lt; 404
+1 &lt; Content-Type: text/plain;charset=utf-8
+1 &lt; Content-Length: 29
+1 &lt; Connection: keep-alive
+1 &lt; Date: Mon, 07 Jul 2025 11:13:18 GMT
+1 &lt; Vary: Origin
+1 &lt; X-Frame-Options: DENY
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; X-Ratelimit-Reset: 0
+1 &lt; x-request-id: 396f719a-1d6b-4e8a-8b7c-5bc9f5071144
+1 &lt; X-Ratelimit-Remaining: 50
+1 &lt; X-Ratelimit-Limit: 51
+1 &lt; Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+1 &lt; Feature-Policy: autoplay &#39;none&#39;; camera &#39;none&#39;
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; X-XSS-Protection: 1; mode=block
+1 &lt; X-Cache: Error from cloudfront
+1 &lt; Via: 1.1 29c4071d54ad6f88b4c9a40d8f1b2124.cloudfront.net (CloudFront)
+1 &lt; X-Amz-Cf-Pop: BOM78-P9
+1 &lt; X-Amz-Cf-Id: LQBuJzoy_OYbD5ZJjeS5_gQwHr4mIqfxmh7xr1ErKEE4MVRUpGP5Ww==
+{
+  &quot;message&quot; : &quot;Not Found&quot;
+}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.36">
+      <div class="step-ref passed">36</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 404</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.37">
+      <div class="step-ref passed">37</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.message == &#39;##string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[2.2:42]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[2.2:42]</span>
+                <span class="scenario-name">Validate GET /context/{context-id} with invalid inputs</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>256</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[2.2:42]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[2.2:42]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def urlBase = karate.properties[&#39;API_HOST_URL&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.2:42]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url urlBase</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.33">
+      <div class="step-ref passed">33</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;context&#39;, &#39;nonexistent-context-id&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.34">
+      <div class="step-ref passed">34</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>param circle-token = karate.properties[&#39;circle-token&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.35">
+      <div class="step-ref passed">35</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method GET</span>
+      </div>
+    </div>
+    <div class="time-cell passed">251</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="2.35">11:13:18.502 request:
+1 &gt; GET https://circleci.com/api/v1.1/context/nonexistent-context-id
+1 &gt; Host: circleci.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.7)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+11:13:18.748 response time in milliseconds: 245
+1 &lt; 404
+1 &lt; Content-Type: text/plain;charset=utf-8
+1 &lt; Content-Length: 29
+1 &lt; Connection: keep-alive
+1 &lt; Date: Mon, 07 Jul 2025 11:13:18 GMT
+1 &lt; Vary: Origin
+1 &lt; X-Frame-Options: DENY
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; X-Ratelimit-Reset: 0
+1 &lt; x-request-id: 28380e8b-f8cd-4134-8731-d4b89e36265e
+1 &lt; X-Ratelimit-Remaining: 50
+1 &lt; X-Ratelimit-Limit: 51
+1 &lt; Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+1 &lt; Feature-Policy: autoplay &#39;none&#39;; camera &#39;none&#39;
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; X-XSS-Protection: 1; mode=block
+1 &lt; X-Cache: Error from cloudfront
+1 &lt; Via: 1.1 f034286b88541486f791a00fca47970e.cloudfront.net (CloudFront)
+1 &lt; X-Amz-Cf-Pop: BOM78-P9
+1 &lt; X-Amz-Cf-Id: 8BVFhzYakIzynJluV7WRswOrcIwlszanXeLNVnZcZ9G2380wNu0Edg==
+{
+  &quot;message&quot; : &quot;Not Found&quot;
+}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.36">
+      <div class="step-ref passed">36</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 404</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.37">
+      <div class="step-ref passed">37</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.message == &#39;##string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[3:44]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[3:44]</span>
+                <span class="scenario-name">Validate response headers for GET /context/{context-id}</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>234</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[3:44]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[3:44]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def urlBase = karate.properties[&#39;API_HOST_URL&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[3:44]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url urlBase</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.45">
+      <div class="step-ref passed">45</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;context&#39;, &#39;123e4567-e89b-12d3-a456-426614174000&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.46">
+      <div class="step-ref passed">46</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>param circle-token = karate.properties[&#39;circle-token&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.47">
+      <div class="step-ref passed">47</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method GET</span>
+      </div>
+    </div>
+    <div class="time-cell passed">231</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.47">11:13:18.768 request:
+1 &gt; GET https://circleci.com/api/v1.1/context/123e4567-e89b-12d3-a456-426614174000
+1 &gt; Host: circleci.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.7)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+11:13:18.994 response time in milliseconds: 224
+1 &lt; 404
+1 &lt; Content-Type: text/plain;charset=utf-8
+1 &lt; Content-Length: 29
+1 &lt; Connection: keep-alive
+1 &lt; Date: Mon, 07 Jul 2025 11:13:18 GMT
+1 &lt; Vary: Origin
+1 &lt; X-Frame-Options: DENY
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; X-Ratelimit-Reset: 0
+1 &lt; x-request-id: 165a45da-5a5f-4002-8839-d280883db152
+1 &lt; X-Ratelimit-Remaining: 50
+1 &lt; X-Ratelimit-Limit: 51
+1 &lt; Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+1 &lt; Feature-Policy: autoplay &#39;none&#39;; camera &#39;none&#39;
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; X-XSS-Protection: 1; mode=block
+1 &lt; X-Cache: Error from cloudfront
+1 &lt; Via: 1.1 8bbba1833fc985cc4235ff03e7289950.cloudfront.net (CloudFront)
+1 &lt; X-Amz-Cf-Pop: BOM78-P9
+1 &lt; X-Amz-Cf-Id: xJcb08WBYgmG6-xBDZj_vrZ34OEGKHOA4Lg7bnYXB7mUhaMEXjRGvg==
+{
+  &quot;message&quot; : &quot;Not Found&quot;
+}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.48">
+      <div class="step-ref failed">48</div>
+      
+      <div class="step-cell failed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.48">11:13:18.997 src/test/java/org/springframework/api_tests/CircleCiOaiSecurity/context_context-id_get.feature:48
+Then status 200
+status code was: 404, expected: 200, response time in milliseconds: 224, url: https://circleci.com/api/v1.1/context/123e4567-e89b-12d3-a456-426614174000, response: 
+{
+  &quot;message&quot; : &quot;Not Found&quot;
+}
+src/test/java/org/springframework/api_tests/CircleCiOaiSecurity/context_context-id_get.feature:48
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.49">
+      <div class="step-ref skipped">49</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match responseHeaders[&#39;Content-Type&#39;] == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.50">
+      <div class="step-ref skipped">50</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match responseHeaders[&#39;Content-Type&#39;] contains &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
