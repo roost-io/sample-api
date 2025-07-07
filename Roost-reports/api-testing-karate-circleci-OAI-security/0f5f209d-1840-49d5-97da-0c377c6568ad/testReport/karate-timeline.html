@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="res/vis.min.js"></script>
+    <link href="res/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"main","id":1}];
+var items = [{"id":1,"group":1,"content":"src\/test\/java\/org\/springframework\/api_tests\/CircleCiOaiSecurity\/context_context-id_environment-variable_get[1.1:33]","start":1751877376670,"end":1751877376979,"title":"src\/test\/java\/org\/springframework\/api_tests\/CircleCiOaiSecurity\/context_context-id_environment-variable_get[1.1:33] 08:36:16.670-08:36:16.979 Retrieve environment variables for a context-id","className":"failed"},{"id":2,"group":1,"content":"src\/test\/java\/org\/springframework\/api_tests\/CircleCiOaiSecurity\/context_context-id_environment-variable_get[1.2:34]","start":1751877376988,"end":1751877377302,"title":"src\/test\/java\/org\/springframework\/api_tests\/CircleCiOaiSecurity\/context_context-id_environment-variable_get[1.2:34] 08:36:16.988-08:36:17.302 Retrieve environment variables for a context-id","className":"failed"},{"id":3,"group":1,"content":"src\/test\/java\/org\/springframework\/api_tests\/CircleCiOaiSecurity\/context_context-id_environment-variable_get[2.1:46]","start":1751877377308,"end":1751877377607,"title":"src\/test\/java\/org\/springframework\/api_tests\/CircleCiOaiSecurity\/context_context-id_environment-variable_get[2.1:46] 08:36:17.308-08:36:17.607 Handle invalid context-id"},{"id":4,"group":1,"content":"src\/test\/java\/org\/springframework\/api_tests\/CircleCiOaiSecurity\/context_context-id_environment-variable_get[2.2:47]","start":1751877377612,"end":1751877377899,"title":"src\/test\/java\/org\/springframework\/api_tests\/CircleCiOaiSecurity\/context_context-id_environment-variable_get[2.2:47] 08:36:17.612-08:36:17.899 Handle invalid context-id"},{"id":5,"group":1,"content":"src\/test\/java\/org\/springframework\/api_tests\/CircleCiOaiSecurity\/context_context-id_environment-variable_get[3.1:60]","start":1751877377904,"end":1751877378196,"title":"src\/test\/java\/org\/springframework\/api_tests\/CircleCiOaiSecurity\/context_context-id_environment-variable_get[3.1:60] 08:36:17.904-08:36:18.196 Handle missing authorization","className":"failed"},{"id":6,"group":1,"content":"src\/test\/java\/org\/springframework\/api_tests\/CircleCiOaiSecurity\/context_context-id_get[1.1:29]","start":1751877371386,"end":1751877372652,"title":"src\/test\/java\/org\/springframework\/api_tests\/CircleCiOaiSecurity\/context_context-id_get[1.1:29] 08:36:11.386-08:36:12.652 Verify context retrieval with valid context ID","className":"failed"},{"id":7,"group":1,"content":"src\/test\/java\/org\/springframework\/api_tests\/CircleCiOaiSecurity\/context_context-id_get[1.2:29]","start":1751877372675,"end":1751877372982,"title":"src\/test\/java\/org\/springframework\/api_tests\/CircleCiOaiSecurity\/context_context-id_get[1.2:29] 08:36:12.675-08:36:12.982 Verify context retrieval with valid context ID","className":"failed"},{"id":8,"group":1,"content":"src\/test\/java\/org\/springframework\/api_tests\/CircleCiOaiSecurity\/context_get[1.1:33]","start":1751877374421,"end":1751877374459,"title":"src\/test\/java\/org\/springframework\/api_tests\/CircleCiOaiSecurity\/context_get[1.1:33] 08:36:14.421-08:36:14.459 List contexts with query parameters","className":"failed"},{"id":9,"group":1,"content":"src\/test\/java\/org\/springframework\/api_tests\/CircleCiOaiSecurity\/context_get[1.2:33]","start":1751877374468,"end":1751877374470,"title":"src\/test\/java\/org\/springframework\/api_tests\/CircleCiOaiSecurity\/context_get[1.2:33] 08:36:14.468-08:36:14.470 List contexts with query parameters","className":"failed"},{"id":10,"group":1,"content":"src\/test\/java\/org\/springframework\/api_tests\/CircleCiOaiSecurity\/context_get[2.1:47]","start":1751877374481,"end":1751877374797,"title":"src\/test\/java\/org\/springframework\/api_tests\/CircleCiOaiSecurity\/context_get[2.1:47] 08:36:14.481-08:36:14.797 Error response when invalid query parameters are provided","className":"failed"},{"id":11,"group":1,"content":"src\/test\/java\/org\/springframework\/api_tests\/CircleCiOaiSecurity\/context_get[2.2:48]","start":1751877374806,"end":1751877375119,"title":"src\/test\/java\/org\/springframework\/api_tests\/CircleCiOaiSecurity\/context_get[2.2:48] 08:36:14.806-08:36:15.119 Error response when invalid query parameters are provided","className":"failed"},{"id":12,"group":1,"content":"src\/test\/java\/org\/springframework\/api_tests\/CircleCiOaiSecurity\/context_get[3:50]","start":1751877375133,"end":1751877375441,"title":"src\/test\/java\/org\/springframework\/api_tests\/CircleCiOaiSecurity\/context_get[3:50] 08:36:15.133-08:36:15.441 Validate headers in successful response","className":"failed"},{"id":13,"group":1,"content":"src\/test\/java\/org\/springframework\/api_tests\/CircleCiOaiSecurity\/context_get[4:58]","start":1751877375452,"end":1751877375755,"title":"src\/test\/java\/org\/springframework\/api_tests\/CircleCiOaiSecurity\/context_get[4:58] 08:36:15.452-08:36:15.755 Validate schema for default error response","className":"failed"},{"id":14,"group":1,"content":"src\/test\/java\/org\/springframework\/api_tests\/CircleCiOaiSecurity\/context_get[5:65]","start":1751877375761,"end":1751877376053,"title":"src\/test\/java\/org\/springframework\/api_tests\/CircleCiOaiSecurity\/context_get[5:65] 08:36:15.761-08:36:16.053 Validate response nesting and schema on success","className":"failed"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>
