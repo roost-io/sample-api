@@ -1,0 +1,7 @@
+trigger_id,file_choice,file_path
+"test123","option1","/path/to/file1.txt"
+"trigger456","option2","/path/to/file2.json"
+"event789","option3","/reports/test.xml"
+"test-123","option_1","/path/to/file-1.txt"
+"test.456","option.2","/path/to/file.2.json"
+"test_789","option-3","/reports/test_file.xml"
