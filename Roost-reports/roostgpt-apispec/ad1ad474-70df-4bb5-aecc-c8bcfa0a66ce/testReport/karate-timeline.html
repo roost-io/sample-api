@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="res/vis.min.js"></script>
+    <link href="res/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"main","id":1}];
+var items = [{"id":1,"group":1,"content":"src\/test\/java\/org\/springframework\/api_tests\/ApisRoostgpt\/test_event_get[1.1:40]","start":1751971092440,"end":1751971093160,"title":"src\/test\/java\/org\/springframework\/api_tests\/ApisRoostgpt\/test_event_get[1.1:40] 10:38:12.440-10:38:13.160 Get all events with various parameters"},{"id":2,"group":1,"content":"src\/test\/java\/org\/springframework\/api_tests\/ApisRoostgpt\/test_event_get[1.2:40]","start":1751971093175,"end":1751971093232,"title":"src\/test\/java\/org\/springframework\/api_tests\/ApisRoostgpt\/test_event_get[1.2:40] 10:38:13.175-10:38:13.232 Get all events with various parameters"},{"id":3,"group":1,"content":"src\/test\/java\/org\/springframework\/api_tests\/ApisRoostgpt\/test_event_get[1.3:40]","start":1751971093243,"end":1751971093254,"title":"src\/test\/java\/org\/springframework\/api_tests\/ApisRoostgpt\/test_event_get[1.3:40] 10:38:13.243-10:38:13.254 Get all events with various parameters","className":"failed"},{"id":4,"group":1,"content":"src\/test\/java\/org\/springframework\/api_tests\/ApisRoostgpt\/test_event_get[2:42]","start":1751971093266,"end":1751971093334,"title":"src\/test\/java\/org\/springframework\/api_tests\/ApisRoostgpt\/test_event_get[2:42] 10:38:13.266-10:38:13.334 Get all events with only required parameter"},{"id":5,"group":1,"content":"src\/test\/java\/org\/springframework\/api_tests\/ApisRoostgpt\/test_event_get[3:49]","start":1751971093340,"end":1751971093408,"title":"src\/test\/java\/org\/springframework\/api_tests\/ApisRoostgpt\/test_event_get[3:49] 10:38:13.340-10:38:13.408 Get all events with all status filters"},{"id":6,"group":1,"content":"src\/test\/java\/org\/springframework\/api_tests\/ApisRoostgpt\/test_event_get[4:57]","start":1751971093414,"end":1751971093479,"title":"src\/test\/java\/org\/springframework\/api_tests\/ApisRoostgpt\/test_event_get[4:57] 10:38:13.414-10:38:13.479 Get all events with all test type filters"},{"id":7,"group":1,"content":"src\/test\/java\/org\/springframework\/api_tests\/ApisRoostgpt\/test_event_get[5:65]","start":1751971093485,"end":1751971093555,"title":"src\/test\/java\/org\/springframework\/api_tests\/ApisRoostgpt\/test_event_get[5:65] 10:38:13.485-10:38:13.555 Get all events with all event type filters"},{"id":8,"group":1,"content":"src\/test\/java\/org\/springframework\/api_tests\/ApisRoostgpt\/test_event_get[6:73]","start":1751971093561,"end":1751971093635,"title":"src\/test\/java\/org\/springframework\/api_tests\/ApisRoostgpt\/test_event_get[6:73] 10:38:13.561-10:38:13.635 Get all events with all order by options"},{"id":9,"group":1,"content":"src\/test\/java\/org\/springframework\/api_tests\/ApisRoostgpt\/test_event_get[7:81]","start":1751971093642,"end":1751971093706,"title":"src\/test\/java\/org\/springframework\/api_tests\/ApisRoostgpt\/test_event_get[7:81] 10:38:13.642-10:38:13.706 Get all events with all time filter options"},{"id":10,"group":1,"content":"src\/test\/java\/org\/springframework\/api_tests\/ApisRoostgpt\/test_event_get[8:89]","start":1751971093712,"end":1751971093774,"title":"src\/test\/java\/org\/springframework\/api_tests\/ApisRoostgpt\/test_event_get[8:89] 10:38:13.712-10:38:13.774 Get all events with minimum search term length"},{"id":11,"group":1,"content":"src\/test\/java\/org\/springframework\/api_tests\/ApisRoostgpt\/test_event_get[9:97]","start":1751971093780,"end":1751971093854,"title":"src\/test\/java\/org\/springframework\/api_tests\/ApisRoostgpt\/test_event_get[9:97] 10:38:13.780-10:38:13.854 Test error response for missing required parameter","className":"failed"},{"id":12,"group":1,"content":"src\/test\/java\/org\/springframework\/api_tests\/ApisRoostgpt\/test_event_get[10:108]","start":1751971093859,"end":1751971093924,"title":"src\/test\/java\/org\/springframework\/api_tests\/ApisRoostgpt\/test_event_get[10:108] 10:38:13.859-10:38:13.924 Test error response for invalid api_id length","className":"failed"},{"id":13,"group":1,"content":"src\/test\/java\/org\/springframework\/api_tests\/ApisRoostgpt\/test_event_get[11:120]","start":1751971093929,"end":1751971093964,"title":"src\/test\/java\/org\/springframework\/api_tests\/ApisRoostgpt\/test_event_get[11:120] 10:38:13.929-10:38:13.964 Test error response for invalid searchTerm length"},{"id":14,"group":1,"content":"src\/test\/java\/org\/springframework\/api_tests\/ApisRoostgpt\/test_event_get[12:133]","start":1751971093969,"end":1751971094008,"title":"src\/test\/java\/org\/springframework\/api_tests\/ApisRoostgpt\/test_event_get[12:133] 10:38:13.969-10:38:14.008 Test error response validation"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>
