@@ -1,0 +1,4 @@
+trigger_id,file_path
+"test-trigger-123","/path/to/test/file.txt"
+"trigger-456","/logs/execution.log"
+"sample-trigger","/results/output.json"
