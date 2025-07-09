@@ -1,0 +1,13 @@
+channel,text,as_user,attachments,blocks,icon_emoji,icon_url,link_names,mrkdwn,parse,reply_broadcast,thread_ts,unfurl_links,unfurl_media,username
+"C1234567890","Hello World","false","","","","","true","true","none","false","","true","true","testbot"
+"C1234567890","Test message","true","","",":smile:","","false","false","full","true","","false","false",""
+"C1234567890","With attachment","false","[{""fallback"":""test"",""id"":1,""image_url"":""http://example.com""}]","[{""type"":""section"",""text"":{""type"":""mrkdwn"",""text"":""Hello""}}]",":smile:","","true","true","none","false","","true","true","testbot"
+"C1234567890","With blocks","true","","","","http://example.com/icon.png","false","false","full","true","","false","false",""
+"C1234567890","Test message","false","[{""fallback"":""test"",""id"":1,""image_url"":""http://example.com""}]","[{""type"":""section"",""text"":{""type"":""mrkdwn"",""text"":""Hello""}}]",":smile:","","true","true","none","false","","true","true","testbot"
+"C1234567890","Test message","true","","","","http://example.com/icon.png","false","false","full","true","","false","false",""
+"C1234567890","Test message","false","[{""fallback"":""test"",""id"":1,""image_url"":""http://example.com""}]","[{""type"":""section"",""text"":{""type"":""mrkdwn"",""text"":""Hello""}}]",":smile:","","true","true","none","false","","true","true","testbot"
+"C1234567890","Test message","true","","","","http://example.com/icon.png","false","false","full","true","","false","false",""
+"C1234567890","Test message","false","[{""fallback"":""test"",""id"":1,""image_url"":""http://example.com""}]","[{""type"":""section"",""text"":{""type"":""mrkdwn"",""text"":""Hello""}}]",":smile:","","true","true","none","false","","true","true","testbot"
+"C1234567890","Test message","true","","","","http://example.com/icon.png","false","false","full","true","","false","false",""
+"C1234567890","Test message","false","[{""fallback"":""test"",""id"":1,""image_url"":""http://example.com""}]","[{""type"":""section"",""text"":{""type"":""mrkdwn"",""text"":""Hello""}}]",":smile:","","true","true","none","false","","true","true","testbot"
+"C1234567890","Test message","true","","","","http://example.com/icon.png","false","false","full","true","","false","false",""
