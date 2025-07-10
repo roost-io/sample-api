@@ -10,6 +10,8 @@
 # 
 
 roost_feedback [09/07/2025, 6:35:17 AM]:-\sFormat\sthe\stest\n-\sImprove\sassertions\n-\sAdd\smore\scomments\sto\sthe\stest
+
+roost_feedback [10/07/2025, 11:43:35 AM]:Comments\sare\snot\sclear,\sneither\sdoes\sthe\sscenario\slooks\sfine.\sPlz\supdate.
 */
 
 // ********RoostGPT********
@@ -39,7 +41,7 @@ Scenario Outline: List contexts with valid combinations of query parameters and 
     Examples:
       | read('context_get.csv') |
 
-Scenario Outline: Handle invalid combinations of query parameters
+Scenario Outline: Handle invalid combinations of query parameters and validate error messages
     Given path '/context'
     And param owner-id = '<ownerId>'
     And param owner-slug = '<ownerSlug>'
@@ -55,7 +57,7 @@ Scenario Outline: Handle invalid combinations of query parameters
       | 'invalid-uuid' | null           | null      | null      |        400 |
       | null           | 'unknown-slug' | null      | null      |        404 |
 
-Scenario: Validate error responses with missing authorization
+Scenario: Validate error responses when authorization token is missing or invalid
     Given path '/context'
     And param owner-id = 'c65b68ef-e73b-4bf2-be9a-7a322a9df150'
     When method GET
@@ -63,7 +65,7 @@ Scenario: Validate error responses with missing authorization
     And match response.error == '#string'
     And match response.error.length > 0
 
-Scenario Outline: Test paginated responses
+Scenario Outline: Test paginated responses and ensure all pages are processed correctly
     Given path '/context'
     And param owner-id = 'c65b68ef-e73b-4bf2-be9a-7a322a9df150'
     And param page-token = '<pageToken>'
@@ -79,7 +81,7 @@ Scenario Outline: Test paginated responses
     Examples:
       | read('context_get.csv') |
 
-Scenario: Verify unexpected server error response
+Scenario: Verify unexpected server error response for invalid input
     Given path '/context'
     And param owner-id = 'invalid-data-to-trigger-error'
     When method GET
