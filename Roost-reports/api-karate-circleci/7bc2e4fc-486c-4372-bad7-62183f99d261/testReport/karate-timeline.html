@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="res/vis.min.js"></script>
+    <link href="res/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"main","id":1}];
+var items = [{"id":1,"group":1,"content":"src\/test\/java\/org\/springframework\/api_tests\/CircleciOai4SecureEndpointsCopy\/context_get[1.1:35]","start":1752146943782,"end":1752146943889,"title":"src\/test\/java\/org\/springframework\/api_tests\/CircleciOai4SecureEndpointsCopy\/context_get[1.1:35] 11:29:03.782-11:29:03.889 List contexts with valid combinations of query parameters","className":"failed"},{"id":2,"group":1,"content":"src\/test\/java\/org\/springframework\/api_tests\/CircleciOai4SecureEndpointsCopy\/context_get[1.2:35]","start":1752146943895,"end":1752146943996,"title":"src\/test\/java\/org\/springframework\/api_tests\/CircleciOai4SecureEndpointsCopy\/context_get[1.2:35] 11:29:03.895-11:29:03.996 List contexts with valid combinations of query parameters","className":"failed"},{"id":3,"group":1,"content":"src\/test\/java\/org\/springframework\/api_tests\/CircleciOai4SecureEndpointsCopy\/context_get[1.3:35]","start":1752146944002,"end":1752146944247,"title":"src\/test\/java\/org\/springframework\/api_tests\/CircleciOai4SecureEndpointsCopy\/context_get[1.3:35] 11:29:04.002-11:29:04.247 List contexts with valid combinations of query parameters","className":"failed"},{"id":4,"group":1,"content":"src\/test\/java\/org\/springframework\/api_tests\/CircleciOai4SecureEndpointsCopy\/context_get[2:37]","start":1752146944252,"end":1752146944359,"title":"src\/test\/java\/org\/springframework\/api_tests\/CircleciOai4SecureEndpointsCopy\/context_get[2:37] 11:29:04.252-11:29:04.359 List contexts without optional query parameters","className":"failed"},{"id":5,"group":1,"content":"src\/test\/java\/org\/springframework\/api_tests\/CircleciOai4SecureEndpointsCopy\/context_get[3:49]","start":1752146944364,"end":1752146944613,"title":"src\/test\/java\/org\/springframework\/api_tests\/CircleciOai4SecureEndpointsCopy\/context_get[3:49] 11:29:04.364-11:29:04.613 Error response when invalid parameters are passed"},{"id":6,"group":1,"content":"src\/test\/java\/org\/springframework\/api_tests\/CircleciOai4SecureEndpointsCopy\/me_collaborations_get[1:17]","start":1752146941220,"end":1752146941987,"title":"src\/test\/java\/org\/springframework\/api_tests\/CircleciOai4SecureEndpointsCopy\/me_collaborations_get[1:17] 11:29:01.220-11:29:01.987 Get Collaborations using API Key Authorization","className":"failed"},{"id":7,"group":1,"content":"src\/test\/java\/org\/springframework\/api_tests\/CircleciOai4SecureEndpointsCopy\/me_collaborations_get[2:32]","start":1752146942001,"end":1752146942140,"title":"src\/test\/java\/org\/springframework\/api_tests\/CircleciOai4SecureEndpointsCopy\/me_collaborations_get[2:32] 11:29:02.001-11:29:02.140 Get Collaborations using Basic Authorization","className":"failed"},{"id":8,"group":1,"content":"src\/test\/java\/org\/springframework\/api_tests\/CircleciOai4SecureEndpointsCopy\/me_collaborations_get[3.1:61]","start":1752146942148,"end":1752146942271,"title":"src\/test\/java\/org\/springframework\/api_tests\/CircleciOai4SecureEndpointsCopy\/me_collaborations_get[3.1:61] 11:29:02.148-11:29:02.271 Get Collaborations using Query Parameter Authorization","className":"failed"},{"id":9,"group":1,"content":"src\/test\/java\/org\/springframework\/api_tests\/CircleciOai4SecureEndpointsCopy\/me_collaborations_get[3.2:62]","start":1752146942281,"end":1752146942411,"title":"src\/test\/java\/org\/springframework\/api_tests\/CircleciOai4SecureEndpointsCopy\/me_collaborations_get[3.2:62] 11:29:02.281-11:29:02.411 Get Collaborations using Query Parameter Authorization","className":"failed"},{"id":10,"group":1,"content":"src\/test\/java\/org\/springframework\/api_tests\/CircleciOai4SecureEndpointsCopy\/me_collaborations_get[4:64]","start":1752146942420,"end":1752146942538,"title":"src\/test\/java\/org\/springframework\/api_tests\/CircleciOai4SecureEndpointsCopy\/me_collaborations_get[4:64] 11:29:02.420-11:29:02.538 Get Collaborations Unauthorized Access","className":"failed"},{"id":11,"group":1,"content":"src\/test\/java\/org\/springframework\/api_tests\/CircleciOai4SecureEndpointsCopy\/me_get[1:24]","start":1752146943170,"end":1752146943265,"title":"src\/test\/java\/org\/springframework\/api_tests\/CircleciOai4SecureEndpointsCopy\/me_get[1:24] 11:29:03.170-11:29:03.265 Validate successful response for GET \/me with status code 200","className":"failed"},{"id":12,"group":1,"content":"src\/test\/java\/org\/springframework\/api_tests\/CircleciOai4SecureEndpointsCopy\/me_get[2.1:41]","start":1752146943273,"end":1752146943378,"title":"src\/test\/java\/org\/springframework\/api_tests\/CircleciOai4SecureEndpointsCopy\/me_get[2.1:41] 11:29:03.273-11:29:03.378 Validate error responses for GET \/me with default response schema"},{"id":13,"group":1,"content":"src\/test\/java\/org\/springframework\/api_tests\/CircleciOai4SecureEndpointsCopy\/me_get[2.2:42]","start":1752146943384,"end":1752146943482,"title":"src\/test\/java\/org\/springframework\/api_tests\/CircleciOai4SecureEndpointsCopy\/me_get[2.2:42] 11:29:03.384-11:29:03.482 Validate error responses for GET \/me with default response schema"},{"id":14,"group":1,"content":"src\/test\/java\/org\/springframework\/api_tests\/CircleciOai4SecureEndpointsCopy\/me_get[2.3:43]","start":1752146943488,"end":1752146943602,"title":"src\/test\/java\/org\/springframework\/api_tests\/CircleciOai4SecureEndpointsCopy\/me_get[2.3:43] 11:29:03.488-11:29:03.602 Validate error responses for GET \/me with default response schema"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,1749 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="res/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="res/karate-report.css" type="text/css"/>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <script type="text/javascript" src="res/jquery.min.js"></script>
+    <script type="text/javascript" src="res/jquery.tablesorter.min.js"></script>
+    <script type="text/javascript" src="res/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="res/bootstrap.min.js"></script>
+    <script type="text/javascript" src="res/karate-report.js"></script>
+    <script type="text/javascript" src="res/Resemble.js"></script>
+    <script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
+  api_host:'https://app.posthog.com',
+  persistence:'localStorage',
+  autocapture:false,
+  capture_pageview:false,
+  api_transport:'sendBeacon',
+  loaded: function(posthog) { 
+    posthog.capture("report_feature",{distinct_id:"53b85840-888f-422a-bff6-22fffca02225",karate_version:"1.5.1",karate_meta:null});
+  }
+});
+</script>
+
+    <title>src.test.java.org.springframework.api_tests.CircleciOai4SecureEndpointsCopy.me_get</title>
+  </head>
+  <body>
+    <div id="root-container">
+      <div id="leftnav">
+        
+        <div>
+  <div class="nav-logo">
+    <a href="https://karatelabs.io">
+      <img src="karate-labs-logo-ring.svg" alt="Karate Labs"/>
+    </a>
+    <div class="nav-count">
+      <div id="nav-pass" class="bg-success">3</div>
+      <div id="nav-fail" class="bg-danger">1</div>
+    </div>
+  </div>
+  <div id="nav-env">
+    <div></div>
+  </div>
+  <div id="nav-type">
+    <div>Scenarios</div>
+  </div>
+  <div id="nav-date">
+    <div>2025-07-10 11:29:03 AM</div>
+  </div>
+</div>
+
+        <div class="nav-container">
+          <div class="nav-item failed">
+            <a href="#[1:24]"><span>[1:24]</span> <span>Validate successful response for GET /me with status code 200</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[2.1:41]"><span>[2.1:41]</span> <span>Validate error responses for GET /me with default response schema</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[2.2:42]"><span>[2.2:42]</span> <span>Validate error responses for GET /me with default response schema</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[2.3:43]"><span>[2.3:43]</span> <span>Validate error responses for GET /me with default response schema</span></a>
+          </div>
+        </div>
+      </div>
+      <div id="content">
+        <div class="page-heading alert alert-primary">
+          <a href="karate-summary.html">Summary</a><span class="feature-label">|</span>
+          <a href="karate-tags.html">Tags</a><span class="feature-label">|</span>
+          <span class="feature-label">Feature:</span>
+          <span class="feature-path">src/test/java/org/springframework/api_tests/CircleciOai4SecureEndpointsCopy/me_get.feature</span><span class="feature-label">|</span>
+          <span class="feature-name">Get Current User Information</span>
+          <span class="feature-description">Provides information about the user that is currently signed in.</span>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1:24]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1:24]</span>
+                <span class="scenario-name">Validate successful response for GET /me with status code 200</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>95</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[1:24]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[1:24]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def urlBase = karate.properties[&#39;API_HOST_URL&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1:24]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url urlBase</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1:24]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.17">
+      <div class="step-ref bg-step">17</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def username = karate.properties[&#39;API_AUTH_USERNAME&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1:24]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.18">
+      <div class="step-ref bg-step">18</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def password = karate.properties[&#39;API_AUTH_PASSWORD&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1:24]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.19">
+      <div class="step-ref bg-step">19</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def credentials = username + &#39;:&#39; + password</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1:24]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.20">
+      <div class="step-ref bg-step">20</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def encoded = Java.type(&#39;java.util.Base64&#39;).getEncoder().encodeToString(credentials.getBytes())</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1:24]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.21">
+      <div class="step-ref bg-step">21</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def authHeader = &#39;Basic &#39; + encoded</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1:24]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.22">
+      <div class="step-ref bg-step">22</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>configure headers = { Authorization: &#39;#(authHeader)&#39;, Accept: &#39;application/json&#39; }</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.25">
+      <div class="step-ref passed">25</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;me&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.26">
+      <div class="step-ref passed">26</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method GET</span>
+      </div>
+    </div>
+    <div class="time-cell passed">92</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.26">11:29:03.174 request:
+1 &gt; GET https://circleci.com/api/v2/me
+1 &gt; Authorization: Basic aGFyaXNoQHpiLmlvOkMydWssR1hLeSVqPmRBPQ==
+1 &gt; Accept: application/json
+1 &gt; Host: circleci.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.7)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+11:29:03.265 response time in milliseconds: 90
+1 &lt; 401
+1 &lt; Content-Type: application/json;charset=utf-8
+1 &lt; Content-Length: 36
+1 &lt; Connection: keep-alive
+1 &lt; Date: Thu, 10 Jul 2025 11:29:03 GMT
+1 &lt; Vary: Origin
+1 &lt; X-Frame-Options: DENY
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; X-route: /api/v2/me
+1 &lt; X-Ratelimit-Reset: 0
+1 &lt; x-request-id: 7ffafba4-0093-4cc0-9e87-e8b8500e417d
+1 &lt; X-Ratelimit-Remaining: 50
+1 &lt; X-Ratelimit-Limit: 51
+1 &lt; Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+1 &lt; Feature-Policy: autoplay &#39;none&#39;; camera &#39;none&#39;
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; X-XSS-Protection: 1; mode=block
+1 &lt; X-Cache: Error from cloudfront
+1 &lt; Via: 1.1 ae8253630612e3347863de4af7a55446.cloudfront.net (CloudFront)
+1 &lt; X-Amz-Cf-Pop: SFO53-P2
+1 &lt; X-Amz-Cf-Id: aa3JYpyE-RHyy15zge4wf8VT_sTeuKxWDipmtdxZt1b2vS09iRqw9g==
+{&quot;message&quot;:&quot;You must log in first.&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.27">
+      <div class="step-ref failed">27</div>
+      
+      <div class="step-cell failed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.27">11:29:03.266 src/test/java/org/springframework/api_tests/CircleciOai4SecureEndpointsCopy/me_get.feature:27
+Then status 200
+status code was: 401, expected: 200, response time in milliseconds: 90, url: https://circleci.com/api/v2/me, response: 
+{&quot;message&quot;:&quot;You must log in first.&quot;}
+src/test/java/org/springframework/api_tests/CircleciOai4SecureEndpointsCopy/me_get.feature:27
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.28">
+      <div class="step-ref skipped">28</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response == &#39;#object&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.29">
+      <div class="step-ref skipped">29</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.id == &#39;#uuid&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.30">
+      <div class="step-ref skipped">30</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.login == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.31">
+      <div class="step-ref skipped">31</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.name == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[2.1:41]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[2.1:41]</span>
+                <span class="scenario-name">Validate error responses for GET /me with default response schema</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>106</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[2.1:41]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[2.1:41]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def urlBase = karate.properties[&#39;API_HOST_URL&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.1:41]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url urlBase</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.1:41]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.17">
+      <div class="step-ref bg-step">17</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def username = karate.properties[&#39;API_AUTH_USERNAME&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.1:41]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.18">
+      <div class="step-ref bg-step">18</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def password = karate.properties[&#39;API_AUTH_PASSWORD&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.1:41]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.19">
+      <div class="step-ref bg-step">19</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def credentials = username + &#39;:&#39; + password</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.1:41]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.20">
+      <div class="step-ref bg-step">20</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def encoded = Java.type(&#39;java.util.Base64&#39;).getEncoder().encodeToString(credentials.getBytes())</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.1:41]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.21">
+      <div class="step-ref bg-step">21</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def authHeader = &#39;Basic &#39; + encoded</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.1:41]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.22">
+      <div class="step-ref bg-step">22</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>configure headers = { Authorization: &#39;#(authHeader)&#39;, Accept: &#39;application/json&#39; }</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.34">
+      <div class="step-ref passed">34</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;me&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.35">
+      <div class="step-ref passed">35</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method GET</span>
+      </div>
+    </div>
+    <div class="time-cell passed">100</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.35">11:29:03.278 request:
+1 &gt; GET https://circleci.com/api/v2/me
+1 &gt; Authorization: Basic aGFyaXNoQHpiLmlvOkMydWssR1hLeSVqPmRBPQ==
+1 &gt; Accept: application/json
+1 &gt; Host: circleci.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.7)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+11:29:03.376 response time in milliseconds: 97
+1 &lt; 401
+1 &lt; Content-Type: application/json;charset=utf-8
+1 &lt; Content-Length: 36
+1 &lt; Connection: keep-alive
+1 &lt; Date: Thu, 10 Jul 2025 11:29:03 GMT
+1 &lt; Vary: Origin
+1 &lt; X-Frame-Options: DENY
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; X-route: /api/v2/me
+1 &lt; X-Ratelimit-Reset: 0
+1 &lt; x-request-id: 0cda7113-be79-4969-9410-609499d047c3
+1 &lt; X-Ratelimit-Remaining: 50
+1 &lt; X-Ratelimit-Limit: 51
+1 &lt; Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+1 &lt; Feature-Policy: autoplay &#39;none&#39;; camera &#39;none&#39;
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; X-XSS-Protection: 1; mode=block
+1 &lt; X-Cache: Error from cloudfront
+1 &lt; Via: 1.1 060fd86e774e2e890f2f6a5bb72fc360.cloudfront.net (CloudFront)
+1 &lt; X-Amz-Cf-Pop: SFO53-P2
+1 &lt; X-Amz-Cf-Id: E0cpNOxfFtzIAj_tQ1VLGNPgvfCATDT_5Ev533zUH2wPjEApn3ZGUw==
+{&quot;message&quot;:&quot;You must log in first.&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.36">
+      <div class="step-ref passed">36</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>assert responseStatus != 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.37">
+      <div class="step-ref passed">37</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.message == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[2.2:42]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[2.2:42]</span>
+                <span class="scenario-name">Validate error responses for GET /me with default response schema</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>98</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[2.2:42]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[2.2:42]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def urlBase = karate.properties[&#39;API_HOST_URL&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.2:42]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url urlBase</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.2:42]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.17">
+      <div class="step-ref bg-step">17</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def username = karate.properties[&#39;API_AUTH_USERNAME&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.2:42]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.18">
+      <div class="step-ref bg-step">18</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def password = karate.properties[&#39;API_AUTH_PASSWORD&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.2:42]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.19">
+      <div class="step-ref bg-step">19</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def credentials = username + &#39;:&#39; + password</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.2:42]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.20">
+      <div class="step-ref bg-step">20</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def encoded = Java.type(&#39;java.util.Base64&#39;).getEncoder().encodeToString(credentials.getBytes())</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.2:42]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.21">
+      <div class="step-ref bg-step">21</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def authHeader = &#39;Basic &#39; + encoded</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.2:42]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.22">
+      <div class="step-ref bg-step">22</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>configure headers = { Authorization: &#39;#(authHeader)&#39;, Accept: &#39;application/json&#39; }</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.34">
+      <div class="step-ref passed">34</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;me&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.35">
+      <div class="step-ref passed">35</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method GET</span>
+      </div>
+    </div>
+    <div class="time-cell passed">95</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="2.35">11:29:03.388 request:
+1 &gt; GET https://circleci.com/api/v2/me
+1 &gt; Authorization: Basic aGFyaXNoQHpiLmlvOkMydWssR1hLeSVqPmRBPQ==
+1 &gt; Accept: application/json
+1 &gt; Host: circleci.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.7)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+11:29:03.481 response time in milliseconds: 93
+1 &lt; 401
+1 &lt; Content-Type: application/json;charset=utf-8
+1 &lt; Content-Length: 36
+1 &lt; Connection: keep-alive
+1 &lt; Date: Thu, 10 Jul 2025 11:29:03 GMT
+1 &lt; Vary: Origin
+1 &lt; X-Frame-Options: DENY
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; X-route: /api/v2/me
+1 &lt; X-Ratelimit-Reset: 0
+1 &lt; x-request-id: e41dd628-4c3e-47f7-afff-0a1a97e45c2f
+1 &lt; X-Ratelimit-Remaining: 50
+1 &lt; X-Ratelimit-Limit: 51
+1 &lt; Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+1 &lt; Feature-Policy: autoplay &#39;none&#39;; camera &#39;none&#39;
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; X-XSS-Protection: 1; mode=block
+1 &lt; X-Cache: Error from cloudfront
+1 &lt; Via: 1.1 052960a51348e5c17ce749c03a1fac58.cloudfront.net (CloudFront)
+1 &lt; X-Amz-Cf-Pop: SFO53-P2
+1 &lt; X-Amz-Cf-Id: smN-qY1OURgbnPQLt1arlaJY7jHAuxDvzwgVzUvV_GF7KrD8EFNUNQ==
+{&quot;message&quot;:&quot;You must log in first.&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.36">
+      <div class="step-ref passed">36</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>assert responseStatus != 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.37">
+      <div class="step-ref passed">37</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.message == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[2.3:43]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[2.3:43]</span>
+                <span class="scenario-name">Validate error responses for GET /me with default response schema</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>114</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[2.3:43]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[2.3:43]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def urlBase = karate.properties[&#39;API_HOST_URL&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.3:43]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url urlBase</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.3:43]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.17">
+      <div class="step-ref bg-step">17</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def username = karate.properties[&#39;API_AUTH_USERNAME&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.3:43]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.18">
+      <div class="step-ref bg-step">18</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def password = karate.properties[&#39;API_AUTH_PASSWORD&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.3:43]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.19">
+      <div class="step-ref bg-step">19</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def credentials = username + &#39;:&#39; + password</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.3:43]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.20">
+      <div class="step-ref bg-step">20</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def encoded = Java.type(&#39;java.util.Base64&#39;).getEncoder().encodeToString(credentials.getBytes())</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.3:43]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.21">
+      <div class="step-ref bg-step">21</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def authHeader = &#39;Basic &#39; + encoded</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.3:43]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.22">
+      <div class="step-ref bg-step">22</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>configure headers = { Authorization: &#39;#(authHeader)&#39;, Accept: &#39;application/json&#39; }</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.34">
+      <div class="step-ref passed">34</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;me&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.35">
+      <div class="step-ref passed">35</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method GET</span>
+      </div>
+    </div>
+    <div class="time-cell passed">111</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="3.35">11:29:03.492 request:
+1 &gt; GET https://circleci.com/api/v2/me
+1 &gt; Authorization: Basic aGFyaXNoQHpiLmlvOkMydWssR1hLeSVqPmRBPQ==
+1 &gt; Accept: application/json
+1 &gt; Host: circleci.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.7)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+11:29:03.601 response time in milliseconds: 108
+1 &lt; 401
+1 &lt; Content-Type: application/json;charset=utf-8
+1 &lt; Content-Length: 36
+1 &lt; Connection: keep-alive
+1 &lt; Date: Thu, 10 Jul 2025 11:29:03 GMT
+1 &lt; Vary: Origin
+1 &lt; X-Frame-Options: DENY
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; X-route: /api/v2/me
+1 &lt; X-Ratelimit-Reset: 0
+1 &lt; x-request-id: 251b89fc-f6e6-4461-a214-4cd193801ea4
+1 &lt; X-Ratelimit-Remaining: 50
+1 &lt; X-Ratelimit-Limit: 51
+1 &lt; Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+1 &lt; Feature-Policy: autoplay &#39;none&#39;; camera &#39;none&#39;
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; X-XSS-Protection: 1; mode=block
+1 &lt; X-Cache: Error from cloudfront
+1 &lt; Via: 1.1 497698df4d6305ce41e0409e999a35b6.cloudfront.net (CloudFront)
+1 &lt; X-Amz-Cf-Pop: SFO53-P2
+1 &lt; X-Amz-Cf-Id: kGoqFcD5YF_AoAZkGKWvZlblNhTjOGB_oFs8vQ5gQZIThB0jkMZGAA==
+{&quot;message&quot;:&quot;You must log in first.&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.36">
+      <div class="step-ref passed">36</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>assert responseStatus != 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.37">
+      <div class="step-ref passed">37</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.message == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
