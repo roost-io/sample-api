@@ -1,0 +1,3 @@
+q,days,dt,unixdt,hour,lang,alerts,aqi,tp
+"New York","7","2023-10-01","null","12","en","yes","yes","15"
+"London","5","null","1696118400","6","fr","no","no","null"
