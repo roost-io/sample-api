@@ -1,0 +1,3 @@
+project-slug,reporting-window,branches,workflow-names
+"example-project",7,"['main','develop']","['build-workflow']"
+"example-project",30,"['main']","['test-workflow','deploy']"
