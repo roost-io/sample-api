@@ -1,0 +1,3 @@
+project-slug,reporting-window,branches,workflow-names
+"my-project","last-7-days","['dev', 'master']","['build', 'test']"
+"another-project","last-30-days","['feature']","['deploy']"
