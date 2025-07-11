@@ -1,0 +1,27 @@
+[
+  {
+    "callback": "MY_FUNCTION([{ \"ip\": \"134.201.250.155\", \"type\": \"ipv4\", \"continent_code\": \"NA\", \"continent_name\": \"North America\", \"country_code\": \"US\", \"country_name\": \"United States\", \"region_code\": \"CA\", \"region_name\": \"California\", \"city\": \"Los Angeles\", \"zip\": \"90012\", \"latitude\": 34.0655517578125, \"longitude\": -118.24053955078125, \"location\": { \"geoname_id\": 5368361, \"capital\": \"Washington D.C.\", \"languages\": [{ \"code\": \"en\", \"name\": \"English\", \"native\": \"English\" }], \"country_flag\": \"https://assets.ipstack.com/flags/us.svg\", \"country_flag_emoji\": \"\\ud83c\\uddfa\\ud83c\\uddf8\", \"country_flag_emoji_unicode\": \"U+1F1FA U+1F1F8\", \"calling_code\": \"1\", \"is_eu\": false }, \"time_zone\": { \"id\": \"America/Los_Angeles\", \"current_time\": \"2024-02-26T10:03:58-08:00\", \"gmt_offset\": -28800, \"code\": \"PST\", \"is_daylight_saving\": false }, \"currency\": { \"code\": \"USD\", \"name\": \"US Dollar\", \"plural\": \"US dollars\", \"symbol\": \"$\", \"symbol_native\": \"$\" }, \"connection\": { \"asn\": 25876, \"isp\": \"Los Angeles Department of Water & Power\" } }])",
+    "statusCode": 200,
+    "scenario": "200 OK – Response wrapped inside a callback"
+  },
+  {
+    "callback": "MY_FUNCTION([{ \"ip\": \"192.168.0.1\", \"type\": \"ipv4\", \"continent_code\": \"EU\", \"continent_name\": \"Europe\", \"country_code\": \"DE\", \"country_name\": \"Germany\", \"region_code\": \"BE\", \"region_name\": \"Berlin\", \"city\": \"Berlin\", \"zip\": \"10115\", \"latitude\": 52.520008, \"longitude\": 13.404954, \"location\": { \"geoname_id\": 2950159, \"capital\": \"Berlin\", \"languages\": [{ \"code\": \"de\", \"name\": \"German\", \"native\": \"Deutsch\" }], \"country_flag\": \"https://assets.ipstack.com/flags/de.svg\", \"country_flag_emoji\": \"\\ud83c\\udde9\\ud83c\\uddea\", \"country_flag_emoji_unicode\": \"U+1F1E9 U+1F1EA\", \"calling_code\": \"49\", \"is_eu\": true }, \"time_zone\": { \"id\": \"Europe/Berlin\", \"current_time\": \"2024-02-26T19:03:58+01:00\", \"gmt_offset\": 3600, \"code\": \"CET\", \"is_daylight_saving\": true }, \"currency\": { \"code\": \"EUR\", \"name\": \"Euro\", \"plural\": \"Euros\", \"symbol\": \"€\", \"symbol_native\": \"€\" }, \"connection\": { \"asn\": 12322, \"isp\": \"Vodafone Germany\" } }])",
+    "statusCode": 200,
+    "scenario": "200 OK – Response wrapped inside a callback"
+  },
+  {
+    "callback": "INVALID_CALLBACK_SYNTAX([]",
+    "statusCode": 400,
+    "scenario": "Bad Request"
+  },
+  {
+    "callback": "MY_FUNCTION([{ \"ip\": \"ASDFG12345\", \"type\": \"randomText\", \"continent_code\": \"\", \"continent_name\": \"Invalid Continent\", \"country_code\": \"XX\", \"country_name\": \"Unknown\", \"region_code\": \"99\", \"region_name\": \"Unknown\", \"city\": \"Empty\", \"zip\": \"00000\", \"latitude\": 0, \"longitude\": 0, \"location\": { \"geoname_id\": 0, \"capital\": \"None\", \"languages\": [{ \"code\": \"none\", \"name\": \"Unknown\", \"native\": \"Unknown\" }], \"country_flag\": \"http://invalid-url\", \"country_flag_emoji\": \"\\u0000\", \"country_flag_emoji_unicode\": \"U+0000\", \"calling_code\": \"0\", \"is_eu\": false }, \"time_zone\": { \"id\": \"Invalid/TimeZone\", \"current_time\": \"InvalidDate\", \"gmt_offset\": 0, \"code\": \"ZZZ\", \"is_daylight_saving\": false }, \"currency\": { \"code\": \"XXX\", \"name\": \"FakeCurrency\", \"plural\": \"FakeCurrencies\", \"symbol\": \"?\", \"symbol_native\": \"?\" }, \"connection\": { \"asn\": 0, \"isp\": \"Invalid ISP\" } }])",
+    "statusCode": 400,
+    "scenario": "Bad Request"
+  },
+  {
+    "callback": "MY_FUNCTION([{ \"ip\": \"0.0.0.0\", \"type\": \"unknown\", \"continent_code\": \"XX\", \"continent_name\": \"Error Continent\", \"country_code\": \"YY\", \"country_name\": \"MistakeLand\", \"region_code\": \"ZZ\", \"region_name\": \"ErrorRegion\", \"city\": \"Nowhere\", \"zip\": \"ERR000\", \"latitude\": -999, \"longitude\": 999, \"location\": { \"geoname_id\": -1, \"capital\": \"Unknown\", \"languages\": [{ \"code\": \"err\", \"name\": \"None\", \"native\": \"None\" }], \"country_flag\": \"https://invalid-url/flag.svg\", \"country_flag_emoji\": \"\\u0001\", \"country_flag_emoji_unicode\": \"U+0001\", \"calling_code\": \"999\", \"is_eu\": false }, \"time_zone\": { \"id\": \"Error/TimeZone\", \"current_time\": \"Invalid_Time\", \"gmt_offset\": -1, \"code\": \"ERR\", \"is_daylight_saving\": false }, \"currency\": { \"code\": \"INVALID\", \"name\": \"ErrorCurrency\", \"plural\": \"ErrorCurrencies\", \"symbol\": \"!\", \"symbol_native\": \"!\" }, \"connection\": { \"asn\": -1, \"isp\": \"Error ISP\" } }])",
+    "statusCode": 500,
+    "scenario": "Internal Server Error"
+  }
+]
