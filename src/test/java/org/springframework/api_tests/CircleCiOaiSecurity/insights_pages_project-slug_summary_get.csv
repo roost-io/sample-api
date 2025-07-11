@@ -1,0 +1,5 @@
+project-slug,reporting-window,branches,workflow-names
+"sample-slug","last-30-days","['main', 'develop']","['build', 'test']"
+"another-slug","last-7-days","['feature-branch', 'hotfix']","['deploy', 'lint']"
+"sample-slug","last-30-days","['main', 'develop']","['build', 'test']"
+"another-slug","last-7-days","['feature-branch', 'hotfix']","['deploy', 'lint']"
