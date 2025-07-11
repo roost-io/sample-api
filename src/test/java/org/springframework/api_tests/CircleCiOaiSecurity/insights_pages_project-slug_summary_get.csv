@@ -1,0 +1,3 @@
+project-slug,reporting-window,branches,workflow-names
+"project-example-1","7_day","['branch_1', 'branch_2']","['workflow_a', 'workflow_b']"
+"project-example-2","30_day","['branch_3', 'branch_4']","['workflow_c', 'workflow_d']"
