@@ -1,0 +1,83 @@
+********** Installing the Test dependencies **********
+[11/07/2025, 04:52:31 AM] - [INFO] - Updating package index
+[11/07/2025, 04:52:31 AM] - [INFO] - Installing Java with version 21
+[11/07/2025, 04:52:34 AM] - [INFO] - Successfully installed Java 
+[11/07/2025, 04:52:34 AM] - [INFO] - Installing Maven with version 3.8.6
+[11/07/2025, 04:52:37 AM] - [INFO] - Successfully installed Maven
+[11/07/2025, 04:52:37 AM] - [INFO] - Installing Karate JAR with version 1.5.1
+[11/07/2025, 04:52:37 AM] - [INFO] - Successfully installed Karate JAR, Karate 1.5.1
+[11/07/2025, 04:52:37 AM] - [INFO] - Installing Nodejs with version 22.3.0
+[11/07/2025, 04:52:43 AM] - [INFO] - Successfully installed Nodejs, Node v22.3.0, NPM 10.8.1
+[11/07/2025, 04:52:43 AM] - [INFO] - Installing the Npm dependency Prism with version latest
+[11/07/2025, 04:52:56 AM] - [INFO] - Successfully installed the Npm dependency Prism
+********** Validating tokens and license **********
+[11/07/2025, 4:52:56 AM] - [INFO] - Successfully updated test status to in_progress
+[11/07/2025, 4:52:56 AM] - [INFO] - Generating api spec tests using karate framework
+[11/07/2025, 4:52:57 AM] - [INFO] - License is verified
+[11/07/2025, 4:52:58 AM] - [INFO] - Claude AI Token is verified
+[11/07/2025, 4:52:58 AM] - [INFO] - Test will timeout after 1 hour
+[11/07/2025, 4:52:58 AM] - [INFO] - Git Token is verified. Successfully fetched user email roopa.balappa@gmail.com
+[11/07/2025, 4:52:58 AM] - [INFO] - Cloning the repo petstore using url https://roopa-balappa:REDACT_TOKEN@github.com/roopa-balappa/petstore.git
+[11/07/2025, 4:52:59 AM] - [INFO] - Successfully cloned repo petstore with branch main
+[11/07/2025, 4:52:59 AM] - [INFO] - Successfully added git config
+[11/07/2025, 4:53:00 AM] - [INFO] - Successfully created and checked out to new branch roost-7c6fee3b-4e11-49c8-9c36-2abf7aeb8ed7
+[11/07/2025, 4:53:00 AM] - [INFO] - Validaing the swagger spec: /var/tmp/Roost/RoostGPT/adp_api_test_karate_sonnet4/7c6fee3b-4e11-49c8-9c36-2abf7aeb8ed7/adp.yml
+[11/07/2025, 4:53:00 AM] - [INFO] - License is invoked
+********** Setting up prism mock servers **********
+[11/07/2025, 4:53:05 AM] - [INFO] - Prism listening at: http://127.0.0.1:4010
+[11/07/2025, 4:53:05 AM] - [INFO] - Successfully started 1 Prism mock server(s)
+********** Generating Tests **********
+[11/07/2025, 4:53:05 AM] - [INFO] - Java version detected: 21.0.7
+[11/07/2025, 4:53:05 AM] - [INFO] - Java major version detected: 21
+[11/07/2025, 4:53:05 AM] - [INFO] - Using user-specified Karate version: 1.5.1
+[11/07/2025, 4:53:05 AM] - [INFO] - Created symlink from /var/tmp/Roost/bin/karate-1.5.1.jar to /var/tmp/Roost/bin/karate.jar
+[11/07/2025, 4:53:05 AM] - [INFO] - Validaing the swagger spec: /var/tmp/Roost/RoostGPT/adp_api_test_karate_sonnet4/7c6fee3b-4e11-49c8-9c36-2abf7aeb8ed7/swaggerJsonWithinTokenLimit.json
+[11/07/2025, 4:53:05 AM] - [INFO] - Swagger File is valid.
+~~~~~~~~~~ Generating Test for API: /hr/v2/workers - with Method: get ~~~~~~~~~~
+[11/07/2025, 4:53:05 AM] - [INFO] - Generating test for API: /hr/v2/workers - with Method: get
+[11/07/2025, 4:53:54 AM] - [INFO] - Successfully written scenarios for  api /hr/v2/workers_get with method get into src/test/java/io/swagger/api_tests/Adp/hr_v2_workers_get.feature
+[11/07/2025, 4:53:54 AM] - [INFO] - Successfully written test variables into csv file: src/test/java/io/swagger/api_tests/Adp/hr_v2_workers_get.csv
+[11/07/2025, 4:53:54 AM] - [INFO] - Successfully updated scenarios for  api /hr/v2/workers_get with method get into src/test/java/io/swagger/api_tests/Adp/hr_v2_workers_get.feature
+~~~~~~~~~~ Generating Test for API: /hr/v2/workers/{aoid} - with Method: get ~~~~~~~~~~
+[11/07/2025, 4:53:54 AM] - [INFO] - Generating test for API: /hr/v2/workers/{aoid} - with Method: get
+[11/07/2025, 4:54:39 AM] - [INFO] - Successfully written scenarios for  api /hr/v2/workers/{aoid}_get with method get into src/test/java/io/swagger/api_tests/Adp/hr_v2_workers_aoid_get.feature
+[11/07/2025, 4:54:39 AM] - [INFO] - Successfully written test variables into csv file: src/test/java/io/swagger/api_tests/Adp/hr_v2_workers_aoid_get.csv
+[11/07/2025, 4:54:39 AM] - [INFO] - Successfully updated scenarios for  api /hr/v2/workers/{aoid}_get with method get into src/test/java/io/swagger/api_tests/Adp/hr_v2_workers_aoid_get.feature
+~~~~~~~~~~ Generating Test for API: /events/hr/v1/worker.rehire - with Method: post ~~~~~~~~~~
+[11/07/2025, 4:54:39 AM] - [INFO] - Generating test for API: /events/hr/v1/worker.rehire - with Method: post
+[11/07/2025, 4:58:12 AM] - [INFO] - Successfully written scenarios for  api /events/hr/v1/worker.rehire_post with method post into src/test/java/io/swagger/api_tests/Adp/events_hr_v1_worker.rehire_post.feature
+[11/07/2025, 4:58:12 AM] - [INFO] - Successfully written test variables into csv file: src/test/java/io/swagger/api_tests/Adp/events_hr_v1_worker.rehire_post.csv
+[11/07/2025, 4:58:12 AM] - [INFO] - Successfully updated scenarios for  api /events/hr/v1/worker.rehire_post with method post into src/test/java/io/swagger/api_tests/Adp/events_hr_v1_worker.rehire_post.feature
+~~~~~~~~~~ Generating Test for API: /events/hr/v1/worker.rehire/meta - with Method: get ~~~~~~~~~~
+[11/07/2025, 4:58:12 AM] - [INFO] - Generating test for API: /events/hr/v1/worker.rehire/meta - with Method: get
+[11/07/2025, 4:59:29 AM] - [INFO] - Successfully written scenarios for  api /events/hr/v1/worker.rehire/meta_get with method get into src/test/java/io/swagger/api_tests/Adp/events_hr_v1_worker.rehire_meta_get.feature
+[11/07/2025, 4:59:29 AM] - [INFO] - Successfully written test variables into csv file: src/test/java/io/swagger/api_tests/Adp/events_hr_v1_worker.rehire_meta_get.csv
+[11/07/2025, 4:59:29 AM] - [INFO] - Successfully updated scenarios for  api /events/hr/v1/worker.rehire/meta_get with method get into src/test/java/io/swagger/api_tests/Adp/events_hr_v1_worker.rehire_meta_get.feature
+~~~~~~~~~~ Generating Test for API: /codelists/hr/v3/worker-management/{code-type}/esi/{version-id} - with Method: get ~~~~~~~~~~
+[11/07/2025, 4:59:29 AM] - [INFO] - Generating test for API: /codelists/hr/v3/worker-management/{code-type}/esi/{version-id} - with Method: get
+[11/07/2025, 5:00:04 AM] - [INFO] - Successfully written scenarios for  api /codelists/hr/v3/worker-management/{code-type}/esi/{version-id}_get with method get into src/test/java/io/swagger/api_tests/Adp/codelists_hr_v3_worker-management_code-type_esi_version-id_get.feature
+[11/07/2025, 5:00:04 AM] - [INFO] - Successfully written test variables into csv file: src/test/java/io/swagger/api_tests/Adp/codelists_hr_v3_worker-management_code-type_esi_version-id_get.csv
+[11/07/2025, 5:00:04 AM] - [INFO] - Successfully updated scenarios for  api /codelists/hr/v3/worker-management/{code-type}/esi/{version-id}_get with method get into src/test/java/io/swagger/api_tests/Adp/codelists_hr_v3_worker-management_code-type_esi_version-id_get.feature
+~~~~~~~~~~ Generating Test for API: /hr/v1/organization-jobs - with Method: get ~~~~~~~~~~
+[11/07/2025, 5:00:04 AM] - [INFO] - Generating test for API: /hr/v1/organization-jobs - with Method: get
+[11/07/2025, 5:00:38 AM] - [INFO] - Successfully written scenarios for  api /hr/v1/organization-jobs_get with method get into src/test/java/io/swagger/api_tests/Adp/hr_v1_organization-jobs_get.feature
+[11/07/2025, 5:00:38 AM] - [INFO] - Successfully written test variables into csv file: src/test/java/io/swagger/api_tests/Adp/hr_v1_organization-jobs_get.csv
+[11/07/2025, 5:00:38 AM] - [INFO] - Successfully updated scenarios for  api /hr/v1/organization-jobs_get with method get into src/test/java/io/swagger/api_tests/Adp/hr_v1_organization-jobs_get.feature
+[11/07/2025, 5:00:38 AM] - [INFO] - Successfully written Java Test File into src/test/java/io/swagger/api_tests/Adp/AdpTest.java
+[11/07/2025, 5:00:38 AM] - [INFO] - Updating pom.xml
+[11/07/2025, 5:00:38 AM] - [INFO] - Updated pom.xml with new dependencies: /var/tmp/Roost/RoostGPT/adp_api_test_karate_sonnet4/7c6fee3b-4e11-49c8-9c36-2abf7aeb8ed7/source/petstore/pom.xml
+[11/07/2025, 5:00:43 AM] - [INFO] - Successfully executed Maven validate command
+[11/07/2025, 5:01:01 AM] - [INFO] - Successfully executed Maven dependency resolve command
+[11/07/2025, 5:01:13 AM] - [INFO] - Java test formatting successful
+********** Generating test and coverage reports **********
+********** Creating pull request **********
+[11/07/2025, 5:01:19 AM] - [INFO] - Successfully added files to Git
+[11/07/2025, 5:01:19 AM] - [INFO] - Successfully committed code
+[11/07/2025, 5:01:20 AM] - [INFO] - Successfully pushed to branch roost-7c6fee3b-4e11-49c8-9c36-2abf7aeb8ed7
+[11/07/2025, 5:01:21 AM] - [INFO] - Successfully created PR, https://github.com/roopa-balappa/petstore/pull/23
+[11/07/2025, 5:01:26 AM] - [INFO] - 
+[11/07/2025, 5:01:26 AM] - [INFO] - Successfully updated the report: /var/tmp/Roost/RoostGPT/adp_api_test_karate_sonnet4/7c6fee3b-4e11-49c8-9c36-2abf7aeb8ed7/roostReport.json
+********** Cleaning up prism mock servers **********
+[11/07/2025, 5:01:26 AM] - [INFO] - Prism mock servers cleanup in progress
+[11/07/2025, 5:01:26 AM] - [INFO] - All Prism mock servers were cleaned up successfully
+[11/07/2025, 5:01:27 AM] - [INFO] - Successfully updated test status to completed
