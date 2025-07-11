@@ -1,0 +1,5 @@
+project-slug,reporting-window,branches,workflow-names
+"my-project-slug","last-30-days","['main', 'develop']","['build', 'test']"
+"another-project","last-90-days","['release', 'feature']","['deploy', 'analyze']"
+"my-secure-slug","last-30-days","['secure-main', 'secure-dev']","['secure-build']"
+"another-secure","last-90-days","['secure-release', 'secure-fe']","['secure-deploy']"
