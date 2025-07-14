@@ -1,0 +1,27 @@
+[
+  {
+    "fields": "[{\"zip\":\"12345\"},{\"zip\":\"67890\"}]",
+    "statusCode": 200,
+    "scenario": "200 OK – Specific Response with Fields Parameter"
+  },
+  {
+    "fields": "[{\"zip\":\"ABCDE\"},{\"zip\":\"FGHIJ\"}]",
+    "statusCode": 200,
+    "scenario": "200 OK – Specific Response with Fields Parameter"
+  },
+  {
+    "fields": "[{\"zip\":\"54321\"},{\"zip\":\"09876\"}]",
+    "statusCode": 200,
+    "scenario": "200 OK – Specific Response with Fields Parameter"
+  },
+  {
+    "fields": "[{\"zip\":\"\"},{\"zip\":\"\"}]",
+    "statusCode": 400,
+    "scenario": "Bad Request"
+  },
+  {
+    "fields": "[{\"zip\":\"1234\"},{\"zip\":\"678\"}]",
+    "statusCode": 400,
+    "scenario": "Bad Request"
+  }
+]
