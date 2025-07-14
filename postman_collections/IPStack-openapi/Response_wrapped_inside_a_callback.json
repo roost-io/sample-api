@@ -1,0 +1,17 @@
+[
+  {
+    "callback": "MY_FUNCTION([{\"ip\": \"134.201.250.155\", \"type\": \"ipv4\", \"continent_code\": \"NA\", \"continent_name\": \"North America\", \"country_code\": \"US\", \"country_name\": \"United States\", \"region_code\": \"CA\", \"region_name\": \"California\", \"city\": \"Los Angeles\", \"zip\": \"90012\", \"latitude\": 34.0655517578125, \"longitude\": -118.24053955078125, \"location\": {\"geoname_id\": 5368361, \"capital\": \"Washington D.C.\", \"languages\": [{\"code\": \"en\", \"name\": \"English\", \"native\": \"English\"}], \"country_flag\": \"https://assets.ipstack.com/flags/us.svg\", \"country_flag_emoji\": \"\\ud83c\\uddfa\\ud83c\\uddf8\", \"country_flag_emoji_unicode\": \"U+1F1FA U+1F1F8\", \"calling_code\": \"1\", \"is_eu\": false}, \"time_zone\": {\"id\": \"America/Los_Angeles\", \"current_time\": \"2024-02-26T10:03:58-08:00\", \"gmt_offset\": -28800, \"code\": \"PST\", \"is_daylight_saving\": false}, \"currency\": {\"code\": \"USD\", \"name\": \"US Dollar\", \"plural\": \"US dollars\", \"symbol\": \"$\", \"symbol_native\": \"$\"}, \"connection\": {\"asn\": 25876, \"isp\": \"Los Angeles Department of Water & Power\"}}",
+    "statusCode": 200,
+    "scenario": "OK"
+  },
+  {
+    "callback": "MY_FUNCTION([{\"ip\": \"999.999.999.999\", \"type\": \"ipv4\", \"continent_code\": \"XX\", \"continent_name\": \"Unknown\", \"country_code\": \"XX\", \"country_name\": \"Unknown\", \"region_code\": \"XX\", \"region_name\": \"Unknown\", \"city\": \"Unknown\", \"zip\": \"00000\", \"latitude\": 0.0, \"longitude\": 0.0, \"location\": {\"geoname_id\": 0, \"capital\": \"Unknown\", \"languages\": [{\"code\": \"xx\", \"name\": \"Unknown\", \"native\": \"Unknown\"}], \"country_flag\": \"https://assets.ipstack.com/flags/xx.svg\", \"country_flag_emoji\": \"\\u0000\\u0000\", \"country_flag_emoji_unicode\": \"U+0000 U+0000\", \"calling_code\": \"0\", \"is_eu\": false}, \"time_zone\": {\"id\": \"Unknown\", \"current_time\": \"1970-01-01T00:00:00Z\", \"gmt_offset\": 0, \"code\": \"UTC\", \"is_daylight_saving\": false}, \"currency\": {\"code\": \"XXX\", \"name\": \"Unknown\", \"plural\": \"Unknown\", \"symbol\": \"?\", \"symbol_native\": \"?\"}, \"connection\": {\"asn\": 0, \"isp\": \"Unknown\"}}",
+    "statusCode": 200,
+    "scenario": "OK"
+  },
+  {
+    "callback": "MY_FUNCTION([{\"ip\": \"256.256.256.256\", \"type\": \"ipv4\", \"continent_code\": \"ZZ\", \"continent_name\": \"Nowhere\", \"country_code\": \"ZZ\", \"country_name\": \"Nowhere\", \"region_code\": \"ZZ\", \"region_name\": \"Nowhere\", \"city\": \"Nowhere\", \"zip\": \"99999\", \"latitude\": -999.999, \"longitude\": -999.999, \"location\": {\"geoname_id\": -1, \"capital\": \"Nowhere\", \"languages\": [{\"code\": \"zz\", \"name\": \"Nowhere\", \"native\": \"Nowhere\"}], \"country_flag\": \"https://assets.ipstack.com/flags/zz.svg\", \"country_flag_emoji\": \"\\u0000\\u0000\", \"country_flag_emoji_unicode\": \"U+0000 U+0000\", \"calling_code\": \"999\", \"is_eu\": false}, \"time_zone\": {\"id\": \"Nowhere\", \"current_time\": \"1970-01-01T00:00:00Z\", \"gmt_offset\": 0, \"code\": \"UTC\", \"is_daylight_saving\": false}, \"currency\": {\"code\": \"ZZZ\", \"name\": \"Nowhere\", \"plural\": \"Nowhere\", \"symbol\": \"?\", \"symbol_native\": \"?\"}, \"connection\": {\"asn\": -1, \"isp\": \"Nowhere\"}}",
+    "statusCode": 200,
+    "scenario": "OK"
+  }
+]
