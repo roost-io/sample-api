@@ -1,0 +1,27 @@
+[
+  {
+    "language": "English",
+    "statusCode": 200,
+    "scenario": "200 OK – Response in different language Copy"
+  },
+  {
+    "language": "Español",
+    "statusCode": 200,
+    "scenario": "200 OK – Response in different language Copy"
+  },
+  {
+    "language": "Français",
+    "statusCode": 200,
+    "scenario": "200 OK – Response in different language Copy"
+  },
+  {
+    "language": "Deutsch",
+    "statusCode": 200,
+    "scenario": "200 OK – Response in different language Copy"
+  },
+  {
+    "language": "中文",
+    "statusCode": 200,
+    "scenario": "200 OK – Response in different language Copy"
+  }
+]
