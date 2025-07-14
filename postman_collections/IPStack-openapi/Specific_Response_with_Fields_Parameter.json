@@ -1,0 +1,27 @@
+[
+  {
+    "zip": "12345",
+    "statusCode": 200,
+    "scenario": "OK"
+  },
+  {
+    "zip": "67890",
+    "statusCode": 200,
+    "scenario": "OK"
+  },
+  {
+    "zip": "ABCDE",
+    "statusCode": 400,
+    "scenario": "Bad Request"
+  },
+  {
+    "zip": "12-345",
+    "statusCode": 400,
+    "scenario": "Bad Request"
+  },
+  {
+    "zip": "99999",
+    "statusCode": 200,
+    "scenario": "OK"
+  }
+]
