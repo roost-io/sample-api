@@ -1,0 +1,4 @@
+METHOD^|^URL^|^REQ_HEADERS^|^REQ_BODY^|^RESPONSE_CODE^|^RESPONSE_BODY
+GET^|^/api/sessions?filter=multiple^|^{}^|^{}^|^404^|^{
+    "message": "No sessions found matching criteria"
+}

@@ -1,0 +1,2 @@
+METHOD^|^URL^|^REQ_HEADERS^|^REQ_BODY^|^RESPONSE_CODE^|^RESPONSE_BODY
+DELETE^|^/api/session/R64EKX5RG32U^|^{ "Authorization": "Bearer token" }^|^{ "sessionId": "R64EKX5RG32U" }^|^200^|^{ "message": "Session deleted successfully", "status": "Success" }
