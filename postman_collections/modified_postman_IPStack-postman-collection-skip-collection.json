@@ -1,0 +1,129 @@
+{
+  "info": {
+    "_postman_id": "04d158cf-036d-4a4c-967f-b32e62daf929",
+    "name": "IPstack",
+    "description": "## **Quickstart Guide**\n\n<video src=\"https://youtube.com/embed/cjP8lsqc1Y0\" width=\"620\" height=\"310\"></video>\n\n### Step 1: Fork the collection\n\nTo get started quickly, you need to fork the IP Stack Postman Collection. Simply click the button below to fork it.\n\n[<img src=\"https://run.pstmn.io/button.svg\">](https://god.gw.postman.com/run-collection/10131015-55145132-244c-448c-8e6f-8780866e4862?action=collection/fork)\n\n### Step 2: Get your API Access Key\n\n1. Go to the [IP Stack](https://ipstack.com/?utm_source=Postman&utm_medium=Referral) website and choose the right subscription plan for your particular project.\n2. Get your personal API Access Key on the [Dashboard](https://ipstack.com/dashboard) to authenticate with the API. Keep it safe! You can reset it at any time in your Account Dashboard.\n    \n\n## Step 3: Make your first API call\n\nIP Stack Postman collection contains all the three endpoint supported by IP Stack API.\n\n1. Standard IP Lookup\n2. Bulk IP Lookup\n3. Requester Lookup\n    \n\nWe recommend you to start with the Standard IP Lookup endpoint as it's primary endpoint. It is used to look up single IPv4 or IPv6 addresses. To call this endpoint, simply attach any IPv4 or IPv6 address to the API's base URL.\n\nCheck out all the widely used API calls with the necessary parameters in the [Standard IP Lookup folder](https://apilayer.postman.co/workspace/APILayer~2b7498b6-6d91-4fa8-817f-608441fe42a8/folder/10131015-594322f8-abae-4135-80d1-2cf544caa60b?action=share&creator=10131015&ctx=documentation).",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "fork": {
+      "label": "mgdevzone's fork",
+      "createdAt": "2024-02-15T13:02:04.000Z",
+      "from": "10131015-55145132-244c-448c-8e6f-8780866e4862"
+    },
+    "updatedAt": "2025-07-01T10:59:23.000Z",
+    "createdAt": "2025-07-01T10:59:22.000Z",
+    "lastUpdatedBy": "870119",
+    "uid": "870119-04d158cf-036d-4a4c-967f-b32e62daf929"
+  },
+  "item": [
+    {
+      "name": "Standard IP Lookup",
+      "item": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "description": "The ipstack's primary endpoint is called Standard Lookup and is used to look up single IPv4 or IPv6 addresses. To call this endpoint, simply attach any IPv4 or IPv6 address to the API's base URL.",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "type": "text/javascript",
+            "packages": {},
+            "exec": [
+              ""
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "packages": {},
+            "exec": [
+              ""
+            ]
+          }
+        }
+      ],
+      "uid": "870119-6b362342-5f4d-40dd-b0cb-af7ff68705a3"
+    },
+    {
+      "name": "Bulk IP Lookup",
+      "item": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "description": "The ipstack API also offers the ability to request data for multiple IPv4 or IPv6 addresses at the same time. In order to process IP addresses in bulk, simply append multiple comma-separated IP addresses to the API's base URL.\n\n> 💡 Note: Bulk IP Lookup Endpoint is only available to users who are on the Professional plan or above.",
+      "uid": "870119-1bd244d0-3fdf-441d-97a3-92119971ed36"
+    },
+    {
+      "name": "Requester IP Lookup",
+      "item": [
+        null
+      ],
+      "description": "The ipstack API also offers a separate API endpoint capable of detecting the IP address which the current API request is coming from. In order to use this endpoint, simply append `check` to the API's base URL and specify your preferred optional parameters.\n\nNote: The Requester IP Lookup endpoint returns the details of the IP address from where the request is coming from. For example, if you make a request from the Postman web app, it will show the details of the Postman server, but if you make a request from the Postman client app, it will show the details of your computer.",
+      "uid": "870119-ba9d9e6f-0c41-4c65-bd38-e8d3f1753475"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "in",
+        "value": "query",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{access_key}}",
+        "type": "string"
+      },
+      {
+        "key": "key",
+        "value": "access_key",
+        "type": "string"
+      }
+    ]
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "access_key",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "type": "number",
+      "value": 200,
+      "key": "statusCode"
+    }
+  ]
+}
