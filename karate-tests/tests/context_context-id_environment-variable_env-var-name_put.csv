@@ -1,0 +1,4 @@
+context-id,env-var-name,value
+"123e4567-e89b-12d3-a456-426614174000","POSTGRES_USER","['secret-value-1']"
+"123e4567-e89b-12d3-a456-426614174001","MYSQL_USER","['secret-value-2']"
+"123e4567-e89b-12d3-a456-426614174002","REDIS_USER","['secret-value-3']"
