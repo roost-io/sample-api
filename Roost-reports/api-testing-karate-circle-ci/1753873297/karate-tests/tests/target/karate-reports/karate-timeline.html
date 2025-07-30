@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="res/vis.min.js"></script>
+    <link href="res/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"main","id":1}];
+var items = [{"id":1,"group":1,"content":"insights_pages_project-slug_summary_get[1.1:62]","start":1753873627237,"end":1753873627237,"title":"insights_pages_project-slug_summary_get[1.1:62] 16:37:07.237-16:37:07.237 Validate Get Summary Metrics and Trends for Project with API Key Auth"},{"id":2,"group":1,"content":"insights_pages_project-slug_summary_get[1.2:63]","start":1753873627246,"end":1753873627245,"title":"insights_pages_project-slug_summary_get[1.2:63] 16:37:07.246-16:37:07.245 Validate Get Summary Metrics and Trends for Project with API Key Auth"},{"id":3,"group":1,"content":"insights_pages_project-slug_summary_get[2.1:83]","start":1753873627253,"end":1753873627252,"title":"insights_pages_project-slug_summary_get[2.1:83] 16:37:07.253-16:37:07.252 Validate Get Summary Metrics and Trends for Project with Basic Auth"},{"id":4,"group":1,"content":"insights_pages_project-slug_summary_get[2.2:84]","start":1753873627260,"end":1753873627259,"title":"insights_pages_project-slug_summary_get[2.2:84] 16:37:07.260-16:37:07.259 Validate Get Summary Metrics and Trends for Project with Basic Auth"},{"id":5,"group":1,"content":"insights_pages_project-slug_summary_get[3.1:98]","start":1753873627266,"end":1753873627265,"title":"insights_pages_project-slug_summary_get[3.1:98] 16:37:07.266-16:37:07.265 Validate Default Error Response"},{"id":6,"group":1,"content":"insights_pages_project-slug_summary_get[3.2:99]","start":1753873627273,"end":1753873627272,"title":"insights_pages_project-slug_summary_get[3.2:99] 16:37:07.273-16:37:07.272 Validate Default Error Response"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>
