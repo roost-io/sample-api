@@ -1,0 +1,5 @@
+projectSlug,reportingWindow,branches,workflowNames
+"gh/CircleCI-Public/api-preview-docs","last-90-days","['main']","['build-test']"
+"gh/CircleCI-Public/api-preview-docs","last-30-days","['main', 'feature', 'dev']","['deploy']"
+"gh/CircleCI-Public/api-preview-docs","last-90-days","['main']","['build-test']"
+"gh/CircleCI-Public/api-preview-docs","last-30-days","['main', 'feature', 'dev']","['deploy']"
