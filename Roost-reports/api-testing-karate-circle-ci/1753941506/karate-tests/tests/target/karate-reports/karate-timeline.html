@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="res/vis.min.js"></script>
+    <link href="res/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"main","id":1}];
+var items = [{"id":1,"group":1,"content":"user_id_get[1.1:31]","start":1753941910185,"end":1753941910187,"title":"user_id_get[1.1:31] 11:35:10.185-11:35:10.187 Get User Info with API Key Authorization"},{"id":2,"group":1,"content":"user_id_get[1.2:32]","start":1753941910195,"end":1753941910194,"title":"user_id_get[1.2:32] 11:35:10.195-11:35:10.194 Get User Info with API Key Authorization"},{"id":3,"group":1,"content":"user_id_get[2.1:51]","start":1753941910204,"end":1753941910203,"title":"user_id_get[2.1:51] 11:35:10.204-11:35:10.203 Get User Info with HTTP Basic Authorization"},{"id":4,"group":1,"content":"user_id_get[2.2:52]","start":1753941910214,"end":1753941910213,"title":"user_id_get[2.2:52] 11:35:10.214-11:35:10.213 Get User Info with HTTP Basic Authorization"},{"id":5,"group":1,"content":"user_id_get[3:54]","start":1753941910222,"end":1753941910221,"title":"user_id_get[3:54] 11:35:10.222-11:35:10.221 Get User Info with Query Parameter Authorization"},{"id":6,"group":1,"content":"user_id_get[4.1:75]","start":1753941910228,"end":1753941910227,"title":"user_id_get[4.1:75] 11:35:10.228-11:35:10.227 Get User Info with Invalid ID"},{"id":7,"group":1,"content":"user_id_get[4.2:76]","start":1753941910234,"end":1753941910234,"title":"user_id_get[4.2:76] 11:35:10.234-11:35:10.234 Get User Info with Invalid ID"},{"id":8,"group":1,"content":"user_id_get[5:78]","start":1753941910239,"end":1753941910238,"title":"user_id_get[5:78] 11:35:10.239-11:35:10.238 Check Default Error Response"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>
