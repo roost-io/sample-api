@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="res/vis.min.js"></script>
+    <link href="res/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"main","id":1}];
+var items = [{"id":1,"group":1,"content":"me_get[1:18]","start":1756359918863,"end":1756359919125,"title":"me_get[1:18] 05:45:18.863-05:45:19.125 Get User Information with API Key Authorization","className":"failed"},{"id":2,"group":1,"content":"me_get[2:29]","start":1756359919129,"end":1756359919378,"title":"me_get[2:29] 05:45:19.129-05:45:19.378 Get User Information with Basic Authorization","className":"failed"},{"id":3,"group":1,"content":"me_get[3:44]","start":1756359919383,"end":1756359919654,"title":"me_get[3:44] 05:45:19.383-05:45:19.654 Get User Information with Query Parameter Authorization","className":"failed"},{"id":4,"group":1,"content":"me_get[4:55]","start":1756359919659,"end":1756359919904,"title":"me_get[4:55] 05:45:19.659-05:45:19.904 Get User Information with Invalid API Key Authorization","className":"failed"},{"id":5,"group":1,"content":"me_get[5:64]","start":1756359919909,"end":1756359920144,"title":"me_get[5:64] 05:45:19.909-05:45:20.144 Get User Information with Invalid Basic Authorization","className":"failed"},{"id":6,"group":1,"content":"me_get[6:77]","start":1756359920149,"end":1756359920384,"title":"me_get[6:77] 05:45:20.149-05:45:20.384 Get User Information with Invalid Query Parameter Authorization"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>
