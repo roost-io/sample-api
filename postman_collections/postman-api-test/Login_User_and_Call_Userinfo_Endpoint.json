@@ -1,0 +1,27 @@
+[
+  {
+    "your_zitadel_domain": "auth.example.com",
+    "statusCode": 200,
+    "scenario": "Valid domain - Success"
+  },
+  {
+    "your_zitadel_domain": "zitadel.mycompany.org",
+    "statusCode": 200,
+    "scenario": "Valid subdomain - Success"
+  },
+  {
+    "your_zitadel_domain": "invalid@domain",
+    "statusCode": 400,
+    "scenario": "Invalid domain format"
+  },
+  {
+    "your_zitadel_domain": "http://invalid-protocol.com",
+    "statusCode": 422,
+    "scenario": "Invalid protocol in domain"
+  },
+  {
+    "your_zitadel_domain": "domain-with-special-chars#$.com",
+    "statusCode": 400,
+    "scenario": "Special characters in domain"
+  }
+]
