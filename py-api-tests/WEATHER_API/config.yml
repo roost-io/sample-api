@@ -1,0 +1,5 @@
+api:
+  host: https://api.weatherapi.com
+
+authentication:
+  api_key: e84a8261d3cd4786a8281927250707
