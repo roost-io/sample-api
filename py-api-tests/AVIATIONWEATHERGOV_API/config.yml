@@ -1,0 +1,6 @@
+{
+    "api": {
+        "host": "https://aviationweather.gov"
+    },
+    "authentication": {}
+}
