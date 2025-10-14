@@ -1,0 +1,6 @@
+{
+    "api": {
+        "host": "${API_HOST}"
+    },
+    "authentication": {}
+}
