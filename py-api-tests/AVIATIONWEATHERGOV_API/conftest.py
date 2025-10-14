@@ -2,6 +2,7 @@ import pytest
 import requests
 import yaml
 import os
+import re
 from pathlib import Path
 
 
@@ -34,6 +35,23 @@ class APIClient:
     def get(self, endpoint, headers=None, params=None):
         return self.helper.make_request(endpoint, params=params, headers=headers, method='GET')
 
+#  Define a custom YAML loader with environment variable expansion
+pattern = re.compile(r'.*?\${(\w+)}.*?')
+
+class EnvVarLoader(yaml.SafeLoader):
+    pass
+
+def envvar_constructor(loader, node):
+    value = loader.construct_scalar(node)
+    match = pattern.findall(value)
+    if match:
+        for var in match:
+            env_value = os.getenv(var, '')
+            value = value.replace(f"${{{var}}}", env_value)
+    return value
+
+EnvVarLoader.add_implicit_resolver('!envvar', pattern, None)
+EnvVarLoader.add_constructor('!envvar', envvar_constructor)
 
 @pytest.fixture(scope="session")
 def config():
@@ -44,7 +62,7 @@ def config():
     
     with open(config_path, 'r') as file:
         try:
-            config_data = yaml.safe_load(file)
+            config_data = yaml.load(file, Loader=EnvVarLoader)
             return config_data
         except yaml.YAMLError as e:
             raise ValueError(f"Error parsing YAML config file: {e}")
