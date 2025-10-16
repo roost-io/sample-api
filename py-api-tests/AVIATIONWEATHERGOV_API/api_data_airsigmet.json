@@ -1,0 +1,42 @@
+[
+  {
+    "format": "json",
+    "types": "metar",
+    "hazard": "turbulence",
+    "level": 2,
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "format": "xml",
+    "types": "taf",
+    "hazard": "icing",
+    "level": 3,
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "format": "invalid_format_123",
+    "types": "invalid_type_456",
+    "hazard": "invalid_hazard_789",
+    "level": -5,
+    "statusCode": 400,
+    "scenario": "Input validation errors"
+  },
+  {
+    "format": "csv",
+    "types": "sigmet",
+    "hazard": "convection",
+    "level": 1,
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "format": "12345",
+    "types": "99999",
+    "hazard": "null_value",
+    "level": 999,
+    "statusCode": 400,
+    "scenario": "Input validation errors"
+  }
+]

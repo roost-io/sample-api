@@ -1,0 +1,42 @@
+[
+  {
+    "format": "JSON",
+    "hazard": "turbulence",
+    "level": 2,
+    "date": "2024-01-15",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "format": "XML",
+    "hazard": "icing",
+    "level": 3,
+    "date": "2024-02-20",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "format": "CSV",
+    "hazard": "wind_shear",
+    "level": 1,
+    "date": "2024-03-10",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "format": "invalid_format_123",
+    "hazard": "invalid_hazard_!@#",
+    "level": -5,
+    "date": "invalid-date-string",
+    "statusCode": 400,
+    "scenario": "Input validation errors"
+  },
+  {
+    "format": "",
+    "hazard": "thunderstorm",
+    "level": 999,
+    "date": "2024-13-45",
+    "statusCode": 400,
+    "scenario": "Input validation errors"
+  }
+]
