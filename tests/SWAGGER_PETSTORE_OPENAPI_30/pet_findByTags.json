@@ -1,0 +1,41 @@
+[
+  {
+    "tags": [
+      "pet",
+      "store"
+    ],
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "tags": [
+      "invalid_tag"
+    ],
+    "statusCode": 400,
+    "scenario": "Invalid tag value"
+  },
+  {
+    "tags": [
+      "unexpected",
+      "error"
+    ],
+    "statusCode": 500,
+    "scenario": "Unexpected error"
+  },
+  {
+    "tags": [
+      "animal",
+      "shop"
+    ],
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "tags": [
+      "wrong",
+      "input"
+    ],
+    "statusCode": 400,
+    "scenario": "Invalid tag value"
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "responseBody": null,
+    "statusCode": 200,
+    "scenario": "Successful operation"
+  },
+  {
+    "responseBody": "Invalid response",
+    "statusCode": 400,
+    "scenario": "Invalid ID supplied"
+  },
+  {
+    "responseBody": "Not found",
+    "statusCode": 404,
+    "scenario": "Pet not found"
+  },
+  {
+    "responseBody": "Validation failed",
+    "statusCode": 422,
+    "scenario": "Validation exception"
+  },
+  {
+    "responseBody": "Unexpected error occurred",
+    "statusCode": 500,
+    "scenario": "Unexpected error"
+  }
+]

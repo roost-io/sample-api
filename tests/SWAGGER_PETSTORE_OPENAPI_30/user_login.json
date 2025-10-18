@@ -1,0 +1,32 @@
+[
+  {
+    "username": "validUser1",
+    "password": "validPass1",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "username": "validUser2",
+    "password": "validPass2",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "username": "invalidUser!",
+    "password": "123",
+    "statusCode": 400,
+    "scenario": "Invalid username/password supplied"
+  },
+  {
+    "username": "user@name",
+    "password": "pass",
+    "statusCode": 400,
+    "scenario": "Invalid username/password supplied"
+  },
+  {
+    "username": "unexpectedUser",
+    "password": "unexpectedPass",
+    "statusCode": 500,
+    "scenario": "Unexpected error"
+  }
+]
