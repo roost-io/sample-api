@@ -1,0 +1,42 @@
+[
+  {
+    "petId": 101,
+    "name": "Buddy",
+    "status": "available",
+    "api_key": "special-key",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "petId": 102,
+    "name": "Max",
+    "status": "pending",
+    "api_key": "special-key",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "petId": 103,
+    "name": "Bella",
+    "status": "sold",
+    "api_key": "special-key",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "petId": -1,
+    "name": "",
+    "status": "unknown",
+    "api_key": "invalid-key",
+    "statusCode": 400,
+    "scenario": "Invalid ID supplied"
+  },
+  {
+    "petId": 9999,
+    "name": "Ghost",
+    "status": "unknown",
+    "api_key": "special-key",
+    "statusCode": 404,
+    "scenario": "Pet not found"
+  }
+]

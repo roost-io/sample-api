@@ -1,0 +1,27 @@
+[
+  {
+    "responseBody": null,
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "responseBody": "Invalid response",
+    "statusCode": 400,
+    "scenario": "Bad Request"
+  },
+  {
+    "responseBody": "Error occurred",
+    "statusCode": 500,
+    "scenario": "Internal Server Error"
+  },
+  {
+    "responseBody": "Unauthorized access",
+    "statusCode": 401,
+    "scenario": "Unauthorized"
+  },
+  {
+    "responseBody": "Resource not found",
+    "statusCode": 404,
+    "scenario": "Not Found"
+  }
+]

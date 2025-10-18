@@ -1,0 +1,42 @@
+[
+  {
+    "status": [
+      null,
+      null
+    ],
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "status": [
+      "invalid",
+      "data"
+    ],
+    "statusCode": 400,
+    "scenario": "Invalid status value"
+  },
+  {
+    "status": [
+      "test",
+      "array"
+    ],
+    "statusCode": 400,
+    "scenario": "Invalid status value"
+  },
+  {
+    "status": [
+      "wrong",
+      "type"
+    ],
+    "statusCode": 400,
+    "scenario": "Invalid status value"
+  },
+  {
+    "status": [
+      "error",
+      "case"
+    ],
+    "statusCode": 400,
+    "scenario": "Invalid status value"
+  }
+]

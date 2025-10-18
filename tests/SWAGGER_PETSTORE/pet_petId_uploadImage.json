@@ -1,0 +1,37 @@
+[
+  {
+    "petId": 12345,
+    "additionalMetadata": "Healthy pet",
+    "file": "pet_photo.jpg",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "petId": 67890,
+    "additionalMetadata": "Vaccination records",
+    "file": "vaccination.pdf",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "petId": 11111,
+    "additionalMetadata": "Adoption papers",
+    "file": "adoption_form.docx",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "petId": -1,
+    "additionalMetadata": "",
+    "file": "invalid_file.txt",
+    "statusCode": 400,
+    "scenario": "Bad Request"
+  },
+  {
+    "petId": 0,
+    "additionalMetadata": "Invalid metadata",
+    "file": "corrupt_file.jpg",
+    "statusCode": 400,
+    "scenario": "Bad Request"
+  }
+]

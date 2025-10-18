@@ -1,0 +1,33 @@
+[
+  {
+    "body": {},
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "body": {},
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "body": {
+      "invalidField": "invalidValue"
+    },
+    "statusCode": 400,
+    "scenario": "Invalid Order"
+  },
+  {
+    "body": {
+      "anotherInvalidField": 12345
+    },
+    "statusCode": 400,
+    "scenario": "Invalid Order"
+  },
+  {
+    "body": {
+      "yetAnotherInvalidField": false
+    },
+    "statusCode": 400,
+    "scenario": "Invalid Order"
+  }
+]
