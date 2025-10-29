@@ -1,0 +1,184 @@
+{
+  "scenarios": [
+    {
+      "type": "functional",
+      "title": "View Prepayment Options",
+      "description": "Verify that customers can view both full and partial prepayment options for their active loan.",
+      "testId": "TC-001",
+      "testDescription": "Test that the system displays prepayment options correctly for customers with active loans through the customer portal.",
+      "prerequisites": "Customer has an active loan account and is logged into the online banking portal or mobile app.",
+      "stepsToPerform": "1. Log into the customer portal/mobile app with valid credentials.\n2. Navigate to the loan account section.\n3. Select an active loan account.\n4. View the prepayment options section.",
+      "expectedResult": "System displays both full prepayment (foreclosure) and partial prepayment options clearly with relevant details for the selected loan."
+    },
+    {
+      "type": "functional",
+      "title": "Prepayment Simulation - Partial Payment",
+      "description": "Verify that customers can simulate a partial prepayment to see the impact on their loan terms.",
+      "testId": "TC-002",
+      "testDescription": "Test the prepayment simulation functionality for partial payments showing interest savings and adjusted loan terms.",
+      "prerequisites": "Customer is logged in and has accessed their loan account with outstanding principal balance.",
+      "stepsToPerform": "1. Navigate to prepayment simulation section.\n2. Select 'Partial Prepayment' option.\n3. Enter a valid prepayment amount (e.g., $5,000).\n4. Click 'Simulate' button.\n5. Review the simulation results.",
+      "expectedResult": "System displays simulation results showing interest savings, options for reduced EMI or reduced tenure, and any applicable penalties."
+    },
+    {
+      "type": "functional",
+      "title": "Prepayment Simulation - Full Payment",
+      "description": "Verify that customers can simulate a full prepayment to see the complete payoff amount.",
+      "testId": "TC-003",
+      "testDescription": "Test the prepayment simulation functionality for full loan foreclosure including all charges.",
+      "prerequisites": "Customer is logged in and has accessed their loan account.",
+      "stepsToPerform": "1. Navigate to prepayment simulation section.\n2. Select 'Full Prepayment' option.\n3. Click 'Simulate' button.\n4. Review the simulation results.",
+      "expectedResult": "System displays total payoff amount including outstanding principal, accrued interest, and any applicable prepayment penalties."
+    },
+    {
+      "type": "functional",
+      "title": "Initiate Partial Prepayment",
+      "description": "Verify that customers can successfully initiate a partial prepayment transaction.",
+      "testId": "TC-004",
+      "testDescription": "Test the complete flow of initiating a partial prepayment from the customer portal.",
+      "prerequisites": "Customer is logged in, has sufficient funds in linked account, and loan is eligible for prepayment.",
+      "stepsToPerform": "1. Navigate to prepayment section.\n2. Select 'Partial Prepayment'.\n3. Enter prepayment amount ($3,000).\n4. Review calculated charges and penalties.\n5. Confirm payment method.\n6. Submit prepayment request.",
+      "expectedResult": "System processes the prepayment request, deducts amount from customer account, updates loan balance, and generates confirmation receipt."
+    },
+    {
+      "type": "functional",
+      "title": "Automatic Prepayment Penalty Calculation",
+      "description": "Verify that the system correctly calculates prepayment penalties based on loan type and terms.",
+      "testId": "TC-005",
+      "testDescription": "Test the automatic calculation of prepayment penalties for different loan types (fixed vs floating rate).",
+      "prerequisites": "Customer has a fixed-rate loan with prepayment penalty terms defined.",
+      "stepsToPerform": "1. Access loan account with fixed-rate terms.\n2. Initiate a prepayment simulation.\n3. Enter prepayment amount.\n4. Verify penalty calculation displayed.\n5. Compare with manual calculation based on loan terms.",
+      "expectedResult": "System correctly calculates and displays prepayment penalty amount based on loan type, age, and regulatory rules."
+    },
+    {
+      "type": "functional",
+      "title": "View Updated Loan Schedule After Prepayment",
+      "description": "Verify that customers receive an updated amortization schedule after completing a prepayment.",
+      "testId": "TC-006",
+      "testDescription": "Test that the system generates and displays a new loan schedule reflecting changes after prepayment.",
+      "prerequisites": "Customer has completed a partial prepayment transaction.",
+      "stepsToPerform": "1. Complete a partial prepayment transaction.\n2. Navigate to loan schedule section.\n3. View the updated amortization schedule.\n4. Verify principal balance reduction.\n5. Check EMI or tenure adjustments.",
+      "expectedResult": "System displays updated loan schedule with reduced principal balance, adjusted EMI or tenure based on customer choice, and recalculated interest components."
+    },
+    {
+      "type": "functional",
+      "title": "Bank Staff Account Lookup",
+      "description": "Verify that bank staff can search and find customer loan details efficiently.",
+      "testId": "TC-007",
+      "testDescription": "Test the search functionality for bank staff to locate customer loan accounts.",
+      "prerequisites": "Bank staff user is logged into the internal banking system with appropriate permissions.",
+      "stepsToPerform": "1. Log into bank staff interface.\n2. Navigate to account lookup section.\n3. Search using customer ID or loan account number.\n4. Select the correct customer account.\n5. View loan details.",
+      "expectedResult": "System displays complete loan details including outstanding balance, payment history, and prepayment options for the searched customer account."
+    },
+    {
+      "type": "functional",
+      "title": "Manual Prepayment Entry by Bank Staff",
+      "description": "Verify that bank staff can manually enter and process prepayments made through other channels.",
+      "testId": "TC-008",
+      "testDescription": "Test the manual prepayment processing functionality for payments received via check or other non-digital channels.",
+      "prerequisites": "Bank staff is logged in and has located the customer's loan account.",
+      "stepsToPerform": "1. Access customer loan account.\n2. Select 'Manual Prepayment Entry'.\n3. Enter prepayment amount and payment method (check).\n4. Add transaction reference number.\n5. Calculate applicable charges.\n6. Process and approve the transaction.",
+      "expectedResult": "System processes the manual prepayment, updates loan balance, applies charges, and generates transaction record with full audit trail."
+    },
+    {
+      "type": "functional",
+      "title": "Prepayment History Tracking",
+      "description": "Verify that the system maintains complete history of all prepayment transactions.",
+      "testId": "TC-009",
+      "testDescription": "Test the prepayment history functionality showing all past prepayment transactions for a loan account.",
+      "prerequisites": "Loan account has multiple prepayment transactions in the system.",
+      "stepsToPerform": "1. Access loan account details.\n2. Navigate to prepayment history section.\n3. View all historical prepayment transactions.\n4. Filter by date range or transaction type.\n5. Export transaction history if available.",
+      "expectedResult": "System displays complete chronological list of all prepayment transactions with dates, amounts, penalties applied, and transaction references."
+    },
+    {
+      "type": "functional",
+      "title": "Rule Engine - Prepayment Eligibility",
+      "description": "Verify that the rule engine correctly determines prepayment eligibility based on loan terms and regulations.",
+      "testId": "TC-010",
+      "testDescription": "Test the rule-based engine for determining if a loan is eligible for prepayment based on various criteria.",
+      "prerequisites": "System has different loan types with varying prepayment rules configured.",
+      "stepsToPerform": "1. Access loans with different eligibility criteria.\n2. Attempt prepayment on newly originated loan (within lock-in period).\n3. Attempt prepayment on eligible loan.\n4. Test with fixed vs floating rate loans.\n5. Verify rule engine responses.",
+      "expectedResult": "System correctly applies business rules and either allows or restricts prepayment based on loan type, age, and regulatory requirements with appropriate messaging."
+    },
+    {
+      "type": "functional",
+      "title": "Principal Balance Reduction Accuracy",
+      "description": "Verify that prepayments are accurately applied to reduce the outstanding principal balance.",
+      "testId": "TC-011",
+      "testDescription": "Test the accuracy of principal balance reduction when prepayments are processed.",
+      "prerequisites": "Loan account with known outstanding principal balance before prepayment.",
+      "stepsToPerform": "1. Record initial outstanding principal balance.\n2. Process a prepayment of specific amount.\n3. Verify principal balance reduction.\n4. Ensure penalties are calculated separately.\n5. Check that interest calculations are updated.",
+      "expectedResult": "System accurately reduces principal balance by the prepayment amount (minus any penalties), and updates all related calculations correctly."
+    },
+    {
+      "type": "functional",
+      "title": "Amortization Schedule Recalculation",
+      "description": "Verify that the system recalculates loan amortization schedule after principal reduction.",
+      "testId": "TC-012",
+      "testDescription": "Test the automatic recalculation of loan schedule offering tenure or EMI reduction options.",
+      "prerequisites": "Partial prepayment has been completed on an active loan.",
+      "stepsToPerform": "1. Complete a partial prepayment.\n2. Select option to reduce tenure or EMI.\n3. Generate new amortization schedule.\n4. Verify mathematical accuracy of calculations.\n5. Compare with manual calculations.",
+      "expectedResult": "System generates accurate amortization schedule with either reduced tenure (same EMI) or reduced EMI (same tenure) based on customer selection."
+    },
+    {
+      "type": "non-functional",
+      "title": "Performance - Prepayment Processing Speed",
+      "description": "Verify that all customer-facing prepayment actions complete within 5 seconds.",
+      "testId": "TC-013",
+      "testDescription": "Test the response time performance of prepayment-related operations from the customer portal.",
+      "prerequisites": "System is in normal operational state with typical user load.",
+      "stepsToPerform": "1. Start timer when initiating prepayment simulation.\n2. Measure time for simulation results to display.\n3. Time the prepayment transaction processing.\n4. Measure loan schedule generation time.\n5. Record all response times.",
+      "expectedResult": "All customer-facing prepayment operations (simulation, processing, schedule generation) complete within maximum 5 seconds response time."
+    },
+    {
+      "type": "non-functional",
+      "title": "Security - Data Encryption and Authentication",
+      "description": "Verify that all sensitive data and transactions are encrypted and require proper authentication.",
+      "testId": "TC-014",
+      "testDescription": "Test the security measures for data protection and user authentication in prepayment operations.",
+      "prerequisites": "Security testing tools are available and system is configured with encryption.",
+      "stepsToPerform": "1. Verify HTTPS/TLS encryption for all communications.\n2. Test user authentication requirements.\n3. Check data encryption at rest in database.\n4. Verify session management and timeout.\n5. Test unauthorized access attempts.",
+      "expectedResult": "All sensitive data is encrypted in transit and at rest, user authentication is required for all operations, and unauthorized access is prevented."
+    },
+    {
+      "type": "non-functional",
+      "title": "System Availability - 24/7 Operations",
+      "description": "Verify that the prepayment system maintains 99.9% availability with minimal planned downtime.",
+      "testId": "TC-015",
+      "testDescription": "Test system availability and uptime requirements for the prepayment processing system.",
+      "prerequisites": "System monitoring tools are in place to track uptime and availability.",
+      "stepsToPerform": "1. Monitor system availability over a test period.\n2. Track planned maintenance windows.\n3. Verify system recovery after maintenance.\n4. Test failover mechanisms if applicable.\n5. Measure actual uptime percentage.",
+      "expectedResult": "System maintains 24/7 availability with scheduled downtime not exceeding 1 hour per week and overall uptime of 99.9% or higher."
+    },
+    {
+      "type": "non-functional",
+      "title": "Data Integrity and Audit Trail",
+      "description": "Verify that the system maintains data integrity and provides complete audit trails for all transactions.",
+      "testId": "TC-016",
+      "testDescription": "Test data integrity controls and audit trail generation for prepayment transactions.",
+      "prerequisites": "Database and audit logging systems are configured and operational.",
+      "stepsToPerform": "1. Process multiple prepayment transactions.\n2. Verify data consistency across all system components.\n3. Check audit trail completeness.\n4. Test data validation and error handling.\n5. Verify transaction rollback capabilities.",
+      "expectedResult": "System maintains complete data integrity with no data loss or corruption, and generates comprehensive audit trails for all prepayment transactions including user actions, timestamps, and system changes."
+    },
+    {
+      "type": "non-functional",
+      "title": "Scalability - Concurrent User Load",
+      "description": "Verify that the system can handle increasing numbers of concurrent users without performance degradation.",
+      "testId": "TC-017",
+      "testDescription": "Test system scalability under increasing concurrent user loads for prepayment operations.",
+      "prerequisites": "Load testing tools are available and test environment can simulate multiple concurrent users.",
+      "stepsToPerform": "1. Start with baseline load of 100 concurrent users.\n2. Gradually increase to 500, 1000, and 2000 users.\n3. Monitor response times and system resources.\n4. Test prepayment operations under each load level.\n5. Identify performance degradation thresholds.",
+      "expectedResult": "System maintains acceptable performance levels (response times within 5 seconds) as user load increases, with graceful degradation patterns and no system failures."
+    },
+    {
+      "type": "non-functional",
+      "title": "Regulatory Compliance - Disclosure Requirements",
+      "description": "Verify that the system complies with banking regulations regarding prepayment disclosures.",
+      "testId": "TC-018",
+      "testDescription": "Test compliance with regulatory requirements for prepayment fee disclosure and customer notifications.",
+      "prerequisites": "System is configured with current regulatory requirements and disclosure templates.",
+      "stepsToPerform": "1. Initiate prepayment process.\n2. Verify that all fees and charges are clearly disclosed.\n3. Check that regulatory warnings are displayed.\n4. Ensure customer acknowledgment is captured.\n5. Verify compliance with local banking regulations.",
+      "expectedResult": "System provides complete and accurate disclosure of all prepayment fees, penalties, and terms in compliance with applicable banking regulations, with proper customer acknowledgment captured."
+    }
+  ]
+}
