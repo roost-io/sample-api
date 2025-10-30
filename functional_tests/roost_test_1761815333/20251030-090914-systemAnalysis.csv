@@ -1,0 +1,23 @@
+View Prepayment Options for Active Loan
+Prepayment Simulation for Partial Payment
+Prepayment Simulation for Full Payment
+Initiate Partial Prepayment Transaction
+Automatic Prepayment Penalty Calculation for Fixed Rate Loan
+View Updated Loan Schedule After Prepayment
+Bank Staff Account Lookup
+Manual Prepayment Entry by Bank Staff
+Prepayment History Tracking
+Rule Engine - Prepayment Eligibility Check
+Rule Engine - Prepayment Restriction for Lock-in Period
+Principal Balance Reduction Accuracy
+Amortization Schedule Recalculation with Tenure Reduction
+Performance Test - Prepayment Processing Speed
+Security - Data Encryption Verification
+Security - Invalid Authentication Token
+Data Integrity and Audit Trail Verification
+Regulatory Compliance - Disclosure Requirements
+Error Handling - Invalid Prepayment Amount
+Error Handling - Insufficient Account Balance
+Error Handling - Loan Not Found
+Scalability Test - Concurrent Prepayment Requests
+Integration Test - Core Banking System Update
