@@ -1,0 +1,11 @@
+
+connexion
+Flask
+flask_testing
+jsonschema
+pytest
+python_dateutil
+PyYAML
+Requests
+setuptools
+six
