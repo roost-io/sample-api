@@ -1,0 +1,404 @@
+[
+  {
+    "description": "Valid request with proper location and date parameters",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "New York",
+      "dt": "2023-05-15",
+      "key": "${API_KEY}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "location": {
+        "name": "New York",
+        "region": "New York",
+        "country": "United States of America",
+        "lat": 40.71,
+        "lon": -74.01,
+        "tz_id": "America/New_York",
+        "localtime_epoch": 1684152000,
+        "localtime": "2023-05-15 12:00"
+      },
+      "astronomy": {
+        "astro": {
+          "sunrise": "05:41 AM",
+          "sunset": "08:07 PM",
+          "moonrise": "04:12 AM",
+          "moonset": "06:45 PM",
+          "moon_phase": "Waning Crescent",
+          "moon_illumination": "25"
+        }
+      }
+    },
+    "expected_status_code": 200
+  },
+  {
+    "description": "Missing required location parameter",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "dt": "2023-05-15",
+      "key": "${API_KEY}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1003,
+      "message": "Parameter 'q' not provided."
+    },
+    "expected_status_code": 400
+  },
+  {
+    "description": "Missing required date parameter",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "key": "${API_KEY}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1003,
+      "message": "Parameter 'dt' not provided."
+    },
+    "expected_status_code": 400
+  },
+  {
+    "description": "Invalid location format",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "!@#$%",
+      "dt": "2023-05-15",
+      "key": "${API_KEY}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1006,
+      "message": "No location found matching parameter 'q'"
+    },
+    "expected_status_code": 400
+  },
+  {
+    "description": "Invalid date format",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "dt": "15-05-2023",
+      "key": "${API_KEY}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1003,
+      "message": "Invalid date format. Expected format: yyyy-MM-dd"
+    },
+    "expected_status_code": 400
+  },
+  {
+    "description": "Date before allowed range (before Jan 1, 2015)",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "dt": "2014-12-31",
+      "key": "${API_KEY}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1003,
+      "message": "Date is outside allowed range"
+    },
+    "expected_status_code": 400
+  },
+  {
+    "description": "Missing API key",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "dt": "2023-05-15"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1002,
+      "message": "API key not provided."
+    },
+    "expected_status_code": 401
+  },
+  {
+    "description": "Invalid API key",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "dt": "2023-05-15",
+      "key": "invalid_key_12345"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 2006,
+      "message": "API key provided is invalid"
+    },
+    "expected_status_code": 401
+  },
+  {
+    "description": "Using IP address as location parameter",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "8.8.8.8",
+      "dt": "2023-05-15",
+      "key": "${API_KEY}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "location": {
+        "name": "Mountain View",
+        "region": "California",
+        "country": "United States of America",
+        "lat": 37.42,
+        "lon": -122.08,
+        "tz_id": "America/Los_Angeles",
+        "localtime_epoch": 1684152000,
+        "localtime": "2023-05-15 9:00"
+      },
+      "astronomy": {
+        "astro": {
+          "sunrise": "05:55 AM",
+          "sunset": "08:15 PM",
+          "moonrise": "04:30 AM",
+          "moonset": "07:10 PM",
+          "moon_phase": "Waning Crescent",
+          "moon_illumination": "25"
+        }
+      }
+    },
+    "expected_status_code": 200
+  },
+  {
+    "description": "Using latitude/longitude as location parameter",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "40.71,-74.01",
+      "dt": "2023-05-15",
+      "key": "${API_KEY}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "location": {
+        "name": "New York",
+        "region": "New York",
+        "country": "United States of America",
+        "lat": 40.71,
+        "lon": -74.01,
+        "tz_id": "America/New_York",
+        "localtime_epoch": 1684152000,
+        "localtime": "2023-05-15 12:00"
+      },
+      "astronomy": {
+        "astro": {
+          "sunrise": "05:41 AM",
+          "sunset": "08:07 PM",
+          "moonrise": "04:12 AM",
+          "moonset": "06:45 PM",
+          "moon_phase": "Waning Crescent",
+          "moon_illumination": "25"
+        }
+      }
+    },
+    "expected_status_code": 200
+  },
+  {
+    "description": "Using postal code as location parameter",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "10001",
+      "dt": "2023-05-15",
+      "key": "${API_KEY}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "location": {
+        "name": "New York",
+        "region": "New York",
+        "country": "United States of America",
+        "lat": 40.75,
+        "lon": -73.99,
+        "tz_id": "America/New_York",
+        "localtime_epoch": 1684152000,
+        "localtime": "2023-05-15 12:00"
+      },
+      "astronomy": {
+        "astro": {
+          "sunrise": "05:41 AM",
+          "sunset": "08:07 PM",
+          "moonrise": "04:12 AM",
+          "moonset": "06:45 PM",
+          "moon_phase": "Waning Crescent",
+          "moon_illumination": "25"
+        }
+      }
+    },
+    "expected_status_code": 200
+  },
+  {
+    "description": "Non-existent location",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "NonExistentCity123",
+      "dt": "2023-05-15",
+      "key": "${API_KEY}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1006,
+      "message": "No location found matching parameter 'q'"
+    },
+    "expected_status_code": 400
+  },
+  {
+    "description": "API key exceeded quota",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "dt": "2023-05-15",
+      "key": "${QUOTA_EXCEEDED_API_KEY}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 2007,
+      "message": "API key has exceeded calls per month quota."
+    },
+    "expected_status_code": 403
+  },
+  {
+    "description": "Disabled API key",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "dt": "2023-05-15",
+      "key": "${DISABLED_API_KEY}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 2008,
+      "message": "API key has been disabled."
+    },
+    "expected_status_code": 403
+  },
+  {
+    "description": "Future date",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "dt": "2030-01-01",
+      "key": "${API_KEY}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "location": {
+        "name": "London",
+        "region": "City of London, Greater London",
+        "country": "United Kingdom",
+        "lat": 51.52,
+        "lon": -0.11,
+        "tz_id": "Europe/London",
+        "localtime_epoch": 1893456000,
+        "localtime": "2030-01-01 12:00"
+      },
+      "astronomy": {
+        "astro": {
+          "sunrise": "08:06 AM",
+          "sunset": "04:01 PM",
+          "moonrise": "10:12 AM",
+          "moonset": "08:45 PM",
+          "moon_phase": "Waxing Gibbous",
+          "moon_illumination": "75"
+        }
+      }
+    },
+    "expected_status_code": 200
+  }
+]

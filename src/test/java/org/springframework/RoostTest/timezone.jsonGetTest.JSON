@@ -1,0 +1,342 @@
+[
+  {
+    "description": "Valid US zipcode returns correct timezone information",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "10001",
+      "key": "${AUTH_TOKEN}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "name": "New York",
+      "region": "New York",
+      "country": "United States of America",
+      "lat": 40.71,
+      "lon": -74.01,
+      "tz_id": "America/New_York",
+      "localtime_epoch": 1625097600,
+      "localtime": "2021-07-01 12:00:00"
+    },
+    "expected_status_code": 200
+  },
+  {
+    "description": "Valid city name returns correct timezone information",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "key": "${AUTH_TOKEN}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "name": "London",
+      "region": "City of London, Greater London",
+      "country": "United Kingdom",
+      "lat": 51.52,
+      "lon": -0.11,
+      "tz_id": "Europe/London",
+      "localtime_epoch": 1625097600,
+      "localtime": "2021-07-01 12:00:00"
+    },
+    "expected_status_code": 200
+  },
+  {
+    "description": "Valid latitude/longitude coordinates return correct timezone information",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "40.71,-74.01",
+      "key": "${AUTH_TOKEN}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "name": "New York",
+      "region": "New York",
+      "country": "United States of America",
+      "lat": 40.71,
+      "lon": -74.01,
+      "tz_id": "America/New_York",
+      "localtime_epoch": 1625097600,
+      "localtime": "2021-07-01 12:00:00"
+    },
+    "expected_status_code": 200
+  },
+  {
+    "description": "Valid IP address returns correct timezone information",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "8.8.8.8",
+      "key": "${AUTH_TOKEN}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "name": "Mountain View",
+      "region": "California",
+      "country": "United States of America",
+      "lat": 37.42,
+      "lon": -122.08,
+      "tz_id": "America/Los_Angeles",
+      "localtime_epoch": 1625097600,
+      "localtime": "2021-07-01 09:00:00"
+    },
+    "expected_status_code": 200
+  },
+  {
+    "description": "Missing query parameter returns 400 error",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "key": "${AUTH_TOKEN}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1003,
+      "message": "Parameter 'q' not provided"
+    },
+    "expected_status_code": 400
+  },
+  {
+    "description": "Empty query parameter returns 400 error",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "",
+      "key": "${AUTH_TOKEN}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1003,
+      "message": "Parameter 'q' not provided"
+    },
+    "expected_status_code": 400
+  },
+  {
+    "description": "Invalid location returns 400 error",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "NonExistentCity12345",
+      "key": "${AUTH_TOKEN}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1006,
+      "message": "No location found matching parameter"
+    },
+    "expected_status_code": 400
+  },
+  {
+    "description": "Missing API key returns 401 error",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1002,
+      "message": "API key not provided"
+    },
+    "expected_status_code": 401
+  },
+  {
+    "description": "Invalid API key returns 401 error",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "key": "invalid_key_12345"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 2006,
+      "message": "API key provided is invalid"
+    },
+    "expected_status_code": 401
+  },
+  {
+    "description": "Exceeded quota returns 403 error",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "key": "quota_exceeded_key"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 2007,
+      "message": "API key has exceeded calls per month quota"
+    },
+    "expected_status_code": 403
+  },
+  {
+    "description": "Disabled API key returns 403 error",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "key": "disabled_key"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 2008,
+      "message": "API key has been disabled"
+    },
+    "expected_status_code": 403
+  },
+  {
+    "description": "Insufficient subscription returns 403 error",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "key": "insufficient_subscription_key"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 2009,
+      "message": "API key does not have access to the requested resource"
+    },
+    "expected_status_code": 403
+  },
+  {
+    "description": "Query parameter with special characters is handled correctly",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "New York, NY",
+      "key": "${AUTH_TOKEN}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "name": "New York",
+      "region": "New York",
+      "country": "United States of America",
+      "lat": 40.71,
+      "lon": -74.01,
+      "tz_id": "America/New_York",
+      "localtime_epoch": 1625097600,
+      "localtime": "2021-07-01 12:00:00"
+    },
+    "expected_status_code": 200
+  },
+  {
+    "description": "Unicode characters in location name are handled correctly",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "München",
+      "key": "${AUTH_TOKEN}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "name": "Munich",
+      "region": "Bavaria",
+      "country": "Germany",
+      "lat": 48.14,
+      "lon": 11.58,
+      "tz_id": "Europe/Berlin",
+      "localtime_epoch": 1625097600,
+      "localtime": "2021-07-01 14:00:00"
+    },
+    "expected_status_code": 200
+  },
+  {
+    "description": "Extremely long location name is handled correctly",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "Llanfairpwllgwyngyllgogerychwyrndrobwllllantysiliogogogoch",
+      "key": "${AUTH_TOKEN}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "name": "Llanfairpwllgwyngyll",
+      "region": "Wales",
+      "country": "United Kingdom",
+      "lat": 53.22,
+      "lon": -4.2,
+      "tz_id": "Europe/London",
+      "localtime_epoch": 1625097600,
+      "localtime": "2021-07-01 13:00:00"
+    },
+    "expected_status_code": 200
+  }
+]

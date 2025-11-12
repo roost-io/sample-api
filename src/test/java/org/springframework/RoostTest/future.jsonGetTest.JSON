@@ -1,0 +1,759 @@
+[
+  {
+    "description": "Valid request with required query parameter q",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "key": "${AUTH_TOKEN}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "location": {
+        "name": "London",
+        "region": "City of London, Greater London",
+        "country": "United Kingdom",
+        "lat": 51.52,
+        "lon": -0.11,
+        "tz_id": "Europe/London",
+        "localtime_epoch": 1623433762,
+        "localtime": "2023-06-11 15:36"
+      },
+      "forecast": {
+        "forecastday": [
+          {
+            "date": "2023-06-25",
+            "date_epoch": 1687651200,
+            "day": {
+              "maxtemp_c": 23.5,
+              "maxtemp_f": 74.3,
+              "mintemp_c": 14.2,
+              "mintemp_f": 57.6,
+              "avgtemp_c": 18.7,
+              "avgtemp_f": 65.7,
+              "maxwind_mph": 8.5,
+              "maxwind_kph": 13.7,
+              "totalprecip_mm": 0.5,
+              "totalprecip_in": 0.02,
+              "avgvis_km": 10.0,
+              "avgvis_miles": 6.2,
+              "avghumidity": 68,
+              "daily_will_it_rain": 1,
+              "daily_chance_of_rain": 56,
+              "daily_will_it_snow": 0,
+              "daily_chance_of_snow": 0,
+              "condition": {
+                "text": "Partly cloudy",
+                "icon": "//cdn.weatherapi.com/weather/64x64/day/116.png",
+                "code": 1003
+              },
+              "uv": 5
+            },
+            "astro": {
+              "sunrise": "04:45 AM",
+              "sunset": "09:21 PM",
+              "moonrise": "10:35 AM",
+              "moonset": "12:15 AM",
+              "moon_phase": "Waxing Gibbous",
+              "moon_illumination": "65"
+            },
+            "hour": [
+              {
+                "time_epoch": 1687651200,
+                "time": "2023-06-25 00:00",
+                "temp_c": 15.3,
+                "temp_f": 59.5,
+                "is_day": 0,
+                "condition": {
+                  "text": "Clear",
+                  "icon": "//cdn.weatherapi.com/weather/64x64/night/113.png",
+                  "code": 1000
+                },
+                "wind_mph": 4.3,
+                "wind_kph": 6.8,
+                "wind_degree": 220,
+                "wind_dir": "SW",
+                "pressure_mb": 1015,
+                "pressure_in": 29.97,
+                "precip_mm": 0,
+                "precip_in": 0,
+                "humidity": 77,
+                "cloud": 0,
+                "feelslike_c": 15.3,
+                "feelslike_f": 59.5,
+                "windchill_c": 15.3,
+                "windchill_f": 59.5,
+                "heatindex_c": 15.3,
+                "heatindex_f": 59.5,
+                "dewpoint_c": 11.2,
+                "dewpoint_f": 52.2,
+                "will_it_rain": 0,
+                "chance_of_rain": 0,
+                "will_it_snow": 0,
+                "chance_of_snow": 0,
+                "vis_km": 10,
+                "vis_miles": 6.2,
+                "gust_mph": 7.8,
+                "gust_kph": 12.6,
+                "uv": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "expected_status_code": 200
+  },
+  {
+    "description": "Valid request with all query parameters (q, dt, lang)",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "New York",
+      "dt": "2023-12-25",
+      "lang": "fr",
+      "key": "${AUTH_TOKEN}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "location": {
+        "name": "New York",
+        "region": "New York",
+        "country": "United States of America",
+        "lat": 40.71,
+        "lon": -74.01,
+        "tz_id": "America/New_York",
+        "localtime_epoch": 1623433762,
+        "localtime": "2023-06-11 10:36"
+      },
+      "forecast": {
+        "forecastday": [
+          {
+            "date": "2023-12-25",
+            "date_epoch": 1703462400,
+            "day": {
+              "maxtemp_c": 2.5,
+              "maxtemp_f": 36.5,
+              "mintemp_c": -3.2,
+              "mintemp_f": 26.2,
+              "avgtemp_c": -0.4,
+              "avgtemp_f": 31.3,
+              "maxwind_mph": 12.5,
+              "maxwind_kph": 20.2,
+              "totalprecip_mm": 1.2,
+              "totalprecip_in": 0.05,
+              "avgvis_km": 9.5,
+              "avgvis_miles": 5.9,
+              "avghumidity": 75,
+              "daily_will_it_rain": 1,
+              "daily_chance_of_rain": 65,
+              "daily_will_it_snow": 1,
+              "daily_chance_of_snow": 35,
+              "condition": {
+                "text": "Partiellement nuageux",
+                "icon": "//cdn.weatherapi.com/weather/64x64/day/116.png",
+                "code": 1003
+              },
+              "uv": 2
+            },
+            "astro": {
+              "sunrise": "07:15 AM",
+              "sunset": "04:32 PM",
+              "moonrise": "01:22 PM",
+              "moonset": "11:45 PM",
+              "moon_phase": "Premier quartier",
+              "moon_illumination": "50"
+            },
+            "hour": [
+              {
+                "time_epoch": 1703462400,
+                "time": "2023-12-25 00:00",
+                "temp_c": -2.3,
+                "temp_f": 27.9,
+                "is_day": 0,
+                "condition": {
+                  "text": "Ciel dégagé",
+                  "icon": "//cdn.weatherapi.com/weather/64x64/night/113.png",
+                  "code": 1000
+                },
+                "wind_mph": 8.1,
+                "wind_kph": 13.0,
+                "wind_degree": 290,
+                "wind_dir": "WNW",
+                "pressure_mb": 1020,
+                "pressure_in": 30.12,
+                "precip_mm": 0,
+                "precip_in": 0,
+                "humidity": 82,
+                "cloud": 10,
+                "feelslike_c": -6.8,
+                "feelslike_f": 19.8,
+                "windchill_c": -6.8,
+                "windchill_f": 19.8,
+                "heatindex_c": -2.3,
+                "heatindex_f": 27.9,
+                "dewpoint_c": -5.1,
+                "dewpoint_f": 22.8,
+                "will_it_rain": 0,
+                "chance_of_rain": 0,
+                "will_it_snow": 0,
+                "chance_of_snow": 0,
+                "vis_km": 10,
+                "vis_miles": 6.2,
+                "gust_mph": 14.3,
+                "gust_kph": 23.0,
+                "uv": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "expected_status_code": 200
+  },
+  {
+    "description": "Request without required q parameter",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "key": "${AUTH_TOKEN}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1003,
+      "message": "Parameter 'q' not provided."
+    },
+    "expected_status_code": 400
+  },
+  {
+    "description": "Request with invalid location in q parameter",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "NonExistentLocation123",
+      "key": "${AUTH_TOKEN}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1006,
+      "message": "No location found matching parameter 'q'"
+    },
+    "expected_status_code": 400
+  },
+  {
+    "description": "Request with date too close to present (less than 14 days)",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "dt": "2023-06-15",
+      "key": "${AUTH_TOKEN}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1004,
+      "message": "Specified date is not available. Date must be between 14 and 300 days from today."
+    },
+    "expected_status_code": 400
+  },
+  {
+    "description": "Request with date too far in future (more than 300 days)",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "dt": "2024-06-15",
+      "key": "${AUTH_TOKEN}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1004,
+      "message": "Specified date is not available. Date must be between 14 and 300 days from today."
+    },
+    "expected_status_code": 400
+  },
+  {
+    "description": "Request with invalid date format",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "dt": "25-12-2023",
+      "key": "${AUTH_TOKEN}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1004,
+      "message": "Invalid date format. Date format should be yyyy-MM-dd"
+    },
+    "expected_status_code": 400
+  },
+  {
+    "description": "Request with invalid language code",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "dt": "2023-12-25",
+      "lang": "invalid",
+      "key": "${AUTH_TOKEN}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "location": {
+        "name": "London",
+        "region": "City of London, Greater London",
+        "country": "United Kingdom",
+        "lat": 51.52,
+        "lon": -0.11,
+        "tz_id": "Europe/London",
+        "localtime_epoch": 1623433762,
+        "localtime": "2023-06-11 15:36"
+      },
+      "forecast": {
+        "forecastday": [
+          {
+            "date": "2023-12-25",
+            "date_epoch": 1703462400,
+            "day": {
+              "maxtemp_c": 8.5,
+              "maxtemp_f": 47.3,
+              "mintemp_c": 3.2,
+              "mintemp_f": 37.8,
+              "avgtemp_c": 5.7,
+              "avgtemp_f": 42.3,
+              "maxwind_mph": 10.5,
+              "maxwind_kph": 16.9,
+              "totalprecip_mm": 2.5,
+              "totalprecip_in": 0.1,
+              "avgvis_km": 9.0,
+              "avgvis_miles": 5.6,
+              "avghumidity": 78,
+              "daily_will_it_rain": 1,
+              "daily_chance_of_rain": 70,
+              "daily_will_it_snow": 0,
+              "daily_chance_of_snow": 0,
+              "condition": {
+                "text": "Partly cloudy",
+                "icon": "//cdn.weatherapi.com/weather/64x64/day/116.png",
+                "code": 1003
+              },
+              "uv": 2
+            },
+            "astro": {
+              "sunrise": "08:05 AM",
+              "sunset": "03:55 PM",
+              "moonrise": "12:35 PM",
+              "moonset": "11:15 PM",
+              "moon_phase": "First Quarter",
+              "moon_illumination": "50"
+            },
+            "hour": [
+              {
+                "time_epoch": 1703462400,
+                "time": "2023-12-25 00:00",
+                "temp_c": 4.3,
+                "temp_f": 39.7,
+                "is_day": 0,
+                "condition": {
+                  "text": "Clear",
+                  "icon": "//cdn.weatherapi.com/weather/64x64/night/113.png",
+                  "code": 1000
+                },
+                "wind_mph": 6.3,
+                "wind_kph": 10.1,
+                "wind_degree": 250,
+                "wind_dir": "WSW",
+                "pressure_mb": 1010,
+                "pressure_in": 29.82,
+                "precip_mm": 0,
+                "precip_in": 0,
+                "humidity": 85,
+                "cloud": 15,
+                "feelslike_c": 1.8,
+                "feelslike_f": 35.2,
+                "windchill_c": 1.8,
+                "windchill_f": 35.2,
+                "heatindex_c": 4.3,
+                "heatindex_f": 39.7,
+                "dewpoint_c": 2.1,
+                "dewpoint_f": 35.8,
+                "will_it_rain": 0,
+                "chance_of_rain": 0,
+                "will_it_snow": 0,
+                "chance_of_snow": 0,
+                "vis_km": 10,
+                "vis_miles": 6.2,
+                "gust_mph": 11.2,
+                "gust_kph": 18.0,
+                "uv": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "expected_status_code": 200
+  },
+  {
+    "description": "Request without API key",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1002,
+      "message": "API key not provided."
+    },
+    "expected_status_code": 401
+  },
+  {
+    "description": "Request with invalid API key",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "key": "invalid_api_key_12345"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 2006,
+      "message": "API key provided is invalid"
+    },
+    "expected_status_code": 401
+  },
+  {
+    "description": "Request with API key that has exceeded quota",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "key": "quota_exceeded_key_12345"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 2007,
+      "message": "API key has exceeded calls per month quota."
+    },
+    "expected_status_code": 403
+  },
+  {
+    "description": "Request with disabled API key",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "key": "disabled_key_12345"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 2008,
+      "message": "API key has been disabled."
+    },
+    "expected_status_code": 403
+  },
+  {
+    "description": "Request with API key that doesn't have access to this resource",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "key": "insufficient_plan_key_12345"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 2009,
+      "message": "API key does not have access to this resource. Please upgrade your subscription plan."
+    },
+    "expected_status_code": 403
+  },
+  {
+    "description": "Request with zipcode location format",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "10001",
+      "dt": "2023-12-25",
+      "key": "${AUTH_TOKEN}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "location": {
+        "name": "New York",
+        "region": "New York",
+        "country": "United States of America",
+        "lat": 40.75,
+        "lon": -73.99,
+        "tz_id": "America/New_York",
+        "localtime_epoch": 1623433762,
+        "localtime": "2023-06-11 10:36"
+      },
+      "forecast": {
+        "forecastday": [
+          {
+            "date": "2023-12-25",
+            "date_epoch": 1703462400,
+            "day": {
+              "maxtemp_c": 2.5,
+              "maxtemp_f": 36.5,
+              "mintemp_c": -3.2,
+              "mintemp_f": 26.2,
+              "avgtemp_c": -0.4,
+              "avgtemp_f": 31.3,
+              "maxwind_mph": 12.5,
+              "maxwind_kph": 20.2,
+              "totalprecip_mm": 1.2,
+              "totalprecip_in": 0.05,
+              "avgvis_km": 9.5,
+              "avgvis_miles": 5.9,
+              "avghumidity": 75,
+              "daily_will_it_rain": 1,
+              "daily_chance_of_rain": 65,
+              "daily_will_it_snow": 1,
+              "daily_chance_of_snow": 35,
+              "condition": {
+                "text": "Partly cloudy",
+                "icon": "//cdn.weatherapi.com/weather/64x64/day/116.png",
+                "code": 1003
+              },
+              "uv": 2
+            },
+            "astro": {
+              "sunrise": "07:15 AM",
+              "sunset": "04:32 PM",
+              "moonrise": "01:22 PM",
+              "moonset": "11:45 PM",
+              "moon_phase": "First Quarter",
+              "moon_illumination": "50"
+            },
+            "hour": [
+              {
+                "time_epoch": 1703462400,
+                "time": "2023-12-25 00:00",
+                "temp_c": -2.3,
+                "temp_f": 27.9,
+                "is_day": 0,
+                "condition": {
+                  "text": "Clear",
+                  "icon": "//cdn.weatherapi.com/weather/64x64/night/113.png",
+                  "code": 1000
+                },
+                "wind_mph": 8.1,
+                "wind_kph": 13.0,
+                "wind_degree": 290,
+                "wind_dir": "WNW",
+                "pressure_mb": 1020,
+                "pressure_in": 30.12,
+                "precip_mm": 0,
+                "precip_in": 0,
+                "humidity": 82,
+                "cloud": 10,
+                "feelslike_c": -6.8,
+                "feelslike_f": 19.8,
+                "windchill_c": -6.8,
+                "windchill_f": 19.8,
+                "heatindex_c": -2.3,
+                "heatindex_f": 27.9,
+                "dewpoint_c": -5.1,
+                "dewpoint_f": 22.8,
+                "will_it_rain": 0,
+                "chance_of_rain": 0,
+                "will_it_snow": 0,
+                "chance_of_snow": 0,
+                "vis_km": 10,
+                "vis_miles": 6.2,
+                "gust_mph": 14.3,
+                "gust_kph": 23.0,
+                "uv": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "expected_status_code": 200
+  },
+  {
+    "description": "Request with lat/long location format",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "51.5072,-0.1276",
+      "dt": "2023-12-25",
+      "key": "${AUTH_TOKEN}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "location": {
+        "name": "London",
+        "region": "City of London, Greater London",
+        "country": "United Kingdom",
+        "lat": 51.51,
+        "lon": -0.13,
+        "tz_id": "Europe/London",
+        "localtime_epoch": 1623433762,
+        "localtime": "2023-06-11 15:36"
+      },
+      "forecast": {
+        "forecastday": [
+          {
+            "date": "2023-12-25",
+            "date_epoch": 1703462400,
+            "day": {
+              "maxtemp_c": 8.5,
+              "maxtemp_f": 47.3,
+              "mintemp_c": 3.2,
+              "mintemp_f": 37.8,
+              "avgtemp_c": 5.7,
+              "avgtemp_f": 42.3,
+              "maxwind_mph": 10.5,
+              "maxwind_kph": 16.9,
+              "totalprecip_mm": 2.5,
+              "totalprecip_in": 0.1,
+              "avgvis_km": 9.0,
+              "avgvis_miles": 5.6,
+              "avghumidity": 78,
+              "daily_will_it_rain": 1,
+              "daily_chance_of_rain": 70,
+              "daily_will_it_snow": 0,
+              "daily_chance_of_snow": 0,
+              "condition": {
+                "text": "Partly cloudy",
+                "icon": "//cdn.weatherapi.com/weather/64x64/day/116.png",
+                "code": 1003
+              },
+              "uv": 2
+            },
+            "astro": {
+              "sunrise": "08:05 AM",
+              "sunset": "03:55 PM",
+              "moonrise": "12:35 PM",
+              "moonset": "11:15 PM",
+              "moon_phase": "First Quarter",
+              "moon_illumination": "50"
+            },
+            "hour": [
+              {
+                "time_epoch": 1703462400,
+                "time": "2023-12-25 00:00",
+                "temp_c": 4.3,
+                "temp_f": 39.7,
+                "is_day": 0,
+                "condition": {
+                  "text": "Clear",
+                  "icon": "//cdn.weatherapi.com/weather/64x64/night/113.png",
+                  "code": 1000
+                },
+                "wind_mph": 6.3,
+                "wind_kph": 10.1,
+                "wind_degree": 250,
+                "wind_dir": "WSW",
+                "pressure_mb": 1010,
+                "pressure_in": 29.82,
+                "precip_mm": 0,
+                "precip_in": 0,
+                "humidity": 85,
+                "cloud": 15,
+                "feelslike_c": 1.8,
+                "feelslike_f": 35.2,
+                "windchill_c": 1.8,
+                "windchill_f": 35.2,
+                "heatindex_c": 4.3,
+                "heatindex_f": 39.7,
+                "dewpoint_c": 2.1,
+                "dewpoint_f": 35.8,
+                "will_it_rain": 0,
+                "chance_of_rain": 0,
+                "will_it_snow": 0,
+                "chance_of_snow": 0,
+                "vis_km": 10,
+                "vis_miles": 6.2,
+                "gust_mph": 11.2,
+                "gust_kph": 18.0,
+                "uv": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "expected_status_code": 200
+  }
+]

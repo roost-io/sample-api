@@ -1,0 +1,280 @@
+[
+  {
+    "description": "Test search with a valid city name",
+    "request_header": {
+      "key": "${API_KEY}"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": [
+      {
+        "id": 2801268,
+        "name": "London",
+        "region": "City of London, Greater London",
+        "country": "United Kingdom",
+        "lat": 51.52,
+        "lon": -0.11,
+        "url": "london-city-of-london-greater-london-united-kingdom"
+      }
+    ],
+    "expected_status_code": 200
+  },
+  {
+    "description": "Test search with a valid US zipcode",
+    "request_header": {
+      "key": "${API_KEY}"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "90210"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": [
+      {
+        "id": 2123394,
+        "name": "Beverly Hills",
+        "region": "California",
+        "country": "United States of America",
+        "lat": 34.07,
+        "lon": -118.4,
+        "url": "beverly-hills-california-united-states-of-america"
+      }
+    ],
+    "expected_status_code": 200
+  },
+  {
+    "description": "Test search with valid latitude/longitude coordinates",
+    "request_header": {
+      "key": "${API_KEY}"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "51.52,-0.12"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": [
+      {
+        "id": 2801268,
+        "name": "London",
+        "region": "City of London, Greater London",
+        "country": "United Kingdom",
+        "lat": 51.52,
+        "lon": -0.11,
+        "url": "london-city-of-london-greater-london-united-kingdom"
+      }
+    ],
+    "expected_status_code": 200
+  },
+  {
+    "description": "Test search with a valid IP address",
+    "request_header": {
+      "key": "${API_KEY}"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "8.8.8.8"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": [
+      {
+        "id": 2703400,
+        "name": "Mountain View",
+        "region": "California",
+        "country": "United States of America",
+        "lat": 37.39,
+        "lon": -122.08,
+        "url": "mountain-view-california-united-states-of-america"
+      }
+    ],
+    "expected_status_code": 200
+  },
+  {
+    "description": "Test search without required query parameter",
+    "request_header": {
+      "key": "${API_KEY}"
+    },
+    "request_body": {},
+    "query_params": {},
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1003,
+      "message": "Parameter 'q' not provided"
+    },
+    "expected_status_code": 400
+  },
+  {
+    "description": "Test search with empty query parameter",
+    "request_header": {
+      "key": "${API_KEY}"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": ""
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1003,
+      "message": "Parameter 'q' not provided"
+    },
+    "expected_status_code": 400
+  },
+  {
+    "description": "Test search with non-existent location",
+    "request_header": {
+      "key": "${API_KEY}"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "XYZNonExistentCity123"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1006,
+      "message": "No location found matching parameter 'q'"
+    },
+    "expected_status_code": 400
+  },
+  {
+    "description": "Test search without API key",
+    "request_header": {},
+    "request_body": {},
+    "query_params": {
+      "q": "London"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1002,
+      "message": "API key not provided"
+    },
+    "expected_status_code": 401
+  },
+  {
+    "description": "Test search with invalid API key",
+    "request_header": {
+      "key": "invalid_api_key_12345"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 2006,
+      "message": "API key provided is invalid"
+    },
+    "expected_status_code": 401
+  },
+  {
+    "description": "Test search with special characters in query parameter",
+    "request_header": {
+      "key": "${API_KEY}"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "New York!@#$%^&*()"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": [
+      {
+        "id": 2515316,
+        "name": "New York",
+        "region": "New York",
+        "country": "United States of America",
+        "lat": 40.71,
+        "lon": -74.01,
+        "url": "new-york-new-york-united-states-of-america"
+      }
+    ],
+    "expected_status_code": 200
+  },
+  {
+    "description": "Test with API key that exceeded quota",
+    "request_header": {
+      "key": "exceeded_quota_key"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 2007,
+      "message": "API key has exceeded calls per month quota"
+    },
+    "expected_status_code": 403
+  },
+  {
+    "description": "Test with disabled API key",
+    "request_header": {
+      "key": "disabled_api_key"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 2008,
+      "message": "API key has been disabled"
+    },
+    "expected_status_code": 403
+  },
+  {
+    "description": "Test with very long query parameter",
+    "request_header": {
+      "key": "${API_KEY}"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1005,
+      "message": "Request URL is too large"
+    },
+    "expected_status_code": 400
+  }
+]

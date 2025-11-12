@@ -1,0 +1,513 @@
+[
+  {
+    "description": "Valid forecast request with required parameters",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "key": "${API_KEY}",
+      "q": "London",
+      "days": 3
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "location": {
+        "name": "London",
+        "region": "City of London, Greater London",
+        "country": "United Kingdom"
+      },
+      "current": {
+        "temp_c": 15.0,
+        "condition": {
+          "text": "Partly cloudy",
+          "icon": "//cdn.weatherapi.com/weather/64x64/day/116.png"
+        }
+      },
+      "forecast": {
+        "forecastday": [
+          {
+            "date": "2023-09-01",
+            "day": {
+              "maxtemp_c": 18.5,
+              "mintemp_c": 12.3
+            }
+          }
+        ]
+      }
+    },
+    "expected_status_code": 200
+  },
+  {
+    "description": "Missing required location parameter",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "key": "${API_KEY}",
+      "days": 3
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1003,
+      "message": "Parameter 'q' not provided."
+    },
+    "expected_status_code": 400
+  },
+  {
+    "description": "Missing required days parameter",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "key": "${API_KEY}",
+      "q": "London"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1003,
+      "message": "Parameter 'days' not provided."
+    },
+    "expected_status_code": 400
+  },
+  {
+    "description": "Invalid location parameter",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "key": "${API_KEY}",
+      "q": "NonExistentCity123456",
+      "days": 3
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1006,
+      "message": "No location found matching parameter 'q'"
+    },
+    "expected_status_code": 400
+  },
+  {
+    "description": "Days parameter outside allowed range",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "key": "${API_KEY}",
+      "q": "London",
+      "days": 20
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1003,
+      "message": "Parameter 'days' value 20 is invalid. Valid range is between 1 and 14."
+    },
+    "expected_status_code": 400
+  },
+  {
+    "description": "Missing API key",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "days": 3
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1002,
+      "message": "API key not provided."
+    },
+    "expected_status_code": 401
+  },
+  {
+    "description": "Invalid API key",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "key": "invalid_api_key_12345",
+      "q": "London",
+      "days": 3
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 2006,
+      "message": "API key provided is invalid"
+    },
+    "expected_status_code": 401
+  },
+  {
+    "description": "Valid request with optional date parameter",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "key": "${API_KEY}",
+      "q": "London",
+      "days": 5,
+      "dt": "2023-12-25"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "location": {
+        "name": "London"
+      },
+      "forecast": {
+        "forecastday": [
+          {
+            "date": "2023-12-25"
+          }
+        ]
+      }
+    },
+    "expected_status_code": 200
+  },
+  {
+    "description": "Invalid date format",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "key": "${API_KEY}",
+      "q": "London",
+      "days": 3,
+      "dt": "25-12-2023"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1003,
+      "message": "Parameter 'dt' value '25-12-2023' is invalid. Date format should be yyyy-MM-dd"
+    },
+    "expected_status_code": 400
+  },
+  {
+    "description": "Using both date and unixdt parameters",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "key": "${API_KEY}",
+      "q": "London",
+      "days": 3,
+      "dt": "2023-12-25",
+      "unixdt": 1703462400
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1003,
+      "message": "Parameters 'dt' and 'unixdt' cannot be used together"
+    },
+    "expected_status_code": 400
+  },
+  {
+    "description": "Valid request with optional hour parameter",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "key": "${API_KEY}",
+      "q": "London",
+      "days": 3,
+      "hour": 15
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "location": {
+        "name": "London"
+      },
+      "forecast": {
+        "forecastday": [
+          {
+            "hour": [
+              {
+                "time": "2023-09-01 15:00"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "expected_status_code": 200
+  },
+  {
+    "description": "Invalid hour parameter",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "key": "${API_KEY}",
+      "q": "London",
+      "days": 3,
+      "hour": 25
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1003,
+      "message": "Parameter 'hour' value 25 is invalid. Valid range is between 0 and 24."
+    },
+    "expected_status_code": 400
+  },
+  {
+    "description": "Valid request with optional language parameter",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "key": "${API_KEY}",
+      "q": "London",
+      "days": 3,
+      "lang": "fr"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "location": {
+        "name": "London"
+      },
+      "current": {
+        "condition": {
+          "text": "Partiellement nuageux"
+        }
+      }
+    },
+    "expected_status_code": 200
+  },
+  {
+    "description": "Valid request with optional alerts parameter",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "key": "${API_KEY}",
+      "q": "London",
+      "days": 3,
+      "alerts": "yes"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "location": {
+        "name": "London"
+      },
+      "alerts": {
+        "alert": []
+      }
+    },
+    "expected_status_code": 200
+  },
+  {
+    "description": "Valid request with optional air quality parameter",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "key": "${API_KEY}",
+      "q": "London",
+      "days": 3,
+      "aqi": "yes"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "location": {
+        "name": "London"
+      },
+      "current": {
+        "air_quality": {
+          "co": 250.3,
+          "no2": 12.5,
+          "o3": 52.1,
+          "pm2_5": 8.6
+        }
+      }
+    },
+    "expected_status_code": 200
+  },
+  {
+    "description": "Maximum allowed days parameter",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "key": "${API_KEY}",
+      "q": "London",
+      "days": 14
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "location": {
+        "name": "London"
+      },
+      "forecast": {
+        "forecastday": [
+          {
+            "date": "2023-09-01"
+          }
+        ]
+      }
+    },
+    "expected_status_code": 200
+  },
+  {
+    "description": "Non-numeric days parameter",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "key": "${API_KEY}",
+      "q": "London",
+      "days": "three"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1003,
+      "message": "Parameter 'days' value 'three' is invalid. Expected integer."
+    },
+    "expected_status_code": 400
+  },
+  {
+    "description": "Using latitude/longitude as location parameter",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "key": "${API_KEY}",
+      "q": "51.5072,-0.1276",
+      "days": 3
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "location": {
+        "name": "London",
+        "lat": 51.51,
+        "lon": -0.13
+      }
+    },
+    "expected_status_code": 200
+  },
+  {
+    "description": "Using IP address as location parameter",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "key": "${API_KEY}",
+      "q": "auto:ip",
+      "days": 3
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "location": {
+        "name": "Mountain View"
+      }
+    },
+    "expected_status_code": 200
+  },
+  {
+    "description": "Request with all optional parameters",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "key": "${API_KEY}",
+      "q": "London",
+      "days": 5,
+      "aqi": "yes",
+      "alerts": "yes",
+      "lang": "de",
+      "hour": 12,
+      "tp": 60
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "location": {
+        "name": "London"
+      },
+      "current": {
+        "condition": {
+          "text": "Teilweise bewölkt"
+        },
+        "air_quality": {}
+      },
+      "alerts": {}
+    },
+    "expected_status_code": 200
+  }
+]
