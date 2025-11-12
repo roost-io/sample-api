@@ -1,0 +1,629 @@
+[
+  {
+    "description": "Test a valid request with required location and days parameters",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "days": 3,
+      "key": "${API_KEY}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "location": {
+        "name": "London",
+        "region": "City of London, Greater London",
+        "country": "United Kingdom",
+        "lat": 51.52,
+        "lon": -0.11,
+        "tz_id": "Europe/London",
+        "localtime_epoch": 1623856417,
+        "localtime": "2023-12-15 12:00"
+      },
+      "current": {
+        "temp_c": 15.0,
+        "condition": {
+          "text": "Partly cloudy",
+          "icon": "//cdn.weatherapi.com/weather/64x64/day/116.png",
+          "code": 1003
+        }
+      },
+      "forecast": {
+        "forecastday": [
+          {
+            "date": "2023-12-15",
+            "day": {
+              "maxtemp_c": 16.7,
+              "mintemp_c": 10.2,
+              "condition": {
+                "text": "Partly cloudy",
+                "icon": "//cdn.weatherapi.com/weather/64x64/day/116.png",
+                "code": 1003
+              }
+            }
+          }
+        ]
+      }
+    },
+    "expected_status_code": 200
+  },
+  {
+    "description": "Test request without the required location parameter",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "days": 3,
+      "key": "${API_KEY}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1003,
+      "message": "Parameter 'q' not provided."
+    },
+    "expected_status_code": 400
+  },
+  {
+    "description": "Test request without the required days parameter",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "key": "${API_KEY}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1003,
+      "message": "Parameter 'days' not provided."
+    },
+    "expected_status_code": 400
+  },
+  {
+    "description": "Test request with non-existent location",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "NonExistentCity12345",
+      "days": 3,
+      "key": "${API_KEY}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1006,
+      "message": "No location found matching parameter 'q'"
+    },
+    "expected_status_code": 400
+  },
+  {
+    "description": "Test request with days parameter outside allowed range",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "days": 20,
+      "key": "${API_KEY}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1003,
+      "message": "Days parameter must be between 1 and 14."
+    },
+    "expected_status_code": 400
+  },
+  {
+    "description": "Test request without providing an API key",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "days": 3
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1002,
+      "message": "API key not provided."
+    },
+    "expected_status_code": 401
+  },
+  {
+    "description": "Test request with invalid API key",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "days": 3,
+      "key": "invalid_api_key_12345"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 2006,
+      "message": "API key provided is invalid"
+    },
+    "expected_status_code": 401
+  },
+  {
+    "description": "Test request with optional date parameter",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "days": 3,
+      "dt": "2023-12-15",
+      "key": "${API_KEY}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "location": {
+        "name": "London"
+      },
+      "forecast": {
+        "forecastday": [
+          {
+            "date": "2023-12-15"
+          }
+        ]
+      }
+    },
+    "expected_status_code": 200
+  },
+  {
+    "description": "Test request with invalid date format",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "days": 3,
+      "dt": "15-12-2023",
+      "key": "${API_KEY}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1003,
+      "message": "Invalid date format. Expected format: yyyy-MM-dd"
+    },
+    "expected_status_code": 400
+  },
+  {
+    "description": "Test request with both dt and unixdt parameters which is not allowed",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "days": 3,
+      "dt": "2023-12-15",
+      "unixdt": 1670288400,
+      "key": "${API_KEY}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1003,
+      "message": "Parameters dt and unixdt cannot be used together in the same request."
+    },
+    "expected_status_code": 400
+  },
+  {
+    "description": "Test request using US zipcode as location",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "10001",
+      "days": 3,
+      "key": "${API_KEY}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "location": {
+        "name": "New York",
+        "region": "New York",
+        "country": "United States of America"
+      }
+    },
+    "expected_status_code": 200
+  },
+  {
+    "description": "Test request using latitude/longitude as location",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "40.71,-74.01",
+      "days": 3,
+      "key": "${API_KEY}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "location": {
+        "name": "New York",
+        "region": "New York",
+        "country": "United States of America",
+        "lat": 40.71,
+        "lon": -74.01
+      }
+    },
+    "expected_status_code": 200
+  },
+  {
+    "description": "Test request with optional hour parameter",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "days": 3,
+      "hour": 15,
+      "key": "${API_KEY}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "forecast": {
+        "forecastday": [
+          {
+            "hour": [
+              {
+                "time": "2023-12-15 15:00",
+                "temp_c": 15.3
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "expected_status_code": 200
+  },
+  {
+    "description": "Test request with hour parameter outside valid range",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "days": 3,
+      "hour": 25,
+      "key": "${API_KEY}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1003,
+      "message": "Hour parameter must be between 0 and 23."
+    },
+    "expected_status_code": 400
+  },
+  {
+    "description": "Test request with alerts parameter enabled",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "days": 3,
+      "alerts": "yes",
+      "key": "${API_KEY}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "alerts": {
+        "alert": []
+      }
+    },
+    "expected_status_code": 200
+  },
+  {
+    "description": "Test request with air quality parameter enabled",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "days": 3,
+      "aqi": "yes",
+      "key": "${API_KEY}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "current": {
+        "air_quality": {
+          "co": 250.3,
+          "no2": 12.5,
+          "o3": 52.2,
+          "so2": 8.1,
+          "pm2_5": 15.4,
+          "pm10": 23.2,
+          "us-epa-index": 2,
+          "gb-defra-index": 2
+        }
+      }
+    },
+    "expected_status_code": 200
+  },
+  {
+    "description": "Test request with non-default language parameter",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "Paris",
+      "days": 3,
+      "lang": "fr",
+      "key": "${API_KEY}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "current": {
+        "condition": {
+          "text": "Partiellement nuageux"
+        }
+      }
+    },
+    "expected_status_code": 200
+  },
+  {
+    "description": "Test request with invalid language code",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "days": 3,
+      "lang": "invalidcode",
+      "key": "${API_KEY}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "current": {
+        "condition": {
+          "text": "Partly cloudy"
+        }
+      }
+    },
+    "expected_status_code": 200
+  },
+  {
+    "description": "Test request with maximum allowed forecast days",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "days": 14,
+      "key": "${API_KEY}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "forecast": {
+        "forecastday": [
+          {"date": "2023-12-15"},
+          {"date": "2023-12-16"},
+          {"date": "2023-12-17"},
+          {"date": "2023-12-18"},
+          {"date": "2023-12-19"},
+          {"date": "2023-12-20"},
+          {"date": "2023-12-21"},
+          {"date": "2023-12-22"},
+          {"date": "2023-12-23"},
+          {"date": "2023-12-24"},
+          {"date": "2023-12-25"},
+          {"date": "2023-12-26"},
+          {"date": "2023-12-27"},
+          {"date": "2023-12-28"}
+        ]
+      }
+    },
+    "expected_status_code": 200
+  },
+  {
+    "description": "Test request with invalid alerts parameter value",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "days": 3,
+      "alerts": "invalid",
+      "key": "${API_KEY}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {},
+    "expected_status_code": 200
+  },
+  {
+    "description": "Test request when API key has exceeded quota",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "days": 3,
+      "key": "quota_exceeded_key"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 2007,
+      "message": "API key has exceeded calls per month quota."
+    },
+    "expected_status_code": 403
+  },
+  {
+    "description": "Test request using IP address as location",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "8.8.8.8",
+      "days": 3,
+      "key": "${API_KEY}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "location": {
+        "country": "United States of America"
+      }
+    },
+    "expected_status_code": 200
+  },
+  {
+    "description": "Test request with optional unixdt parameter instead of date",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "days": 3,
+      "unixdt": 1670288400,
+      "key": "${API_KEY}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "forecast": {
+        "forecastday": [
+          {
+            "date": "2022-12-06"
+          }
+        ]
+      }
+    },
+    "expected_status_code": 200
+  },
+  {
+    "description": "Test request with XML response format",
+    "request_header": {
+      "Content-Type": "application/xml",
+      "Accept": "application/xml"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "days": 3,
+      "key": "${API_KEY}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/xml"
+    },
+    "response_body": "<root><location><name>London</name></location></root>",
+    "expected_status_code": 200
+  },
+  {
+    "description": "Test request with future date out of range",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "days": 3,
+      "dt": "2024-12-15",
+      "key": "${API_KEY}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1003,
+      "message": "Date parameter is outside the allowed forecast range."
+    },
+    "expected_status_code": 400
+  }
+]

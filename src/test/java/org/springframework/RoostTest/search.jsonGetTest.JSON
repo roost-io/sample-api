@@ -1,0 +1,460 @@
+[
+  {
+    "description": "Test search with a valid city name",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "key": "${API_KEY}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": [
+      {
+        "id": 2801268,
+        "name": "London",
+        "region": "City of London, Greater London",
+        "country": "United Kingdom",
+        "lat": 51.52,
+        "lon": -0.11,
+        "url": "london-city-of-london-greater-london-united-kingdom"
+      }
+    ],
+    "expected_status_code": 200
+  },
+  {
+    "description": "Test search with a valid US zipcode",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "90210",
+      "key": "${API_KEY}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": [
+      {
+        "id": 2123394,
+        "name": "Beverly Hills",
+        "region": "California",
+        "country": "United States of America",
+        "lat": 34.09,
+        "lon": -118.41,
+        "url": "beverly-hills-california-united-states-of-america"
+      }
+    ],
+    "expected_status_code": 200
+  },
+  {
+    "description": "Test search with valid latitude/longitude coordinates",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "51.52,-0.12",
+      "key": "${API_KEY}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": [
+      {
+        "id": 2801268,
+        "name": "London",
+        "region": "City of London, Greater London",
+        "country": "United Kingdom",
+        "lat": 51.52,
+        "lon": -0.12,
+        "url": "london-city-of-london-greater-london-united-kingdom"
+      }
+    ],
+    "expected_status_code": 200
+  },
+  {
+    "description": "Test search with a valid IP address",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "8.8.8.8",
+      "key": "${API_KEY}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": [
+      {
+        "id": 5375480,
+        "name": "Mountain View",
+        "region": "California",
+        "country": "United States of America",
+        "lat": 37.39,
+        "lon": -122.08,
+        "url": "mountain-view-california-united-states-of-america"
+      }
+    ],
+    "expected_status_code": 200
+  },
+  {
+    "description": "Test autocomplete functionality with partial city name",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "New",
+      "key": "${API_KEY}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": [
+      {
+        "id": 5128581,
+        "name": "New York",
+        "region": "New York",
+        "country": "United States of America",
+        "lat": 40.71,
+        "lon": -74.01,
+        "url": "new-york-new-york-united-states-of-america"
+      },
+      {
+        "id": 4335045,
+        "name": "New Orleans",
+        "region": "Louisiana",
+        "country": "United States of America",
+        "lat": 29.95,
+        "lon": -90.07,
+        "url": "new-orleans-louisiana-united-states-of-america"
+      }
+    ],
+    "expected_status_code": 200
+  },
+  {
+    "description": "Test API behavior when required query parameter 'q' is missing",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "key": "${API_KEY}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1003,
+      "message": "Parameter 'q' not provided"
+    },
+    "expected_status_code": 400
+  },
+  {
+    "description": "Test API behavior when query parameter 'q' is empty",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "",
+      "key": "${API_KEY}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1003,
+      "message": "Parameter 'q' not provided"
+    },
+    "expected_status_code": 400
+  },
+  {
+    "description": "Test API behavior with a non-existent location name",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "XYZnonexistent123",
+      "key": "${API_KEY}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1006,
+      "message": "No location found matching parameter 'q'"
+    },
+    "expected_status_code": 400
+  },
+  {
+    "description": "Test API behavior when API key is missing",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1002,
+      "message": "API key not provided"
+    },
+    "expected_status_code": 401
+  },
+  {
+    "description": "Test API behavior with invalid API key",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "key": "invalid_key_123"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 2006,
+      "message": "API key provided is invalid"
+    },
+    "expected_status_code": 401
+  },
+  {
+    "description": "Test API behavior when API key has exceeded its quota",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "key": "${QUOTA_EXCEEDED_KEY}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 2007,
+      "message": "API key has exceeded calls per month quota"
+    },
+    "expected_status_code": 403
+  },
+  {
+    "description": "Test API behavior when API key has been disabled",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "key": "${DISABLED_API_KEY}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 2008,
+      "message": "API key has been disabled"
+    },
+    "expected_status_code": 403
+  },
+  {
+    "description": "Test search with query containing special characters",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "São Paulo",
+      "key": "${API_KEY}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": [
+      {
+        "id": 3448439,
+        "name": "São Paulo",
+        "region": "São Paulo",
+        "country": "Brazil",
+        "lat": -23.55,
+        "lon": -46.64,
+        "url": "sao-paulo-sao-paulo-brazil"
+      }
+    ],
+    "expected_status_code": 200
+  },
+  {
+    "description": "Test search with Unicode characters in query parameter",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "Москва",
+      "key": "${API_KEY}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": [
+      {
+        "id": 524901,
+        "name": "Moscow",
+        "region": "Moscow City",
+        "country": "Russia",
+        "lat": 55.75,
+        "lon": 37.62,
+        "url": "moscow-moscow-city-russia"
+      }
+    ],
+    "expected_status_code": 200
+  },
+  {
+    "description": "Test search with an unusually long city name",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "Llanfairpwllgwyngyllgogerychwyrndrobwllllantysiliogogogoch",
+      "key": "${API_KEY}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": [
+      {
+        "id": 2644671,
+        "name": "Llanfairpwllgwyngyll",
+        "region": "Wales",
+        "country": "United Kingdom",
+        "lat": 53.22,
+        "lon": -4.19,
+        "url": "llanfairpwllgwyngyll-wales-united-kingdom"
+      }
+    ],
+    "expected_status_code": 200
+  },
+  {
+    "description": "Test API with XML content type",
+    "request_header": {
+      "Content-Type": "application/xml",
+      "Accept": "application/xml"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "key": "${API_KEY}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": [
+      {
+        "id": 2801268,
+        "name": "London",
+        "region": "City of London, Greater London",
+        "country": "United Kingdom",
+        "lat": 51.52,
+        "lon": -0.11,
+        "url": "london-city-of-london-greater-london-united-kingdom"
+      }
+    ],
+    "expected_status_code": 200
+  },
+  {
+    "description": "Test with extremely large numeric values in query",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "999999999999999999999",
+      "key": "${API_KEY}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1006,
+      "message": "No location found matching parameter 'q'"
+    },
+    "expected_status_code": 400
+  },
+  {
+    "description": "Test with special HTML characters in query parameter",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "<script>alert('test')</script>",
+      "key": "${API_KEY}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1006,
+      "message": "No location found matching parameter 'q'"
+    },
+    "expected_status_code": 400
+  },
+  {
+    "description": "Test with very precise latitude/longitude coordinates",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "51.5074456,-0.1277653",
+      "key": "${API_KEY}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": [
+      {
+        "id": 2801268,
+        "name": "London",
+        "region": "City of London, Greater London",
+        "country": "United Kingdom",
+        "lat": 51.51,
+        "lon": -0.13,
+        "url": "london-city-of-london-greater-london-united-kingdom"
+      }
+    ],
+    "expected_status_code": 200
+  }
+]

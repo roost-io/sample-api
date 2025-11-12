@@ -1,0 +1,445 @@
+[
+  {
+    "description": "Test timezone API with a valid US zipcode",
+    "request_header": {
+      "Accept": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "10001",
+      "key": "${AUTH_TOKEN}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "name": "New York",
+      "region": "New York",
+      "country": "United States of America",
+      "lat": 40.71,
+      "lon": -74.01,
+      "tz_id": "America/New_York",
+      "localtime_epoch": 1619712345,
+      "localtime": "2023-04-29 12:45"
+    },
+    "expected_status_code": 200
+  },
+  {
+    "description": "Test timezone API with a valid city name",
+    "request_header": {
+      "Accept": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "key": "${AUTH_TOKEN}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "name": "London",
+      "region": "City of London, Greater London",
+      "country": "United Kingdom",
+      "lat": 51.52,
+      "lon": -0.11,
+      "tz_id": "Europe/London",
+      "localtime_epoch": 1619712345,
+      "localtime": "2023-04-29 12:45"
+    },
+    "expected_status_code": 200
+  },
+  {
+    "description": "Test timezone API with valid latitude/longitude coordinates",
+    "request_header": {
+      "Accept": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "40.71,-74.01",
+      "key": "${AUTH_TOKEN}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "name": "New York",
+      "region": "New York",
+      "country": "United States of America",
+      "lat": 40.71,
+      "lon": -74.01,
+      "tz_id": "America/New_York",
+      "localtime_epoch": 1619712345,
+      "localtime": "2023-04-29 12:45"
+    },
+    "expected_status_code": 200
+  },
+  {
+    "description": "Test timezone API with a valid IP address",
+    "request_header": {
+      "Accept": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "8.8.8.8",
+      "key": "${AUTH_TOKEN}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "name": "Mountain View",
+      "region": "California",
+      "country": "United States of America",
+      "lat": 37.42,
+      "lon": -122.08,
+      "tz_id": "America/Los_Angeles",
+      "localtime_epoch": 1619712345,
+      "localtime": "2023-04-29 09:45"
+    },
+    "expected_status_code": 200
+  },
+  {
+    "description": "Test timezone API with missing q parameter",
+    "request_header": {
+      "Accept": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "key": "${AUTH_TOKEN}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1003,
+      "message": "Parameter 'q' not provided."
+    },
+    "expected_status_code": 400
+  },
+  {
+    "description": "Test timezone API with non-existent location",
+    "request_header": {
+      "Accept": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "NonExistentCity123",
+      "key": "${AUTH_TOKEN}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1006,
+      "message": "No location found matching parameter 'q'"
+    },
+    "expected_status_code": 400
+  },
+  {
+    "description": "Test timezone API with empty q parameter",
+    "request_header": {
+      "Accept": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "",
+      "key": "${AUTH_TOKEN}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1003,
+      "message": "Parameter 'q' not provided."
+    },
+    "expected_status_code": 400
+  },
+  {
+    "description": "Test timezone API without providing API key",
+    "request_header": {
+      "Accept": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1002,
+      "message": "API key not provided"
+    },
+    "expected_status_code": 401
+  },
+  {
+    "description": "Test timezone API with invalid API key",
+    "request_header": {
+      "Accept": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "key": "invalid_api_key_12345"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 2006,
+      "message": "API key provided is invalid"
+    },
+    "expected_status_code": 401
+  },
+  {
+    "description": "Test timezone API with quota exceeded API key",
+    "request_header": {
+      "Accept": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "key": "quota_exceeded_key"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 2007,
+      "message": "API key has exceeded calls per month quota."
+    },
+    "expected_status_code": 403
+  },
+  {
+    "description": "Test timezone API with disabled API key",
+    "request_header": {
+      "Accept": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "key": "disabled_api_key"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 2008,
+      "message": "API key has been disabled."
+    },
+    "expected_status_code": 403
+  },
+  {
+    "description": "Test timezone API with unauthorized subscription plan",
+    "request_header": {
+      "Accept": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "key": "unauthorized_plan_key"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 2009,
+      "message": "API key does not have access to the requested resource."
+    },
+    "expected_status_code": 403
+  },
+  {
+    "description": "Test timezone API with special characters in query parameter",
+    "request_header": {
+      "Accept": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "New York City #1",
+      "key": "${AUTH_TOKEN}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "name": "New York",
+      "region": "New York",
+      "country": "United States of America",
+      "lat": 40.71,
+      "lon": -74.01,
+      "tz_id": "America/New_York",
+      "localtime_epoch": 1619712345,
+      "localtime": "2023-04-29 12:45"
+    },
+    "expected_status_code": 200
+  },
+  {
+    "description": "Test timezone API with Unicode characters in city name",
+    "request_header": {
+      "Accept": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "Köln",
+      "key": "${AUTH_TOKEN}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "name": "Cologne",
+      "region": "North Rhine-Westphalia",
+      "country": "Germany",
+      "lat": 50.93,
+      "lon": 6.95,
+      "tz_id": "Europe/Berlin",
+      "localtime_epoch": 1619712345,
+      "localtime": "2023-04-29 14:45"
+    },
+    "expected_status_code": 200
+  },
+  {
+    "description": "Test timezone API with Unicode characters for a non-Latin alphabet city",
+    "request_header": {
+      "Accept": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "上海",
+      "key": "${AUTH_TOKEN}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "name": "Shanghai",
+      "region": "Shanghai",
+      "country": "China",
+      "lat": 31.22,
+      "lon": 121.46,
+      "tz_id": "Asia/Shanghai",
+      "localtime_epoch": 1619712345,
+      "localtime": "2023-04-29 20:45"
+    },
+    "expected_status_code": 200
+  },
+  {
+    "description": "Test timezone API with invalid URL path",
+    "request_header": {
+      "Accept": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "key": "${AUTH_TOKEN}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1005,
+      "message": "API request url is invalid."
+    },
+    "expected_status_code": 400
+  },
+  {
+    "description": "Test timezone API with extremely long location name",
+    "request_header": {
+      "Accept": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "ThisIsAnExtremelyLongLocationNameThatExceedsTheReasonableLengthForALocationNameAndShouldBeTreatedAsInvalidOrAtLeastHandledGracefullyByTheAPI",
+      "key": "${AUTH_TOKEN}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1006,
+      "message": "No location found matching parameter 'q'"
+    },
+    "expected_status_code": 400
+  },
+  {
+    "description": "Test timezone API with XML response format",
+    "request_header": {
+      "Accept": "application/xml"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "key": "${AUTH_TOKEN}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/xml"
+    },
+    "response_body": "XML response containing location data for London",
+    "expected_status_code": 200
+  },
+  {
+    "description": "Test timezone API with extreme latitude/longitude values",
+    "request_header": {
+      "Accept": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "90,180",
+      "key": "${AUTH_TOKEN}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "name": "North Pole",
+      "region": "",
+      "country": "",
+      "lat": 90,
+      "lon": 180,
+      "tz_id": "Etc/GMT-12",
+      "localtime_epoch": 1619712345,
+      "localtime": "2023-04-30 00:45"
+    },
+    "expected_status_code": 200
+  },
+  {
+    "description": "Test timezone API with invalid latitude/longitude format",
+    "request_header": {
+      "Accept": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "40.71,abc",
+      "key": "${AUTH_TOKEN}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1006,
+      "message": "No location found matching parameter 'q'"
+    },
+    "expected_status_code": 400
+  }
+]
