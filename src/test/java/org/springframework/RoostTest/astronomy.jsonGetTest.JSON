@@ -1,0 +1,542 @@
+[
+  {
+    "description": "Test a valid request with US zip code",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "10001",
+      "dt": "2023-01-01",
+      "key": "${API_KEY}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "location": {
+        "name": "New York",
+        "region": "New York",
+        "country": "United States of America",
+        "lat": 40.71,
+        "lon": -74.01,
+        "tz_id": "America/New_York",
+        "localtime_epoch": 1672531200,
+        "localtime": "2023-01-01 0:00"
+      },
+      "astronomy": {
+        "astro": {
+          "sunrise": "07:20 AM",
+          "sunset": "04:39 PM",
+          "moonrise": "01:25 PM",
+          "moonset": "01:37 AM",
+          "moon_phase": "Waxing Gibbous",
+          "moon_illumination": "76"
+        }
+      }
+    },
+    "expected_status_code": 200
+  },
+  {
+    "description": "Test a valid request with city name",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "dt": "2023-01-01",
+      "key": "${API_KEY}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "location": {
+        "name": "London",
+        "region": "City of London, Greater London",
+        "country": "United Kingdom",
+        "lat": 51.52,
+        "lon": -0.11,
+        "tz_id": "Europe/London",
+        "localtime_epoch": 1672531200,
+        "localtime": "2023-01-01 0:00"
+      },
+      "astronomy": {
+        "astro": {
+          "sunrise": "08:06 AM",
+          "sunset": "04:01 PM",
+          "moonrise": "12:20 PM",
+          "moonset": "11:51 PM",
+          "moon_phase": "Waxing Gibbous",
+          "moon_illumination": "76"
+        }
+      }
+    },
+    "expected_status_code": 200
+  },
+  {
+    "description": "Test a valid request with latitude/longitude",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "40.71,-74.01",
+      "dt": "2023-01-01",
+      "key": "${API_KEY}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "location": {
+        "name": "New York",
+        "region": "New York",
+        "country": "United States of America",
+        "lat": 40.71,
+        "lon": -74.01,
+        "tz_id": "America/New_York",
+        "localtime_epoch": 1672531200,
+        "localtime": "2023-01-01 0:00"
+      },
+      "astronomy": {
+        "astro": {
+          "sunrise": "07:20 AM",
+          "sunset": "04:39 PM",
+          "moonrise": "01:25 PM",
+          "moonset": "01:37 AM",
+          "moon_phase": "Waxing Gibbous",
+          "moon_illumination": "76"
+        }
+      }
+    },
+    "expected_status_code": 200
+  },
+  {
+    "description": "Test a valid request with IP address",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "8.8.8.8",
+      "dt": "2023-01-01",
+      "key": "${API_KEY}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "location": {
+        "name": "Mountain View",
+        "region": "California",
+        "country": "United States of America",
+        "lat": 37.42,
+        "lon": -122.08,
+        "tz_id": "America/Los_Angeles",
+        "localtime_epoch": 1672531200,
+        "localtime": "2023-01-01 0:00"
+      },
+      "astronomy": {
+        "astro": {
+          "sunrise": "07:25 AM",
+          "sunset": "05:00 PM",
+          "moonrise": "01:18 PM",
+          "moonset": "01:29 AM",
+          "moon_phase": "Waxing Gibbous",
+          "moon_illumination": "76"
+        }
+      }
+    },
+    "expected_status_code": 200
+  },
+  {
+    "description": "Test a request with historical date",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "dt": "2015-01-01",
+      "key": "${API_KEY}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "location": {
+        "name": "London",
+        "region": "City of London, Greater London",
+        "country": "United Kingdom",
+        "lat": 51.52,
+        "lon": -0.11,
+        "tz_id": "Europe/London",
+        "localtime_epoch": 1420070400,
+        "localtime": "2015-01-01 0:00"
+      },
+      "astronomy": {
+        "astro": {
+          "sunrise": "08:06 AM",
+          "sunset": "04:01 PM",
+          "moonrise": "12:54 PM",
+          "moonset": "01:37 AM",
+          "moon_phase": "Waxing Gibbous",
+          "moon_illumination": "82"
+        }
+      }
+    },
+    "expected_status_code": 200
+  },
+  {
+    "description": "Test a request with a future date",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "Tokyo",
+      "dt": "2030-06-01",
+      "key": "${API_KEY}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "location": {
+        "name": "Tokyo",
+        "region": "Tokyo",
+        "country": "Japan",
+        "lat": 35.69,
+        "lon": 139.69,
+        "tz_id": "Asia/Tokyo",
+        "localtime_epoch": 1906884000,
+        "localtime": "2030-06-01 0:00"
+      },
+      "astronomy": {
+        "astro": {
+          "sunrise": "04:30 AM",
+          "sunset": "06:55 PM",
+          "moonrise": "08:23 AM",
+          "moonset": "11:14 PM",
+          "moon_phase": "Waning Crescent",
+          "moon_illumination": "34"
+        }
+      }
+    },
+    "expected_status_code": 200
+  },
+  {
+    "description": "Test missing location parameter",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "dt": "2023-01-01",
+      "key": "${API_KEY}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1003,
+      "message": "Parameter 'q' not provided."
+    },
+    "expected_status_code": 400
+  },
+  {
+    "description": "Test missing date parameter",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "key": "${API_KEY}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1003,
+      "message": "Parameter 'dt' not provided."
+    },
+    "expected_status_code": 400
+  },
+  {
+    "description": "Test invalid location format",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "@#$%",
+      "dt": "2023-01-01",
+      "key": "${API_KEY}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1006,
+      "message": "No location found matching parameter 'q'"
+    },
+    "expected_status_code": 400
+  },
+  {
+    "description": "Test non-existent location",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "NonExistentCity123",
+      "dt": "2023-01-01",
+      "key": "${API_KEY}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1006,
+      "message": "No location found matching parameter 'q'"
+    },
+    "expected_status_code": 400
+  },
+  {
+    "description": "Test invalid date format",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "dt": "01-01-2023",
+      "key": "${API_KEY}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1003,
+      "message": "Invalid date format. Expected format: yyyy-MM-dd"
+    },
+    "expected_status_code": 400
+  },
+  {
+    "description": "Test date before allowed range",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "dt": "2014-12-31",
+      "key": "${API_KEY}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1003,
+      "message": "Date is outside allowed range. Historical data available from Jan 1, 2015 onwards"
+    },
+    "expected_status_code": 400
+  },
+  {
+    "description": "Test missing API key",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "dt": "2023-01-01"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1002,
+      "message": "API key not provided."
+    },
+    "expected_status_code": 401
+  },
+  {
+    "description": "Test invalid API key",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "dt": "2023-01-01",
+      "key": "invalid_key_12345"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 2006,
+      "message": "API key provided is invalid"
+    },
+    "expected_status_code": 401
+  },
+  {
+    "description": "Test API key exceeded quota",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "dt": "2023-01-01",
+      "key": "${QUOTA_EXCEEDED_API_KEY}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 2007,
+      "message": "API key has exceeded calls per month quota."
+    },
+    "expected_status_code": 403
+  },
+  {
+    "description": "Test API key without astronomy permission",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "dt": "2023-01-01",
+      "key": "${LIMITED_PERMISSION_API_KEY}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 2009,
+      "message": "API key does not have access to the astronomy resource."
+    },
+    "expected_status_code": 403
+  },
+  {
+    "description": "Test empty location parameter",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "",
+      "dt": "2023-01-01",
+      "key": "${API_KEY}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1003,
+      "message": "Parameter 'q' cannot be empty."
+    },
+    "expected_status_code": 400
+  },
+  {
+    "description": "Test extremely long location name",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "ThisIsAnExtremelyLongLocationNameThatExceedsTheReasonableLimitsOfWhatTheAPICouldPossiblyAcceptAsAValidInputForALocationParameterAndShouldResultInAnErrorResponse",
+      "dt": "2023-01-01",
+      "key": "${API_KEY}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1006,
+      "message": "No location found matching parameter 'q'"
+    },
+    "expected_status_code": 400
+  },
+  {
+    "description": "Test XML content type negotiation",
+    "request_header": {
+      "Accept": "application/xml"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "dt": "2023-01-01",
+      "key": "${API_KEY}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/xml"
+    },
+    "response_body": "<root><location><name>London</name><region>City of London, Greater London</region><country>United Kingdom</country><lat>51.52</lat><lon>-0.11</lon><tz_id>Europe/London</tz_id><localtime_epoch>1672531200</localtime_epoch><localtime>2023-01-01 0:00</localtime></location><astronomy><astro><sunrise>08:06 AM</sunrise><sunset>04:01 PM</sunset><moonrise>12:20 PM</moonrise><moonset>11:51 PM</moonset><moon_phase>Waxing Gibbous</moon_phase><moon_illumination>76</moon_illumination></astro></astronomy></root>",
+    "expected_status_code": 200
+  },
+  {
+    "description": "Test with boundary timezone location",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "Kiribati", 
+      "dt": "2023-01-01",
+      "key": "${API_KEY}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "location": {
+        "name": "Kiribati",
+        "region": "",
+        "country": "Kiribati",
+        "lat": 1.87,
+        "lon": 157.42,
+        "tz_id": "Pacific/Kiritimati",
+        "localtime_epoch": 1672531200,
+        "localtime": "2023-01-01 0:00"
+      },
+      "astronomy": {
+        "astro": {
+          "sunrise": "06:20 AM",
+          "sunset": "06:30 PM",
+          "moonrise": "11:05 AM",
+          "moonset": "11:15 PM",
+          "moon_phase": "Waxing Gibbous",
+          "moon_illumination": "76"
+        }
+      }
+    },
+    "expected_status_code": 200
+  }
+]

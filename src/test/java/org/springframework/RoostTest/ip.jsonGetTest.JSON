@@ -1,0 +1,375 @@
+[
+  {
+    "description": "Test a valid request with proper IPv4 address parameter",
+    "request_header": {
+      "Content-Type": "application/json",
+      "Accept": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "8.8.8.8",
+      "key": "${AUTH_TOKEN}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "ip": "8.8.8.8",
+      "type": "ipv4",
+      "continent_code": "NA",
+      "continent_name": "North America",
+      "country_code": "US",
+      "country_name": "United States",
+      "is_eu": "false",
+      "geoname_id": 6252001,
+      "city": "Mountain View",
+      "region": "California",
+      "lat": 37.4223,
+      "lon": -122.0848,
+      "tz_id": "America/Los_Angeles",
+      "localtime_epoch": 1623456789,
+      "localtime": "2021-06-12 10:30:00"
+    },
+    "expected_status_code": 200
+  },
+  {
+    "description": "Test a valid request with proper IPv6 address parameter",
+    "request_header": {
+      "Content-Type": "application/json",
+      "Accept": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "2001:4860:4860::8888",
+      "key": "${AUTH_TOKEN}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "ip": "2001:4860:4860::8888",
+      "type": "ipv6",
+      "continent_code": "NA",
+      "continent_name": "North America",
+      "country_code": "US",
+      "country_name": "United States",
+      "is_eu": "false",
+      "geoname_id": 6252001,
+      "city": "Mountain View",
+      "region": "California",
+      "lat": 37.4223,
+      "lon": -122.0848,
+      "tz_id": "America/Los_Angeles",
+      "localtime_epoch": 1623456789,
+      "localtime": "2021-06-12 10:30:00"
+    },
+    "expected_status_code": 200
+  },
+  {
+    "description": "Test request without required 'q' parameter",
+    "request_header": {
+      "Content-Type": "application/json",
+      "Accept": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "key": "${AUTH_TOKEN}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1003,
+      "message": "Parameter 'q' not provided."
+    },
+    "expected_status_code": 400
+  },
+  {
+    "description": "Test request with empty 'q' parameter",
+    "request_header": {
+      "Content-Type": "application/json",
+      "Accept": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "",
+      "key": "${AUTH_TOKEN}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1006,
+      "message": "No location found matching parameter"
+    },
+    "expected_status_code": 400
+  },
+  {
+    "description": "Test request without API key authentication",
+    "request_header": {
+      "Content-Type": "application/json",
+      "Accept": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "8.8.8.8"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1002,
+      "message": "API key not provided"
+    },
+    "expected_status_code": 401
+  },
+  {
+    "description": "Test request with invalid API key",
+    "request_header": {
+      "Content-Type": "application/json",
+      "Accept": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "8.8.8.8",
+      "key": "invalid_api_key_12345"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 2006,
+      "message": "API key provided is invalid"
+    },
+    "expected_status_code": 401
+  },
+  {
+    "description": "Test request with improperly formatted IP address",
+    "request_header": {
+      "Content-Type": "application/json",
+      "Accept": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "999.999.999.999",
+      "key": "${AUTH_TOKEN}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1006,
+      "message": "No location found matching parameter"
+    },
+    "expected_status_code": 400
+  },
+  {
+    "description": "Test request with non-existent IP address",
+    "request_header": {
+      "Content-Type": "application/json",
+      "Accept": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "0.0.0.0",
+      "key": "${AUTH_TOKEN}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1006,
+      "message": "No location found matching parameter"
+    },
+    "expected_status_code": 400
+  },
+  {
+    "description": "Test request with API key that has exceeded quota",
+    "request_header": {
+      "Content-Type": "application/json",
+      "Accept": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "8.8.8.8",
+      "key": "quota_exceeded_key"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 2007,
+      "message": "API key has exceeded calls per month quota."
+    },
+    "expected_status_code": 403
+  },
+  {
+    "description": "Test request with disabled API key",
+    "request_header": {
+      "Content-Type": "application/json",
+      "Accept": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "8.8.8.8",
+      "key": "disabled_api_key"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 2008,
+      "message": "API key has been disabled."
+    },
+    "expected_status_code": 403
+  },
+  {
+    "description": "Test request with API key that doesn't have access to this resource",
+    "request_header": {
+      "Content-Type": "application/json",
+      "Accept": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "8.8.8.8",
+      "key": "insufficient_plan_key"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 2009,
+      "message": "API key does not have access to the resource"
+    },
+    "expected_status_code": 403
+  },
+  {
+    "description": "Test request with special characters in 'q' parameter",
+    "request_header": {
+      "Content-Type": "application/json",
+      "Accept": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "192.168.1.1@#$%",
+      "key": "${AUTH_TOKEN}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1006,
+      "message": "No location found matching parameter"
+    },
+    "expected_status_code": 400
+  },
+  {
+    "description": "Test request with multiple IP addresses in one parameter",
+    "request_header": {
+      "Content-Type": "application/json",
+      "Accept": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "8.8.8.8,8.8.4.4",
+      "key": "${AUTH_TOKEN}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1006,
+      "message": "No location found matching parameter"
+    },
+    "expected_status_code": 400
+  },
+  {
+    "description": "Test request with very long string as IP address",
+    "request_header": {
+      "Content-Type": "application/json",
+      "Accept": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "192.168.1.1".repeat(100),
+      "key": "${AUTH_TOKEN}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1006,
+      "message": "No location found matching parameter"
+    },
+    "expected_status_code": 400
+  },
+  {
+    "description": "Test request with alphabetical string as IP address",
+    "request_header": {
+      "Content-Type": "application/json",
+      "Accept": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "notanipaddress",
+      "key": "${AUTH_TOKEN}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1006,
+      "message": "No location found matching parameter"
+    },
+    "expected_status_code": 400
+  },
+  {
+    "description": "Test request with application/xml Accept header",
+    "request_header": {
+      "Content-Type": "application/json",
+      "Accept": "application/xml"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "8.8.8.8",
+      "key": "${AUTH_TOKEN}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "ip": "8.8.8.8",
+      "type": "ipv4",
+      "continent_code": "NA",
+      "continent_name": "North America",
+      "country_code": "US",
+      "country_name": "United States",
+      "is_eu": "false",
+      "geoname_id": 6252001,
+      "city": "Mountain View",
+      "region": "California",
+      "lat": 37.4223,
+      "lon": -122.0848,
+      "tz_id": "America/Los_Angeles",
+      "localtime_epoch": 1623456789,
+      "localtime": "2021-06-12 10:30:00"
+    },
+    "expected_status_code": 200
+  }
+]

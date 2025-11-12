@@ -1,0 +1,782 @@
+[
+  {
+    "description": "Test current weather request with valid city name parameter",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "key": "${AUTH_TOKEN}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "location": {
+        "name": "London",
+        "region": "City of London, Greater London",
+        "country": "United Kingdom",
+        "lat": 51.52,
+        "lon": -0.11,
+        "tz_id": "Europe/London",
+        "localtime_epoch": 1623456789,
+        "localtime": "2023-06-12 14:53:09"
+      },
+      "current": {
+        "last_updated_epoch": 1623456700,
+        "last_updated": "2023-06-12 14:45",
+        "temp_c": 18.0,
+        "temp_f": 64.4,
+        "is_day": 1,
+        "condition": {
+          "text": "Partly cloudy",
+          "icon": "//cdn.weatherapi.com/weather/64x64/day/116.png",
+          "code": 1003
+        },
+        "wind_mph": 6.9,
+        "wind_kph": 11.2,
+        "wind_degree": 270,
+        "wind_dir": "W",
+        "pressure_mb": 1012.0,
+        "pressure_in": 29.88,
+        "precip_mm": 0.0,
+        "precip_in": 0.0,
+        "humidity": 68,
+        "cloud": 25,
+        "feelslike_c": 18.0,
+        "feelslike_f": 64.4,
+        "vis_km": 10.0,
+        "vis_miles": 6.0,
+        "uv": 5,
+        "gust_mph": 8.5,
+        "gust_kph": 13.7
+      }
+    },
+    "expected_status_code": 200
+  },
+  {
+    "description": "Test current weather request with valid zip code parameter",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "10001",
+      "key": "${AUTH_TOKEN}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "location": {
+        "name": "New York",
+        "region": "New York",
+        "country": "United States of America",
+        "lat": 40.71,
+        "lon": -74.01,
+        "tz_id": "America/New_York",
+        "localtime_epoch": 1623456789,
+        "localtime": "2023-06-12 09:53:09"
+      },
+      "current": {
+        "last_updated_epoch": 1623456700,
+        "last_updated": "2023-06-12 09:45",
+        "temp_c": 22.0,
+        "temp_f": 71.6,
+        "is_day": 1,
+        "condition": {
+          "text": "Sunny",
+          "icon": "//cdn.weatherapi.com/weather/64x64/day/113.png",
+          "code": 1000
+        },
+        "wind_mph": 5.6,
+        "wind_kph": 9.0,
+        "wind_degree": 180,
+        "wind_dir": "S",
+        "pressure_mb": 1010.0,
+        "pressure_in": 29.83,
+        "precip_mm": 0.0,
+        "precip_in": 0.0,
+        "humidity": 60,
+        "cloud": 0,
+        "feelslike_c": 22.0,
+        "feelslike_f": 71.6,
+        "vis_km": 16.0,
+        "vis_miles": 9.9,
+        "uv": 6,
+        "gust_mph": 7.2,
+        "gust_kph": 11.5
+      }
+    },
+    "expected_status_code": 200
+  },
+  {
+    "description": "Test current weather request with valid latitude/longitude parameters",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "40.71,-74.01",
+      "key": "${AUTH_TOKEN}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "location": {
+        "name": "New York",
+        "region": "New York",
+        "country": "United States of America",
+        "lat": 40.71,
+        "lon": -74.01,
+        "tz_id": "America/New_York",
+        "localtime_epoch": 1623456789,
+        "localtime": "2023-06-12 09:53:09"
+      },
+      "current": {
+        "last_updated_epoch": 1623456700,
+        "last_updated": "2023-06-12 09:45",
+        "temp_c": 22.0,
+        "temp_f": 71.6,
+        "is_day": 1,
+        "condition": {
+          "text": "Sunny",
+          "icon": "//cdn.weatherapi.com/weather/64x64/day/113.png",
+          "code": 1000
+        },
+        "wind_mph": 5.6,
+        "wind_kph": 9.0,
+        "wind_degree": 180,
+        "wind_dir": "S",
+        "pressure_mb": 1010.0,
+        "pressure_in": 29.83,
+        "precip_mm": 0.0,
+        "precip_in": 0.0,
+        "humidity": 60,
+        "cloud": 0,
+        "feelslike_c": 22.0,
+        "feelslike_f": 71.6,
+        "vis_km": 16.0,
+        "vis_miles": 9.9,
+        "uv": 6,
+        "gust_mph": 7.2,
+        "gust_kph": 11.5
+      }
+    },
+    "expected_status_code": 200
+  },
+  {
+    "description": "Test current weather request with IP address parameter",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "8.8.8.8",
+      "key": "${AUTH_TOKEN}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "location": {
+        "name": "Mountain View",
+        "region": "California",
+        "country": "United States of America",
+        "lat": 37.42,
+        "lon": -122.08,
+        "tz_id": "America/Los_Angeles",
+        "localtime_epoch": 1623456789,
+        "localtime": "2023-06-12 06:53:09"
+      },
+      "current": {
+        "last_updated_epoch": 1623456700,
+        "last_updated": "2023-06-12 06:45",
+        "temp_c": 15.0,
+        "temp_f": 59.0,
+        "is_day": 0,
+        "condition": {
+          "text": "Clear",
+          "icon": "//cdn.weatherapi.com/weather/64x64/night/113.png",
+          "code": 1000
+        },
+        "wind_mph": 2.5,
+        "wind_kph": 4.0,
+        "wind_degree": 260,
+        "wind_dir": "W",
+        "pressure_mb": 1012.0,
+        "pressure_in": 29.88,
+        "precip_mm": 0.0,
+        "precip_in": 0.0,
+        "humidity": 72,
+        "cloud": 0,
+        "feelslike_c": 15.0,
+        "feelslike_f": 59.0,
+        "vis_km": 16.0,
+        "vis_miles": 9.9,
+        "uv": 1,
+        "gust_mph": 4.5,
+        "gust_kph": 7.2
+      }
+    },
+    "expected_status_code": 200
+  },
+  {
+    "description": "Test current weather request with valid location and language parameter",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "Paris",
+      "lang": "fr",
+      "key": "${AUTH_TOKEN}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "location": {
+        "name": "Paris",
+        "region": "Ile-de-France",
+        "country": "France",
+        "lat": 48.87,
+        "lon": 2.33,
+        "tz_id": "Europe/Paris",
+        "localtime_epoch": 1623456789,
+        "localtime": "2023-06-12 15:53:09"
+      },
+      "current": {
+        "last_updated_epoch": 1623456700,
+        "last_updated": "2023-06-12 15:45",
+        "temp_c": 22.0,
+        "temp_f": 71.6,
+        "is_day": 1,
+        "condition": {
+          "text": "Partiellement nuageux",
+          "icon": "//cdn.weatherapi.com/weather/64x64/day/116.png",
+          "code": 1003
+        },
+        "wind_mph": 8.1,
+        "wind_kph": 13.0,
+        "wind_degree": 220,
+        "wind_dir": "SW",
+        "pressure_mb": 1015.0,
+        "pressure_in": 29.97,
+        "precip_mm": 0.0,
+        "precip_in": 0.0,
+        "humidity": 55,
+        "cloud": 25,
+        "feelslike_c": 22.0,
+        "feelslike_f": 71.6,
+        "vis_km": 10.0,
+        "vis_miles": 6.2,
+        "uv": 5,
+        "gust_mph": 9.8,
+        "gust_kph": 15.8
+      }
+    },
+    "expected_status_code": 200
+  },
+  {
+    "description": "Test current weather request with air quality data",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "Beijing",
+      "key": "${AUTH_TOKEN}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "location": {
+        "name": "Beijing",
+        "region": "Beijing",
+        "country": "China",
+        "lat": 39.91,
+        "lon": 116.4,
+        "tz_id": "Asia/Shanghai",
+        "localtime_epoch": 1623456789,
+        "localtime": "2023-06-12 21:53:09"
+      },
+      "current": {
+        "last_updated_epoch": 1623456700,
+        "last_updated": "2023-06-12 21:45",
+        "temp_c": 24.0,
+        "temp_f": 75.2,
+        "is_day": 0,
+        "condition": {
+          "text": "Clear",
+          "icon": "//cdn.weatherapi.com/weather/64x64/night/113.png",
+          "code": 1000
+        },
+        "wind_mph": 3.8,
+        "wind_kph": 6.1,
+        "wind_degree": 180,
+        "wind_dir": "S",
+        "pressure_mb": 1008.0,
+        "pressure_in": 29.77,
+        "precip_mm": 0.0,
+        "precip_in": 0.0,
+        "humidity": 45,
+        "cloud": 0,
+        "feelslike_c": 24.0,
+        "feelslike_f": 75.2,
+        "vis_km": 10.0,
+        "vis_miles": 6.2,
+        "uv": 1,
+        "gust_mph": 6.3,
+        "gust_kph": 10.1,
+        "air_quality": {
+          "co": 120.2,
+          "no2": 15.3,
+          "o3": 95.1,
+          "so2": 8.5,
+          "pm2_5": 35.4,
+          "pm10": 45.7,
+          "us-epa-index": 2,
+          "gb-defra-index": 3
+        }
+      }
+    },
+    "expected_status_code": 200
+  },
+  {
+    "description": "Test current weather request without the required 'q' parameter",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "key": "${AUTH_TOKEN}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1003,
+      "message": "Parameter 'q' not provided."
+    },
+    "expected_status_code": 400
+  },
+  {
+    "description": "Test current weather request with invalid location parameter",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "NonExistentCity12345",
+      "key": "${AUTH_TOKEN}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1006,
+      "message": "No location found matching parameter 'q'"
+    },
+    "expected_status_code": 400
+  },
+  {
+    "description": "Test current weather request without an API key",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1002,
+      "message": "API key not provided"
+    },
+    "expected_status_code": 401
+  },
+  {
+    "description": "Test current weather request with an invalid API key",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "key": "invalid_api_key_12345"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 2006,
+      "message": "API key provided is invalid"
+    },
+    "expected_status_code": 401
+  },
+  {
+    "description": "Test current weather request with empty 'q' parameter",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "",
+      "key": "${AUTH_TOKEN}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1003,
+      "message": "Parameter 'q' not provided."
+    },
+    "expected_status_code": 400
+  },
+  {
+    "description": "Test current weather request with invalid language code",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "lang": "xyz",
+      "key": "${AUTH_TOKEN}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "location": {
+        "name": "London",
+        "region": "City of London, Greater London",
+        "country": "United Kingdom",
+        "lat": 51.52,
+        "lon": -0.11,
+        "tz_id": "Europe/London",
+        "localtime_epoch": 1623456789,
+        "localtime": "2023-06-12 14:53:09"
+      },
+      "current": {
+        "last_updated_epoch": 1623456700,
+        "last_updated": "2023-06-12 14:45",
+        "temp_c": 18.0,
+        "temp_f": 64.4,
+        "is_day": 1,
+        "condition": {
+          "text": "Partly cloudy",
+          "icon": "//cdn.weatherapi.com/weather/64x64/day/116.png",
+          "code": 1003
+        },
+        "wind_mph": 6.9,
+        "wind_kph": 11.2,
+        "wind_degree": 270,
+        "wind_dir": "W",
+        "pressure_mb": 1012.0,
+        "pressure_in": 29.88,
+        "precip_mm": 0.0,
+        "precip_in": 0.0,
+        "humidity": 68,
+        "cloud": 25,
+        "feelslike_c": 18.0,
+        "feelslike_f": 64.4,
+        "vis_km": 10.0,
+        "vis_miles": 6.0,
+        "uv": 5,
+        "gust_mph": 8.5,
+        "gust_kph": 13.7
+      }
+    },
+    "expected_status_code": 200
+  },
+  {
+    "description": "Test current weather request with API key that has exceeded its quota",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "key": "exceeded_quota_key"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 2007,
+      "message": "API key has exceeded calls per month quota."
+    },
+    "expected_status_code": 403
+  },
+  {
+    "description": "Test current weather request with a disabled API key",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "key": "disabled_api_key"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 2008,
+      "message": "API key has been disabled."
+    },
+    "expected_status_code": 403
+  },
+  {
+    "description": "Test current weather request with API key that doesn't have access to this resource",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "key": "limited_access_key"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 2009,
+      "message": "API key does not have access to the requested resource."
+    },
+    "expected_status_code": 403
+  },
+  {
+    "description": "Test current weather request with location name containing special characters",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "São Paulo",
+      "key": "${AUTH_TOKEN}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "location": {
+        "name": "São Paulo",
+        "region": "Sao Paulo",
+        "country": "Brazil",
+        "lat": -23.53,
+        "lon": -46.62,
+        "tz_id": "America/Sao_Paulo",
+        "localtime_epoch": 1623456789,
+        "localtime": "2023-06-12 10:53:09"
+      },
+      "current": {
+        "last_updated_epoch": 1623456700,
+        "last_updated": "2023-06-12 10:45",
+        "temp_c": 20.0,
+        "temp_f": 68.0,
+        "is_day": 1,
+        "condition": {
+          "text": "Partly cloudy",
+          "icon": "//cdn.weatherapi.com/weather/64x64/day/116.png",
+          "code": 1003
+        },
+        "wind_mph": 5.6,
+        "wind_kph": 9.0,
+        "wind_degree": 90,
+        "wind_dir": "E",
+        "pressure_mb": 1015.0,
+        "pressure_in": 29.97,
+        "precip_mm": 0.0,
+        "precip_in": 0.0,
+        "humidity": 65,
+        "cloud": 25,
+        "feelslike_c": 20.0,
+        "feelslike_f": 68.0,
+        "vis_km": 10.0,
+        "vis_miles": 6.2,
+        "uv": 5,
+        "gust_mph": 7.8,
+        "gust_kph": 12.6
+      }
+    },
+    "expected_status_code": 200
+  },
+  {
+    "description": "Test URL-encoded location parameter",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "New%20York%20City",
+      "key": "${AUTH_TOKEN}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "location": {
+        "name": "New York",
+        "region": "New York",
+        "country": "United States of America",
+        "lat": 40.71,
+        "lon": -74.01,
+        "tz_id": "America/New_York",
+        "localtime_epoch": 1623456789,
+        "localtime": "2023-06-12 09:53:09"
+      },
+      "current": {
+        "last_updated_epoch": 1623456700,
+        "last_updated": "2023-06-12 09:45",
+        "temp_c": 22.0,
+        "temp_f": 71.6,
+        "is_day": 1,
+        "condition": {
+          "text": "Sunny",
+          "icon": "//cdn.weatherapi.com/weather/64x64/day/113.png",
+          "code": 1000
+        },
+        "wind_mph": 5.6,
+        "wind_kph": 9.0,
+        "wind_degree": 180,
+        "wind_dir": "S",
+        "pressure_mb": 1010.0,
+        "pressure_in": 29.83,
+        "precip_mm": 0.0,
+        "precip_in": 0.0,
+        "humidity": 60,
+        "cloud": 0,
+        "feelslike_c": 22.0,
+        "feelslike_f": 71.6,
+        "vis_km": 16.0,
+        "vis_miles": 9.9,
+        "uv": 6,
+        "gust_mph": 7.2,
+        "gust_kph": 11.5
+      }
+    },
+    "expected_status_code": 200
+  },
+  {
+    "description": "Test malformed latitude/longitude values",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "abc,-xyz",
+      "key": "${AUTH_TOKEN}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1006,
+      "message": "No location found matching parameter 'q'"
+    },
+    "expected_status_code": 400
+  },
+  {
+    "description": "Test out-of-range latitude/longitude values",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "95.5,-200.1",
+      "key": "${AUTH_TOKEN}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1006,
+      "message": "No location found matching parameter 'q'"
+    },
+    "expected_status_code": 400
+  },
+  {
+    "description": "Test if location parameter handling is case-insensitive",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "LONDON",
+      "key": "${AUTH_TOKEN}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "location": {
+        "name": "London",
+        "region": "City of London, Greater London",
+        "country": "United Kingdom",
+        "lat": 51.52,
+        "lon": -0.11,
+        "tz_id": "Europe/London",
+        "localtime_epoch": 1623456789,
+        "localtime": "2023-06-12 14:53:09"
+      },
+      "current": {
+        "last_updated_epoch": 1623456700,
+        "last_updated": "2023-06-12 14:45",
+        "temp_c": 18.0,
+        "temp_f": 64.4,
+        "is_day": 1,
+        "condition": {
+          "text": "Partly cloudy",
+          "icon": "//cdn.weatherapi.com/weather/64x64/day/116.png",
+          "code": 1003
+        },
+        "wind_mph": 6.9,
+        "wind_kph": 11.2,
+        "wind_degree": 270,
+        "wind_dir": "W",
+        "pressure_mb": 1012.0,
+        "pressure_in": 29.88,
+        "precip_mm": 0.0,
+        "precip_in": 0.0,
+        "humidity": 68,
+        "cloud": 25,
+        "feelslike_c": 18.0,
+        "feelslike_f": 64.4,
+        "vis_km": 10.0,
+        "vis_miles": 6.0,
+        "uv": 5,
+        "gust_mph": 8.5,
+        "gust_kph": 13.7
+      }
+    },
+    "expected_status_code": 200
+  }
+]

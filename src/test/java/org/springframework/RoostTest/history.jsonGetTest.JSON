@@ -1,0 +1,750 @@
+[
+  {
+    "description": "Test a valid request with required query parameters",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "dt": "2022-01-01",
+      "key": "${AUTH_TOKEN}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "location": {
+        "name": "London",
+        "region": "City of London, Greater London",
+        "country": "United Kingdom",
+        "lat": 51.52,
+        "lon": -0.11,
+        "tz_id": "Europe/London",
+        "localtime_epoch": 1641024000,
+        "localtime": "2022-01-01 12:00"
+      },
+      "forecast": {
+        "forecastday": [
+          {
+            "date": "2022-01-01",
+            "date_epoch": 1641024000,
+            "day": {
+              "maxtemp_c": 10.5,
+              "maxtemp_f": 50.9,
+              "mintemp_c": 5.2,
+              "mintemp_f": 41.4,
+              "avgtemp_c": 7.8,
+              "avgtemp_f": 46.0,
+              "maxwind_mph": 12.3,
+              "maxwind_kph": 19.8,
+              "totalprecip_mm": 0.5,
+              "totalprecip_in": 0.02,
+              "avgvis_km": 9.8,
+              "avgvis_miles": 6.1,
+              "avghumidity": 76,
+              "daily_will_it_rain": 1,
+              "daily_chance_of_rain": 70,
+              "daily_will_it_snow": 0,
+              "daily_chance_of_snow": 0,
+              "condition": {
+                "text": "Partly cloudy",
+                "icon": "//cdn.weatherapi.com/weather/64x64/day/116.png",
+                "code": 1003
+              },
+              "uv": 2
+            },
+            "astro": {
+              "sunrise": "08:06 AM",
+              "sunset": "04:01 PM",
+              "moonrise": "05:43 AM",
+              "moonset": "02:28 PM",
+              "moon_phase": "Waning Crescent",
+              "moon_illumination": "42"
+            },
+            "hour": [
+              {
+                "time_epoch": 1640995200,
+                "time": "2022-01-01 00:00",
+                "temp_c": 6.8,
+                "temp_f": 44.2,
+                "is_day": 0,
+                "condition": {
+                  "text": "Clear",
+                  "icon": "//cdn.weatherapi.com/weather/64x64/night/113.png",
+                  "code": 1000
+                },
+                "wind_mph": 8.1,
+                "wind_kph": 13.0,
+                "wind_degree": 240,
+                "wind_dir": "WSW",
+                "pressure_mb": 1018.0,
+                "pressure_in": 30.06,
+                "precip_mm": 0.0,
+                "precip_in": 0.0,
+                "humidity": 81,
+                "cloud": 20,
+                "feelslike_c": 4.3,
+                "feelslike_f": 39.7,
+                "windchill_c": 4.3,
+                "windchill_f": 39.7,
+                "heatindex_c": 6.8,
+                "heatindex_f": 44.2,
+                "dewpoint_c": 3.9,
+                "dewpoint_f": 39.0,
+                "will_it_rain": 0,
+                "chance_of_rain": 0,
+                "will_it_snow": 0,
+                "chance_of_snow": 0,
+                "vis_km": 10.0,
+                "vis_miles": 6.2,
+                "gust_mph": 12.5,
+                "gust_kph": 20.2,
+                "uv": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "expected_status_code": 200
+  },
+  {
+    "description": "Test request without API key",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "dt": "2022-01-01"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1002,
+      "message": "API key not provided"
+    },
+    "expected_status_code": 401
+  },
+  {
+    "description": "Test request with invalid API key",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "dt": "2022-01-01",
+      "key": "invalid_api_key"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 2006,
+      "message": "API key provided is invalid"
+    },
+    "expected_status_code": 401
+  },
+  {
+    "description": "Test request without required location parameter 'q'",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "dt": "2022-01-01",
+      "key": "${AUTH_TOKEN}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1003,
+      "message": "Parameter 'q' not provided"
+    },
+    "expected_status_code": 400
+  },
+  {
+    "description": "Test request without required date parameter 'dt'",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "key": "${AUTH_TOKEN}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1003,
+      "message": "Parameter 'dt' not provided"
+    },
+    "expected_status_code": 400
+  },
+  {
+    "description": "Test request with invalid location that doesn't exist",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "NonExistentCity123",
+      "dt": "2022-01-01",
+      "key": "${AUTH_TOKEN}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1006,
+      "message": "No location found matching parameter 'q'"
+    },
+    "expected_status_code": 400
+  },
+  {
+    "description": "Test request with date before minimum allowed date (Jan 1, 2015)",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "dt": "2014-12-31",
+      "key": "${AUTH_TOKEN}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1003,
+      "message": "History data is available from 1st Jan, 2015"
+    },
+    "expected_status_code": 400
+  },
+  {
+    "description": "Test request with invalid date format",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "dt": "01-01-2022",
+      "key": "${AUTH_TOKEN}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1003,
+      "message": "Invalid date format. Expected format: yyyy-MM-dd"
+    },
+    "expected_status_code": 400
+  },
+  {
+    "description": "Test request with Unix timestamp instead of date string",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "unixdt": "1420070400",
+      "key": "${AUTH_TOKEN}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "location": {
+        "name": "London",
+        "region": "City of London, Greater London",
+        "country": "United Kingdom"
+      },
+      "forecast": {
+        "forecastday": [
+          {
+            "date": "2015-01-01",
+            "date_epoch": 1420070400
+          }
+        ]
+      }
+    },
+    "expected_status_code": 200
+  },
+  {
+    "description": "Test request with both dt and unixdt parameters provided",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "dt": "2022-01-01",
+      "unixdt": "1640995200",
+      "key": "${AUTH_TOKEN}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1003,
+      "message": "Only one date format should be provided: either 'dt' or 'unixdt', not both"
+    },
+    "expected_status_code": 400
+  },
+  {
+    "description": "Test request with valid date range",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "dt": "2022-01-01",
+      "end_dt": "2022-01-15",
+      "key": "${AUTH_TOKEN}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "location": {
+        "name": "London",
+        "region": "City of London, Greater London",
+        "country": "United Kingdom"
+      },
+      "forecast": {
+        "forecastday": [
+          {
+            "date": "2022-01-01",
+            "date_epoch": 1641024000
+          },
+          {
+            "date": "2022-01-15",
+            "date_epoch": 1642204800
+          }
+        ]
+      }
+    },
+    "expected_status_code": 200
+  },
+  {
+    "description": "Test request with end_dt before dt",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "dt": "2022-01-15",
+      "end_dt": "2022-01-01",
+      "key": "${AUTH_TOKEN}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1003,
+      "message": "end_dt must be after dt"
+    },
+    "expected_status_code": 400
+  },
+  {
+    "description": "Test request with date range exceeding 30 days",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "dt": "2022-01-01",
+      "end_dt": "2022-02-01",
+      "key": "${AUTH_TOKEN}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1003,
+      "message": "Date range exceeds maximum allowed (30 days)"
+    },
+    "expected_status_code": 400
+  },
+  {
+    "description": "Test request with specific hour parameter",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "dt": "2022-01-01",
+      "hour": "12",
+      "key": "${AUTH_TOKEN}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "location": {
+        "name": "London",
+        "region": "City of London, Greater London",
+        "country": "United Kingdom"
+      },
+      "forecast": {
+        "forecastday": [
+          {
+            "date": "2022-01-01",
+            "hour": [
+              {
+                "time": "2022-01-01 12:00",
+                "temp_c": 9.8,
+                "temp_f": 49.6
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "expected_status_code": 200
+  },
+  {
+    "description": "Test request with invalid hour value",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "dt": "2022-01-01",
+      "hour": "25",
+      "key": "${AUTH_TOKEN}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1003,
+      "message": "Invalid hour value. Must be between 0 and 23"
+    },
+    "expected_status_code": 400
+  },
+  {
+    "description": "Test request with language parameter",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "dt": "2022-01-01",
+      "lang": "es",
+      "key": "${AUTH_TOKEN}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "location": {
+        "name": "London",
+        "region": "City of London, Greater London",
+        "country": "United Kingdom"
+      },
+      "forecast": {
+        "forecastday": [
+          {
+            "day": {
+              "condition": {
+                "text": "Parcialmente nublado",
+                "icon": "//cdn.weatherapi.com/weather/64x64/day/116.png",
+                "code": 1003
+              }
+            }
+          }
+        ]
+      }
+    },
+    "expected_status_code": 200
+  },
+  {
+    "description": "Test request with invalid language code",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "dt": "2022-01-01",
+      "lang": "invalid_code",
+      "key": "${AUTH_TOKEN}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1003,
+      "message": "Invalid language code"
+    },
+    "expected_status_code": 400
+  },
+  {
+    "description": "Test request when API key has exceeded monthly quota",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "dt": "2022-01-01",
+      "key": "quota_exceeded_key"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 2007,
+      "message": "API key has exceeded calls per month quota"
+    },
+    "expected_status_code": 403
+  },
+  {
+    "description": "Test request with disabled API key",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "dt": "2022-01-01",
+      "key": "disabled_key"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 2008,
+      "message": "API key has been disabled"
+    },
+    "expected_status_code": 403
+  },
+  {
+    "description": "Test request with API key that doesn't have access to the history endpoint",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "dt": "2022-01-01",
+      "key": "no_history_access_key"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 2009,
+      "message": "API key does not have access to the history weather endpoint"
+    },
+    "expected_status_code": 403
+  },
+  {
+    "description": "Test request using US Zipcode location format",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "10001",
+      "dt": "2022-01-01",
+      "key": "${AUTH_TOKEN}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "location": {
+        "name": "New York",
+        "region": "New York",
+        "country": "United States of America"
+      },
+      "forecast": {
+        "forecastday": [
+          {
+            "date": "2022-01-01"
+          }
+        ]
+      }
+    },
+    "expected_status_code": 200
+  },
+  {
+    "description": "Test request using IP address location format",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "8.8.8.8",
+      "dt": "2022-01-01",
+      "key": "${AUTH_TOKEN}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "location": {
+        "name": "Mountain View",
+        "region": "California",
+        "country": "United States of America"
+      },
+      "forecast": {
+        "forecastday": [
+          {
+            "date": "2022-01-01"
+          }
+        ]
+      }
+    },
+    "expected_status_code": 200
+  },
+  {
+    "description": "Test request using latitude/longitude location format",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "40.71,-74.01",
+      "dt": "2022-01-01",
+      "key": "${AUTH_TOKEN}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "location": {
+        "name": "New York",
+        "region": "New York",
+        "country": "United States of America",
+        "lat": 40.71,
+        "lon": -74.01
+      },
+      "forecast": {
+        "forecastday": [
+          {
+            "date": "2022-01-01"
+          }
+        ]
+      }
+    },
+    "expected_status_code": 200
+  },
+  {
+    "description": "Test request with valid Unix timestamp for end_dt",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "dt": "2022-01-01",
+      "unixend_dt": "1641427200",
+      "key": "${AUTH_TOKEN}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "location": {
+        "name": "London",
+        "region": "City of London, Greater London",
+        "country": "United Kingdom"
+      },
+      "forecast": {
+        "forecastday": [
+          {
+            "date": "2022-01-01",
+            "date_epoch": 1641024000
+          },
+          {
+            "date": "2022-01-06",
+            "date_epoch": 1641427200
+          }
+        ]
+      }
+    },
+    "expected_status_code": 200
+  },
+  {
+    "description": "Test request with both end_dt and unixend_dt parameters",
+    "request_header": {
+      "Content-Type": "application/json"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "dt": "2022-01-01",
+      "end_dt": "2022-01-06",
+      "unixend_dt": "1641427200",
+      "key": "${AUTH_TOKEN}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/json"
+    },
+    "response_body": {
+      "code": 1003,
+      "message": "Only one end date format should be provided: either 'end_dt' or 'unixend_dt', not both"
+    },
+    "expected_status_code": 400
+  },
+  {
+    "description": "Test request with XML content type",
+    "request_header": {
+      "Content-Type": "application/xml",
+      "Accept": "application/xml"
+    },
+    "request_body": {},
+    "query_params": {
+      "q": "London",
+      "dt": "2022-01-01",
+      "key": "${AUTH_TOKEN}"
+    },
+    "path_params": {},
+    "response_header": {
+      "Content-Type": "application/xml"
+    },
+    "response_body": "<response><location><name>London</name><region>City of London, Greater London</region><country>United Kingdom</country></location></response>",
+    "expected_status_code": 200
+  }
+]
