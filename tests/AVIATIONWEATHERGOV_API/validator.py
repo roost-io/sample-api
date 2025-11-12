@@ -64,6 +64,47 @@ class SwaggerSchemaValidator:
         # Create a resolver that can handle internal references
         return RefResolver.from_schema(self.spec)
 
+    # TODO: add this function to codegen
+    def get_response_schema(self, path: str, method: str, status_code: str) -> Dict[str, Any]:
+        """
+        Get the response schema for a specific endpoint, method, and status code.
+        
+        Args:
+            path: The path of the endpoint
+            method: The HTTP method (e.g., 'get', 'post')
+            status_code: The HTTP status code (e.g., '200', '404')
+
+        Returns:
+            The schema dictionary for the response
+        """
+        # Find the operation
+        operation = None
+        for p, methods in self.spec.get('paths', {}).items():
+            if p == path:
+                operation = methods.get(method.lower())
+                break
+
+        if not operation:
+            raise ValueError(f"Path '{path}' and method '{method}' not found in specification")
+
+        # Find the response
+        response = operation.get('responses', {}).get(status_code)
+        if not response:
+            raise ValueError(f"Status code '{status_code}' not found for path '{path}' and method '{method}'")
+        schema = response.get('content', {}).get('application/json', {}).get('schema')
+
+        if not schema:  
+            raise ValueError(f"No schema found for status code '{status_code}' at path '{path}' and method '{method}'")
+
+        # Get the schema reference
+        schema_ref = schema.get('$ref')
+        if not schema_ref:
+            return schema
+
+        # Resolve the schema reference
+        schema_name = schema_ref.split('/')[-1]
+        return self.get_schema(schema_name)
+
     def get_schema(self, schema_name: str) -> Dict[str, Any]:
         """
         Get a specific component schema by name.

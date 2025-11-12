@@ -29,6 +29,7 @@ class TestAirportDataEndpoint:
         validator = SwaggerSchemaValidator(
             "https://aviationweather.gov/data/schema/openapi.yaml"
         )
+        # TODO: hard-code this spec 
         return validator
 
     @pytest.fixture(scope="class")
@@ -43,7 +44,9 @@ class TestAirportDataEndpoint:
 
     @pytest.fixture(scope="class")
     def endpoint_config(self, config):
+        # TODO: conftest.py is missing
         """Get endpoint configuration"""
+        # actual endpoint path from env
         return config['endpoints']['airport']
 
     def _build_request_params(self, test_case: Dict[str, Any]) -> Dict[str, str]:
@@ -71,6 +74,7 @@ class TestAirportDataEndpoint:
             return False
         
         if "format" in params:
+            # TODO: enum check includes extra ""
             if params["format"] not in ["decoded", "json", "geojson", ""]:
                 # Allow invalid formats for negative testing
                 pass
@@ -86,6 +90,7 @@ class TestAirportDataEndpoint:
         """Validate successful response against schema"""
         if format_type == "json" or format_type == "geojson" or not format_type:
             # Define the expected schema for 200 response
+            # TODO: success_schema = schema_validator.get_response_schema('/api/data/airport', 'get', response_data.code)
             success_schema = {
                 "type": "array",
                 "items": {
@@ -108,6 +113,7 @@ class TestAirportDataEndpoint:
                     }
                 }
             }
+
             return schema_validator.validate_with_schema(response_data, success_schema)
         return True
 
@@ -117,6 +123,7 @@ class TestAirportDataEndpoint:
         schema_validator: SwaggerSchemaValidator
     ) -> bool:
         """Validate error response against schema"""
+        # TODO: error_schema = schema_validator.get_response_schema('/api/data/airport', 'get', response_data.code)
         error_schema = {
             "type": "object",
             "properties": {
@@ -159,6 +166,7 @@ class TestAirportDataEndpoint:
         self._validate_request_params(params)
         
         # Build full URL
+        # TODO: conftest.py is missing
         url = endpoint_config['path']
         
         # Make API request
@@ -197,6 +205,53 @@ class TestAirportDataEndpoint:
                     # If data is returned, validate structure
                     if len(response_data) > 0:
                         first_item = response_data[0]
+                        # TODO: none of the fields is required so get first and if found then check for data type and enum valies
+                        #         schema:
+                                # type: array
+                                # items:
+                                #   type: object
+                                #   properties:
+                                #     icaoId:
+                                #       type: string
+                                #       examples: [KMCI]
+                                #     iataId:
+                                #       type: string
+                                #       examples: [MCI]
+                                #     faaId:
+                                #       type: string
+                                #       examples: [MCI]
+                                #     name:
+                                #       type: string
+                                #       examples: [KANSAS CITY/KANSAS CITY INTL]
+                                #     state:
+                                #       type: string
+                                #       examples: [MO]
+                                #     country:
+                                #       type: string
+                                #       examples: [US]
+                                #     source:
+                                #       type: string
+                                #       examples: [FAA]
+                                #     type:
+                                #       type: string
+                                #       examples: [ARP]
+                                #     lat:
+                                #       type: string
+                                #       examples: [39.2976]
+                                #     lon:
+                                #       type: string
+                                #       examples: [-94.7139]
+                                #     elev:
+                                #       type: string
+                                #       examples: [313]
+                                #     magdec:
+                                #       type: string
+                                #       examples: [02E]
+                                #     owner:
+                                #       type: string
+                                #       examples: [P]
+                                #     runways:
+                                #       type: array
                         assert "icaoId" in first_item or "name" in first_item, (
                             "Airport data should contain icaoId or name"
                         )
@@ -227,6 +282,14 @@ class TestAirportDataEndpoint:
                 )
                 
                 # Check error fields
+                #     ErrorJSON:
+                    #   type: object
+                    #   properties:
+                    #     status:
+                    #       type: string
+                    #       enum: [error]
+                    #     error:
+                    #       type: string
                 assert "status" in response_data or "error" in response_data, (
                     "Error response should contain status or error field"
                 )
@@ -238,7 +301,8 @@ class TestAirportDataEndpoint:
                     "XML error response should contain error information"
                 )
 
-    @pytest.mark.parametrize("test_case_index", [0, 1, 2, 3, 4])
+    # TODO: we can check based on status code to split tests inserad of test_case_index
+    @pytest.mark.parametrize("status_code", [200])
     def test_successful_operations(
         self,
         api_client,
@@ -255,8 +319,12 @@ class TestAirportDataEndpoint:
         - Different valid bounding boxes
         - Different valid formats
         """
-        test_case = test_data[test_case_index]
+        # Skip non-error test cases
+        if test_case["statusCode"] != status_code:
+            pytest.skip("Not a success test case")
         
+        # test_case = test_data[test_case_index]
+            
         # Skip non-success test cases
         if test_case["statusCode"] != 200:
             pytest.skip("Not a success test case")
@@ -283,6 +351,7 @@ class TestAirportDataEndpoint:
                 format_type
             )
 
+    # TODO: similar to above, we can split based on status code and look for not 200
     @pytest.mark.parametrize("test_case_index", [5, 6, 7, 8, 9])
     def test_validation_errors(
         self,
@@ -337,6 +406,8 @@ class TestAirportDataEndpoint:
         assert response.status_code in [200, 400], (
             f"Unexpected status code: {response.status_code}"
         )
+
+        # TODO: response schema validation can be added if needed
 
     def test_endpoint_with_only_ids(
         self,
@@ -398,6 +469,7 @@ class TestAirportDataEndpoint:
     ):
         """Test endpoint with state abbreviation filter"""
         url = endpoint_config['path']
+        # TODO: hardcoded state filter, can explore parameterization
         params = {"ids": "@WA", "format": "json"}
         
         response = api_client.get(url, params=params)
