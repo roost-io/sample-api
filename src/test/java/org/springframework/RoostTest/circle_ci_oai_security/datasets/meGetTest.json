@@ -1,0 +1,42 @@
+[
+  {
+    "expected_statusCode": 200,
+    "scenario": "Successfully retrieve user information with all fields present"
+  },
+  {
+    "expected_statusCode": 200,
+    "scenario": "Verify response contains required id field with UUID format"
+  },
+  {
+    "expected_statusCode": 200,
+    "scenario": "Verify response contains required login field as string"
+  },
+  {
+    "expected_statusCode": 200,
+    "scenario": "Verify response contains required name field as string"
+  },
+  {
+    "expected_statusCode": 200,
+    "scenario": "Verify response structure matches specification with all required fields"
+  },
+  {
+    "expected_statusCode": 200,
+    "scenario": "Verify consistent response across multiple subsequent requests"
+  },
+  {
+    "expected_statusCode": 200,
+    "scenario": "Verify response headers include appropriate cache control"
+  },
+  {
+    "expected_statusCode": 200,
+    "scenario": "Verify user information response time is acceptable"
+  },
+  {
+    "expected_statusCode": 200,
+    "scenario": "Verify user information is correctly returned for authenticated user"
+  },
+  {
+    "expected_statusCode": 200,
+    "scenario": "Verify response data types match specification (UUID string, string, string)"
+  }
+]

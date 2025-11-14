@@ -1,0 +1,42 @@
+[
+  {
+    "expected_statusCode": 200,
+    "scenario": "Successful retrieval of user's collaborations with all required fields present"
+  },
+  {
+    "expected_statusCode": 200,
+    "scenario": "Successful retrieval of empty array when user has no collaborations"
+  },
+  {
+    "expected_statusCode": 200,
+    "scenario": "Verify collaboration object with null ID is correctly handled"
+  },
+  {
+    "expected_statusCode": 200,
+    "scenario": "Successful retrieval of collaboration data with special characters in name or slug"
+  },
+  {
+    "expected_statusCode": 200,
+    "scenario": "Verify all collaboration objects have the required fields (id, vcs-type, name, avatar_url, slug)"
+  },
+  {
+    "expected_statusCode": 200,
+    "scenario": "Verify response contains collaborations from multiple VCS providers"
+  },
+  {
+    "expected_statusCode": 200,
+    "scenario": "Verify response handles organizations where user is a member"
+  },
+  {
+    "expected_statusCode": 200,
+    "scenario": "Verify response handles parent organizations of repositories user can collaborate on"
+  },
+  {
+    "expected_statusCode": 200,
+    "scenario": "Verify collaboration objects have valid URLs for avatar_url field"
+  },
+  {
+    "expected_statusCode": 200,
+    "scenario": "Verify non-null IDs are valid UUID format"
+  }
+]
