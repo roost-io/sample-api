@@ -1,0 +1,114 @@
+[
+  {
+    "q": "London",
+    "dt": "2023-08-15",
+    "lang": "en",
+    "statusCode": 200,
+    "scenario": "Success - City name"
+  },
+  {
+    "q": "37.7749,-122.4194",
+    "dt": "2024-05-10",
+    "lang": "es",
+    "statusCode": 200,
+    "scenario": "Success - Coordinates"
+  },
+  {
+    "q": "10001",
+    "dt": "2022-12-01",
+    "lang": "fr",
+    "statusCode": 200,
+    "scenario": "Success - ZIP code"
+  },
+  {
+    "q": "Tokyo",
+    "dt": "2020-01-20",
+    "lang": "ja",
+    "statusCode": 200,
+    "scenario": "Success - City name (JP)"
+  },
+  {
+    "q": "Paris,FR",
+    "dt": "2019-06-30",
+    "lang": "de",
+    "statusCode": 200,
+    "scenario": "Success - City with country code"
+  },
+  {
+    "q": "Mumbai",
+    "dt": "2021-11-05",
+    "lang": "hi",
+    "statusCode": 201,
+    "scenario": "Created - Cache primed"
+  },
+  {
+    "q": "Sydney",
+    "dt": "2018-03-25",
+    "lang": "en",
+    "statusCode": 202,
+    "scenario": "Accepted - Async processing"
+  },
+  {
+    "q": "München",
+    "dt": "2017-10-10",
+    "lang": "de",
+    "statusCode": 200,
+    "scenario": "Success - Unicode city"
+  },
+  {
+    "q": "London",
+    "dt": "15-08-2023",
+    "lang": "en",
+    "statusCode": 400,
+    "scenario": "Bad Request - Invalid date format"
+  },
+  {
+    "q": "95.0000,200.0000",
+    "dt": "2023-05-20",
+    "lang": "en",
+    "statusCode": 400,
+    "scenario": "Bad Request - Coordinates out of range"
+  },
+  {
+    "q": "New York",
+    "dt": "2050-01-01",
+    "lang": "english",
+    "statusCode": 401,
+    "scenario": "Unauthorized - Invalid API key with invalid lang"
+  },
+  {
+    "q": "Pyongyang",
+    "dt": "2022-09-09",
+    "lang": "en-GB",
+    "statusCode": 403,
+    "scenario": "Forbidden - Unsupported lang variant"
+  },
+  {
+    "q": "Atlantis",
+    "dt": "2021-07-01",
+    "lang": "en",
+    "statusCode": 404,
+    "scenario": "Not Found - Unknown location"
+  },
+  {
+    "q": "London",
+    "dt": "1800-01-01",
+    "lang": "en",
+    "statusCode": 422,
+    "scenario": "Unprocessable Entity - Date out of supported range"
+  },
+  {
+    "q": "Paris",
+    "dt": "2023-08-15",
+    "lang": "zz",
+    "statusCode": 429,
+    "scenario": "Too Many Requests - Unsupported language code"
+  },
+  {
+    "q": "!@#$%^&*()",
+    "dt": "2023-13-01",
+    "lang": "en",
+    "statusCode": 500,
+    "scenario": "Internal Server Error - Malformed query and date"
+  }
+]

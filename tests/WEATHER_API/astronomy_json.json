@@ -1,0 +1,79 @@
+[
+  {
+    "q": "London",
+    "dt": "2024-07-15",
+    "statusCode": 200,
+    "scenario": "Success"
+  },
+  {
+    "q": "37.7749,-122.4194",
+    "dt": "2023-11-30",
+    "statusCode": 200,
+    "scenario": "Success"
+  },
+  {
+    "q": "Tokyo",
+    "dt": "2024-03-10",
+    "statusCode": 200,
+    "scenario": "Success"
+  },
+  {
+    "q": "10001",
+    "dt": "2024-01-05",
+    "statusCode": 200,
+    "scenario": "Success"
+  },
+  {
+    "q": "São Paulo",
+    "dt": "2024-02-29",
+    "statusCode": 200,
+    "scenario": "Success"
+  },
+  {
+    "q": "999,999",
+    "dt": "2023-02-30",
+    "statusCode": 400,
+    "scenario": "Bad Request"
+  },
+  {
+    "q": 12345,
+    "dt": "yesterday",
+    "statusCode": 401,
+    "scenario": "Unauthorized"
+  },
+  {
+    "q": "@@@@",
+    "dt": "1900-01-01",
+    "statusCode": 404,
+    "scenario": "Not Found"
+  },
+  {
+    "q": [
+      "NYC"
+    ],
+    "dt": "2023/12/01",
+    "statusCode": 422,
+    "scenario": "Unprocessable Entity"
+  },
+  {
+    "q": true,
+    "dt": true,
+    "statusCode": 500,
+    "scenario": "Internal Server Error"
+  },
+  {
+    "q": 3.14159,
+    "dt": "2026-01-01",
+    "statusCode": 429,
+    "scenario": "Too Many Requests"
+  },
+  {
+    "q": {
+      "lat": "40.7128",
+      "lon": "-74.0060"
+    },
+    "dt": "abcd-ef-gh",
+    "statusCode": 403,
+    "scenario": "Forbidden"
+  }
+]

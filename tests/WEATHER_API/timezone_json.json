@@ -1,0 +1,62 @@
+[
+  {
+    "q": "London",
+    "statusCode": 200,
+    "scenario": "Success"
+  },
+  {
+    "q": "37.7749,-122.4194",
+    "statusCode": 200,
+    "scenario": "Success"
+  },
+  {
+    "q": "90210",
+    "statusCode": 200,
+    "scenario": "Success"
+  },
+  {
+    "q": "München",
+    "statusCode": 200,
+    "scenario": "Success"
+  },
+  {
+    "q": "SW1A",
+    "statusCode": 200,
+    "scenario": "Success"
+  },
+  {
+    "q": "auto:ip",
+    "statusCode": 200,
+    "scenario": "Success"
+  },
+  {
+    "q": "999.999,200.000",
+    "statusCode": 400,
+    "scenario": "Bad Request"
+  },
+  {
+    "q": "!!!!!!!!!",
+    "statusCode": 400,
+    "scenario": "Bad Request"
+  },
+  {
+    "q": "ThisPlaceDoesNotExistXYZ12345",
+    "statusCode": 404,
+    "scenario": "Not Found"
+  },
+  {
+    "q": "37.7749,-999.9999",
+    "statusCode": 422,
+    "scenario": "Unprocessable Entity"
+  },
+  {
+    "q": "forbidden",
+    "statusCode": 403,
+    "scenario": "Forbidden"
+  },
+  {
+    "q": "%%%",
+    "statusCode": 500,
+    "scenario": "Internal Server Error"
+  }
+]
