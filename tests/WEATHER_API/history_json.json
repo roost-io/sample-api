@@ -1,0 +1,134 @@
+[
+  {
+    "q": "London",
+    "dt": "2023-09-20",
+    "unixdt": 1695168000,
+    "end_dt": "2023-09-25",
+    "unixend_dt": 1695600000,
+    "hour": 14,
+    "lang": "en",
+    "statusCode": 200,
+    "scenario": "Success - City name"
+  },
+  {
+    "q": "48.8567,2.3508",
+    "dt": "2021-06-15",
+    "unixdt": 1623715200,
+    "end_dt": "2021-06-20",
+    "unixend_dt": 1624147200,
+    "hour": 9,
+    "lang": "fr",
+    "statusCode": 200,
+    "scenario": "Success - LatLon"
+  },
+  {
+    "q": "10001",
+    "dt": "2022-12-31",
+    "unixdt": 1672444800,
+    "end_dt": "2023-01-05",
+    "unixend_dt": 1672876800,
+    "hour": 16,
+    "lang": "es",
+    "statusCode": 200,
+    "scenario": "Success - ZIP code"
+  },
+  {
+    "q": "28.6139,77.2090",
+    "dt": "2020-01-01",
+    "unixdt": 1577836800,
+    "end_dt": "2020-01-03",
+    "unixend_dt": 1578009600,
+    "hour": 6,
+    "lang": "hi",
+    "statusCode": 200,
+    "scenario": "Success - Coordinates with Hindi"
+  },
+  {
+    "q": "Tokyo",
+    "dt": "2025-06-01",
+    "unixdt": 1748736000,
+    "end_dt": "2025-06-07",
+    "unixend_dt": 1749254400,
+    "hour": 12,
+    "lang": "ja",
+    "statusCode": 202,
+    "scenario": "Accepted - Future Forecast"
+  },
+  {
+    "q": "-33.8688,151.2093",
+    "dt": "2023-11-01",
+    "unixdt": 1698796800,
+    "end_dt": "2023-11-03",
+    "unixend_dt": 1698969600,
+    "hour": 3,
+    "lang": "en",
+    "statusCode": 201,
+    "scenario": "Created - Marine"
+  },
+  {
+    "q": "!!!",
+    "dt": "2023/13/40",
+    "unixdt": -1000,
+    "end_dt": "2023-02-30",
+    "unixend_dt": -2000,
+    "hour": 99,
+    "lang": "xx",
+    "statusCode": 400,
+    "scenario": "Bad Request - Invalid hour and dates"
+  },
+  {
+    "q": "New York@@",
+    "dt": "15-06-2021",
+    "unixdt": -1,
+    "end_dt": "14-06-2021",
+    "unixend_dt": -2,
+    "hour": -5,
+    "lang": "english",
+    "statusCode": 401,
+    "scenario": "Unauthorized - Invalid lang"
+  },
+  {
+    "q": "Atlantis_City_123",
+    "dt": "2021-02-29",
+    "unixdt": 9999999999999,
+    "end_dt": "2021-02-30",
+    "unixend_dt": 123,
+    "hour": 24,
+    "lang": "zz",
+    "statusCode": 404,
+    "scenario": "Not Found - Unknown location"
+  },
+  {
+    "q": "90210??",
+    "dt": "2020-13-01",
+    "unixdt": -999999999,
+    "end_dt": "2020-00-10",
+    "unixend_dt": -999,
+    "hour": 100,
+    "lang": "deutsch",
+    "statusCode": 422,
+    "scenario": "Unprocessable Entity - Hour out of range"
+  },
+  {
+    "q": "91.0000,181.0000",
+    "dt": "2022/12/31",
+    "unixdt": 3.14159,
+    "end_dt": "2023/01/01",
+    "unixend_dt": 2.71828,
+    "hour": 1000,
+    "lang": "xx-YY",
+    "statusCode": 429,
+    "scenario": "Too Many Requests - invalid latlon"
+  },
+  {
+    "q": "#$%^&*()",
+    "dt": "not-a-date",
+    "unixdt": -0.1,
+    "end_dt": "2025-02-29",
+    "unixend_dt": -9999999999999,
+    "hour": -10,
+    "lang": "??",
+    "statusCode": 500,
+    "scenario": "Internal Server Error - garbage"
+  }
+]

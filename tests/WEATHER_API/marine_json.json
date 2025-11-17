@@ -1,0 +1,152 @@
+[
+  {
+    "q": "London",
+    "days": 3,
+    "dt": "2024-11-01",
+    "unixdt": 1730419200,
+    "hour": 14,
+    "lang": "en",
+    "statusCode": 200,
+    "scenario": "Success - 3 day forecast"
+  },
+  {
+    "q": "New York",
+    "days": 7,
+    "dt": "2025-01-10",
+    "unixdt": 1736467200,
+    "hour": 9,
+    "lang": "es",
+    "statusCode": 200,
+    "scenario": "Success - 7 day forecast Spanish"
+  },
+  {
+    "q": "Tokyo,JP",
+    "days": 1,
+    "dt": "2024-12-25",
+    "unixdt": 1735084800,
+    "hour": 21,
+    "lang": "ja",
+    "statusCode": 200,
+    "scenario": "Success - Current day Tokyo"
+  },
+  {
+    "q": "48.8566,2.3522",
+    "days": 5,
+    "dt": "2024-10-05",
+    "unixdt": 1728086400,
+    "hour": 6,
+    "lang": "fr",
+    "statusCode": 200,
+    "scenario": "Success - Paris by coordinates"
+  },
+  {
+    "q": "90210",
+    "days": 14,
+    "dt": "2024-09-15",
+    "unixdt": 1726358400,
+    "hour": 16,
+    "lang": "de",
+    "statusCode": 200,
+    "scenario": "Success - Zip code"
+  },
+  {
+    "q": "São Paulo,BR",
+    "days": 2,
+    "dt": "2024-08-20",
+    "unixdt": 1724112000,
+    "hour": 3,
+    "lang": "pt",
+    "statusCode": 200,
+    "scenario": "Success - Accented city"
+  },
+  {
+    "q": "Sydney,AU",
+    "days": 10,
+    "dt": "2025-03-01",
+    "unixdt": 1740787200,
+    "hour": 0,
+    "lang": "en",
+    "statusCode": 200,
+    "scenario": "Success - Future date Sydney"
+  },
+  {
+    "q": "London",
+    "days": 0,
+    "dt": "2024-11-01",
+    "unixdt": 1730419200,
+    "hour": 14,
+    "lang": "en",
+    "statusCode": 400,
+    "scenario": "Bad Request - Invalid days (must be >=1)"
+  },
+  {
+    "q": "New York",
+    "days": 3,
+    "dt": "2024-11-01",
+    "unixdt": 1730419200,
+    "hour": 24,
+    "lang": "en",
+    "statusCode": 400,
+    "scenario": "Bad Request - Hour out of range"
+  },
+  {
+    "q": "Tokyo,JP",
+    "days": 2,
+    "dt": "2024-13-01",
+    "unixdt": 1735084800,
+    "hour": 10,
+    "lang": "en",
+    "statusCode": 400,
+    "scenario": "Bad Request - Invalid date format"
+  },
+  {
+    "q": "48.8566,2.3522",
+    "days": 4,
+    "dt": "2024-10-05",
+    "unixdt": -1,
+    "hour": 12,
+    "lang": "fr",
+    "statusCode": 422,
+    "scenario": "Unprocessable Entity - Invalid unix timestamp"
+  },
+  {
+    "q": "90210",
+    "days": 5,
+    "dt": "2024-09-15",
+    "unixdt": 1726358400,
+    "hour": 8,
+    "lang": "english",
+    "statusCode": 400,
+    "scenario": "Bad Request - Unsupported language code"
+  },
+  {
+    "q": "INVALID_LOCATION_12345",
+    "days": 3,
+    "dt": "2024-12-25",
+    "unixdt": 1735084800,
+    "hour": 15,
+    "lang": "en",
+    "statusCode": 404,
+    "scenario": "Not Found - Invalid location"
+  },
+  {
+    "q": "Sydney,AU",
+    "days": 2.5,
+    "dt": "2025-03-01",
+    "unixdt": 1740787200,
+    "hour": 7,
+    "lang": "en",
+    "statusCode": 400,
+    "scenario": "Bad Request - Non-integer days"
+  },
+  {
+    "q": "São Paulo,BR",
+    "days": 1,
+    "dt": "1900-01-01",
+    "unixdt": 1730419200,
+    "hour": 5,
+    "lang": "pt",
+    "statusCode": 400,
+    "scenario": "Bad Request - Date out of allowed range"
+  }
+]
