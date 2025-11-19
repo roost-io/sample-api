@@ -1,0 +1,50 @@
+[
+  {
+    "statusCode": 200,
+    "scenario": "Success"
+  },
+  {
+    "statusCode": 201,
+    "scenario": "Created"
+  },
+  {
+    "statusCode": 202,
+    "scenario": "Accepted"
+  },
+  {
+    "statusCode": 204,
+    "scenario": "No Content"
+  },
+  {
+    "statusCode": 400,
+    "scenario": "Bad Request"
+  },
+  {
+    "statusCode": 401,
+    "scenario": "Unauthorized"
+  },
+  {
+    "statusCode": 403,
+    "scenario": "Forbidden"
+  },
+  {
+    "statusCode": 404,
+    "scenario": "Not Found"
+  },
+  {
+    "statusCode": 409,
+    "scenario": "Conflict"
+  },
+  {
+    "statusCode": 422,
+    "scenario": "Unprocessable Entity"
+  },
+  {
+    "statusCode": 429,
+    "scenario": "Too Many Requests"
+  },
+  {
+    "statusCode": 500,
+    "scenario": "Internal Server Error"
+  }
+]
