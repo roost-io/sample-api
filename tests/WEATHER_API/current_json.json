@@ -1,0 +1,74 @@
+[
+  {
+    "q": "London",
+    "lang": "en",
+    "statusCode": 200,
+    "scenario": "Success"
+  },
+  {
+    "q": "48.8566,2.3522",
+    "lang": "fr",
+    "statusCode": 200,
+    "scenario": "Success"
+  },
+  {
+    "q": "10001",
+    "lang": "en",
+    "statusCode": 200,
+    "scenario": "Success"
+  },
+  {
+    "q": "São Paulo",
+    "lang": "pt",
+    "statusCode": 201,
+    "scenario": "Created"
+  },
+  {
+    "q": "東京",
+    "lang": "ja",
+    "statusCode": 202,
+    "scenario": "Accepted"
+  },
+  {
+    "q": "???",
+    "lang": "zz",
+    "statusCode": 400,
+    "scenario": "Bad Request"
+  },
+  {
+    "q": "#$%#",
+    "lang": "en-UK-??",
+    "statusCode": 401,
+    "scenario": "Unauthorized"
+  },
+  {
+    "q": "9999,9999",
+    "lang": "xx",
+    "statusCode": 404,
+    "scenario": "Not Found"
+  },
+  {
+    "q": "91.0,181.0",
+    "lang": "eng",
+    "statusCode": 422,
+    "scenario": "Unprocessable Entity"
+  },
+  {
+    "q": "<script>alert(1)</script>",
+    "lang": "!!",
+    "statusCode": 500,
+    "scenario": "Internal Server Error"
+  },
+  {
+    "q": "L0nd0n<>",
+    "lang": "123",
+    "statusCode": 415,
+    "scenario": "Unsupported Media Type"
+  },
+  {
+    "q": "rate_limit_test_location",
+    "lang": "zz-ZZ",
+    "statusCode": 429,
+    "scenario": "Too Many Requests"
+  }
+]
