@@ -1,0 +1,102 @@
+[
+  {
+    "ids": "KORD",
+    "bbox": "-88,41,-87,42",
+    "format": "json",
+    "taf": false,
+    "hours": 2,
+    "date": "2024-01-15",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "ids": "KJFK,KLAX",
+    "bbox": "-120,30,-70,45",
+    "format": "xml",
+    "taf": true,
+    "hours": 6,
+    "date": "2024-01-16",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "ids": "KATL",
+    "bbox": "-85,33,-84,34",
+    "format": "geojson",
+    "taf": false,
+    "hours": 12,
+    "date": "2024-01-17",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "ids": "KDFW,KIAH,KHOU",
+    "bbox": "-100,28,-94,34",
+    "format": "text",
+    "taf": true,
+    "hours": 24,
+    "date": "2024-01-18",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "ids": "KSEA",
+    "bbox": "-123,47,-122,48",
+    "format": "json",
+    "taf": false,
+    "hours": 1,
+    "date": "2024-01-19",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "ids": "",
+    "bbox": "invalid_bbox",
+    "format": "json",
+    "taf": false,
+    "hours": 2,
+    "date": "2024-01-15",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "ids": "INVALID123",
+    "bbox": "-200,100,-190,110",
+    "format": "invalid_format",
+    "taf": false,
+    "hours": -5,
+    "date": "invalid-date",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "ids": "KORD",
+    "bbox": "90,180,100,200",
+    "format": "json",
+    "taf": false,
+    "hours": 9999,
+    "date": "2024-13-45",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "ids": "12345",
+    "bbox": "",
+    "format": "pdf",
+    "taf": false,
+    "hours": 0,
+    "date": "",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "ids": "TESTXYZ",
+    "bbox": "abc,def,ghi,jkl",
+    "format": "html",
+    "taf": false,
+    "hours": -100,
+    "date": "00-00-0000",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  }
+]
