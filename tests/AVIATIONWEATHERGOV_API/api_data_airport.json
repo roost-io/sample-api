@@ -1,0 +1,72 @@
+[
+  {
+    "ids": "KMCI",
+    "bbox": "-94.8,39.2,-94.6,39.4",
+    "format": "json",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "ids": "KJFK,KLAX",
+    "bbox": "-118.5,33.8,-118.3,34.0",
+    "format": "json",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "ids": "KORD",
+    "bbox": "-88.0,41.9,-87.8,42.1",
+    "format": "xml",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "ids": "KATL,KDFW,KDEN",
+    "bbox": "-105.0,39.8,-104.8,40.0",
+    "format": "json",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "ids": "KSEA",
+    "bbox": "-122.4,47.4,-122.2,47.6",
+    "format": "json",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "ids": "",
+    "bbox": "-94.8,39.2,-94.6,39.4",
+    "format": "json",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "ids": "INVALID123",
+    "bbox": "invalid-bbox-format",
+    "format": "json",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "ids": "KMCI",
+    "bbox": "-94.8,39.2",
+    "format": "json",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "ids": "KJFK",
+    "bbox": "200,100,-200,-100",
+    "format": "invalid",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "ids": "ABC",
+    "bbox": "-180.0,-90.0,180.0,90.0",
+    "format": "json",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  }
+]
