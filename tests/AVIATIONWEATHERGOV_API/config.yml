@@ -1,0 +1,3 @@
+api:
+  host: "${API_HOST:-AVIATIONWEATHERGOV_API_API_HOST,}"
+test_data: {}

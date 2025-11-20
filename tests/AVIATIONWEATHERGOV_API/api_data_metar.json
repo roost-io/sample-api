@@ -1,0 +1,136 @@
+[
+  {
+    "ids": "KORD",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "ids": "KORD,KJFK,KLAX",
+    "format": "json",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "ids": "KORD",
+    "format": "xml",
+    "taf": false,
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "ids": "KJFK,KLAX",
+    "format": "json",
+    "taf": true,
+    "hours": 6,
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "ids": "KORD,KATL,KDFW",
+    "bbox": "-90,30,-80,40",
+    "format": "geojson",
+    "taf": false,
+    "hours": 12,
+    "date": "2023-11-03",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "ids": "KSEA,KSFO,KDEN",
+    "format": "json",
+    "hours": 24,
+    "date": "2023-11-15",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "ids": "KMIA",
+    "bbox": "-85,25,-75,35",
+    "format": "xml",
+    "taf": true,
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "ids": "KBOS,KEWR,KPHL",
+    "format": "json",
+    "taf": false,
+    "hours": 3,
+    "date": "2023-12-01",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "format": "json",
+    "taf": false,
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "ids": "",
+    "format": "json",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "ids": "KORD",
+    "format": "invalid_format",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "ids": "KORD",
+    "format": "json",
+    "taf": "not_boolean",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "ids": "KORD",
+    "format": "json",
+    "hours": -5,
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "ids": "KORD",
+    "format": "json",
+    "hours": "invalid_number",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "ids": "KORD",
+    "format": "json",
+    "date": "invalid-date-format",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "ids": "KORD",
+    "bbox": "invalid_bbox_format",
+    "format": "json",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "ids": "INVALIDICAO123456",
+    "format": "json",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "ids": "KORD",
+    "format": "pdf",
+    "taf": true,
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "ids": "KORD",
+    "format": "json",
+    "hours": 999999,
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  }
+]
