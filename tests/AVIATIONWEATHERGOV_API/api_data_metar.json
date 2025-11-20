@@ -1,0 +1,51 @@
+[
+  {
+    "ids": "KORD",
+    "bbox": "41.9742,-87.9073,41.9900,-87.9000",
+    "format": "json",
+    "taf": true,
+    "hours": 2,
+    "date": "2025-11-20",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "ids": "JFK",
+    "bbox": "40.6413,-73.7781,40.6500,-73.7700",
+    "format": "xml",
+    "taf": false,
+    "hours": 3,
+    "date": "2025-11-21",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "ids": "LAX",
+    "bbox": "33.9425,-118.4081,33.9550,-118.3950",
+    "format": "json",
+    "taf": true,
+    "hours": 1,
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "ids": "SFO",
+    "bbox": "37.6213,-122.3790,37.6310,-122.3700",
+    "format": "json",
+    "taf": false,
+    "hours": -2,
+    "date": "2025-11-22",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "ids": "ORD",
+    "bbox": "41.9742,-87.9073,41.9800,-87.9000",
+    "format": "json",
+    "taf": "true",
+    "hours": 2,
+    "date": "2025-11-23",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  }
+]

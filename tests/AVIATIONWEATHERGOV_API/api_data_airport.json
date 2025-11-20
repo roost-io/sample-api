@@ -1,0 +1,42 @@
+[
+  {
+    "ids": "KMCI",
+    "bbox": "39.2976,-94.7139,39.3120,-94.6900",
+    "format": "application/json",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "ids": "KMCI,LIT",
+    "bbox": "38.0,-97.0,39.0,-94.0",
+    "format": "application/json",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "ids": "KMCI",
+    "bbox": "39.0,-94.7,39.2,-94.5",
+    "format": "application/json",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "bbox": "38.0,-97.0,39.0,-96.0",
+    "format": "application/json",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "ids": "INVALID_ID",
+    "bbox": "38.0,-97.0,39.0,-96.0",
+    "format": "application/json",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "ids": "KMCI",
+    "format": "application/json",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  }
+]
