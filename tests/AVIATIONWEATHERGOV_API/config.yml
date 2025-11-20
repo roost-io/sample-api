@@ -1,0 +1,3 @@
+api:
+  host: "${API_HOST:-ApiURL1}"
+test_data: {}
