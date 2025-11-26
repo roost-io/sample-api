@@ -1,0 +1,74 @@
+[
+  {
+    "org-slug": "gh/CircleCI-Public",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "org-slug": "gh/CircleCI-Public",
+    "page-token": "tok_001_abcXYZ",
+    "mine": true,
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "org-slug": "bb/acme-co",
+    "page-token": "tok_002_nextPage",
+    "mine": false,
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "org-slug": "gh/CircleCI-Server",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "page-token": "tok_missing_org_1",
+    "mine": true,
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "org-slug": "gh/CircleCI-Public",
+    "page-token": "invalid token with spaces",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "org-slug": "not-a-valid/slug??",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "org-slug": "gh/nonexistent-org-404",
+    "mine": true,
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "org-slug": "gh/another-org-not-mine",
+    "page-token": "tok_003_try",
+    "mine": true,
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "mine": false,
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "org-slug": "gl/gitlab-org",
+    "page-token": "tok_004_gl",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "org-slug": "gh//",
+    "page-token": "tok_005_malformed",
+    "mine": false,
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  }
+]

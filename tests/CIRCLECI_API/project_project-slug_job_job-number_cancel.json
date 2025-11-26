@@ -1,0 +1,40 @@
+[
+  {
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "job-number": "4271",
+    "project-slug": "gh/acme-corp/mobile-app-ios",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "job-number": "5555",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "job-number": "12A34",
+    "project-slug": "zz/@@@/###",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "job-number": "999999",
+    "project-slug": "gh/no-such-org/no-such-repo",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "job-number": "73",
+    "project-slug": "gh/example-co/api-gateway",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "gh/acme-corp/service-backend",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  }
+]
