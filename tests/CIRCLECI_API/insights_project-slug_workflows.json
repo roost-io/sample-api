@@ -1,0 +1,85 @@
+[
+  {
+    "project-slug": "gh/octo-org/ci-demo",
+    "reporting-window": "last-30-days",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "gh/acme/widgets-api",
+    "reporting-window": "last-90-days",
+    "all-branches": true,
+    "page-token": "cjp_9a1b2c3d4e5f",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "bb/corp/legacy-app",
+    "reporting-window": "last-7-days",
+    "branch": "main",
+    "all-branches": false,
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "gh/startup/web-frontend",
+    "reporting-window": "last-30-days",
+    "page-token": "next_72fd901",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "gh/data/etl-pipeline",
+    "reporting-window": "last-90-days",
+    "branch": "release/2.3.0",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "gh/mobile/team-app",
+    "reporting-window": "last-7-days",
+    "all-branches": true,
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "reporting-window": "last-30-days",
+    "branch": "develop",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/octo-org/ci-demo",
+    "reporting-window": "last-13-days",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/unknown/missing-repo",
+    "reporting-window": "last-30-days",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/acme/widgets-api",
+    "reporting-window": "last-30-days",
+    "page-token": "bad@@token$$",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/startup/web-frontend",
+    "reporting-window": "last-90-days",
+    "branch": "nonexistent-branch-xyz",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "bb/corp/legacy-app",
+    "reporting-window": "last-7-days",
+    "all-branches": true,
+    "branch": "feature/foo",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  }
+]
