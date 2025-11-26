@@ -1,0 +1,41 @@
+[
+  {
+    "org-slug-or-id": "gh/engineering-core",
+    "statusCode": "202",
+    "scenario": "Successful responses: Accepted"
+  },
+  {
+    "org-slug-or-id": "c1d2e3f4-5678-49ab-9cde-0123456789ab",
+    "statusCode": "202",
+    "scenario": "Successful responses: Accepted"
+  },
+  {
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "org-slug-or-id": "!!invalid$$$org###",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "org-slug-or-id": "gh/org-does-not-exist-404",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "org-slug-or-id": "bb/unknown-workspace",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "org-slug-or-id": "gh/",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "org-slug-or-id": "gh/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  }
+]

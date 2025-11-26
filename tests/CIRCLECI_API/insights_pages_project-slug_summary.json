@@ -1,0 +1,115 @@
+[
+  {
+    "project-slug": "gh/acme-inc/web-portal",
+    "reporting-window": "last-30-days",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "gh/acme-inc/mobile-app",
+    "reporting-window": "last-7-days",
+    "branches": {
+      "include": [
+        "main",
+        "develop"
+      ],
+      "exclude": [
+        "legacy"
+      ]
+    },
+    "workflow-names": {
+      "include": [
+        "build-and-test",
+        "deploy"
+      ],
+      "exclude": [
+        "nightly"
+      ]
+    },
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "gh/contoso/infra-tools",
+    "reporting-window": "last-90-days",
+    "branches": {
+      "include": [
+        "release/1.2.x"
+      ]
+    },
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "reporting-window": "last-30-days",
+    "branches": {
+      "include": [
+        "main"
+      ]
+    },
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/acme-inc/data-pipeline",
+    "workflow-names": {
+      "include": [
+        "etl",
+        "qa-tests"
+      ]
+    },
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/foobar/libraries",
+    "reporting-window": "last-365-days",
+    "workflow-names": {
+      "include": [
+        "unit-tests"
+      ]
+    },
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/__unknown__/__missing-project__",
+    "reporting-window": "last-7-days",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/acme-inc/web-portal",
+    "reporting-window": "last-7-days",
+    "branches": {
+      "include": [
+        "feature/does-not-exist-9999",
+        "bugfix/no-such-branch"
+      ]
+    },
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/megacorp/platform",
+    "reporting-window": "last-30-days",
+    "workflow-names": {
+      "include": [
+        "smoke-tests"
+      ]
+    },
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "gl/bad-org/nonexistent-repo",
+    "reporting-window": "last-90-days",
+    "workflow-names": {
+      "include": [
+        "deploy-prod"
+      ]
+    },
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  }
+]
