@@ -1,0 +1,112 @@
+[
+  {
+    "ids": "KORD",
+    "format": "json",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "ids": "KJFK,KLAX,KATL",
+    "format": "geojson",
+    "taf": false,
+    "hours": 12,
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "ids": "KSFO",
+    "bbox": "-122.5,37.5,-122.0,38.0",
+    "format": "xml",
+    "taf": true,
+    "hours": 24,
+    "date": "2023-11-03",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "ids": "KDEN,KPHX",
+    "format": "raw",
+    "taf": false,
+    "hours": 6,
+    "date": "2023-11-15",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "ids": "KMIA",
+    "bbox": "-80.5,25.5,-80.0,26.0",
+    "format": "decoded",
+    "taf": true,
+    "hours": 48,
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "ids": "KSEA,KPDX",
+    "format": "iwxxm",
+    "taf": false,
+    "hours": 3,
+    "date": "2023-12-01",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "bbox": "-95.5,29.5,-95.0,30.0",
+    "format": "json",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "ids": "KBOS",
+    "format": "invalidformat",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "ids": "KDFW",
+    "format": "json",
+    "taf": "invalid",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "ids": "KIAD",
+    "format": "json",
+    "hours": -5,
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "ids": "KORD",
+    "format": "json",
+    "hours": "invalid_hours",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "ids": "NONEXISTENT",
+    "format": "json",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "ids": "KCLT",
+    "format": "yaml",
+    "taf": true,
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "ids": "",
+    "format": "json",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "ids": "KMSP",
+    "bbox": "invalid_bbox",
+    "format": "json",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  }
+]
