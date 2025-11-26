@@ -1,0 +1,91 @@
+[
+  {
+    "org-slug": "acme-inc",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "org-slug": "acme-inc",
+    "reporting-window": "last-30-days",
+    "project-names": {
+      "include": [
+        "api-preview-docs",
+        "payments-service"
+      ],
+      "exclude": [
+        "legacy-app"
+      ]
+    },
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "org-slug": "dev-tools",
+    "reporting-window": "last-7-days",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "reporting-window": "last-30-days",
+    "project-names": {
+      "include": [
+        "api-preview-docs"
+      ]
+    },
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "org-slug": "acme-inc",
+    "reporting-window": "year-to-date",
+    "project-names": {
+      "include": [
+        "api-preview-docs",
+        "payments-service"
+      ]
+    },
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "org-slug": "unknown-org-404",
+    "reporting-window": "last-30-days",
+    "project-names": {
+      "include": [
+        "api-preview-docs"
+      ]
+    },
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "org-slug": "acme-inc",
+    "reporting-window": "last-90-days",
+    "project-names": {
+      "include": [
+        "nonexistent-service-xyz",
+        "ghost-app"
+      ],
+      "exclude": [
+        "api-preview-docs"
+      ]
+    },
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "org-slug": "beta-labs",
+    "reporting-window": "last-365-days",
+    "project-names": {
+      "include": [
+        "web-app"
+      ],
+      "exclude": [
+        "payments-service",
+        "mobile-sdk"
+      ]
+    },
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  }
+]

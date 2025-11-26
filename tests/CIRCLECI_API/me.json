@@ -1,0 +1,82 @@
+[
+  {
+    "avatar_url": "https://cdn.vcs.example.com/avatars/u/4f6e1a28-9f2c-4a3f-9d2b-2e6f15b1b2c0.png",
+    "id": "f52a9e04-5a53-4f6d-9f7e-b53b4a64f1a2",
+    "login": "jdoe",
+    "name": "John Doe",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "avatar_url": "https://images.vcs.example.com/users/avatars/8b7f1a3d-7f1e-4f0e-84a6-8d5d2e7d2d1a.jpg",
+    "id": "a0f6b3f1-2d34-4d85-9c61-0e8c6a4d9e77",
+    "login": "alice.w",
+    "name": "Alice Wong",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "avatar_url": "https://cdn.vcs.example.com/avatars/u/1a2b3c4d-5566-7788-99aa-bbccddeeff00.png",
+    "id": "c8f2b1d4-7c2a-4a2e-9a0e-5b6c7d8e9f10",
+    "name": "Mark Taylor",
+    "message": "Missing required field: login",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "avatar_url": "https://avatars.vcs.example.com/u/99887766-5544-3322-1100-abcdefabcdef.png",
+    "id": "not-a-uuid",
+    "login": "invalid_id_case",
+    "name": "Invalid Id",
+    "message": "Invalid format for field: id",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "avatar_url": "htp:/bad-url",
+    "id": "3f6c0e3e-6e2b-4a2e-84e0-9e3f2b1c5a77",
+    "login": "bad_url_user",
+    "name": "Bad Url User",
+    "message": "Invalid format for field: avatar_url",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "avatar_url": "https://cdn.vcs.example.com/avatars/u/22bbccdd-eeff-0011-2233-445566778899.png",
+    "id": "f3c8d2b0-1a2b-4c5d-9e6f-7a8b9c0d1e2f",
+    "login": "type_mismatch_name",
+    "name": 12345,
+    "message": "Invalid type for field: name. Expected string.",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "message": "User not found for provided id.",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "avatar_url": "https://images.vcs.example.com/u/7a6b5c4d-3e2f-1a0b-9c8d-7e6f5a4b3c2d.png",
+    "id": "6b0c5a52-8f64-4d5f-9e63-7c2c2f3b2b1f",
+    "login": 789,
+    "name": "Login Type Error",
+    "message": "Invalid type for field: login. Expected string.",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "avatar_url": "https://cdn.vcs.example.com/avatars/u/aa11bb22-cc33-dd44-ee55-ff6677889900.png",
+    "message": "Missing required fields: id, login, name",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "avatar_url": "file:///etc/passwd",
+    "id": "c1d2e3f4a5b6c7d8e9f0c1d2e3f4a5b6",
+    "login": "bad_scheme_user",
+    "name": "Bad Scheme",
+    "message": "Invalid format for field: id",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  }
+]

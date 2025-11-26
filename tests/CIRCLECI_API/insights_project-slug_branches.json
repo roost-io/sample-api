@@ -1,0 +1,47 @@
+[
+  {
+    "project-slug": "gh/CircleCI-Public/circleci-cli",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "gh/CircleCI-Public/api-preview-docs",
+    "workflow-name": "build-and-test",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "workflow-name": "deploy",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gl/example-org/example-repo",
+    "workflow-name": "test",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh//repo-only",
+    "workflow-name": "build",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/unknown-org-123/unknown-repo-456",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/CircleCI-Public/circleci-cli",
+    "workflow-name": "nonexistent-workflow-xyz",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "bb/example-co/sample-app",
+    "workflow-name": "deploy-prod",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  }
+]
