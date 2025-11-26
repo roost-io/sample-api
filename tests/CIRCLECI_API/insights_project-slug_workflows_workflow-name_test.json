@@ -1,0 +1,69 @@
+[
+  {
+    "project-slug": "gh/acme-corp/shuttle-control",
+    "workflow-name": "build_and_test",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "gh/acme-corp/shuttle-control",
+    "workflow-name": "deploy",
+    "branch": "main",
+    "all-branches": false,
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "bb/space-labs/rocket-sim",
+    "workflow-name": "build_and_test",
+    "all-branches": true,
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "workflow-name": "build_and_test",
+    "branch": "main",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/acme-corp/shuttle-control",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "github//bad slug",
+    "workflow-name": "build_and_test",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/acme-corp/monorepo",
+    "workflow-name": "lint_and_test?",
+    "branch": "develop",
+    "all-branches": true,
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/unknown-org/nonexistent-repo",
+    "workflow-name": "unknown_workflow",
+    "branch": "main",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/acme-corp/monorepo",
+    "workflow-name": "integration_tests",
+    "branch": "release/2025.11",
+    "all-branches": false,
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "gh/spacefleet/warp-core",
+    "workflow-name": "lint",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  }
+]

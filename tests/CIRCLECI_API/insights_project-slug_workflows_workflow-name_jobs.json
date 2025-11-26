@@ -1,0 +1,96 @@
+[
+  {
+    "project-slug": "gh/acme/monorepo",
+    "workflow-name": "build_and_test",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "gh/acme/monorepo",
+    "workflow-name": "deploy",
+    "reporting-window": "last-30-days",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "gh/roadrunner/rocket",
+    "workflow-name": "ci_pipeline",
+    "reporting-window": "last-7-days",
+    "all-branches": false,
+    "branch": "main",
+    "page-token": "eyJwYWdlIjoxfQ==",
+    "job-name": "unit_tests",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "gh/roadrunner/rocket",
+    "workflow-name": "release",
+    "reporting-window": "last-90-days",
+    "all-branches": true,
+    "page-token": "eyJwYWdlIjoyfQ==",
+    "job-name": "build",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "gh/umbrella/cms",
+    "workflow-name": "integration_tests",
+    "reporting-window": "last-7-days",
+    "all-branches": false,
+    "branch": "feature/login-ui",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "workflow-name": "build_and_test",
+    "reporting-window": "last-30-days",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/acme/payments",
+    "reporting-window": "last-90-days",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/acme/monorepo",
+    "workflow-name": "deploy",
+    "reporting-window": "last-13-days",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/does-not-exist/ghost-repo",
+    "workflow-name": "ci_pipeline",
+    "reporting-window": "last-30-days",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/umbrella/cms",
+    "workflow-name": "integration_tests",
+    "reporting-window": "last-7-days",
+    "all-branches": false,
+    "branch": "nonexistent/branch_12345",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/roadrunner/rocket",
+    "workflow-name": "release",
+    "reporting-window": "last-90-days",
+    "page-token": "badtoken@@@",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/acme/monorepo",
+    "workflow-name": "build_and_test",
+    "reporting-window": "last-7-days",
+    "job-name": "unknown_job_stage",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  }
+]

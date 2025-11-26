@@ -1,0 +1,41 @@
+[
+  {
+    "project-slug": "acme-org/sample-app",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "octo-org/ci-pipeline",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "!!!invalid-slug!!!",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "bad org/bad repo",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "unknown-org/nonexistent-repo-9999",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "single-segment-slug",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "team-123/app-service-v2",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  }
+]

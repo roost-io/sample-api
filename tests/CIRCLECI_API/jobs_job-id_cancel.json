@@ -1,0 +1,51 @@
+[
+  {
+    "job-id": "a4f1c3c2-9b0e-4b5a-9d2f-7b6ea23c1f5e",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "job-id": "job-2025-11-26-01-XYZ12",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "job-id": "invalid_job_id_@@@",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "job-id": "d1e2f3a4b5c6d7e8f9a0",
+    "statusCode": 401,
+    "scenario": "Client error responses: Unauthorized"
+  },
+  {
+    "job-id": "cicd-ops-7766-ABCD",
+    "statusCode": 403,
+    "scenario": "Client error responses: Forbidden"
+  },
+  {
+    "job-id": "00000000-0000-0000-0000-000000000000",
+    "statusCode": 404,
+    "scenario": "Client error responses: Not Found"
+  },
+  {
+    "job-id": "123456",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "job-id": "x",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "job-id": "ef12ab34-56cd-78ef-90ab-12cd34ef56ab",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  }
+]
