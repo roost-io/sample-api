@@ -1,0 +1,77 @@
+[
+  {
+    "id": "org_8f4b3f2a-12ab-4be9-9d3a-41f2e1a9a5c1",
+    "name": "Acme Robotics",
+    "slug": "github/acme-robotics",
+    "vcs_type": "github",
+    "statusCode": 201,
+    "scenario": "Successful responses: Created"
+  },
+  {
+    "id": "org_1d92f1e3-7e3b-4d4c-9d62-0c2b3ee31d21",
+    "name": "Beta Labs",
+    "slug": "github/beta-labs",
+    "vcs_type": "github",
+    "contact_email": "ops@betalabs.io",
+    "created_at": "2025-02-18T10:22:45Z",
+    "tags": [
+      "ci",
+      "engineering"
+    ],
+    "statusCode": 201,
+    "scenario": "Successful responses: Created"
+  },
+  {
+    "id": "org_c7c23b1e-a4a5-4f6d-9609-6a6c5f6fa9bb",
+    "name": "Gamma Works",
+    "vcs_type": "github",
+    "statusCode": "default",
+    "scenario": "Unknown response class",
+    "message": "Missing required field: slug"
+  },
+  {
+    "id": "org_0f9b6a27-3d6a-4aa9-9b1f-3cfe6bfa53c9",
+    "name": "Delta Industries",
+    "slug": "github/delta-industries",
+    "vcs_type": 42,
+    "statusCode": "default",
+    "scenario": "Unknown response class",
+    "message": "Invalid type for field vcs_type; expected string"
+  },
+  {
+    "id": "org_5e77c0b4-d77a-4cf1-8b2d-7e2f1a8bcd90",
+    "name": "Epsilon Corp",
+    "slug": "epsilon-corp",
+    "vcs_type": "github",
+    "statusCode": "default",
+    "scenario": "Unknown response class",
+    "message": "Invalid slug format; expected 'vcs-slug/org-name'"
+  },
+  {
+    "id": 987654321,
+    "name": "Zeta Systems",
+    "slug": "github/zeta-systems",
+    "vcs_type": "github",
+    "statusCode": "default",
+    "scenario": "Unknown response class",
+    "message": "Invalid type for field id; expected string"
+  },
+  {
+    "id": "org_40400000-0000-0000-0000-000000000404",
+    "name": "Unknown Org",
+    "slug": "github/does-not-exist-9999",
+    "vcs_type": "github",
+    "statusCode": "default",
+    "scenario": "Unknown response class",
+    "message": "Organization not found"
+  },
+  {
+    "id": "org_aa12f034-0b1c-4d3e-bb12-4c0aafed45cb",
+    "name": "Theta Ventures",
+    "slug": "github/theta-ventures",
+    "vcs_type": "svn",
+    "statusCode": "default",
+    "scenario": "Unknown response class",
+    "message": "Unsupported vcs_type value"
+  }
+]

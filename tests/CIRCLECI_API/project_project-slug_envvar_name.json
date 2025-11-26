@@ -1,0 +1,47 @@
+[
+  {
+    "name": "FOO",
+    "statusCode": "200",
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "gh/acme-corp/mobile-app",
+    "name": "API_KEY",
+    "statusCode": "200",
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "gh/acme-corp/web-app",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/acme-corp/web-app",
+    "name": "@@@",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/nonexistent-org/unknown-repo",
+    "name": "DATABASE_URL",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "bb/zen-inc/ci-pipeline",
+    "name": "CACHE_BUCKET",
+    "statusCode": "200",
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "xx/owner/repo",
+    "name": "SECRET_TOKEN",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "name": "SERVICE_ACCOUNT",
+    "statusCode": "200",
+    "scenario": "Successful responses: OK"
+  }
+]

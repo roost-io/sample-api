@@ -1,0 +1,76 @@
+[
+  {
+    "project-slug": "gh/acme-inc/webapp",
+    "workflow-name": "build-and-test",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "gh/acme-inc/webapp",
+    "workflow-name": "deploy",
+    "all-branches": false,
+    "branch": "main",
+    "page-token": "eyJwYWdlIjoyLCJrZXkiOiJ0b2tfMDAxIn0",
+    "start-date": "2025-10-01T00:00:00Z",
+    "end-date": "2025-10-31T23:59:59Z",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "bb/example-co/legacy-service",
+    "workflow-name": "nightly-tests",
+    "all-branches": true,
+    "start-date": "2025-09-01T00:00:00Z",
+    "end-date": "2025-09-30T23:59:59Z",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "gh/rocket-labs/api-gateway",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "workflow-name": "integration-pipeline",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "acme-inc-webapp",
+    "workflow-name": "build",
+    "start-date": "2025-02-30T12:00:00Z",
+    "end-date": "2025-03-05T12:00:00Z",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/data-org/analytics-pipeline",
+    "workflow-name": "daily-etl",
+    "start-date": "2025-11-20T12:00:00Z",
+    "end-date": "2025-11-10T12:00:00Z",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/unknown-org/unknown-repo",
+    "workflow-name": "release",
+    "all-branches": false,
+    "branch": "main",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gl/non-supported/provider-repo",
+    "workflow-name": "test",
+    "page-token": "tok_bad_$$$",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/fintech-co/payments",
+    "workflow-name": "smoke-tests",
+    "page-token": "eyJwYWdlIjozfQ",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  }
+]

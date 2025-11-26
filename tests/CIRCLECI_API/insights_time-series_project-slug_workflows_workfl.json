@@ -1,0 +1,70 @@
+[
+  {
+    "project-slug": "gh/acme-inc/web-app",
+    "granularity": "day",
+    "start-date": "2025-10-01T00:00:00Z",
+    "end-date": "2025-10-31T23:59:59Z",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "gh/acme-inc/mobile-app",
+    "workflow-name": "build-and-test",
+    "branch": "main",
+    "granularity": "day",
+    "start-date": "2025-09-01T00:00:00Z",
+    "end-date": "2025-09-30T23:59:59Z",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "gh/acme-inc/web-app",
+    "start-date": "2025-10-01T00:00:00Z",
+    "end-date": "2025-10-31T23:59:59Z",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/acme-inc/web-app",
+    "granularity": "hour",
+    "start-date": "2025-10-01T00:00:00Z",
+    "end-date": "2025-10-31T23:59:59Z",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/nonexistent-org/unknown-repo",
+    "granularity": "day",
+    "start-date": "2025-10-01T00:00:00Z",
+    "end-date": "2025-10-31T23:59:59Z",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/acme-inc/web-app",
+    "workflow-name": "does-not-exist-workflow",
+    "granularity": "day",
+    "start-date": "2025-10-01T00:00:00Z",
+    "end-date": "2025-10-31T23:59:59Z",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/acme-inc/web-app",
+    "granularity": "day",
+    "start-date": "2025-10-31T23:59:59Z",
+    "end-date": "2025-10-01T00:00:00Z",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/acme-inc/api-service",
+    "workflow-name": "deploy",
+    "branch": "release/v2.0.0",
+    "granularity": "day",
+    "start-date": "2025-11-01T00:00:00Z",
+    "end-date": "2025-11-25T23:59:59Z",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  }
+]

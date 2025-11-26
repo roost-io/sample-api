@@ -1,0 +1,72 @@
+[
+  {
+    "job-number": "101",
+    "project-slug": "gh/CircleCI-Public/api-preview-docs",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "job-number": "202",
+    "project-slug": "gh/CircleCI-Public/circleci-docs",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "job-number": "77",
+    "project-slug": "circleci/6b5a42f4-2a92-4021-9f67-b2050d36db5c/a8b6d2c9-5f31-4e1b-9c28-14c8b7f5a4d2",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "job-number": "318",
+    "project-slug": "bb/myteam/infra-scripts",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "gh/CircleCI-Public/api-preview-docs",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "job-number": "404",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "job-number": "abcXYZ",
+    "project-slug": "gh/CircleCI-Public/api-preview-docs",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "job-number": "12",
+    "project-slug": "invalid-slug",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "job-number": "33",
+    "project-slug": "gl/my-org/my-repo",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "job-number": "9999999",
+    "project-slug": "gh/nonexistent-org-xyz/some-missing-repo",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "job-number": "88",
+    "project-slug": "bb/company-does-not-exist/unknown-repo",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "job-number": "12",
+    "project-slug": "gh/CircleCI-Public/api-preview-docs%2",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  }
+]

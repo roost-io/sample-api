@@ -1,0 +1,69 @@
+[
+  {
+    "project-slug": "gh/alpha-inc/api-service",
+    "workflow-name": "build_and_test",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "gh/alpha-inc/api-service",
+    "workflow-name": "nightly_deploy",
+    "all-branches": true,
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "gh/beta-co/web-frontend",
+    "workflow-name": "ci_pipeline",
+    "all-branches": false,
+    "branch": "main",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "bb/gamma-labs/microservice-orders",
+    "workflow-name": "integration_tests",
+    "branch": "develop",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "gh/alpha-inc/api-service",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "workflow-name": "build_and_test",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gl/alpha-inc/app",
+    "workflow-name": "build_and_test",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/beta-co/web-frontend",
+    "workflow-name": "ci_pipeline",
+    "all-branches": true,
+    "branch": "feature/login",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/beta-co/web-frontend",
+    "workflow-name": "workflow_does_not_exist",
+    "branch": "main",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/unknown-org/unknown-repo",
+    "workflow-name": "build_and_test",
+    "all-branches": false,
+    "branch": "main",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  }
+]

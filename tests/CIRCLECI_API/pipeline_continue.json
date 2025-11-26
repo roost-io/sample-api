@@ -1,0 +1,63 @@
+[
+  {
+    "message": "Operation completed successfully.",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "message": "Pipeline queued; processing will begin shortly.",
+    "requestId": "req_3f8c2a7b9e",
+    "timestamp": "2025-01-12T09:15:27Z",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "message": 404,
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "message": true,
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "message": "Resource id does not exist: abc123-nonexistent",
+    "resourceId": "abc123-nonexistent",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "message": "Triggered workflow build and tests completed.",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "message": [
+      "invalid",
+      "type"
+    ],
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "message": "Resource not found for id 00000000-0000-0000-0000-000000000000",
+    "resourceId": "00000000-0000-0000-0000-000000000000",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "message": "Workflow executed; all jobs succeeded.",
+    "metadata": {
+      "durationMs": 582,
+      "executor": "ubuntu-22.04",
+      "retries": 0
+    },
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  }
+]
