@@ -1,0 +1,48 @@
+[
+  {
+    "job-number": "4312",
+    "project-slug": "gh/acme-inc/api-service",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "job-number": "78",
+    "project-slug": "gh/example-org/web-frontend",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "gh/acme-inc/api-service",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "job-number": "4312",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "job-number": "job#42",
+    "project-slug": "gh/acme-inc/api-service",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "job-number": "99999999",
+    "project-slug": "gh/acme-inc/nonexistent-repo",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "job-number": "1024",
+    "project-slug": "gl/unknown-org/unknown-repo",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "job-number": "555",
+    "project-slug": "gh//mobile-app",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  }
+]

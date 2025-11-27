@@ -1,0 +1,56 @@
+[
+  {
+    "pipeline-id": "5034460f-c7c4-4c43-9457-de07e2029e7b",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "pipeline-id": "a8d1b8e2-5f3a-4af4-9bb9-7b7f0f25e2a1",
+    "page-token": "pt_ZXhhbXBsZS0x",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "page-token": "pt_1A2b3C4d5E",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "pipeline-id": "not-a-uuid",
+    "page-token": "pt_next_002",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "pipeline-id": "2f9b1a76-41d3-4f2f-8b91-3f384c1dbe10",
+    "page-token": "pt_ZXhhbXBsZS0y",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "pipeline-id": "6c2b4e5a-0fb9-4f53-9f1f-146a1be5d8a7",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "pipeline-id": "c3a1f2e4-7b89-4cde-9fab-1a2b3c4d5e6f",
+    "page-token": "pt_invalid_@@@",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "pipeline-id": "f4e1d2c3-b4a5-4678-90ab-def123456789",
+    "page-token": "pt_03_NextPage",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "pipeline-id": "12345",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  }
+]

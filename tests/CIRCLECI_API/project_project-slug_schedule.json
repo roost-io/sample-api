@@ -1,0 +1,45 @@
+[
+  {
+    "project-slug": "gh/CircleCI-Public/api-preview-docs",
+    "statusCode": "200",
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "gh/acme/web-service",
+    "page-token": "pg_01HZYQWQ8E6J9K4MNT7B",
+    "statusCode": "200",
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "bb/rocket-co/ci-pipelines",
+    "statusCode": "201",
+    "scenario": "Successful responses: Created"
+  },
+  {
+    "project-slug": "gh/fintech-inc/payments-gateway",
+    "page-token": "pt_next_2f4c2e785ff84a1e9c6b1",
+    "statusCode": "201",
+    "scenario": "Successful responses: Created"
+  },
+  {
+    "page-token": "pg_invalid_missing_slug",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh//bad",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/acme/infra",
+    "page-token": "!@#$/\\",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/nonexistent-org/nonexistent-repo",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  }
+]

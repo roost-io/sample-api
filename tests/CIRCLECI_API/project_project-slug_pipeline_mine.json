@@ -1,0 +1,68 @@
+[
+  {
+    "project-slug": "gh/CircleCI-Public/api-preview-docs",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "gh/CircleCI-Public/circleci-cli",
+    "page-token": "c1_NextPage_01a2b3c4",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "gh/CircleCI-Public/server",
+    "page-token": "Mjptb3JlOnJlc3VsdHM",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "page-token": "c1_missing_project_slug_test",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "github.com/CircleCI-Public/api-preview-docs",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/no-such-org-xyz/no-such-repo-xyz",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/CircleCI-Public/api-preview-docs",
+    "page-token": "###INVALID_TOKEN###",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/CircleCI-Public/api-preview-docs",
+    "page-token": "expired-2023-01-01-abcdef",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "bb/CircleCI-Public/docs",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "gh/CircleCI-Public/config-preview",
+    "page-token": "NHBhZ2VfdG9rZW46M2Y3YTk",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "gh/CircleCI Public/api-preview-docs",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/CircleCI-Public/api-preview-docs",
+    "page-token": "oversized_token_T0tQX0xPTkdfVE9LRU5fMDEyMzQ1Njc4OWFiY2RlZgAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  }
+]

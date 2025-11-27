@@ -1,0 +1,51 @@
+[
+  {
+    "pipeline-id": "b7a1f7a2-2d3e-4a5b-9c10-1f2e3d4c5b6a",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "pipeline-id": "0f1e2d3c-4b5a-6789-abcd-ef0123456789",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "pipeline-id": "A1B2C3D4-E5F6-47A8-9B0C-D1E2F3A4B5C6",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "pipeline-id": "not-a-uuid",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "pipeline-id": "###INVALID-ID###",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "pipeline-id": "12345678-1234-1234-1234-12345678901234",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "pipeline-id": "00000000-0000-0000-0000-000000000000",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "pipeline-id": "9f8e7d6c-5b4a-3210-ffff-111122223333",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "pipeline-id": "abc",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  }
+]

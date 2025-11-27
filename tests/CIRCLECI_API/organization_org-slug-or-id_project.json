@@ -1,0 +1,41 @@
+[
+  {
+    "org-slug-or-id": "gh/CircleCI-Public",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "org-slug-or-id": "ec6887ec-7d44-4b31-b468-7e552408ee32",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "org-slug-or-id": "invalid org id ###",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "org-slug-or-id": "gh//malformed",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "org-slug-or-id": "gh/non-existent-org-999999",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "org-slug-or-id": "00000000-0000-0000-0000-000000000000",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "org-slug-or-id": "bb/Acme-Corp",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  }
+]

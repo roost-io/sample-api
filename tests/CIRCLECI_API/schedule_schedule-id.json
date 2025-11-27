@@ -1,0 +1,51 @@
+[
+  {
+    "schedule-id": "5f8d0d55-3c3f-4bf8-9a8a-2f4c3a4e7e12",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "schedule-id": "9f1b8e77-2a21-4f92-9099-7c4a8df7b0c3",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "schedule-id": "3a0c2f1e-5b6d-4c9e-8a1b-1c2d3e4f5a6b",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "schedule-id": "c2b8f4a1-9d7e-4b6a-bf32-6e9a7c1d2f48",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "schedule-id": "not-a-uuid",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "schedule-id": "123e4567-e89b-12d3-a456-42661417400Z",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "schedule-id": "123e4567-e89b-12d3-a456-4266141740000",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "schedule-id": "11111111-1111-1111-1111-111111111111",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "schedule-id": "00000000-0000-0000-0000-000000000000",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  }
+]

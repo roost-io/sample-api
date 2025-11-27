@@ -1,0 +1,67 @@
+[
+  {
+    "project-slug": "gh/acme-corp/payment-service",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "gh/acme-corp/payment-service",
+    "digest": "sha256:9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "bb/rocket-inc/mobile-app",
+    "digest": "a3f5b2c7d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6",
+    "statusCode": 201,
+    "scenario": "Successful responses: Created"
+  },
+  {
+    "digest": "md5:098f6bcd4621d373cade4e832627b4f6",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "zz/acme-corp/payment-service",
+    "digest": "not-a-digest",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/unknown-org/does-not-exist",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/open-source/toolkit",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "gh/devops-labs/ci-playground",
+    "digest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "gh/data-co/analytics-pipeline",
+    "digest": "sha256:invalid#digest$value",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/infra-team/runner-images",
+    "digest": "sha256:3c8e1f2a4b5c6d7e8f90123456789abcdeffedcba9876543210fedcba9876543",
+    "statusCode": 201,
+    "scenario": "Successful responses: Created"
+  },
+  {
+    "project-slug": "gh//repo",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  }
+]

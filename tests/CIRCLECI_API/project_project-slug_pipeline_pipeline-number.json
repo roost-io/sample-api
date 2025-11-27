@@ -1,0 +1,120 @@
+[
+  {
+    "project-slug": "gh/CircleCI-Public/api-preview-docs",
+    "pipeline-number": "25",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "gh/CircleCI-Public/circleci-docs",
+    "pipeline-number": "1024",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "bb/AcmeCorp/mobile-app",
+    "pipeline-number": "7",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "gh/CircleCI-Public/sample-project",
+    "pipeline-number": "1",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "gh/example-org/monorepo",
+    "pipeline-number": "58",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "gh/CircleCI-Public/api-example",
+    "pipeline-number": "300",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "gh/CircleCI-Public/api-preview-docs",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "pipeline-number": "42",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "bitbucket/Invalid Org/Repo",
+    "pipeline-number": "abc",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh//missing-repo",
+    "pipeline-number": "-1",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "../../etc/passwd",
+    "pipeline-number": "0x10",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/nonexistent-org/nonexistent-repo",
+    "pipeline-number": "999999999",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/CircleCI-Public/api-preview-docs",
+    "pipeline-number": "NaN",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/CircleCI-Public/#weird",
+    "pipeline-number": "two",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "ssh://github.com/CircleCI-Public/api-preview-docs",
+    "pipeline-number": "25",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/CircleCI-Public/api-preview-docs",
+    "pipeline-number": "00000000000000000000000000000000000000000000000000000000000000000",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/@circleci/@@@",
+    "pipeline-number": "9",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gH/CircleCI-Public/api-preview-docs",
+    "pipeline-number": "25",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/CircleCI-Public",
+    "pipeline-number": "25",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/CircleCI-Public/api-preview-docs.git",
+    "pipeline-number": "25",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  }
+]

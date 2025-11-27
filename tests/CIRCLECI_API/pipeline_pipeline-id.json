@@ -1,0 +1,41 @@
+[
+  {
+    "pipeline-id": "5034460f-c7c4-4c43-9457-de07e2029e7b",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "pipeline-id": "9f2a2d55-3c6a-4d8b-8a3e-52c0bb85a4f7",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "pipeline-id": "not-a-uuid",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "pipeline-id": "12345",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "pipeline-id": "1d3c5b6e-7f89-4a0b-9cde-1234567890ab",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "pipeline-id": "gh/CircleCI-Public/api-preview-docs",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "pipeline-id": "e3a9f6b1-2d3c-4f5a-8b9c-d1e2f3a4b5c6",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  }
+]

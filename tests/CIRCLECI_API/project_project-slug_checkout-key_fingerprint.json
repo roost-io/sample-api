@@ -1,0 +1,46 @@
+[
+  {
+    "project-slug": "gh/acme-inc/checkout-service",
+    "fingerprint": "c9:0b:1c:4f:d5:65:56:b9:ad:88:f9:81:2b:37:74:2f",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "gh/rocket-co/mobile-app",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "fingerprint": "aa:bb:cc:dd:ee:ff:00:11:22:33:44:55:66:77:88:99",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/rocket-co/mobile-app",
+    "fingerprint": "not-a-fingerprint",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/nonexistent-org/unknown-repo",
+    "fingerprint": "3a:5f:9c:10:aa:2b:44:cd:ef:12:34:56:78:90:ab:cd",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "bb/acme-inc/infrastructure",
+    "fingerprint": "12:34:56:78:9a:bc:de:f0:12:34:56:78:9a:bc:de:f0",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gl/acme/project",
+    "fingerprint": "de:ad:be:ef:00:11:22:33:44:55:66:77:88:99:aa:bb",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  }
+]

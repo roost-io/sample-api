@@ -1,0 +1,60 @@
+[
+  {
+    "scope-id": "7a743a3f-b3d7-4c1f-8e78-8f2ee7e8b1c2",
+    "scope-type": "project",
+    "statusCode": 201,
+    "scenario": "Successful responses: Created"
+  },
+  {
+    "scope-id": "2be23e76-9cc3-44e1-8780-63b5d42a3f9b",
+    "scope-type": "project",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "scope-id": "95398cf6-1f4a-40f4-8fd2-6f1dd8a480db",
+    "scope-type": "project",
+    "statusCode": 201,
+    "scenario": "Successful responses: Created"
+  },
+  {
+    "scope-id": "1c2a9d7e-8b0f-4ab0-8c0f-d8d2f2e1e0a9",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "scope-type": "project",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "scope-id": "invalid-uuid",
+    "scope-type": "project",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "scope-id": "e3cd3f76-0c1d-4e61-b6d9-7b9a930cf4b5",
+    "scope-type": "organization",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "scope-id": "00000000-0000-0000-0000-000000000000",
+    "scope-type": "project",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "scope-id": "5fcd3a3a-3c99-4a7e-98a2-b3cfe1a6a4d0",
+    "scope-type": "project",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "scope-id": "8d0bb7dd-8a32-4e0f-9d67-23f7c53393d1",
+    "scope-type": "PROJECT",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  }
+]

@@ -1,0 +1,61 @@
+[
+  {
+    "project-slug": "gh/acme-corp/widget-service",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "gh/octo-org/data-pipeline",
+    "statusCode": 201,
+    "scenario": "Successful responses: Created"
+  },
+  {
+    "project-slug": "bb/rocket-inc/mobile-app",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "invalid-slug",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "bb//repo",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/nonexistent-org/nonexistent-repo-xyz",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/bad org/repo",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gitlab/acme/app",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "bb/blue-sky/infra-terraform",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "gh/acme!corp/widget$service",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/contoso/payments-gateway",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  }
+]
