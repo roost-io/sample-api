@@ -1,0 +1,64 @@
+[
+  {
+    "project-slug": "gh/acme/widgets",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "gh/acme/api-service",
+    "branch": "main",
+    "page-token": "eyJwYWdlIjoxfQ",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "gh/flowcorp/mobile-app",
+    "branch": "release/2.1.0",
+    "page-token": "YzItcGFnZS10b2tlbi0y",
+    "statusCode": 201,
+    "scenario": "Successful responses: Created"
+  },
+  {
+    "branch": "main",
+    "page-token": "eyJwYWdlIjoyfQ",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/repo-only",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/acme/widgets",
+    "branch": "develop",
+    "page-token": "!!!not-a-token!!!",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/acme/api-service",
+    "branch": "feature with spaces and !",
+    "page-token": "YzItcGFnZS10b2tlbi0z",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "bitbucket/space/project-x",
+    "branch": "feature/test-123",
+    "page-token": "bmV4dDoxMjM0NQ",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "gh/nonexistent-org/missing-repo",
+    "branch": "main",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/contoso/web-portal",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  }
+]

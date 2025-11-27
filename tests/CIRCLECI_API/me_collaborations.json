@@ -1,0 +1,74 @@
+[
+  {
+    "id": "9f1c2ad1-3a7b-4a1f-9e65-cad2f3f9b8c1",
+    "vcs-type": "github",
+    "name": "Acme Corporation",
+    "avatar_url": "https://avatars.githubusercontent.com/u/8743210?v=4",
+    "slug": "acme-corp",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "id": "b6e8f5d2-1b43-4f3b-8a58-4b7a2f0d9c33",
+    "vcs-type": "bitbucket",
+    "name": "Globex Inc",
+    "avatar_url": "https://bitbucket.org/account/user/globex/avatar/32/",
+    "slug": "globex-inc",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "id": "f2a7b9d0-4e2a-4a0b-8c1f-6f7e3b2a9d55",
+    "vcs-type": "github",
+    "name": "Initech",
+    "avatar_url": "https://avatars.githubusercontent.com/u/22334455?v=4",
+    "message": "Missing required field: slug",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "id": "12345",
+    "vcs-type": "github",
+    "name": "Umbrella Corp",
+    "avatar_url": "https://avatars.githubusercontent.com/u/99887766?v=4",
+    "slug": "umbrella-corp",
+    "message": "Invalid UUID format for id",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "id": "a1b2c3d4-e5f6-4a7b-9c0d-1e2f3a4b5c6d",
+    "vcs-type": 123,
+    "name": "Soylent Corp",
+    "avatar_url": "https://avatars.githubusercontent.com/u/55667788?v=4",
+    "slug": "soylent-corp",
+    "message": "Invalid type for vcs-type; expected string",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "id": "3f6d2a91-8a54-4e3f-9f1b-7e6c2d1a4b99",
+    "vcs-type": "github",
+    "name": "Stark Industries",
+    "avatar_url": "not-a-url",
+    "slug": "stark-industries",
+    "message": "Invalid URL format for avatar_url",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "id": "5c2b7e18-91af-4a3d-8bcb-4c2a6d7e9a21",
+    "vcs-type": "github",
+    "name": "Wayne Enterprises",
+    "avatar_url": "https://avatars.githubusercontent.com/u/11223344?v=4",
+    "slug": "non-existent-org-404",
+    "message": "Resource not found for provided slug",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "message": "Bad request: payload validation failed",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  }
+]

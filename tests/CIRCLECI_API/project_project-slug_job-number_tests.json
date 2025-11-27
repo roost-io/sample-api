@@ -1,0 +1,60 @@
+[
+  {
+    "job-number": "101",
+    "project-slug": "gh/acme-inc/ci-sample",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "job-number": "2025",
+    "project-slug": "github/space-labs/platform-api",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "gh/acme-inc/ci-sample",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "job-number": "303",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "job-number": "not-a-number",
+    "project-slug": "github//broken-slug",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "job-number": "99999999",
+    "project-slug": "gh/nonexistent-org/missing-repo",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "job-number": "40421",
+    "project-slug": "bitbucket/byte-works/test-suite",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "job-number": "12",
+    "project-slug": "gitlab/acme-inc/ci-sample",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "job-number": "0",
+    "project-slug": "gh/acme-inc/ci-sample",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "job-number": "7654321",
+    "project-slug": "gh/modern-co/monorepo",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  }
+]

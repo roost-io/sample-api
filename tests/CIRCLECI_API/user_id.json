@@ -1,0 +1,51 @@
+[
+  {
+    "id": "2f1a4f53-8c77-4c19-b2ad-2c44bde7a1f1",
+    "statusCode": "200",
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "id": "9b5f4b28-3f50-4e9a-9cb3-9a9a6b4db4c9",
+    "statusCode": "200",
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "id": "not-a-uuid",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "id": "12345",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "id": "00000000-0000-0000-0000-000000000000",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "id": "zzzzzzzz-zzzz-zzzz-zzzz-zzzzzzzzzzzz",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "id": "0f3c9a92-3a1e-4d6e-8e7a-3d2d9e67b1ff",
+    "statusCode": "200",
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "id": "2F1A4F538C774C19B2AD2C44BDE7A1F1",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "id": "!!!invalid-uuid!!!",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  }
+]
