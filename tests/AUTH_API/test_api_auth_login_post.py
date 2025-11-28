@@ -8,270 +8,356 @@
 # 
 
 # ********RoostGPT********
-"""
-Pytest test suite for RESTful API: POST /api/auth/login
-
-Summary (Step 1: Analysis)
-- Endpoints:
-  - POST /api/auth/login
-- Security Schemas:
-  - None defined in the provided specification
-- Request:
-  - Body: application/json
-  - Schema: object (required: email, password)
-- Responses:
-  - 200: application/json
-    - Schema: object with fields: token (string), refreshToken (string, optional),
-      user (object: id, email, firstname, role, accountId - all optional in response schema)
-  - 400: Invalid credentials (no explicit schema in spec)
-
-Instructions (setup and execution)
-- Ensure the following files are present at repository root or same directory as tests:
-  - conftest.py (provided)
-  - validator.py (provided)
-  - api.json (OpenAPI spec covering /api/auth/login)
-  - config.yml with proper 'api.host' and optionally test_data containing login credentials
-  - api_auth_login.json in the same directory as this test module for table-driven scenarios
-- Run: pytest -q
-- Smoke tests: pytest -m smoke -q
-
-Notes:
-- Request data for success scenarios must come from config_test_data fixture (config.yml). This module will skip tests if credentials are missing.
-- Endpoint test data (ENDPOINT_TEST_DATA) is loaded from api_auth_login.json and used for response expectations and parametrization.
-- All response schema validations are performed using SwaggerSchemaValidator.validate_schema_by_response.
-"""
-
-from __future__ import annotations
-
+# conftest.py
+import os
 import json
-from pathlib import Path
-from typing import Any, Dict, Iterable, List, Optional
+import re
+import copy
+import typing as t
+from urllib.parse import urlencode, urljoin
 
 import pytest
-from validator import SwaggerSchemaValidator
+
+try:
+    import yaml  # type: ignore
+except Exception:  # pragma: no cover
+    yaml = None
+
+try:
+    import requests  # type: ignore
+except Exception:  # pragma: no cover
+    requests = None
+
+try:
+    from jsonschema import Draft7Validator, Draft202012Validator, validators  # type: ignore
+except Exception:  # pragma: no cover
+    Draft7Validator = None
+    Draft202012Validator = None
+    validators = None
 
 
-# ------------------------------------------------------------------------------
-# Module-level configuration and data loading (Step 3.1)
-# ------------------------------------------------------------------------------
-
-_ENDPOINT = "/api/auth/login"
-_METHOD = "POST"
-_TEST_DATA_FILENAME = "api_auth_login.json"
-
-_here = Path(__file__).resolve().parent
-_endpoint_data_path = _here / _TEST_DATA_FILENAME
+JSON = t.Union[dict, list, str, int, float, bool, None]
 
 
-def _load_json_file(path: Path) -> List[Dict[str, Any]]:
-    if not path.exists():
-        # Gracefully handle missing test data file by returning an empty array
-        # Tests will still collect but will skip at runtime as appropriate.
-        return []
-    try:
-        content = path.read_text(encoding="utf-8")
-        data = json.loads(content)
-        if isinstance(data, list):
-            return data
-        return []
-    except Exception:
-        return []
+def pytest_addoption(parser: pytest.Parser) -> None:
+    group = parser.getgroup("openapi")
+    group.addoption(
+        "--openapi-spec",
+        action="store",
+        default=os.environ.get("OPENAPI_SPEC"),
+        help="Path to OpenAPI spec file (YAML or JSON). Env: OPENAPI_SPEC",
+    )
+    group.addoption(
+        "--base-url",
+        action="store",
+        default=os.environ.get("BASE_URL"),
+        help="Base URL for API under test. Env: BASE_URL",
+    )
+    group.addoption(
+        "--request-timeout",
+        action="store",
+        default=float(os.environ.get("REQUEST_TIMEOUT", "15")),
+        type=float,
+        help="HTTP request timeout seconds. Env: REQUEST_TIMEOUT",
+    )
+    group.addoption(
+        "--auth-header",
+        action="store",
+        default=os.environ.get("AUTH_HEADER"),
+        help="Value for Authorization header, e.g., 'Bearer <token>'. Env: AUTH_HEADER",
+    )
+    group.addoption(
+        "--enable-smoke",
+        action="store_true",
+        default=os.environ.get("ENABLE_SMOKE", "").lower() in {"1", "true", "yes"},
+        help="Enable running live HTTP smoke tests against the base URL.",
+    )
 
-
-def _param_ids(data: Iterable[Dict[str, Any]]) -> List[str]:
-    ids: List[str] = []
-    for i, case in enumerate(data):
-        sid = case.get("scenario") or f"case-{i+1}"
-        ids.append(sid)
-    return ids
-
-
-_ENDPOINT_DATA: List[Dict[str, Any]] = _load_json_file(_endpoint_data_path)
-
-# Reusable parametrize args
-_PARAM_CASES = _ENDPOINT_DATA
-_PARAM_IDS = _param_ids(_ENDPOINT_DATA)
-
-
-# ------------------------------------------------------------------------------
-# Fixtures
-# ------------------------------------------------------------------------------
 
 @pytest.fixture(scope="session")
-def swagger_validator() -> SwaggerSchemaValidator:
-    """
-    Provides a SwaggerSchemaValidator bound to api.json.
-    """
-    spec_path = "api.json"
-    # Let exceptions bubble to pytest to surface configuration issues early
-    return SwaggerSchemaValidator(spec_path)
+def openapi_spec_path(pytestconfig: pytest.Config) -> str:
+    path = t.cast(str, pytestconfig.getoption("--openapi-spec"))
+    if not path:
+        pytest.skip("No --openapi-spec provided (or OPENAPI_SPEC env). Skipping OpenAPI tests.")
+    if not os.path.exists(path):
+        pytest.fail(f"OpenAPI spec file not found: {path}")
+    return path
 
 
-# ------------------------------------------------------------------------------
-# Utilities (builders/factories) (Step 4)
-# ------------------------------------------------------------------------------
+@pytest.fixture(scope="session")
+def base_url(pytestconfig: pytest.Config) -> t.Optional[str]:
+    url = t.cast(t.Optional[str], pytestconfig.getoption("--base-url"))
+    return url.rstrip("/") if url else None
 
-def build_login_payload_minimal(config_test_data: Dict[str, Any]) -> Optional[Dict[str, str]]:
-    """
-    Build minimal required login payload strictly from config_test_data.
-    Required keys: email, password
-    Returns None if required credentials are not found, so caller can skip test.
-    """
-    email = config_test_data.get("email")
-    password = config_test_data.get("password")
-    if not email or not password:
+
+@pytest.fixture(scope="session")
+def enable_smoke(pytestconfig: pytest.Config) -> bool:
+    return t.cast(bool, pytestconfig.getoption("--enable-smoke"))
+
+
+@pytest.fixture(scope="session")
+def request_timeout(pytestconfig: pytest.Config) -> float:
+    return t.cast(float, pytestconfig.getoption("--request-timeout"))
+
+
+@pytest.fixture(scope="session")
+def auth_header(pytestconfig: pytest.Config) -> t.Optional[str]:
+    val = t.cast(t.Optional[str], pytestconfig.getoption("--auth-header"))
+    return val
+
+
+@pytest.fixture(scope="session")
+def spec(openapi_spec_path: str) -> dict:
+    ext = os.path.splitext(openapi_spec_path)[1].lower()
+    with open(openapi_spec_path, "r", encoding="utf-8") as f:
+        if ext in {".yaml", ".yml"}:
+            if yaml is None:
+                pytest.fail("pyyaml is required to load YAML specs")
+            return t.cast(dict, yaml.safe_load(f))
+        elif ext == ".json":
+            return t.cast(dict, json.load(f))
+        else:
+            # Try YAML then JSON
+            content = f.read()
+            try:
+                if yaml is None:
+                    raise Exception("pyyaml not available")
+                return t.cast(dict, yaml.safe_load(content))
+            except Exception:
+                return t.cast(dict, json.loads(content))
+
+
+@pytest.fixture(scope="session")
+def components(spec: dict) -> dict:
+    return t.cast(dict, spec.get("components", {}))
+
+
+@pytest.fixture(scope="session")
+def server_url_from_spec(spec: dict) -> t.Optional[str]:
+    servers = t.cast(list, spec.get("servers", []))
+    if not servers:
         return None
-    return {"email": email, "password": password}
+    url = servers[0].get("url")
+    return t.cast(t.Optional[str], url.rstrip("/") if url else None)
 
 
-def mutate_password_invalid(payload: Dict[str, Any]) -> Dict[str, Any]:
-    """
-    Create an invalid-credentials variant by manipulating existing password value without hardcoding.
-    """
-    pwd = str(payload.get("password", ""))
-    return {**payload, "password": f"{pwd}__invalid"}
+@pytest.fixture(scope="session")
+def resolved_base_url(base_url: t.Optional[str], server_url_from_spec: t.Optional[str]) -> t.Optional[str]:
+    return base_url or server_url_from_spec
 
 
-def as_json(response) -> Any:
-    """
-    Safely parse JSON response body.
-    """
-    try:
-        return response.json()
-    except Exception:
-        return None
+class SchemaTools:
+    def __init__(self, spec: dict, components: dict):
+        self.spec = spec
+        self.components = components
+
+    def _follow_ref(self, ref: str) -> dict:
+        if not ref.startswith("#/"):
+            raise ValueError(f"External $ref not supported: {ref}")
+        parts = ref.lstrip("#/").split("/")
+        node = self.spec
+        for p in parts:
+            if not isinstance(node, dict) or p not in node:
+                raise KeyError(f"Invalid $ref path {ref} at {p}")
+            node = node[p]
+        if not isinstance(node, dict):
+            raise TypeError(f"$ref {ref} does not point to an object")
+        return node
+
+    def resolve_schema(self, schema: dict) -> dict:
+        if "$ref" in schema:
+            target = self._follow_ref(schema["$ref"])
+            # merge to allow local overrides
+            merged = copy.deepcopy(target)
+            merged.update({k: v for k, v in schema.items() if k != "$ref"})
+            return merged
+        return schema
+
+    def deep_resolve(self, schema: dict, visited: t.Set[int] = None) -> dict:
+        # fully dereference $ref in schema tree (shallow for major nodes)
+        if visited is None:
+            visited = set()
+        sid = id(schema)
+        if sid in visited:
+            return schema
+        visited.add(sid)
+        if "$ref" in schema:
+            schema = self.resolve_schema(schema)
+        out = {}
+        for k, v in schema.items():
+            if isinstance(v, dict):
+                out[k] = self.deep_resolve(v, visited)
+            elif isinstance(v, list):
+                out[k] = [self.deep_resolve(i, visited) if isinstance(i, dict) else i for i in v]
+            else:
+                out[k] = v
+        return out
+
+    def openapi_to_jsonschema(self, schema: dict) -> dict:
+        # Convert OpenAPI 3.0 "nullable" to JSON Schema type union
+        schema = self.deep_resolve(schema)
+        def transform(node: JSON) -> JSON:
+            if isinstance(node, dict):
+                node = dict(node)
+                if "nullable" in node:
+                    nullable = bool(node.pop("nullable"))
+                    if nullable:
+                        tpe = node.get("type")
+                        if isinstance(tpe, list):
+                            if "null" not in tpe:
+                                node["type"] = tpe + ["null"]
+                        elif isinstance(tpe, str):
+                            node["type"] = [tpe, "null"]
+                        elif tpe is None and not any(k in node for k in ("oneOf", "anyOf", "allOf", "not")):
+                            node["type"] = ["null", "object"]
+                for k, v in list(node.items()):
+                    node[k] = transform(v)
+                return node
+            if isinstance(node, list):
+                return [transform(i) for i in node]
+            return node
+        return t.cast(dict, transform(schema))
+
+    def build_validator(self, schema: dict):
+        # Choose validator draft based on spec version; default to Draft7
+        openapi_version = str(self.spec.get("openapi") or self.spec.get("swagger") or "3.0.0")
+        prepared = self.openapi_to_jsonschema(schema)
+        if Draft202012Validator and openapi_version.startswith("3.1"):
+            return Draft202012Validator(prepared)
+        if Draft7Validator:
+            return Draft7Validator(prepared)
+        raise RuntimeError("jsonschema is required to validate schemas")
+
+    def is_json_media_type(self, mt: str) -> bool:
+        mt = mt.lower()
+        return mt == "application/json" or mt.endswith("+json") or mt.startswith("application/json;")
+
+    def choose_response_entry(self, responses: dict, status_code: int) -> t.Tuple[str, dict]:
+        code_str = str(status_code)
+        if code_str in responses:
+            return code_str, t.cast(dict, responses[code_str])
+        # try wildcard "2XX"
+        cls = f"{code_str[0]}XX"
+        if cls in responses:
+            return cls, t.cast(dict, responses[cls])
+        if "default" in responses:
+            return "default", t.cast(dict, responses["default"])
+        # choose any 2xx as a best-effort
+        for k, v in responses.items():
+            if re.fullmatch(r"2\d\d", k or ""):
+                return k, t.cast(dict, v)
+        # fallback to any available
+        for k, v in responses.items():
+            return k, t.cast(dict, v)
+        raise AssertionError("Operation has no responses")
+
+    def coerce_to_string(self, val: t.Any) -> str:
+        if isinstance(val, bool):
+            return "true" if val else "false"
+        return str(val)
+
+    def example_for_schema(self, schema: dict, depth: int = 0) -> JSON:
+        if depth > 5:
+            return None
+        schema = self.resolve_schema(schema)
+        if "example" in schema:
+            return schema["example"]
+        if "default" in schema:
+            return schema["default"]
+        if "enum" in schema and isinstance(schema["enum"], list) and schema["enum"]:
+            return schema["enum"][0]
+        tpe = schema.get("type")
+        fmt = schema.get("format")
+        if "oneOf" in schema:
+            return self.example_for_schema(schema["oneOf"][0], depth + 1)
+        if "anyOf" in schema:
+            return self.example_for_schema(schema["anyOf"][0], depth + 1)
+        if "allOf" in schema:
+            merged: dict = {}
+            for part in schema["allOf"]:
+                ex = self.example_for_schema(part, depth + 1)
+                if isinstance(ex, dict):
+                    merged.update(ex)
+            return merged or {}
+        if tpe == "object" or ("properties" in schema or "required" in schema):
+            props = t.cast(dict, schema.get("properties", {}))
+            required = t.cast(list, schema.get("required", []))
+            out: dict = {}
+            for name in required:
+                sub = props.get(name) or {}
+                out[name] = self.example_for_schema(sub, depth + 1)
+            # include one optional to be richer
+            for name, sub in props.items():
+                if name in out:
+                    continue
+                out[name] = self.example_for_schema(sub, depth + 1)
+                break
+            additional = schema.get("additionalProperties")
+            if isinstance(additional, dict) and not out:
+                out["key"] = self.example_for_schema(additional, depth + 1)
+            return out
+        if tpe == "array":
+            items = schema.get("items", {})
+            return [self.example_for_schema(items, depth + 1)]
+        if tpe == "integer":
+            return 1
+        if tpe == "number":
+            return 1.0
+        if tpe == "boolean":
+            return True
+        # strings/formats
+        if fmt == "uuid":
+            return "00000000-0000-0000-0000-000000000000"
+        if fmt == "date-time":
+            return "2020-01-01T00:00:00Z"
+        if fmt == "date":
+            return "2020-01-01"
+        if fmt == "email":
+            return "user@example.com"
+        if fmt == "uri" or fmt == "url":
+            return "https://example.com"
+        return "string"
+
+    def example_for_parameter(self, param: dict) -> str:
+        # precedence: example -> examples -> schema example/default -> type based
+        if "example" in param:
+            return self.coerce_to_string(param["example"])
+        exs = param.get("examples")
+        if isinstance(exs, dict) and exs:
+            first = next(iter(exs.values()))
+            if isinstance(first, dict) and "value" in first:
+                return self.coerce_to_string(first["value"])
+        schema = t.cast(dict, param.get("schema", {}))
+        val = self.example_for_schema(schema)
+        return self.coerce_to_string(val)
 
 
-def _assert_response_schema(validator: SwaggerSchemaValidator, endpoint: str, method: str, status_code: int, response) -> None:
-    """
-    Validate response schema using validator.validate_schema_by_response.
-    """
-    result = validator.validate_schema_by_response(endpoint, method, str(status_code), response)
-    if not result.get("valid", False):
-        msg = result.get("message", "Schema validation failed")
-        path = result.get("path")
-        schema_path = result.get("schema_path")
-        raise AssertionError(f"Schema invalid for {method} {endpoint} {status_code}: {msg} (path={path}, schema_path={schema_path})")
+@pytest.fixture(scope="session")
+def schema_tools(spec: dict, components: dict) -> SchemaTools:
+    return SchemaTools(spec, components)
 
 
-# ------------------------------------------------------------------------------
-# Tests (Step 2, Step 3.2, Step 5)
-# ------------------------------------------------------------------------------
-
-@pytest.mark.smoke
-@pytest.mark.parametrize("scenario_case", _PARAM_CASES, ids=_PARAM_IDS)
-def test_post_api_auth_login_smoke_success(api_client, config_test_data, swagger_validator, scenario_case):
-    """
-    Smoke test: Successful login with only required fields.
-    - Uses credentials from config_test_data (email, password). Skips if absent.
-    - Validates 200 response and schema.
-    - Dynamically asserts response fields based on ENDPOINT_TEST_DATA.
-    """
-    base_payload = build_login_payload_minimal(config_test_data)
-    if base_payload is None:
-        pytest.skip("Missing required credentials in config_test_data: 'email' and/or 'password'")
-
-    # Validate request shape: no named component schema available in spec for requestBody;
-    # skipping explicit request schema validation as per available validator API.
-
-    resp = api_client.post(_ENDPOINT, json=base_payload)
-    assert resp is not None, "No response received from API"
-    expected_status = scenario_case.get("statusCode", 200)
-    assert resp.status_code == expected_status, f"Expected HTTP {expected_status}, got {resp.status_code}"
-
-    # Response schema validation via validator
-    _assert_response_schema(swagger_validator, _ENDPOINT, _METHOD, resp.status_code, resp)
-
-    # Parse response JSON
-    payload = as_json(resp)
-    assert isinstance(payload, dict), "Response is not a JSON object"
-
-    # Basic invariants for success
-    assert 200 <= resp.status_code < 300, f"Expected success status code, got {resp.status_code}"
-    ctype = resp.headers.get("Content-Type", "")
-    assert "json" in ctype.lower(), f"Expected JSON response, got Content-Type: {ctype}"
-
-    # Table driven, conditionally assert fields based on ENDPOINT_TEST_DATA
-    if "token" in scenario_case:
-        assert "token" in payload and isinstance(payload["token"], str), "Missing or invalid 'token' in response"
-        # Optional equality check when provided by scenario data
-        assert payload["token"] == scenario_case["token"], "Token value mismatch with ENDPOINT_TEST_DATA"
-
-    if "refreshToken" in scenario_case:
-        assert "refreshToken" in payload and isinstance(payload["refreshToken"], str), "Missing or invalid 'refreshToken' in response"
-        assert payload["refreshToken"] == scenario_case["refreshToken"], "refreshToken value mismatch with ENDPOINT_TEST_DATA"
-
-    if "user" in scenario_case:
-        assert "user" in payload and isinstance(payload["user"], dict), "Missing or invalid 'user' object in response"
-        expected_user = scenario_case["user"]
-        actual_user = payload["user"]
-
-        # Iterate only over keys present in ENDPOINT_TEST_DATA to avoid over-constraining
-        for key, expected_val in expected_user.items():
-            assert key in actual_user, f"Expected field 'user.{key}' is missing in response"
-            assert actual_user[key] == expected_val, f"user.{key} mismatch with ENDPOINT_TEST_DATA"
+@pytest.fixture(scope="session")
+def http_session(auth_header: t.Optional[str]) -> t.Any:
+    if requests is None:
+        pytest.skip("requests library is required for smoke tests")
+    sess = requests.Session()
+    headers = {"Accept": "application/json"}
+    if auth_header:
+        headers["Authorization"] = auth_header
+    sess.headers.update(headers)
+    return sess
 
 
-@pytest.mark.parametrize("scenario_case", _PARAM_CASES, ids=_PARAM_IDS)
-def test_post_api_auth_login_bad_request_missing_required_fields(api_client, config_test_data, swagger_validator, scenario_case):
-    """
-    Negative test: Missing required fields (email/password) should return 400 (Invalid credentials).
-    - Builds several minimal payloads omitting required fields based on available config_test_data.
-    - Validates response status and schema.
-    """
-    # Prepare base credentials from config
-    base_payload = build_login_payload_minimal(config_test_data)
-
-    # Construct a list of invalid payloads based on available data without hardcoding values
-    invalid_payloads: List[Dict[str, Any]] = []
-
-    # Case: both missing
-    invalid_payloads.append({})
-
-    # Only add partial cases if base credentials exist for the corresponding fields
-    if base_payload and "password" in base_payload:
-        invalid_payloads.append({"password": base_payload["password"]})  # missing email
-    if base_payload and "email" in base_payload:
-        invalid_payloads.append({"email": base_payload["email"]})  # missing password
-
-    if not invalid_payloads:
-        pytest.skip("Cannot build invalid payloads due to missing config_test_data")
-
-    for payload in invalid_payloads:
-        resp = api_client.post(_ENDPOINT, json=payload)
-        assert resp is not None, "No response received from API"
-
-        # Strictly follow provided response codes: 400 for invalid credentials
-        assert resp.status_code == 400, f"Expected HTTP 400 for invalid request, got {resp.status_code}"
-
-        # Validate schema for 400 (may be no schema; validator will return valid=True)
-        _assert_response_schema(swagger_validator, _ENDPOINT, _METHOD, resp.status_code, resp)
-
-
-@pytest.mark.parametrize("scenario_case", _PARAM_CASES, ids=_PARAM_IDS)
-def test_post_api_auth_login_invalid_credentials_returns_400(api_client, config_test_data, swagger_validator, scenario_case):
-    """
-    Negative test: Wrong password should return 400 (Invalid credentials).
-    - Uses email from config_test_data and an invalidated password created from existing data.
-    """
-    base_payload = build_login_payload_minimal(config_test_data)
-    if base_payload is None:
-        pytest.skip("Missing required credentials in config_test_data: 'email' and/or 'password'")
-
-    invalid_payload = mutate_password_invalid(base_payload)
-    resp = api_client.post(_ENDPOINT, json=invalid_payload)
-    assert resp is not None, "No response received from API"
-
-    # Spec defines 400 for invalid credentials
-    assert resp.status_code == 400, f"Expected HTTP 400 for invalid credentials, got {resp.status_code}"
-
-    # Validate 400 response against spec
-    _assert_response_schema(swagger_validator, _ENDPOINT, _METHOD, resp.status_code, resp)
-
-
-@pytest.mark.parametrize("scenario_case", _PARAM_CASES, ids=_PARAM_IDS)
-def test_post_api_auth_login_security_schemes_not_applicable(scenario_case):
-    """
-    Security schema tests are not applicable for /api/auth/login as no security schemes are defined.
-    """
-    pytest.skip("No security schemes defined for this endpoint in the provided API specification")
+@pytest.fixture(scope="session")
+def operations(spec: dict) -> t.List[t.Tuple[str, str, dict, dict]]:
+    paths = t.cast(dict, spec.get("paths", {}))
+    ops: t.List[t.Tuple[str, str, dict, dict]] = []
+    for path, path_item in paths.items():
+        if not isinstance(path_item, dict):
+            continue
+        for method in ("get", "post", "put", "patch", "delete", "options", "head"):
+            if method in path_item:
+                op = path_item[method]
+                ops.append((method.upper(), path, op, path_item))
+    return ops
