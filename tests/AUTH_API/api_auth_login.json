@@ -1,0 +1,87 @@
+[
+  {
+    "token": "jwt-token-abc123",
+    "user": {
+      "id": "12345",
+      "email": "john.doe@example.com"
+    },
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "token": "jwt-token-7f9c2e13",
+    "refreshToken": "refresh-token-7f9c2e13",
+    "user": {
+      "id": "u-87421",
+      "email": "alice.smith@example.com",
+      "firstname": "Alice",
+      "role": "ADMIN",
+      "accountId": "acct-8749"
+    },
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "token": "jwt-token-99aa33",
+    "refreshToken": "refresh-token-99aa33",
+    "user": {
+      "id": "u-22334",
+      "email": "bob.lee@example.com",
+      "role": "USER"
+    },
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "user": {
+      "id": "u-00001",
+      "email": "no.token@example.com",
+      "firstname": "NoToken",
+      "role": "ADMIN",
+      "accountId": "acct-1001"
+    },
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "token": "jwt-token-invalidrole",
+    "user": {
+      "id": "u-99111",
+      "email": "bad.role@example.com",
+      "firstname": "BadRole",
+      "role": "SUPER_GOD",
+      "accountId": "acct-9911"
+    },
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "token": "jwt-token-bademail",
+    "user": {
+      "id": "u-55555",
+      "email": "bad-email-format",
+      "firstname": "BadEmail",
+      "role": "ADMIN",
+      "accountId": "acct-5555"
+    },
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "token": "jwt-token-notfound",
+    "user": {
+      "id": "not-found-001",
+      "email": "ghost.user@example.com",
+      "firstname": "Ghost",
+      "role": "ADMIN",
+      "accountId": "acct-0000-not-exist"
+    },
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "token": "jwt-token-nouser",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  }
+]
