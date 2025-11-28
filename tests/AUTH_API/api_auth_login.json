@@ -1,0 +1,60 @@
+[
+  {
+    "email": "user@example.com",
+    "password": "Str0ngP@ssw0rd!",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "email": "john.doe@acme.com",
+    "password": "Adm1n!23456",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "email": "user@example.com",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "password": "NoEmailPass!23",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "email": "invalid-email-format",
+    "password": "SomePass!23",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "email": "user@invalid_domain.com",
+    "password": "ValidLooking#123",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "email": "ghost.user+notfound@unknown-domain.io",
+    "password": "AnyPass#2024",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "email": "locked.account@example.com",
+    "password": "WrongP@ssw0rd",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "email": "alice.smith@contoso.com",
+    "password": "Al!ce2025#",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "email": "mark@sample.org",
+    "password": "pw",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  }
+]
