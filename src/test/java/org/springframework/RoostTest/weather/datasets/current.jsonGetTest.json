@@ -341,5 +341,167 @@
     "q": "Los Angeles",
     "expected_statusCode": 403,
     "scenario": "Insufficient permissions for API key"
+  },
+  {
+    "q": "München",
+    "expected_statusCode": 200,
+    "scenario": "Valid request with Unicode characters in city name"
+  },
+  {
+    "q": "  London  ",
+    "expected_statusCode": 200,
+    "scenario": "Valid request with leading and trailing whitespace in city name"
+  },
+  {
+    "q": "Paris,France",
+    "expected_statusCode": 200,
+    "scenario": "Valid request with city name including country"
+  },
+  {
+    "q": "-90,0",
+    "expected_statusCode": 200,
+    "scenario": "Request with boundary latitude value - South Pole"
+  },
+  {
+    "q": "0,-180",
+    "expected_statusCode": 200,
+    "scenario": "Request with boundary negative longitude value"
+  },
+  {
+    "q": "Wellington",
+    "expected_statusCode": 200,
+    "scenario": "Wind speeds and gust speeds are non-negative values"
+  },
+  {
+    "q": "Vancouver",
+    "expected_statusCode": 200,
+    "scenario": "Wind degree is within valid range 0-360"
+  },
+  {
+    "q": "Dubai",
+    "expected_statusCode": 200,
+    "scenario": "Visibility values are non-negative"
+  },
+  {
+    "q": "Cape Town",
+    "expected_statusCode": 200,
+    "scenario": "Visibility km and miles conversions are consistent"
+  },
+  {
+    "q": "Rio de Janeiro",
+    "expected_statusCode": 200,
+    "scenario": "Pressure mb and inches conversions are consistent"
+  },
+  {
+    "q": "Shanghai",
+    "expected_statusCode": 200,
+    "scenario": "Air quality component values are non-negative"
+  },
+  {
+    "q": "Zurich",
+    "expected_statusCode": 200,
+    "scenario": "Localtime string follows YYYY-MM-DD HH:mm format"
+  },
+  {
+    "q": "Stockholm",
+    "expected_statusCode": 200,
+    "scenario": "Condition icon URL is valid format with protocol and .png extension"
+  },
+  {
+    "q": "Auckland",
+    "expected_statusCode": 200,
+    "scenario": "Wind speed mph and kph conversions are mathematically consistent"
+  },
+  {
+    "q": "Brisbane",
+    "expected_statusCode": 200,
+    "scenario": "UV index is non-negative value"
+  },
+  {
+    "q": "Hong Kong",
+    "expected_statusCode": 200,
+    "scenario": "API response time is within acceptable performance range"
+  },
+  {
+    "q": "Seoul",
+    "expected_statusCode": 200,
+    "scenario": "Condition code is positive integer value"
+  },
+  {
+    "q": "Los Angeles",
+    "expected_statusCode": 200,
+    "scenario": "Timezone ID follows IANA timezone database format"
+  },
+  {
+    "q": "Melbourne",
+    "lang": "en",
+    "expected_statusCode": 200,
+    "scenario": "Valid request with optional lang parameter using default English"
+  },
+  {
+    "q": "Geneva",
+    "lang": "de",
+    "expected_statusCode": 200,
+    "scenario": "Valid request with German language code"
+  },
+  {
+    "q": "Montreal",
+    "expected_statusCode": 200,
+    "scenario": "Response contains valid feelslike temperature in both C and F"
+  },
+  {
+    "q": "Phoenix",
+    "expected_statusCode": 200,
+    "scenario": "Response contains valid pressure values in mb and inches"
+  },
+  {
+    "q": "91.0,0.0",
+    "expected_statusCode": 400,
+    "scenario": "Latitude value exceeds maximum boundary of 90"
+  },
+  {
+    "q": "0.0,181.0",
+    "expected_statusCode": 400,
+    "scenario": "Longitude value exceeds maximum boundary of 180"
+  },
+  {
+    "q": "-91.0,0.0",
+    "expected_statusCode": 400,
+    "scenario": "Latitude value below minimum boundary of -90"
+  },
+  {
+    "q": "0.0,-181.0",
+    "expected_statusCode": 400,
+    "scenario": "Longitude value below minimum boundary of -180"
+  },
+  {
+    "q": "192.168.1.1",
+    "expected_statusCode": 400,
+    "scenario": "Private IP address format that may not resolve to location"
+  },
+  {
+    "q": "%%%",
+    "expected_statusCode": 400,
+    "scenario": "Invalid URL encoding characters in q parameter"
+  },
+  {
+    "q": "City123",
+    "expected_statusCode": 400,
+    "scenario": "City name with alphanumeric combination not found"
+  },
+  {
+    "q": "00000",
+    "expected_statusCode": 400,
+    "scenario": "Invalid zipcode with all zeros"
+  },
+  {
+    "q": "Miami",
+    "expected_statusCode": 403,
+    "scenario": "API key has exceeded monthly quota - error code 2007"
+  },
+  {
+    "q": "Washington",
+    "expected_statusCode": 403,
+    "scenario": "API key does not have access to current weather resource"
   }
 ]

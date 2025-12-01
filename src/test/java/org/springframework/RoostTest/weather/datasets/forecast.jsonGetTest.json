@@ -326,5 +326,1230 @@
     "tp": 15,
     "expected_statusCode": 403,
     "scenario": "Non-enterprise API key attempting to use tp parameter - error code 2009"
+  },
+  {
+    "q": "Barcelona",
+    "days": 11,
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request with 11 days parameter"
+  },
+  {
+    "q": "Dublin",
+    "days": 13,
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request with 13 days parameter"
+  },
+  {
+    "q": "Amsterdam",
+    "days": 2,
+    "lang": "nl",
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request with Dutch language parameter"
+  },
+  {
+    "q": "Oslo",
+    "days": 4,
+    "hour": 6,
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request with hour parameter set to 6 (6 AM)"
+  },
+  {
+    "q": "Stockholm",
+    "days": 3,
+    "hour": 18,
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request with hour parameter set to 18 (6 PM)"
+  },
+  {
+    "q": "Helsinki",
+    "days": 5,
+    "lang": "fi",
+    "aqi": "yes",
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request with Finnish language and air quality enabled"
+  },
+  {
+    "q": "Brussels",
+    "days": 1,
+    "alerts": "yes",
+    "aqi": "no",
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request with alerts enabled and AQI disabled"
+  },
+  {
+    "q": "Lisbon",
+    "days": 7,
+    "lang": "pt",
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request with Portuguese language parameter"
+  },
+  {
+    "q": "Vienna",
+    "days": 3,
+    "dt": "2024-12-30",
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request with date parameter for end of year"
+  },
+  {
+    "q": "Warsaw",
+    "days": 2,
+    "unixdt": 1703635200,
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request with unix timestamp for future date"
+  },
+  {
+    "q": "Austin",
+    "days": 3,
+    "hour": 3,
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request with hour parameter set to 3 (3 AM)"
+  },
+  {
+    "q": "Philadelphia",
+    "days": 2,
+    "hour": 21,
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request with hour parameter set to 21 (9 PM)"
+  },
+  {
+    "q": "San Francisco",
+    "days": 5,
+    "alerts": "no",
+    "aqi": "no",
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request with both alerts and AQI disabled"
+  },
+  {
+    "q": "  London  ",
+    "days": 2,
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request with whitespace around city name"
+  },
+  {
+    "q": "München",
+    "days": 3,
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request with German city name containing umlaut"
+  },
+  {
+    "q": "Saint-Étienne",
+    "days": 2,
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request with French city name containing accents and hyphen"
+  },
+  {
+    "q": "São Paulo",
+    "days": 4,
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request with Portuguese city name containing tilde"
+  },
+  {
+    "q": "Zürich",
+    "days": 1,
+    "lang": "de",
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request with Swiss city name and German language"
+  },
+  {
+    "q": "Kraków",
+    "days": 3,
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request with Polish city name containing special characters"
+  },
+  {
+    "q": "Montréal",
+    "days": 2,
+    "lang": "fr",
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request with Canadian city name and French language"
+  },
+  {
+    "q": "Reykjavík",
+    "days": 5,
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request with Icelandic city name containing accents"
+  },
+  {
+    "q": "København",
+    "days": 3,
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request with Danish city name"
+  },
+  {
+    "q": "Göteborg",
+    "days": 2,
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request with Swedish city name containing special character"
+  },
+  {
+    "q": "Istanbul",
+    "days": 6,
+    "lang": "tr",
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request with Turkish language parameter"
+  },
+  {
+    "q": "Moscow",
+    "days": 4,
+    "lang": "ru",
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request with Russian language parameter"
+  },
+  {
+    "q": "Seoul",
+    "days": 3,
+    "lang": "ko",
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request with Korean language parameter"
+  },
+  {
+    "q": "Bangkok",
+    "days": 5,
+    "lang": "th",
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request with Thai language parameter"
+  },
+  {
+    "q": "Cairo",
+    "days": 2,
+    "lang": "ar",
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request with Arabic language parameter"
+  },
+  {
+    "q": "Athens",
+    "days": 3,
+    "lang": "el",
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request with Greek language parameter"
+  },
+  {
+    "q": "Prague",
+    "days": 4,
+    "lang": "cs",
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request with Czech language parameter"
+  },
+  {
+    "q": "Budapest",
+    "days": 3,
+    "lang": "hu",
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request with Hungarian language parameter"
+  },
+  {
+    "q": "Bucharest",
+    "days": 2,
+    "lang": "ro",
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request with Romanian language parameter"
+  },
+  {
+    "q": "Sofia",
+    "days": 3,
+    "lang": "bg",
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request with Bulgarian language parameter"
+  },
+  {
+    "q": "New Delhi",
+    "days": 7,
+    "lang": "hi",
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request with Hindi language parameter"
+  },
+  {
+    "q": "Jakarta",
+    "days": 4,
+    "lang": "id",
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request with Indonesian language parameter"
+  },
+  {
+    "q": "Hanoi",
+    "days": 3,
+    "lang": "vi",
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request with Vietnamese language parameter"
+  },
+  {
+    "q": "Manila",
+    "days": 5,
+    "lang": "tl",
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request with Tagalog language parameter"
+  },
+  {
+    "q": "Kuala Lumpur",
+    "days": 2,
+    "lang": "ms",
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request with Malay language parameter"
+  },
+  {
+    "q": "Melbourne",
+    "days": 8,
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request for Melbourne with 8 days forecast"
+  },
+  {
+    "q": "Auckland",
+    "days": 6,
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request for Auckland with 6 days forecast"
+  },
+  {
+    "q": "Cape Town",
+    "days": 7,
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request for Cape Town with 7 days forecast"
+  },
+  {
+    "q": "Buenos Aires",
+    "days": 5,
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request for Buenos Aires with 5 days forecast"
+  },
+  {
+    "q": "Santiago",
+    "days": 4,
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request for Santiago with 4 days forecast"
+  },
+  {
+    "q": "Lima",
+    "days": 3,
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request for Lima with 3 days forecast"
+  },
+  {
+    "q": "Bogotá",
+    "days": 5,
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request for Bogotá with special character"
+  },
+  {
+    "q": "Caracas",
+    "days": 2,
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request for Caracas with 2 days forecast"
+  },
+  {
+    "q": "Quito",
+    "days": 3,
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request for Quito with 3 days forecast"
+  },
+  {
+    "q": "Montevideo",
+    "days": 4,
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request for Montevideo with 4 days forecast"
+  },
+  {
+    "q": "Nairobi",
+    "days": 5,
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request for Nairobi with 5 days forecast"
+  },
+  {
+    "q": "Lagos",
+    "days": 3,
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request for Lagos with 3 days forecast"
+  },
+  {
+    "q": "Accra",
+    "days": 2,
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request for Accra with 2 days forecast"
+  },
+  {
+    "q": "Casablanca",
+    "days": 4,
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request for Casablanca with 4 days forecast"
+  },
+  {
+    "q": "Tel Aviv",
+    "days": 3,
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request for Tel Aviv with 3 days forecast"
+  },
+  {
+    "q": "Riyadh",
+    "days": 5,
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request for Riyadh with 5 days forecast"
+  },
+  {
+    "q": "Doha",
+    "days": 2,
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request for Doha with 2 days forecast"
+  },
+  {
+    "q": "Dubai",
+    "days": 7,
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request for Dubai with 7 days forecast"
+  },
+  {
+    "q": "Abu Dhabi",
+    "days": 4,
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request for Abu Dhabi with 4 days forecast"
+  },
+  {
+    "q": "Muscat",
+    "days": 3,
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request for Muscat with 3 days forecast"
+  },
+  {
+    "q": "Detroit",
+    "days": 5,
+    "hour": 14,
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request with hour parameter set to 14 (2 PM)"
+  },
+  {
+    "q": "Houston",
+    "days": 3,
+    "hour": 9,
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request with hour parameter set to 9 (9 AM)"
+  },
+  {
+    "q": "San Antonio",
+    "days": 2,
+    "hour": 11,
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request with hour parameter set to 11 (11 AM)"
+  },
+  {
+    "q": "Columbus",
+    "days": 4,
+    "hour": 16,
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request with hour parameter set to 16 (4 PM)"
+  },
+  {
+    "q": "Jacksonville",
+    "days": 3,
+    "hour": 20,
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request with hour parameter set to 20 (8 PM)"
+  },
+  {
+    "q": "Nashville",
+    "days": 2,
+    "hour": 7,
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request with hour parameter set to 7 (7 AM)"
+  },
+  {
+    "q": "Louisville",
+    "days": 3,
+    "hour": 13,
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request with hour parameter set to 13 (1 PM)"
+  },
+  {
+    "q": "Baltimore",
+    "days": 4,
+    "hour": 19,
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request with hour parameter set to 19 (7 PM)"
+  },
+  {
+    "q": "Oklahoma City",
+    "days": 2,
+    "hour": 8,
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request with hour parameter set to 8 (8 AM)"
+  },
+  {
+    "q": "Las Vegas",
+    "days": 5,
+    "hour": 22,
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request with hour parameter set to 22 (10 PM)"
+  },
+  {
+    "q": "Albuquerque",
+    "days": 3,
+    "hour": 10,
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request with hour parameter set to 10 (10 AM)"
+  },
+  {
+    "q": "Tucson",
+    "days": 2,
+    "hour": 15,
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request with hour parameter set to 15 (3 PM)"
+  },
+  {
+    "q": "Fresno",
+    "days": 4,
+    "hour": 4,
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request with hour parameter set to 4 (4 AM)"
+  },
+  {
+    "q": "Sacramento",
+    "days": 3,
+    "hour": 5,
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request with hour parameter set to 5 (5 AM)"
+  },
+  {
+    "q": "Mesa",
+    "days": 2,
+    "hour": 1,
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request with hour parameter set to 1 (1 AM)"
+  },
+  {
+    "q": "Atlanta",
+    "days": 5,
+    "hour": 2,
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request with hour parameter set to 2 (2 AM)"
+  },
+  {
+    "q": "91.2,-63.5",
+    "days": 2,
+    "expected_statusCode": 400,
+    "scenario": "Latitude above maximum value of 90 degrees"
+  },
+  {
+    "q": "-91.5,45.0",
+    "days": 3,
+    "expected_statusCode": 400,
+    "scenario": "Latitude below minimum value of -90 degrees"
+  },
+  {
+    "q": "45.0,181.0",
+    "days": 2,
+    "expected_statusCode": 400,
+    "scenario": "Longitude above maximum value of 180 degrees"
+  },
+  {
+    "q": "45.0,-181.5",
+    "days": 3,
+    "expected_statusCode": 400,
+    "scenario": "Longitude below minimum value of -180 degrees"
+  },
+  {
+    "q": "abc,def",
+    "days": 2,
+    "expected_statusCode": 400,
+    "scenario": "Invalid latitude and longitude with non-numeric values"
+  },
+  {
+    "q": "40.71",
+    "days": 2,
+    "expected_statusCode": 400,
+    "scenario": "Incomplete coordinate with only latitude provided"
+  },
+  {
+    "q": ",-74.01",
+    "days": 2,
+    "expected_statusCode": 400,
+    "scenario": "Incomplete coordinate with only longitude provided"
+  },
+  {
+    "q": "40.71,-74.01,100",
+    "days": 2,
+    "expected_statusCode": 400,
+    "scenario": "Coordinate with extra values beyond lat and lon"
+  },
+  {
+    "q": "999.999.999.999",
+    "days": 2,
+    "expected_statusCode": 400,
+    "scenario": "Invalid IP address format with values exceeding 255"
+  },
+  {
+    "q": "256.1.1.1",
+    "days": 2,
+    "expected_statusCode": 400,
+    "scenario": "Invalid IP address with first octet exceeding 255"
+  },
+  {
+    "q": "192.168.1",
+    "days": 2,
+    "expected_statusCode": 400,
+    "scenario": "Incomplete IP address with only three octets"
+  },
+  {
+    "q": "192.168.1.1.1",
+    "days": 2,
+    "expected_statusCode": 400,
+    "scenario": "Invalid IP address with too many octets"
+  },
+  {
+    "q": "Boston",
+    "days": "three",
+    "expected_statusCode": 400,
+    "scenario": "Days parameter with string value instead of integer"
+  },
+  {
+    "q": "Miami",
+    "days": 7.5,
+    "expected_statusCode": 400,
+    "scenario": "Days parameter with decimal value instead of integer"
+  },
+  {
+    "q": "Denver",
+    "days": 3,
+    "hour": "afternoon",
+    "expected_statusCode": 400,
+    "scenario": "Hour parameter with string value instead of integer"
+  },
+  {
+    "q": "Portland",
+    "days": 2,
+    "hour": 12.5,
+    "expected_statusCode": 400,
+    "scenario": "Hour parameter with decimal value instead of integer"
+  },
+  {
+    "q": "Seattle",
+    "days": 3,
+    "unixdt": "not-a-number",
+    "expected_statusCode": 400,
+    "scenario": "Unix timestamp parameter with non-numeric string value"
+  },
+  {
+    "q": "Chicago",
+    "days": 2,
+    "unixdt": 123.456,
+    "expected_statusCode": 400,
+    "scenario": "Unix timestamp parameter with decimal value"
+  },
+  {
+    "q": "New York",
+    "days": 3,
+    "tp": "fifteen",
+    "expected_statusCode": 400,
+    "scenario": "Time period parameter with string value instead of integer"
+  },
+  {
+    "q": "Boston",
+    "days": 2,
+    "tp": 15.5,
+    "expected_statusCode": 400,
+    "scenario": "Time period parameter with decimal value instead of integer"
+  },
+  {
+    "q": "Austin",
+    "days": 3,
+    "dt": "2024/12/25",
+    "expected_statusCode": 400,
+    "scenario": "Date parameter with slashes instead of hyphens"
+  },
+  {
+    "q": "Dallas",
+    "days": 2,
+    "dt": "25-12-2024",
+    "expected_statusCode": 400,
+    "scenario": "Date parameter in DD-MM-YYYY format instead of YYYY-MM-DD"
+  },
+  {
+    "q": "Houston",
+    "days": 3,
+    "dt": "2024-13-01",
+    "expected_statusCode": 400,
+    "scenario": "Date parameter with invalid month value exceeding 12"
+  },
+  {
+    "q": "Phoenix",
+    "days": 2,
+    "dt": "2024-00-15",
+    "expected_statusCode": 400,
+    "scenario": "Date parameter with invalid month value of 0"
+  },
+  {
+    "q": "San Diego",
+    "days": 3,
+    "dt": "2024-06-31",
+    "expected_statusCode": 400,
+    "scenario": "Date parameter with invalid day for June (31st)"
+  },
+  {
+    "q": "San Jose",
+    "days": 2,
+    "dt": "2024-11-31",
+    "expected_statusCode": 400,
+    "scenario": "Date parameter with invalid day for November (31st)"
+  },
+  {
+    "q": "Austin",
+    "days": 3,
+    "dt": "2024-04-31",
+    "expected_statusCode": 400,
+    "scenario": "Date parameter with invalid day for April (31st)"
+  },
+  {
+    "q": "Columbus",
+    "days": 2,
+    "dt": "2024-09-31",
+    "expected_statusCode": 400,
+    "scenario": "Date parameter with invalid day for September (31st)"
+  },
+  {
+    "q": "Fort Worth",
+    "days": 3,
+    "dt": "2023-02-29",
+    "expected_statusCode": 400,
+    "scenario": "Date parameter with February 29 in non-leap year"
+  },
+  {
+    "q": "Charlotte",
+    "days": 2,
+    "dt": "2024-01-32",
+    "expected_statusCode": 400,
+    "scenario": "Date parameter with day value exceeding maximum for month"
+  },
+  {
+    "q": "San Francisco",
+    "days": 3,
+    "dt": "2024-12-00",
+    "expected_statusCode": 400,
+    "scenario": "Date parameter with invalid day value of 0"
+  },
+  {
+    "q": "Indianapolis",
+    "days": 2,
+    "dt": "not-a-date",
+    "expected_statusCode": 400,
+    "scenario": "Date parameter with completely invalid format"
+  },
+  {
+    "q": "Jacksonville",
+    "days": 3,
+    "dt": "24-12-2024",
+    "expected_statusCode": 400,
+    "scenario": "Date parameter with two-digit year format"
+  },
+  {
+    "q": "San Antonio",
+    "days": 2,
+    "dt": "2024-1-1",
+    "expected_statusCode": 400,
+    "scenario": "Date parameter with single-digit month and day without leading zeros"
+  },
+  {
+    "q": "Phoenix",
+    "days": 3,
+    "unixdt": -999999999,
+    "expected_statusCode": 400,
+    "scenario": "Unix timestamp with large negative value representing past date"
+  },
+  {
+    "q": "Denver",
+    "days": 2,
+    "unixdt": 0,
+    "expected_statusCode": 400,
+    "scenario": "Unix timestamp with value of 0 (January 1, 1970)"
+  },
+  {
+    "q": "El Paso",
+    "days": 3,
+    "unixdt": 946684800,
+    "expected_statusCode": 400,
+    "scenario": "Unix timestamp representing year 2000 (past date)"
+  },
+  {
+    "q": "Memphis",
+    "days": 2,
+    "unixdt": 999999999999,
+    "expected_statusCode": 400,
+    "scenario": "Unix timestamp with value too far in the future (beyond 14 days)"
+  },
+  {
+    "q": "Boston",
+    "days": 3,
+    "hour": 24,
+    "expected_statusCode": 400,
+    "scenario": "Hour parameter with value exactly at upper boundary violation (24)"
+  },
+  {
+    "q": "Nashville",
+    "days": 2,
+    "hour": 100,
+    "expected_statusCode": 400,
+    "scenario": "Hour parameter with extremely high value"
+  },
+  {
+    "q": "Detroit",
+    "days": 3,
+    "hour": -1,
+    "expected_statusCode": 400,
+    "scenario": "Hour parameter with value exactly at lower boundary violation (-1)"
+  },
+  {
+    "q": "Louisville",
+    "days": 2,
+    "hour": -100,
+    "expected_statusCode": 400,
+    "scenario": "Hour parameter with extremely low negative value"
+  },
+  {
+    "q": "Baltimore",
+    "days": 16,
+    "expected_statusCode": 400,
+    "scenario": "Days parameter with value slightly above maximum (16)"
+  },
+  {
+    "q": "Milwaukee",
+    "days": 100,
+    "expected_statusCode": 400,
+    "scenario": "Days parameter with extremely high value"
+  },
+  {
+    "q": "Albuquerque",
+    "days": -1,
+    "expected_statusCode": 400,
+    "scenario": "Days parameter with value exactly at lower boundary violation (-1)"
+  },
+  {
+    "q": "Tucson",
+    "days": -100,
+    "expected_statusCode": 400,
+    "scenario": "Days parameter with extremely low negative value"
+  },
+  {
+    "q": "Fresno",
+    "days": 3.14159,
+    "expected_statusCode": 400,
+    "scenario": "Days parameter with precise decimal value (pi)"
+  },
+  {
+    "q": "Sacramento",
+    "days": 2,
+    "hour": 23.999,
+    "expected_statusCode": 400,
+    "scenario": "Hour parameter with decimal value close to boundary"
+  },
+  {
+    "q": "Mesa",
+    "days": 2,
+    "tp": -15,
+    "expected_statusCode": 400,
+    "scenario": "Time period parameter with negative value"
+  },
+  {
+    "q": "Atlanta",
+    "days": 3,
+    "tp": 0,
+    "expected_statusCode": 400,
+    "scenario": "Time period parameter with zero value"
+  },
+  {
+    "q": "Virginia Beach",
+    "days": 2,
+    "tp": 999,
+    "expected_statusCode": 400,
+    "scenario": "Time period parameter with extremely high value"
+  },
+  {
+    "q": "<script>alert('xss')</script>",
+    "days": 2,
+    "expected_statusCode": 400,
+    "scenario": "Location parameter with XSS script injection attempt"
+  },
+  {
+    "q": "London' OR '1'='1",
+    "days": 3,
+    "expected_statusCode": 400,
+    "scenario": "Location parameter with SQL injection pattern using quotes"
+  },
+  {
+    "q": "London; DROP TABLE locations;--",
+    "days": 2,
+    "expected_statusCode": 400,
+    "scenario": "Location parameter with SQL injection DROP TABLE command"
+  },
+  {
+    "q": "../../../etc/passwd",
+    "days": 3,
+    "expected_statusCode": 400,
+    "scenario": "Location parameter with path traversal attack pattern"
+  },
+  {
+    "q": "London%00",
+    "days": 2,
+    "expected_statusCode": 400,
+    "scenario": "Location parameter with null byte injection"
+  },
+  {
+    "q": "London\u0000",
+    "days": 3,
+    "expected_statusCode": 400,
+    "scenario": "Location parameter with Unicode null character"
+  },
+  {
+    "q": "London' UNION SELECT * FROM users--",
+    "days": 2,
+    "expected_statusCode": 400,
+    "scenario": "Location parameter with SQL UNION injection attempt"
+  },
+  {
+    "q": "${jndi:ldap://malicious.com/a}",
+    "days": 3,
+    "expected_statusCode": 400,
+    "scenario": "Location parameter with JNDI injection pattern (Log4Shell)"
+  },
+  {
+    "q": "../../../../../../windows/system32/config/sam",
+    "days": 2,
+    "expected_statusCode": 400,
+    "scenario": "Location parameter with Windows path traversal"
+  },
+  {
+    "q": "London\r\nInjected-Header: malicious",
+    "days": 3,
+    "expected_statusCode": 400,
+    "scenario": "Location parameter with CRLF injection for header smuggling"
+  },
+  {
+    "q": "London",
+    "days": 2,
+    "lang": "<script>alert('xss')</script>",
+    "expected_statusCode": 400,
+    "scenario": "Language parameter with XSS script injection"
+  },
+  {
+    "q": "London",
+    "days": 3,
+    "alerts": "yes' OR '1'='1",
+    "expected_statusCode": 400,
+    "scenario": "Alerts parameter with SQL injection pattern"
+  },
+  {
+    "q": "London",
+    "days": 2,
+    "aqi": "../../../etc/passwd",
+    "expected_statusCode": 400,
+    "scenario": "AQI parameter with path traversal attempt"
+  },
+  {
+    "q": "A".repeat(10000),
+    "days": 2,
+    "expected_statusCode": 400,
+    "scenario": "Location parameter with extremely long string (10000 characters)"
+  },
+  {
+    "q": "London",
+    "days": 3,
+    "lang": "X".repeat(5000),
+    "expected_statusCode": 400,
+    "scenario": "Language parameter with extremely long string"
+  },
+  {
+    "q": "null",
+    "days": 2,
+    "expected_statusCode": 400,
+    "scenario": "Location parameter with string literal 'null'"
+  },
+  {
+    "q": "undefined",
+    "days": 3,
+    "expected_statusCode": 400,
+    "scenario": "Location parameter with string literal 'undefined'"
+  },
+  {
+    "q": "NaN",
+    "days": 2,
+    "expected_statusCode": 400,
+    "scenario": "Location parameter with string literal 'NaN'"
+  },
+  {
+    "q": "London",
+    "days": null,
+    "expected_statusCode": 400,
+    "scenario": "Days parameter with null value"
+  },
+  {
+    "q": "London",
+    "days": 2,
+    "hour": null,
+    "expected_statusCode": 400,
+    "scenario": "Hour parameter with null value"
+  },
+  {
+    "q": "London",
+    "days": 3,
+    "dt": null,
+    "expected_statusCode": 400,
+    "scenario": "Date parameter with null value"
+  },
+  {
+    "q": "London",
+    "days": 2,
+    "unixdt": null,
+    "expected_statusCode": 400,
+    "scenario": "Unix timestamp parameter with null value"
+  },
+  {
+    "q": "London",
+    "days": 3,
+    "lang": null,
+    "expected_statusCode": 400,
+    "scenario": "Language parameter with null value"
+  },
+  {
+    "q": "London",
+    "days": 2,
+    "alerts": "YES",
+    "expected_statusCode": 400,
+    "scenario": "Alerts parameter with uppercase YES instead of yes"
+  },
+  {
+    "q": "London",
+    "days": 3,
+    "alerts": "true",
+    "expected_statusCode": 400,
+    "scenario": "Alerts parameter with boolean string true instead of yes/no"
+  },
+  {
+    "q": "London",
+    "days": 2,
+    "alerts": "1",
+    "expected_statusCode": 400,
+    "scenario": "Alerts parameter with numeric string 1 instead of yes/no"
+  },
+  {
+    "q": "London",
+    "days": 3,
+    "aqi": "NO",
+    "expected_statusCode": 400,
+    "scenario": "AQI parameter with uppercase NO instead of no"
+  },
+  {
+    "q": "London",
+    "days": 2,
+    "aqi": "false",
+    "expected_statusCode": 400,
+    "scenario": "AQI parameter with boolean string false instead of yes/no"
+  },
+  {
+    "q": "London",
+    "days": 3,
+    "aqi": "0",
+    "expected_statusCode": 400,
+    "scenario": "AQI parameter with numeric string 0 instead of yes/no"
+  },
+  {
+    "q": "London",
+    "days": 2,
+    "lang": "english",
+    "expected_statusCode": 400,
+    "scenario": "Language parameter with full language name instead of language code"
+  },
+  {
+    "q": "London",
+    "days": 3,
+    "lang": "EN",
+    "expected_statusCode": 400,
+    "scenario": "Language parameter with uppercase language code"
+  },
+  {
+    "q": "London",
+    "days": 2,
+    "lang": "en-US",
+    "expected_statusCode": 400,
+    "scenario": "Language parameter with locale format instead of simple language code"
+  },
+  {
+    "q": "London",
+    "days": 3,
+    "lang": "eng",
+    "expected_statusCode": 400,
+    "scenario": "Language parameter with three-letter ISO 639-2 code instead of two-letter"
+  },
+  {
+    "q": "London",
+    "days": 2,
+    "lang": "zzz",
+    "expected_statusCode": 400,
+    "scenario": "Language parameter with non-existent language code"
+  },
+  {
+    "q": "London",
+    "days": 3,
+    "lang": "123",
+    "expected_statusCode": 400,
+    "scenario": "Language parameter with numeric value instead of language code"
+  },
+  {
+    "q": "London",
+    "days": 2,
+    "lang": "",
+    "expected_statusCode": 400,
+    "scenario": "Language parameter with empty string"
+  },
+  {
+    "q": "",
+    "days": "",
+    "expected_statusCode": 400,
+    "scenario": "All required parameters with empty strings"
+  },
+  {
+    "q": "London",
+    "days": 3,
+    "dt": "",
+    "expected_statusCode": 400,
+    "scenario": "Date parameter with empty string"
+  },
+  {
+    "q": "London",
+    "days": 2,
+    "hour": "",
+    "expected_statusCode": 400,
+    "scenario": "Hour parameter with empty string"
+  },
+  {
+    "q": "London",
+    "days": 3,
+    "unixdt": "",
+    "expected_statusCode": 400,
+    "scenario": "Unix timestamp parameter with empty string"
+  },
+  {
+    "q": "London",
+    "days": 2,
+    "alerts": "",
+    "expected_statusCode": 400,
+    "scenario": "Alerts parameter with empty string"
+  },
+  {
+    "q": "London",
+    "days": 3,
+    "aqi": "",
+    "expected_statusCode": 400,
+    "scenario": "AQI parameter with empty string"
+  },
+  {
+    "q": "London",
+    "days": 2,
+    "tp": "",
+    "expected_statusCode": 400,
+    "scenario": "Time period parameter with empty string"
+  },
+  {
+    "q": "   ",
+    "days": 3,
+    "expected_statusCode": 400,
+    "scenario": "Location parameter with only spaces"
+  },
+  {
+    "q": "\t\t\t",
+    "days": 2,
+    "expected_statusCode": 400,
+    "scenario": "Location parameter with only tab characters"
+  },
+  {
+    "q": "\n\n\n",
+    "days": 3,
+    "expected_statusCode": 400,
+    "scenario": "Location parameter with only newline characters"
+  },
+  {
+    "q": "     London     ",
+    "days": 2,
+    "expected_statusCode": 200,
+    "scenario": "Location parameter with excessive leading and trailing spaces (should be trimmed)"
+  },
+  {
+    "q": "999999",
+    "days": 2,
+    "expected_statusCode": 400,
+    "scenario": "Location with US zipcode that doesn't exist"
+  },
+  {
+    "q": "ZZZZZ",
+    "days": 3,
+    "expected_statusCode": 400,
+    "scenario": "Location with invalid UK postcode format"
+  },
+  {
+    "q": "XXXXXX",
+    "days": 2,
+    "expected_statusCode": 400,
+    "scenario": "Location with invalid Canadian postal code"
+  },
+  {
+    "q": "0.0.0.0",
+    "days": 3,
+    "expected_statusCode": 400,
+    "scenario": "Location with reserved IP address 0.0.0.0"
+  },
+  {
+    "q": "127.0.0.1",
+    "days": 2,
+    "expected_statusCode": 400,
+    "scenario": "Location with localhost IP address"
+  },
+  {
+    "q": "255.255.255.255",
+    "days": 3,
+    "expected_statusCode": 400,
+    "scenario": "Location with broadcast IP address"
+  },
+  {
+    "q": "London",
+    "days": 1,
+    "dt": "2025-01-01",
+    "unixdt": 1704067200,
+    "hour": 12,
+    "expected_statusCode": 400,
+    "scenario": "Multiple conflicting date/time parameters provided together"
+  },
+  {
+    "q": "London",
+    "days": 2,
+    "tp": 30,
+    "expected_statusCode": 400,
+    "scenario": "Time period parameter with invalid interval value (not 15)"
+  },
+  {
+    "q": "London",
+    "days": 3,
+    "tp": 5,
+    "expected_statusCode": 400,
+    "scenario": "Time period parameter with unsupported interval value"
+  },
+  {
+    "q": "London",
+    "days": 2,
+    "tp": 60,
+    "expected_statusCode": 400,
+    "scenario": "Time period parameter with hour-based interval"
+  },
+  {
+    "q": "",
+    "expected_statusCode": 401,
+    "scenario": "Empty API key with missing required parameter q"
+  },
+  {
+    "q": "London",
+    "expected_statusCode": 401,
+    "scenario": "Empty API key with missing required parameter days"
+  },
+  {
+    "days": 5,
+    "expected_statusCode": 401,
+    "scenario": "Empty API key with missing required parameter q but days provided"
+  },
+  {
+    "q": "London",
+    "days": 3,
+    "expected_statusCode": 403,
+    "scenario": "API key exceeding monthly quota limit - error code 2007"
   }
 ]
