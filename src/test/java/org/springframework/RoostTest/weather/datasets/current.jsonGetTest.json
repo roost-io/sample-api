@@ -1,0 +1,345 @@
+[
+  {
+    "q": "10001",
+    "expected_statusCode": 200,
+    "scenario": "Valid request with US Zipcode as query parameter"
+  },
+  {
+    "q": "SW1A 1AA",
+    "expected_statusCode": 200,
+    "scenario": "Valid request with UK Postcode as query parameter"
+  },
+  {
+    "q": "M5H 2N2",
+    "expected_statusCode": 200,
+    "scenario": "Valid request with Canada Postalcode as query parameter"
+  },
+  {
+    "q": "8.8.8.8",
+    "expected_statusCode": 200,
+    "scenario": "Valid request with IP address as query parameter"
+  },
+  {
+    "q": "40.71,-74.01",
+    "expected_statusCode": 200,
+    "scenario": "Valid request with Latitude/Longitude coordinates"
+  },
+  {
+    "q": "New York",
+    "expected_statusCode": 200,
+    "scenario": "Valid request with city name as query parameter"
+  },
+  {
+    "q": "Paris",
+    "lang": "fr",
+    "expected_statusCode": 200,
+    "scenario": "Valid request with optional lang parameter set to French"
+  },
+  {
+    "q": "Madrid",
+    "lang": "es",
+    "expected_statusCode": 200,
+    "scenario": "Valid request with Spanish language code"
+  },
+  {
+    "q": "London",
+    "expected_statusCode": 200,
+    "scenario": "Response contains all required location object fields"
+  },
+  {
+    "q": "Tokyo",
+    "expected_statusCode": 200,
+    "scenario": "Response includes all current weather object fields"
+  },
+  {
+    "q": "Berlin",
+    "expected_statusCode": 200,
+    "scenario": "Response includes required air_quality object with all fields"
+  },
+  {
+    "q": "Sydney",
+    "expected_statusCode": 200,
+    "scenario": "Response includes condition object with text, icon and code"
+  },
+  {
+    "q": "São Paulo",
+    "expected_statusCode": 200,
+    "scenario": "Request with special characters in city name"
+  },
+  {
+    "q": "new york",
+    "expected_statusCode": 200,
+    "scenario": "API is case-insensitive for city names - lowercase"
+  },
+  {
+    "q": "LONDON",
+    "expected_statusCode": 200,
+    "scenario": "Request with all uppercase city name"
+  },
+  {
+    "q": "New%20York",
+    "expected_statusCode": 200,
+    "scenario": "Request with URL-encoded city name"
+  },
+  {
+    "q": "40.712776,-74.005974",
+    "expected_statusCode": 200,
+    "scenario": "Request with very high precision latitude/longitude"
+  },
+  {
+    "q": "-33.8688,151.2093",
+    "expected_statusCode": 200,
+    "scenario": "Request with negative latitude and longitude coordinates for Sydney"
+  },
+  {
+    "q": "0,0",
+    "expected_statusCode": 200,
+    "scenario": "Request with zero latitude and longitude"
+  },
+  {
+    "q": "90,0",
+    "expected_statusCode": 200,
+    "scenario": "Request with boundary latitude value - North Pole"
+  },
+  {
+    "q": "0,180",
+    "expected_statusCode": 200,
+    "scenario": "Request with boundary longitude value"
+  },
+  {
+    "q": "Toronto",
+    "expected_statusCode": 200,
+    "scenario": "Response contains valid epoch timestamp values"
+  },
+  {
+    "q": "Miami",
+    "expected_statusCode": 200,
+    "scenario": "Wind direction field contains valid compass directions"
+  },
+  {
+    "q": "Bangkok",
+    "expected_statusCode": 200,
+    "scenario": "is_day field contains binary value 0 or 1"
+  },
+  {
+    "q": "Cairo",
+    "expected_statusCode": 200,
+    "scenario": "Condition code is valid integer format"
+  },
+  {
+    "q": "Athens",
+    "expected_statusCode": 200,
+    "scenario": "UV index is within expected range"
+  },
+  {
+    "q": "Mumbai",
+    "expected_statusCode": 200,
+    "scenario": "Humidity is percentage between 0-100"
+  },
+  {
+    "q": "Singapore",
+    "expected_statusCode": 200,
+    "scenario": "Cloud cover is percentage between 0-100"
+  },
+  {
+    "q": "Rome",
+    "expected_statusCode": 200,
+    "scenario": "Celsius and Fahrenheit temperatures are consistent"
+  },
+  {
+    "q": "Dublin",
+    "expected_statusCode": 200,
+    "scenario": "mph and kph wind speeds are consistent"
+  },
+  {
+    "q": "Seattle",
+    "expected_statusCode": 200,
+    "scenario": "mm and inches precipitation values are consistent"
+  },
+  {
+    "q": "Moscow",
+    "expected_statusCode": 200,
+    "scenario": "km and miles visibility values are consistent"
+  },
+  {
+    "q": "Denver",
+    "expected_statusCode": 200,
+    "scenario": "mb and inches pressure values are consistent"
+  },
+  {
+    "q": "Beijing",
+    "expected_statusCode": 200,
+    "scenario": "Air quality indexes are within valid ranges"
+  },
+  {
+    "q": "Amsterdam",
+    "expected_statusCode": 200,
+    "scenario": "Condition icon URL is properly formatted"
+  },
+  {
+    "q": "Istanbul",
+    "expected_statusCode": 200,
+    "scenario": "Timezone ID follows standard IANA format"
+  },
+  {
+    "q": "Prague",
+    "expected_statusCode": 200,
+    "scenario": "Localtime string follows expected format YYYY-MM-DD HH:MM"
+  },
+  {
+    "q": "Vienna",
+    "expected_statusCode": 200,
+    "scenario": "last_updated timestamp follows expected format"
+  },
+  {
+    "q": "Delhi",
+    "expected_statusCode": 200,
+    "scenario": "All air quality measurements are numeric values"
+  },
+  {
+    "q": "Chicago",
+    "lang": "en",
+    "expected_statusCode": 200,
+    "scenario": "Valid request with English language parameter"
+  },
+  {
+    "q": "Barcelona",
+    "lang": "ca",
+    "expected_statusCode": 200,
+    "scenario": "Valid request with Catalan language code"
+  },
+  {
+    "expected_statusCode": 400,
+    "scenario": "Missing required q parameter returns error code 1003"
+  },
+  {
+    "q": "",
+    "expected_statusCode": 400,
+    "scenario": "Empty q parameter value returns error"
+  },
+  {
+    "q": "XYZ123NOTREAL",
+    "expected_statusCode": 400,
+    "scenario": "Invalid location returns error code 1006"
+  },
+  {
+    "q": "   ",
+    "expected_statusCode": 400,
+    "scenario": "Whitespace-only q parameter returns error"
+  },
+  {
+    "q": "ABC,DEF",
+    "expected_statusCode": 400,
+    "scenario": "Malformed latitude/longitude coordinates"
+  },
+  {
+    "q": "95.5,-74.01",
+    "expected_statusCode": 400,
+    "scenario": "Latitude value out of valid range (greater than 90)"
+  },
+  {
+    "q": "40.71,185.5",
+    "expected_statusCode": 400,
+    "scenario": "Longitude value out of valid range (greater than 180)"
+  },
+  {
+    "q": "999.999.999.999",
+    "expected_statusCode": 400,
+    "scenario": "Malformed IP address format"
+  },
+  {
+    "q": "99999999",
+    "expected_statusCode": 400,
+    "scenario": "Numeric string that is not a valid zipcode"
+  },
+  {
+    "q": "aVeryLongLocationStringThatExceedsReasonableLengthLimitsAndShouldBeRejectedByTheAPIValidationLayerBecauseItIsUnreasonablyLongAndDoesNotRepresentAValidLocationQueryParameterValueThisStringContinuesToExceedNormalLengthExpectationsForLocationBasedQueriesAndShouldTriggerValidationErrorHandlingMechanismsInTheAPIToPreventProcessingOfInvalidOrMaliciousInputsThatCouldPotentiallyCausePerformanceIssuesOrSecurityVulnerabilitiesInTheBackendSystemsThisStringIsIntentionallyDesignedToTestInputLengthValidationRulesAndBoundaryConditionsForTheQueryParameterHandlingLogicImplementedInTheWeatherAPIServiceToEnsureRobustInputValidationAndProperErrorResponseGenerationWhenInvalidOrOversizedParametersAreProvidedByClientApplicationsOrAutomatedTestingSystems",
+    "expected_statusCode": 400,
+    "scenario": "Very long location string exceeding length limits"
+  },
+  {
+    "q": "London OR 1=1",
+    "expected_statusCode": 400,
+    "scenario": "SQL injection attempt in q parameter"
+  },
+  {
+    "q": "<script>alert(1)</script>",
+    "expected_statusCode": 400,
+    "scenario": "XSS script attempt in q parameter"
+  },
+  {
+    "q": "-95.5,45.0",
+    "expected_statusCode": 400,
+    "scenario": "Latitude value out of valid range (less than -90)"
+  },
+  {
+    "q": "45.0,-185.5",
+    "expected_statusCode": 400,
+    "scenario": "Longitude value out of valid range (less than -180)"
+  },
+  {
+    "q": "null",
+    "expected_statusCode": 400,
+    "scenario": "Null string value for q parameter"
+  },
+  {
+    "q": "undefined",
+    "expected_statusCode": 400,
+    "scenario": "Undefined string value for q parameter"
+  },
+  {
+    "q": "256.256.256.256",
+    "expected_statusCode": 400,
+    "scenario": "Invalid IP address with values exceeding octet range"
+  },
+  {
+    "q": "!@#$%^&*()",
+    "expected_statusCode": 400,
+    "scenario": "Special characters only in q parameter"
+  },
+  {
+    "q": "London",
+    "expected_statusCode": 401,
+    "scenario": "Missing API key authentication returns error code 1002"
+  },
+  {
+    "q": "Paris",
+    "expected_statusCode": 401,
+    "scenario": "Invalid or malformed API key returns error code 2006"
+  },
+  {
+    "q": "Tokyo",
+    "expected_statusCode": 401,
+    "scenario": "Empty string as API key value"
+  },
+  {
+    "q": "New York",
+    "expected_statusCode": 401,
+    "scenario": "API key not provided in request headers"
+  },
+  {
+    "q": "Berlin",
+    "expected_statusCode": 401,
+    "scenario": "Malformed API key format"
+  },
+  {
+    "q": "Boston",
+    "expected_statusCode": 403,
+    "scenario": "Disabled API key returns error code 2008"
+  },
+  {
+    "q": "Seattle",
+    "expected_statusCode": 403,
+    "scenario": "API key lacks access to resource - error code 2009"
+  },
+  {
+    "q": "Chicago",
+    "expected_statusCode": 403,
+    "scenario": "API key without access to current weather endpoint"
+  },
+  {
+    "q": "Los Angeles",
+    "expected_statusCode": 403,
+    "scenario": "Insufficient permissions for API key"
+  }
+]

@@ -1,0 +1,610 @@
+[
+  {
+    "q": "40.71,-74.01",
+    "days": 1,
+    "expected_statusCode": 200,
+    "scenario": "Test valid marine weather request with only required parameters q and days"
+  },
+  {
+    "q": "51.5,-0.1",
+    "days": 7,
+    "dt": "2024-01-15",
+    "hour": 14,
+    "lang": "en",
+    "expected_statusCode": 200,
+    "scenario": "Test valid request with all query parameters including optional ones"
+  },
+  {
+    "days": 3,
+    "expected_statusCode": 400,
+    "scenario": "Test request without required query parameter q"
+  },
+  {
+    "q": "40.71,-74.01",
+    "expected_statusCode": 400,
+    "scenario": "Test request without required query parameter days"
+  },
+  {
+    "q": "40.71,-74.01",
+    "days": 1,
+    "expected_statusCode": 401,
+    "scenario": "Test request without API key authentication"
+  },
+  {
+    "q": "40.71,-74.01",
+    "days": 1,
+    "expected_statusCode": 401,
+    "scenario": "Test request with invalid API key"
+  },
+  {
+    "q": "40.71,-74.01",
+    "days": 1,
+    "expected_statusCode": 403,
+    "scenario": "Test request with disabled API key"
+  },
+  {
+    "q": "40.71,-74.01",
+    "days": 1,
+    "expected_statusCode": 403,
+    "scenario": "Test request with API key that lacks access to marine resource"
+  },
+  {
+    "q": "999.999,999.999",
+    "days": 1,
+    "expected_statusCode": 400,
+    "scenario": "Test request with location parameter that cannot be found"
+  },
+  {
+    "q": "40.71,-74.01",
+    "days": 0,
+    "expected_statusCode": 400,
+    "scenario": "Test request with days parameter value below allowed minimum"
+  },
+  {
+    "q": "40.71,-74.01",
+    "days": 10,
+    "expected_statusCode": 400,
+    "scenario": "Test request with days parameter value above allowed maximum"
+  },
+  {
+    "q": "40.71,-74.01",
+    "days": 4,
+    "expected_statusCode": 200,
+    "scenario": "Test request with days parameter value in allowed enum"
+  },
+  {
+    "q": "40.71,-74.01",
+    "days": "three",
+    "expected_statusCode": 400,
+    "scenario": "Test request with days parameter as non-integer type"
+  },
+  {
+    "q": "40.71,-74.01",
+    "days": 3.5,
+    "expected_statusCode": 400,
+    "scenario": "Test request with days parameter as float instead of integer"
+  },
+  {
+    "q": "40.71,-74.01",
+    "days": 1,
+    "dt": "2024-01-20",
+    "expected_statusCode": 200,
+    "scenario": "Test request with valid dt parameter in correct date format"
+  },
+  {
+    "q": "40.71,-74.01",
+    "days": 1,
+    "dt": "05-22-2023",
+    "expected_statusCode": 400,
+    "scenario": "Test request with dt parameter in incorrect date format"
+  },
+  {
+    "q": "40.71,-74.01",
+    "days": 1,
+    "dt": "2020-01-01",
+    "expected_statusCode": 400,
+    "scenario": "Test request with dt parameter as past date"
+  },
+  {
+    "q": "40.71,-74.01",
+    "days": 1,
+    "dt": "2025-01-01",
+    "expected_statusCode": 400,
+    "scenario": "Test request with dt parameter beyond 7 days in future"
+  },
+  {
+    "q": "40.71,-74.01",
+    "days": 1,
+    "unixdt": 1705708800,
+    "expected_statusCode": 200,
+    "scenario": "Test request with valid unixdt parameter"
+  },
+  {
+    "q": "40.71,-74.01",
+    "days": 1,
+    "unixdt": "invalid_timestamp",
+    "expected_statusCode": 400,
+    "scenario": "Test request with unixdt parameter as non-integer"
+  },
+  {
+    "q": "40.71,-74.01",
+    "days": 1,
+    "dt": "2024-01-22",
+    "unixdt": 1705881600,
+    "expected_statusCode": 400,
+    "scenario": "Test request with both dt and unixdt parameters provided simultaneously"
+  },
+  {
+    "q": "40.71,-74.01",
+    "days": 1,
+    "hour": 17,
+    "expected_statusCode": 200,
+    "scenario": "Test request with valid hour parameter in 24-hour format"
+  },
+  {
+    "q": "40.71,-74.01",
+    "days": 1,
+    "hour": -1,
+    "expected_statusCode": 400,
+    "scenario": "Test request with hour parameter below valid range"
+  },
+  {
+    "q": "40.71,-74.01",
+    "days": 1,
+    "hour": 24,
+    "expected_statusCode": 400,
+    "scenario": "Test request with hour parameter above valid range"
+  },
+  {
+    "q": "40.71,-74.01",
+    "days": 1,
+    "hour": "afternoon",
+    "expected_statusCode": 400,
+    "scenario": "Test request with hour parameter as non-integer type"
+  },
+  {
+    "q": "40.71,-74.01",
+    "days": 1,
+    "lang": "es",
+    "expected_statusCode": 200,
+    "scenario": "Test request with valid lang parameter for localized condition text"
+  },
+  {
+    "q": "40.71,-74.01",
+    "days": 1,
+    "lang": "xyz",
+    "expected_statusCode": 200,
+    "scenario": "Test request with invalid or unsupported lang code defaults to English"
+  },
+  {
+    "q": "",
+    "days": 1,
+    "expected_statusCode": 400,
+    "scenario": "Test request with q parameter as empty string"
+  },
+  {
+    "q": "   ",
+    "days": 1,
+    "expected_statusCode": 400,
+    "scenario": "Test request with q parameter containing only whitespace"
+  },
+  {
+    "q": "invalid_format",
+    "days": 1,
+    "expected_statusCode": 400,
+    "scenario": "Test request with q parameter in invalid lat/lon format"
+  },
+  {
+    "q": "95.0,-74.01",
+    "days": 1,
+    "expected_statusCode": 400,
+    "scenario": "Test request with latitude value outside valid range (above 90)"
+  },
+  {
+    "q": "40.71,-185.0",
+    "days": 1,
+    "expected_statusCode": 400,
+    "scenario": "Test request with longitude value outside valid range (below -180)"
+  },
+  {
+    "q": "40.7128,-73.9352",
+    "days": 1,
+    "expected_statusCode": 400,
+    "scenario": "Test request with q parameter pointing to land location instead of ocean"
+  },
+  {
+    "q": null,
+    "days": 1,
+    "expected_statusCode": 400,
+    "scenario": "Test request with q parameter explicitly set to null"
+  },
+  {
+    "q": "40.71,-74.01",
+    "days": null,
+    "expected_statusCode": 400,
+    "scenario": "Test request with days parameter explicitly set to null"
+  },
+  {
+    "q": "40.71,-74.01",
+    "days": 3,
+    "expected_statusCode": 200,
+    "scenario": "Test that successful response includes properly structured location object with 3 days forecast"
+  },
+  {
+    "q": "35.5,-75.2",
+    "days": 1,
+    "expected_statusCode": 200,
+    "scenario": "Test that response includes marine-specific fields in hourly data"
+  },
+  {
+    "q": "45.0,-80.5",
+    "days": 1,
+    "expected_statusCode": 200,
+    "scenario": "Test that response includes astronomy data in forecast"
+  },
+  {
+    "q": "38.5,-76.8",
+    "days": 1,
+    "expected_statusCode": 200,
+    "scenario": "Test that response includes day-level weather forecast data"
+  },
+  {
+    "q": "42.3,-71.0",
+    "days": 1,
+    "expected_statusCode": 200,
+    "scenario": "Test that response includes hourly weather data array with 24 elements"
+  },
+  {
+    "q": "37.8,-122.4",
+    "days": 1,
+    "expected_statusCode": 200,
+    "scenario": "Test that response includes condition object with text, icon, and code"
+  },
+  {
+    "q": "40.71,-74.01",
+    "days": 7,
+    "expected_statusCode": 200,
+    "scenario": "Test that requesting maximum 7 days returns exactly 7 days of forecast"
+  },
+  {
+    "q": "40.71,-74.01",
+    "days": 1,
+    "expected_statusCode": 200,
+    "scenario": "Test that requesting 1 day returns exactly 1 day of forecast"
+  },
+  {
+    "q": "40.71,-74.01",
+    "days": 1,
+    "hour": 0,
+    "expected_statusCode": 200,
+    "scenario": "Test that requesting hour 0 returns midnight data"
+  },
+  {
+    "q": "40.71,-74.01",
+    "days": 1,
+    "hour": 23,
+    "expected_statusCode": 200,
+    "scenario": "Test that requesting hour 23 returns 11 PM data"
+  },
+  {
+    "q": "+40.71,-74.01",
+    "days": 1,
+    "expected_statusCode": 200,
+    "scenario": "Test q parameter with plus sign in coordinates"
+  },
+  {
+    "q": "40.71234567890123,-74.01234567890123",
+    "days": 1,
+    "expected_statusCode": 200,
+    "scenario": "Test q parameter with excessive decimal precision"
+  },
+  {
+    "q": "40.71,-74.01",
+    "days": 1,
+    "unixdt": -1000000,
+    "expected_statusCode": 400,
+    "scenario": "Test unixdt parameter with negative unix timestamp"
+  },
+  {
+    "q": "40.71,-74.01",
+    "days": 2,
+    "expected_statusCode": 200,
+    "scenario": "Test that requesting 2 days returns exactly 2 days of forecast"
+  },
+  {
+    "q": "40.71,-74.01",
+    "days": 1,
+    "dt": "2023-02-30",
+    "expected_statusCode": 400,
+    "scenario": "Test dt parameter with invalid date value like February 30"
+  },
+  {
+    "q": "40.71,-74.01",
+    "days": 1,
+    "dt": "2024-02-29",
+    "expected_statusCode": 200,
+    "scenario": "Test dt parameter with leap year date February 29 if within 7 day range"
+  },
+  {
+    "q": "40.71,-74.01",
+    "days": 1,
+    "dt": "2023-05-22T14:30:00",
+    "expected_statusCode": 400,
+    "scenario": "Test dt parameter with time component included"
+  },
+  {
+    "q": "40.71,-74.01",
+    "days": 1,
+    "unixdt": 0,
+    "expected_statusCode": 400,
+    "scenario": "Test unixdt parameter with zero value (epoch 0 is in the past)"
+  },
+  {
+    "q": "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz",
+    "days": 1,
+    "expected_statusCode": 400,
+    "scenario": "Test q parameter with extremely long string value"
+  },
+  {
+    "q": "@#$%^&*()",
+    "days": 1,
+    "expected_statusCode": 400,
+    "scenario": "Test q parameter with special characters"
+  },
+  {
+    "q": "' OR '1'='1",
+    "days": 1,
+    "expected_statusCode": 400,
+    "scenario": "Test q parameter with SQL injection attempt"
+  },
+  {
+    "q": "<script>alert('xss')</script>",
+    "days": 1,
+    "expected_statusCode": 400,
+    "scenario": "Test q parameter with XSS script injection attempt"
+  },
+  {
+    "q": "40.71,-74.01",
+    "days": 1,
+    "lang": "",
+    "expected_statusCode": 200,
+    "scenario": "Test lang parameter with empty string value defaults to English"
+  },
+  {
+    "q": "40.71,-74.01",
+    "days": 5,
+    "expected_statusCode": 200,
+    "scenario": "Test that requesting 5 days returns exactly 5 days of forecast"
+  },
+  {
+    "q": ".71,-.01",
+    "days": 1,
+    "expected_statusCode": 200,
+    "scenario": "Test q parameter with decimal coordinates without leading zero"
+  },
+  {
+    "q": "90.0,0.0",
+    "days": 1,
+    "expected_statusCode": 400,
+    "scenario": "Test q parameter with latitude at maximum boundary of 90 (North Pole - not marine)"
+  },
+  {
+    "q": "-90.0,0.0",
+    "days": 1,
+    "expected_statusCode": 400,
+    "scenario": "Test q parameter with latitude at minimum boundary of -90 (South Pole - not marine)"
+  },
+  {
+    "q": "0.0,180.0",
+    "days": 1,
+    "expected_statusCode": 200,
+    "scenario": "Test q parameter with longitude at maximum boundary of 180"
+  },
+  {
+    "q": "0.0,-180.0",
+    "days": 1,
+    "expected_statusCode": 200,
+    "scenario": "Test q parameter with longitude at minimum boundary of -180"
+  },
+  {
+    "expected_statusCode": 400,
+    "scenario": "Test request with no query parameters at all"
+  },
+  {
+    "q": "40.71,-74.01",
+    "days": 1,
+    "hour": 14.5,
+    "expected_statusCode": 400,
+    "scenario": "Test hour parameter with float value"
+  },
+  {
+    "q": "-85.5,120.3",
+    "days": 6,
+    "expected_statusCode": 200,
+    "scenario": "Test valid marine coordinates with 6 days forecast"
+  },
+  {
+    "q": "25.0,-70.0",
+    "days": 3,
+    "lang": "fr",
+    "expected_statusCode": 200,
+    "scenario": "Test valid request with French language parameter"
+  },
+  {
+    "q": "55.7,-5.5",
+    "days": 2,
+    "hour": 12,
+    "expected_statusCode": 200,
+    "scenario": "Test valid request with hour parameter at noon"
+  },
+  {
+    "q": "30.5,-88.2",
+    "days": 4,
+    "lang": "de",
+    "hour": 6,
+    "expected_statusCode": 200,
+    "scenario": "Test valid request with German language and morning hour"
+  },
+  {
+    "q": "-40.0,175.0",
+    "days": 5,
+    "expected_statusCode": 200,
+    "scenario": "Test valid marine coordinates in southern hemisphere"
+  },
+  {
+    "q": "60.5,-140.8",
+    "days": 1,
+    "hour": 18,
+    "expected_statusCode": 200,
+    "scenario": "Test valid request with evening hour parameter"
+  },
+  {
+    "q": "40.71,-74.01",
+    "days": 1,
+    "lang": "ja",
+    "expected_statusCode": 200,
+    "scenario": "Test request with Japanese language parameter"
+  },
+  {
+    "q": "40.71,-74.01",
+    "days": 1,
+    "lang": "zh",
+    "expected_statusCode": 200,
+    "scenario": "Test request with Chinese language parameter"
+  },
+  {
+    "q": "-25.5,45.3",
+    "days": 7,
+    "lang": "pt",
+    "expected_statusCode": 200,
+    "scenario": "Test maximum days with Portuguese language"
+  },
+  {
+    "q": "40.71,-74.01",
+    "days": -5,
+    "expected_statusCode": 400,
+    "scenario": "Test days parameter with negative value"
+  },
+  {
+    "q": "200.5,300.8",
+    "days": 1,
+    "expected_statusCode": 400,
+    "scenario": "Test q parameter with both latitude and longitude out of bounds"
+  },
+  {
+    "q": "40.71,-74.01",
+    "days": 1,
+    "hour": 25,
+    "expected_statusCode": 400,
+    "scenario": "Test hour parameter above maximum value of 23"
+  },
+  {
+    "q": "40.71,-74.01",
+    "days": 1,
+    "hour": -5,
+    "expected_statusCode": 400,
+    "scenario": "Test hour parameter with negative value"
+  },
+  {
+    "q": "48.2,-123.5",
+    "days": 3,
+    "hour": 3,
+    "expected_statusCode": 200,
+    "scenario": "Test valid request with early morning hour"
+  },
+  {
+    "q": "52.0,5.0",
+    "days": 2,
+    "lang": "nl",
+    "expected_statusCode": 200,
+    "scenario": "Test valid marine request with Dutch language"
+  },
+  {
+    "q": "35.0,140.0",
+    "days": 4,
+    "hour": 21,
+    "expected_statusCode": 200,
+    "scenario": "Test valid request with late evening hour"
+  },
+  {
+    "q": "-15.5,-175.8",
+    "days": 1,
+    "expected_statusCode": 200,
+    "scenario": "Test valid coordinates near international date line"
+  },
+  {
+    "q": "40.71,-74.01",
+    "days": 1,
+    "lang": "ru",
+    "hour": 9,
+    "expected_statusCode": 200,
+    "scenario": "Test valid request with Russian language and morning hour"
+  },
+  {
+    "q": "65.5,-18.0",
+    "days": 6,
+    "expected_statusCode": 200,
+    "scenario": "Test valid marine coordinates in North Atlantic"
+  },
+  {
+    "q": "-50.5,165.8",
+    "days": 5,
+    "lang": "it",
+    "expected_statusCode": 200,
+    "scenario": "Test valid southern ocean coordinates with Italian language"
+  },
+  {
+    "q": "40.71,-74.01",
+    "days": 1.5,
+    "expected_statusCode": 400,
+    "scenario": "Test days parameter with decimal value instead of integer"
+  },
+  {
+    "q": "40.71,-74.01",
+    "days": 1,
+    "unixdt": 9999999999,
+    "expected_statusCode": 400,
+    "scenario": "Test unixdt parameter with timestamp far in future"
+  },
+  {
+    "q": "40.71,-74.01",
+    "days": 100,
+    "expected_statusCode": 400,
+    "scenario": "Test days parameter far exceeding maximum value"
+  },
+  {
+    "q": "12.5,-68.0",
+    "days": 3,
+    "lang": "ar",
+    "expected_statusCode": 200,
+    "scenario": "Test valid Caribbean coordinates with Arabic language"
+  },
+  {
+    "q": "40.71,-74.01",
+    "days": 1,
+    "lang": "ko",
+    "hour": 15,
+    "expected_statusCode": 200,
+    "scenario": "Test valid request with Korean language and afternoon hour"
+  },
+  {
+    "q": "-8.0,115.0",
+    "days": 2,
+    "expected_statusCode": 200,
+    "scenario": "Test valid Indian Ocean coordinates"
+  },
+  {
+    "q": "40.71,-74.01",
+    "days": 1,
+    "dt": "2024-12-32",
+    "expected_statusCode": 400,
+    "scenario": "Test dt parameter with invalid day (32nd of month)"
+  },
+  {
+    "q": "40.71,-74.01",
+    "days": 1,
+    "dt": "2023-13-01",
+    "expected_statusCode": 400,
+    "scenario": "Test dt parameter with invalid month (13th month)"
+  }
+]

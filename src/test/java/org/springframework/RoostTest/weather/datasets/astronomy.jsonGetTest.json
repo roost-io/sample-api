@@ -1,0 +1,332 @@
+[
+  {
+    "q": "10001",
+    "dt": "2023-06-15",
+    "expected_statusCode": 200,
+    "scenario": "Valid request with US Zipcode and valid date"
+  },
+  {
+    "q": "SW1A 1AA",
+    "dt": "2023-07-20",
+    "expected_statusCode": 200,
+    "scenario": "Valid request with UK Postcode"
+  },
+  {
+    "q": "M5H 2N2",
+    "dt": "2023-08-10",
+    "expected_statusCode": 200,
+    "scenario": "Valid request with Canada Postalcode"
+  },
+  {
+    "q": "8.8.8.8",
+    "dt": "2023-05-15",
+    "expected_statusCode": 200,
+    "scenario": "Valid request with IP address"
+  },
+  {
+    "q": "40.71,-74.01",
+    "dt": "2023-04-25",
+    "expected_statusCode": 200,
+    "scenario": "Valid request with Latitude and Longitude in decimal degree"
+  },
+  {
+    "q": "London",
+    "dt": "2023-09-01",
+    "expected_statusCode": 200,
+    "scenario": "Valid request with city name"
+  },
+  {
+    "q": "New York",
+    "dt": "2015-01-01",
+    "expected_statusCode": 200,
+    "scenario": "Valid request with minimum allowed date 2015-01-01"
+  },
+  {
+    "q": "Paris",
+    "dt": "2024-01-15",
+    "expected_statusCode": 200,
+    "scenario": "Valid request with current year date"
+  },
+  {
+    "q": "Tokyo",
+    "dt": "2025-12-31",
+    "expected_statusCode": 200,
+    "scenario": "Valid request with future date"
+  },
+  {
+    "q": "NEW YORK",
+    "dt": "2023-06-15",
+    "expected_statusCode": 200,
+    "scenario": "Valid request with location in uppercase"
+  },
+  {
+    "q": "München",
+    "dt": "2023-06-15",
+    "expected_statusCode": 200,
+    "scenario": "Valid request with Unicode characters in location name"
+  },
+  {
+    "q": "Seattle",
+    "dt": "2023-06-15",
+    "expected_statusCode": 200,
+    "scenario": "Valid request to verify response structure contains all required fields"
+  },
+  {
+    "q": "Denver",
+    "dt": "2023-06-15",
+    "expected_statusCode": 200,
+    "scenario": "Valid request to verify response field data types"
+  },
+  {
+    "q": "Phoenix",
+    "dt": "2023-06-05",
+    "expected_statusCode": 200,
+    "scenario": "Valid request with date having leading zeros"
+  },
+  {
+    "q": "Vienna",
+    "dt": "2024-02-29",
+    "expected_statusCode": 200,
+    "scenario": "Valid request with leap year date February 29"
+  },
+  {
+    "q": "40.7127753,-74.0059728",
+    "dt": "2023-06-15",
+    "expected_statusCode": 200,
+    "scenario": "Valid request with coordinates having multiple decimal places"
+  },
+  {
+    "q": "0.0,0.0",
+    "dt": "2023-06-15",
+    "expected_statusCode": 200,
+    "scenario": "Valid request with zero coordinates at equator and prime meridian"
+  },
+  {
+    "q": "-33.87,151.21",
+    "dt": "2023-06-15",
+    "expected_statusCode": 200,
+    "scenario": "Valid request with negative latitude and longitude for southern hemisphere"
+  },
+  {
+    "q": "Chicago",
+    "dt": "2023-06-15",
+    "expected_statusCode": 200,
+    "scenario": "Valid request with location that may have leading or trailing spaces"
+  },
+  {
+    "q": "Boston",
+    "dt": "2023-06-15",
+    "expected_statusCode": 200,
+    "scenario": "Valid request with common US city name"
+  },
+  {
+    "dt": "2023-06-15",
+    "expected_statusCode": 400,
+    "scenario": "Missing required query parameter q"
+  },
+  {
+    "q": "New York",
+    "expected_statusCode": 400,
+    "scenario": "Missing required date parameter dt"
+  },
+  {
+    "expected_statusCode": 400,
+    "scenario": "Missing all required query parameters"
+  },
+  {
+    "q": "",
+    "dt": "2023-06-15",
+    "expected_statusCode": 400,
+    "scenario": "Empty q parameter value"
+  },
+  {
+    "q": "London",
+    "dt": "",
+    "expected_statusCode": 400,
+    "scenario": "Empty dt parameter value"
+  },
+  {
+    "q": "@@##$",
+    "dt": "2023-06-15",
+    "expected_statusCode": 400,
+    "scenario": "Invalid location format with special characters"
+  },
+  {
+    "q": "XYZInvalidCity123",
+    "dt": "2023-06-15",
+    "expected_statusCode": 400,
+    "scenario": "Non-existent location name"
+  },
+  {
+    "q": "Paris",
+    "dt": "15-06-2023",
+    "expected_statusCode": 400,
+    "scenario": "Invalid date format with DD-MM-YYYY"
+  },
+  {
+    "q": "Berlin",
+    "dt": "2023/06/15",
+    "expected_statusCode": 400,
+    "scenario": "Date with slash separator instead of hyphen"
+  },
+  {
+    "q": "Rome",
+    "dt": "2014-12-31",
+    "expected_statusCode": 400,
+    "scenario": "Date before minimum allowed date 2015-01-01"
+  },
+  {
+    "q": "Madrid",
+    "dt": "2023-13-32",
+    "expected_statusCode": 400,
+    "scenario": "Invalid date value with month 13 and day 32"
+  },
+  {
+    "q": "Sydney",
+    "dt": "abc-def-ghij",
+    "expected_statusCode": 400,
+    "scenario": "Alphabetic characters in date parameter"
+  },
+  {
+    "q": "null",
+    "dt": "2023-06-15",
+    "expected_statusCode": 400,
+    "scenario": "Null value as string for q parameter"
+  },
+  {
+    "q": "Amsterdam",
+    "dt": "null",
+    "expected_statusCode": 400,
+    "scenario": "Null value as string for dt parameter"
+  },
+  {
+    "q": "<script>alert()</script>",
+    "dt": "2023-06-15",
+    "expected_statusCode": 400,
+    "scenario": "XSS attempt with script tags in location parameter"
+  },
+  {
+    "q": "London OR 1=1",
+    "dt": "2023-06-15",
+    "expected_statusCode": 400,
+    "scenario": "SQL injection attempt in location parameter"
+  },
+  {
+    "q": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "dt": "2023-06-15",
+    "expected_statusCode": 400,
+    "scenario": "Extremely long string in location parameter"
+  },
+  {
+    "q": "95.00,-74.01",
+    "dt": "2023-06-15",
+    "expected_statusCode": 400,
+    "scenario": "Invalid latitude value outside valid range -90 to 90"
+  },
+  {
+    "q": "40.71,-190.00",
+    "dt": "2023-06-15",
+    "expected_statusCode": 400,
+    "scenario": "Invalid longitude value outside valid range -180 to 180"
+  },
+  {
+    "q": "999.999.999.999",
+    "dt": "2023-06-15",
+    "expected_statusCode": 400,
+    "scenario": "Malformed IP address with invalid octets"
+  },
+  {
+    "q": "8.8.8",
+    "dt": "2023-06-15",
+    "expected_statusCode": 400,
+    "scenario": "Incomplete IP address"
+  },
+  {
+    "q": "ABC123",
+    "dt": "2023-06-15",
+    "expected_statusCode": 400,
+    "scenario": "Invalid zipcode format"
+  },
+  {
+    "q": "Helsinki",
+    "dt": "2023 - 06 - 15",
+    "expected_statusCode": 400,
+    "scenario": "Date with extra spaces"
+  },
+  {
+    "q": "Brussels",
+    "dt": "23-06-15",
+    "expected_statusCode": 400,
+    "scenario": "Date with two-digit year"
+  },
+  {
+    "q": "Zurich",
+    "dt": "2023-02-29",
+    "expected_statusCode": 400,
+    "scenario": "February 29 in non-leap year"
+  },
+  {
+    "q": "40.71 -74.01",
+    "dt": "2023-06-15",
+    "expected_statusCode": 400,
+    "scenario": "Coordinates without comma separator"
+  },
+  {
+    "q": "Austin",
+    "dt": "2023-6-5",
+    "expected_statusCode": 400,
+    "scenario": "Date without leading zeros"
+  },
+  {
+    "q": "San    Francisco",
+    "dt": "2023-06-15",
+    "expected_statusCode": 400,
+    "scenario": "Location with multiple consecutive spaces"
+  },
+  {
+    "expected_statusCode": 401,
+    "scenario": "Missing API key authentication"
+  },
+  {
+    "q": "Toronto",
+    "dt": "2023-06-15",
+    "expected_statusCode": 401,
+    "scenario": "Invalid API key provided"
+  },
+  {
+    "q": "Vancouver",
+    "dt": "2023-06-15",
+    "expected_statusCode": 401,
+    "scenario": "Empty API key value"
+  },
+  {
+    "q": "Mumbai",
+    "dt": "2023-06-15",
+    "expected_statusCode": 401,
+    "scenario": "API key not provided in request"
+  },
+  {
+    "q": "Dublin",
+    "dt": "2023-06-15",
+    "expected_statusCode": 403,
+    "scenario": "API key has been disabled"
+  },
+  {
+    "q": "Stockholm",
+    "dt": "2023-06-15",
+    "expected_statusCode": 403,
+    "scenario": "API key does not have access to astronomy resource"
+  },
+  {
+    "q": "Oslo",
+    "dt": "2023-06-15",
+    "expected_statusCode": 403,
+    "scenario": "Insufficient permissions for API key"
+  },
+  {
+    "q": "Copenhagen",
+    "dt": "2023-06-15",
+    "expected_statusCode": 403,
+    "scenario": "API key lacks required access level"
+  }
+]

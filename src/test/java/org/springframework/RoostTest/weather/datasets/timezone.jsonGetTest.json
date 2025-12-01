@@ -1,0 +1,202 @@
+[
+  {
+    "q": "10001",
+    "expected_statusCode": 200,
+    "scenario": "Valid US Zipcode returns timezone information"
+  },
+  {
+    "q": "SW1A1AA",
+    "expected_statusCode": 200,
+    "scenario": "Valid UK Postcode returns timezone information"
+  },
+  {
+    "q": "M5H2N2",
+    "expected_statusCode": 200,
+    "scenario": "Valid Canada Postalcode returns timezone information"
+  },
+  {
+    "q": "8.8.8.8",
+    "expected_statusCode": 200,
+    "scenario": "Valid IP address returns timezone information"
+  },
+  {
+    "q": "40.71,-74.01",
+    "expected_statusCode": 200,
+    "scenario": "Valid Latitude and Longitude coordinates return timezone information"
+  },
+  {
+    "q": "London",
+    "expected_statusCode": 200,
+    "scenario": "Valid city name returns timezone information"
+  },
+  {
+    "q": "Paris",
+    "expected_statusCode": 200,
+    "scenario": "Valid city name Paris returns timezone information with all required fields"
+  },
+  {
+    "q": "New York",
+    "expected_statusCode": 200,
+    "scenario": "City name with spaces is properly handled"
+  },
+  {
+    "q": "LONDON",
+    "expected_statusCode": 200,
+    "scenario": "City name in uppercase is handled case-insensitively"
+  },
+  {
+    "q": "München",
+    "expected_statusCode": 200,
+    "scenario": "City name with Unicode characters is properly handled"
+  },
+  {
+    "q": "New%20York",
+    "expected_statusCode": 200,
+    "scenario": "URL-encoded city name is properly decoded and processed"
+  },
+  {
+    "q": "-33.8688,151.2093",
+    "expected_statusCode": 200,
+    "scenario": "Valid negative coordinates for southern hemisphere location"
+  },
+  {
+    "q": "0.0,0.0",
+    "expected_statusCode": 200,
+    "scenario": "Zero coordinates at equator and prime meridian"
+  },
+  {
+    "q": "90210",
+    "expected_statusCode": 200,
+    "scenario": "Valid US Zipcode for Beverly Hills returns timezone information"
+  },
+  {
+    "q": "1.1.1.1",
+    "expected_statusCode": 200,
+    "scenario": "Valid public IP address returns timezone information"
+  },
+  {
+    "q": "Tokyo",
+    "expected_statusCode": 200,
+    "scenario": "Valid Asian city name returns timezone information"
+  },
+  {
+    "q": "51.5074,-0.1278",
+    "expected_statusCode": 200,
+    "scenario": "Valid coordinates for London UK"
+  },
+  {
+    "q": "InvalidLocationXYZ123",
+    "expected_statusCode": 400,
+    "scenario": "Non-existent location returns error code 1006"
+  },
+  {
+    "q": "",
+    "expected_statusCode": 400,
+    "scenario": "Empty query parameter returns error indicating missing parameter"
+  },
+  {
+    "q": "<script>alert(1)</script>",
+    "expected_statusCode": 400,
+    "scenario": "Special characters and script tags are rejected safely"
+  },
+  {
+    "q": "' OR '1'='1",
+    "expected_statusCode": 400,
+    "scenario": "SQL injection attempt is rejected safely"
+  },
+  {
+    "q": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "expected_statusCode": 400,
+    "scenario": "Extremely long query parameter value is rejected or handled gracefully"
+  },
+  {
+    "q": "null",
+    "expected_statusCode": 400,
+    "scenario": "Null string value for query parameter returns error"
+  },
+  {
+    "q": "123",
+    "expected_statusCode": 400,
+    "scenario": "Short numeric value that is not a valid zipcode returns error code 1006"
+  },
+  {
+    "q": "   ",
+    "expected_statusCode": 400,
+    "scenario": "Whitespace-only query parameter value is rejected"
+  },
+  {
+    "q": "abc,def",
+    "expected_statusCode": 400,
+    "scenario": "Invalid latitude/longitude format returns error code 1006"
+  },
+  {
+    "q": "95.0,-74.0",
+    "expected_statusCode": 400,
+    "scenario": "Latitude value outside valid range (>90) returns error"
+  },
+  {
+    "q": "40.0,-185.0",
+    "expected_statusCode": 400,
+    "scenario": "Longitude value outside valid range (<-180) returns error"
+  },
+  {
+    "q": "999.999.999.999",
+    "expected_statusCode": 400,
+    "scenario": "Invalid IP address format returns error code 1006"
+  },
+  {
+    "q": "192.168.1.1",
+    "expected_statusCode": 400,
+    "scenario": "Private IP address cannot be geolocated and returns error code 1006"
+  },
+  {
+    "q": "127.0.0.1",
+    "expected_statusCode": 400,
+    "scenario": "Localhost IP address returns error code 1006"
+  },
+  {
+    "q": "100",
+    "expected_statusCode": 400,
+    "scenario": "Incomplete US zipcode returns error code 1006"
+  },
+  {
+    "q": "!@#$%^&*()",
+    "expected_statusCode": 400,
+    "scenario": "Special characters only in query parameter returns error"
+  },
+  {
+    "q": "200.0,50.0",
+    "expected_statusCode": 400,
+    "scenario": "Longitude value exceeding maximum range returns error"
+  },
+  {
+    "q": "-100.0,0.0",
+    "expected_statusCode": 400,
+    "scenario": "Latitude value below minimum range returns error"
+  },
+  {
+    "q": "256.256.256.256",
+    "expected_statusCode": 400,
+    "scenario": "IP address with octets exceeding 255 returns error"
+  },
+  {
+    "q": "0",
+    "expected_statusCode": 400,
+    "scenario": "Single zero as query parameter returns error code 1006"
+  },
+  {
+    "q": "....",
+    "expected_statusCode": 400,
+    "scenario": "Only dots in query parameter returns error"
+  },
+  {
+    "q": "12.34.56",
+    "expected_statusCode": 400,
+    "scenario": "Incomplete IP address format returns error code 1006"
+  },
+  {
+    "q": "City123!@#",
+    "expected_statusCode": 400,
+    "scenario": "City name with invalid special characters returns error code 1006"
+  }
+]

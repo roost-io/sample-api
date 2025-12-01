@@ -1,0 +1,306 @@
+[
+  {
+    "q": "London",
+    "dt": "2025-02-15",
+    "expected_statusCode": 200,
+    "scenario": "Valid request with city name as query parameter and future date between 14-300 days"
+  },
+  {
+    "q": "10001",
+    "dt": "2025-03-20",
+    "expected_statusCode": 200,
+    "scenario": "Valid request with US Zipcode as location parameter"
+  },
+  {
+    "q": "SW1",
+    "dt": "2025-04-10",
+    "expected_statusCode": 200,
+    "scenario": "Valid request with UK Postcode as location parameter"
+  },
+  {
+    "q": "40.71,-74.01",
+    "dt": "2025-05-25",
+    "expected_statusCode": 200,
+    "scenario": "Valid request with Latitude/Longitude coordinates"
+  },
+  {
+    "q": "8.8.8.8",
+    "dt": "2025-06-30",
+    "expected_statusCode": 200,
+    "scenario": "Valid request with IP address as location parameter"
+  },
+  {
+    "q": "Paris",
+    "dt": "2025-07-15",
+    "lang": "fr",
+    "expected_statusCode": 200,
+    "scenario": "Valid request with optional lang parameter for localized condition text in French"
+  },
+  {
+    "q": "Tokyo",
+    "expected_statusCode": 200,
+    "scenario": "Valid request without optional dt parameter expecting default future date forecast"
+  },
+  {
+    "q": "Berlin",
+    "dt": "2025-02-01",
+    "expected_statusCode": 200,
+    "scenario": "Valid request with date exactly 14 days from today (minimum boundary)"
+  },
+  {
+    "q": "Sydney",
+    "dt": "2025-11-15",
+    "expected_statusCode": 200,
+    "scenario": "Valid request with date exactly 300 days from today (maximum boundary)"
+  },
+  {
+    "q": "Toronto",
+    "dt": "2026-02-28",
+    "expected_statusCode": 200,
+    "scenario": "Verify response includes all expected location object fields"
+  },
+  {
+    "q": "Vancouver",
+    "dt": "2026-03-15",
+    "expected_statusCode": 200,
+    "scenario": "Verify response includes forecast object with forecastday array"
+  },
+  {
+    "q": "Montreal",
+    "dt": "2026-04-10",
+    "expected_statusCode": 200,
+    "scenario": "Verify response includes 3-hourly forecast in hour array"
+  },
+  {
+    "q": "Calgary",
+    "dt": "2026-05-22",
+    "expected_statusCode": 200,
+    "scenario": "Verify response includes day aggregate weather data with maxtemp, mintemp, avgtemp"
+  },
+  {
+    "q": "Edmonton",
+    "dt": "2026-06-18",
+    "expected_statusCode": 200,
+    "scenario": "Verify response includes astronomical data with sunrise, sunset, moonrise, moonset"
+  },
+  {
+    "q": "Ottawa",
+    "dt": "2026-07-25",
+    "expected_statusCode": 200,
+    "scenario": "Verify all response field data types match schema specification"
+  },
+  {
+    "q": "LONDON",
+    "dt": "2026-09-12",
+    "expected_statusCode": 200,
+    "scenario": "Test if location parameter is case-insensitive with uppercase city name"
+  },
+  {
+    "q": "M5H 2N2",
+    "dt": "2027-05-18",
+    "expected_statusCode": 200,
+    "scenario": "Valid request with Canadian postal code format"
+  },
+  {
+    "q": "Beijing",
+    "dt": "2027-06-25",
+    "expected_statusCode": 200,
+    "scenario": "Verify condition code in response is integer type"
+  },
+  {
+    "q": "New York",
+    "dt": "2025-08-20",
+    "lang": "es",
+    "expected_statusCode": 200,
+    "scenario": "Valid request with Spanish language parameter"
+  },
+  {
+    "q": "Rome",
+    "dt": "2025-09-10",
+    "lang": "it",
+    "expected_statusCode": 200,
+    "scenario": "Valid request with Italian language parameter"
+  },
+  {
+    "q": "Madrid",
+    "dt": "2025-10-15",
+    "lang": "de",
+    "expected_statusCode": 200,
+    "scenario": "Valid request with German language parameter"
+  },
+  {
+    "q": "Mumbai",
+    "dt": "2025-11-25",
+    "expected_statusCode": 200,
+    "scenario": "Valid request with Indian city name"
+  },
+  {
+    "q": "90210",
+    "dt": "2025-12-10",
+    "expected_statusCode": 200,
+    "scenario": "Valid request with Beverly Hills US Zipcode"
+  },
+  {
+    "q": "48.8566,2.3522",
+    "dt": "2026-01-20",
+    "expected_statusCode": 200,
+    "scenario": "Valid request with Paris coordinates in decimal degree format"
+  },
+  {
+    "dt": "2025-02-15",
+    "expected_statusCode": 400,
+    "scenario": "Missing required query parameter q returns error code 1003"
+  },
+  {
+    "q": "",
+    "dt": "2025-09-01",
+    "expected_statusCode": 400,
+    "scenario": "Empty string for required parameter q returns error code 1003 or 1006"
+  },
+  {
+    "q": "InvalidCityXYZ123",
+    "dt": "2025-10-12",
+    "expected_statusCode": 400,
+    "scenario": "Non-existent location returns error code 1006 - No location found matching parameter q"
+  },
+  {
+    "q": "London",
+    "dt": "2025-01-05",
+    "expected_statusCode": 400,
+    "scenario": "Date less than 14 days from today (below minimum boundary) returns error"
+  },
+  {
+    "q": "Brussels",
+    "dt": "2026-12-30",
+    "expected_statusCode": 400,
+    "scenario": "Date more than 300 days from today (above maximum boundary) returns error"
+  },
+  {
+    "q": "Copenhagen",
+    "dt": "2020-01-01",
+    "expected_statusCode": 400,
+    "scenario": "Past date instead of future date returns error"
+  },
+  {
+    "q": "Oslo",
+    "dt": "2025-01-18",
+    "expected_statusCode": 400,
+    "scenario": "Current date or today's date returns error - must be at least 14 days in future"
+  },
+  {
+    "q": "Stockholm",
+    "dt": "15-02-2025",
+    "expected_statusCode": 400,
+    "scenario": "Incorrect date format (dd-MM-yyyy instead of yyyy-MM-dd) returns error"
+  },
+  {
+    "q": "Helsinki",
+    "dt": "2025-13-45",
+    "expected_statusCode": 400,
+    "scenario": "Malformed date value with invalid month and day returns error"
+  },
+  {
+    "q": "Prague",
+    "dt": "20250615",
+    "expected_statusCode": 400,
+    "scenario": "Date parameter as numeric format instead of string with hyphens returns error"
+  },
+  {
+    "q": "<script>alert()</script>",
+    "dt": "2025-10-05",
+    "expected_statusCode": 400,
+    "scenario": "Special characters in location parameter returns error code 1006 or proper sanitization"
+  },
+  {
+    "q": "London' OR '1'='1",
+    "dt": "2025-11-15",
+    "expected_statusCode": 400,
+    "scenario": "SQL injection attempt in location parameter returns error code 1006"
+  },
+  {
+    "q": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "dt": "2025-12-01",
+    "expected_statusCode": 400,
+    "scenario": "Extremely long location string returns error code 1006 or length validation error"
+  },
+  {
+    "q": "99999999",
+    "dt": "2026-12-15",
+    "expected_statusCode": 400,
+    "scenario": "Pure numeric string that is not a valid zipcode returns error code 1006"
+  },
+  {
+    "q": "999.999.999.999",
+    "dt": "2027-01-10",
+    "expected_statusCode": 400,
+    "scenario": "Malformed IP address format returns error code 1006"
+  },
+  {
+    "q": "91.0,181.0",
+    "dt": "2027-02-20",
+    "expected_statusCode": 400,
+    "scenario": "Invalid latitude/longitude coordinates out of valid range returns error code 1006"
+  },
+  {
+    "q": "Seoul",
+    "dt": "2025-01-31",
+    "expected_statusCode": 400,
+    "scenario": "Date exactly 13 days from today (just below minimum) returns error"
+  },
+  {
+    "q": "Tokyo",
+    "dt": "2026-12-17",
+    "expected_statusCode": 400,
+    "scenario": "Date exactly 301 days from today (just above maximum) returns error"
+  },
+  {
+    "q": "Athens",
+    "dt": "2025-09-10",
+    "lang": "",
+    "expected_statusCode": 200,
+    "scenario": "Empty language parameter returns 200 with default English condition text"
+  },
+  {
+    "q": "Lisbon",
+    "dt": "2025-08-20",
+    "lang": "xyz",
+    "expected_statusCode": 200,
+    "scenario": "Invalid language code returns 200 with condition text in default language"
+  },
+  {
+    "q": "London",
+    "dt": "2025-02-15",
+    "expected_statusCode": 401,
+    "scenario": "Missing API key returns error code 1002 - API key not provided"
+  },
+  {
+    "q": "Madrid",
+    "dt": "2025-12-20",
+    "expected_statusCode": 401,
+    "scenario": "Invalid or malformed API key returns error code 2006 - API key provided is invalid"
+  },
+  {
+    "q": "Berlin",
+    "dt": "2027-03-15",
+    "expected_statusCode": 401,
+    "scenario": "Request without any authorization header returns error code 1002"
+  },
+  {
+    "q": "Munich",
+    "dt": "2027-04-22",
+    "expected_statusCode": 401,
+    "scenario": "Request with empty authorization header value returns error code 1002 or 2006"
+  },
+  {
+    "q": "Vienna",
+    "dt": "2026-02-10",
+    "expected_statusCode": 403,
+    "scenario": "Disabled API key returns error code 2008 - API key has been disabled"
+  },
+  {
+    "q": "Dublin",
+    "dt": "2026-03-25",
+    "expected_statusCode": 403,
+    "scenario": "API key without future weather access returns error code 2009 - lack of access to resource"
+  }
+]

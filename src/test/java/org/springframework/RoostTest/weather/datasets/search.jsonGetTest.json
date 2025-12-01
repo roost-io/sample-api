@@ -1,0 +1,177 @@
+[
+  {
+    "q": "London",
+    "expected_statusCode": 200,
+    "scenario": "Test search with valid city name returns matching locations"
+  },
+  {
+    "q": "10001",
+    "expected_statusCode": 200,
+    "scenario": "Test search with valid US Zipcode returns matching locations"
+  },
+  {
+    "q": "SW1A 1AA",
+    "expected_statusCode": 200,
+    "scenario": "Test search with valid UK Postcode returns matching locations"
+  },
+  {
+    "q": "8.8.8.8",
+    "expected_statusCode": 200,
+    "scenario": "Test search with valid IP address returns matching location"
+  },
+  {
+    "q": "51.52,-0.12",
+    "expected_statusCode": 200,
+    "scenario": "Test search with valid latitude and longitude returns matching location"
+  },
+  {
+    "q": "M5H 2N2",
+    "expected_statusCode": 200,
+    "scenario": "Test search with valid Canada Postal Code returns matching locations"
+  },
+  {
+    "q": "Paris",
+    "expected_statusCode": 200,
+    "scenario": "Test search with valid European city name returns matching locations"
+  },
+  {
+    "q": "New York",
+    "expected_statusCode": 200,
+    "scenario": "Test search with multi-word city name returns matching locations"
+  },
+  {
+    "q": "Tokyo",
+    "expected_statusCode": 200,
+    "scenario": "Test search with valid Asian city name returns matching locations"
+  },
+  {
+    "q": "90210",
+    "expected_statusCode": 200,
+    "scenario": "Test search with valid California US Zipcode returns matching locations"
+  },
+  {
+    "q": "Berlin",
+    "expected_statusCode": 200,
+    "scenario": "Test search with valid German city name returns matching locations"
+  },
+  {
+    "q": "Lond",
+    "expected_statusCode": 200,
+    "scenario": "Test autocomplete functionality with partial city name returns matching locations"
+  },
+  {
+    "q": "LONDON",
+    "expected_statusCode": 200,
+    "scenario": "Test case-insensitive search with uppercase city name returns matching locations"
+  },
+  {
+    "q": "  London  ",
+    "expected_statusCode": 200,
+    "scenario": "Test search with whitespace around city name returns matching locations after trimming"
+  },
+  {
+    "q": "München",
+    "expected_statusCode": 200,
+    "scenario": "Test search with Unicode characters in city name returns matching locations"
+  },
+  {
+    "q": "-33.8688,151.2093",
+    "expected_statusCode": 200,
+    "scenario": "Test search with negative latitude and longitude values returns matching location for southern hemisphere"
+  },
+  {
+    "q": "New%20York",
+    "expected_statusCode": 200,
+    "scenario": "Test search with URL encoded query parameter returns matching locations"
+  },
+  {
+    "q": "Madrid",
+    "expected_statusCode": 200,
+    "scenario": "Test search with Spanish city name returns matching locations with proper coordinate ranges"
+  },
+  {
+    "q": "Sydney",
+    "expected_statusCode": 200,
+    "scenario": "Test search with Australian city name returns matching locations with all required fields"
+  },
+  {
+    "q": "Mumbai",
+    "expected_statusCode": 200,
+    "scenario": "Test search with Indian city name returns matching locations with correct data types"
+  },
+  {
+    "q": "XYZ123InvalidCity999",
+    "expected_statusCode": 400,
+    "scenario": "Test search with non-existent location returns error 1006"
+  },
+  {
+    "q": "",
+    "expected_statusCode": 400,
+    "scenario": "Test request with empty q parameter returns error 1003 or 1006"
+  },
+  {
+    "q": "999.999,999.999",
+    "expected_statusCode": 400,
+    "scenario": "Test search with invalid latitude/longitude format returns error 1006"
+  },
+  {
+    "q": "ThisCityDefinitelyDoesNotExist12345",
+    "expected_statusCode": 400,
+    "scenario": "Test search with impossible city name returns error 1006"
+  },
+  {
+    "q": "999.999.999.999",
+    "expected_statusCode": 400,
+    "scenario": "Test search with malformed IP address returns error 1006"
+  },
+  {
+    "q": "ZZZZZ",
+    "expected_statusCode": 400,
+    "scenario": "Test search with invalid postcode format returns error 1006"
+  },
+  {
+    "q": "ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ",
+    "expected_statusCode": 400,
+    "scenario": "Test search with extremely long query string returns error"
+  },
+  {
+    "q": "@#$%^&*",
+    "expected_statusCode": 400,
+    "scenario": "Test search with special characters only returns error 1006"
+  },
+  {
+    "q": "0",
+    "expected_statusCode": 400,
+    "scenario": "Test search with zero as query parameter returns error 1006"
+  },
+  {
+    "q": "12345678901234",
+    "expected_statusCode": 400,
+    "scenario": "Test search with invalid numeric string returns error 1006"
+  },
+  {
+    "q": "NonExistentPlace9999999",
+    "expected_statusCode": 400,
+    "scenario": "Test search with clearly invalid location returns error 1006"
+  },
+  {
+    "q": "!!!InvalidLocation###",
+    "expected_statusCode": 400,
+    "scenario": "Test search with invalid special characters returns error 1006"
+  },
+  {
+    "q": " ",
+    "expected_statusCode": 400,
+    "scenario": "Test search with only whitespace returns error 1003 or 1006"
+  },
+  {
+    "q": "NoMatch12345XYZ",
+    "expected_statusCode": 400,
+    "scenario": "Test search with gibberish text returns error 1006"
+  },
+  {
+    "q": "400.500",
+    "expected_statusCode": 400,
+    "scenario": "Test search with out-of-range coordinates returns error 1006"
+  }
+]
