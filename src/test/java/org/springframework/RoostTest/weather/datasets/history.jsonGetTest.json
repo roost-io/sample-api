@@ -1,0 +1,365 @@
+[
+  {
+    "q": "London",
+    "dt": "2020-05-15",
+    "expected_statusCode": 200,
+    "scenario": "Test a valid request with city name and date in yyyy-MM-dd format"
+  },
+  {
+    "q": "10001",
+    "dt": "2021-03-10",
+    "expected_statusCode": 200,
+    "scenario": "Test a valid request with US zipcode as location parameter"
+  },
+  {
+    "q": "40.71,-74.01",
+    "dt": "2019-07-22",
+    "expected_statusCode": 200,
+    "scenario": "Test a valid request with latitude and longitude coordinates"
+  },
+  {
+    "q": "8.8.8.8",
+    "dt": "2020-12-25",
+    "expected_statusCode": 200,
+    "scenario": "Test a valid request with IP address as location parameter"
+  },
+  {
+    "q": "Paris",
+    "unixdt": 1577836800,
+    "expected_statusCode": 200,
+    "scenario": "Test a valid request using unixdt parameter instead of dt"
+  },
+  {
+    "q": "Toronto",
+    "dt": "2020-06-01",
+    "end_dt": "2020-06-10",
+    "expected_statusCode": 200,
+    "scenario": "Test a valid request with date range using dt and end_dt parameters"
+  },
+  {
+    "q": "Sydney",
+    "unixdt": 1577836800,
+    "unixend_dt": 1578441600,
+    "expected_statusCode": 200,
+    "scenario": "Test a valid request with unix date range using unixdt and unixend_dt"
+  },
+  {
+    "q": "Berlin",
+    "dt": "2020-08-15",
+    "hour": 14,
+    "expected_statusCode": 200,
+    "scenario": "Test a valid request with hour parameter to filter specific hour"
+  },
+  {
+    "q": "Madrid",
+    "dt": "2020-04-20",
+    "lang": "es",
+    "expected_statusCode": 200,
+    "scenario": "Test a valid request with language parameter for localized condition text"
+  },
+  {
+    "q": "Chicago",
+    "dt": "2015-01-01",
+    "expected_statusCode": 200,
+    "scenario": "Test a valid request with date on 1st Jan 2015 which is the earliest allowed date"
+  },
+  {
+    "q": "New York",
+    "dt": "2020-07-22",
+    "lang": "en",
+    "expected_statusCode": 200,
+    "scenario": "Test a valid request with all optional parameters included"
+  },
+  {
+    "q": "Tokyo",
+    "dt": "2019-12-31",
+    "hour": 0,
+    "expected_statusCode": 200,
+    "scenario": "Test a valid request with hour parameter set to 0 for midnight"
+  },
+  {
+    "q": "Amsterdam",
+    "dt": "2020-12-01",
+    "hour": 23,
+    "expected_statusCode": 200,
+    "scenario": "Test a valid request with hour parameter set to 23 for last hour of day"
+  },
+  {
+    "q": "SW1A 1AA",
+    "dt": "2020-04-15",
+    "expected_statusCode": 200,
+    "scenario": "Test a valid request with UK postcode format"
+  },
+  {
+    "q": "M5H 2N2",
+    "dt": "2020-05-20",
+    "expected_statusCode": 200,
+    "scenario": "Test a valid request with Canada postal code format"
+  },
+  {
+    "q": "Melbourne",
+    "dt": "2020-06-01",
+    "end_dt": "2020-07-01",
+    "expected_statusCode": 200,
+    "scenario": "Test a valid request with exactly 30 days between dt and end_dt"
+  },
+  {
+    "q": "Bangkok",
+    "dt": "2020-08-15",
+    "end_dt": "2020-08-15",
+    "expected_statusCode": 200,
+    "scenario": "Test a valid request where dt and end_dt are the same date"
+  },
+  {
+    "q": "Beijing",
+    "dt": "2020-10-01",
+    "lang": "zh",
+    "expected_statusCode": 200,
+    "scenario": "Test a valid request with Chinese language code"
+  },
+  {
+    "q": "Stockholm",
+    "dt": "2020-02-29",
+    "expected_statusCode": 200,
+    "scenario": "Test a valid request with date on Feb 29 in a leap year"
+  },
+  {
+    "q": "Brussels",
+    "dt": "2020-09-15",
+    "lang": "",
+    "expected_statusCode": 200,
+    "scenario": "Test a valid request with empty language parameter defaults to English"
+  },
+  {
+    "q": "LONDON",
+    "dt": "2020-05-15",
+    "expected_statusCode": 200,
+    "scenario": "Test if location parameter is case insensitive"
+  },
+  {
+    "q": "Singapore",
+    "dt": "2020-07-15",
+    "hour": 12,
+    "lang": "en",
+    "expected_statusCode": 200,
+    "scenario": "Test a valid request with mid-day hour filter and language parameter"
+  },
+  {
+    "q": "Moscow",
+    "dt": "2020-01-05",
+    "expected_statusCode": 200,
+    "scenario": "Test a valid request with date parameter containing proper leading zeros"
+  },
+  {
+    "q": "Cairo",
+    "dt": "2020-03-21",
+    "expected_statusCode": 200,
+    "scenario": "Test that astro object contains all astronomical data fields"
+  },
+  {
+    "q": "Zurich",
+    "dt": "2020-06-20",
+    "expected_statusCode": 200,
+    "scenario": "Test that response field data types match the defined schema"
+  },
+  {
+    "dt": "2020-05-15",
+    "expected_statusCode": 400,
+    "scenario": "Test request missing required query parameter q"
+  },
+  {
+    "q": "London",
+    "expected_statusCode": 400,
+    "scenario": "Test request missing required date parameter dt"
+  },
+  {
+    "q": "",
+    "dt": "2020-05-15",
+    "expected_statusCode": 400,
+    "scenario": "Test request with empty string for required parameter q"
+  },
+  {
+    "q": "InvalidCityXYZ123",
+    "dt": "2020-05-15",
+    "expected_statusCode": 400,
+    "scenario": "Test request with non-existent location"
+  },
+  {
+    "q": "London",
+    "dt": "15-05-2020",
+    "expected_statusCode": 400,
+    "scenario": "Test request with incorrectly formatted date parameter"
+  },
+  {
+    "q": "Paris",
+    "dt": "2014-12-31",
+    "expected_statusCode": 400,
+    "scenario": "Test request with date before 1st Jan 2015"
+  },
+  {
+    "q": "London",
+    "dt": "2030-12-31",
+    "expected_statusCode": 400,
+    "scenario": "Test request with future date for historical API"
+  },
+  {
+    "q": "Tokyo",
+    "dt": "2020-06-15",
+    "unixdt": 1592179200,
+    "expected_statusCode": 400,
+    "scenario": "Test request with both dt and unixdt parameters which is not allowed"
+  },
+  {
+    "q": "Berlin",
+    "dt": "2020-06-01",
+    "end_dt": "2020-06-10",
+    "unixend_dt": 1591747200,
+    "expected_statusCode": 400,
+    "scenario": "Test request with both end_dt and unixend_dt parameters which is not allowed"
+  },
+  {
+    "q": "Rome",
+    "dt": "2020-06-15",
+    "end_dt": "2020-06-10",
+    "expected_statusCode": 400,
+    "scenario": "Test request where end_dt is before dt parameter"
+  },
+  {
+    "q": "Mumbai",
+    "dt": "2020-06-01",
+    "end_dt": "2020-08-15",
+    "expected_statusCode": 400,
+    "scenario": "Test request where difference between dt and end_dt exceeds 30 days"
+  },
+  {
+    "q": "Seattle",
+    "dt": "2020-07-20",
+    "hour": -5,
+    "expected_statusCode": 400,
+    "scenario": "Test request with negative hour value"
+  },
+  {
+    "q": "Boston",
+    "dt": "2020-07-20",
+    "hour": 25,
+    "expected_statusCode": 400,
+    "scenario": "Test request with hour value greater than 23"
+  },
+  {
+    "q": "Denver",
+    "dt": "2020-07-20",
+    "hour": "abc",
+    "expected_statusCode": 400,
+    "scenario": "Test request with string value for integer hour parameter"
+  },
+  {
+    "q": "Atlanta",
+    "unixdt": "notanumber",
+    "expected_statusCode": 400,
+    "scenario": "Test request with string value for integer unixdt parameter"
+  },
+  {
+    "q": "null",
+    "dt": "2020-05-15",
+    "expected_statusCode": 400,
+    "scenario": "Test request with null value for q parameter"
+  },
+  {
+    "q": "@#$%^&*",
+    "dt": "2020-05-15",
+    "expected_statusCode": 400,
+    "scenario": "Test request with special characters in location parameter"
+  },
+  {
+    "q": "verylongstringverylongstringverylongstringverylongstringverylongstringverylongstringverylongstringverylongstringverylongstringverylongstringverylongstringverylongstringverylongstringverylongstringverylongstringverylongstringverylongstringverylongstringverylongstringverylongstringverylongstringverylongstringverylongstringverylongstringverylongstringverylongstringverylongstringverylongstringverylongstringverylongstringverylongstringverylongstringverylongstringverylongstringverylongstringverylongstringverylongstringverylongstringverylongstringverylongstringverylongstringverylongstringverylongstringverylongstringverylongstringverylongstringverylongstringverylongstringverylongstringverylongstringverylongstringverylongstringverylongstringverylongstringverylongstringverylongstringverylongstringverylongstringverylongstringverylongstringverylongstringverylongstringverylongstringverylongstringverylongstringverylongstringverylongstringverylongstringverylongstringverylongstringverylongstringverylongstringverylongstringverylongstringverylongstringverylongstringverylongstring",
+    "dt": "2020-05-15",
+    "expected_statusCode": 400,
+    "scenario": "Test request with extremely long string for location parameter"
+  },
+  {
+    "q": "London' OR '1'='1",
+    "dt": "2020-05-15",
+    "expected_statusCode": 400,
+    "scenario": "Test request with SQL injection attempt in location parameter"
+  },
+  {
+    "q": "<script>alert('XSS')</script>",
+    "dt": "2020-05-15",
+    "expected_statusCode": 400,
+    "scenario": "Test request with XSS script in location parameter"
+  },
+  {
+    "q": "95.5,-74.01",
+    "dt": "2020-05-15",
+    "expected_statusCode": 400,
+    "scenario": "Test request with invalid latitude value exceeding range"
+  },
+  {
+    "q": "40.71,-200.5",
+    "dt": "2020-05-15",
+    "expected_statusCode": 400,
+    "scenario": "Test request with invalid longitude value exceeding range"
+  },
+  {
+    "q": "999.999.999.999",
+    "dt": "2020-05-15",
+    "expected_statusCode": 400,
+    "scenario": "Test request with malformed IP address"
+  },
+  {
+    "q": "Dublin",
+    "dt": "2020-1-5",
+    "expected_statusCode": 400,
+    "scenario": "Test request with date parameter missing leading zeros"
+  },
+  {
+    "q": "Vienna",
+    "dt": "2020-06-10",
+    "hour": 14.5,
+    "expected_statusCode": 400,
+    "scenario": "Test request with decimal/float value for integer hour parameter"
+  },
+  {
+    "q": "Athens",
+    "dt": "2019-02-29",
+    "expected_statusCode": 400,
+    "scenario": "Test request with Feb 29 in a non-leap year"
+  },
+  {
+    "q": "Helsinki",
+    "dt": "2020-13-15",
+    "expected_statusCode": 400,
+    "scenario": "Test request with invalid month value of 13"
+  },
+  {
+    "q": "Lisbon",
+    "dt": "2020-01-32",
+    "expected_statusCode": 400,
+    "scenario": "Test request with invalid day value of 32"
+  },
+  {
+    "q": "Seoul",
+    "unixdt": 1419984000,
+    "expected_statusCode": 400,
+    "scenario": "Test request with unix timestamp before 1st Jan 2015"
+  },
+  {
+    "q": "Oslo",
+    "unixdt": -1000000,
+    "expected_statusCode": 400,
+    "scenario": "Test request with negative unix timestamp value"
+  },
+  {
+    "q": "Warsaw",
+    "unixdt": 0,
+    "expected_statusCode": 400,
+    "scenario": "Test request with zero as unix timestamp value"
+  },
+  {
+    "q": "Barcelona",
+    "dt": "2020-05-15",
+    "lang": "xyz",
+    "expected_statusCode": 400,
+    "scenario": "Test request with invalid language code"
+  }
+]

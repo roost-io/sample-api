@@ -1,0 +1,330 @@
+[
+  {
+    "q": "London",
+    "days": 5,
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request with city name and 5 days parameter"
+  },
+  {
+    "q": "10001",
+    "days": 3,
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request using US Zipcode"
+  },
+  {
+    "q": "40.71,-74.01",
+    "days": 7,
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request using latitude and longitude coordinates"
+  },
+  {
+    "q": "8.8.8.8",
+    "days": 1,
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request using IP address"
+  },
+  {
+    "q": "Paris",
+    "days": 14,
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request with maximum allowed days value of 14"
+  },
+  {
+    "q": "Tokyo",
+    "days": 1,
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request with minimum allowed days value of 1"
+  },
+  {
+    "q": "Berlin",
+    "days": 3,
+    "dt": "2024-12-25",
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request with specific date parameter in yyyy-MM-dd format"
+  },
+  {
+    "q": "Sydney",
+    "days": 5,
+    "unixdt": 1735084800,
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request with unix timestamp parameter"
+  },
+  {
+    "q": "Mumbai",
+    "days": 1,
+    "hour": 17,
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request with specific hour filter set to 17 (5 PM)"
+  },
+  {
+    "q": "Madrid",
+    "days": 3,
+    "lang": "es",
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request with language parameter for Spanish localized text"
+  },
+  {
+    "q": "Miami",
+    "days": 5,
+    "alerts": "yes",
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request with alerts parameter enabled"
+  },
+  {
+    "q": "Toronto",
+    "days": 2,
+    "alerts": "no",
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request with alerts parameter disabled"
+  },
+  {
+    "q": "Beijing",
+    "days": 3,
+    "aqi": "yes",
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request with air quality index enabled"
+  },
+  {
+    "q": "London",
+    "days": 1,
+    "aqi": "no",
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request with air quality index disabled"
+  },
+  {
+    "q": "Singapore",
+    "days": 1,
+    "tp": 15,
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request with 15-minute time interval parameter for enterprise clients"
+  },
+  {
+    "q": "Vancouver",
+    "days": 7,
+    "dt": "2024-12-20",
+    "hour": 12,
+    "lang": "fr",
+    "alerts": "yes",
+    "aqi": "yes",
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request with all optional parameters provided simultaneously"
+  },
+  {
+    "q": "New York",
+    "days": 2,
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request for New York with 2 days forecast"
+  },
+  {
+    "q": "M5H2N2",
+    "days": 4,
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request with Canadian postal code"
+  },
+  {
+    "q": "SW1A1AA",
+    "days": 3,
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request with UK postcode"
+  },
+  {
+    "q": "Rome",
+    "days": 1,
+    "hour": 23,
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request with hour parameter at maximum boundary value 23"
+  },
+  {
+    "q": "Tokyo",
+    "days": 1,
+    "hour": 0,
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request with hour parameter at minimum boundary value 0"
+  },
+  {
+    "q": "Los Angeles",
+    "days": 10,
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request with 10 days parameter"
+  },
+  {
+    "q": "Chicago",
+    "days": 6,
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request for Chicago with 6 days forecast"
+  },
+  {
+    "q": "Seattle",
+    "days": 8,
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request with 8 days parameter"
+  },
+  {
+    "q": "Boston",
+    "days": 12,
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request with 12 days parameter"
+  },
+  {
+    "q": "LONDON",
+    "days": 2,
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request with uppercase city name to test case insensitivity"
+  },
+  {
+    "q": "Winston-Salem",
+    "days": 2,
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request with hyphenated city name"
+  },
+  {
+    "q": "New York",
+    "days": 4,
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request with city name containing space"
+  },
+  {
+    "q": "北京",
+    "days": 3,
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request with unicode characters in location name (Beijing)"
+  },
+  {
+    "q": "Dallas",
+    "days": 9,
+    "expected_statusCode": 200,
+    "scenario": "Valid forecast request with 9 days parameter"
+  },
+  {
+    "days": 3,
+    "expected_statusCode": 400,
+    "scenario": "Missing required parameter q - should return error code 1003"
+  },
+  {
+    "q": "Chicago",
+    "expected_statusCode": 400,
+    "scenario": "Missing required parameter days - should return error"
+  },
+  {
+    "q": "InvalidCityXYZ123",
+    "days": 3,
+    "expected_statusCode": 400,
+    "scenario": "Invalid location parameter with non-existent city - error code 1006"
+  },
+  {
+    "q": "",
+    "days": 5,
+    "expected_statusCode": 400,
+    "scenario": "Empty location parameter value - error code 1003 or 1006"
+  },
+  {
+    "q": "Atlanta",
+    "days": 0,
+    "expected_statusCode": 400,
+    "scenario": "Days parameter below minimum value of 1"
+  },
+  {
+    "q": "Denver",
+    "days": 20,
+    "expected_statusCode": 400,
+    "scenario": "Days parameter above maximum value of 14"
+  },
+  {
+    "q": "Portland",
+    "days": -5,
+    "expected_statusCode": 400,
+    "scenario": "Days parameter with negative value"
+  },
+  {
+    "q": "Charlotte",
+    "days": 3,
+    "dt": "12-25-2024",
+    "expected_statusCode": 400,
+    "scenario": "Date parameter in incorrect format (MM-DD-YYYY instead of YYYY-MM-DD)"
+  },
+  {
+    "q": "Indianapolis",
+    "days": 2,
+    "dt": "2020-01-01",
+    "expected_statusCode": 400,
+    "scenario": "Date parameter set to a past date - should be between today and next 14 days"
+  },
+  {
+    "q": "Milwaukee",
+    "days": 1,
+    "dt": "2024-02-30",
+    "expected_statusCode": 400,
+    "scenario": "Date parameter with invalid date value (February 30th)"
+  },
+  {
+    "q": "Cleveland",
+    "days": 1,
+    "hour": 25,
+    "expected_statusCode": 400,
+    "scenario": "Hour parameter outside valid 0-23 range"
+  },
+  {
+    "q": "Tampa",
+    "days": 2,
+    "hour": -5,
+    "expected_statusCode": 400,
+    "scenario": "Hour parameter with negative value"
+  },
+  {
+    "q": "     ",
+    "days": 4,
+    "expected_statusCode": 400,
+    "scenario": "Location parameter with only whitespace - error code 1003 or 1006"
+  },
+  {
+    "q": "100.5,200.3",
+    "days": 2,
+    "expected_statusCode": 400,
+    "scenario": "Coordinates out of valid range (lat: -90 to 90, lon: -180 to 180)"
+  },
+  {
+    "q": "Memphis",
+    "days": 15,
+    "expected_statusCode": 400,
+    "scenario": "Days value not in allowed enum range (1-14)"
+  },
+  {
+    "q": "Kansas City",
+    "days": 4,
+    "dt": "2024-12-25",
+    "unixdt": 1735084800,
+    "expected_statusCode": 400,
+    "scenario": "Both dt and unixdt parameters provided simultaneously - should only provide one"
+  },
+  {
+    "q": "Phoenix",
+    "days": 2,
+    "expected_statusCode": 401,
+    "scenario": "Missing API key authentication - error code 1002"
+  },
+  {
+    "q": "Seattle",
+    "days": 3,
+    "expected_statusCode": 401,
+    "scenario": "Invalid API key provided - error code 2006"
+  },
+  {
+    "q": "Dallas",
+    "days": 4,
+    "expected_statusCode": 403,
+    "scenario": "Disabled API key used for request - error code 2008"
+  },
+  {
+    "q": "Houston",
+    "days": 6,
+    "expected_statusCode": 403,
+    "scenario": "API key does not have access to forecast resource - error code 2009"
+  },
+  {
+    "q": "San Diego",
+    "days": 1,
+    "tp": 15,
+    "expected_statusCode": 403,
+    "scenario": "Non-enterprise API key attempting to use tp parameter - error code 2009"
+  }
+]
