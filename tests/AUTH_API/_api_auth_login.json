@@ -1,0 +1,95 @@
+{
+  "api": "/api/auth/login",
+  "info": {
+    "title": "Auth API",
+    "version": "1.0.0"
+  },
+  "methods": [
+    {
+      "method": "POST",
+      "summary": "User login",
+      "description": "",
+      "parameters": [
+        {
+          "name": "email",
+          "in": "body",
+          "required": true,
+          "type": "string",
+          "schema": {
+            "type": "string",
+            "format": "email",
+            "example": "user@example.com"
+          },
+          "contentType": "application/json"
+        },
+        {
+          "name": "password",
+          "in": "body",
+          "required": true,
+          "type": "string",
+          "schema": {
+            "type": "string",
+            "format": "password",
+            "example": "P@ssw0rd"
+          },
+          "contentType": "application/json"
+        }
+      ],
+      "responses": [
+        {
+          "code": "200",
+          "description": "Successful login",
+          "responseContent": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "token": {
+                    "type": "string",
+                    "example": "jwt-token-123"
+                  },
+                  "refreshToken": {
+                    "type": "string",
+                    "example": "refresh-token-123"
+                  },
+                  "user": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "example": "12345"
+                      },
+                      "email": {
+                        "type": "string",
+                        "format": "email",
+                        "example": "user@example.com"
+                      },
+                      "firstname": {
+                        "type": "string",
+                        "example": "John"
+                      },
+                      "role": {
+                        "type": "string",
+                        "example": "ADMIN"
+                      },
+                      "accountId": {
+                        "type": "string",
+                        "example": "acct-8749"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "code": "400",
+          "description": "Invalid credentials",
+          "responseContent": {}
+        }
+      ]
+    }
+  ],
+  "generatedAt": "2025-12-01T09:23:42.969Z"
+}

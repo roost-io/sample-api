@@ -1,0 +1,60 @@
+[
+  {
+    "email": "user@example.com",
+    "password": "CorrectHorseBatteryStaple1!",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "email": "admin@example.com",
+    "password": "Adm1n#Secure!",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "password": "NoEmailButPassword1!",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "email": "missing.password@example.com",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "email": "not-an-email",
+    "password": "SomePass123!",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "email": "shortpass@example.com",
+    "password": "123",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "email": "nosuchuser9999@example.com",
+    "password": "ValidPass#2025",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "email": "user@invalid-domain",
+    "password": "AnotherValid1!",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "email": "' OR '1'='1",
+    "password": "H@ckerTry123",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "email": "ユーザー@example.com",
+    "password": "UnicodePass#456",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  }
+]
