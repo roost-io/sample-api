@@ -1,0 +1,47 @@
+[
+  {
+    "tags": [
+      {
+        "id": 1,
+        "name": "tag1"
+      }
+    ],
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "tags": [
+      {
+        "id": 2,
+        "name": "tag2"
+      }
+    ],
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "tags": [],
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "tags": [
+      {
+        "id": "invalid_id",
+        "name": "tag3"
+      }
+    ],
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "tags": [
+      {
+        "id": 3,
+        "name": "tag4"
+      }
+    ],
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "orderId": 10,
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "orderId": 10,
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "orderId": 198772,
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "orderId": -1,
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "orderId": 999999,
+    "statusCode": 404,
+    "scenario": "Client error responses: Not Found"
+  },
+  {
+    "orderId": "invalid",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  }
+]

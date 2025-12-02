@@ -1,0 +1,61 @@
+[
+  {
+    "id": 10,
+    "username": "theUser",
+    "firstName": "John",
+    "lastName": "James",
+    "email": "john@email.com",
+    "password": "12345",
+    "phone": "12345",
+    "userStatus": 1,
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "id": 11,
+    "username": "anotherUser",
+    "firstName": "Jane",
+    "lastName": "Doe",
+    "email": "jane.doe@email.com",
+    "password": "password123",
+    "phone": "67890",
+    "userStatus": 2,
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "username": "missingIdUser",
+    "firstName": "Alice",
+    "lastName": "Smith",
+    "email": "alice.smith@email.com",
+    "password": "alicepass",
+    "phone": "54321",
+    "userStatus": 1,
+    "statusCode": 400,
+    "scenario": "Bad Request"
+  },
+  {
+    "id": "invalidId",
+    "username": "invalidUser",
+    "firstName": "Bob",
+    "lastName": "Brown",
+    "email": "bob.brown@email.com",
+    "password": "bobpass",
+    "phone": "98765",
+    "userStatus": 1,
+    "statusCode": 400,
+    "scenario": "Bad Request"
+  },
+  {
+    "id": 12,
+    "username": "nonExistentUser",
+    "firstName": "Charlie",
+    "lastName": "Black",
+    "email": "charlie.black@email.com",
+    "password": "charliepass",
+    "phone": "11223",
+    "userStatus": 3,
+    "statusCode": 404,
+    "scenario": "Resource Not Found"
+  }
+]
