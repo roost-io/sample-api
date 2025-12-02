@@ -1,0 +1,31 @@
+[
+  {
+    "field1": "value1",
+    "field2": 123,
+    "statusCode": 200,
+    "scenario": "Success"
+  },
+  {
+    "field1": "value1_test2",
+    "field2": 456,
+    "statusCode": 200,
+    "scenario": "Success"
+  },
+  {
+    "field1": "value1_test3",
+    "statusCode": 400,
+    "scenario": "Bad Request"
+  },
+  {
+    "field1": "value1_test4",
+    "field2": "invalid_number",
+    "statusCode": 400,
+    "scenario": "Bad Request"
+  },
+  {
+    "field1": "nonexistent_value",
+    "field2": 789,
+    "statusCode": 404,
+    "scenario": "Resource Not Found"
+  }
+]

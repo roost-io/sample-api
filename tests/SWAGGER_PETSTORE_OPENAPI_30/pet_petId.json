@@ -1,0 +1,37 @@
+[
+  {
+    "petId": 10,
+    "name": "doggie",
+    "status": "available",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "petId": 20,
+    "name": "cat",
+    "status": "pending",
+    "api_key": "12345",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "name": "hamster",
+    "status": "sold",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "petId": 30,
+    "name": "parrot",
+    "status": "flying",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "petId": 999,
+    "name": "unicorn",
+    "status": "available",
+    "statusCode": 404,
+    "scenario": "Client error responses: Not Found"
+  }
+]

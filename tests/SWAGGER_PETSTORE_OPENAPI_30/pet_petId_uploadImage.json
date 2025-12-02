@@ -1,0 +1,28 @@
+[
+  {
+    "petId": 123,
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "petId": 456,
+    "additionalMetadata": "Healthy pet",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "additionalMetadata": "Missing petId",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "petId": "invalid_id",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "petId": 999999,
+    "statusCode": 404,
+    "scenario": "Client error responses: Not Found"
+  }
+]
