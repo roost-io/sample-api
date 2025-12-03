@@ -1,0 +1,22 @@
+[
+  {
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "statusCode": "invalid_code",
+    "scenario": "Unknown response class"
+  },
+  {
+    "statusCode": 404,
+    "scenario": "Unknown response class"
+  },
+  {
+    "statusCode": 500,
+    "scenario": "Unknown response class"
+  },
+  {
+    "statusCode": 400,
+    "scenario": "Unknown response class"
+  }
+]

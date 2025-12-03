@@ -1,0 +1,28 @@
+[
+  {
+    "petId": 12345,
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "petId": 67890,
+    "additionalMetadata": "This is a test image",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "additionalMetadata": "Missing petId",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "petId": "invalidId",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "petId": 99999,
+    "statusCode": 404,
+    "scenario": "Client error responses: Not Found"
+  }
+]

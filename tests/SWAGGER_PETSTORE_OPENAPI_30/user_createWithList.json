@@ -1,0 +1,46 @@
+[
+  {
+    "id": 10,
+    "username": "theUser",
+    "email": "john@email.com",
+    "userStatus": 1,
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "id": 11,
+    "username": "anotherUser",
+    "firstName": "Jane",
+    "lastName": "Doe",
+    "email": "jane.doe@email.com",
+    "password": "password123",
+    "phone": "9876543210",
+    "userStatus": 2,
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "username": "missingFieldsUser",
+    "email": "missingfields@email.com",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "id": "invalidId",
+    "username": "invalidDataUser",
+    "firstName": "Invalid",
+    "email": "invalidemail.com",
+    "userStatus": "active",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "id": 12,
+    "username": "",
+    "firstName": "EmptyUsername",
+    "email": "empty@username.com",
+    "userStatus": 1,
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  }
+]
