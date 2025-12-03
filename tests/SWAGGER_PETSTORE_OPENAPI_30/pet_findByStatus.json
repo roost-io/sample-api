@@ -1,0 +1,36 @@
+[
+  {
+    "status": "available",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "status": "available",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "status": "invalid_status",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "status": 12345,
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "status": "pending",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "status": "sold",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  }
+]
