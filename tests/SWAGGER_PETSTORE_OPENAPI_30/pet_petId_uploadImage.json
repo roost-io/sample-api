@@ -1,0 +1,39 @@
+[
+  {
+    "petId": 123,
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "petId": 456,
+    "additionalMetadata": "Sample metadata",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "additionalMetadata": "Missing petId",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "petId": "invalid_id",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "petId": 999999,
+    "statusCode": 404,
+    "scenario": "Client error responses: Not Found"
+  },
+  {
+    "petId": -1,
+    "additionalMetadata": "Negative petId",
+    "statusCode": 404,
+    "scenario": "Client error responses: Not Found"
+  },
+  {
+    "petId": 0,
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  }
+]

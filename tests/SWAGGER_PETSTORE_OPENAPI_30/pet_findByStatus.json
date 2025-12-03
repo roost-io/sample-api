@@ -1,0 +1,32 @@
+[
+  {
+    "status": "available",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "status": "pending",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "status": "sold",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "status": "invalidStatus",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "status": "",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "status": "unknown",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  }
+]

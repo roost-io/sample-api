@@ -1,0 +1,51 @@
+[
+  {
+    "tags": [
+      {
+        "id": 1,
+        "name": "Dogs"
+      }
+    ],
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "tags": [
+      {
+        "id": 2,
+        "name": "Cats"
+      },
+      {
+        "id": 3,
+        "name": "Birds"
+      }
+    ],
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "tags": [],
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "tags": [
+      {
+        "id": "invalid",
+        "name": "InvalidTag"
+      }
+    ],
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "tags": [
+      {
+        "id": 9999,
+        "name": "NonExistentTag"
+      }
+    ],
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  }
+]
