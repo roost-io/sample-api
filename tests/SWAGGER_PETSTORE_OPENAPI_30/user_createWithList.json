@@ -1,0 +1,61 @@
+[
+  {
+    "id": 10,
+    "username": "theUser",
+    "firstName": "John",
+    "lastName": "James",
+    "email": "john@email.com",
+    "password": "12345",
+    "phone": "12345",
+    "userStatus": 1,
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "id": 11,
+    "username": "anotherUser",
+    "firstName": "Jane",
+    "lastName": "Doe",
+    "email": "jane.doe@email.com",
+    "password": "password123",
+    "phone": "54321",
+    "userStatus": 2,
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "id": 12,
+    "username": "missingEmail",
+    "firstName": "Missing",
+    "lastName": "Email",
+    "password": "testpass",
+    "phone": "67890",
+    "userStatus": 3,
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "id": 13,
+    "username": "invalidUserStatus",
+    "firstName": "Invalid",
+    "lastName": "Status",
+    "email": "invalid@mail.com",
+    "password": "testpass",
+    "phone": "123123",
+    "userStatus": "invalid",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "id": 999,
+    "username": "nonExistent",
+    "firstName": "Non",
+    "lastName": "Existent",
+    "email": "nonexistent@mail.com",
+    "password": "nopass",
+    "phone": "00000",
+    "userStatus": 0,
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  }
+]

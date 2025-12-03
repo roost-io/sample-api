@@ -1,0 +1,34 @@
+[
+  {
+    "petId": 12345,
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "petId": 67890,
+    "additionalMetadata": "Healthy pet",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "additionalMetadata": "Missing petId",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "petId": "invalid_id",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "petId": 99999,
+    "additionalMetadata": "Not a real pet",
+    "statusCode": 404,
+    "scenario": "Client error responses: Not Found"
+  },
+  {
+    "petId": -1,
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  }
+]

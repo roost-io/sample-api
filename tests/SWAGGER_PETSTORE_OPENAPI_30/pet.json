@@ -1,0 +1,68 @@
+[
+  {
+    "id": 10,
+    "name": "doggie",
+    "photoUrls": [
+      "http://example.com/photo1"
+    ],
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "id": 20,
+    "name": "kitty",
+    "category": {
+      "id": 2,
+      "name": "Cats"
+    },
+    "photoUrls": [
+      "http://example.com/photo2"
+    ],
+    "tags": [
+      {
+        "id": 1,
+        "name": "tag1"
+      }
+    ],
+    "status": "available",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "name": "puppy",
+    "category": {
+      "id": 3,
+      "name": "Puppies"
+    },
+    "status": "sold",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "id": 30,
+    "name": "birdie",
+    "photoUrls": [],
+    "status": "flying",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "id": 40,
+    "name": "fishy",
+    "photoUrls": [
+      "http://example.com/photo3"
+    ],
+    "status": "swimming",
+    "statusCode": 422,
+    "scenario": "Client error responses: Unprocessable Entity"
+  },
+  {
+    "id": 50,
+    "name": "reptile",
+    "photoUrls": [
+      "http://example.com/photo4"
+    ],
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  }
+]
