@@ -1,0 +1,51 @@
+[
+  {
+    "id": 10,
+    "petId": 198772,
+    "quantity": 7,
+    "shipDate": "2023-10-01T12:00:00Z",
+    "status": "approved",
+    "complete": true,
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "id": 15,
+    "petId": 198780,
+    "quantity": 5,
+    "shipDate": "2023-10-02T15:00:00Z",
+    "status": "placed",
+    "complete": false,
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "petId": 198772,
+    "quantity": 7,
+    "shipDate": "2023-10-01T12:00:00Z",
+    "status": "approved",
+    "complete": true,
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "id": 20,
+    "petId": 198772,
+    "quantity": 7,
+    "shipDate": "2023-10-01T12:00:00Z",
+    "status": "invalid_status",
+    "complete": true,
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "id": 25,
+    "petId": 999999,
+    "quantity": 7,
+    "shipDate": "2023-10-01T12:00:00Z",
+    "status": "approved",
+    "complete": true,
+    "statusCode": 422,
+    "scenario": "Client error responses: Unprocessable Entity"
+  }
+]
