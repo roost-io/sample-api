@@ -1,0 +1,34 @@
+[
+  {
+    "field1": "value1",
+    "statusCode": 200,
+    "scenario": "Success"
+  },
+  {
+    "field1": "value1_test2",
+    "statusCode": 400,
+    "scenario": "Bad Request"
+  },
+  {
+    "field2": 123,
+    "statusCode": 200,
+    "scenario": "Success"
+  },
+  {
+    "field2": "invalid_string",
+    "statusCode": 400,
+    "scenario": "Bad Request"
+  },
+  {
+    "field1": "value1_test3",
+    "field2": 456,
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "field1": 789,
+    "field2": 101112,
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  }
+]
