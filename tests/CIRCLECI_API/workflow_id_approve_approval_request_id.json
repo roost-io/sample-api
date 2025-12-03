@@ -1,0 +1,32 @@
+[
+  {
+    "approval_request_id": "12345",
+    "id": "workflow_001",
+    "statusCode": 202,
+    "scenario": "Successful responses: Accepted"
+  },
+  {
+    "approval_request_id": "67890",
+    "id": "workflow_002",
+    "statusCode": 202,
+    "scenario": "Successful responses: Accepted"
+  },
+  {
+    "approval_request_id": "",
+    "id": "workflow_003",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "approval_request_id": "invalid_id",
+    "id": "workflow_004",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "approval_request_id": "12345",
+    "id": "",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  }
+]

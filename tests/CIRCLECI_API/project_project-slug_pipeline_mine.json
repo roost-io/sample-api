@@ -1,0 +1,30 @@
+[
+  {
+    "project-slug": "gh/CircleCI-Public/api-preview-docs",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "gh/CircleCI-Public/api-preview-docs",
+    "page-token": "abc123",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "page-token": "abc123",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "invalid/slug",
+    "page-token": "abc123",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/CircleCI-Public/api-preview-docs",
+    "page-token": 12345,
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  }
+]

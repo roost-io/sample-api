@@ -1,0 +1,35 @@
+[
+  {
+    "project-slug": "my-project",
+    "name": "foo",
+    "value": "xxxx1234",
+    "statusCode": 201,
+    "scenario": "Successful responses: Created"
+  },
+  {
+    "project-slug": "my-project",
+    "name": "foo",
+    "value": "xxxx1234",
+    "statusCode": 201,
+    "scenario": "Successful responses: Created"
+  },
+  {
+    "project-slug": "my-project",
+    "name": "foo",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "my-project",
+    "value": "xxxx1234",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "invalid-project",
+    "name": "foo",
+    "value": "xxxx1234",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  }
+]

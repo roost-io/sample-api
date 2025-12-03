@@ -1,0 +1,40 @@
+[
+  {
+    "avatar_url": "https://example.com/avatar1.png",
+    "id": "123e4567-e89b-12d3-a456-426614174000",
+    "login": "user_login1",
+    "name": "User One",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "avatar_url": "https://example.com/avatar2.png",
+    "id": "123e4567-e89b-12d3-a456-426614174001",
+    "login": "user_login2",
+    "name": "User Two",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "avatar_url": "https://example.com/avatar3.png",
+    "id": "123e4567-e89b-12d3-a456-426614174002",
+    "login": "user_login3",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "avatar_url": "https://example.com/avatar4.png",
+    "id": "invalid-uuid",
+    "login": "user_login4",
+    "name": "User Four",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "avatar_url": "https://example.com/avatar5.png",
+    "id": "123e4567-e89b-12d3-a456-426614174004",
+    "name": "User Five",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  }
+]

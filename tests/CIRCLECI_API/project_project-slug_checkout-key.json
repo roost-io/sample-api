@@ -1,0 +1,31 @@
+[
+  {
+    "project-slug": "example-project",
+    "type": "deploy-key",
+    "statusCode": 201,
+    "scenario": "Successful responses: Created"
+  },
+  {
+    "project-slug": "example-project",
+    "type": "github-user-key",
+    "statusCode": 201,
+    "scenario": "Successful responses: Created"
+  },
+  {
+    "project-slug": "example-project",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "example-project",
+    "type": "invalid-key-type",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "nonexistent-project",
+    "type": "deploy-key",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  }
+]

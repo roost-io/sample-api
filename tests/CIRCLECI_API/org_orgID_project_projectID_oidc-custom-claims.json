@@ -1,0 +1,77 @@
+[
+  {
+    "orgID": "123e4567-e89b-12d3-a456-426614174000",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "orgID": "123e4567-e89b-12d3-a456-426614174000",
+    "projectID": "123e4567-e89b-12d3-a456-426614174001",
+    "audience": [
+      "audience1",
+      "audience2"
+    ],
+    "ttl": "1h",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "projectID": "123e4567-e89b-12d3-a456-426614174001",
+    "audience": [
+      "audience1"
+    ],
+    "ttl": "1h",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "orgID": "invalid-uuid",
+    "projectID": "123e4567-e89b-12d3-a456-426614174001",
+    "audience": [
+      "audience1"
+    ],
+    "ttl": "1h",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "orgID": "123e4567-e89b-12d3-a456-426614174000",
+    "projectID": "invalid-uuid",
+    "audience": [
+      "audience1"
+    ],
+    "ttl": "1h",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "orgID": "123e4567-e89b-12d3-a456-426614174000",
+    "projectID": "123e4567-e89b-12d3-a456-426614174001",
+    "audience": [
+      "audience1"
+    ],
+    "ttl": "invalid-ttl",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "orgID": "123e4567-e89b-12d3-a456-426614174000",
+    "projectID": "123e4567-e89b-12d3-a456-426614174001",
+    "audience": [
+      "audience1"
+    ],
+    "ttl": "1h",
+    "statusCode": 403,
+    "scenario": "Client error responses: Forbidden"
+  },
+  {
+    "orgID": "123e4567-e89b-12d3-a456-426614174000",
+    "projectID": "123e4567-e89b-12d3-a456-426614174001",
+    "audience": [
+      "audience1"
+    ],
+    "ttl": "1h",
+    "statusCode": 500,
+    "scenario": "Server error responses: Internal Server Error"
+  }
+]

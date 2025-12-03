@@ -1,0 +1,30 @@
+[
+  {
+    "project-slug": "valid-project",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "valid-project",
+    "workflow-name": "build-and-test",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "workflow-name": "build-and-test",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "invalid-project",
+    "workflow-name": "build-and-test",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "valid-project",
+    "workflow-name": "invalid-workflow",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  }
+]

@@ -1,0 +1,48 @@
+[
+  {
+    "project_id": "proj-12345",
+    "component_name": "componentA",
+    "current_version": "1.0.0",
+    "target_version": "0.9.0",
+    "statusCode": 202,
+    "scenario": "Successful responses: Accepted"
+  },
+  {
+    "project_id": "proj-12345",
+    "component_name": "componentA",
+    "current_version": "1.0.0",
+    "environment_name": "production",
+    "namespace": "default",
+    "parameters": {
+      "key1": "value1",
+      "key2": "value2"
+    },
+    "reason": "Rollback due to bug",
+    "target_version": "0.9.0",
+    "statusCode": 202,
+    "scenario": "Successful responses: Accepted"
+  },
+  {
+    "component_name": "componentA",
+    "current_version": "1.0.0",
+    "target_version": "0.9.0",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "project_id": "proj-12345",
+    "component_name": "componentA",
+    "current_version": "1.0.0",
+    "target_version": "invalid_version",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "project_id": "invalid_proj_id",
+    "component_name": "componentA",
+    "current_version": "1.0.0",
+    "target_version": "0.9.0",
+    "statusCode": 404,
+    "scenario": "Client error responses: Not Found"
+  }
+]

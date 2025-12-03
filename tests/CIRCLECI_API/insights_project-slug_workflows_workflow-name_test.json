@@ -1,0 +1,35 @@
+[
+  {
+    "project-slug": "example-project",
+    "workflow-name": "build-workflow",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "example-project",
+    "workflow-name": "build-workflow",
+    "branch": "main",
+    "all-branches": true,
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "workflow-name": "build-workflow",
+    "branch": "main",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "example-project",
+    "workflow-name": "build-workflow",
+    "branch": 123,
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "nonexistent-project",
+    "workflow-name": "build-workflow",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  }
+]

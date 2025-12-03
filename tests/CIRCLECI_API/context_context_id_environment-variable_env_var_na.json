@@ -1,0 +1,38 @@
+[
+  {
+    "context_id": "validContext123",
+    "env_var_name": "validEnvVar",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "context_id": "validContext123",
+    "env_var_name": "validEnvVar",
+    "statusCode": 401,
+    "scenario": "Client error responses: Unauthorized"
+  },
+  {
+    "context_id": "nonExistentContext",
+    "env_var_name": "validEnvVar",
+    "statusCode": 404,
+    "scenario": "Client error responses: Not Found"
+  },
+  {
+    "context_id": "validContext123",
+    "env_var_name": "nonExistentEnvVar",
+    "statusCode": 404,
+    "scenario": "Client error responses: Not Found"
+  },
+  {
+    "context_id": "validContext123",
+    "env_var_name": "validEnvVar",
+    "statusCode": 429,
+    "scenario": "Client error responses: Too Many Requests"
+  },
+  {
+    "context_id": "validContext123",
+    "env_var_name": "validEnvVar",
+    "statusCode": 500,
+    "scenario": "Server error responses: Internal Server Error"
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "project-slug": "example-project",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "example-project",
+    "page-token": "abc123",
+    "all-branches": true,
+    "branch": "main",
+    "reporting-window": "last-30-days",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "page-token": "abc123",
+    "all-branches": true,
+    "branch": "main",
+    "reporting-window": "last-30-days",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "example-project",
+    "page-token": "invalid-token",
+    "all-branches": true,
+    "branch": "main",
+    "reporting-window": "last-30-days",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "nonexistent-project",
+    "page-token": "abc123",
+    "all-branches": true,
+    "branch": "main",
+    "reporting-window": "last-30-days",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  }
+]

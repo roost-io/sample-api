@@ -1,0 +1,26 @@
+[
+  {
+    "id": "123e4567-e89b-12d3-a456-426614174000",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "id": "123e4567-e89b-12d3-a456-426614174001",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "id": "invalid-uuid",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "id": "nonexistent-id",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  }
+]

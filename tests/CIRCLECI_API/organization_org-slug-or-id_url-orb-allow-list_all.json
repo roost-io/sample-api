@@ -1,0 +1,30 @@
+[
+  {
+    "org-slug-or-id": "circleci-org",
+    "allow-list-entry-id": "ba98990a-5a00-4cad-b55e-b44117b92e0c",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "org-slug-or-id": "circleci-org",
+    "allow-list-entry-id": "invalid-uuid",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "org-slug-or-id": "nonexistent-org",
+    "allow-list-entry-id": "ba98990a-5a00-4cad-b55e-b44117b92e0c",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "org-slug-or-id": "circleci-org",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "allow-list-entry-id": "ba98990a-5a00-4cad-b55e-b44117b92e0c",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  }
+]

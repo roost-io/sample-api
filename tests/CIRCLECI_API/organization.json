@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Test Organization",
+    "vcs_type": "github",
+    "statusCode": 201,
+    "scenario": "Successful responses: Created"
+  },
+  {
+    "name": "Another Org",
+    "vcs_type": "gitlab",
+    "statusCode": 201,
+    "scenario": "Successful responses: Created"
+  },
+  {
+    "name": "Missing VCS Type",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "name": "Invalid VCS Type",
+    "vcs_type": "invalid_vcs",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "vcs_type": "github",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  }
+]

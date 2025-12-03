@@ -1,0 +1,32 @@
+[
+  {
+    "message": "Operation completed successfully.",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "message": "restriction_id is invalid.",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "message": "Invalid credentials provided.",
+    "statusCode": 401,
+    "scenario": "Client error responses: Unauthorized"
+  },
+  {
+    "message": "The specified context_id or restriction_id was not found.",
+    "statusCode": 404,
+    "scenario": "Client error responses: Not Found"
+  },
+  {
+    "message": "Rate limit exceeded.",
+    "statusCode": 429,
+    "scenario": "Client error responses: Too Many Requests"
+  },
+  {
+    "message": "Internal server error.",
+    "statusCode": 500,
+    "scenario": "Server error responses: Internal Server Error"
+  }
+]

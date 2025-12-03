@@ -1,0 +1,27 @@
+[
+  {
+    "project-slug": "valid-project-1",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "valid-project-2",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "invalid-project-@#",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "nonexistent-project",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  }
+]

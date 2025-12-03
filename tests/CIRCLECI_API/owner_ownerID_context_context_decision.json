@@ -1,0 +1,77 @@
+[
+  {
+    "ownerID": "owner123",
+    "context": "production",
+    "input": "{\"key\":\"value\"}",
+    "metadata": {
+      "enabled_rules": [
+        "rule1",
+        "rule2"
+      ],
+      "status": "active"
+    },
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "ownerID": "owner123",
+    "context": "production",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "ownerID": "owner123",
+    "input": "{\"key\":\"value\"}",
+    "metadata": {
+      "enabled_rules": [
+        "rule1",
+        "rule2"
+      ],
+      "status": "active"
+    },
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "ownerID": "owner123",
+    "context": "invalid_context",
+    "input": "{\"key\":\"value\"}",
+    "metadata": {
+      "enabled_rules": [
+        "rule1",
+        "rule2"
+      ],
+      "status": "active"
+    },
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "ownerID": "invalid_owner",
+    "context": "production",
+    "input": "{\"key\":\"value\"}",
+    "metadata": {
+      "enabled_rules": [
+        "rule1",
+        "rule2"
+      ],
+      "status": "active"
+    },
+    "statusCode": 401,
+    "scenario": "Client error responses: Unauthorized"
+  },
+  {
+    "ownerID": "owner123",
+    "context": "production",
+    "input": "{\"key\":\"value\"}",
+    "metadata": {
+      "enabled_rules": [
+        "rule1",
+        "rule2"
+      ],
+      "status": "active"
+    },
+    "statusCode": 500,
+    "scenario": "Server error responses: Internal Server Error"
+  }
+]

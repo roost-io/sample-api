@@ -1,0 +1,27 @@
+[
+  {
+    "webhook-id": "123e4567-e89b-12d3-a456-426614174000",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "webhook-id": "123e4567-e89b-12d3-a456-426614174001",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "webhook-id": "invalid-uuid",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "webhook-id": "",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "webhook-id": "123e4567-e89b-12d3-a456-426614174002",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  }
+]

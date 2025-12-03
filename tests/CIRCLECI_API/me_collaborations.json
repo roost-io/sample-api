@@ -1,0 +1,54 @@
+[
+  {
+    "id": "123e4567-e89b-12d3-a456-426614174000",
+    "vcs-type": "github",
+    "name": "Example Organization",
+    "avatar_url": "https://example.com/avatar.png",
+    "slug": "example-org",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "id": "123e4567-e89b-12d3-a456-426614174001",
+    "vcs-type": "bitbucket",
+    "name": "Another Organization",
+    "avatar_url": "https://example.com/avatar2.png",
+    "slug": "another-org",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "id": "123e4567-e89b-12d3-a456-426614174002",
+    "vcs-type": "gitlab",
+    "name": "GitLab Organization",
+    "avatar_url": "https://example.com/avatar3.png",
+    "slug": "gitlab-org",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "id": "123e4567-e89b-12d3-a456-426614174003",
+    "vcs-type": "github",
+    "name": "Missing Avatar",
+    "slug": "missing-avatar",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "id": "invalid-uuid",
+    "vcs-type": "unknown-vcs",
+    "name": "Invalid VCS",
+    "avatar_url": "https://example.com/avatar4.png",
+    "slug": "invalid-vcs",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "id": "123e4567-e89b-12d3-a456-426614174004",
+    "vcs-type": "github",
+    "name": "No Slug",
+    "avatar_url": "https://example.com/avatar5.png",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "start": "2023-01-01T00:00:00Z",
+    "end": "2023-01-31T23:59:59Z",
+    "statusCode": 201,
+    "scenario": "Successful responses: Created"
+  },
+  {
+    "start": "2023-02-01T00:00:00Z",
+    "end": "2023-02-28T23:59:59Z",
+    "shared_org_ids": [
+      "org123",
+      "org456"
+    ],
+    "statusCode": 201,
+    "scenario": "Successful responses: Created"
+  },
+  {
+    "end": "2023-03-31T23:59:59Z",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "start": "invalid-date",
+    "end": "2023-04-30T23:59:59Z",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "start": "2023-05-01T00:00:00Z",
+    "end": "2023-05-31T23:59:59Z",
+    "shared_org_ids": [
+      "invalid-org"
+    ],
+    "statusCode": 404,
+    "scenario": "Client error responses: Not Found"
+  }
+]

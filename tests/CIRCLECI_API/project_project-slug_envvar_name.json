@@ -1,0 +1,31 @@
+[
+  {
+    "project-slug": "valid-project",
+    "name": "valid-name",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "valid-project",
+    "name": "valid-name",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "valid-project",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "invalid-project",
+    "name": "valid-name",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "valid-project",
+    "name": "invalid-name",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  }
+]

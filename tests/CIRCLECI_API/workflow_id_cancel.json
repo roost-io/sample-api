@@ -1,0 +1,27 @@
+[
+  {
+    "id": "valid_workflow_id_123",
+    "statusCode": 202,
+    "scenario": "Successful responses: Accepted"
+  },
+  {
+    "id": "valid_workflow_id_456",
+    "statusCode": 202,
+    "scenario": "Successful responses: Accepted"
+  },
+  {
+    "id": "",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "id": "invalid_workflow_id_789",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "id": "nonexistent_workflow_id_000",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  }
+]

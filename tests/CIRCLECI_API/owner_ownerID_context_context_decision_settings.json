@@ -1,0 +1,56 @@
+[
+  {
+    "ownerID": "123e4567-e89b-12d3-a456-426614174000",
+    "context": "production",
+    "enabled": true,
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "ownerID": "123e4567-e89b-12d3-a456-426614174000",
+    "context": "staging",
+    "enabled": false,
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "context": "production",
+    "enabled": true,
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "ownerID": "invalid-uuid",
+    "context": "production",
+    "enabled": true,
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "ownerID": "123e4567-e89b-12d3-a456-426614174000",
+    "context": "invalid_context",
+    "enabled": true,
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "ownerID": "123e4567-e89b-12d3-a456-426614174000",
+    "context": "production",
+    "statusCode": 401,
+    "scenario": "Client error responses: Unauthorized"
+  },
+  {
+    "ownerID": "123e4567-e89b-12d3-a456-426614174000",
+    "context": "production",
+    "enabled": true,
+    "statusCode": 403,
+    "scenario": "Client error responses: Forbidden"
+  },
+  {
+    "ownerID": "123e4567-e89b-12d3-a456-426614174000",
+    "context": "production",
+    "enabled": true,
+    "statusCode": 500,
+    "scenario": "Server error responses: Internal Server Error"
+  }
+]

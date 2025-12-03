@@ -1,0 +1,27 @@
+[
+  {
+    "project-slug": "valid-project",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "valid-project-with-optional-fields",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "invalid-project-slug-123",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "nonexistent-project",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  }
+]

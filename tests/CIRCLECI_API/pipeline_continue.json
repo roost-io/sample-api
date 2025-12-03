@@ -1,0 +1,39 @@
+[
+  {
+    "continuation-key": "validKey123",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "continuation-key": "validKey456",
+    "configuration": "configA",
+    "parameters": {
+      "param1": "value1",
+      "param2": "value2"
+    },
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "configuration": "configB",
+    "parameters": {
+      "param1": "value1"
+    },
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "continuation-key": "invalidKey!",
+    "configuration": "configC",
+    "parameters": {
+      "param1": "value1"
+    },
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "continuation-key": "nonExistentKey",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  }
+]
