@@ -1,0 +1,31 @@
+[
+  {
+    "username": "user1",
+    "password": "pass123",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "username": "user2",
+    "password": "pass456",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "username": "user3",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "username": "user4",
+    "password": "invalid_pass",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "username": 12345,
+    "password": "pass789",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  }
+]

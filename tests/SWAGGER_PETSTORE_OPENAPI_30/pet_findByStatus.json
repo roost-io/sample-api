@@ -1,0 +1,54 @@
+[
+  {
+    "name": "doggie",
+    "photoUrls": [
+      "http://example.com/photo1.jpg"
+    ],
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "name": "doggie",
+    "photoUrls": [
+      "http://example.com/photo1.jpg"
+    ],
+    "category": {
+      "id": 1,
+      "name": "Dogs"
+    },
+    "tags": [
+      {
+        "id": 1,
+        "name": "tag1"
+      }
+    ],
+    "status": "available",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "photoUrls": [
+      "http://example.com/photo1.jpg"
+    ],
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "name": "doggie",
+    "photoUrls": [
+      "http://example.com/photo1.jpg"
+    ],
+    "status": "in_stock",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "name": "unknown_pet",
+    "photoUrls": [
+      "http://example.com/photo1.jpg"
+    ],
+    "status": "sold",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  }
+]

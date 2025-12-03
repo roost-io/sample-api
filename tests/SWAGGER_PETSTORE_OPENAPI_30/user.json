@@ -1,0 +1,67 @@
+[
+  {
+    "id": 10,
+    "username": "theUser",
+    "firstName": "John",
+    "lastName": "James",
+    "email": "john@email.com",
+    "password": "12345",
+    "phone": "12345",
+    "userStatus": 1,
+    "statusCode": 200,
+    "scenario": "Success"
+  },
+  {
+    "id": 15,
+    "username": "testUser1",
+    "firstName": "Jane",
+    "lastName": "Doe",
+    "email": "jane.doe@example.com",
+    "password": "password123",
+    "phone": "54321",
+    "userStatus": 0,
+    "statusCode": 200,
+    "scenario": "Success"
+  },
+  {
+    "username": "missingIdUser",
+    "email": "missingid@example.com",
+    "password": "nopassword",
+    "statusCode": 400,
+    "scenario": "Bad Request"
+  },
+  {
+    "id": 20,
+    "username": "invalidEmailUser",
+    "email": "not-an-email",
+    "password": "pass",
+    "statusCode": 400,
+    "scenario": "Bad Request"
+  },
+  {
+    "id": 25,
+    "username": "missingUsername",
+    "email": "missingusername@example.com",
+    "password": "12345",
+    "userStatus": 1,
+    "statusCode": 400,
+    "scenario": "Bad Request"
+  },
+  {
+    "id": 30,
+    "username": "wrongStatusUser",
+    "email": "wrongstatus@example.com",
+    "password": "password",
+    "userStatus": 2,
+    "statusCode": 404,
+    "scenario": "Resource Not Found"
+  },
+  {
+    "id": -1,
+    "username": "negativeIdUser",
+    "email": "negativeid@example.com",
+    "password": "pass123",
+    "statusCode": 400,
+    "scenario": "Bad Request"
+  }
+]
