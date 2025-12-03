@@ -1,0 +1,45 @@
+[
+  {
+    "name": "doggie",
+    "photoUrls": [
+      "https://example.com/photo1.jpg"
+    ],
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "name": "doggie",
+    "photoUrls": [
+      "https://example.com/photo1.jpg"
+    ],
+    "status": "available",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "photoUrls": [
+      "https://example.com/photo1.jpg"
+    ],
+    "status": "available",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "name": "doggie",
+    "photoUrls": [
+      "https://example.com/photo1.jpg"
+    ],
+    "status": "invalid_status",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "name": "nonexistent_pet",
+    "photoUrls": [
+      "https://example.com/photo1.jpg"
+    ],
+    "status": "sold",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  }
+]

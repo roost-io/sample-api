@@ -1,0 +1,32 @@
+[
+  {
+    "field1": "value1_success",
+    "field2": 123,
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "field1": "value1_success_optional",
+    "field2": 456,
+    "optionalField": "optionalValue",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "field2": 789,
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "field1": "invalid_enum",
+    "field2": 101,
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "field1": "not_found",
+    "field2": 404,
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  }
+]

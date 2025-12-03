@@ -1,0 +1,37 @@
+[
+  {
+    "username": "testuser1",
+    "password": "securePassword123",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "username": "testuser2",
+    "password": "anotherSecurePassword456",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "username": "testuser3",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "username": "",
+    "password": "passwordWithoutUsername",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "username": "invalidUser!",
+    "password": "invalidPassword",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "username": "nonExistentUser",
+    "password": "randomPassword",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  }
+]
