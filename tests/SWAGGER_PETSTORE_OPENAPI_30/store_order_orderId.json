@@ -1,0 +1,34 @@
+[
+  {
+    "orderId": 10,
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "orderId": 10,
+    "petId": 198772,
+    "quantity": 7,
+    "shipDate": "2023-10-10T10:00:00",
+    "status": "approved",
+    "complete": true,
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "petId": 198772,
+    "quantity": 7,
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "orderId": 10,
+    "status": "invalid_status",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "orderId": 999999,
+    "statusCode": 404,
+    "scenario": "Client error responses: Not Found"
+  }
+]

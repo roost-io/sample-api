@@ -1,0 +1,37 @@
+[
+  {
+    "petId": 10,
+    "name": "doggie",
+    "status": "available",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "petId": 11,
+    "name": "kitty",
+    "status": "pending",
+    "api_key": "valid_api_key_123",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "petId": 12,
+    "status": "sold",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "petId": -1,
+    "name": "invalidPet",
+    "status": "unknown",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "petId": 9999,
+    "name": "ghost",
+    "status": "available",
+    "statusCode": 404,
+    "scenario": "Client error responses: Not Found"
+  }
+]

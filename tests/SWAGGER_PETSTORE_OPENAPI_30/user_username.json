@@ -1,0 +1,61 @@
+[
+  {
+    "username": "theUser",
+    "id": 10,
+    "firstName": "John",
+    "lastName": "James",
+    "email": "john@email.com",
+    "password": "12345",
+    "phone": "12345",
+    "userStatus": 1,
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "username": "testUser",
+    "id": 20,
+    "firstName": "Alice",
+    "lastName": "Smith",
+    "email": "alice.smith@email.com",
+    "password": "password123",
+    "phone": "67890",
+    "userStatus": 1,
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "username": "missingEmail",
+    "id": 30,
+    "firstName": "Bob",
+    "lastName": "Brown",
+    "password": "pass",
+    "phone": "54321",
+    "userStatus": 0,
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "username": "invalidUser",
+    "id": 40,
+    "firstName": "Charlie",
+    "lastName": "Johnson",
+    "email": "charlie.johnson@email.com",
+    "password": "mypassword",
+    "phone": "98765",
+    "userStatus": -1,
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "username": "nonExistentUser",
+    "id": 999,
+    "firstName": "David",
+    "lastName": "Williams",
+    "email": "david.williams@email.com",
+    "password": "securepass",
+    "phone": "11111",
+    "userStatus": 2,
+    "statusCode": 404,
+    "scenario": "Client error responses: Not Found"
+  }
+]

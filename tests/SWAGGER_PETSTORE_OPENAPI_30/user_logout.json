@@ -1,0 +1,32 @@
+[
+  {
+    "field1": "pet1",
+    "field2": 1,
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "field1": "pet2",
+    "field2": 2,
+    "field3": "optionalField",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "field1": "pet3",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "field1": "pet4",
+    "field2": "invalid_number",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "field1": "nonexistent_pet",
+    "field2": 9999,
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  }
+]
