@@ -1,0 +1,31 @@
+[
+  {
+    "username": "validUser",
+    "password": "validPass",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "username": "validUser",
+    "password": "validPass",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "username": "validUser",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "username": "invalidUser!",
+    "password": "validPass",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "username": "unknownUser",
+    "password": "unknownPass",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  }
+]
