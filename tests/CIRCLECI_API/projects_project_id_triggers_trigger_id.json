@@ -1,0 +1,31 @@
+[
+  {
+    "project_id": "valid_project_123",
+    "trigger_id": "valid_trigger_456",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project_id": "valid_project_123",
+    "trigger_id": "valid_trigger_456",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project_id": "valid_project_123",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "project_id": "invalid_project_!@#",
+    "trigger_id": "valid_trigger_456",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "project_id": "nonexistent_project",
+    "trigger_id": "nonexistent_trigger",
+    "statusCode": 404,
+    "scenario": "Client error responses: Not Found"
+  }
+]

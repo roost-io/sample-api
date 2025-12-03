@@ -1,0 +1,74 @@
+[
+  {
+    "ownerID": "123e4567-e89b-12d3-a456-426614174000",
+    "context": "production",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "ownerID": "123e4567-e89b-12d3-a456-426614174001",
+    "context": "staging",
+    "dry": true,
+    "policies": {
+      "created": [
+        "policy1",
+        "policy2"
+      ],
+      "deleted": [
+        "policy3"
+      ],
+      "modified": [
+        "policy4"
+      ]
+    },
+    "statusCode": 201,
+    "scenario": "Successful responses: Created"
+  },
+  {
+    "context": "development",
+    "dry": false,
+    "policies": {
+      "created": [
+        "policy5"
+      ]
+    },
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "ownerID": "invalid-uuid",
+    "context": "testing",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "ownerID": "123e4567-e89b-12d3-a456-426614174002",
+    "context": "invalid_context",
+    "statusCode": 404,
+    "scenario": "Client error responses: Not Found"
+  },
+  {
+    "ownerID": "123e4567-e89b-12d3-a456-426614174003",
+    "context": "production",
+    "dry": true,
+    "policies": {
+      "created": [
+        "policy6"
+      ],
+      "deleted": [
+        "policy7"
+      ],
+      "modified": [
+        "policy8"
+      ]
+    },
+    "statusCode": 413,
+    "scenario": "Client error responses: Request Too Long"
+  },
+  {
+    "ownerID": "123e4567-e89b-12d3-a456-426614174004",
+    "context": "production",
+    "statusCode": 500,
+    "scenario": "Server error responses: Internal Server Error"
+  }
+]

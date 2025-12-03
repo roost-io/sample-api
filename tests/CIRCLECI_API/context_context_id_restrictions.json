@@ -1,0 +1,31 @@
+[
+  {
+    "restriction_type": "project",
+    "restriction_value": "123e4567-e89b-12d3-a456-426614174000",
+    "statusCode": 201,
+    "scenario": "Successful responses: Created"
+  },
+  {
+    "restriction_type": "project",
+    "restriction_value": "123e4567-e89b-12d3-a456-426614174000",
+    "statusCode": 201,
+    "scenario": "Successful responses: Created"
+  },
+  {
+    "restriction_type": "project",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "restriction_type": "invalid_type",
+    "restriction_value": "invalid_value",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "restriction_type": "project",
+    "restriction_value": "non-existent-id",
+    "statusCode": 404,
+    "scenario": "Client error responses: Not Found"
+  }
+]

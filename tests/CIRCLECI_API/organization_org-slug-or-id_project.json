@@ -1,0 +1,31 @@
+[
+  {
+    "org-slug-or-id": "gh/CircleCI-Public",
+    "name": "api-preview-docs",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "org-slug-or-id": "gh/CircleCI-Public",
+    "name": "api-preview-docs",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "org-slug-or-id": "gh/CircleCI-Public",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "org-slug-or-id": "invalid-org",
+    "name": "api-preview-docs",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "org-slug-or-id": "gh/CircleCI-Public",
+    "name": "",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  }
+]

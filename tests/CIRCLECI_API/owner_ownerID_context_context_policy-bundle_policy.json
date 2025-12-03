@@ -1,0 +1,43 @@
+[
+  {
+    "content": "Policy content example",
+    "created_at": "2023-10-01T12:00:00Z",
+    "created_by": "user123",
+    "name": "policyName",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "content": "Policy content example",
+    "created_at": "2023-10-01T12:00:00Z",
+    "created_by": "user123",
+    "name": "policyName",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "error": "OwnerID: must be a valid UUID.",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "error": "Unauthorized",
+    "statusCode": 401,
+    "scenario": "Client error responses: Unauthorized"
+  },
+  {
+    "error": "Forbidden",
+    "statusCode": 403,
+    "scenario": "Client error responses: Forbidden"
+  },
+  {
+    "error": "policy not found",
+    "statusCode": 404,
+    "scenario": "Client error responses: Not Found"
+  },
+  {
+    "error": "unexpected server error",
+    "statusCode": 500,
+    "scenario": "Server error responses: Internal Server Error"
+  }
+]

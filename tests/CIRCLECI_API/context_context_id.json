@@ -1,0 +1,37 @@
+[
+  {
+    "context_id": "validContext123",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "context_id": "validContext123",
+    "statusCode": 401,
+    "scenario": "Client error responses: Unauthorized"
+  },
+  {
+    "context_id": "nonExistentContext",
+    "statusCode": 404,
+    "scenario": "Client error responses: Not Found"
+  },
+  {
+    "context_id": "validContext123",
+    "statusCode": 429,
+    "scenario": "Client error responses: Too Many Requests"
+  },
+  {
+    "context_id": "validContext123",
+    "statusCode": 500,
+    "scenario": "Server error responses: Internal Server Error"
+  },
+  {
+    "context_id": "",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "context_id": "invalidContext!@#",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  }
+]

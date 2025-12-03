@@ -1,0 +1,47 @@
+[
+  {
+    "org-id": "123e4567-e89b-12d3-a456-426614174000",
+    "project-id": "123e4567-e89b-12d3-a456-426614174001",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "org-id": "123e4567-e89b-12d3-a456-426614174000",
+    "project-id": "123e4567-e89b-12d3-a456-426614174001",
+    "page-size": 10,
+    "page-token": "abc123",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "org-id": "123e4567-e89b-12d3-a456-426614174000",
+    "page-size": 10,
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "org-id": "invalid-uuid",
+    "project-id": "123e4567-e89b-12d3-a456-426614174001",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "org-id": "123e4567-e89b-12d3-a456-426614174000",
+    "project-id": "non-existent-project-id",
+    "statusCode": 404,
+    "scenario": "Client error responses: Not Found"
+  },
+  {
+    "org-id": "123e4567-e89b-12d3-a456-426614174000",
+    "project-id": "123e4567-e89b-12d3-a456-426614174001",
+    "page-size": -1,
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "org-id": "123e4567-e89b-12d3-a456-426614174000",
+    "project-id": "123e4567-e89b-12d3-a456-426614174001",
+    "statusCode": 500,
+    "scenario": "Server error responses: Internal Server Error"
+  }
+]

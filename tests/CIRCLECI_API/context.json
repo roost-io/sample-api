@@ -1,0 +1,50 @@
+[
+  {
+    "owner-id": "123e4567-e89b-12d3-a456-426614174000",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "owner-id": "123e4567-e89b-12d3-a456-426614174000",
+    "owner-slug": "valid-slug",
+    "owner-type": "organization",
+    "page-token": "token123",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "owner-slug": "valid-slug",
+    "owner-type": "organization",
+    "page-token": "token123",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "owner-id": "invalid-uuid",
+    "owner-slug": "valid-slug",
+    "owner-type": "organization",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "owner-id": "123e4567-e89b-12d3-a456-426614174000",
+    "owner-slug": "nonexistent-slug",
+    "owner-type": "organization",
+    "statusCode": 404,
+    "scenario": "Client error responses: Not Found"
+  },
+  {
+    "owner-id": "123e4567-e89b-12d3-a456-426614174000",
+    "owner-slug": "valid-slug",
+    "owner-type": "organization",
+    "statusCode": 429,
+    "scenario": "Client error responses: Too Many Requests"
+  },
+  {
+    "owner-id": "123e4567-e89b-12d3-a456-426614174000",
+    "owner-slug": "valid-slug",
+    "owner-type": "organization",
+    "statusCode": 500,
+    "scenario": "Server error responses: Internal Server Error"
+  }
+]

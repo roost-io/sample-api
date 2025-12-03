@@ -1,0 +1,27 @@
+[
+  {
+    "environment_id": "123e4127-e89b-12d3-a456-426123417400",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "environment_id": "123e4127-e89b-12d3-a456-426123417400",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "environment_id": "",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "environment_id": "invalid-uuid",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "environment_id": "nonexistent-uuid-1234",
+    "statusCode": 404,
+    "scenario": "Client error responses: Not Found"
+  }
+]

@@ -1,0 +1,52 @@
+[
+  {
+    "advanced": {
+      "autocancel_builds": true
+    },
+    "statusCode": 201,
+    "scenario": "Successful responses: Created"
+  },
+  {
+    "advanced": {
+      "autocancel_builds": true,
+      "build_fork_prs": false,
+      "build_prs_only": true,
+      "disable_ssh": false,
+      "forks_receive_secret_env_vars": true,
+      "oss": true,
+      "set_github_status": false,
+      "setup_workflows": true,
+      "write_settings_requires_admin": false,
+      "pr_only_branch_overrides": [
+        "main",
+        "develop"
+      ]
+    },
+    "statusCode": 201,
+    "scenario": "Successful responses: Created"
+  },
+  {
+    "advanced": {
+      "build_fork_prs": false
+    },
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "advanced": {
+      "autocancel_builds": "yes"
+    },
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "advanced": {
+      "autocancel_builds": true
+    },
+    "provider": "invalid_provider",
+    "organization": "valid_org",
+    "project": "valid_project",
+    "statusCode": 404,
+    "scenario": "Client error responses: Not Found"
+  }
+]

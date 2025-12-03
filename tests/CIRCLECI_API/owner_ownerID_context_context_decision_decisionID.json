@@ -1,0 +1,43 @@
+[
+  {
+    "ownerID": "123e4567-e89b-12d3-a456-426614174000",
+    "context": "production",
+    "decisionID": "dec-001",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "ownerID": "123e4567-e89b-12d3-a456-426614174000",
+    "context": "production",
+    "decisionID": "dec-002",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "ownerID": "123e4567-e89b-12d3-a456-426614174000",
+    "context": "production",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "ownerID": "invalid-uuid",
+    "context": "production",
+    "decisionID": "dec-003",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "ownerID": "123e4567-e89b-12d3-a456-426614174000",
+    "context": "nonexistent",
+    "decisionID": "dec-004",
+    "statusCode": 404,
+    "scenario": "Client error responses: Not Found"
+  },
+  {
+    "ownerID": "123e4567-e89b-12d3-a456-426614174000",
+    "context": "production",
+    "decisionID": "dec-005",
+    "statusCode": 500,
+    "scenario": "Server error responses: Internal Server Error"
+  }
+]

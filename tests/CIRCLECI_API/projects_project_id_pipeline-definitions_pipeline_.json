@@ -1,0 +1,68 @@
+[
+  {
+    "project_id": "project123",
+    "pipeline_definition_id": "pipeline456",
+    "event_source": {
+      "provider": "github_app",
+      "repo": {
+        "external_id": "repo789"
+      }
+    },
+    "event_name": "push",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project_id": "project123",
+    "pipeline_definition_id": "pipeline456",
+    "event_source": {
+      "provider": "github_app",
+      "repo": {
+        "external_id": "repo789"
+      }
+    },
+    "event_preset": "all-pushes",
+    "checkout_ref": "refs/heads/main",
+    "config_ref": "refs/heads/main",
+    "event_name": "push",
+    "disabled": false,
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project_id": "project123",
+    "pipeline_definition_id": "pipeline456",
+    "event_source": {
+      "provider": "github_app"
+    },
+    "event_name": "push",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "project_id": "project123",
+    "pipeline_definition_id": "pipeline456",
+    "event_source": {
+      "provider": "invalid_provider",
+      "repo": {
+        "external_id": "repo789"
+      }
+    },
+    "event_name": "push",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "project_id": "invalid_project",
+    "pipeline_definition_id": "pipeline456",
+    "event_source": {
+      "provider": "github_app",
+      "repo": {
+        "external_id": "repo789"
+      }
+    },
+    "event_name": "push",
+    "statusCode": 404,
+    "scenario": "Client error responses: Not Found"
+  }
+]

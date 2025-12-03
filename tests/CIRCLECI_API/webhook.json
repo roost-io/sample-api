@@ -1,0 +1,31 @@
+[
+  {
+    "scope-id": "123e4567-e89b-12d3-a456-426614174000",
+    "scope-type": "project",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "scope-id": "123e4567-e89b-12d3-a456-426614174000",
+    "scope-type": "project",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "scope-id": "123e4567-e89b-12d3-a456-426614174000",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "scope-id": "invalid-uuid",
+    "scope-type": "project",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "scope-id": "123e4567-e89b-12d3-a456-426614174000",
+    "scope-type": "invalid-type",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "schedule-id": "123e4567-e89b-12d3-a456-426614174000",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "schedule-id": "123e4567-e89b-12d3-a456-426614174000",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "schedule-id": "123e4567-e89b-12d3-a456-426614174000",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "schedule-id": "invalid-uuid",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "schedule-id": "123e4567-e89b-12d3-a456-426614174000",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  }
+]

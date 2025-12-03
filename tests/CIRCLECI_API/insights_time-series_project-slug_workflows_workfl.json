@@ -1,0 +1,47 @@
+[
+  {
+    "project-slug": "my-awesome-project",
+    "workflow-name": "build-and-test",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "my-awesome-project",
+    "workflow-name": "build-and-test",
+    "branch": "main",
+    "granularity": "daily",
+    "start-date": "2023-01-01",
+    "end-date": "2023-01-31",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "workflow-name": "build-and-test",
+    "branch": "main",
+    "granularity": "daily",
+    "start-date": "2023-01-01",
+    "end-date": "2023-01-31",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "my-awesome-project",
+    "workflow-name": "build-and-test",
+    "branch": "main",
+    "granularity": "hourly",
+    "start-date": "2023-01-01",
+    "end-date": "2023-01-31",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "non-existent-project",
+    "workflow-name": "build-and-test",
+    "branch": "main",
+    "granularity": "daily",
+    "start-date": "2023-01-01",
+    "end-date": "2023-01-31",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  }
+]

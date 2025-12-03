@@ -1,0 +1,37 @@
+[
+  {
+    "project-slug": "example-project",
+    "workflow-name": "build-and-test",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "example-project",
+    "workflow-name": "build-and-test",
+    "page-token": "abc123",
+    "all-branches": true,
+    "branch": "main",
+    "reporting-window": "last-30-days",
+    "job-name": "test-job",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "workflow-name": "build-and-test",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "example-project",
+    "workflow-name": "build-and-test",
+    "all-branches": "yes",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "invalid-project",
+    "workflow-name": "build-and-test",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  }
+]

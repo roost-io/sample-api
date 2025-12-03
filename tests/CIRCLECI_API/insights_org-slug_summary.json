@@ -1,0 +1,44 @@
+[
+  {
+    "org-slug": "valid-org",
+    "reporting-window": "last-month",
+    "project-names": {
+      "project1": "api-preview-docs",
+      "project2": "backend-service"
+    },
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "org-slug": "valid-org",
+    "reporting-window": "last-week",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "org-slug": "valid-org",
+    "project-names": {
+      "project1": "api-preview-docs"
+    },
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "org-slug": "invalid-org",
+    "reporting-window": "last-month",
+    "project-names": {
+      "project1": "api-preview-docs"
+    },
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "org-slug": "valid-org",
+    "reporting-window": "invalid-window",
+    "project-names": {
+      "project1": "api-preview-docs"
+    },
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "pipeline-id": "5034460f-c7c4-4c43-9457-de07e2029e7b",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "pipeline-id": "5034460f-c7c4-4c43-9457-de07e2029e7b",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "pipeline-id": "",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "pipeline-id": "invalid-uuid",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "pipeline-id": "non-existent-id",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  }
+]

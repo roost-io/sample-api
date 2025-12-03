@@ -1,0 +1,31 @@
+[
+  {
+    "name": "Development Team",
+    "description": "Handles all development tasks",
+    "statusCode": 201,
+    "scenario": "Successful responses: Created"
+  },
+  {
+    "name": "QA Team",
+    "statusCode": 201,
+    "scenario": "Successful responses: Created"
+  },
+  {
+    "name": "",
+    "description": "Handles testing",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "name": "123InvalidName",
+    "description": "Handles invalid name scenario",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "name": "NonExistentOrg",
+    "description": "This organization does not exist",
+    "statusCode": 404,
+    "scenario": "Client error responses: Not Found"
+  }
+]

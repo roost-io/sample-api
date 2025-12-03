@@ -1,0 +1,31 @@
+[
+  {
+    "project-slug": "valid-project",
+    "fingerprint": "valid-fingerprint",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "valid-project",
+    "fingerprint": "valid-fingerprint",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "valid-project",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "invalid-project",
+    "fingerprint": "valid-fingerprint",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "valid-project",
+    "fingerprint": "invalid-fingerprint",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  }
+]

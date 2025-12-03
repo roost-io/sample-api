@@ -1,0 +1,42 @@
+[
+  {
+    "job-id": "valid-job-123",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "job-id": "valid-job-456",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "job-id": "",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "job-id": "invalid-job-789",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "job-id": "unauthorized-job-000",
+    "statusCode": 401,
+    "scenario": "Client error responses: Unauthorized"
+  },
+  {
+    "job-id": "forbidden-job-111",
+    "statusCode": 403,
+    "scenario": "Client error responses: Forbidden"
+  },
+  {
+    "job-id": "nonexistent-job-999",
+    "statusCode": 404,
+    "scenario": "Client error responses: Not Found"
+  },
+  {
+    "job-id": "unknown-job-222",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  }
+]

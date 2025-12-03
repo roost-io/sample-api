@@ -1,0 +1,72 @@
+[
+  {
+    "project_id": "project-123",
+    "name": "Pipeline A",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project_id": "project-456",
+    "name": "Pipeline B",
+    "description": "This is a test pipeline",
+    "config_source": {
+      "provider": "github_app",
+      "repo": {
+        "external_id": "repo-789"
+      }
+    },
+    "checkout_source": {
+      "provider": "github_app",
+      "repo": {
+        "external_id": "repo-789"
+      }
+    },
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project_id": "project-789",
+    "name": "Pipeline C",
+    "config_source": {
+      "provider": "github_app"
+    },
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "project_id": "project-101",
+    "name": "Pipeline D",
+    "config_source": {
+      "provider": "invalid_provider",
+      "repo": {
+        "external_id": "repo-101"
+      }
+    },
+    "checkout_source": {
+      "provider": "github_app",
+      "repo": {
+        "external_id": "repo-101"
+      }
+    },
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "project_id": "invalid-project",
+    "name": "Pipeline E",
+    "config_source": {
+      "provider": "github_app",
+      "repo": {
+        "external_id": "repo-102"
+      }
+    },
+    "checkout_source": {
+      "provider": "github_app",
+      "repo": {
+        "external_id": "repo-102"
+      }
+    },
+    "statusCode": 404,
+    "scenario": "Client error responses: Not Found"
+  }
+]

@@ -1,0 +1,30 @@
+[
+  {
+    "project-slug": "gh/CircleCI-Public/api-preview-docs",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "gh/CircleCI-Public/api-preview-docs",
+    "branch": "feature/design-new-api",
+    "page-token": "nextPage123",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "branch": "feature/design-new-api",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/CircleCI-Public/api-preview-docs",
+    "branch": "invalid-branch-name",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "invalid/project-slug",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  }
+]

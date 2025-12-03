@@ -1,0 +1,54 @@
+[
+  {
+    "id": "0e53027b-521a-4c40-9042-47e72b3c63a3",
+    "statusCode": 202,
+    "scenario": "Successful responses: Accepted"
+  },
+  {
+    "id": "0e53027b-521a-4c40-9042-47e72b3c63a3",
+    "enable_ssh": true,
+    "from_failed": false,
+    "jobs": [
+      "job1",
+      "job2"
+    ],
+    "sparse_tree": true,
+    "statusCode": 202,
+    "scenario": "Successful responses: Accepted"
+  },
+  {
+    "enable_ssh": true,
+    "from_failed": false,
+    "jobs": [
+      "job1",
+      "job2"
+    ],
+    "sparse_tree": true,
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "id": "invalid-uuid",
+    "enable_ssh": true,
+    "from_failed": false,
+    "jobs": [
+      "job1",
+      "job2"
+    ],
+    "sparse_tree": true,
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "id": "0e53027b-521a-4c40-9042-47e72b3c63a3",
+    "enable_ssh": "yes",
+    "from_failed": false,
+    "jobs": [
+      "job1",
+      "job2"
+    ],
+    "sparse_tree": true,
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  }
+]

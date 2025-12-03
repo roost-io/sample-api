@@ -1,0 +1,31 @@
+[
+  {
+    "job-number": "12345",
+    "project-slug": "my-project",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "job-number": "67890",
+    "project-slug": "another-project",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "missing-job-number",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "job-number": "invalid-job-number",
+    "project-slug": "my-project",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "job-number": "12345",
+    "project-slug": "nonexistent-project",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  }
+]

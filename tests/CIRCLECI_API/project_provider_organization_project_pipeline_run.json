@@ -1,0 +1,53 @@
+[
+  {
+    "provider": "github",
+    "organization": "example-org",
+    "project": "example-project",
+    "definition_id": "12345",
+    "statusCode": 201,
+    "scenario": "Successful responses: Created"
+  },
+  {
+    "provider": "github",
+    "organization": "example-org",
+    "project": "example-project",
+    "definition_id": "12345",
+    "config": {
+      "branch": "main",
+      "tag": "v1.0"
+    },
+    "checkout": {
+      "branch": "develop",
+      "tag": "v1.1"
+    },
+    "parameters": {
+      "param1": "value1",
+      "param2": "value2"
+    },
+    "statusCode": 201,
+    "scenario": "Successful responses: Created"
+  },
+  {
+    "provider": "github",
+    "organization": "example-org",
+    "project": "example-project",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "provider": "invalid-provider",
+    "organization": "example-org",
+    "project": "example-project",
+    "definition_id": "12345",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "provider": "github",
+    "organization": "nonexistent-org",
+    "project": "example-project",
+    "definition_id": "12345",
+    "statusCode": 404,
+    "scenario": "Client error responses: Not Found"
+  }
+]

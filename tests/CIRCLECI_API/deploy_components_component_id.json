@@ -1,0 +1,27 @@
+[
+  {
+    "component_id": "123e4127-e89b-12d3-a456-426123417400",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "component_id": "123e4127-e89b-12d3-a456-426123417400",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "component_id": "",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "component_id": "invalid-uuid",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "component_id": "00000000-0000-0000-0000-000000000000",
+    "statusCode": 404,
+    "scenario": "Client error responses: Not Found"
+  }
+]

@@ -1,0 +1,39 @@
+[
+  {
+    "org-id": "org123",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "org-id": "org123",
+    "page-size": 10,
+    "page-token": "token123",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "page-size": 10,
+    "page-token": "token123",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "org-id": "invalid-org-id",
+    "page-size": 10,
+    "statusCode": 404,
+    "scenario": "Client error responses: Not Found"
+  },
+  {
+    "org-id": "org123",
+    "page-size": -1,
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "org-id": "org123",
+    "page-size": 10,
+    "page-token": "token123",
+    "statusCode": 500,
+    "scenario": "Server error responses: Internal Server Error"
+  }
+]

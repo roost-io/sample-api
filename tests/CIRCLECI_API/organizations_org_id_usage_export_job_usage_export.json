@@ -1,0 +1,66 @@
+[
+  {
+    "usage_export_job_id": "123e4567-e89b-12d3-a456-426614174000",
+    "state": "completed",
+    "download_urls": [
+      "https://example.com/download/1",
+      "https://example.com/download/2"
+    ],
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "usage_export_job_id": "123e4567-e89b-12d3-a456-426614174001",
+    "state": "in_progress",
+    "download_urls": [
+      "https://example.com/download/3"
+    ],
+    "error_reason": "None",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "state": "failed",
+    "download_urls": [
+      "https://example.com/download/4"
+    ],
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "usage_export_job_id": "invalid-uuid",
+    "state": "completed",
+    "download_urls": [
+      "https://example.com/download/5"
+    ],
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "usage_export_job_id": "123e4567-e89b-12d3-a456-426614174002",
+    "state": "completed",
+    "download_urls": [
+      "https://example.com/download/6"
+    ],
+    "statusCode": 404,
+    "scenario": "Client error responses: Not Found"
+  },
+  {
+    "usage_export_job_id": "123e4567-e89b-12d3-a456-426614174003",
+    "state": "completed",
+    "download_urls": [
+      "https://example.com/download/7"
+    ],
+    "statusCode": 429,
+    "scenario": "Client error responses: Too Many Requests"
+  },
+  {
+    "usage_export_job_id": "123e4567-e89b-12d3-a456-426614174004",
+    "state": "completed",
+    "download_urls": [
+      "https://example.com/download/8"
+    ],
+    "statusCode": 500,
+    "scenario": "Server error responses: Internal Server Error"
+  }
+]

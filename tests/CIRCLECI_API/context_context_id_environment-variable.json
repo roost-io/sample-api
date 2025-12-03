@@ -1,0 +1,38 @@
+[
+  {
+    "context_id": "123e4567-e89b-12d3-a456-426614174000",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "context_id": "123e4567-e89b-12d3-a456-426614174000",
+    "page-token": "abc123token",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "page-token": "abc123token",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "context_id": "invalid-uuid",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "context_id": "00000000-0000-0000-0000-000000000000",
+    "statusCode": 404,
+    "scenario": "Client error responses: Not Found"
+  },
+  {
+    "context_id": "123e4567-e89b-12d3-a456-426614174000",
+    "statusCode": 429,
+    "scenario": "Client error responses: Too Many Requests"
+  },
+  {
+    "context_id": "123e4567-e89b-12d3-a456-426614174000",
+    "statusCode": 500,
+    "scenario": "Server error responses: Internal Server Error"
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "pipeline-id": "validPipeline123",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "pipeline-id": "validPipeline456",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "pipeline-id": "",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "pipeline-id": "invalidPipeline!@#",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "pipeline-id": "nonExistentPipeline999",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  }
+]

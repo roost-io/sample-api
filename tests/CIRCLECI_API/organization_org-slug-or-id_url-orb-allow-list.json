@@ -1,0 +1,27 @@
+[
+  {
+    "org-slug-or-id": "valid-org-id",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "org-slug-or-id": "valid-org-id",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "org-slug-or-id": "",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "org-slug-or-id": "invalid-org-id",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "org-slug-or-id": "123456",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  }
+]

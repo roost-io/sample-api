@@ -1,0 +1,51 @@
+[
+  {
+    "project-slug": "example-project",
+    "reporting-window": "last-30-days",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "example-project",
+    "reporting-window": "last-30-days",
+    "branches": [
+      "main",
+      "develop"
+    ],
+    "workflow-names": [
+      "build-and-test",
+      "deploy"
+    ],
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "reporting-window": "last-30-days",
+    "branches": [
+      "main"
+    ],
+    "workflow-names": [
+      "build-and-test"
+    ],
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "invalid-project",
+    "reporting-window": "last-30-days",
+    "branches": [
+      "main"
+    ],
+    "workflow-names": [
+      "build-and-test"
+    ],
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "example-project",
+    "reporting-window": "invalid-window",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  }
+]
