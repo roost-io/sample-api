@@ -1,0 +1,37 @@
+[
+  {
+    "username": "validUser",
+    "password": "validPass123",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "username": "validUser",
+    "password": "validPass123",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "username": "missingPassword",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "username": "",
+    "password": "validPass123",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "username": "invalidUser!",
+    "password": "validPass123",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "username": "notFoundUser",
+    "password": "notFoundPass",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  }
+]
