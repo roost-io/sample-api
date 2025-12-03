@@ -1,0 +1,53 @@
+[
+  {
+    "id": 10,
+    "username": "theUser",
+    "statusCode": 200,
+    "scenario": "Success"
+  },
+  {
+    "id": 11,
+    "username": "theUserTest",
+    "firstName": "John",
+    "lastName": "James",
+    "email": "john@email.com",
+    "password": "12345",
+    "phone": "12345",
+    "userStatus": 1,
+    "statusCode": 200,
+    "scenario": "Success"
+  },
+  {
+    "username": "theUser",
+    "firstName": "John",
+    "lastName": "James",
+    "email": "john@email.com",
+    "password": "12345",
+    "statusCode": "default",
+    "scenario": "Bad Request"
+  },
+  {
+    "id": "invalidId",
+    "username": "theUser",
+    "firstName": "John",
+    "lastName": "James",
+    "email": "john@email.com",
+    "password": "12345",
+    "phone": "12345",
+    "userStatus": 1,
+    "statusCode": "default",
+    "scenario": "Bad Request"
+  },
+  {
+    "id": 12,
+    "username": "nonExistentUser",
+    "firstName": "Jane",
+    "lastName": "Doe",
+    "email": "jane@unknown.com",
+    "password": "password",
+    "phone": "98765",
+    "userStatus": 2,
+    "statusCode": "default",
+    "scenario": "Resource Not Found"
+  }
+]
