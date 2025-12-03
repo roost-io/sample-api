@@ -1,0 +1,67 @@
+[
+  {
+    "id": 10,
+    "petId": 198772,
+    "quantity": 7,
+    "shipDate": "2023-10-15T14:30:00Z",
+    "status": "approved",
+    "complete": true,
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "id": 15,
+    "petId": 198773,
+    "status": "placed",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "petId": 198774,
+    "quantity": 4,
+    "shipDate": "2023-10-16T10:00:00Z",
+    "status": "delivered",
+    "complete": false,
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "id": 20,
+    "petId": 198775,
+    "quantity": 5,
+    "shipDate": "2023-10-17T09:00:00Z",
+    "status": "pending",
+    "complete": true,
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "id": "abc",
+    "petId": 198776,
+    "quantity": 3,
+    "shipDate": "2023-10-18T11:30:00Z",
+    "status": "approved",
+    "complete": true,
+    "statusCode": 422,
+    "scenario": "Client error responses: Unprocessable Entity"
+  },
+  {
+    "id": 25,
+    "petId": 198777,
+    "quantity": 2,
+    "shipDate": "2023-10-19T08:00:00Z",
+    "status": "approved",
+    "complete": "yes",
+    "statusCode": 422,
+    "scenario": "Client error responses: Unprocessable Entity"
+  },
+  {
+    "id": 30,
+    "quantity": 6,
+    "shipDate": "2023-10-20T07:00:00Z",
+    "status": "approved",
+    "complete": false,
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  }
+]
