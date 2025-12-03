@@ -1,0 +1,37 @@
+[
+  {
+    "api_key": "validApiKey123",
+    "petId": 12345,
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "api_key": "validApiKey123",
+    "petId": 12345,
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "api_key": "validApiKey123",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "api_key": "invalidApiKey!",
+    "petId": 12345,
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "api_key": "validApiKey123",
+    "petId": -1,
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "api_key": "validApiKey123",
+    "petId": 99999,
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  }
+]
