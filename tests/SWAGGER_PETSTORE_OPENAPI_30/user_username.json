@@ -1,0 +1,31 @@
+[
+  {
+    "username": "validUser",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "username": "validUserWithOptionalFields",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "username": "",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "username": "nonExistentUser",
+    "statusCode": 404,
+    "scenario": "Client error responses: Not Found"
+  },
+  {
+    "username": 12345,
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  }
+]

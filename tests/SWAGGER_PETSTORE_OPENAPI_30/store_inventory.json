@@ -1,0 +1,32 @@
+[
+  {
+    "field1": "value1",
+    "field2": 123,
+    "statusCode": 200,
+    "scenario": "Success"
+  },
+  {
+    "field1": "value1_optional",
+    "field2": 456,
+    "field3": "optional_value",
+    "statusCode": 200,
+    "scenario": "Success"
+  },
+  {
+    "field2": 789,
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "field1": "invalid_enum",
+    "field2": 1011,
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "field1": "value_not_found",
+    "field2": -1,
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  }
+]
