@@ -1,0 +1,84 @@
+[
+  {
+    "project-slug": "gh/acme-inc/rocket-app",
+    "workflow-name": "build_and_test",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "gh/acme-inc/rocket-app",
+    "workflow-name": "deploy",
+    "reporting-window": "last-30-days",
+    "all-branches": true,
+    "page-token": "cursor_1_a1b2c3",
+    "job-name": "deploy",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "gh/acme-inc/rocket-app",
+    "workflow-name": "nightly",
+    "reporting-window": "last-7-days",
+    "all-branches": false,
+    "branch": "release/1.2.3",
+    "page-token": "cursor_rls_987",
+    "job-name": "package",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "gh/acme-inc/rocket-app",
+    "workflow-name": "build_and_test",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/acme-inc/rocket-app",
+    "workflow-name": "build_and_test",
+    "reporting-window": "last-365-days",
+    "all-branches": true,
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/unknown-org-zzz-404/nope",
+    "workflow-name": "build_and_test",
+    "reporting-window": "last-30-days",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/acme-inc/rocket-app",
+    "workflow-name": "unknown_workflow_404",
+    "reporting-window": "last-90-days",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/acme-inc/rocket-app",
+    "workflow-name": "build_and_test",
+    "reporting-window": "last-24-hours",
+    "page-token": "invalid!token?!",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/bytecraft/data-pipeline",
+    "workflow-name": "ingest",
+    "reporting-window": "last-24-hours",
+    "all-branches": false,
+    "branch": "develop",
+    "job-name": "extract",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "gh/acme-inc/rocket-app",
+    "workflow-name": "build_and_test",
+    "reporting-window": "yesterday",
+    "all-branches": false,
+    "branch": "main",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  }
+]

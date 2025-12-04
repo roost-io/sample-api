@@ -1,0 +1,78 @@
+[
+  {
+    "project-slug": "gh/acme/widget-service",
+    "workflow-name": "build_and_test",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "gh/acme/widget-service",
+    "workflow-name": "build_and_test",
+    "all-branches": true,
+    "page-token": "pg_2b7e15",
+    "start-date": "2025-01-01T00:00:00Z",
+    "end-date": "2025-01-31T23:59:59Z",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "gh/acme/mobile-app",
+    "workflow-name": "deploy_prod",
+    "all-branches": false,
+    "branch": "main",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "gh/open-source/sample-repo",
+    "workflow-name": "nightly_ci",
+    "page-token": "eyJwYWdlIjoyfQ",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "gh/acme/mobile-app",
+    "workflow-name": "deploy_prod",
+    "all-branches": false,
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/acme/widget-service",
+    "workflow-name": "build_and_test",
+    "all-branches": "yes",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/open-source/sample-repo",
+    "workflow-name": "nightly_ci",
+    "start-date": "2025-13-01",
+    "end-date": "2025-02-30",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/unknown-org/unknown-repo",
+    "workflow-name": "non_existent_workflow",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/acme/widget-service",
+    "workflow-name": "build_and_test",
+    "page-token": "!!invalid-token!!",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "bb/acme-inc/legacy-service",
+    "workflow-name": "smoke_tests",
+    "all-branches": false,
+    "branch": "release/2025.12",
+    "start-date": "2025-11-01T00:00:00Z",
+    "end-date": "2025-12-01T00:00:00Z",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  }
+]

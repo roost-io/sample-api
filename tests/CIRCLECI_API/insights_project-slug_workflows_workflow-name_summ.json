@@ -1,0 +1,58 @@
+[
+  {
+    "project-slug": "gh/ci-samples/sample-node",
+    "workflow-name": "build_and_test",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "gh/ci-samples/sample-node",
+    "workflow-name": "deploy",
+    "branch": "main",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "gh/acme-org/monorepo",
+    "workflow-name": "nightly_pipeline",
+    "all-branches": true,
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "gh/nonexistent-org/nonexistent-repo",
+    "workflow-name": "build_and_test",
+    "branch": "main",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/acme-org/monorepo",
+    "workflow-name": "unknown_workflow",
+    "all-branches": true,
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "bb/acme-inc/legacy-app",
+    "workflow-name": "deploy",
+    "branch": "develop",
+    "all-branches": true,
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/ci-samples/sample-node",
+    "workflow-name": "build_and_test",
+    "branch": "feature/invalid space",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/acme-org/monorepo",
+    "workflow-name": "nightly_pipeline",
+    "branch": "feature/very-long-branch-name-for-validation-purposes-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  }
+]

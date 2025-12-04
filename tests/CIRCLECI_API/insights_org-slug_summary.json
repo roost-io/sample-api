@@ -1,0 +1,91 @@
+[
+  {
+    "org-slug": "acme-inc",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "org-slug": "acme-inc",
+    "reporting-window": "last-30-days",
+    "project-names": {
+      "include": [
+        "api-preview-docs",
+        "mobile-app"
+      ],
+      "exclude": [
+        "legacy-lib"
+      ]
+    },
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "org-slug": "devops-labs",
+    "reporting-window": "last-7-days",
+    "project-names": {
+      "include": [
+        "api-service",
+        "web-frontend"
+      ]
+    },
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "org-slug": "octo-org",
+    "project-names": {
+      "include": [
+        "cli",
+        "docs"
+      ]
+    },
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "org-slug": "acme-inc",
+    "reporting-window": "last-13-days",
+    "project-names": {
+      "include": [
+        "api-preview-docs"
+      ]
+    },
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "org-slug": "does-not-exist-404",
+    "reporting-window": "last-30-days",
+    "project-names": {
+      "include": [
+        "api-service"
+      ]
+    },
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "org-slug": "devops-labs",
+    "reporting-window": "last-90-days",
+    "project-names": {
+      "include": "single-project"
+    },
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "org-slug": "data-wizards",
+    "reporting-window": "last-24-hours",
+    "project-names": {
+      "include": [
+        "etl-pipeline",
+        "ml-platform"
+      ],
+      "exclude": [
+        "deprecated-service"
+      ]
+    },
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  }
+]

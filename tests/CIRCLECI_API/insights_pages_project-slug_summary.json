@@ -1,0 +1,101 @@
+[
+  {
+    "project-slug": "gh/acme/cool-app",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "gh/acme/cool-app",
+    "reporting-window": "last-30-days",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "gh/example/monorepo",
+    "reporting-window": "last-90-days",
+    "branches": {
+      "include": [
+        "main",
+        "develop",
+        "release/1.2.0"
+      ]
+    },
+    "workflow-names": {
+      "include": [
+        "build-and-test",
+        "deploy",
+        "lint"
+      ]
+    },
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "bb/contoso/backend-service",
+    "branches": {
+      "include": [
+        "main",
+        "release/*"
+      ]
+    },
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "gh/acme/cool-app",
+    "branches": {
+      "include": [
+        "feature/new-ui"
+      ]
+    },
+    "workflow-names": {
+      "include": [
+        "integration-tests"
+      ]
+    },
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/example/monorepo",
+    "reporting-window": "past-13-days",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "invalid-format-slug",
+    "reporting-window": "last-30-days",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/unknown-org/unknown-repo",
+    "reporting-window": "last-7-days",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/sample/cli-tool",
+    "reporting-window": "last-30-days",
+    "branches": {
+      "includes": [
+        "main",
+        "hotfix/urgent-123"
+      ]
+    },
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/data/analytics-pipeline",
+    "reporting-window": "last-90-days",
+    "workflow-names": {
+      "include": [
+        "non-existent-workflow",
+        "typoed-workflow"
+      ]
+    },
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  }
+]
