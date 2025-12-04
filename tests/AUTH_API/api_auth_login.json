@@ -1,0 +1,72 @@
+[
+  {
+    "email": "user@example.com",
+    "password": "StrongPassw0rd!",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "email": "admin@contoso.io",
+    "password": "Adm1n#Secure#2025",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "password": "NoEmailButPass123!",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "email": "missing.password@example.com",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "email": "invalid-email",
+    "password": "ValidLikePass123!",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "email": "short.pass@example.com",
+    "password": "123",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "email": "unknown.user@nomail.zzz",
+    "password": "WrongPassword!234",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "email": "user@example.com",
+    "password": "' OR '1'='1",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "email": "super.long.username.with.many.parts.and.dots.and.plus+aliasing.for.testing.purposes.2025.12.04@very-long-subdomain.example-verylongdomain-name.co",
+    "password": "LongEmailPass123!",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "email": "john.doe+login@test-mail.org",
+    "password": "S3curePass!@#2025",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "email": "space.trailing@example.com ",
+    "password": "SpaceyPass123!",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "email": "bad email@example.com",
+    "password": "PassWith Spaces123!",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  }
+]
