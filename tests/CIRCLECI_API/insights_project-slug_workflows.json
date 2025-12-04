@@ -1,0 +1,58 @@
+[
+  {
+    "project-slug": "gh/acme/api-service",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "gh/acme/api-service",
+    "page-token": "cjp.eyJwYWdlIjoxfQ",
+    "all-branches": true,
+    "reporting-window": "last-30-days",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "gh/foocorp/monorepo",
+    "all-branches": false,
+    "branch": "develop",
+    "reporting-window": "last-7-days",
+    "page-token": "cjp.eyJwYWdlIjoyfQ",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "gh/foocorp/monorepo",
+    "all-branches": false,
+    "reporting-window": "last-24-hours",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/acme/api-service",
+    "reporting-window": "last-90-days",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/unknown-org/nonexistent-repo",
+    "reporting-window": "last-30-days",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/acme/api-service",
+    "page-token": "invalid.token.value",
+    "reporting-window": "last-7-days",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/acme/api-service",
+    "all-branches": true,
+    "branch": "feature/refactor-ci",
+    "reporting-window": "since-2020-01-01",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  }
+]

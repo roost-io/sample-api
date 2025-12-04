@@ -1,0 +1,45 @@
+[
+  {
+    "project-slug": "gh/acme-inc/mobile-app",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "bb/contoso/api-service",
+    "workflow-name": "build_and_test",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "acme-inc/mobile-app",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/ghost-org/vanished-repo",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/acme-inc/mobile-app",
+    "workflow-name": "💥invalid-workflow%%",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "bb/contoso/api-service",
+    "workflow-name": "nonexistent_workflow_123",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gl/acme-inc/mobile-app",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/acme-inc",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  }
+]

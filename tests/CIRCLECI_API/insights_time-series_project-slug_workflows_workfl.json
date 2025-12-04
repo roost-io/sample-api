@@ -1,0 +1,92 @@
+[
+  {
+    "project-slug": "gh/acme/widgets-api",
+    "workflow-name": "build-and-test",
+    "granularity": "day",
+    "start-date": "2024-09-01T00:00:00Z",
+    "end-date": "2024-10-01T00:00:00Z",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "gh/acme/widgets-api",
+    "workflow-name": "deploy",
+    "branch": "main",
+    "granularity": "hour",
+    "start-date": "2024-10-01T00:00:00Z",
+    "end-date": "2024-10-08T00:00:00Z",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "gh/acme/widgets-api",
+    "workflow-name": "build-and-test",
+    "start-date": "2024-10-01T00:00:00Z",
+    "end-date": "2024-10-08T00:00:00Z",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/acme/widgets-api",
+    "workflow-name": "build-and-test",
+    "granularity": "minute",
+    "start-date": "2024-10-01T00:00:00Z",
+    "end-date": "2024-10-08T00:00:00Z",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gl/acme/widgets-api",
+    "workflow-name": "build-and-test",
+    "granularity": "day",
+    "start-date": "2024-10-01T00:00:00Z",
+    "end-date": "2024-10-08T00:00:00Z",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/acme/widgets-api",
+    "workflow-name": "build-and-test",
+    "granularity": "day",
+    "start-date": "2024/10/01",
+    "end-date": "2024/10/08",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/acme/widgets-api",
+    "workflow-name": "build-and-test",
+    "granularity": "day",
+    "start-date": "2024-10-10T00:00:00Z",
+    "end-date": "2024-10-01T00:00:00Z",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/acme/mobile-app",
+    "workflow-name": "release",
+    "branch": "feature/login",
+    "granularity": "day",
+    "start-date": "2024-08-01T00:00:00Z",
+    "end-date": "2024-09-01T00:00:00Z",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "project-slug": "gh/acme/mobile-app",
+    "workflow-name": "release",
+    "granularity": "hour",
+    "end-date": "2024-09-01T00:00:00Z",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  },
+  {
+    "project-slug": "gh/acme/widgets-api",
+    "workflow-name": "nonexistent-workflow",
+    "granularity": "day",
+    "start-date": "2024-10-01T00:00:00Z",
+    "end-date": "2024-10-08T00:00:00Z",
+    "statusCode": "default",
+    "scenario": "Unknown response class"
+  }
+]
