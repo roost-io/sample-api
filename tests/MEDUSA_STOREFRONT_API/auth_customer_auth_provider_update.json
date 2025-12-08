@@ -1,0 +1,62 @@
+[
+  {
+    "auth_provider": "emailpassword",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "auth_provider": "auth0",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "auth_provider": "invalid provider!",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "auth_provider": "google",
+    "statusCode": 401,
+    "scenario": "Client error responses: Unauthorized"
+  },
+  {
+    "auth_provider": "twitter",
+    "statusCode": 404,
+    "scenario": "Client error responses: Not Found"
+  },
+  {
+    "auth_provider": "line",
+    "statusCode": 404,
+    "scenario": "Client error responses: Not Found"
+  },
+  {
+    "auth_provider": "apple",
+    "statusCode": 409,
+    "scenario": "Client error responses: Conflict"
+  },
+  {
+    "auth_provider": "emailpassword",
+    "statusCode": 422,
+    "scenario": "Client error responses: Unprocessable Entity"
+  },
+  {
+    "auth_provider": "facebook",
+    "statusCode": 500,
+    "scenario": "Server error responses: Internal Server Error"
+  },
+  {
+    "auth_provider": "github",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "auth_provider": "okta",
+    "statusCode": 409,
+    "scenario": "Client error responses: Conflict"
+  },
+  {
+    "auth_provider": "saml",
+    "statusCode": 422,
+    "scenario": "Client error responses: Unprocessable Entity"
+  }
+]
