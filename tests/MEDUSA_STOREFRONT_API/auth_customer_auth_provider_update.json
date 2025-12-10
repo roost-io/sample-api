@@ -1,0 +1,52 @@
+[
+  {
+    "auth_provider": "email",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "auth_provider": "google",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  },
+  {
+    "auth_provider": "tw1tter!",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "auth_provider": "github",
+    "statusCode": 401,
+    "scenario": "Client error responses: Unauthorized"
+  },
+  {
+    "auth_provider": "unknown",
+    "statusCode": 404,
+    "scenario": "Client error responses: Not Found"
+  },
+  {
+    "auth_provider": "facebook",
+    "statusCode": 409,
+    "scenario": "Client error responses: Conflict"
+  },
+  {
+    "auth_provider": "apple",
+    "statusCode": 422,
+    "scenario": "Client error responses: Unprocessable Entity"
+  },
+  {
+    "auth_provider": "linkedin",
+    "statusCode": 500,
+    "scenario": "Server error responses: Internal Server Error"
+  },
+  {
+    "auth_provider": " ",
+    "statusCode": 400,
+    "scenario": "Client error responses: Bad Request"
+  },
+  {
+    "auth_provider": "azure_ad",
+    "statusCode": 200,
+    "scenario": "Successful responses: OK"
+  }
+]
