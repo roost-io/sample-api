@@ -1,0 +1,6 @@
+METHOD^|^URL^|^REQ_HEADERS^|^REQ_BODY^|^RESPONSE_CODE^|^RESPONSE_BODY
+GET^|^http://api.example.com/session-instance-view?event=testsimplesession^|^{}^|^{}^|^200^|^{
+    "status": "Success",
+    "message": "Retrieving session instance view for event [testsimplesession]",
+    "data": {}
+}

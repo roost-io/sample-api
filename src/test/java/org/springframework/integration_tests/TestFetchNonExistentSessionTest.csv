@@ -1,0 +1,4 @@
+METHOD^|^URL^|^REQ_HEADERS^|^REQ_BODY^|^RESPONSE_CODE^|^RESPONSE_BODY
+GET^|^/sessions/R64EKX5RG32U^|^{}^|^{}^|^404^|^{
+    "error": "Session with ID R64EKX5RG32U not found"
+}

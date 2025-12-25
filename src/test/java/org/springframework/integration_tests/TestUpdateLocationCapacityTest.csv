@@ -1,0 +1,8 @@
+METHOD^|^URL^|^REQ_HEADERS^|^REQ_BODY^|^RESPONSE_CODE^|^RESPONSE_BODY
+PUT^|^/api/location/UCLocation-HBER8FXU0J/capacity?value=20^|^{}^|^{
+    "locationId": "UCLocation-HBER8FXU0J",
+    "newCapacity": 20
+}^|^200^|^{
+    "status": "Success",
+    "message": "Capacity updated successfully"
+}

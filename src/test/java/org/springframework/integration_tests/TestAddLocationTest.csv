@@ -1,0 +1,19 @@
+METHOD^|^URL^|^REQ_HEADERS^|^REQ_BODY^|^RESPONSE_CODE^|^RESPONSE_BODY
+POST^|^http://api.example.com/location^|^{ "Content-Type": "application/json" }^|^{
+    "locationId": "UCLocation-HBER8FXU0J",
+    "name": "New Location",
+    "address": {
+        "street": "123 Main St",
+        "city": "Anytown",
+        "state": "CA",
+        "zip": "12345"
+    },
+    "coordinates": {
+        "latitude": 34.0522,
+        "longitude": -118.2437
+    }
+}^|^201^|^{
+    "status": "Success",
+    "message": "Location added successfully",
+    "locationId": "UCLocation-HBER8FXU0J"
+}
