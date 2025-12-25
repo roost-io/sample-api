@@ -1,0 +1,11 @@
+RequestBody^|^statusCode
+{'name':'John Doe', 'email':'john.doe@example.com', 'password':'password123'}^|^200
+{'name':'Jane Doe', 'email':'jane.doe@example.com', 'password':'password123'}^|^200
+{'name':'Jim Doe', 'email':'jim.doe@example.com', 'password':'password123'}^|^200
+{'name':'Jill Doe', 'email':'jill.doe@example.com', 'password':'password123'}^|^200
+{'name':'Jack Doe', 'email':'jack.doe@example.com', 'password':'password123'}^|^200
+{'name':'Jerry Doe', 'email':'jerry.doe@example.com', 'password':'password123'}^|^400
+{'name':'Jessica Doe', 'email':'jessica.doe@example.com', 'password':'password123'}^|^400
+{'name':'Jennifer Doe', 'email':'jennifer.doe@example.com', 'password':'password123'}^|^400
+{'name':'Joey Doe', 'email':'joey.doe@example.com', 'password':'password123'}^|^400
+{'name':'Jeffrey Doe', 'email':'jeffrey.doe@example.com', 'password':'password123'}^|^400

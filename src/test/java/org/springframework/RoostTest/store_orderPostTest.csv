@@ -1,0 +1,11 @@
+id^|^petId^|^quantity^|^shipDate^|^status^|^complete^|^RequestBody^|^statusCode
+1^|^101^|^2^|^2022-01-01^|^placed^|^false^|^{"type": "Dog", "name": "Buddy"}^|^200
+2^|^102^|^1^|^2022-01-02^|^approved^|^true^|^{"type": "Cat", "name": "Whiskers"}^|^200
+3^|^103^|^3^|^2022-01-03^|^delivered^|^true^|^{"type": "Bird", "name": "Tweety"}^|^200
+4^|^104^|^2^|^2022-01-04^|^placed^|^false^|^{"type": "Fish", "name": "Goldie"}^|^200
+5^|^105^|^1^|^2022-01-05^|^approved^|^true^|^{"type": "Dog", "name": "Rex"}^|^200
+6^|^106^|^3^|^2022-01-06^|^delivered^|^true^|^{"type": "Cat", "name": "Mittens"}^|^200
+7^|^107^|^2^|^2022-01-07^|^placed^|^false^|^{"type": "Bird", "name": "Polly"}^|^200
+8^|^108^|^1^|^2022-01-08^|^approved^|^true^|^{"type": "Fish", "name": "Bubbles"}^|^200
+9^|^109^|^3^|^2022-01-09^|^delivered^|^true^|^{"type": "Dog", "name": "Spot"}^|^200
+10^|^110^|^2^|^2022-01-10^|^placed^|^false^|^{"type": "Cat", "name": "Shadow"}^|^200
