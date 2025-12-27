@@ -1,0 +1,4 @@
+code,customerId,statusCode,scenario
+1234,1045300,200,OTP verifid successfully
+1234,1045300,401,Error: Authorisation failed
+1234,1045300,404,Error: Not Found
