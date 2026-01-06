@@ -1,0 +1,29 @@
+Agent SSO login with MFA, language switch, RBAC menu enforcement and UI masking
+Idle timeout redirects to login and expired token reuse is denied
+Account lockout after 5 failed password attempts shows generic message and audits
+RBAC menu API returns allowed tiles by role
+Outside Bank transfer - create, dual approvals, File 15/1051/1052 processing and duplicate SA suppression
+Equity Buy - self-transaction prevention and maker limit exceeded authorization path
+Foreign SELL restated to average price at EOD with SEC/TAF and duplicate broker file suppression
+MF purchase lifecycle with auto price correction and after cut-off offline handling
+Manual match passes within tolerance and blocks on instrument mismatch or tolerance exceed
+Tax Simulation returns results and optional Sell places an order; errors are secure
+Within Bank transfer - multiple beneficiaries percent split validation and settlement
+ETF path alert forces selection; Equity and Funds paths diverge on fees and lifecycle
+ETF path alert cannot be bypassed via deep link
+Extranet trade - blocks, 1051 mismatch, BO capture, block release, 1052 settlement and duplicate suppression
+Executed order amendment - dual approvals, reversal and reposting with correction portfolio
+Custody fee daily accrual and quarterly posting with exemptions and caps
+Market data entitlement enforcement and indicators per agent profile
+Attempt to force live market data via API is blocked and audited
+Position recon detects, ages, repairs; duplicate file ingestion suppressed; auditor read-only enforced
+File 32 and 1091 ingestion, reconciliation or extract, duplicate suppression and malformed alert
+ADR/GDR conversion legs linked by External Reference 2 and settled via 1052
+Outside Bank transfer with 'Transfer without Identification' tax event and zero-cost lots
+POA maker requires supervisor approval before execution
+Customer authentication for multiple service modes and invalid/throttled attempts
+Throttle after 3 invalid authentication attempts
+Call Center denies Third Party Transfer initiation for foreign holdings (BO-only)
+BO creates Third Party Delivery Out/In, approves and settles without TASE files; report generated
+Fractional full-sell transit deal created at EOD and settled via 1052; duplicate SA suppressed
+1054 failures and pending - create blocks, cancel or settle, alert on malformed, suppress duplicates
