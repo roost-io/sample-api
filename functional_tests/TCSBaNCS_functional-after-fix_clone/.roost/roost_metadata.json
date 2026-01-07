@@ -1,0 +1,29 @@
+{
+  "project": {
+    "name": "TCSBaNCS_functional-after-fix_clone",
+    "created_at": "2026-01-07T06:47:29.403Z",
+    "updated_at": "2026-01-07T06:47:29.403Z"
+  },
+  "files": {
+    "input_files": [
+      {
+        "fileName": "TCSBaNCS_functional-after-fix_clone.txt",
+        "fileURI": "/var/tmp/Roost/RoostGPT/TCSBaNCS_functional-after-fix_clone/c0b76230-ee8c-42c7-8d70-5705123405d1/functional_tests/TCSBaNCS_functional-after-fix_clone/TCSBaNCS_functional-after-fix_clone.txt",
+        "fileSha": "cf83e1357e"
+      },
+      {
+        "fileName": "tcsdoc1.docx",
+        "fileURI": "/var/tmp/Roost/RoostGPT/TCSBaNCS_functional-after-fix_clone/c0b76230-ee8c-42c7-8d70-5705123405d1/functional_tests/TCSBaNCS_functional-after-fix_clone/tcsdoc1.docx",
+        "fileSha": "2cd5271236"
+      },
+      {
+        "fileName": "tcsdoc2.docx",
+        "fileURI": "/var/tmp/Roost/RoostGPT/TCSBaNCS_functional-after-fix_clone/c0b76230-ee8c-42c7-8d70-5705123405d1/functional_tests/TCSBaNCS_functional-after-fix_clone/tcsdoc2.docx",
+        "fileSha": "55a242034e"
+      }
+    ]
+  },
+  "api_files": {
+    "input_files": []
+  }
+}

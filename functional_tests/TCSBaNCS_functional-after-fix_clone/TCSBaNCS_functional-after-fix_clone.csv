@@ -1,0 +1,29 @@
+Place a local TASE equity Buy via Call Centre and authorize
+TASE Buy lifecycle - executions, 1051/1052 recon, OD-SA matching under tolerance and idempotence
+Foreign Equity Sell - broker cancel-and-average rebook, fees segregation, T+1 settlement and FX
+UI - Security Transfer Outside Bank with relatives split and maker-checker
+Transfer Outside Bank - File 15 to 1051 recon to 1052 settlement and lots movement
+Mutual Fund purchase with auto price correction via 1051 Reverse and Reallocate
+UI - Order Amendment on executed local equity with reversal and rebook
+API - Verify amendment reversal and rebook postings and idempotence
+Market Data entitlement matrix enforcement for Live vs Delayed
+Self-transaction prevention across portfolios at BP-level with price logic
+1054 Failed/Pending settlement handling with manual blocks and cancellation
+Fractional orders batch settlement with transit deals and average price computation
+Custody fee daily accrual recompute and quarterly application with messaging
+Instrument setup and type mapping - Makam and Foreign ETF CRUD validations
+Market Information rates - automated feed, errors, manual entries, CPI and lock override
+UI - Extranet off-floor pre-blocks and manual capture authorization
+API - Extranet recon and settlement with duplicate capture prevention
+Incoming Security Transfer via File 132 - To Be Repaired to settlement
+Delivery In/Out - ADR to Local security conversion with linked legs
+POA restriction - Call Centre blocked, Front Office allowed
+Pending order modification/cancellation matrix with disclosed qty and nostro cutoff
+Positions reconciliation EOD - TASE 1053, APEX 871 and Tax Engine with ageing
+Regulatory commission and fee reporting with SELL-only third-party handling and publication
+Within-bank Securities Transfer - Virtual Sell with MU restriction and CA ex-date block
+UI - MF manual price correction (Reverse and Reallocate) and recompute
+TASE Net Settlement 32 and 1091 - store-only ingestion, recon toggle and late arrival
+Distribution fee daily accrual and month-end packets with Kafka events
+Third Party Transfers (Foreign custodian) - Delivery Out/In with reporting and manual settlement
+FO daily re-placement for GFM At the Opening Stoplimit across days to expiry
