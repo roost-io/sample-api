@@ -1,0 +1,34 @@
+{
+  "project": {
+    "name": "TCSBaNCS_functional-after-fix",
+    "created_at": "2026-01-11T05:31:55.445Z",
+    "updated_at": "2026-01-11T05:31:55.445Z"
+  },
+  "files": {
+    "input_files": [
+      {
+        "fileName": "TCSBaNCS_functional-after-fix.txt",
+        "fileURI": "/var/tmp/Roost/RoostGPT/TCSBaNCS_functional-after-fix/12043b8c-5ab1-4ec8-8e64-5209df53a436/functional_tests/TCSBaNCS_functional-after-fix/TCSBaNCS_functional-after-fix.txt",
+        "fileSha": "cf83e1357e"
+      },
+      {
+        "fileName": "bankspromot.txt",
+        "fileURI": "/var/tmp/Roost/RoostGPT/TCSBaNCS_functional-after-fix/12043b8c-5ab1-4ec8-8e64-5209df53a436/functional_tests/TCSBaNCS_functional-after-fix/bankspromot.txt",
+        "fileSha": "0664b099ba"
+      },
+      {
+        "fileName": "TCSBaNCS_ST_BSSB_FSD_CallCenterOperator_v14.2.docx",
+        "fileURI": "/var/tmp/Roost/RoostGPT/TCSBaNCS_functional-after-fix/12043b8c-5ab1-4ec8-8e64-5209df53a436/functional_tests/TCSBaNCS_functional-after-fix/TCSBaNCS_ST_BSSB_FSD_CallCenterOperator_v14.2.docx",
+        "fileSha": "55a242034e"
+      },
+      {
+        "fileName": "TCS BaNCS-Functional Specifications-Securities Back Office Processing-v1.8.1.docx",
+        "fileURI": "/var/tmp/Roost/RoostGPT/TCSBaNCS_functional-after-fix/12043b8c-5ab1-4ec8-8e64-5209df53a436/functional_tests/TCSBaNCS_functional-after-fix/TCS BaNCS-Functional Specifications-Securities Back Office Processing-v1.8.1.docx",
+        "fileSha": "2cd5271236"
+      }
+    ]
+  },
+  "api_files": {
+    "input_files": []
+  }
+}
