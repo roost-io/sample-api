@@ -1,0 +1,6 @@
+"Scenario: Agent Login with SSO and MFA"
+"Scenario Outline: Supervisor Role-Based Access Control"
+"Scenario Outline: Customer Identity Verification via OTP"
+"Scenario Outline: Access Control on Transaction Handling by Agents"
+"Scenario Outline: Secure Password Reset Process"
+"Scenario Outline: Fraudulent Transaction Alerts and Blocking"

@@ -1,0 +1,24 @@
+{
+  "project": {
+    "name": "roost_test_1768113016",
+    "created_at": "2026-01-11T06:31:48.279Z",
+    "updated_at": "2026-01-11T06:31:48.279Z"
+  },
+  "files": {
+    "input_files": [
+      {
+        "fileName": "roost_test_1768113016.txt",
+        "fileURI": "/var/tmp/Roost/RoostGPT/TCSBaNCS_functional-after-fix/1768113016/functional_tests/roost_test_1768113016/roost_test_1768113016.txt",
+        "fileSha": "cf83e1357e"
+      },
+      {
+        "fileName": "bankspromot.txt",
+        "fileURI": "/var/tmp/Roost/RoostGPT/TCSBaNCS_functional-after-fix/1768113016/functional_tests/roost_test_1768113016/bankspromot.txt",
+        "fileSha": "14a19da7ed"
+      }
+    ]
+  },
+  "api_files": {
+    "input_files": []
+  }
+}
