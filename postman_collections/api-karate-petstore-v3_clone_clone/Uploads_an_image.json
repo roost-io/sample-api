@@ -1,0 +1,32 @@
+[
+  {
+    "additionalMetadata": "Details about the pet operation",
+    "petId": 12345,
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "additionalMetadata": "",
+    "petId": 0,
+    "statusCode": 400,
+    "scenario": "No file uploaded"
+  },
+  {
+    "additionalMetadata": "Nonexistent metadata",
+    "petId": 999999999999,
+    "statusCode": 404,
+    "scenario": "Pet not found"
+  },
+  {
+    "additionalMetadata": "Unexpected system failure metadata",
+    "petId": "invalid_pet_id",
+    "statusCode": 500,
+    "scenario": "Unexpected error"
+  },
+  {
+    "additionalMetadata": "Operation completion notes",
+    "petId": 54321,
+    "statusCode": 200,
+    "scenario": "successful operation"
+  }
+]

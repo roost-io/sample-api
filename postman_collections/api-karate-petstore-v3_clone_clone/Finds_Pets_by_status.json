@@ -1,0 +1,27 @@
+[
+  {
+    "status": "available",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "status": "pending",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "status": "sold",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "status": "invalid_status",
+    "statusCode": 400,
+    "scenario": "Invalid status value"
+  },
+  {
+    "status": "unexpected_status",
+    "statusCode": 500,
+    "scenario": "Unexpected error"
+  }
+]

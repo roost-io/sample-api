@@ -1,0 +1,27 @@
+[
+  {
+    "petId": 123456,
+    "statusCode": 200,
+    "scenario": "Pet deleted"
+  },
+  {
+    "petId": 789012,
+    "statusCode": 200,
+    "scenario": "Pet deleted"
+  },
+  {
+    "petId": "invalid_pet_id",
+    "statusCode": 400,
+    "scenario": "Invalid pet value"
+  },
+  {
+    "petId": -45678,
+    "statusCode": 400,
+    "scenario": "Invalid pet value"
+  },
+  {
+    "petId": null,
+    "statusCode": 500,
+    "scenario": "Unexpected error"
+  }
+]
