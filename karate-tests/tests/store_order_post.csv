@@ -1,0 +1,3 @@
+id,petId,quantity,shipDate,status,complete
+"10","198772","7","2023-10-10T12:00:00Z","approved","true"
+"20","198773","5","null","placed","false"

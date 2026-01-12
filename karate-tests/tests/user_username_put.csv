@@ -1,0 +1,2 @@
+username,id,usernamePayload,firstName,lastName,email,password,phone,userStatus
+"sampleUser","10","theUser","John","James","john@email.com","12345","12345","[1]"

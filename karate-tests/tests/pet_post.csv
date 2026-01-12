@@ -1,0 +1,3 @@
+id,name,categoryId,categoryName,photoUrls,tags,status
+"10","doggie","1","Dogs","['url1', 'url2']","[{'id': 100, 'name': 'Friendly'}]","available"
+"20","kitty","2","Cats","['cat_url1', 'cat_url2']","[{'id': 200, 'name': 'Playful'}]","pending"
