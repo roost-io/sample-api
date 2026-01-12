@@ -1,0 +1,32 @@
+[
+  {
+    "username": "validUser123",
+    "body": {},
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "username": "invalidUser!@#",
+    "body": {},
+    "statusCode": 400,
+    "scenario": "Invalid username supplied"
+  },
+  {
+    "username": "nonExistentUser",
+    "body": {},
+    "statusCode": 404,
+    "scenario": "User not found"
+  },
+  {
+    "username": "anotherValidUser",
+    "body": {},
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "username": "userWithInvalidChars$$",
+    "body": {},
+    "statusCode": 400,
+    "scenario": "Invalid username supplied"
+  }
+]

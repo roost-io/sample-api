@@ -1,0 +1,35 @@
+[
+  {
+    "body": null,
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "body": {
+      "invalid": "data"
+    },
+    "statusCode": 400,
+    "scenario": "Bad Request"
+  },
+  {
+    "body": {
+      "unexpected": "value"
+    },
+    "statusCode": 500,
+    "scenario": "Internal Server Error"
+  },
+  {
+    "body": {
+      "error": "not found"
+    },
+    "statusCode": 404,
+    "scenario": "Not Found"
+  },
+  {
+    "body": {
+      "error": "unauthorized"
+    },
+    "statusCode": 401,
+    "scenario": "Unauthorized"
+  }
+]

@@ -1,0 +1,30 @@
+[
+  {
+    "responseBody": null,
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "responseBody": "invalid_response",
+    "statusCode": 400,
+    "scenario": "Bad Request"
+  },
+  {
+    "responseBody": 12345,
+    "statusCode": 500,
+    "scenario": "Internal Server Error"
+  },
+  {
+    "responseBody": false,
+    "statusCode": 404,
+    "scenario": "Not Found"
+  },
+  {
+    "responseBody": [
+      "unexpected",
+      "array"
+    ],
+    "statusCode": 403,
+    "scenario": "Forbidden"
+  }
+]
