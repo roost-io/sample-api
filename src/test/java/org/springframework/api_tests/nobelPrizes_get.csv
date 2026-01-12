@@ -1,0 +1,11 @@
+offset,limit,sort,nobelPrizeYear,nobelPrizeCategory,format,offset,limit,sort,nobelPrizeYear,nobelPrizeCategory,format
+1,10,"[\"asc\", \"desc\"]",1901,"che","json",2,20,"[\"asc\", \"desc\"]",1905,"lit","csv"
+3,30,"[\"asc\", \"desc\"]",1909,"pea","json",4,40,"[\"asc\", \"desc\"]",1913,"phy","csv"
+5,50,"[\"asc\", \"desc\"]",1917,"med","json",6,60,"[\"asc\", \"desc\"]",1921,"eco","csv"
+7,70,"[\"asc\", \"desc\"]",1925,"che","json",8,80,"[\"asc\", \"desc\"]",1929,"lit","csv"
+9,90,"[\"asc\", \"desc\"]",1933,"pea","json",10,100,"[\"asc\", \"desc\"]",1937,"phy","csv"
+11,110,"[\"asc\", \"desc\"]",1941,"med","json",12,120,"[\"asc\", \"desc\"]",1945,"eco","csv"
+13,130,"[\"asc\", \"desc\"]",1949,"che","json",14,140,"[\"asc\", \"desc\"]",1953,"lit","csv"
+15,150,"[\"asc\", \"desc\"]",1957,"pea","json",16,160,"[\"asc\", \"desc\"]",1961,"phy","csv"
+17,170,"[\"asc\", \"desc\"]",1965,"med","json",18,180,"[\"asc\", \"desc\"]",1969,"eco","csv"
+19,190,"[\"asc\", \"desc\"]",1973,"che","json",20,200,"[\"asc\", \"desc\"]",1977,"lit","csv"
