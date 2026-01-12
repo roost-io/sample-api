@@ -1,0 +1,11 @@
+RequestBody^|^statusCode
+{ "id": "1", "name": "John Doe", "email": "john.doe@example.com" }^|^200
+{ "id": "2", "name": "Jane Doe", "email": "jane.doe@example.com" }^|^201
+{ "id": "3", "name": "Mark Johnson", "email": "mark.johnson@example.com" }^|^404
+{ "id": "4", "name": "Emma Smith", "email": "emma.smith@example.com" }^|^500
+{ "id": "5", "name": "Oliver Williams", "email": "oliver.williams@example.com" }^|^200
+{ "id": "6", "name": "Sophia Taylor", "email": "sophia.taylor@example.com" }^|^403
+{ "id": "7", "name": "Michael Brown", "email": "michael.brown@example.com" }^|^200
+{ "id": "8", "name": "Emily Davis", "email": "emily.davis@example.com" }^|^201
+{ "id": "9", "name": "Jacob Miller", "email": "jacob.miller@example.com" }^|^404
+{ "id": "10", "name": "Ava Wilson", "email": "ava.wilson@example.com" }^|^500
