@@ -1,0 +1,3 @@
+offset,limit,sort,nobelPrizeYear,nobelPrizeCategory
+"0","10","asc","2020","phy"
+"5","5","desc","2019","chem"
