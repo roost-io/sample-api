@@ -1,0 +1,2 @@
+Authorization,botId,accountId,requestBody
+"Bearer valid_token","bot123","acc456","""[{"accountName": "Joint With Son", "accountNumber": "1043693", "customerId": 1045300, "description": "Duplicate", "estimation": 1, "modifyDate": 1656044640526, "requestDate": 1651343400000, "requestId": "123455", "requestSubType": "Account Closure", "serviceType": "Service Request", "status": "In Progress"}]"""

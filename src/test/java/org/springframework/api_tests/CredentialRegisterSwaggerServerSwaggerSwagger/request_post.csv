@@ -1,0 +1,2 @@
+accountName,accountNumber,customerId,cardNumber,description,requestSubType,requestType,serviceType
+"Joint","1042345","1045300","12345678901690","request for paper statement","Stamped Paper Statement","Statement","Service Request"

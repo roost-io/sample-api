@@ -1,0 +1,3 @@
+project-slug,workflow-name,branch,all-branches
+"gh/CircleCI-Public/api-preview-docs","build-and-test","main","false"
+"gh/CircleCI-Public/api-preview-docs","build-and-test","","true"

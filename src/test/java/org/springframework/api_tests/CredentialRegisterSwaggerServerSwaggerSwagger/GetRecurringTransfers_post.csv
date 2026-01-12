@@ -1,0 +1,2 @@
+Authorization,botId,accountId,customerId,status
+"Bearer token","bot123","acc456","1045304","Pending"

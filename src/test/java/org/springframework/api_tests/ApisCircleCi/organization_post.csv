@@ -1,0 +1,4 @@
+name,vcs_type
+"TestOrg1","github"
+"TestOrg2","bitbucket"
+"TestOrg3","circleci"

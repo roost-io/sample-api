@@ -1,0 +1,2 @@
+customerId,amount,currency,sourceAccountId,targetAccountId,transactionType,dueDate
+"1045304","300","USD","1045302","1042224","1053",2021

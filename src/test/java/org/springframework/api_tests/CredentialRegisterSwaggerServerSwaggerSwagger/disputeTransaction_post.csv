@@ -1,0 +1,2 @@
+customerId,emailId,transactionId,reasonCode,Authorization,botId,accountId
+"1045300","John@yahoo.com","12345","UIDENTF-CHRG","authToken","bot1","account1"
