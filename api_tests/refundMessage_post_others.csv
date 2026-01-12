@@ -1,0 +1,11 @@
+headerVersion,timestamp,sourceId,applicationId,transactionId,messageContentType,messageContentEncoding,payloadHashValue,hashingAlgorithm,augmentationKey,augmentationValue,remark,documentNumber,issuanceDate,refundIndicator,refundUID,relatedRefundUID,oadCode,cityPointOfSale,areaPointOfSale,countryPointOfSale,issuerSystem
+1.0,2021-12-01T01:01:01Z,SRC123,APP456,TRANS789,text/plain,UTF-8,abc123def456,SHA256,key123,value123,Transaction successful,DOC123,2021-12-01,YES,RUID123,RRUID123,OADC123,City1,Area1,Country1,System1
+1.1,2021-12-02T02:02:02Z,SRC234,APP567,TRANS890,text/html,UTF-16,ghi789jkl012,MD5,key234,value234,Transaction failed,DOC234,2021-12-02,NO,RUID234,RRUID234,OADC234,City2,Area2,Country2,System2
+1.2,2021-12-03T03:03:03Z,SRC345,APP678,TRANS901,application/json,UTF-32,mno345pqr678,SHA1,key345,value345,Transaction pending,DOC345,2021-12-03,YES,RUID345,RRUID345,OADC345,City3,Area3,Country3,System3
+1.3,2021-12-04T04:04:04Z,SRC456,APP789,TRANS012,application/xml,UTF-7,stu901vwx234,SHA512,key456,value456,Transaction cancelled,DOC456,2021-12-04,NO,RUID456,RRUID456,OADC456,City4,Area4,Country4,System4
+1.4,2021-12-05T05:05:05Z,SRC567,APP890,TRANS123,text/csv,UTF-8,xyz567abc890,SHA3-512,key567,value567,Transaction successful,DOC567,2021-12-05,YES,RUID567,RRUID567,OADC567,City5,Area5,Country5,System5
+1.5,2021-12-06T06:06:06Z,SRC678,APP901,TRANS234,application/pdf,UTF-16,bcd123efg456,SHA3-256,key678,value678,Transaction failed,DOC678,2021-12-06,NO,RUID678,RRUID678,OADC678,City6,Area6,Country6,System6
+1.6,2021-12-07T07:07:07Z,SRC789,APP012,TRANS345,image/jpeg,UTF-32,efg789hij012,SHA3-224,key789,value789,Transaction pending,DOC789,2021-12-07,YES,RUID789,RRUID789,OADC789,City7,Area7,Country7,System7
+1.7,2021-12-08T08:08:08Z,SRC890,APP123,TRANS456,image/png,UTF-7,hij345klm678,SHA3-384,key890,value890,Transaction cancelled,DOC890,2021-12-08,NO,RUID890,RRUID890,OADC890,City8,Area8,Country8,System8
+1.8,2021-12-09T09:09:09Z,SRC901,APP234,TRANS567,image/gif,UTF-8,klm901nop234,SHA3-256,key901,value901,Transaction successful,DOC901,2021-12-09,YES,RUID901,RRUID901,OADC901,City9,Area9,Country9,System9
+1.9,2021-12-10T10:10:10Z,SRC012,APP345,TRANS678,image/tiff,UTF-16,nop567qrs890,SHA3-512,key012,value012,Transaction failed,DOC012,2021-12-10,NO,RUID012,RRUID012,OADC012,City10,Area10,Country10,System10
