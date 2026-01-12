@@ -1,0 +1,17 @@
+[
+  {
+    "output": "<?xml version=\"1.0\"?>\n<batch>\n    <result index=\"0\">\n        <ip>72.229.28.185</ip>\n        <type>ipv4</type>\n        <continent_code>NA</continent_code>\n        <continent_name>North America</continent_name>\n        <country_code>US</country_code>\n        <country_name>United States</country_name>\n        <region_code>NY</region_code>\n        <region_name>New York</region_name>\n        <city>Manhattan</city>\n        <zip>10020</zip>\n        <latitude>40.7589111328125</latitude>\n        <longitude>-73.97901916503906</longitude>\n        <location>\n            <geoname_id>5125771</geoname_id>\n            <capital>Washington D.C.</capital>\n            <languages>\n                <code>en</code>\n                <name>English</name>\n                <native>English</native>\n            </languages>\n            <country_flag>https://assets.ipstack.com/flags/us.svg</country_flag>\n            <country_flag_emoji>&#x1F1FA;&#x1F1F8;</country_flag_emoji>\n            <country_flag_emoji_unicode>U+1",
+    "statusCode": 200,
+    "scenario": "OK"
+  },
+  {
+    "output": "<?xml version=\"1.0\"?>\n<batch>\n    <result index=\"0\">\n        <ip>invalid_ip</ip>\n        <type>ipv4</type>\n        <continent_code>NA</continent_code>\n        <continent_name>North America</continent_name>\n        <country_code>US</country_code>\n        <country_name>United States</country_name>\n        <region_code>NY</region_code>\n        <region_name>New York</region_name>\n        <city>Manhattan</city>\n        <zip>10020</zip>\n        <latitude>40.7589111328125</latitude>\n        <longitude>-73.97901916503906</longitude>\n        <location>\n            <geoname_id>5125771</geoname_id>\n            <capital>Washington D.C.</capital>\n            <languages>\n                <code>en</code>\n                <name>English</name>\n                <native>English</native>\n            </languages>\n            <country_flag>https://assets.ipstack.com/flags/us.svg</country_flag>\n            <country_flag_emoji>&#x1F1FA;&#x1F1F8;</country_flag_emoji>\n            <country_flag_emoji_unicode>U+1",
+    "statusCode": 200,
+    "scenario": "OK"
+  },
+  {
+    "output": "<?xml version=\"1.0\"?>\n<batch>\n    <result index=\"0\">\n        <ip>72.229.28.185</ip>\n        <type>ipv4</type>\n        <continent_code>NA</continent_code>\n        <continent_name>North America</continent_name>\n        <country_code>US</country_code>\n        <country_name>United States</country_name>\n        <region_code>NY</region_code>\n        <region_name>New York</region_name>\n        <city>Manhattan</city>\n        <zip>10020</zip>\n        <latitude>40.7589111328125</latitude>\n        <longitude>-73.97901916503906</longitude>\n        <location>\n            <geoname_id>5125771</geoname_id>\n            <capital>Washington D.C.</capital>\n            <languages>\n                <code>en</code>\n                <name>English</name>\n                <native>English</native>\n            </languages>\n            <country_flag>https://assets.ipstack.com/flags/us.svg</country_flag>\n            <country_flag_emoji>&#x1F1FA;&#x1F1F8;</country_flag_emoji>\n            <country_flag_emoji_unicode>U+1",
+    "statusCode": 200,
+    "scenario": "OK"
+  }
+]
