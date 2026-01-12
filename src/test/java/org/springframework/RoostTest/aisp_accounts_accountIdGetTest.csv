@@ -1,0 +1,11 @@
+accountId^|^AdditionalCSVvaluInfo^|^Authorization^|^x-fapi-auth-date^|^x-fapi-customer-ip-address^|^x-fapi-interaction-id^|^Accept-Language^|^RequestBody^|^statusCode^|^bearer
+acc123456^|^169.254.169.254^|^Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9^|^2023-04-01T12:34:56Z^|^192.168.1.1^|^interaction123456^|^en-HK^|^{"key": "value"}^|^200^|^
+acc234567^|^169.254.169.254^|^Bearer eyJhbGciOiJIUzI1NiJ9^|^2023-04-02T13:35:57Z^|^192.168.1.2^|^interaction234567^|^zh-HK^|^{"key": "value1"}^|^400^|^
+acc345678^|^169.254.169.254^|^Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9^|^2023-04-03T14:36:58Z^|^192.168.1.3^|^interaction345678^|^zh-CN^|^{"key": "value2"}^|^405^|^
+acc456789^|^169.254.169.254^|^Bearer eyJhbGciOiJIUzI1NiJ9^|^2023-04-04T15:37:59Z^|^192.168.1.4^|^interaction456789^|^en-HK^|^{"key": "value3"}^|^406^|^
+acc567891^|^169.254.169.254^|^Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9^|^2023-04-05T16:38:50Z^|^192.168.1.5^|^interaction567891^|^zh-HK^|^{"key": "value4"}^|^429^|^
+acc678912^|^169.254.169.254^|^Bearer eyJhbGciOiJIUzI1NiJ9^|^2023-04-06T17:39:51Z^|^192.168.1.6^|^interaction678912^|^zh-CN^|^{"key": "value5"}^|^500^|^
+acc789123^|^169.254.169.254^|^Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9^|^2023-04-07T18:40:52Z^|^192.168.1.7^|^interaction789123^|^en-HK^|^{"key": "value6"}^|^503^|^
+acc891234^|^169.254.169.254^|^Bearer eyJhbGciOiJIUzI1NiJ9^|^2023-04-08T19:41:53Z^|^192.168.1.8^|^interaction891234^|^zh-HK^|^{"key": "value7"}^|^504^|^
+acc912345^|^169.254.169.254^|^Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9^|^2023-04-09T20:42:54Z^|^192.168.1.9^|^interaction912345^|^zh-CN^|^{"key": "value8"}^|^200^|^
+acc101234^|^169.254.169.254^|^Bearer eyJhbGciOiJIUzI1NiJ9^|^2023-04-10T21:43:55Z^|^192.168.1.10^|^interaction101234^|^en-HK^|^{"key": "value9"}^|^400^|^

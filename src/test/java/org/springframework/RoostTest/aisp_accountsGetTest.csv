@@ -1,0 +1,11 @@
+Authorization^|^AdditionalCSVvaluInfo^|^x-fapi-auth-date^|^x-fapi-customer-ip-address^|^x-fapi-interaction-id^|^Accept-Language^|^RequestBody^|^statusCode^|^bearer
+Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9^|^169.254.169.254^|^2023-04-01T00:00:00Z^|^192.168.1.1^|^b5f1a8c9-44f5-4d82-9e9e-5bcf7e2f7c1f^|^en-HK^|^{"name":"John","age":30,"city":"New York"}^|^200^|^
+Bearer eyJhbGciOiJIUzI1NiJ9^|^169.254.169.254^|^2023-04-01T01:00:00Z^|^192.168.1.2^|^a3f1b9d2-22f6-5e83-8e9f-6ccf8e3f8e2g^|^zh-HK^|^{"name":"Alice","age":25,"city":"Hong Kong"}^|^200^|^
+Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9^|^169.254.169.254^|^2023-04-01T02:00:00Z^|^192.168.1.3^|^c6f2c0e3-33f7-6f94-9faf-7dcg9f4f9g3h^|^zh-CN^|^{"name":"Bob","age":28,"city":"Shanghai"}^|^400^|^
+Bearer eyJhbGciOiJIUzI1NiJ9^|^169.254.169.254^|^2023-04-01T03:00:00Z^|^192.168.1.4^|^d7g3d1f4-44g8-7ha5-0gbg-8edh0g5h0h4i^|^en-HK^|^{"name":"Charlie","age":32,"city":"London"}^|^405^|^
+Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9^|^169.254.169.254^|^2023-04-01T04:00:00Z^|^192.168.1.5^|^e8h4e2g5-55h9-8ib6-1hch-9fei1h6i1i5j^|^zh-HK^|^{"name":"David","age":27,"city":"Beijing"}^|^406^|^
+Bearer eyJhbGciOiJIUzI1NiJ9^|^169.254.169.254^|^2023-04-01T05:00:00Z^|^192.168.1.6^|^f9i5f3h6-66i0-9jc7-2idi-agfj2i7j2j6k^|^zh-CN^|^{"name":"Eva","age":22,"city":"Guangzhou"}^|^429^|^
+Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9^|^169.254.169.254^|^2023-04-01T06:00:00Z^|^192.168.1.7^|^g1j6g4i7-77j1-akd8-3jej-bhgk3j8k3k7l^|^en-HK^|^{"name":"Frank","age":35,"city":"Sydney"}^|^500^|^
+Bearer eyJhbGciOiJIUzI1NiJ9^|^169.254.169.254^|^2023-04-01T07:00:00Z^|^192.168.1.8^|^h2k7h5j8-88k2-blf9-4kfk-cihl4k9l4l8m^|^zh-HK^|^{"name":"Grace","age":29,"city":"Toronto"}^|^503^|^
+Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9^|^169.254.169.254^|^2023-04-01T08:00:00Z^|^192.168.1.9^|^i3l8i6k9-99l3-cmg0-5lgl-djim5l0m5m9n^|^zh-CN^|^{"name":"Henry","age":31,"city":"Shenzhen"}^|^504^|^
+Bearer eyJhbGciOiJIUzI1NiJ9^|^169.254.169.254^|^2023-04-01T09:00:00Z^|^192.168.1.10^|^j4m9j7l0-aam4-dnh1-6mmh-ekjn6m1n6n0o^|^en-HK^|^{"name":"Ivy","age":26,"city":"New Delhi"}^|^200^|^

@@ -1,0 +1,11 @@
+Authorization^|^AdditionalCSVvaluInfo^|^Content-Type^|^x-fapi-auth-date^|^x-fapi-customer-ip-address^|^x-fapi-interaction-id^|^Accept-Language^|^RequestBody^|^statusCode^|^bearer
+Bearer eyJraWQiOiIx^|^169.254.169.254^|^application/json^|^2023-04-01T10:15:30Z^|^198.51.100.1^|^interaction-id-1^|^en-HK^|^{ "ack": ["item1"], "returnImmediately": false, "maxEvents": 5 }^|^201^|^
+Bearer eyJraWQiOiIy^|^169.254.169.254^|^application/json^|^2023-04-02T11:20:35Z^|^198.51.100.2^|^interaction-id-2^|^zh-HK^|^{ "ack": ["item2"], "returnImmediately": true, "maxEvents": 3 }^|^400^|^
+Bearer eyJraWQiOiIz^|^169.254.169.254^|^application/json^|^2023-04-03T12:25:40Z^|^198.51.100.3^|^interaction-id-3^|^zh-CN^|^{ "ack": ["item3"], "returnImmediately": false, "maxEvents": 4 }^|^405^|^
+Bearer eyJraWQiOiI0^|^169.254.169.254^|^application/json^|^2023-04-04T13:30:45Z^|^198.51.100.4^|^interaction-id-4^|^en-HK^|^{ "ack": ["item4"], "returnImmediately": true, "maxEvents": 2 }^|^406^|^
+Bearer eyJraWQiOiI1^|^169.254.169.254^|^application/json^|^2023-04-05T14:35:50Z^|^198.51.100.5^|^interaction-id-5^|^zh-HK^|^{ "ack": ["item5"], "returnImmediately": false, "maxEvents": 1 }^|^415^|^
+Bearer eyJraWQiOiI2^|^169.254.169.254^|^application/json^|^2023-04-06T15:40:55Z^|^198.51.100.6^|^interaction-id-6^|^zh-CN^|^{ "ack": ["item6"], "returnImmediately": true, "maxEvents": 3 }^|^429^|^
+Bearer eyJraWQiOiI3^|^169.254.169.254^|^application/json^|^2023-04-07T16:45:00Z^|^198.51.100.7^|^interaction-id-7^|^en-HK^|^{ "ack": ["item7"], "returnImmediately": false, "maxEvents": 5 }^|^500^|^
+Bearer eyJraWQiOiI4^|^169.254.169.254^|^application/json^|^2023-04-08T17:50:05Z^|^198.51.100.8^|^interaction-id-8^|^zh-HK^|^{ "ack": ["item8"], "returnImmediately": true, "maxEvents": 4 }^|^503^|^
+Bearer eyJraWQiOiI5^|^169.254.169.254^|^application/json^|^2023-04-09T18:55:10Z^|^198.51.100.9^|^interaction-id-9^|^zh-CN^|^{ "ack": ["item9"], "returnImmediately": false, "maxEvents": 2 }^|^504^|^
+Bearer eyJraWQiOiIxMA==^|^169.254.169.254^|^application/json^|^2023-04-10T19:00:15Z^|^198.51.100.10^|^interaction-id-10^|^en-HK^|^{ "ack": ["item10"], "returnImmediately": true, "maxEvents": 1 }^|^201^|^
