@@ -1,0 +1,11 @@
+id^|^username^|^firstName^|^lastName^|^email^|^password^|^phone^|^userStatus^|^statusCode
+1^|^user1^|^John^|^Doe^|^john.doe@example.com^|^Johndoe1^|^1234567890^|^1^|^successful operation
+2^|^user2^|^Jane^|^Doe^|^jane.doe@example.com^|^Janedoe2^|^0987654321^|^0^|^successful operation
+3^|^user3^|^Jim^|^Beam^|^jim.beam@example.com^|^Jimbeam3^|^1122334455^|^1^|^successful operation
+4^|^user4^|^Jack^|^Daniels^|^jack.daniels@example.com^|^Jackdaniels4^|^5566778899^|^0^|^successful operation
+5^|^user5^|^Jill^|^Valentine^|^jill.valentine@example.com^|^Jillvalentine5^|^9988776655^|^1^|^successful operation
+6^|^user6^|^Jerry^|^Mouse^|^jerry.mouse@example.com^|^Jerrymouse6^|^6677889900^|^0^|^successful operation
+7^|^user7^|^Jessica^|^Rabbit^|^jessica.rabbit@example.com^|^Jessicarabbit7^|^4455667788^|^1^|^successful operation
+8^|^user8^|^James^|^Bond^|^james.bond@example.com^|^Jamesbond8^|^8888777766^|^0^|^successful operation
+9^|^user9^|^Julia^|^Roberts^|^julia.roberts@example.com^|^Juliaroberts9^|^6665554443^|^1^|^successful operation
+10^|^user10^|^Johnny^|^Depp^|^johnny.depp@example.com^|^Johnnydepp10^|^3334445552^|^0^|^successful operation

@@ -1,0 +1,11 @@
+username^|^password^|^statusCode
+john_doe^|^password123^|^200
+jane_doe^|^janePassword^|^200
+michael_90^|^mike90Pass^|^200
+sarah_88^|^sarahPass88^|^400
+peter_parker^|^spiderMan^|^400
+tony_stark^|^ironMan^|^200
+steve_rogers^|^captainAmerica^|^200
+bruce_wayne^|^batMan^|^400
+clark_kent^|^superMan^|^200
+diana_prince^|^wonderWoman^|^400

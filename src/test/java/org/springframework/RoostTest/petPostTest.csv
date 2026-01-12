@@ -1,0 +1,11 @@
+id^|^category^|^name^|^photoUrls^|^tags^|^status^|^statusCode
+1^|^{type: 'animal'}^|^doggie^|^['url1', 'url2']^|^['tag1', 'tag2']^|^available^|^405
+2^|^{type: 'bird'}^|^parrot^|^['url3', 'url4']^|^['tag3', 'tag4']^|^pending^|^405
+3^|^{type: 'fish'}^|^goldfish^|^['url5', 'url6']^|^['tag5', 'tag6']^|^sold^|^405
+4^|^{type: 'reptile'}^|^iguana^|^['url7', 'url8']^|^['tag7', 'tag8']^|^available^|^405
+5^|^{type: 'mammal'}^|^kangaroo^|^['url9', 'url10']^|^['tag9', 'tag10']^|^pending^|^405
+6^|^{type: 'bird'}^|^eagle^|^['url11', 'url12']^|^['tag11', 'tag12']^|^sold^|^405
+7^|^{type: 'insect'}^|^butterfly^|^['url13', 'url14']^|^['tag13', 'tag14']^|^available^|^405
+8^|^{type: 'animal'}^|^elephant^|^['url15', 'url16']^|^['tag15', 'tag16']^|^pending^|^405
+9^|^{type: 'fish'}^|^shark^|^['url17', 'url18']^|^['tag17', 'tag18']^|^sold^|^405
+10^|^{type: 'reptile'}^|^turtle^|^['url19', 'url20']^|^['tag19', 'tag20']^|^available^|^405

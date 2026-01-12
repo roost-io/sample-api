@@ -1,0 +1,11 @@
+id^|^username^|^firstName^|^lastName^|^email^|^password^|^phone^|^userStatus^|^statusCode
+1^|^user1^|^John^|^Doe^|^john.doe@email.com^|^pass123^|^1234567890^|^1^|^successful operation
+2^|^user2^|^Jane^|^Doe^|^jane.doe@email.com^|^pass456^|^0987654321^|^1^|^successful operation
+3^|^user3^|^Jim^|^Beam^|^jim.beam@email.com^|^pass789^|^1122334455^|^1^|^successful operation
+4^|^user4^|^Jack^|^Daniels^|^jack.daniels@email.com^|^pass321^|^5544332211^|^1^|^successful operation
+5^|^user5^|^Jill^|^Smith^|^jill.smith@email.com^|^pass654^|^7788990011^|^1^|^successful operation
+6^|^user6^|^Julia^|^Roberts^|^julia.roberts@email.com^|^pass987^|^9900112233^|^1^|^successful operation
+7^|^user7^|^Jerry^|^Seinfeld^|^jerry.seinfeld@email.com^|^pass741^|^8822446644^|^1^|^successful operation
+8^|^user8^|^Jessica^|^Alba^|^jessica.alba@email.com^|^pass852^|^4466882211^|^1^|^successful operation
+9^|^user9^|^Justin^|^Bieber^|^justin.bieber@email.com^|^pass963^|^2233557799^|^1^|^successful operation
+10^|^user10^|^Jennifer^|^Lopez^|^jennifer.lopez@email.com^|^pass369^|^1122446677^|^1^|^successful operation
