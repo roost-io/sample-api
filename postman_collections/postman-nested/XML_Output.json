@@ -1,0 +1,27 @@
+[
+  {
+    "output": "<?xml version=\"1.0\"?>\n<batch>\n    <result index=\"0\">\n        <ip>72.229.28.185</ip>\n        <type>ipv4</type>\n        <continent_code>NA</continent_code>\n        <continent_name>North America</continent_name>\n        <country_code>US</country_code>\n        <country_name>United States</country_name>\n        <region_code>NY</region_code>\n        <region_name>New York</region_name>\n        <city>Manhattan</city>\n        <zip>10020</zip>\n        <latitude>40.7589111328125</latitude>\n        <longitude>-73.97901916503906</longitude>\n        <location>\n            <geoname_id>5125771</geoname_id>\n            <capital>Washington D.C.</capital>\n            <languages>\n                <code>en</code>\n                <name>English</name>\n                <native>English</native>\n            </languages>\n            <country_flag>https://assets.ipstack.com/flags/us.svg</country_flag>\n            <country_flag_emoji>&#x1F1FA;&#x1F1F8;</country_flag_emoji>\n            <country_flag_emoji_unicode>U+1</country_flag_emoji_unicode>\n        </location>\n    </result>\n</batch>",
+    "statusCode": 200,
+    "scenario": "200 OK – XML Output"
+  },
+  {
+    "output": "Invalid XML Content",
+    "statusCode": 400,
+    "scenario": "Bad Request"
+  },
+  {
+    "output": "Malformed <xml> data",
+    "statusCode": 500,
+    "scenario": "Internal Server Error"
+  },
+  {
+    "output": "<?xml version=\"1.0\"?>\n<batch>\n    <result index=\"1\">\n        <ip>192.168.1.1</ip>\n        <type>ipv4</type>\n        <continent_code>EU</continent_code>\n        <continent_name>Europe</continent_name>\n        <country_code>FR</country_code>\n        <country_name>France</country_name>\n        <region_code>IDF</region_code>\n        <region_name>Île-de-France</region_name>\n        <city>Paris</city>\n        <zip>75000</zip>\n        <latitude>48.8566</latitude>\n        <longitude>2.3522</longitude>\n        <location>\n            <geoname_id>2988507</geoname_id>\n            <capital>Paris</capital>\n            <languages>\n                <code>fr</code>\n                <name>French</name>\n                <native>Français</native>\n            </languages>\n            <country_flag>https://assets.ipstack.com/flags/fr.svg</country_flag>\n            <country_flag_emoji>&#x1F1EB;&#x1F1F7;</country_flag_emoji>\n            <country_flag_emoji_unicode>U+1</country_flag_emoji_unicode>\n        </location>\n    </result>\n</batch>",
+    "statusCode": 200,
+    "scenario": "200 OK – XML Output"
+  },
+  {
+    "output": "Error: <xml> tag missing",
+    "statusCode": 404,
+    "scenario": "Not Found"
+  }
+]

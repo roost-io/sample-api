@@ -1,0 +1,27 @@
+[
+  {
+    "hostname": "160.39.144.19",
+    "statusCode": 200,
+    "scenario": "200 OK – Hostname"
+  },
+  {
+    "hostname": "invalid_hostname",
+    "statusCode": 404,
+    "scenario": "Not Found"
+  },
+  {
+    "hostname": "160.39.144.19",
+    "statusCode": 200,
+    "scenario": "200 OK – Hostname"
+  },
+  {
+    "hostname": "123.456.789.000",
+    "statusCode": 400,
+    "scenario": "Bad Request"
+  },
+  {
+    "hostname": "160.39.144.19",
+    "statusCode": 200,
+    "scenario": "200 OK – Hostname"
+  }
+]
