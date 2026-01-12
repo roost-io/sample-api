@@ -1,0 +1,9 @@
+trigger_id,completion_time,modification_time,status,status_details,test_endpoints,test_report
+"trigger123",2023,2023,"completed","Test completed successfully","/api/v1/users,/api/v1/orders","Test report content"
+"trigger456",2023,2023,"failed","Test failed due to timeout","/api/v1/products","Error report content"
+"trigger789",2023,2023,"in_progress","All tests passed","/api/health,/api/status","Comprehensive test report"
+"trigger101",2023,2023,"pending","Connection timeout","/api/users/1","Error details and stack trace"
+"trigger111",2023,2023,"success","Some tests skipped","/api/orders,/api/payments","Partial test results"
+"trigger001",2023,2023,"error","Connection timeout","/api/users/1","Error details and stack trace"
+"trigger002",2023,2023,"warning","Some tests skipped","/api/orders,/api/payments","Partial test results"
+"trigger003",2023,2023,"error","Connection timeout","/api/users/1","Error details and stack trace"
