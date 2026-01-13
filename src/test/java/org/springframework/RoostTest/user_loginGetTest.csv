@@ -1,0 +1,11 @@
+username^|^password^|^RequestBody^|^statusCode
+user1^|^pass123^|^{"key1": "value1", "key2": "value2"}^|^200
+user2^|^pass456^|^{"key1": "value3", "key2": "value4"}^|^404
+user3^|^pass789^|^{"key1": "value5", "key2": "value6"}^|^500
+user4^|^pass321^|^{"key1": "value7", "key2": "value8"}^|^403
+user5^|^pass654^|^{"key1": "value9", "key2": "value10"}^|^201
+user6^|^pass987^|^{"key1": "value11", "key2": "value12"}^|^202
+user7^|^pass741^|^{"key1": "value13", "key2": "value14"}^|^203
+user8^|^pass852^|^{"key1": "value15", "key2": "value16"}^|^204
+user9^|^pass963^|^{"key1": "value17", "key2": "value18"}^|^205
+user10^|^pass159^|^{"key1": "value19", "key2": "value20"}^|^206

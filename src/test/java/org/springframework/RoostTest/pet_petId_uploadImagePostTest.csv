@@ -1,0 +1,11 @@
+petId^|^additionalMetadata^|^file^|^RequestBody^|^statusCode
+12345^|^Metadata1^|^file1.jpg^|^{"name": "Fluffy", "age": 3, "breed": "Persian"}^|^200
+67890^|^Metadata2^|^file2.png^|^{"name": "Rover", "age": 5, "breed": "Labrador"}^|^200
+23456^|^Metadata3^|^file3.jpeg^|^{"name": "Snowball", "age": 2, "breed": "Siamese"}^|^200
+78901^|^Metadata4^|^file4.png^|^{"name": "Fido", "age": 7, "breed": "Retriever"}^|^200
+34567^|^Metadata5^|^file5.jpg^|^{"name": "Whiskers", "age": 1, "breed": "Bengal"}^|^200
+89012^|^Metadata6^|^file6.jpeg^|^{"name": "Spot", "age": 4, "breed": "Dalmatian"}^|^200
+45678^|^Metadata7^|^file7.png^|^{"name": "Shadow", "age": 6, "breed": "German Shepherd"}^|^200
+90123^|^Metadata8^|^file8.jpg^|^{"name": "Ginger", "age": 3, "breed": "Maine Coon"}^|^200
+56789^|^Metadata9^|^file9.jpeg^|^{"name": "Rusty", "age": 5, "breed": "Beagle"}^|^200
+01234^|^Metadata10^|^file10.png^|^{"name": "Mittens", "age": 2, "breed": "Ragdoll"}^|^200

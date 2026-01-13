@@ -1,0 +1,11 @@
+id^|^username^|^firstName^|^lastName^|^email^|^password^|^phone^|^userStatus^|^RequestBody^|^statusCode
+1^|^user1^|^John^|^Doe^|^john.doe@example.com^|^pass123^|^123456789^|^1^|^{"key": "value"}^|^200
+2^|^user2^|^Jane^|^Doe^|^jane.doe@example.com^|^pass456^|^987654321^|^0^|^{"key": "value"}^|^404
+3^|^user3^|^Jim^|^Beam^|^jim.beam@example.com^|^pass789^|^456123789^|^1^|^{"key": "value"}^|^500
+4^|^user4^|^Jill^|^Jack^|^jill.jack@example.com^|^pass012^|^321654987^|^0^|^{"key": "value"}^|^200
+5^|^user5^|^Jerry^|^Springer^|^jerry.springer@example.com^|^pass345^|^789123456^|^1^|^{"key": "value"}^|^404
+6^|^user6^|^Jessica^|^Alba^|^jessica.alba@example.com^|^pass678^|^654321789^|^0^|^{"key": "value"}^|^500
+7^|^user7^|^Justin^|^Bieber^|^justin.bieber@example.com^|^pass901^|^789654123^|^1^|^{"key": "value"}^|^200
+8^|^user8^|^Julia^|^Roberts^|^julia.roberts@example.com^|^pass234^|^123789456^|^0^|^{"key": "value"}^|^404
+9^|^user9^|^Johnny^|^Depp^|^johnny.depp@example.com^|^pass567^|^456789123^|^1^|^{"key": "value"}^|^500
+10^|^user10^|^Jennifer^|^Lopez^|^jennifer.lopez@example.com^|^pass890^|^321456789^|^0^|^{"key": "value"}^|^200

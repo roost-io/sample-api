@@ -1,0 +1,11 @@
+id^|^category^|^name^|^photoUrls^|^tags^|^status^|^RequestBody^|^statusCode
+1^|^{ "id": 1, "name": "Dogs" }^|^Bobby^|^["url1","url2"]^|^{ "id": 1, "name": "tag1" }^|^available^|^{ "id": 1, "name": "Bobby" }^|^200
+2^|^{ "id": 2, "name": "Cats" }^|^Whiskers^|^["url3","url4"]^|^{ "id": 2, "name": "tag2" }^|^pending^|^{ "id": 2, "name": "Whiskers" }^|^201
+3^|^{ "id": 3, "name": "Birds" }^|^Tweety^|^["url5","url6"]^|^{ "id": 3, "name": "tag3" }^|^sold^|^{ "id": 3, "name": "Tweety" }^|^202
+4^|^{ "id": 4, "name": "Fish" }^|^Goldie^|^["url7","url8"]^|^{ "id": 4, "name": "tag4" }^|^available^|^{ "id": 4, "name": "Goldie" }^|^203
+5^|^{ "id": 5, "name": "Reptiles" }^|^Slither^|^["url9","url10"]^|^{ "id": 5, "name": "tag5" }^|^pending^|^{ "id": 5, "name": "Slither" }^|^204
+6^|^{ "id": 6, "name": "Rodents" }^|^Squeaky^|^["url11","url12"]^|^{ "id": 6, "name": "tag6" }^|^sold^|^{ "id": 6, "name": "Squeaky" }^|^205
+7^|^{ "id": 7, "name": "Insects" }^|^Buzzy^|^["url13","url14"]^|^{ "id": 7, "name": "tag7" }^|^available^|^{ "id": 7, "name": "Buzzy" }^|^206
+8^|^{ "id": 8, "name": "Amphibians" }^|^Hoppy^|^["url15","url16"]^|^{ "id": 8, "name": "tag8" }^|^pending^|^{ "id": 8, "name": "Hoppy" }^|^207
+9^|^{ "id": 9, "name": "Mammals" }^|^Furry^|^["url17","url18"]^|^{ "id": 9, "name": "tag9" }^|^sold^|^{ "id": 9, "name": "Furry" }^|^208
+10^|^{ "id": 10, "name": "Arachnids" }^|^Webby^|^["url19","url20"]^|^{ "id": 10, "name": "tag10" }^|^available^|^{ "id": 10, "name": "Webby" }^|^209

@@ -1,0 +1,11 @@
+RequestBody^|^statusCode
+{ "id": "1", "name": "John Doe", "email": "john.doe@example.com" }^|^200
+{ "id": "2", "name": "Jane Doe", "email": "jane.doe@example.com" }^|^201
+{ "id": "3", "name": "Mark Johnson", "email": "mark.john@example.com" }^|^200
+{ "id": "4", "name": "Emma Watson", "email": "emma.watson@example.com" }^|^202
+{ "id": "5", "name": "Tom Cruise", "email": "tom.cruise@example.com" }^|^200
+{ "id": "6", "name": "Chris Evans", "email": "chris.evans@example.com" }^|^201
+{ "id": "7", "name": "Robert Downey", "email": "robert.downey@example.com" }^|^200
+{ "id": "8", "name": "Scarlett Johansson", "email": "scarlett.johansson@example.com" }^|^202
+{ "id": "9", "name": "Vin Diesel", "email": "vin.diesel@example.com" }^|^200
+{ "id": "10", "name": "Paul Walker", "email": "paul.walker@example.com" }^|^201

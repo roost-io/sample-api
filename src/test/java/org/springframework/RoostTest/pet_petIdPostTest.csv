@@ -1,0 +1,11 @@
+petId^|^name^|^status^|^RequestBody^|^statusCode
+1^|^Rex^|^Available^|^{"type":"Dog", "age":3, "color":"Brown"}^|^200
+2^|^Whiskers^|^Pending^|^{"type":"Cat", "age":2, "color":"White"}^|^202
+3^|^Buddy^|^Sold^|^{"type":"Dog", "age":5, "color":"Black"}^|^404
+4^|^Snow^|^Available^|^{"type":"Rabbit", "age":1, "color":"White"}^|^200
+5^|^Oreo^|^Pending^|^{"type":"Dog", "age":4, "color":"Black and White"}^|^202
+6^|^Goldie^|^Available^|^{"type":"Fish", "age":2, "color":"Gold"}^|^200
+7^|^Polly^|^Sold^|^{"type":"Parrot", "age":3, "color":"Green"}^|^404
+8^|^Stripe^|^Pending^|^{"type":"Cat", "age":3, "color":"Grey"}^|^202
+9^|^Bella^|^Available^|^{"type":"Dog", "age":5, "color":"Golden"}^|^200
+10^|^Coco^|^Sold^|^{"type":"Parrot", "age":2, "color":"Blue"}^|^404
