@@ -1,0 +1,460 @@
+{
+  "item": [
+    {
+      "id": "4255c0d9-6d9a-466a-aff7-3a01529512a5",
+      "name": "employees",
+      "item": [
+        {
+          "id": "db4adf17-d091-414e-aeb5-05e588f4576b",
+          "name": "adds an employee",
+          "request": {
+            "name": "adds an employee",
+            "description": {
+              "content": "Adds an employee to the system",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "employees"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"jobTitle\": \"{{jobTitle}}\",\n    \"name\": \"{{name}}\",\n    \"email\": \"{{email}}\",\n    \"id\": \"{{id}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "7c50854e-2ca2-499d-9c7d-7382176e93fe",
+              "name": "employee created",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "employees"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"jobTitle\": \"{{jobTitle}}\",\n    \"name\": \"{{name}}\",\n    \"email\": \"{{email}}\",\n    \"id\": \"{{id}}\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "0cc359a3-04dc-419d-b008-043e086a925c",
+              "name": "invalid input, object invalid",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "employees"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"jobTitle\": \"{{jobTitle}}\",\n    \"name\": \"{{name}}\",\n    \"email\": \"{{email}}\",\n    \"id\": \"{{id}}\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "ce95b3b0-1bac-47ae-9f9a-0f0109021285",
+              "name": "an existing employee already exists",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "employees"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"jobTitle\": \"{{jobTitle}}\",\n    \"name\": \"{{name}}\",\n    \"email\": \"{{email}}\",\n    \"id\": \"{{id}}\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Conflict",
+              "code": 409,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  " \n// Test generated by RoostGPT for test sample-api-1 using AI Type Open AI and AI Model gpt-4\n\n\n\n// Test generated for /employees for http method type post in postman framework\n\n\nlet responseData;\nconst contentType = pm.response.headers.get('Content-Type');\nif(contentType === \"application/xml\"){\n    responseData = xml2Json(responseBody);\n} else{\n    responseData = pm.response.json();\n}\nif (pm.variables.get(\"statusCode\")) {\n  // Compare the statusCode variable with the response code for assertion\n  pm.expect(parseInt(pm.variables.get(\"statusCode\"))).to.be.equal(pm.response.code);\n}\n\n// let responseTime = 800\n// pm.expect(pm.response.responseTime).to.be.below(responseTime);\n\nif (pm.response.code == 201){\n    pm.test(\"employee created\", function () {\n      pm.expect(pm.response.status).to.be.eql(\"Created\");});\n}\n\nif (pm.response.code == 400){\n    pm.test(\"invalid input, object invalid\", function () {\n      pm.expect(pm.response.status).to.be.eql(\"Bad Request\");});\n}\n\nif (pm.response.code == 409){\n    pm.test(\"an existing employee already exists\", function () {\n      pm.expect(pm.response.status).to.be.eql(\"Conflict\");});\n}\n"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "40287f87-5607-44d7-9ba8-93eaeea94e08",
+          "name": "Searches employees.",
+          "request": {
+            "name": "Searches employees.",
+            "description": {
+              "content": "By passing in the appropriate options you can apply filters to your search operationId: getEmployees\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "employees"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "searchString",
+                  "value": "{{searchString}}",
+                  "description": "Pass an optional search string for the look up"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c3374199-8541-4aee-adb0-680029b876bf",
+              "name": "Search results matching the filter criteria",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "employees"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "searchString",
+                      "value": "{{searchString}}"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"jobTitle\": \"System Analyst\",\n    \"name\": \"John Smith\",\n    \"email\": \"john.smith@acme-corp.com\",\n    \"id\": \"d290f1ee-6c54-4b01-90e6-d701748f0851\"\n  },\n  {\n    \"jobTitle\": \"System Analyst\",\n    \"name\": \"John Smith\",\n    \"email\": \"john.smith@acme-corp.com\",\n    \"id\": \"d290f1ee-6c54-4b01-90e6-d701748f0851\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "404c54a9-7442-4948-be00-47e827e7c2d3",
+              "name": "Bad input",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "employees"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "searchString",
+                      "value": "{{searchString}}"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  " \n// Test generated by RoostGPT for test sample-api-1 using AI Type Open AI and AI Model gpt-4\n\n\n\n// Test generated for /employees?searchString=<string> for http method type get in postman framework\n\n\nlet responseData;\nconst contentType = pm.response.headers.get('Content-Type');\nif(contentType === \"application/xml\"){\n    responseData = xml2Json(responseBody);\n} else{\n    responseData = pm.response.json();\n}\nif (pm.variables.get(\"statusCode\")) {\n  // Compare the statusCode variable with the response code for assertion\n  pm.expect(parseInt(pm.variables.get(\"statusCode\"))).to.be.equal(pm.response.code);\n}\n\n// let responseTime = 800\n// pm.expect(pm.response.responseTime).to.be.below(responseTime);\n\nif (pm.response.code == 200){\n    pm.test(\"Search results matching the filter criteria\", function () {\n      pm.expect(pm.response.status).to.be.eql(\"OK\");});\n}\n\nif (pm.response.code == 400){\n    pm.test(\"Bad input\", function () {\n      pm.expect(pm.response.status).to.be.eql(\"Bad Request\");});\n}\n"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "a1574089-1253-4abf-b2c2-505f680cf2c4",
+          "name": "Gets an employee by ID.",
+          "request": {
+            "name": "Gets an employee by ID.",
+            "description": {
+              "content": "Retrieves an employee by the associated ID\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "employees",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "{{id}}",
+                  "key": "id",
+                  "description": "(Required) Employee ID"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "047968cf-ad2c-4b58-8d17-4873c367cccc",
+              "name": "Successful operation",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "employees",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "{{id}}",
+                      "key": "id",
+                      "description": "(Required) Employee ID"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"jobTitle\": \"System Analyst\",\n  \"name\": \"John Smith\",\n  \"email\": \"john.smith@acme-corp.com\",\n  \"id\": \"d290f1ee-6c54-4b01-90e6-d701748f0851\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "9c6cd193-b239-4929-810e-3fbeeb45ed31",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "employees",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "{{id}}",
+                      "key": "id",
+                      "description": "(Required) Employee ID"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  " \n// Test generated by RoostGPT for test sample-api-1 using AI Type Open AI and AI Model gpt-4\n\n\n\n// Test generated for /employees/:id for http method type get in postman framework\n\n\nlet responseData;\nconst contentType = pm.response.headers.get('Content-Type');\nif(contentType === \"application/xml\"){\n    responseData = xml2Json(responseBody);\n} else{\n    responseData = pm.response.json();\n}\nif (pm.variables.get(\"statusCode\")) {\n  // Compare the statusCode variable with the response code for assertion\n  pm.expect(parseInt(pm.variables.get(\"statusCode\"))).to.be.equal(pm.response.code);\n}\n\n// let responseTime = 800\n// pm.expect(pm.response.responseTime).to.be.below(responseTime);\n\nif (pm.response.code == 200){\n    pm.test(\"Successful operation\", function () {\n      pm.expect(pm.response.status).to.be.eql(\"OK\");\n      pm.test('Response has the `id` field',function(){\n        if(pm.expect(responseData).to.have.nested.property(\"id\")){\n          if(responseData.id!=null){\n            pm.expect(typeof _.get(responseData, \"id\", 200)).to.equal(\"string\");\n          }\n        }\n\n      })\n          \n\n            pm.test('id format to be uuid',function(){  \n                pm.expect(_.get(responseData, \"id\", \"\")).to.match(/^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i);\n            })\n\n      pm.test('Response has the `jobTitle` field',function(){\n        if(pm.expect(responseData).to.have.nested.property(\"jobTitle\")){\n          if(responseData.jobTitle!=null){\n            pm.expect(typeof _.get(responseData, \"jobTitle\", 200)).to.equal(\"string\");\n          }\n        }\n\n      })\n          \n\n      pm.test('Response has the `name` field',function(){\n        if(pm.expect(responseData).to.have.nested.property(\"name\")){\n          if(responseData.name!=null){\n            pm.expect(typeof _.get(responseData, \"name\", 200)).to.equal(\"string\");\n          }\n        }\n\n      })\n          \n\n      pm.test('Response has the `email` field',function(){\n        if(pm.expect(responseData).to.have.nested.property(\"email\")){\n          if(responseData.email!=null){\n            pm.expect(typeof _.get(responseData, \"email\", 200)).to.equal(\"string\");\n          }\n        }\n\n      })\n          \n});\n}\n\nif (pm.response.code == 404){\n    pm.test(\"Not found\", function () {\n      pm.expect(pm.response.status).to.be.eql(\"Not Found\");});\n}\n"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://virtserver.swaggerhub.com/061REB413/employee-service/0.1",
+      "key": "baseUrl"
+    },
+    {
+      "type": "integer",
+      "value": 200,
+      "key": "statusCode"
+    }
+  ],
+  "info": {
+    "_postman_id": "820592a6-c625-4b05-a0c3-f42e091dd045",
+    "name": "Employee Service",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "",
+      "type": "text/plain"
+    }
+  }
+}
