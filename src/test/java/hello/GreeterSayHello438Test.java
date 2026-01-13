@@ -19,53 +19,53 @@ Issue: If the method 'sayHello()' encounters an error, without a proper exceptio
 Solution: Implement exception handling around function calls to control the information in the error output. Retrieve specific 'exceptions' instead of using generic 'exception'.
 
 ================================================================================
-""" 
+"""
   Scenario 1: Test if the method returns the exact required string
 
-  Details:  
+  Details:
     TestName: testSayHelloReturnsCorrectString
     Description: This test checks if the method sayHello returns the expected string "Hello world!".
   Execution:
-    Arrange: No arrangement is required as there are no parameters or conditions for this test. 
-    Act: Invoke the sayHello method. 
+    Arrange: No arrangement is required as there are no parameters or conditions for this test.
+    Act: Invoke the sayHello method.
     Assert: Use JUnit assertions to compare the return value of sayHello method against the expected string "Hello world!".
-  Validation: 
+  Validation:
     This assertion verifies that the method returns "Hello world!". This is important to ensure the method is returning the correct hardcoded string.
-  
+
   Scenario 2: Test if the method returns a non-null string
 
   Details:
     TestName: testSayHelloReturnsNonNull
     Description: This test checks if the method sayHello returns a non-null string.
   Execution:
-    Arrange: No arrangement is required as there are no parameters or conditions for this test. 
-    Act: Invoke the sayHello method. 
+    Arrange: No arrangement is required as there are no parameters or conditions for this test.
+    Act: Invoke the sayHello method.
     Assert: Use JUnit assertions to assert that the returned string is non-null.
   Validation:
-    This assertion verifies that the method sayHello never returns a null string. This is important to ensure the proper function of components that rely on this method and expect a non-null string. 
+    This assertion verifies that the method sayHello never returns a null string. This is important to ensure the proper function of components that rely on this method and expect a non-null string.
 
   Scenario 3: Test if method does not throw any exception
 
-  Details: 
+  Details:
     TestName: testSayHelloDoesNotThrowException
     Description: This test checks if the method sayHello does not throw any exceptions.
   Execution:
     Arrange: Not required.
-    Act: Invoke the sayHello method. 
+    Act: Invoke the sayHello method.
     Assert: Use JUnit assertions and the fail() method to check that no exceptions are thrown.
-  Validation: 
+  Validation:
     This assertion verifies that the method doesn't throw any exceptions. This is critical to ensure the method's reliability in production.
-  
+
   Scenario 4: Test if method returns a string exactly equal to "Hello world!"
-  
+
   Details:
     TestName: testSayHelloReturnsExact
     Description: This test checks if the method sayHello returns a string that is exactly equal to "Hello world!" and not just containing them.
   Execution:
     Arrange: No arrangements are necessary in this case.
-    Act: Invoke the sayHello method. 
+    Act: Invoke the sayHello method.
     Assert: Use JUnit assertions to check that the return value is exactly equal to "Hello world!".
-  Validation: 
+  Validation:
     This assertion verifies that the method returns a string exactly equal to "Hello world!". This ensures that there are no additional characters, spaces or variations in the returned string.
   """
 */
@@ -79,38 +79,40 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class GreeterSayHello438Test {
 
-    private Greeter greeter;
+	private Greeter greeter;
 
-    @BeforeEach
-    void setup() {
-        greeter = new Greeter();
-    }
+	@BeforeEach
+	void setup() {
+		greeter = new Greeter();
+	}
 
-    @Test
-    public void testSayHelloReturnsCorrectString() {
-        String result = greeter.sayHello();
-        assertEquals("Hello world!", result);
-    }
+	@Test
+	public void testSayHelloReturnsCorrectString() {
+		String result = greeter.sayHello();
+		assertEquals("Hello world!", result);
+	}
 
-    @Test
-    public void testSayHelloReturnsNonNull() {
-        String result = greeter.sayHello();
-        assertNotNull(result);
-    }
+	@Test
+	public void testSayHelloReturnsNonNull() {
+		String result = greeter.sayHello();
+		assertNotNull(result);
+	}
 
-    @Test
-    public void testSayHelloDoesNotThrowException() {
-        try {
-            String result = greeter.sayHello();
-            assertNotNull(result);
-        } catch (Exception exc) {
-            fail("Exception should not be thrown.");
-        }
-    }
-    
-    @Test
-    public void testSayHelloReturnsExact() {
-        String result = greeter.sayHello();
-        assertEquals("Hello world!", result);
-    }
+	@Test
+	public void testSayHelloDoesNotThrowException() {
+		try {
+			String result = greeter.sayHello();
+			assertNotNull(result);
+		}
+		catch (Exception exc) {
+			fail("Exception should not be thrown.");
+		}
+	}
+
+	@Test
+	public void testSayHelloReturnsExact() {
+		String result = greeter.sayHello();
+		assertEquals("Hello world!", result);
+	}
+
 }
