@@ -1,0 +1,11 @@
+koreUserId,botId,accountId,Authorization,statusCode
+123abc,bot1,acc1,auth1,200
+456def,bot2,acc2,auth2,404
+789ghi,bot3,acc3,auth3,500
+101112jkl,bot4,acc4,auth4,200
+131415mno,bot5,acc5,auth5,404
+161718pqr,bot6,acc6,auth6,500
+192021stu,bot7,acc7,auth7,200
+222324vwx,bot8,acc8,auth8,404
+252627yz,bot9,acc9,auth9,500
+282930abc,bot10,acc10,auth10,200
