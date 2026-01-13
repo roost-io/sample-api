@@ -1,0 +1,1684 @@
+{
+  "collection": {
+    "info": {
+      "_postman_id": "04d158cf-036d-4a4c-967f-b32e62daf929",
+      "name": "IPstack",
+      "description": "## **Quickstart Guide**\n\n\u003Cvideo src=\"https://youtube.com/embed/cjP8lsqc1Y0\" width=\"620\" height=\"310\"\u003E\u003C/video\u003E\n\n### Step 1: Fork the collection\n\nTo get started quickly, you need to fork the IP Stack Postman Collection. Simply click the button below to fork it.\n\n[\u003Cimg src=\"https://run.pstmn.io/button.svg\"\u003E](https://god.gw.postman.com/run-collection/10131015-55145132-244c-448c-8e6f-8780866e4862?action=collection/fork)\n\n### Step 2: Get your API Access Key\n\n1. Go to the [IP Stack](https://ipstack.com/?utm_source=Postman&utm_medium=Referral) website and choose the right subscription plan for your particular project.\n2. Get your personal API Access Key on the [Dashboard](https://ipstack.com/dashboard) to authenticate with the API. Keep it safe! You can reset it at any time in your Account Dashboard.\n    \n\n## Step 3: Make your first API call\n\nIP Stack Postman collection contains all the three endpoint supported by IP Stack API.\n\n1. Standard IP Lookup\n2. Bulk IP Lookup\n3. Requester Lookup\n    \n\nWe recommend you to start with the Standard IP Lookup endpoint as it's primary endpoint. It is used to look up single IPv4 or IPv6 addresses. To call this endpoint, simply attach any IPv4 or IPv6 address to the API's base URL.\n\nCheck out all the widely used API calls with the necessary parameters in the [Standard IP Lookup folder](https://apilayer.postman.co/workspace/APILayer~2b7498b6-6d91-4fa8-817f-608441fe42a8/folder/10131015-594322f8-abae-4135-80d1-2cf544caa60b?action=share&creator=10131015&ctx=documentation).",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+      "fork": {
+        "label": "mgdevzone's fork",
+        "createdAt": "2024-02-15T13:02:04.000Z",
+        "from": "10131015-55145132-244c-448c-8e6f-8780866e4862"
+      },
+      "updatedAt": "2025-07-01T10:59:23.000Z",
+      "createdAt": "2025-07-01T10:59:22.000Z",
+      "lastUpdatedBy": "870119",
+      "uid": "870119-04d158cf-036d-4a4c-967f-b32e62daf929"
+    },
+    "item": [
+      {
+        "name": "Standard IP Lookup",
+        "item": [
+          {
+            "name": "Basic Standard IP Lookup",
+            "id": "fe747591-8605-40cd-9683-46292587d320",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "https://api.ipstack.com/134.201.250.155",
+                "protocol": "https",
+                "host": [
+                  "api",
+                  "ipstack",
+                  "com"
+                ],
+                "path": [
+                  "134.201.250.155"
+                ]
+              },
+              "description": "This is the prime endpoint of IPstack API and used to look up single IPv4 or IPv6 addresses. To call this endpoint, simply attach any IPv4 or IPv6 address to the API's base URL."
+            },
+            "response": [
+              {
+                "id": "88a04021-59a3-4d78-884a-cc0c11a91293",
+                "name": "200 OK – Basic Standard IP Lookup",
+                "originalRequest": {
+                  "method": "GET",
+                  "header": [],
+                  "url": {
+                    "raw": "https://api.ipstack.com/134.201.250.155?access_key={PASTE_YOUR_API_KEY_HERE}",
+                    "protocol": "https",
+                    "host": [
+                      "api",
+                      "ipstack",
+                      "com"
+                    ],
+                    "path": [
+                      "134.201.250.155"
+                    ],
+                    "query": [
+                      {
+                        "key": "access_key",
+                        "value": "{PASTE_YOUR_API_KEY_HERE}",
+                        "description": "You can get your API key by signing up at https://ipstack.com"
+                      }
+                    ]
+                  }
+                },
+                "status": "OK",
+                "code": 200,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "content-type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "transfer-encoding",
+                    "value": "chunked"
+                  },
+                  {
+                    "key": "date",
+                    "value": "Thu, 15 Feb 2024 13:07:34 GMT"
+                  },
+                  {
+                    "key": "x-apilayer-transaction-id",
+                    "value": "2b2f5934-6503-4232-ae97-b48d7a877754"
+                  },
+                  {
+                    "key": "access-control-allow-origin",
+                    "value": "*"
+                  },
+                  {
+                    "key": "access-control-allow-methods",
+                    "value": "GET, POST, HEAD, OPTIONS"
+                  },
+                  {
+                    "key": "access-control-allow-headers",
+                    "value": "*"
+                  },
+                  {
+                    "key": "x-quota-limit",
+                    "value": "50000"
+                  },
+                  {
+                    "key": "x-quota-remaining",
+                    "value": "49999"
+                  },
+                  {
+                    "key": "x-increment-usage",
+                    "value": "1"
+                  },
+                  {
+                    "key": "x-request-time",
+                    "value": "0.029"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "{\n    \"ip\": \"134.201.250.155\",\n    \"type\": \"ipv4\",\n    \"continent_code\": \"NA\",\n    \"continent_name\": \"North America\",\n    \"country_code\": \"US\",\n    \"country_name\": \"United States\",\n    \"region_code\": \"CA\",\n    \"region_name\": \"California\",\n    \"city\": \"Los Angeles\",\n    \"zip\": \"90012\",\n    \"latitude\": 34.0655517578125,\n    \"longitude\": -118.24053955078125,\n    \"location\": {\n        \"geoname_id\": 5368361,\n        \"capital\": \"Washington D.C.\",\n        \"languages\": [\n            {\n                \"code\": \"en\",\n                \"name\": \"English\",\n                \"native\": \"English\"\n            }\n        ],\n        \"country_flag\": \"https://assets.ipstack.com/flags/us.svg\",\n        \"country_flag_emoji\": \"🇺🇸\",\n        \"country_flag_emoji_unicode\": \"U+1F1FA U+1F1F8\",\n        \"calling_code\": \"1\",\n        \"is_eu\": false\n    },\n    \"time_zone\": {\n        \"id\": \"America/Los_Angeles\",\n        \"current_time\": \"2024-02-15T05:07:34-08:00\",\n        \"gmt_offset\": -28800,\n        \"code\": \"PST\",\n        \"is_daylight_saving\": false\n    },\n    \"currency\": {\n        \"code\": \"USD\",\n        \"name\": \"US Dollar\",\n        \"plural\": \"US dollars\",\n        \"symbol\": \"$\",\n        \"symbol_native\": \"$\"\n    },\n    \"connection\": {\n        \"asn\": 25876,\n        \"isp\": \"Los Angeles Department of Water & Power\"\n    }\n}",
+                "uid": "870119-88a04021-59a3-4d78-884a-cc0c11a91293"
+              },
+              {
+                "id": "c72ea8cb-6d23-48d1-88f4-e3bce7a90556",
+                "name": "101 invalid_access_key",
+                "originalRequest": {
+                  "method": "GET",
+                  "header": [],
+                  "url": {
+                    "raw": "https://api.ipstack.com/134.201.250.155?access_key={PASTE_YOUR_API_KEY_HERE}",
+                    "protocol": "https",
+                    "host": [
+                      "api",
+                      "ipstack",
+                      "com"
+                    ],
+                    "path": [
+                      "134.201.250.155"
+                    ],
+                    "query": [
+                      {
+                        "key": "access_key",
+                        "value": "{PASTE_YOUR_API_KEY_HERE}",
+                        "description": "You can get your API key by signing up at https://ipstack.com"
+                      }
+                    ]
+                  }
+                },
+                "status": "OK",
+                "code": 200,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "cache-control",
+                    "value": "no-cache"
+                  },
+                  {
+                    "key": "content-type",
+                    "value": "application/json; Charset=UTF-8"
+                  },
+                  {
+                    "key": "access-control-allow-methods",
+                    "value": "GET, HEAD, POST, PUT, PATCH, DELETE, OPTIONS"
+                  },
+                  {
+                    "key": "access-control-allow-origin",
+                    "value": "*"
+                  },
+                  {
+                    "key": "x-blocked-at-loadbalancer",
+                    "value": "1"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "{\n    \"success\": false,\n    \"error\": {\n        \"code\": 101,\n        \"type\": \"invalid_access_key\",\n        \"info\": \"You have not supplied a valid API Access Key. [Technical Support: support@apilayer.com]\"\n    }\n}",
+                "uid": "870119-c72ea8cb-6d23-48d1-88f4-e3bce7a90556"
+              }
+            ],
+            "uid": "870119-fe747591-8605-40cd-9683-46292587d320"
+          },
+          {
+            "name": "Hostname",
+            "id": "10edd52c-f54e-4795-8841-999baba7aada",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "https://api.ipstack.com/160.39.144.19?hostname=1",
+                "protocol": "https",
+                "host": [
+                  "api",
+                  "ipstack",
+                  "com"
+                ],
+                "path": [
+                  "160.39.144.19"
+                ],
+                "query": [
+                  {
+                    "key": "hostname",
+                    "value": "1",
+                    "description": "[optional] Set to 1 to see the Hostname."
+                  }
+                ]
+              },
+              "description": "Add \"Hostname\" \\[optional\\] and set to `1` to enable Hostname Lookup."
+            },
+            "response": [
+              {
+                "id": "aac84a5d-d1f5-48a9-8238-544fd0d22b32",
+                "name": "200 OK – Hostname",
+                "originalRequest": {
+                  "method": "GET",
+                  "header": [],
+                  "url": {
+                    "raw": "https://api.ipstack.com/160.39.144.19?access_key={PASTE_YOUR_API_KEY_HERE}&hostname=1",
+                    "protocol": "https",
+                    "host": [
+                      "api",
+                      "ipstack",
+                      "com"
+                    ],
+                    "path": [
+                      "160.39.144.19"
+                    ],
+                    "query": [
+                      {
+                        "key": "access_key",
+                        "value": "{PASTE_YOUR_API_KEY_HERE}"
+                      },
+                      {
+                        "key": "hostname",
+                        "value": "1"
+                      }
+                    ]
+                  }
+                },
+                "status": "OK",
+                "code": 200,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "content-type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "transfer-encoding",
+                    "value": "chunked"
+                  },
+                  {
+                    "key": "date",
+                    "value": "Thu, 15 Feb 2024 13:09:19 GMT"
+                  },
+                  {
+                    "key": "x-apilayer-transaction-id",
+                    "value": "61ad1cda-6abd-4904-9c20-72eb500f75c3"
+                  },
+                  {
+                    "key": "access-control-allow-origin",
+                    "value": "*"
+                  },
+                  {
+                    "key": "access-control-allow-methods",
+                    "value": "GET, POST, HEAD, OPTIONS"
+                  },
+                  {
+                    "key": "access-control-allow-headers",
+                    "value": "*"
+                  },
+                  {
+                    "key": "x-quota-limit",
+                    "value": "50000"
+                  },
+                  {
+                    "key": "x-quota-remaining",
+                    "value": "49997"
+                  },
+                  {
+                    "key": "x-increment-usage",
+                    "value": "1"
+                  },
+                  {
+                    "key": "x-request-time",
+                    "value": "0.054"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "{\n    \"ip\": \"160.39.144.19\",\n    \"hostname\": \"160.39.144.19\",\n    \"type\": \"ipv4\",\n    \"continent_code\": \"NA\",\n    \"continent_name\": \"North America\",\n    \"country_code\": \"US\",\n    \"country_name\": \"United States\",\n    \"region_code\": \"NY\",\n    \"region_name\": \"New York\",\n    \"city\": \"Manhattan\",\n    \"zip\": \"10025\",\n    \"latitude\": 40.7983512878418,\n    \"longitude\": -73.9631576538086,\n    \"location\": {\n        \"geoname_id\": 5125771,\n        \"capital\": \"Washington D.C.\",\n        \"languages\": [\n            {\n                \"code\": \"en\",\n                \"name\": \"English\",\n                \"native\": \"English\"\n            }\n        ],\n        \"country_flag\": \"https://assets.ipstack.com/flags/us.svg\",\n        \"country_flag_emoji\": \"🇺🇸\",\n        \"country_flag_emoji_unicode\": \"U+1F1FA U+1F1F8\",\n        \"calling_code\": \"1\",\n        \"is_eu\": false\n    },\n    \"time_zone\": {\n        \"id\": \"America/New_York\",\n        \"current_time\": \"2024-02-15T08:09:19-05:00\",\n        \"gmt_offset\": -18000,\n        \"code\": \"EST\",\n        \"is_daylight_saving\": false\n    },\n    \"currency\": {\n        \"code\": \"USD\",\n        \"name\": \"US Dollar\",\n        \"plural\": \"US dollars\",\n        \"symbol\": \"$\",\n        \"symbol_native\": \"$\"\n    },\n    \"connection\": {\n        \"asn\": 14,\n        \"isp\": \"Columbia University\"\n    }\n}",
+                "uid": "870119-aac84a5d-d1f5-48a9-8238-544fd0d22b32"
+              }
+            ],
+            "uid": "870119-10edd52c-f54e-4795-8841-999baba7aada"
+          },
+          {
+            "name": "Response wrapped inside a callback",
+            "id": "2d8468f8-05ef-4eff-baa8-76b7475233c4",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "https://api.ipstack.com/134.201.250.155?callback=MY_FUNCTION",
+                "protocol": "https",
+                "host": [
+                  "api",
+                  "ipstack",
+                  "com"
+                ],
+                "path": [
+                  "134.201.250.155"
+                ],
+                "query": [
+                  {
+                    "key": "callback",
+                    "value": "MY_FUNCTION",
+                    "description": "Resposne will be wrapped inside this function name"
+                  }
+                ]
+              },
+              "description": "Specify a JSONP callback \\[Optional\\] function name according to the JSONP Callbacks section."
+            },
+            "response": [
+              {
+                "id": "692a0a0e-9619-4f63-8c4a-f917cbb95f6b",
+                "name": "200 OK – Response wrapped inside a callback",
+                "originalRequest": {
+                  "method": "GET",
+                  "header": [],
+                  "url": {
+                    "raw": "https://api.ipstack.com/134.201.250.155?access_key={PASTE_YOUR_API_KEY_HERE}&callback=MY_FUNCTION",
+                    "protocol": "https",
+                    "host": [
+                      "api",
+                      "ipstack",
+                      "com"
+                    ],
+                    "path": [
+                      "134.201.250.155"
+                    ],
+                    "query": [
+                      {
+                        "key": "access_key",
+                        "value": "{PASTE_YOUR_API_KEY_HERE}",
+                        "description": "You can get your API key by signing up at https://ipstack.com"
+                      },
+                      {
+                        "key": "callback",
+                        "value": "MY_FUNCTION",
+                        "description": "Resposne will be wrapped inside this function name"
+                      }
+                    ]
+                  }
+                },
+                "status": "OK",
+                "code": 200,
+                "_postman_previewlanguage": "script",
+                "header": [
+                  {
+                    "key": "content-type",
+                    "value": "application/javascript"
+                  },
+                  {
+                    "key": "transfer-encoding",
+                    "value": "chunked"
+                  },
+                  {
+                    "key": "date",
+                    "value": "Mon, 26 Feb 2024 18:18:39 GMT"
+                  },
+                  {
+                    "key": "x-apilayer-transaction-id",
+                    "value": "ad153527-ce99-4b35-81fd-2d0e1bb26673"
+                  },
+                  {
+                    "key": "access-control-allow-origin",
+                    "value": "*"
+                  },
+                  {
+                    "key": "access-control-allow-methods",
+                    "value": "GET, POST, HEAD, OPTIONS"
+                  },
+                  {
+                    "key": "access-control-allow-headers",
+                    "value": "*"
+                  },
+                  {
+                    "key": "x-quota-limit",
+                    "value": "2000000"
+                  },
+                  {
+                    "key": "x-quota-remaining",
+                    "value": "1999968"
+                  },
+                  {
+                    "key": "x-increment-usage",
+                    "value": "1"
+                  },
+                  {
+                    "key": "x-request-time",
+                    "value": "0.037"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "MY_FUNCTION({\"ip\": \"134.201.250.155\", \"type\": \"ipv4\", \"continent_code\": \"NA\", \"continent_name\": \"North America\", \"country_code\": \"US\", \"country_name\": \"United States\", \"region_code\": \"CA\", \"region_name\": \"California\", \"city\": \"Los Angeles\", \"zip\": \"90012\", \"latitude\": 34.0655517578125, \"longitude\": -118.24053955078125, \"location\": {\"geoname_id\": 5368361, \"capital\": \"Washington D.C.\", \"languages\": [{\"code\": \"en\", \"name\": \"English\", \"native\": \"English\"}], \"country_flag\": \"https://assets.ipstack.com/flags/us.svg\", \"country_flag_emoji\": \"\\ud83c\\uddfa\\ud83c\\uddf8\", \"country_flag_emoji_unicode\": \"U+1F1FA U+1F1F8\", \"calling_code\": \"1\", \"is_eu\": false}, \"time_zone\": {\"id\": \"America/Los_Angeles\", \"current_time\": \"2024-02-26T10:18:39-08:00\", \"gmt_offset\": -28800, \"code\": \"PST\", \"is_daylight_saving\": false}, \"currency\": {\"code\": \"USD\", \"name\": \"US Dollar\", \"plural\": \"US dollars\", \"symbol\": \"$\", \"symbol_native\": \"$\"}, \"connection\": {\"asn\": 25876, \"isp\": \"Los Angeles Department of Water & Power\"}});",
+                "uid": "870119-692a0a0e-9619-4f63-8c4a-f917cbb95f6b"
+              }
+            ],
+            "uid": "870119-2d8468f8-05ef-4eff-baa8-76b7475233c4"
+          },
+          {
+            "name": "Response in different language",
+            "id": "cc5b73d7-dbac-4bc3-91cd-80f177ed3302",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "https://api.ipstack.com/134.201.250.155?language=ru",
+                "protocol": "https",
+                "host": [
+                  "api",
+                  "ipstack",
+                  "com"
+                ],
+                "path": [
+                  "134.201.250.155"
+                ],
+                "query": [
+                  {
+                    "key": "language",
+                    "value": "ru",
+                    "description": "Supported languages:\n\nen - English/US\nde - German\nes - Spanish\nfr - French\nja - Japanese\npt-br - Portugues (Brazil)\nru - Russian\nzh - Chinese"
+                  }
+                ]
+              },
+              "description": "\\[optional\\] Set to a 2-letter \"language\" code according to the Specify Output Language section to change output language.\n\n**Supported languages:**\n\n- `en` - English/US\n- `de` - German\n- `es` - Spanish\n- `fr` - French\n- `ja` - Japanese\n- `pt-br` - Portugues (Brazil)\n- `ru` - Russian\n- `zh` - Chinese"
+            },
+            "response": [
+              {
+                "id": "ad910ea3-7cb7-45b3-9c7a-406e5f95fa07",
+                "name": "200 OK – Response in different language",
+                "originalRequest": {
+                  "method": "GET",
+                  "header": [],
+                  "url": {
+                    "raw": "https://api.ipstack.com/134.201.250.155?access_key={PASTE_YOUR_API_KEY_HERE}&language=ru",
+                    "protocol": "https",
+                    "host": [
+                      "api",
+                      "ipstack",
+                      "com"
+                    ],
+                    "path": [
+                      "134.201.250.155"
+                    ],
+                    "query": [
+                      {
+                        "key": "access_key",
+                        "value": "{PASTE_YOUR_API_KEY_HERE}"
+                      },
+                      {
+                        "key": "language",
+                        "value": "ru",
+                        "description": "Supported languages:\n\nen - English/US\nde - German\nes - Spanish\nfr - French\nja - Japanese\npt-br - Portugues (Brazil)\nru - Russian\nzh - Chinese"
+                      }
+                    ]
+                  }
+                },
+                "status": "OK",
+                "code": 200,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "content-type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "transfer-encoding",
+                    "value": "chunked"
+                  },
+                  {
+                    "key": "date",
+                    "value": "Thu, 15 Feb 2024 13:17:02 GMT"
+                  },
+                  {
+                    "key": "x-apilayer-transaction-id",
+                    "value": "d92f5a6e-ffee-457f-9e1e-ceddc29fbc70"
+                  },
+                  {
+                    "key": "access-control-allow-origin",
+                    "value": "*"
+                  },
+                  {
+                    "key": "access-control-allow-methods",
+                    "value": "GET, POST, HEAD, OPTIONS"
+                  },
+                  {
+                    "key": "access-control-allow-headers",
+                    "value": "*"
+                  },
+                  {
+                    "key": "x-quota-limit",
+                    "value": "50000"
+                  },
+                  {
+                    "key": "x-quota-remaining",
+                    "value": "49996"
+                  },
+                  {
+                    "key": "x-increment-usage",
+                    "value": "1"
+                  },
+                  {
+                    "key": "x-request-time",
+                    "value": "0.029"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "{\n    \"ip\": \"134.201.250.155\",\n    \"type\": \"ipv4\",\n    \"continent_code\": \"NA\",\n    \"continent_name\": \"Северная Америка\",\n    \"country_code\": \"US\",\n    \"country_name\": \"Соединенные Штаты\",\n    \"region_code\": \"CA\",\n    \"region_name\": \"Калифорния\",\n    \"city\": \"Лос-Анджелес\",\n    \"zip\": \"90012\",\n    \"latitude\": 34.0655517578125,\n    \"longitude\": -118.24053955078125,\n    \"location\": {\n        \"geoname_id\": 5368361,\n        \"capital\": \"Washington D.C.\",\n        \"languages\": [\n            {\n                \"code\": \"en\",\n                \"name\": \"English\",\n                \"native\": \"English\"\n            }\n        ],\n        \"country_flag\": \"https://assets.ipstack.com/flags/us.svg\",\n        \"country_flag_emoji\": \"🇺🇸\",\n        \"country_flag_emoji_unicode\": \"U+1F1FA U+1F1F8\",\n        \"calling_code\": \"1\",\n        \"is_eu\": false\n    },\n    \"time_zone\": {\n        \"id\": \"America/Los_Angeles\",\n        \"current_time\": \"2024-02-15T05:17:02-08:00\",\n        \"gmt_offset\": -28800,\n        \"code\": \"PST\",\n        \"is_daylight_saving\": false\n    },\n    \"currency\": {\n        \"code\": \"USD\",\n        \"name\": \"US Dollar\",\n        \"plural\": \"US dollars\",\n        \"symbol\": \"$\",\n        \"symbol_native\": \"$\"\n    },\n    \"connection\": {\n        \"asn\": 25876,\n        \"isp\": \"Los Angeles Department of Water & Power\"\n    }\n}",
+                "uid": "870119-ad910ea3-7cb7-45b3-9c7a-406e5f95fa07"
+              }
+            ],
+            "uid": "870119-cc5b73d7-dbac-4bc3-91cd-80f177ed3302"
+          },
+          {
+            "name": "Specific Response with Fields Parameter",
+            "id": "1c42b7be-f883-44ac-9ce0-dad6624a378c",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "https://api.ipstack.com/134.201.250.155?fields=zip",
+                "protocol": "https",
+                "host": [
+                  "api",
+                  "ipstack",
+                  "com"
+                ],
+                "path": [
+                  "134.201.250.155"
+                ],
+                "query": [
+                  {
+                    "key": "fields",
+                    "value": "zip",
+                    "description": "[optional] Set to your preferred output field(s) according to the Specify Output Fields section.\n"
+                  }
+                ]
+              },
+              "description": "\\[optional\\] Set to your preferred output \"field(s)\" according to the Specify Output Fields section."
+            },
+            "response": [
+              {
+                "id": "5c0546f2-6735-4ac7-adfc-c7d97f48b509",
+                "name": "200 OK – Specific Response with Fields Parameter",
+                "originalRequest": {
+                  "method": "GET",
+                  "header": [],
+                  "url": {
+                    "raw": "https://api.ipstack.com/134.201.250.155access_key={PASTE_YOUR_API_KEY_HERE}&fields=zip",
+                    "protocol": "https",
+                    "host": [
+                      "api",
+                      "ipstack",
+                      "com"
+                    ],
+                    "path": [
+                      "134.201.250.155access_key={PASTE_YOUR_API_KEY_HERE}&fields=zip"
+                    ]
+                  }
+                },
+                "status": "OK",
+                "code": 200,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "content-type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "transfer-encoding",
+                    "value": "chunked"
+                  },
+                  {
+                    "key": "date",
+                    "value": "Thu, 15 Feb 2024 13:23:05 GMT"
+                  },
+                  {
+                    "key": "x-apilayer-transaction-id",
+                    "value": "6514b602-8a9c-4389-9d49-ac1e95664e36"
+                  },
+                  {
+                    "key": "access-control-allow-origin",
+                    "value": "*"
+                  },
+                  {
+                    "key": "access-control-allow-methods",
+                    "value": "GET, POST, HEAD, OPTIONS"
+                  },
+                  {
+                    "key": "access-control-allow-headers",
+                    "value": "*"
+                  },
+                  {
+                    "key": "x-quota-limit",
+                    "value": "50000"
+                  },
+                  {
+                    "key": "x-quota-remaining",
+                    "value": "49995"
+                  },
+                  {
+                    "key": "x-increment-usage",
+                    "value": "1"
+                  },
+                  {
+                    "key": "x-request-time",
+                    "value": "0.028"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "{\n    \"zip\": \"90012\"\n}",
+                "uid": "870119-5c0546f2-6735-4ac7-adfc-c7d97f48b509"
+              }
+            ],
+            "uid": "870119-1c42b7be-f883-44ac-9ce0-dad6624a378c"
+          },
+          {
+            "name": "XML Output",
+            "id": "957db71f-c3a4-4855-98ed-96dd15494fd8",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "https://api.ipstack.com/160.39.144.19?output=xml",
+                "protocol": "https",
+                "host": [
+                  "api",
+                  "ipstack",
+                  "com"
+                ],
+                "path": [
+                  "160.39.144.19"
+                ],
+                "query": [
+                  {
+                    "key": "output",
+                    "value": "xml",
+                    "description": "[optional] Set to json or xml to choose between output formats."
+                  }
+                ]
+              },
+              "description": "\\[optional\\] Set \"output\" to json or xml to choose between output formats."
+            },
+            "response": [
+              {
+                "id": "81c173fd-856e-422e-a019-e7c0eb8f7957",
+                "name": "200 OK – XML Output",
+                "originalRequest": {
+                  "method": "GET",
+                  "header": [],
+                  "url": {
+                    "raw": "https://api.ipstack.com/160.39.144.19?access_key={PASTE_YOUR_API_KEY_HERE}&output=xml",
+                    "protocol": "https",
+                    "host": [
+                      "api",
+                      "ipstack",
+                      "com"
+                    ],
+                    "path": [
+                      "160.39.144.19"
+                    ],
+                    "query": [
+                      {
+                        "key": "access_key",
+                        "value": "{PASTE_YOUR_API_KEY_HERE}"
+                      },
+                      {
+                        "key": "output",
+                        "value": "xml"
+                      }
+                    ]
+                  }
+                },
+                "status": "OK",
+                "code": 200,
+                "_postman_previewlanguage": "xml",
+                "header": [
+                  {
+                    "key": "content-type",
+                    "value": "application/xml"
+                  },
+                  {
+                    "key": "transfer-encoding",
+                    "value": "chunked"
+                  },
+                  {
+                    "key": "date",
+                    "value": "Thu, 15 Feb 2024 13:38:46 GMT"
+                  },
+                  {
+                    "key": "x-apilayer-transaction-id",
+                    "value": "4ca28e82-1208-4a2e-86f6-9e754669af87"
+                  },
+                  {
+                    "key": "access-control-allow-origin",
+                    "value": "*"
+                  },
+                  {
+                    "key": "access-control-allow-methods",
+                    "value": "GET, POST, HEAD, OPTIONS"
+                  },
+                  {
+                    "key": "access-control-allow-headers",
+                    "value": "*"
+                  },
+                  {
+                    "key": "x-quota-limit",
+                    "value": "50000"
+                  },
+                  {
+                    "key": "x-quota-remaining",
+                    "value": "49994"
+                  },
+                  {
+                    "key": "x-increment-usage",
+                    "value": "1"
+                  },
+                  {
+                    "key": "x-request-time",
+                    "value": "0.030"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "\u003C?xml version=\"1.0\"?\u003E\n\u003Cresult\u003E\n    \u003Cip\u003E160.39.144.19\u003C/ip\u003E\n    \u003Ctype\u003Eipv4\u003C/type\u003E\n    \u003Ccontinent_code\u003ENA\u003C/continent_code\u003E\n    \u003Ccontinent_name\u003ENorth America\u003C/continent_name\u003E\n    \u003Ccountry_code\u003EUS\u003C/country_code\u003E\n    \u003Ccountry_name\u003EUnited States\u003C/country_name\u003E\n    \u003Cregion_code\u003ENY\u003C/region_code\u003E\n    \u003Cregion_name\u003ENew York\u003C/region_name\u003E\n    \u003Ccity\u003EManhattan\u003C/city\u003E\n    \u003Czip\u003E10025\u003C/zip\u003E\n    \u003Clatitude\u003E40.7983512878418\u003C/latitude\u003E\n    \u003Clongitude\u003E-73.9631576538086\u003C/longitude\u003E\n    \u003Clocation\u003E\n        \u003Cgeoname_id\u003E5125771\u003C/geoname_id\u003E\n        \u003Ccapital\u003EWashington D.C.\u003C/capital\u003E\n        \u003Clanguages\u003E\n            \u003Ccode\u003Een\u003C/code\u003E\n            \u003Cname\u003EEnglish\u003C/name\u003E\n            \u003Cnative\u003EEnglish\u003C/native\u003E\n        \u003C/languages\u003E\n        \u003Ccountry_flag\u003Ehttps://assets.ipstack.com/flags/us.svg\u003C/country_flag\u003E\n        \u003Ccountry_flag_emoji\u003E&#x1F1FA;&#x1F1F8;\u003C/country_flag_emoji\u003E\n        \u003Ccountry_flag_emoji_unicode\u003EU+1F1FA U+1F1F8\u003C/country_flag_emoji_unicode\u003E\n        \u003Ccalling_code\u003E1\u003C/calling_code\u003E\n        \u003Cis_eu\u003E\u003C/is_eu\u003E\n    \u003C/location\u003E\n    \u003Ctime_zone\u003E\n        \u003Cid\u003EAmerica/New_York\u003C/id\u003E\n        \u003Ccurrent_time\u003E2024-02-15 08:38:46-05:00\u003C/current_time\u003E\n        \u003Cgmt_offset\u003E-18000\u003C/gmt_offset\u003E\n        \u003Ccode\u003EEST\u003C/code\u003E\n        \u003Cis_daylight_saving\u003E\u003C/is_daylight_saving\u003E\n    \u003C/time_zone\u003E\n    \u003Ccurrency\u003E\n        \u003Ccode\u003EUSD\u003C/code\u003E\n        \u003Cname\u003EUS Dollar\u003C/name\u003E\n        \u003Cplural\u003EUS dollars\u003C/plural\u003E\n        \u003Csymbol\u003E$\u003C/symbol\u003E\n        \u003Csymbol_native\u003E$\u003C/symbol_native\u003E\n    \u003C/currency\u003E\n    \u003Cconnection\u003E\n        \u003Casn\u003E14\u003C/asn\u003E\n        \u003Cisp\u003EColumbia University\u003C/isp\u003E\n    \u003C/connection\u003E\n\u003C/result\u003E",
+                "uid": "870119-81c173fd-856e-422e-a019-e7c0eb8f7957"
+              }
+            ],
+            "uid": "870119-957db71f-c3a4-4855-98ed-96dd15494fd8"
+          }
+        ],
+        "id": "6b362342-5f4d-40dd-b0cb-af7ff68705a3",
+        "description": "The ipstack's primary endpoint is called Standard Lookup and is used to look up single IPv4 or IPv6 addresses. To call this endpoint, simply attach any IPv4 or IPv6 address to the API's base URL.",
+        "event": [
+          {
+            "listen": "prerequest",
+            "script": {
+              "id": "1dad4b74-57d3-4fe8-aa4b-b743c007679d",
+              "type": "text/javascript",
+              "packages": {
+
+              },
+              "exec": [
+                ""
+              ]
+            }
+          },
+          {
+            "listen": "test",
+            "script": {
+              "id": "81fa5a21-b70a-454e-ab35-753a2fbaeb44",
+              "type": "text/javascript",
+              "packages": {
+
+              },
+              "exec": [
+                ""
+              ]
+            }
+          }
+        ],
+        "uid": "870119-6b362342-5f4d-40dd-b0cb-af7ff68705a3"
+      },
+      {
+        "name": "Bulk IP Lookup",
+        "item": [
+          {
+            "name": "Bulk IP Lookup",
+            "id": "d4b0bb78-af03-4958-987c-d4f450826c24",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "https://api.ipstack.com/72.229.28.185,110.174.165.78",
+                "protocol": "https",
+                "host": [
+                  "api",
+                  "ipstack",
+                  "com"
+                ],
+                "path": [
+                  "72.229.28.185,110.174.165.78"
+                ]
+              },
+              "description": "The ipstack API offers the ability to request data for multiple IPv4 or IPv6 addresses at the same time. In order to process IP addresses in bulk, simply append multiple comma-separated IP addresses to the API's base URL."
+            },
+            "response": [
+              {
+                "id": "69219486-5094-4809-9643-6df85ccd7ed0",
+                "name": "200 OK – Bulk IP Lookup",
+                "originalRequest": {
+                  "method": "GET",
+                  "header": [],
+                  "url": {
+                    "raw": "https://api.ipstack.com/72.229.28.185,110.174.165.78?access_key={PASTE_YOUR_API_KEY_HERE}",
+                    "protocol": "https",
+                    "host": [
+                      "api",
+                      "ipstack",
+                      "com"
+                    ],
+                    "path": [
+                      "72.229.28.185,110.174.165.78"
+                    ],
+                    "query": [
+                      {
+                        "key": "access_key",
+                        "value": "{PASTE_YOUR_API_KEY_HERE}",
+                        "description": "You can get your API key by signing up at https://ipstack.com"
+                      }
+                    ]
+                  }
+                },
+                "status": "OK",
+                "code": 200,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "content-type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "transfer-encoding",
+                    "value": "chunked"
+                  },
+                  {
+                    "key": "date",
+                    "value": "Mon, 26 Feb 2024 16:52:40 GMT"
+                  },
+                  {
+                    "key": "x-apilayer-transaction-id",
+                    "value": "5d716d3d-b3b5-4312-a2ed-28d4fb1d0142"
+                  },
+                  {
+                    "key": "access-control-allow-origin",
+                    "value": "*"
+                  },
+                  {
+                    "key": "access-control-allow-methods",
+                    "value": "GET, POST, HEAD, OPTIONS"
+                  },
+                  {
+                    "key": "access-control-allow-headers",
+                    "value": "*"
+                  },
+                  {
+                    "key": "x-quota-limit",
+                    "value": "2000000"
+                  },
+                  {
+                    "key": "x-quota-remaining",
+                    "value": "1999978"
+                  },
+                  {
+                    "key": "x-increment-usage",
+                    "value": "1"
+                  },
+                  {
+                    "key": "x-request-time",
+                    "value": "0.032"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "[\n    {\n        \"ip\": \"72.229.28.185\",\n        \"type\": \"ipv4\",\n        \"continent_code\": \"NA\",\n        \"continent_name\": \"North America\",\n        \"country_code\": \"US\",\n        \"country_name\": \"United States\",\n        \"region_code\": \"NY\",\n        \"region_name\": \"New York\",\n        \"city\": \"Manhattan\",\n        \"zip\": \"10020\",\n        \"latitude\": 40.7589111328125,\n        \"longitude\": -73.97901916503906,\n        \"location\": {\n            \"geoname_id\": 5125771,\n            \"capital\": \"Washington D.C.\",\n            \"languages\": [\n                {\n                    \"code\": \"en\",\n                    \"name\": \"English\",\n                    \"native\": \"English\"\n                }\n            ],\n            \"country_flag\": \"https://assets.ipstack.com/flags/us.svg\",\n            \"country_flag_emoji\": \"🇺🇸\",\n            \"country_flag_emoji_unicode\": \"U+1F1FA U+1F1F8\",\n            \"calling_code\": \"1\",\n            \"is_eu\": false\n        },\n        \"time_zone\": {\n            \"id\": \"America/New_York\",\n            \"current_time\": \"2024-02-26T11:52:40-05:00\",\n            \"gmt_offset\": -18000,\n            \"code\": \"EST\",\n            \"is_daylight_saving\": false\n        },\n        \"currency\": {\n            \"code\": \"USD\",\n            \"name\": \"US Dollar\",\n            \"plural\": \"US dollars\",\n            \"symbol\": \"$\",\n            \"symbol_native\": \"$\"\n        },\n        \"connection\": {\n            \"asn\": 12271,\n            \"isp\": \"Charter Communications Inc\"\n        }\n    },\n    {\n        \"ip\": \"110.174.165.78\",\n        \"type\": \"ipv4\",\n        \"continent_code\": \"OC\",\n        \"continent_name\": \"Oceania\",\n        \"country_code\": \"AU\",\n        \"country_name\": \"Australia\",\n        \"region_code\": \"NSW\",\n        \"region_name\": \"New South Wales\",\n        \"city\": \"Sydney\",\n        \"zip\": \"1210\",\n        \"latitude\": -33.87070083618164,\n        \"longitude\": 151.20680236816406,\n        \"location\": {\n            \"geoname_id\": 2147714,\n            \"capital\": \"Canberra\",\n            \"languages\": [\n                {\n                    \"code\": \"en\",\n                    \"name\": \"English\",\n                    \"native\": \"English\"\n                }\n            ],\n            \"country_flag\": \"https://assets.ipstack.com/flags/au.svg\",\n            \"country_flag_emoji\": \"🇦🇺\",\n            \"country_flag_emoji_unicode\": \"U+1F1E6 U+1F1FA\",\n            \"calling_code\": \"61\",\n            \"is_eu\": false\n        },\n        \"time_zone\": {\n            \"id\": \"Australia/Sydney\",\n            \"current_time\": \"2024-02-27T03:52:40+11:00\",\n            \"gmt_offset\": 39600,\n            \"code\": \"AEDT\",\n            \"is_daylight_saving\": true\n        },\n        \"currency\": {\n            \"code\": \"AUD\",\n            \"name\": \"Australian Dollar\",\n            \"plural\": \"Australian dollars\",\n            \"symbol\": \"AU$\",\n            \"symbol_native\": \"$\"\n        },\n        \"connection\": {\n            \"asn\": 7545,\n            \"isp\": \"Tpg Telecom Limited\"\n        }\n    }\n]",
+                "uid": "870119-69219486-5094-4809-9643-6df85ccd7ed0"
+              }
+            ],
+            "uid": "870119-d4b0bb78-af03-4958-987c-d4f450826c24"
+          },
+          {
+            "name": "Hostnam",
+            "id": "7c5f4b15-c9cc-473e-9693-8bd44a28d01a",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "https://api.ipstack.com/72.229.28.185,110.174.165.78?hostname=1",
+                "protocol": "https",
+                "host": [
+                  "api",
+                  "ipstack",
+                  "com"
+                ],
+                "path": [
+                  "72.229.28.185,110.174.165.78"
+                ],
+                "query": [
+                  {
+                    "key": "hostname",
+                    "value": "1"
+                  }
+                ]
+              },
+              "description": "Add \"Hostname\" \\[optional\\] and set to `1` to enable Hostname Lookup."
+            },
+            "response": [
+              {
+                "id": "a7457cab-91bd-4768-a4f4-cacf5fab1c92",
+                "name": "200 OK – Hostname",
+                "originalRequest": {
+                  "method": "GET",
+                  "header": [],
+                  "url": {
+                    "raw": "https://api.ipstack.com/72.229.28.185,110.174.165.78?access_key={PASTE_YOUR_API_KEY_HERE}&hostname=1",
+                    "protocol": "https",
+                    "host": [
+                      "api",
+                      "ipstack",
+                      "com"
+                    ],
+                    "path": [
+                      "72.229.28.185,110.174.165.78"
+                    ],
+                    "query": [
+                      {
+                        "key": "access_key",
+                        "value": "{PASTE_YOUR_API_KEY_HERE}",
+                        "description": "You can get your API key by signing up at https://ipstack.com"
+                      },
+                      {
+                        "key": "hostname",
+                        "value": "1"
+                      }
+                    ]
+                  }
+                },
+                "status": "OK",
+                "code": 200,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "content-type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "transfer-encoding",
+                    "value": "chunked"
+                  },
+                  {
+                    "key": "date",
+                    "value": "Mon, 26 Feb 2024 17:38:37 GMT"
+                  },
+                  {
+                    "key": "x-apilayer-transaction-id",
+                    "value": "bceed337-643c-4695-8c7b-273a100bfd48"
+                  },
+                  {
+                    "key": "access-control-allow-origin",
+                    "value": "*"
+                  },
+                  {
+                    "key": "access-control-allow-methods",
+                    "value": "GET, POST, HEAD, OPTIONS"
+                  },
+                  {
+                    "key": "access-control-allow-headers",
+                    "value": "*"
+                  },
+                  {
+                    "key": "x-quota-limit",
+                    "value": "2000000"
+                  },
+                  {
+                    "key": "x-quota-remaining",
+                    "value": "1999973"
+                  },
+                  {
+                    "key": "x-increment-usage",
+                    "value": "1"
+                  },
+                  {
+                    "key": "x-request-time",
+                    "value": "0.408"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "[\n    {\n        \"ip\": \"72.229.28.185\",\n        \"hostname\": \"072-229-028-185.res.spectrum.com\",\n        \"type\": \"ipv4\",\n        \"continent_code\": \"NA\",\n        \"continent_name\": \"North America\",\n        \"country_code\": \"US\",\n        \"country_name\": \"United States\",\n        \"region_code\": \"NY\",\n        \"region_name\": \"New York\",\n        \"city\": \"Manhattan\",\n        \"zip\": \"10020\",\n        \"latitude\": 40.7589111328125,\n        \"longitude\": -73.97901916503906,\n        \"location\": {\n            \"geoname_id\": 5125771,\n            \"capital\": \"Washington D.C.\",\n            \"languages\": [\n                {\n                    \"code\": \"en\",\n                    \"name\": \"English\",\n                    \"native\": \"English\"\n                }\n            ],\n            \"country_flag\": \"https://assets.ipstack.com/flags/us.svg\",\n            \"country_flag_emoji\": \"🇺🇸\",\n            \"country_flag_emoji_unicode\": \"U+1F1FA U+1F1F8\",\n            \"calling_code\": \"1\",\n            \"is_eu\": false\n        },\n        \"time_zone\": {\n            \"id\": \"America/New_York\",\n            \"current_time\": \"2024-02-26T12:38:37-05:00\",\n            \"gmt_offset\": -18000,\n            \"code\": \"EST\",\n            \"is_daylight_saving\": false\n        },\n        \"currency\": {\n            \"code\": \"USD\",\n            \"name\": \"US Dollar\",\n            \"plural\": \"US dollars\",\n            \"symbol\": \"$\",\n            \"symbol_native\": \"$\"\n        },\n        \"connection\": {\n            \"asn\": 12271,\n            \"isp\": \"Charter Communications Inc\"\n        }\n    },\n    {\n        \"ip\": \"110.174.165.78\",\n        \"hostname\": \"110-174-165-78.static.tpgi.com.au\",\n        \"type\": \"ipv4\",\n        \"continent_code\": \"OC\",\n        \"continent_name\": \"Oceania\",\n        \"country_code\": \"AU\",\n        \"country_name\": \"Australia\",\n        \"region_code\": \"NSW\",\n        \"region_name\": \"New South Wales\",\n        \"city\": \"Sydney\",\n        \"zip\": \"1210\",\n        \"latitude\": -33.87070083618164,\n        \"longitude\": 151.20680236816406,\n        \"location\": {\n            \"geoname_id\": 2147714,\n            \"capital\": \"Canberra\",\n            \"languages\": [\n                {\n                    \"code\": \"en\",\n                    \"name\": \"English\",\n                    \"native\": \"English\"\n                }\n            ],\n            \"country_flag\": \"https://assets.ipstack.com/flags/au.svg\",\n            \"country_flag_emoji\": \"🇦🇺\",\n            \"country_flag_emoji_unicode\": \"U+1F1E6 U+1F1FA\",\n            \"calling_code\": \"61\",\n            \"is_eu\": false\n        },\n        \"time_zone\": {\n            \"id\": \"Australia/Sydney\",\n            \"current_time\": \"2024-02-27T04:38:37+11:00\",\n            \"gmt_offset\": 39600,\n            \"code\": \"AEDT\",\n            \"is_daylight_saving\": true\n        },\n        \"currency\": {\n            \"code\": \"AUD\",\n            \"name\": \"Australian Dollar\",\n            \"plural\": \"Australian dollars\",\n            \"symbol\": \"AU$\",\n            \"symbol_native\": \"$\"\n        },\n        \"connection\": {\n            \"asn\": 7545,\n            \"isp\": \"Tpg Telecom Limited\"\n        }\n    }\n]",
+                "uid": "870119-a7457cab-91bd-4768-a4f4-cacf5fab1c92"
+              }
+            ],
+            "uid": "870119-7c5f4b15-c9cc-473e-9693-8bd44a28d01a"
+          },
+          {
+            "name": "Response wrapped inside a callback",
+            "id": "215529ad-19b4-44ba-a09c-fa985df8e530",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "https://api.ipstack.com/134.201.250.155,72.229.28.185,110.174.165.78?callback=MY_FUNCTION",
+                "protocol": "https",
+                "host": [
+                  "api",
+                  "ipstack",
+                  "com"
+                ],
+                "path": [
+                  "134.201.250.155,72.229.28.185,110.174.165.78"
+                ],
+                "query": [
+                  {
+                    "key": "callback",
+                    "value": "MY_FUNCTION",
+                    "description": "Resposne will be wrapped inside this function name"
+                  }
+                ]
+              },
+              "description": "Specify a JSONP callback \\[Optional\\] function name according to the JSONP Callbacks section."
+            },
+            "response": [
+              {
+                "id": "169fb068-46bb-4108-a2de-b0992e8af3a6",
+                "name": "200 OK – Response wrapped inside a callback",
+                "originalRequest": {
+                  "method": "GET",
+                  "header": [],
+                  "url": {
+                    "raw": "https://api.ipstack.com/134.201.250.155,72.229.28.185,110.174.165.78?access_key={PASTE_YOUR_API_KEY_HERE}&callback=MY_FUNCTION",
+                    "protocol": "https",
+                    "host": [
+                      "api",
+                      "ipstack",
+                      "com"
+                    ],
+                    "path": [
+                      "134.201.250.155,72.229.28.185,110.174.165.78"
+                    ],
+                    "query": [
+                      {
+                        "key": "access_key",
+                        "value": "{PASTE_YOUR_API_KEY_HERE}",
+                        "description": "You can get your API key by signing up at https://ipstack.com"
+                      },
+                      {
+                        "key": "callback",
+                        "value": "MY_FUNCTION",
+                        "description": "Resposne will be wrapped inside this function name"
+                      }
+                    ]
+                  }
+                },
+                "status": "OK",
+                "code": 200,
+                "_postman_previewlanguage": "script",
+                "header": [
+                  {
+                    "key": "content-type",
+                    "value": "application/javascript"
+                  },
+                  {
+                    "key": "transfer-encoding",
+                    "value": "chunked"
+                  },
+                  {
+                    "key": "date",
+                    "value": "Mon, 26 Feb 2024 18:03:58 GMT"
+                  },
+                  {
+                    "key": "x-apilayer-transaction-id",
+                    "value": "d52c0ebc-5f6d-4c20-8393-028c4c92d634"
+                  },
+                  {
+                    "key": "access-control-allow-origin",
+                    "value": "*"
+                  },
+                  {
+                    "key": "access-control-allow-methods",
+                    "value": "GET, POST, HEAD, OPTIONS"
+                  },
+                  {
+                    "key": "access-control-allow-headers",
+                    "value": "*"
+                  },
+                  {
+                    "key": "x-quota-limit",
+                    "value": "2000000"
+                  },
+                  {
+                    "key": "x-quota-remaining",
+                    "value": "1999972"
+                  },
+                  {
+                    "key": "x-increment-usage",
+                    "value": "1"
+                  },
+                  {
+                    "key": "x-request-time",
+                    "value": "0.037"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "MY_FUNCTION([{\"ip\": \"134.201.250.155\", \"type\": \"ipv4\", \"continent_code\": \"NA\", \"continent_name\": \"North America\", \"country_code\": \"US\", \"country_name\": \"United States\", \"region_code\": \"CA\", \"region_name\": \"California\", \"city\": \"Los Angeles\", \"zip\": \"90012\", \"latitude\": 34.0655517578125, \"longitude\": -118.24053955078125, \"location\": {\"geoname_id\": 5368361, \"capital\": \"Washington D.C.\", \"languages\": [{\"code\": \"en\", \"name\": \"English\", \"native\": \"English\"}], \"country_flag\": \"https://assets.ipstack.com/flags/us.svg\", \"country_flag_emoji\": \"\\ud83c\\uddfa\\ud83c\\uddf8\", \"country_flag_emoji_unicode\": \"U+1F1FA U+1F1F8\", \"calling_code\": \"1\", \"is_eu\": false}, \"time_zone\": {\"id\": \"America/Los_Angeles\", \"current_time\": \"2024-02-26T10:03:58-08:00\", \"gmt_offset\": -28800, \"code\": \"PST\", \"is_daylight_saving\": false}, \"currency\": {\"code\": \"USD\", \"name\": \"US Dollar\", \"plural\": \"US dollars\", \"symbol\": \"$\", \"symbol_native\": \"$\"}, \"connection\": {\"asn\": 25876, \"isp\": \"Los Angeles Department of Water & Power\"}}, {\"ip\": \"72.229.28.185\", \"type\": \"ipv4\", \"continent_code\": \"NA\", \"continent_name\": \"North America\", \"country_code\": \"US\", \"country_name\": \"United States\", \"region_code\": \"NY\", \"region_name\": \"New York\", \"city\": \"Manhattan\", \"zip\": \"10020\", \"latitude\": 40.7589111328125, \"longitude\": -73.97901916503906, \"location\": {\"geoname_id\": 5125771, \"capital\": \"Washington D.C.\", \"languages\": [{\"code\": \"en\", \"name\": \"English\", \"native\": \"English\"}], \"country_flag\": \"https://assets.ipstack.com/flags/us.svg\", \"country_flag_emoji\": \"\\ud83c\\uddfa\\ud83c\\uddf8\", \"country_flag_emoji_unicode\": \"U+1F1FA U+1F1F8\", \"calling_code\": \"1\", \"is_eu\": false}, \"time_zone\": {\"id\": \"America/New_York\", \"current_time\": \"2024-02-26T13:03:58-05:00\", \"gmt_offset\": -18000, \"code\": \"EST\", \"is_daylight_saving\": false}, \"currency\": {\"code\": \"USD\", \"name\": \"US Dollar\", \"plural\": \"US dollars\", \"symbol\": \"$\", \"symbol_native\": \"$\"}, \"connection\": {\"asn\": 12271, \"isp\": \"Charter Communications Inc\"}}, {\"ip\": \"110.174.165.78\", \"type\": \"ipv4\", \"continent_code\": \"OC\", \"continent_name\": \"Oceania\", \"country_code\": \"AU\", \"country_name\": \"Australia\", \"region_code\": \"NSW\", \"region_name\": \"New South Wales\", \"city\": \"Sydney\", \"zip\": \"1210\", \"latitude\": -33.87070083618164, \"longitude\": 151.20680236816406, \"location\": {\"geoname_id\": 2147714, \"capital\": \"Canberra\", \"languages\": [{\"code\": \"en\", \"name\": \"English\", \"native\": \"English\"}], \"country_flag\": \"https://assets.ipstack.com/flags/au.svg\", \"country_flag_emoji\": \"\\ud83c\\udde6\\ud83c\\uddfa\", \"country_flag_emoji_unicode\": \"U+1F1E6 U+1F1FA\", \"calling_code\": \"61\", \"is_eu\": false}, \"time_zone\": {\"id\": \"Australia/Sydney\", \"current_time\": \"2024-02-27T05:03:58+11:00\", \"gmt_offset\": 39600, \"code\": \"AEDT\", \"is_daylight_saving\": true}, \"currency\": {\"code\": \"AUD\", \"name\": \"Australian Dollar\", \"plural\": \"Australian dollars\", \"symbol\": \"AU$\", \"symbol_native\": \"$\"}, \"connection\": {\"asn\": 7545, \"isp\": \"Tpg Telecom Limited\"}}]);",
+                "uid": "870119-169fb068-46bb-4108-a2de-b0992e8af3a6"
+              }
+            ],
+            "uid": "870119-215529ad-19b4-44ba-a09c-fa985df8e530"
+          },
+          {
+            "name": "Response in different language",
+            "id": "d5668ee5-1316-4d29-8590-4b3457ff0481",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "https://api.ipstack.com/72.229.28.185,110.174.165.78?language=ru",
+                "protocol": "https",
+                "host": [
+                  "api",
+                  "ipstack",
+                  "com"
+                ],
+                "path": [
+                  "72.229.28.185,110.174.165.78"
+                ],
+                "query": [
+                  {
+                    "key": "language",
+                    "value": "ru",
+                    "description": "Supported languages:\n\nen - English/US\nde - German\nes - Spanish\nfr - French\nja - Japanese\npt-br - Portugues (Brazil)\nru - Russian\nzh - Chinese"
+                  }
+                ]
+              },
+              "description": "\\[optional\\] Set to a 2-letter \"language\" code according to the Specify Output Language section to change output language.\n\n**Supported languages:**\n\n- `en` - English/US\n    \n- `de` - German\n    \n- `es` - Spanish\n    \n- `fr` - French\n    \n- `ja` - Japanese\n    \n- `pt-br` - Portugues (Brazil)\n    \n- `ru` - Russian\n    \n- `zh` - Chinese"
+            },
+            "response": [
+              {
+                "id": "d5b7b494-8a2d-4a89-a8b8-ea9ab877c71b",
+                "name": "200 OK – Response in different language Copy",
+                "originalRequest": {
+                  "method": "GET",
+                  "header": [],
+                  "url": {
+                    "raw": "https://api.ipstack.com/72.229.28.185,110.174.165.78?access_key={PASTE_YOUR_API_HERE}&language=ru",
+                    "protocol": "https",
+                    "host": [
+                      "api",
+                      "ipstack",
+                      "com"
+                    ],
+                    "path": [
+                      "72.229.28.185,110.174.165.78"
+                    ],
+                    "query": [
+                      {
+                        "key": "access_key",
+                        "value": "{PASTE_YOUR_API_HERE}",
+                        "description": "You can get your API key by signing up at https://ipstack.com"
+                      },
+                      {
+                        "key": "language",
+                        "value": "ru",
+                        "description": "Supported languages:\n\nen - English/US\nde - German\nes - Spanish\nfr - French\nja - Japanese\npt-br - Portugues (Brazil)\nru - Russian\nzh - Chinese"
+                      }
+                    ]
+                  }
+                },
+                "status": "OK",
+                "code": 200,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "content-type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "transfer-encoding",
+                    "value": "chunked"
+                  },
+                  {
+                    "key": "date",
+                    "value": "Mon, 26 Feb 2024 18:14:49 GMT"
+                  },
+                  {
+                    "key": "x-apilayer-transaction-id",
+                    "value": "d7655793-7822-4fa8-ae60-29630108ba2b"
+                  },
+                  {
+                    "key": "access-control-allow-origin",
+                    "value": "*"
+                  },
+                  {
+                    "key": "access-control-allow-methods",
+                    "value": "GET, POST, HEAD, OPTIONS"
+                  },
+                  {
+                    "key": "access-control-allow-headers",
+                    "value": "*"
+                  },
+                  {
+                    "key": "x-quota-limit",
+                    "value": "2000000"
+                  },
+                  {
+                    "key": "x-quota-remaining",
+                    "value": "1999970"
+                  },
+                  {
+                    "key": "x-increment-usage",
+                    "value": "1"
+                  },
+                  {
+                    "key": "x-request-time",
+                    "value": "0.036"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "[\n    {\n        \"ip\": \"72.229.28.185\",\n        \"type\": \"ipv4\",\n        \"continent_code\": \"NA\",\n        \"continent_name\": \"Северная Америка\",\n        \"country_code\": \"US\",\n        \"country_name\": \"Соединенные Штаты\",\n        \"region_code\": \"NY\",\n        \"region_name\": \"штат Нью-Йорк\",\n        \"city\": \"Манхеттен\",\n        \"zip\": \"10020\",\n        \"latitude\": 40.7589111328125,\n        \"longitude\": -73.97901916503906,\n        \"location\": {\n            \"geoname_id\": 5125771,\n            \"capital\": \"Washington D.C.\",\n            \"languages\": [\n                {\n                    \"code\": \"en\",\n                    \"name\": \"English\",\n                    \"native\": \"English\"\n                }\n            ],\n            \"country_flag\": \"https://assets.ipstack.com/flags/us.svg\",\n            \"country_flag_emoji\": \"🇺🇸\",\n            \"country_flag_emoji_unicode\": \"U+1F1FA U+1F1F8\",\n            \"calling_code\": \"1\",\n            \"is_eu\": false\n        },\n        \"time_zone\": {\n            \"id\": \"America/New_York\",\n            \"current_time\": \"2024-02-26T13:14:49-05:00\",\n            \"gmt_offset\": -18000,\n            \"code\": \"EST\",\n            \"is_daylight_saving\": false\n        },\n        \"currency\": {\n            \"code\": \"USD\",\n            \"name\": \"US Dollar\",\n            \"plural\": \"US dollars\",\n            \"symbol\": \"$\",\n            \"symbol_native\": \"$\"\n        },\n        \"connection\": {\n            \"asn\": 12271,\n            \"isp\": \"Charter Communications Inc\"\n        }\n    },\n    {\n        \"ip\": \"110.174.165.78\",\n        \"type\": \"ipv4\",\n        \"continent_code\": \"OC\",\n        \"continent_name\": \"Океания\",\n        \"country_code\": \"AU\",\n        \"country_name\": \"Австралия\",\n        \"region_code\": \"NSW\",\n        \"region_name\": \"Новый Южный Уэльс\",\n        \"city\": \"Сидней\",\n        \"zip\": \"1210\",\n        \"latitude\": -33.87070083618164,\n        \"longitude\": 151.20680236816406,\n        \"location\": {\n            \"geoname_id\": 2147714,\n            \"capital\": \"Canberra\",\n            \"languages\": [\n                {\n                    \"code\": \"en\",\n                    \"name\": \"English\",\n                    \"native\": \"English\"\n                }\n            ],\n            \"country_flag\": \"https://assets.ipstack.com/flags/au.svg\",\n            \"country_flag_emoji\": \"🇦🇺\",\n            \"country_flag_emoji_unicode\": \"U+1F1E6 U+1F1FA\",\n            \"calling_code\": \"61\",\n            \"is_eu\": false\n        },\n        \"time_zone\": {\n            \"id\": \"Australia/Sydney\",\n            \"current_time\": \"2024-02-27T05:14:49+11:00\",\n            \"gmt_offset\": 39600,\n            \"code\": \"AEDT\",\n            \"is_daylight_saving\": true\n        },\n        \"currency\": {\n            \"code\": \"AUD\",\n            \"name\": \"Australian Dollar\",\n            \"plural\": \"Australian dollars\",\n            \"symbol\": \"AU$\",\n            \"symbol_native\": \"$\"\n        },\n        \"connection\": {\n            \"asn\": 7545,\n            \"isp\": \"Tpg Telecom Limited\"\n        }\n    }\n]",
+                "uid": "870119-d5b7b494-8a2d-4a89-a8b8-ea9ab877c71b"
+              }
+            ],
+            "uid": "870119-d5668ee5-1316-4d29-8590-4b3457ff0481"
+          },
+          {
+            "name": "Specific Response with Fields Parameter",
+            "id": "926b7368-434d-4f7a-b0bc-7c094be6816e",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "https://api.ipstack.com/72.229.28.185,110.174.165.78?fields=zip",
+                "protocol": "https",
+                "host": [
+                  "api",
+                  "ipstack",
+                  "com"
+                ],
+                "path": [
+                  "72.229.28.185,110.174.165.78"
+                ],
+                "query": [
+                  {
+                    "key": "fields",
+                    "value": "zip",
+                    "description": "[optional] Set to your preferred output field(s) according to the Specify Output Fields section.\n"
+                  }
+                ]
+              },
+              "description": "\\[optional\\] Set to your preferred output \"field(s)\" according to the Specify Output Fields section."
+            },
+            "response": [
+              {
+                "id": "9a7c8833-2157-4a51-9849-e89556280491",
+                "name": "200 OK – Specific Response with Fields Parameter",
+                "originalRequest": {
+                  "method": "GET",
+                  "header": [],
+                  "url": {
+                    "raw": "https://api.ipstack.com/72.229.28.185,110.174.165.78?access_key={PASTE_YOUR_API_KEY_HERE}&fields=zip",
+                    "protocol": "https",
+                    "host": [
+                      "api",
+                      "ipstack",
+                      "com"
+                    ],
+                    "path": [
+                      "72.229.28.185,110.174.165.78"
+                    ],
+                    "query": [
+                      {
+                        "key": "access_key",
+                        "value": "{PASTE_YOUR_API_KEY_HERE}",
+                        "description": "You can get your API key by signing up at https://ipstack.com"
+                      },
+                      {
+                        "key": "fields",
+                        "value": "zip",
+                        "description": "[optional] Set to your preferred output field(s) according to the Specify Output Fields section.\n"
+                      }
+                    ]
+                  }
+                },
+                "status": "OK",
+                "code": 200,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "content-type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "transfer-encoding",
+                    "value": "chunked"
+                  },
+                  {
+                    "key": "date",
+                    "value": "Mon, 26 Feb 2024 18:21:36 GMT"
+                  },
+                  {
+                    "key": "x-apilayer-transaction-id",
+                    "value": "a83d7fc8-4c60-43de-ae90-b82916193c6c"
+                  },
+                  {
+                    "key": "access-control-allow-origin",
+                    "value": "*"
+                  },
+                  {
+                    "key": "access-control-allow-methods",
+                    "value": "GET, POST, HEAD, OPTIONS"
+                  },
+                  {
+                    "key": "access-control-allow-headers",
+                    "value": "*"
+                  },
+                  {
+                    "key": "x-quota-limit",
+                    "value": "2000000"
+                  },
+                  {
+                    "key": "x-quota-remaining",
+                    "value": "1999967"
+                  },
+                  {
+                    "key": "x-increment-usage",
+                    "value": "1"
+                  },
+                  {
+                    "key": "x-request-time",
+                    "value": "0.029"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "[\n    {\n        \"zip\": \"10020\"\n    },\n    {\n        \"zip\": \"1210\"\n    }\n]",
+                "uid": "870119-9a7c8833-2157-4a51-9849-e89556280491"
+              }
+            ],
+            "uid": "870119-926b7368-434d-4f7a-b0bc-7c094be6816e"
+          },
+          {
+            "name": "XML Output",
+            "id": "2b8f3fae-8b7b-4c77-8c37-530ad02626fd",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "https://api.ipstack.com/72.229.28.185,110.174.165.78?=&output=xml",
+                "protocol": "https",
+                "host": [
+                  "api",
+                  "ipstack",
+                  "com"
+                ],
+                "path": [
+                  "72.229.28.185,110.174.165.78"
+                ],
+                "query": [
+                  {
+                    "key": "",
+                    "value": ""
+                  },
+                  {
+                    "key": "output",
+                    "value": "xml"
+                  }
+                ]
+              },
+              "description": "\\[optional\\] Set \"output\" to json or xml to choose between output formats."
+            },
+            "response": [
+              {
+                "id": "404a53f2-525b-4445-8e4f-1243255b34f9",
+                "name": "200 OK – XML Output",
+                "originalRequest": {
+                  "method": "GET",
+                  "header": [],
+                  "url": {
+                    "raw": "https://api.ipstack.com/72.229.28.185,110.174.165.78?access_key=378277f67a16be3fdcc33ed2631580ea&output=xml",
+                    "protocol": "https",
+                    "host": [
+                      "api",
+                      "ipstack",
+                      "com"
+                    ],
+                    "path": [
+                      "72.229.28.185,110.174.165.78"
+                    ],
+                    "query": [
+                      {
+                        "key": "access_key",
+                        "value": "378277f67a16be3fdcc33ed2631580ea",
+                        "description": "You can get your API key by signing up at https://ipstack.com"
+                      },
+                      {
+                        "key": "output",
+                        "value": "xml"
+                      }
+                    ]
+                  }
+                },
+                "status": "OK",
+                "code": 200,
+                "_postman_previewlanguage": "xml",
+                "header": [
+                  {
+                    "key": "content-type",
+                    "value": "application/xml"
+                  },
+                  {
+                    "key": "transfer-encoding",
+                    "value": "chunked"
+                  },
+                  {
+                    "key": "date",
+                    "value": "Mon, 26 Feb 2024 18:23:16 GMT"
+                  },
+                  {
+                    "key": "x-apilayer-transaction-id",
+                    "value": "aa23a0f6-df4b-49ea-b4ee-6681ba934461"
+                  },
+                  {
+                    "key": "access-control-allow-origin",
+                    "value": "*"
+                  },
+                  {
+                    "key": "access-control-allow-methods",
+                    "value": "GET, POST, HEAD, OPTIONS"
+                  },
+                  {
+                    "key": "access-control-allow-headers",
+                    "value": "*"
+                  },
+                  {
+                    "key": "x-quota-limit",
+                    "value": "2000000"
+                  },
+                  {
+                    "key": "x-quota-remaining",
+                    "value": "1999966"
+                  },
+                  {
+                    "key": "x-increment-usage",
+                    "value": "1"
+                  },
+                  {
+                    "key": "x-request-time",
+                    "value": "0.039"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "\u003C?xml version=\"1.0\"?\u003E\n\u003Cbatch\u003E\n    \u003Cresult index=\"0\"\u003E\n        \u003Cip\u003E72.229.28.185\u003C/ip\u003E\n        \u003Ctype\u003Eipv4\u003C/type\u003E\n        \u003Ccontinent_code\u003ENA\u003C/continent_code\u003E\n        \u003Ccontinent_name\u003ENorth America\u003C/continent_name\u003E\n        \u003Ccountry_code\u003EUS\u003C/country_code\u003E\n        \u003Ccountry_name\u003EUnited States\u003C/country_name\u003E\n        \u003Cregion_code\u003ENY\u003C/region_code\u003E\n        \u003Cregion_name\u003ENew York\u003C/region_name\u003E\n        \u003Ccity\u003EManhattan\u003C/city\u003E\n        \u003Czip\u003E10020\u003C/zip\u003E\n        \u003Clatitude\u003E40.7589111328125\u003C/latitude\u003E\n        \u003Clongitude\u003E-73.97901916503906\u003C/longitude\u003E\n        \u003Clocation\u003E\n            \u003Cgeoname_id\u003E5125771\u003C/geoname_id\u003E\n            \u003Ccapital\u003EWashington D.C.\u003C/capital\u003E\n            \u003Clanguages\u003E\n                \u003Ccode\u003Een\u003C/code\u003E\n                \u003Cname\u003EEnglish\u003C/name\u003E\n                \u003Cnative\u003EEnglish\u003C/native\u003E\n            \u003C/languages\u003E\n            \u003Ccountry_flag\u003Ehttps://assets.ipstack.com/flags/us.svg\u003C/country_flag\u003E\n            \u003Ccountry_flag_emoji\u003E&#x1F1FA;&#x1F1F8;\u003C/country_flag_emoji\u003E\n            \u003Ccountry_flag_emoji_unicode\u003EU+1F1FA U+1F1F8\u003C/country_flag_emoji_unicode\u003E\n            \u003Ccalling_code\u003E1\u003C/calling_code\u003E\n            \u003Cis_eu\u003E\u003C/is_eu\u003E\n        \u003C/location\u003E\n        \u003Ctime_zone\u003E\n            \u003Cid\u003EAmerica/New_York\u003C/id\u003E\n            \u003Ccurrent_time\u003E2024-02-26 13:23:16-05:00\u003C/current_time\u003E\n            \u003Cgmt_offset\u003E-18000\u003C/gmt_offset\u003E\n            \u003Ccode\u003EEST\u003C/code\u003E\n            \u003Cis_daylight_saving\u003E\u003C/is_daylight_saving\u003E\n        \u003C/time_zone\u003E\n        \u003Ccurrency\u003E\n            \u003Ccode\u003EUSD\u003C/code\u003E\n            \u003Cname\u003EUS Dollar\u003C/name\u003E\n            \u003Cplural\u003EUS dollars\u003C/plural\u003E\n            \u003Csymbol\u003E$\u003C/symbol\u003E\n            \u003Csymbol_native\u003E$\u003C/symbol_native\u003E\n        \u003C/currency\u003E\n        \u003Cconnection\u003E\n            \u003Casn\u003E12271\u003C/asn\u003E\n            \u003Cisp\u003ECharter Communications Inc\u003C/isp\u003E\n        \u003C/connection\u003E\n    \u003C/result\u003E\n    \u003Cresult index=\"1\"\u003E\n        \u003Cip\u003E110.174.165.78\u003C/ip\u003E\n        \u003Ctype\u003Eipv4\u003C/type\u003E\n        \u003Ccontinent_code\u003EOC\u003C/continent_code\u003E\n        \u003Ccontinent_name\u003EOceania\u003C/continent_name\u003E\n        \u003Ccountry_code\u003EAU\u003C/country_code\u003E\n        \u003Ccountry_name\u003EAustralia\u003C/country_name\u003E\n        \u003Cregion_code\u003ENSW\u003C/region_code\u003E\n        \u003Cregion_name\u003ENew South Wales\u003C/region_name\u003E\n        \u003Ccity\u003ESydney\u003C/city\u003E\n        \u003Czip\u003E1210\u003C/zip\u003E\n        \u003Clatitude\u003E-33.87070083618164\u003C/latitude\u003E\n        \u003Clongitude\u003E151.20680236816406\u003C/longitude\u003E\n        \u003Clocation\u003E\n            \u003Cgeoname_id\u003E2147714\u003C/geoname_id\u003E\n            \u003Ccapital\u003ECanberra\u003C/capital\u003E\n            \u003Clanguages\u003E\n                \u003Ccode\u003Een\u003C/code\u003E\n                \u003Cname\u003EEnglish\u003C/name\u003E\n                \u003Cnative\u003EEnglish\u003C/native\u003E\n            \u003C/languages\u003E\n            \u003Ccountry_flag\u003Ehttps://assets.ipstack.com/flags/au.svg\u003C/country_flag\u003E\n            \u003Ccountry_flag_emoji\u003E&#x1F1E6;&#x1F1FA;\u003C/country_flag_emoji\u003E\n            \u003Ccountry_flag_emoji_unicode\u003EU+1F1E6 U+1F1FA\u003C/country_flag_emoji_unicode\u003E\n            \u003Ccalling_code\u003E61\u003C/calling_code\u003E\n            \u003Cis_eu\u003E\u003C/is_eu\u003E\n        \u003C/location\u003E\n        \u003Ctime_zone\u003E\n            \u003Cid\u003EAustralia/Sydney\u003C/id\u003E\n            \u003Ccurrent_time\u003E2024-02-27 05:23:16+11:00\u003C/current_time\u003E\n            \u003Cgmt_offset\u003E39600\u003C/gmt_offset\u003E\n            \u003Ccode\u003EAEDT\u003C/code\u003E\n            \u003Cis_daylight_saving\u003E1\u003C/is_daylight_saving\u003E\n        \u003C/time_zone\u003E\n        \u003Ccurrency\u003E\n            \u003Ccode\u003EAUD\u003C/code\u003E\n            \u003Cname\u003EAustralian Dollar\u003C/name\u003E\n            \u003Cplural\u003EAustralian dollars\u003C/plural\u003E\n            \u003Csymbol\u003EAU$\u003C/symbol\u003E\n            \u003Csymbol_native\u003E$\u003C/symbol_native\u003E\n        \u003C/currency\u003E\n        \u003Cconnection\u003E\n            \u003Casn\u003E7545\u003C/asn\u003E\n            \u003Cisp\u003ETpg Telecom Limited\u003C/isp\u003E\n        \u003C/connection\u003E\n    \u003C/result\u003E\n\u003C/batch\u003E",
+                "uid": "870119-404a53f2-525b-4445-8e4f-1243255b34f9"
+              }
+            ],
+            "uid": "870119-2b8f3fae-8b7b-4c77-8c37-530ad02626fd"
+          }
+        ],
+        "id": "1bd244d0-3fdf-441d-97a3-92119971ed36",
+        "description": "The ipstack API also offers the ability to request data for multiple IPv4 or IPv6 addresses at the same time. In order to process IP addresses in bulk, simply append multiple comma-separated IP addresses to the API's base URL.\n\n\u003E 💡 Note: Bulk IP Lookup Endpoint is only available to users who are on the Professional plan or above.",
+        "uid": "870119-1bd244d0-3fdf-441d-97a3-92119971ed36"
+      },
+      {
+        "name": "Requester IP Lookup",
+        "item": [
+          {
+            "name": "Basic Requester IP Lookup",
+            "id": "81122bf0-2e55-4f3f-92fb-0174c45dbac5",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "https://api.ipstack.com/check?=",
+                "protocol": "https",
+                "host": [
+                  "api",
+                  "ipstack",
+                  "com"
+                ],
+                "path": [
+                  "check"
+                ],
+                "query": [
+                  {
+                    "key": "",
+                    "value": ""
+                  }
+                ]
+              },
+              "description": "The ipstack API also offers a separate API endpoint capable of detecting the IP address which the current API request is coming from. In order to use this endpoint, simply append `check` to the API's base URL and specify your preferred optional parameters."
+            },
+            "response": [
+              {
+                "id": "cb7ab18c-308c-4f56-9943-a170ceba8ef5",
+                "name": "200 OK – Requester IP Lookup",
+                "originalRequest": {
+                  "method": "GET",
+                  "header": [],
+                  "url": {
+                    "raw": "https://api.ipstack.com/check?access_key={PASTE_YOUR_API_KEY_HERE}",
+                    "protocol": "https",
+                    "host": [
+                      "api",
+                      "ipstack",
+                      "com"
+                    ],
+                    "path": [
+                      "check"
+                    ],
+                    "query": [
+                      {
+                        "key": "access_key",
+                        "value": "{PASTE_YOUR_API_KEY_HERE}",
+                        "description": "You can get your API key by signing up at https://ipstack.com"
+                      }
+                    ]
+                  }
+                },
+                "status": "OK",
+                "code": 200,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "content-type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "transfer-encoding",
+                    "value": "chunked"
+                  },
+                  {
+                    "key": "date",
+                    "value": "Mon, 26 Feb 2024 18:06:15 GMT"
+                  },
+                  {
+                    "key": "x-apilayer-transaction-id",
+                    "value": "4ab0772e-4b20-4594-b3df-135762adb992"
+                  },
+                  {
+                    "key": "access-control-allow-origin",
+                    "value": "*"
+                  },
+                  {
+                    "key": "access-control-allow-methods",
+                    "value": "GET, POST, HEAD, OPTIONS"
+                  },
+                  {
+                    "key": "access-control-allow-headers",
+                    "value": "*"
+                  },
+                  {
+                    "key": "x-quota-limit",
+                    "value": "2000000"
+                  },
+                  {
+                    "key": "x-quota-remaining",
+                    "value": "1999971"
+                  },
+                  {
+                    "key": "x-increment-usage",
+                    "value": "1"
+                  },
+                  {
+                    "key": "x-request-time",
+                    "value": "0.029"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "{\n    \"ip\": \"137.59.240.169\",\n    \"type\": \"ipv4\",\n    \"continent_code\": \"AS\",\n    \"continent_name\": \"Asia\",\n    \"country_code\": \"IN\",\n    \"country_name\": \"India\",\n    \"region_code\": \"DL\",\n    \"region_name\": \"Delhi\",\n    \"city\": \"New Delhi\",\n    \"zip\": \"110001\",\n    \"latitude\": 28.635299682617188,\n    \"longitude\": 77.2249984741211,\n    \"location\": {\n        \"geoname_id\": 1261481,\n        \"capital\": \"New Delhi\",\n        \"languages\": [\n            {\n                \"code\": \"hi\",\n                \"name\": \"Hindi\",\n                \"native\": \"हिन्दी\"\n            },\n            {\n                \"code\": \"en\",\n                \"name\": \"English\",\n                \"native\": \"English\"\n            }\n        ],\n        \"country_flag\": \"https://assets.ipstack.com/flags/in.svg\",\n        \"country_flag_emoji\": \"🇮🇳\",\n        \"country_flag_emoji_unicode\": \"U+1F1EE U+1F1F3\",\n        \"calling_code\": \"91\",\n        \"is_eu\": false\n    },\n    \"time_zone\": {\n        \"id\": \"Asia/Kolkata\",\n        \"current_time\": \"2024-02-26T23:36:15+05:30\",\n        \"gmt_offset\": 19800,\n        \"code\": \"IST\",\n        \"is_daylight_saving\": false\n    },\n    \"currency\": {\n        \"code\": \"INR\",\n        \"name\": \"Indian Rupee\",\n        \"plural\": \"Indian rupees\",\n        \"symbol\": \"Rs\",\n        \"symbol_native\": \"টকা\"\n    },\n    \"connection\": {\n        \"asn\": 133275,\n        \"isp\": \"Gigantic Infotel Pvt Ltd\"\n    }\n}",
+                "uid": "870119-cb7ab18c-308c-4f56-9943-a170ceba8ef5"
+              }
+            ],
+            "uid": "870119-81122bf0-2e55-4f3f-92fb-0174c45dbac5"
+          }
+        ],
+        "id": "ba9d9e6f-0c41-4c65-bd38-e8d3f1753475",
+        "description": "The ipstack API also offers a separate API endpoint capable of detecting the IP address which the current API request is coming from. In order to use this endpoint, simply append `check` to the API's base URL and specify your preferred optional parameters.\n\nNote: The Requester IP Lookup endpoint returns the details of the IP address from where the request is coming from. For example, if you make a request from the Postman web app, it will show the details of the Postman server, but if you make a request from the Postman client app, it will show the details of your computer.",
+        "uid": "870119-ba9d9e6f-0c41-4c65-bd38-e8d3f1753475"
+      }
+    ],
+    "auth": {
+      "type": "apikey",
+      "apikey": [
+        {
+          "key": "in",
+          "value": "query",
+          "type": "string"
+        },
+        {
+          "key": "value",
+          "value": "{{access_key}}",
+          "type": "string"
+        },
+        {
+          "key": "key",
+          "value": "access_key",
+          "type": "string"
+        }
+      ]
+    },
+    "event": [
+      {
+        "listen": "prerequest",
+        "script": {
+          "id": "28c3a0b4-62ff-44b2-b0e8-cf81e977e2f7",
+          "type": "text/javascript",
+          "packages": {
+
+          },
+          "exec": [
+            ""
+          ]
+        }
+      },
+      {
+        "listen": "test",
+        "script": {
+          "id": "3a40fdb6-e9ae-4388-8049-48f22b3094f8",
+          "type": "text/javascript",
+          "packages": {
+
+          },
+          "exec": [
+            ""
+          ]
+        }
+      }
+    ],
+    "variable": [
+      {
+        "key": "access_key",
+        "value": "",
+        "type": "string"
+      }
+    ]
+  }
+}
