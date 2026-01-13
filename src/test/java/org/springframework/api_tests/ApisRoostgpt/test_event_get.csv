@@ -1,0 +1,4 @@
+api_id,searchTerm,isCaseSensitive,isWholeWord,take,skip,test_id,status_filter,test_type_filter,event_type_filter,order_by,time_filter,label_filter,show_my_events
+"test123","search","true","false","10","0","test1","['installing_dependencies']","['unit']","['analyze']","creation_time","Last-1Day","['label1']","true"
+"api456","term","false","true","20","5","test2","['in_progress','completed']","['functional','integration']","['generate','retrigger']","completion_time","Last-7Days","['label2','label3']","false"
+"minimal","","","","","","","","","","","","",""
