@@ -1,0 +1,5 @@
+category,year,statusCode,scenario
+"English",1989,200,"Successful call of the Nobel Prize giving the category and year"
+"eco",1995,400,"Bad request.The request could not be understood by the server due to malformed syntax, modifications needed."
+"lit",1994,404,"Not Found. The requested resource could not be found but may be available again in the future."
+"pea",1904,422,"Unprocessable Entity. The request was well-formed but was unable to be followed due to semantic errors."
