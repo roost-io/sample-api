@@ -1,0 +1,395 @@
+{
+  "item": [
+    {
+      "id": "6223f242-0e95-495d-9d8e-a4b7f4d01fbb",
+      "name": "Obtain information about all Nobel Prizes or search for a specific set of Nobel Prizes. Note that not all information about the Laureates are provided in the output, as a request of making this endpoints response lighter. Call the laureates endpoint for full information.",
+      "request": {
+        "name": "Obtain information about all Nobel Prizes or search for a specific set of Nobel Prizes. Note that not all information about the Laureates are provided in the output, as a request of making this endpoints response lighter. Call the laureates endpoint for full information.",
+        "description": {
+          "content": "Obtain information about all Nobel Prizes or search for a specific set of Nobel Prizes. Note that not all information about the Laureates are provided in the output, as a request of making this endpoints response lighter. Call the laureates endpoint for full information.",
+          "type": "text/plain"
+        },
+        "url": {
+          "path": [
+            "nobelPrizes"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "offset",
+              "value": "{{offset}}",
+              "description": "The number of items to skip before starting to collect the result set"
+            },
+            {
+              "disabled": false,
+              "key": "limit",
+              "value": "{{limit}}",
+              "description": "The numbers of items to return"
+            },
+            {
+              "disabled": false,
+              "key": "sort",
+              "value": "{{sort}}",
+              "description": "The sort order (result is sorted by year)"
+            },
+            {
+              "disabled": false,
+              "key": "nobelPrizeYear",
+              "value": "{{nobelPrizeYear}}",
+              "description": "Year the Nobel Prize was awarded, in the form of YYYY"
+            },
+            {
+              "disabled": false,
+              "key": "yearTo",
+              "value": "{{yearTo}}",
+              "description": "Used in combination with nobelPrizeYear to specify a range of years to return results from. NobelPrizeYear is required"
+            },
+            {
+              "disabled": false,
+              "key": "nobelPrizeCategory",
+              "value": "{{nobelPrizeCategory}}",
+              "description": "Nobel Prize category"
+            },
+            {
+              "disabled": false,
+              "key": "format",
+              "value": "{{format}}",
+              "description": "Format of output (Default = json)"
+            },
+            {
+              "disabled": false,
+              "key": "csvLang",
+              "value": "{{csvLang}}",
+              "description": "Language of output if format is csv (Default = en)"
+            }
+          ],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "d67588ac-d882-4ca2-9e37-1099be6a6a23",
+          "name": "Successful call of Nobel Prize(s) according to the filled fields",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "nobelPrizes"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "offset",
+                  "value": "{{offset}}"
+                },
+                {
+                  "key": "limit",
+                  "value": "{{limit}}"
+                },
+                {
+                  "key": "sort",
+                  "value": "{{sort}}"
+                },
+                {
+                  "key": "nobelPrizeYear",
+                  "value": "{{nobelPrizeYear}}"
+                },
+                {
+                  "key": "yearTo",
+                  "value": "{{yearTo}}"
+                },
+                {
+                  "key": "nobelPrizeCategory",
+                  "value": "{{nobelPrizeCategory}}"
+                },
+                {
+                  "key": "format",
+                  "value": "{{format}}"
+                },
+                {
+                  "key": "csvLang",
+                  "value": "{{csvLang}}"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"nobelPrizes\": [\n    {\n      \"awardYear\": 1989,\n      \"category\": {\n        \"en\": \"English\",\n        \"se\": \"Svenska\",\n        \"false\": \"Norsk\"\n      },\n      \"categoryFullName\": {\n        \"en\": \"English\",\n        \"se\": \"Svenska\",\n        \"false\": \"Norsk\"\n      },\n      \"dateAwarded\": \"2015-11-12\",\n      \"prizeAmount\": 1000000,\n      \"prizeAmountAdjusted\": 1000000,\n      \"topMotivation\": {\n        \"en\": \"English\",\n        \"se\": \"Svenska\",\n        \"false\": \"Norsk\"\n      },\n      \"laureates\": [\n        {\n          \"id\": 34,\n          \"name\": {\n            \"en\": \"English\",\n            \"se\": \"Svenska\",\n            \"false\": \"Norsk\"\n          },\n          \"portion\": \"1\",\n          \"sortOrder\": \"1\",\n          \"motivation\": {\n            \"en\": \"English\",\n            \"se\": \"Svenska\",\n            \"false\": \"Norsk\"\n          },\n          \"links\": [\n            {\n              \"rel\": \"irure ad nulla in\",\n              \"href\": \"Du\",\n              \"action\": \"dolor elit est tempor dolore\",\n              \"types\": \"laborum officia\"\n            },\n            {\n              \"rel\": \"quis officia occaecat\",\n              \"href\": \"laboris tempor\",\n              \"action\": \"id reprehenderit cupidatat Ut irure\",\n              \"types\": \"ipsum irure\"\n            }\n          ]\n        },\n        {\n          \"id\": 34,\n          \"name\": {\n            \"en\": \"English\",\n            \"se\": \"Svenska\",\n            \"false\": \"Norsk\"\n          },\n          \"portion\": \"1\",\n          \"sortOrder\": \"1\",\n          \"motivation\": {\n            \"en\": \"English\",\n            \"se\": \"Svenska\",\n            \"false\": \"Norsk\"\n          },\n          \"links\": [\n            {\n              \"rel\": \"culpa cill\",\n              \"href\": \"consectetur in commodo amet\",\n              \"action\": \"exercitation eu enim\",\n              \"types\": \"laborum pariatur\"\n            },\n            {\n              \"rel\": \"ea ullamco\",\n              \"href\": \"elit et dolore in\",\n              \"action\": \"qui eiusmod labore cill\",\n              \"types\": \"deserunt ex\"\n            }\n          ]\n        }\n      ]\n    },\n    {\n      \"awardYear\": 1989,\n      \"category\": {\n        \"en\": \"English\",\n        \"se\": \"Svenska\",\n        \"false\": \"Norsk\"\n      },\n      \"categoryFullName\": {\n        \"en\": \"English\",\n        \"se\": \"Svenska\",\n        \"false\": \"Norsk\"\n      },\n      \"dateAwarded\": \"2015-11-12\",\n      \"prizeAmount\": 1000000,\n      \"prizeAmountAdjusted\": 1000000,\n      \"topMotivation\": {\n        \"en\": \"English\",\n        \"se\": \"Svenska\",\n        \"false\": \"Norsk\"\n      },\n      \"laureates\": [\n        {\n          \"id\": 34,\n          \"name\": {\n            \"en\": \"English\",\n            \"se\": \"Svenska\",\n            \"false\": \"Norsk\"\n          },\n          \"portion\": \"1\",\n          \"sortOrder\": \"1\",\n          \"motivation\": {\n            \"en\": \"English\",\n            \"se\": \"Svenska\",\n            \"false\": \"Norsk\"\n          },\n          \"links\": [\n            {\n              \"rel\": \"enim voluptate\",\n              \"href\": \"irure culpa cupidatat nostrud\",\n              \"action\": \"dolor laborum veniam\",\n              \"types\": \"volupta\"\n            },\n            {\n              \"rel\": \"tempor velit mollit\",\n              \"href\": \"aliquip voluptate incididunt eiusmod\",\n              \"action\": \"commodo\",\n              \"types\": \"proident culpa\"\n            }\n          ]\n        },\n        {\n          \"id\": 34,\n          \"name\": {\n            \"en\": \"English\",\n            \"se\": \"Svenska\",\n            \"false\": \"Norsk\"\n          },\n          \"portion\": \"1\",\n          \"sortOrder\": \"1\",\n          \"motivation\": {\n            \"en\": \"English\",\n            \"se\": \"Svenska\",\n            \"false\": \"Norsk\"\n          },\n          \"links\": [\n            {\n              \"rel\": \"magna ex fugiat\",\n              \"href\": \"incididunt consequ\",\n              \"action\": \"veniam sunt\",\n              \"types\": \"nostrud dolore in\"\n            },\n            {\n              \"rel\": \"aliqua sint aute minim\",\n              \"href\": \"fugiat in est\",\n              \"action\": \"eu\",\n              \"types\": \"elit amet exercitation dolor in\"\n            }\n          ]\n        }\n      ]\n    }\n  ],\n  \"meta\": {\n    \"offset\": -96386402,\n    \"limit\": 25533064,\n    \"nobelPrizeYear\": -78035392,\n    \"yearTo\": -42222801,\n    \"nobelPrizeCategory\": \"eco\",\n    \"count\": -30961729\n  },\n  \"links\": [\n    {\n      \"first\": \"sun\",\n      \"prev\": \"si\",\n      \"self\": \"ex qui\",\n      \"next\": \"laboris ut ut\",\n      \"last\": \"minim magna\"\n    },\n    {\n      \"first\": \"amet ea sed ex\",\n      \"prev\": \"dolore dolor Excepteur ut\",\n      \"self\": \"Ut et est ut exerc\",\n      \"next\": \"quis Duis fugiat deserunt reprehenderit\",\n      \"last\": \"fugiat deserunt non magna\"\n    }\n  ]\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "id": "b46ea37d-3407-4c3d-9434-9dda02c169a9",
+          "name": "Bad request.The request could not be understood by the server due to malformed syntax, modifications needed.",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "nobelPrizes"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "offset",
+                  "value": "{{offset}}"
+                },
+                {
+                  "key": "limit",
+                  "value": "{{limit}}"
+                },
+                {
+                  "key": "sort",
+                  "value": "{{sort}}"
+                },
+                {
+                  "key": "nobelPrizeYear",
+                  "value": "{{nobelPrizeYear}}"
+                },
+                {
+                  "key": "yearTo",
+                  "value": "{{yearTo}}"
+                },
+                {
+                  "key": "nobelPrizeCategory",
+                  "value": "{{nobelPrizeCategory}}"
+                },
+                {
+                  "key": "format",
+                  "value": "{{format}}"
+                },
+                {
+                  "key": "csvLang",
+                  "value": "{{csvLang}}"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "Bad Request",
+          "code": 400,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"code\": \"404\",\n  \"message\": \"There is not Laureate born that date\"\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "id": "f2407cde-5ebf-4884-9094-fd4a290df73d",
+          "name": "Not Found. The requested resource could not be found but may be available again in the future.",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "nobelPrizes"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "offset",
+                  "value": "{{offset}}"
+                },
+                {
+                  "key": "limit",
+                  "value": "{{limit}}"
+                },
+                {
+                  "key": "sort",
+                  "value": "{{sort}}"
+                },
+                {
+                  "key": "nobelPrizeYear",
+                  "value": "{{nobelPrizeYear}}"
+                },
+                {
+                  "key": "yearTo",
+                  "value": "{{yearTo}}"
+                },
+                {
+                  "key": "nobelPrizeCategory",
+                  "value": "{{nobelPrizeCategory}}"
+                },
+                {
+                  "key": "format",
+                  "value": "{{format}}"
+                },
+                {
+                  "key": "csvLang",
+                  "value": "{{csvLang}}"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "Not Found",
+          "code": 404,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"code\": \"404\",\n  \"message\": \"There is not Laureate born that date\"\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "id": "4eaf991a-7b28-410c-beb3-4e01a44cca51",
+          "name": "Unprocessable Entity. The request was well-formed but was unable to be followed due to semantic errors.",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "nobelPrizes"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "offset",
+                  "value": "{{offset}}"
+                },
+                {
+                  "key": "limit",
+                  "value": "{{limit}}"
+                },
+                {
+                  "key": "sort",
+                  "value": "{{sort}}"
+                },
+                {
+                  "key": "nobelPrizeYear",
+                  "value": "{{nobelPrizeYear}}"
+                },
+                {
+                  "key": "yearTo",
+                  "value": "{{yearTo}}"
+                },
+                {
+                  "key": "nobelPrizeCategory",
+                  "value": "{{nobelPrizeCategory}}"
+                },
+                {
+                  "key": "format",
+                  "value": "{{format}}"
+                },
+                {
+                  "key": "csvLang",
+                  "value": "{{csvLang}}"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+          "code": 422,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"code\": \"404\",\n  \"message\": \"There is not Laureate born that date\"\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              " \n// ********RoostGPT********\n/*\nTest generated by RoostGPT for test nobel-postman using AI Type Azure Open AI and AI Model roostgpt-4-32k\n\n\nTest generated for nobelPrizes?offset={{offset}}&limit={{limit}}&sort={{sort}}&nobelPrizeYear={{nobelPrizeYear}}&yearTo={{yearTo}}&nobelPrizeCategory={{nobelPrizeCategory}}&format={{format}}&csvLang={{csvLang}} for http method type get in postman framework\n\n*/\n\n// ********RoostGPT********\n\n\nconst ld = require('lodash');\nlet responseData;\nconst contentType = pm.response.headers.get('Content-Type');\nif(contentType === \"application/xml\"){\n    var parseString = require('xml2js').parseString;\n    parseString(pm.response.body, function (err,result) {\n      if (err) {\n         console.error('Error parsing XML:', err);\n      } else {\n        responseData = result;  \n      }\n    });\n} else{\n    responseData = pm.response.json();\n}\nif (pm.variables.get(\"statusCode\")) {\n    pm.expect(parseInt(pm.variables.get(\"statusCode\"))).to.be.equal(pm.response.code);\n}\n\nif (pm.response.code == 200){\n    pm.test(\"Successful call of Nobel Prize(s) according to the filled fields\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"OK\");\n          pm.response.to.have.header(\"Content-Type\");\n\n          pm.test('Response has the `nobelPrizes` field',function(){\n            pm.expect(responseData.nobelPrizes).to.exist.and.to.be.a(\"object\");\n          })\n\n          pm.test('Response has the `meta` field',function(){\n            pm.expect(responseData.meta).to.exist.and.to.be.a(\"object\");\n          })\n\n          pm.test('Response has the `links` field',function(){\n            pm.expect(responseData.links).to.exist.and.to.be.a(\"object\");\n          })\n\n          });\n\n        }\n\nif (pm.response.code == 400){\n    pm.test(\"Bad request.The request could not be understood by the server due to malformed syntax, modifications needed.\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Bad Request\");\n          pm.response.to.have.header(\"Content-Type\");\n\n          pm.test('Response has the `code` field',function(){\n            pm.expect(responseData.code).to.exist.and.to.be.a(\"string\");\n          })\n\n          pm.test('Response has the `message` field',function(){\n            pm.expect(responseData.message).to.exist.and.to.be.a(\"string\");\n          })\n\n          });\n\n        }\n\nif (pm.response.code == 404){\n    pm.test(\"Not Found. The requested resource could not be found but may be available again in the future.\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Not Found\");\n          pm.response.to.have.header(\"Content-Type\");\n\n          pm.test('Response has the `code` field',function(){\n            pm.expect(responseData.code).to.exist.and.to.be.a(\"string\");\n          })\n\n          pm.test('Response has the `message` field',function(){\n            pm.expect(responseData.message).to.exist.and.to.be.a(\"string\");\n          })\n\n          });\n\n        }\n\nif (pm.response.code == 422){\n    pm.test(\"Unprocessable Entity. The request was well-formed but was unable to be followed due to semantic errors.\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Unprocessable Entity (WebDAV) (RFC 4918)\");\n          pm.response.to.have.header(\"Content-Type\");\n\n          pm.test('Response has the `code` field',function(){\n            pm.expect(responseData.code).to.exist.and.to.be.a(\"string\");\n          })\n\n          pm.test('Response has the `message` field',function(){\n            pm.expect(responseData.message).to.exist.and.to.be.a(\"string\");\n          })\n\n          });\n\n        }\n"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    null,
+    null,
+    null
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "http://api.nobelprize.org/2.1",
+      "key": "baseUrl"
+    },
+    {
+      "type": "integer",
+      "value": 200,
+      "key": "statusCode"
+    }
+  ],
+  "info": {
+    "_postman_id": "61286838-8913-4ab5-8211-c61472e4e70d",
+    "name": "Nobel Prize Master Data",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Information about the Nobel Prizes and the Nobel Prize Laureates",
+      "type": "text/plain"
+    }
+  }
+}
