@@ -1,0 +1,11 @@
+offset^|^limit^|^sort^|^nobelPrizeYear^|^yearTo^|^nobelPrizeCategory^|^format^|^csvLang^|^RequestBody^|^statusCode
+1^|^10^|^asc^|^1990^|^2000^|^che^|^json^|^en^|^{"key1":"value1","key2":"value2"}^|^200
+2^|^15^|^desc^|^2001^|^2010^|^eco^|^csv^|^se^|^{"key1":"value3","key2":"value4"}^|^400
+3^|^20^|^asc^|^2011^|^2020^|^lit^|^json^|^no^|^{"key1":"value5","key2":"value6"}^|^404
+4^|^25^|^desc^|^1995^|^2005^|^pea^|^csv^|^en^|^{"key1":"value7","key2":"value8"}^|^422
+5^|^30^|^asc^|^2005^|^2015^|^phy^|^json^|^se^|^{"key1":"value9","key2":"value10"}^|^200
+6^|^35^|^desc^|^2015^|^2025^|^med^|^csv^|^no^|^{"key1":"value11","key2":"value12"}^|^400
+7^|^40^|^asc^|^2000^|^2010^|^che^|^json^|^en^|^{"key1":"value13","key2":"value14"}^|^404
+8^|^45^|^desc^|^2010^|^2020^|^eco^|^csv^|^se^|^{"key1":"value15","key2":"value16"}^|^422
+9^|^50^|^asc^|^2020^|^2030^|^lit^|^json^|^no^|^{"key1":"value17","key2":"value18"}^|^200
+10^|^55^|^desc^|^2030^|^2040^|^pea^|^csv^|^en^|^{"key1":"value19","key2":"value20"}^|^400

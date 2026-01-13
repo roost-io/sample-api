@@ -1,0 +1,11 @@
+laureateID^|^RequestBody^|^statusCode
+1^|^{"name":"John","age":30,"city":"New York"}^|^400
+2^|^{"name":"Jane","age":25,"city":"Chicago"}^|^404
+3^|^{"name":"Bob","age":35,"city":"Los Angeles"}^|^422
+4^|^{"name":"Alice","age":28,"city":"San Francisco"}^|^400
+5^|^{"name":"Charlie","age":32,"city":"Boston"}^|^404
+6^|^{"name":"Eve","age":31,"city":"Seattle"}^|^422
+7^|^{"name":"Frank","age":29,"city":"Austin"}^|^400
+8^|^{"name":"Grace","age":34,"city":"Denver"}^|^404
+9^|^{"name":"David","age":27,"city":"Miami"}^|^422
+10^|^{"name":"Ivy","age":26,"city":"Atlanta"}^|^400
