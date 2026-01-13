@@ -1,0 +1,3 @@
+channel,text,as_user,attachments,blocks,icon_emoji,icon_url,link_names,mrkdwn,parse,reply_broadcast,thread_ts,unfurl_links,unfurl_media,username
+"C1234567890","Hello World","false","[]","[]",":smile:","https://example.com/icon.png","true","true","none","false","1234567890.123456","true","false","testbot"
+"general","Test message","true","[]","[]","","","false","false","full","true","","false","true",""
