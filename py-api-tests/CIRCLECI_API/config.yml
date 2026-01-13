@@ -1,0 +1,5 @@
+api:
+  host: https://circleci.com/api/v2
+
+authentication:
+  api_key_header: CCIPAT_SG7tBDQK3yGGq4y1UaGn1T_584a5de80c0aafdcc3c3a39f6c6cb89d8eab16a6
