@@ -1,0 +1,11 @@
+laureateID^|^RequestBody^|^statusCode
+1^|^{"name":"John Doe","age":30,"email":"john.doe@example.com"}^|^400
+2^|^{"name":"Jane Smith","age":25,"email":"jane.smith@example.com"}^|^404
+3^|^{"name":"Bob Johnson","age":35,"email":"bob.johnson@example.com"}^|^422
+4^|^{"name":"Alice Williams","age":28,"email":"alice.williams@example.com"}^|^400
+5^|^{"name":"Charlie Brown","age":32,"email":"charlie.brown@example.com"}^|^404
+6^|^{"name":"David Davis","age":27,"email":"david.davis@example.com"}^|^422
+7^|^{"name":"Eva Green","age":29,"email":"eva.green@example.com"}^|^400
+8^|^{"name":"Frank Miller","age":34,"email":"frank.miller@example.com"}^|^404
+9^|^{"name":"Grace Lee","age":31,"email":"grace.lee@example.com"}^|^422
+10^|^{"name":"Henry Wilson","age":33,"email":"henry.wilson@example.com"}^|^400
