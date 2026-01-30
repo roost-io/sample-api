@@ -1,0 +1,3 @@
+offset,limit,ID,name,gender,birthDate,birthDateTo,deathDate,deathDateTo,nobelPrizeYear,yearTo
+"1","10","123","Elon","male","1972","2000","2010","2020","2000","2100"
+"1","10","456","Satoshi","male","1980","2000","2010","2020","2000","2100"
