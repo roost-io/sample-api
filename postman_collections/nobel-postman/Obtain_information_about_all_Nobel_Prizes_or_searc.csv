@@ -1,0 +1,5 @@
+offset,limit,sort,nobelPrizeYear,yearTo,nobelPrizeCategory,format,csvLang,statusCode,scenario
+5,5,asc,2010,2012,phy,json,en,200,
+1,10,asc,1989,2022,che,json,en,200,Successful call of Nobel Prize(s) according to the filled fields
+100,200,desc,1950,2022,eco,csv,se,400,Bad request. The request could not be understood by the server due to malformed syntax, modifications needed.
+500,1000,asc,1901,2022,lit,json,no,404,Not Found. The requested resource could not be found but may be available again in the future.
