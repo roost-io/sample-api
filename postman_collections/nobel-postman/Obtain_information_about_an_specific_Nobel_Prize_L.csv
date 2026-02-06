@@ -1,0 +1,11 @@
+laureateID,statusCode,scenario
+1,200,Successful call of Laureate given the ID
+2,400,"Bad request. The request could not be understood by the server due to malformed syntax, modifications needed."
+3,404,"Not Found. The requested resource could not be found but may be available again in the future."
+4,422,"Unprocessable Entity. The request was well-formed but was unable to be followed due to semantic errors."
+5,200,Successful call of Laureate given the ID
+6,400,"Bad request. The request could not be understood by the server due to malformed syntax, modifications needed."
+7,404,"Not Found. The requested resource could not be found but may be available again in the future."
+8,422,"Unprocessable Entity. The request was well-formed but was unable to be followed due to semantic errors."
+9,200,Successful call of Laureate given the ID
+10,400,"Bad request. The request could not be understood by the server due to malformed syntax, modifications needed."
