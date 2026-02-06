@@ -1,0 +1,9 @@
+laureateID,statusCode,scenario
+1,200,"Successful call of Laureate given the ID"
+2,400,"Bad request. The request could not be understood by the server due to malformed syntax, modifications needed."
+3,404,"Not Found. The requested resource could not be found but may be available again in the future."
+4,422,"Unprocessable Entity. The request was well-formed but was unable to be followed due to semantic errors."
+5,250,"{}"
+6,405,"{\n  \"code\": \"404\",\n  \"message\": \"There is not Laureate born that date\"\n}"
+7,500,"{\n  \"code\": \"404\",\n  \"message\": \"There is not Laureate born that date\"\n}"
+8,512,"{\n  \"code\": \"404\",\n  \"message\": \"There is not Laureate born that date\"\n}"
