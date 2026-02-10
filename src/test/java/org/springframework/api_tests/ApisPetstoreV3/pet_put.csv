@@ -1,0 +1,4 @@
+id,name,category_id,category_name,photoUrls,tags,status
+"10","doggie","1","Dogs","['photoUrl1', 'photoUrl2']","[{ id: 101, name: 'tag1' }, { id: 102, name: 'tag2' }]","available"
+"20","kitty","2","Cats","['photoUrl3', 'photoUrl4']","[{ id: 201, name: 'tag3' }, { id: 202, name: 'tag4' }]","pending"
+"30","birdie","3","Birds","['photoUrl5']","[]","sold"

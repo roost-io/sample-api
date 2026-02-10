@@ -1,0 +1,4 @@
+id,petId,quantity,shipDate,status,complete
+"10","198772","7","2023-10-07T10:00:00Z","placed","true"
+"20","299883","5","2023-10-08T12:00:00Z","approved","false"
+"30","400994","3","2023-10-09T14:00:00Z","delivered","true"
