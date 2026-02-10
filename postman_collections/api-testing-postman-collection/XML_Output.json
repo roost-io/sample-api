@@ -1,0 +1,27 @@
+[
+  {
+    "output": "<?xml version=\"1.0\"?>\n<batch>\n    <result index=\"0\">\n        <ip>72.229.28.185</ip>\n        <type>ipv4</type>\n        <continent_code>NA</continent_code>\n        <continent_name>North America</continent_name>\n        <country_code>US</country_code>\n        <country_name>United States</country_name>\n        <region_code>NY</region_code>\n        <region_name>New York</region_name>\n        <city>Manhattan</city>\n        <zip>10020</zip>\n        <latitude>40.7589111328125</latitude>\n        <longitude>-73.97901916503906</longitude>\n        <location>\n            <geoname_id>5125771</geoname_id>\n            <capital>Washington D.C.</capital>\n            <languages>\n                <code>en</code>\n                <name>English</name>\n                <native>English</native>\n            </languages>\n            <country_flag>https://assets.ipstack.com/flags/us.svg</country_flag>\n            <country_flag_emoji>&#x1F1FA;&#x1F1F8;</country_flag_emoji>\n            <country_flag_emoji_unicode>U+1</country_flag_emoji_unicode>\n        </location>\n    </result>\n</batch>",
+    "statusCode": 200,
+    "scenario": "200 OK – XML Output"
+  },
+  {
+    "output": "Invalid XML",
+    "statusCode": 400,
+    "scenario": "Bad Request"
+  },
+  {
+    "output": "<?xml version=\"1.0\"?>\n<batch>\n    <result index=\"1\">\n        <ip>192.168.1.1</ip>\n        <type>ipv4</type>\n        <continent_code>AS</continent_code>\n        <continent_name>Asia</continent_name>\n        <country_code>IN</country_code>\n        <country_name>India</country_name>\n        <region_code>DL</region_code>\n        <region_name>Delhi</region_name>\n        <city>New Delhi</city>\n        <zip>110001</zip>\n        <latitude>28.613939</latitude>\n        <longitude>77.209021</longitude>\n        <location>\n            <geoname_id>1261481</geoname_id>\n            <capital>New Delhi</capital>\n            <languages>\n                <code>hi</code>\n                <name>Hindi</name>\n                <native>हिंदी</native>\n            </languages>\n            <country_flag>https://assets.ipstack.com/flags/in.svg</country_flag>\n            <country_flag_emoji>&#x1F1EE;&#x1F1F3;</country_flag_emoji>\n            <country_flag_emoji_unicode>U+1</country_flag_emoji_unicode>\n        </location>\n    </result>\n</batch>",
+    "statusCode": 200,
+    "scenario": "200 OK – XML Output"
+  },
+  {
+    "output": "Lorem ipsum dolor sit amet",
+    "statusCode": 500,
+    "scenario": "Internal Server Error"
+  },
+  {
+    "output": "<?xml version=\"1.0\"?>\n<batch>\n    <result index=\"2\">\n        <ip>203.0.113.9</ip>\n        <type>ipv4</type>\n        <continent_code>EU</continent_code>\n        <continent_name>Europe</continent_name>\n        <country_code>DE</country_code>\n        <country_name>Germany</country_name>\n        <region_code>BE</region_code>\n        <region_name>Berlin</region_name>\n        <city>Berlin</city>\n        <zip>10115</zip>\n        <latitude>52.520008</latitude>\n        <longitude>13.404954</longitude>\n        <location>\n            <geoname_id>2950159</geoname_id>\n            <capital>Berlin</capital>\n            <languages>\n                <code>de</code>\n                <name>German</name>\n                <native>Deutsch</native>\n            </languages>\n            <country_flag>https://assets.ipstack.com/flags/de.svg</country_flag>\n            <country_flag_emoji>&#x1F1E9;&#x1F1EA;</country_flag_emoji>\n            <country_flag_emoji_unicode>U+1</country_flag_emoji_unicode>\n        </location>\n    </result>\n</batch>",
+    "statusCode": 200,
+    "scenario": "200 OK – XML Output"
+  }
+]
