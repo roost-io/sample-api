@@ -1,0 +1,4 @@
+trigger_id,completion_time,modification_time,status,status_details,test_endpoints,test_report
+"trigger123",2024,2024,"completed","Test completed successfully","/api/v1/users,/api/v1/orders","Test report content"
+"trigger456",2024,2024,"failed","Test failed due to timeout","/api/v1/products","Error report content"
+"trigger789",2024,2024,"running","Test in progress","/api/v1/inventory","Progress report"

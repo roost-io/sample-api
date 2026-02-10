@@ -1,0 +1,9 @@
+trigger_id,file_choice,file_path
+"test-123","report","/path/to/report.json"
+"trigger-456","summary","/logs/execution.log"
+"event-789","details","/reports/test-results.xml"
+"trigger-456","json","/reports/test.json"
+"event-789","xml","/reports/test.xml"
+"trigger-456","csv","/reports/test.csv"
+"event-789","html","/reports/test.html"
+"trigger-456","pdf","/reports/test.pdf"
