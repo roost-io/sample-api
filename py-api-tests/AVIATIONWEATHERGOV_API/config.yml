@@ -1,0 +1,3 @@
+api:
+  host: ${AVIATION_WEATHER_HOST}
+authentication: {}
