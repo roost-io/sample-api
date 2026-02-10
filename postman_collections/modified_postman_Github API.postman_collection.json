@@ -1,0 +1,74 @@
+{
+  "info": {
+    "_postman_id": "e49c03ab-4890-45ec-b96a-2b21e5dcd9ab",
+    "name": "Github API",
+    "description": "The requests in this collection use the [GitHub API](https://docs.github.com/en/rest) to fetch repo and user data, and create a new repo and upload a `README.md` file.\n\n### Authorization\n\nWe are using Basic Auth (username and password) to authorize the API. This is fine in non-production scenarios, but if you are making a production app read the [recommendations in the GitHub API documentation](https://docs.github.com/en/rest/overview/other-authentication-methods).\n\nYour personal access token can be obtained from your GitHub `Settings > Developer settings > Personal access tokens`. Treat this token like a password and keep it secret.\n\nSave your `personalAccessToken` as a variable of the same name on this collection. Click on the collection `Github API` then the `Variables` tab to access the collection variables.\n\nONLY PUT IN THE \"CURRENT VALUE\" COLUMN OF THE `personalAccessToken` collection variable - this will prevent the value from being visible our shared to others who view your collection.\n\n### Converting to code\n\nClick the icon on the far right of any request to see code snippet examples for how to make the request in various coding languages.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "42141123",
+    "_collection_link": "https://www.postman.com/postman/github-api-make-a-repo/collection/9kf4a7s/github-api?action=share&source=collection_link&creator=42141123"
+  },
+  "item": [
+    null,
+    null,
+    null,
+    null
+  ],
+  "auth": {
+    "type": "basic",
+    "basic": [
+      {
+        "key": "password",
+        "value": "{{personalAccessToken}}",
+        "type": "string"
+      },
+      {
+        "key": "username",
+        "value": "clairefro",
+        "type": "string"
+      }
+    ]
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://api.github.com"
+    },
+    {
+      "key": "personalAccessToken",
+      "value": "your-github-personal-access-token"
+    },
+    {
+      "key": "repoName",
+      "value": "made-with-love-and-apis"
+    },
+    {
+      "key": "readmeContent",
+      "value": "# Welcome to the readme! \nThis readme brought to you by APIs and Postman"
+    },
+    {
+      "type": "number",
+      "value": 200,
+      "key": "statusCode"
+    }
+  ]
+}
