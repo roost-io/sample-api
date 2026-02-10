@@ -1,0 +1,27 @@
+[
+  {
+    "username": "validUser1",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "username": "invalid_user!",
+    "statusCode": 400,
+    "scenario": "Invalid username supplied"
+  },
+  {
+    "username": "nonExistentUser",
+    "statusCode": 404,
+    "scenario": "User not found"
+  },
+  {
+    "username": "unexpected_error_user",
+    "statusCode": 500,
+    "scenario": "Unexpected error"
+  },
+  {
+    "username": "validUser2",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  }
+]

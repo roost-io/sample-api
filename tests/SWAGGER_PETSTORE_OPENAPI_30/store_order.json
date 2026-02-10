@@ -1,0 +1,30 @@
+[
+  {
+    "responseBody": null,
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "responseBody": "invalid_response",
+    "statusCode": 400,
+    "scenario": "Invalid input"
+  },
+  {
+    "responseBody": 12345,
+    "statusCode": 422,
+    "scenario": "Validation exception"
+  },
+  {
+    "responseBody": true,
+    "statusCode": 500,
+    "scenario": "Unexpected error"
+  },
+  {
+    "responseBody": [
+      "unexpected",
+      "array"
+    ],
+    "statusCode": 503,
+    "scenario": "Unexpected error"
+  }
+]

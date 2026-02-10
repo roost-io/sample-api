@@ -1,0 +1,32 @@
+[
+  {
+    "field1": "petName",
+    "field2": 123,
+    "statusCode": 200,
+    "scenario": "Successful operation"
+  },
+  {
+    "field1": "petName_test2",
+    "field2": "invalid_number",
+    "statusCode": 400,
+    "scenario": "Unexpected error"
+  },
+  {
+    "field1": "petName_test3",
+    "field2": -1,
+    "statusCode": 500,
+    "scenario": "Unexpected error"
+  },
+  {
+    "field1": "petName_test4",
+    "field2": 456,
+    "statusCode": 200,
+    "scenario": "Successful operation"
+  },
+  {
+    "field1": "petName_test5",
+    "field2": "NaN",
+    "statusCode": 404,
+    "scenario": "Unexpected error"
+  }
+]

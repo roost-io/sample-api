@@ -1,0 +1,27 @@
+[
+  {
+    "responseBody": null,
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "responseBody": null,
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "responseBody": "Invalid data",
+    "statusCode": 400,
+    "scenario": "Unexpected error"
+  },
+  {
+    "responseBody": 12345,
+    "statusCode": 500,
+    "scenario": "Unexpected error"
+  },
+  {
+    "responseBody": true,
+    "statusCode": 404,
+    "scenario": "Unexpected error"
+  }
+]
