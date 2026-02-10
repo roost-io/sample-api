@@ -1,0 +1,128 @@
+{
+  "item": [
+    {
+      "name": "submit Refund To ARA",
+      "request": {
+        "name": "submit Refund To ARA",
+        "description": {},
+        "url": {
+          "path": [
+            "icd",
+            "s2s",
+            "exchange",
+            "refundMessage"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "POST",
+        "auth": null,
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"messageHeader\": {\n        \"headerVersion\": \"{{messageHeader.headerVersion_*string}}\",\n        \"messageContext\": {\n            \"messageContentType\": \"{{messageHeader.messageContext.messageContentType_*string}}\",\n            \"messageContentEncoding\": \"{{messageHeader.messageContext.messageContentEncoding_*string}}\",\n            \"payloadHashValue\": \"{{messageHeader.messageContext.payloadHashValue_*string}}\",\n            \"hashingAlgorithm\": \"{{messageHeader.messageContext.hashingAlgorithm_*string}}\"\n        },\n        \"sourceContext\": {\n            \"applicationId\": \"{{messageHeader.sourceContext.applicationId_*string}}\",\n            \"sourceId\": \"{{messageHeader.sourceContext.sourceId_*string}}\",\n            \"transactionId\": \"{{messageHeader.sourceContext.transactionId_*string}}\"\n        },\n        \"timestamp\": \"{{messageHeader.timestamp_*string}}\",\n        \"multiPartMessageContextTypes\": [\n            {\n                \"messageCorrelationContext\": \"{{messageHeader.multiPartMessageContextTypes_0.messageCorrelationContext_*string}}\",\n                \"messageCorrelationId\": \"{{messageHeader.multiPartMessageContextTypes_0.messageCorrelationId_*string}}\",\n                \"messageSequenceNumber\": \"{{messageHeader.multiPartMessageContextTypes_0.messageSequenceNumber_*string}}\",\n                \"messageSequenceSize\": \"{{messageHeader.multiPartMessageContextTypes_0.messageSequenceSize_*string}}\"\n            },\n            {\n                \"messageCorrelationContext\": \"{{messageHeader.multiPartMessageContextTypes_1.messageCorrelationContext_*string}}\",\n                \"messageCorrelationId\": \"{{messageHeader.multiPartMessageContextTypes_1.messageCorrelationId_*string}}\",\n                \"messageSequenceNumber\": \"{{messageHeader.multiPartMessageContextTypes_1.messageSequenceNumber_*string}}\",\n                \"messageSequenceSize\": \"{{messageHeader.multiPartMessageContextTypes_1.messageSequenceSize_*string}}\"\n            }\n        ]\n    },\n    \"augmentationPoint\": [\n        {\n            \"augmentationKey\": \"{{augmentationPoint_0.augmentationKey_*string}}\",\n            \"augmentationValue\": \"{{augmentationPoint_0.augmentationValue_*string}}\"\n        },\n        {\n            \"augmentationKey\": \"{{augmentationPoint_1.augmentationKey_*string}}\",\n            \"augmentationValue\": \"{{augmentationPoint_1.augmentationValue_*string}}\"\n        }\n    ],\n    \"payload\": {\n        \"refundTransactions\": {\n            \"documentNumber\": \"{{payload.refundTransactions.documentNumber_*string}}\",\n            \"issuanceDate\": \"{{payload.refundTransactions.issuanceDate_*string}}\",\n            \"refundIndicator\": \"{{payload.refundTransactions.refundIndicator_*string}}\",\n            \"refundUID\": \"{{payload.refundTransactions.refundUID_*string}}\",\n            \"refundedCoupons\": [\n                \"{{payload.refundTransactions.refundedCoupons_0_*string}}\",\n                \"{{payload.refundTransactions.refundedCoupons_1_*string}}\"\n            ],\n            \"remark\": \"{{payload.refundTransactions.remark_*string}}\",\n            \"relatedRefundUID\": \"{{payload.refundTransactions.relatedRefundUID_*string}}\",\n            \"oadCode\": \"{{payload.refundTransactions.oadCode_*string}}\"\n        },\n        \"refundingAgentDetails\": {\n            \"areaPointOfSale\": \"{{payload.refundingAgentDetails.areaPointOfSale_*string}}\",\n            \"cityPointOfSale\": \"{{payload.refundingAgentDetails.cityPointOfSale_*string}}\",\n            \"countryPointOfSale\": \"{{payload.refundingAgentDetails.countryPointOfSale_*string}}\",\n            \"issuerSystem\": \"{{payload.refundingAgentDetails.issuerSystem_*string}}\"\n        },\n        \"monetaryInformation\": {\n            \"amount\": \"{{payload.monetaryInformation.amount_*double}}\",\n            \"currency\": \"{{payload.monetaryInformation.currency_*string}}\"\n        }\n    }\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": [
+        {
+          "name": "OK",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "icd",
+                "s2s",
+                "exchange",
+                "refundMessage"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"messageHeader\": {\n        \"headerVersion\": \"{{messageHeader.headerVersion_*string}}\",\n        \"messageContext\": {\n            \"messageContentType\": \"{{messageHeader.messageContext.messageContentType_*string}}\",\n            \"messageContentEncoding\": \"{{messageHeader.messageContext.messageContentEncoding_*string}}\",\n            \"payloadHashValue\": \"{{messageHeader.messageContext.payloadHashValue_*string}}\",\n            \"hashingAlgorithm\": \"{{messageHeader.messageContext.hashingAlgorithm_*string}}\"\n        },\n        \"sourceContext\": {\n            \"applicationId\": \"{{messageHeader.sourceContext.applicationId_*string}}\",\n            \"sourceId\": \"{{messageHeader.sourceContext.sourceId_*string}}\",\n            \"transactionId\": \"{{messageHeader.sourceContext.transactionId_*string}}\"\n        },\n        \"timestamp\": \"{{messageHeader.timestamp_*date}}\",\n        \"multiPartMessageContextTypes\": [\n            {\n                \"messageCorrelationContext\": \"{{messageHeader.multiPartMessageContextTypes_0.messageCorrelationContext_*string}}\",\n                \"messageCorrelationId\": \"{{messageHeader.multiPartMessageContextTypes_0.messageCorrelationId_*string}}\",\n                \"messageSequenceNumber\": \"{{messageHeader.multiPartMessageContextTypes_0.messageSequenceNumber_*number}}\",\n                \"messageSequenceSize\": \"{{messageHeader.multiPartMessageContextTypes_0.messageSequenceSize_*number}}\"\n            },\n            {\n                \"messageCorrelationContext\": \"{{messageHeader.multiPartMessageContextTypes_1.messageCorrelationContext_*string}}\",\n                \"messageCorrelationId\": \"{{messageHeader.multiPartMessageContextTypes_1.messageCorrelationId_*string}}\",\n                \"messageSequenceNumber\": \"{{messageHeader.multiPartMessageContextTypes_1.messageSequenceNumber_*number}}\",\n                \"messageSequenceSize\": \"{{messageHeader.multiPartMessageContextTypes_1.messageSequenceSize_*number}}\"\n            }\n        ]\n    },\n    \"augmentationPoint\": [\n        {\n            \"augmentationKey\": \"{{augmentationPoint_0.augmentationKey_*string}}\",\n            \"augmentationValue\": \"{{augmentationPoint_0.augmentationValue_*string}}\"\n        },\n        {\n            \"augmentationKey\": \"{{augmentationPoint_1.augmentationKey_*string}}\",\n            \"augmentationValue\": \"{{augmentationPoint_1.augmentationValue_*string}}\"\n        }\n    ],\n    \"payload\": {\n        \"refundTransactions\": {\n            \"documentNumber\": \"{{payload.refundTransactions.documentNumber_*number}}\",\n            \"issuanceDate\": \"{{payload.refundTransactions.issuanceDate_*string}}\",\n            \"refundIndicator\": \"{{payload.refundTransactions.refundIndicator_*string}}\",\n            \"refundUID\": \"{{payload.refundTransactions.refundUID_*string}}\",\n            \"refundedCoupons\": [\n                \"{{payload.refundTransactions.refundedCoupons_0_*number}}\",\n                \"{{payload.refundTransactions.refundedCoupons_1_*number}}\",\n                \"{{payload.refundTransactions.refundedCoupons_2_*number}}\",\n                \"{{payload.refundTransactions.refundedCoupons_3_*number}}\"\n            ],\n            \"remark\": \"{{payload.refundTransactions.remark_*string}}\",\n            \"relatedRefundUID\": \"{{payload.refundTransactions.relatedRefundUID_*string}}\",\n            \"oadCode\": \"{{payload.refundTransactions.oadCode_*number}}\"\n        },\n        \"refundingAgentDetails\": {\n            \"areaPointOfSale\": \"{{payload.refundingAgentDetails.areaPointOfSale_*string}}\",\n            \"cityPointOfSale\": \"{{payload.refundingAgentDetails.cityPointOfSale_*string}}\",\n            \"countryPointOfSale\": \"{{payload.refundingAgentDetails.countryPointOfSale_*string}}\",\n            \"issuerSystem\": \"{{payload.refundingAgentDetails.issuerSystem_*string}}\"\n        },\n        \"monetaryInformation\": {\n            \"amount\": \"{{payload.monetaryInformation.amount_*number}}\",\n            \"currency\": \"{{payload.monetaryInformation.currency_*string}}\"\n        }\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "\"string\"",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              " \n// ********RoostGPT********\n/*\nTest generated by RoostGPT for test oct21-postman using AI Type Azure Open AI and AI Model gpt-4o\n\n\nTest generated for icd/s2s/exchange/refundMessage for http method type post in postman framework\n\n*/\n\n// ********RoostGPT********\n\n\nconst ld = require('lodash');\nlet responseData;\nconst contentType = pm.response.headers.get('Content-Type');\nif(contentType === \"application/xml\"){\n    var parseString = require('xml2js').parseString;\n    parseString(pm.response.body, function (err,result) {\n      if (err) {\n         console.error('Error parsing XML:', err);\n      } else {\n        responseData = result;  \n      }\n    });\n} else{\n      try {\n            responseData = pm.response.json();\n      } catch (error) {\n            console.log(\"Error parsing response:\", error.message);\n      }\n}\nif (pm.variables.get(\"statusCode\")) {\n    pm.expect(parseInt(pm.variables.get(\"statusCode\"))).to.be.equal(pm.response.code);\n}\n\nif (pm.response.code == 200){\n    pm.test(\"OK\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"OK\");\n        try {\n            if (responseData !== null && responseData !== undefined) {\n            }\n        } catch (error) {\n            console.error('Error during response validation:', error.message);\n        }\n    });\n\n}\n"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://app.swaggerhub.com/apis/IT-Financial-Systems/refund-message_exchange_api/v1.0.0",
+      "key": "baseUrl"
+    },
+    {
+      "type": "number",
+      "value": 200,
+      "key": "statusCode"
+    }
+  ],
+  "info": {
+    "_postman_id": "e9fd5756-d64a-4bde-acae-db246fa4af78",
+    "name": "Refund Message Exchange API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "This document contains data model to be exchanged as per ICD",
+      "type": "text/plain"
+    }
+  }
+}
