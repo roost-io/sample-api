@@ -1,0 +1,4 @@
+Verify API service is available and responding
+Validate API authentication mechanism
+Handle invalid authentication attempts
+Verify API rate limiting

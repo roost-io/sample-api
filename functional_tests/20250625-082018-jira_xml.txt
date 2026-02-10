@@ -1,0 +1,19 @@
+I apologize, but I notice that the provided user story (ZBIO-6751) contains very minimal information - just a title "Aquera Use case" with no description or detailed requirements. Without more context about:
+
+1. The specific functionality being implemented
+2. The requirements and acceptance criteria
+3. The expected behavior
+4. The technical constraints or environment
+5. The user flows or business rules
+
+I cannot generate meaningful or accurate test scenarios. To help create comprehensive test cases, I would need:
+
+1. A detailed description of what the "Aquera Use case" entails
+2. The specific requirements and acceptance criteria
+3. Any business rules or constraints
+4. Expected user interactions and workflows
+5. Technical specifications if relevant
+
+Could you please provide additional details about this user story so I can generate appropriate test scenarios? This will help ensure the test cases are relevant and valuable for your testing needs.
+
+The more context you can provide, the better and more specific the test scenarios can be.
