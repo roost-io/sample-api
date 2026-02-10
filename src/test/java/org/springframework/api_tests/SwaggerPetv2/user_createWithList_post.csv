@@ -1,0 +1,4 @@
+id,username,firstName,lastName,email,password,phone,userStatus
+"1001","testuser1","Test","User1","test1@example.com","testpass1","1111111111","1"
+"1002","testuser2","Test","User2","test2@example.com","testpass2","2222222222","0"
+"1003","testuser3","Test","User3","test3@example.com","testpass3","3333333333","2"
