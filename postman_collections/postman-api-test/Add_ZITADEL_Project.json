@@ -1,0 +1,52 @@
+[
+  {
+    "your_zitadel_domain": "auth.example.com",
+    "name_*string": "Default Authentication Settings",
+    "projectRoleAssertion_*boolean": true,
+    "projectRoleCheck_*boolean": true,
+    "hasProjectCheck_*boolean": true,
+    "privateLabelingSetting_*string": "PRIVATE_LABELING_SETTING_DEFAULT",
+    "statusCode": 200,
+    "scenario": "Success - Default Configuration"
+  },
+  {
+    "your_zitadel_domain": "zitadel.enterprise.org",
+    "name_*string": "Custom Auth Config",
+    "projectRoleAssertion_*boolean": false,
+    "projectRoleCheck_*boolean": true,
+    "hasProjectCheck_*boolean": true,
+    "privateLabelingSetting_*string": "PRIVATE_LABELING_SETTING_CUSTOM",
+    "statusCode": 201,
+    "scenario": "Success - Custom Configuration"
+  },
+  {
+    "your_zitadel_domain": "invalid.domain",
+    "name_*string": "",
+    "projectRoleAssertion_*boolean": true,
+    "projectRoleCheck_*boolean": false,
+    "hasProjectCheck_*boolean": false,
+    "privateLabelingSetting_*string": "INVALID_SETTING",
+    "statusCode": 400,
+    "scenario": "Bad Request - Invalid Domain"
+  },
+  {
+    "your_zitadel_domain": "test.zitadel.com",
+    "name_*string": "Test@Configuration#123",
+    "projectRoleAssertion_*boolean": true,
+    "projectRoleCheck_*boolean": true,
+    "hasProjectCheck_*boolean": false,
+    "privateLabelingSetting_*string": "UNKNOWN_SETTING",
+    "statusCode": 422,
+    "scenario": "Validation Error - Invalid Settings Combination"
+  },
+  {
+    "your_zitadel_domain": "nonexistent.domain.com",
+    "name_*string": "Unauthorized Config",
+    "projectRoleAssertion_*boolean": false,
+    "projectRoleCheck_*boolean": false,
+    "hasProjectCheck_*boolean": true,
+    "privateLabelingSetting_*string": "PRIVATE_LABELING_SETTING_NONE",
+    "statusCode": 401,
+    "scenario": "Unauthorized Access"
+  }
+]

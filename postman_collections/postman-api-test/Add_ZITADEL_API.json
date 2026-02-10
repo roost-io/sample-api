@@ -1,0 +1,42 @@
+[
+  {
+    "your_zitadel_domain": "auth.example.com",
+    "project_id": "proj_01HKFG2X5N8M9P3Q4R5T6Y7U8",
+    "name_*string": "OAuth2 Authentication",
+    "authMethodType_*string": "BASIC",
+    "statusCode": 200,
+    "scenario": "Success - Create Basic Auth Method"
+  },
+  {
+    "your_zitadel_domain": "identity.company.org",
+    "project_id": "proj_01HKFG2X5N8M9P3Q4R5T6Y7U9",
+    "name_*string": "SAML Integration",
+    "authMethodType_*string": "SAML",
+    "statusCode": 201,
+    "scenario": "Success - Create SAML Auth Method"
+  },
+  {
+    "your_zitadel_domain": "invalid.domain",
+    "project_id": "invalid_proj_id",
+    "name_*string": "",
+    "authMethodType_*string": "UNKNOWN_TYPE",
+    "statusCode": 400,
+    "scenario": "Bad Request - Invalid Auth Method Type"
+  },
+  {
+    "your_zitadel_domain": "auth.test.com",
+    "project_id": "non_existent_project",
+    "name_*string": "OAuth Test",
+    "authMethodType_*string": "OAUTH",
+    "statusCode": 404,
+    "scenario": "Not Found - Project Does Not Exist"
+  },
+  {
+    "your_zitadel_domain": "auth.example.net",
+    "project_id": "proj_01HKFG2X5N8M9P3Q4R5T6Y7U7",
+    "name_*string": "JWT Authentication",
+    "authMethodType_*string": "JWT",
+    "statusCode": 403,
+    "scenario": "Forbidden - Insufficient Permissions"
+  }
+]
