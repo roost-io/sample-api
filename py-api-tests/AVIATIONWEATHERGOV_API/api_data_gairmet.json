@@ -1,0 +1,42 @@
+[
+  {
+    "type": "METAR",
+    "format": "JSON",
+    "hazard": "none",
+    "date": "2024-01-15T10:30:00Z",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "type": "TAF",
+    "format": "XML",
+    "hazard": "turbulence",
+    "date": "2024-01-16T14:45:00Z",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "type": "invalid_type_123",
+    "format": "invalid_format_456",
+    "hazard": "invalid_hazard_789",
+    "date": "invalid_date_format",
+    "statusCode": 400,
+    "scenario": "Input validation errors"
+  },
+  {
+    "type": "SIGMET",
+    "format": "CSV",
+    "hazard": "icing",
+    "date": "2024-01-17T08:15:00Z",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "type": "12345",
+    "format": "99999",
+    "hazard": "###",
+    "date": "not_a_date",
+    "statusCode": 400,
+    "scenario": "Input validation errors"
+  }
+]

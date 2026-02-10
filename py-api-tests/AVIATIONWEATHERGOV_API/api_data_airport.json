@@ -1,0 +1,37 @@
+[
+  {
+    "ids": "KJFK,KBOS,KLAX",
+    "bbox": "-74.5,40.5,-73.5,41.5",
+    "format": "json",
+    "statusCode": 200,
+    "scenario": "Successful operation"
+  },
+  {
+    "ids": "KORD,KMDW",
+    "bbox": "-88.5,41.5,-87.5,42.5",
+    "format": "xml",
+    "statusCode": 200,
+    "scenario": "Successful operation"
+  },
+  {
+    "ids": "12345,ABCDE",
+    "bbox": "invalid_bbox_format",
+    "format": "json",
+    "statusCode": 400,
+    "scenario": "Input validation errors"
+  },
+  {
+    "ids": "",
+    "bbox": "-180,90,180,-90",
+    "format": "invalid_format_type",
+    "statusCode": 400,
+    "scenario": "Input validation errors"
+  },
+  {
+    "ids": "KDFW,KDAL",
+    "bbox": "200,100,-200,-100",
+    "format": "csv",
+    "statusCode": 400,
+    "scenario": "Input validation errors"
+  }
+]
