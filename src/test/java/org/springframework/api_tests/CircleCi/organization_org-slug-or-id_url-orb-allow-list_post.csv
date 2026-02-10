@@ -1,0 +1,5 @@
+orgSlugOrId,name,prefix,auth
+"gh/CircleCI-Public","Allow URL orbs from raw.githubusercontent.com/CircleCI-Public","https://raw.githubusercontent.com/CircleCI-Public/orbs/refs/heads/main/","github-app"
+"gh/CircleCI-Public","Allow URL orbs from example.com","https://example.com/orbs/","none"
+"gh/CircleCI-Public","Allow URL orbs from github","https://github.com/orbs/","github-oauth"
+"bb/CircleCI-Public","Allow URL orbs from bitbucket","https://bitbucket.org/orbs/","bitbucket-oauth"
