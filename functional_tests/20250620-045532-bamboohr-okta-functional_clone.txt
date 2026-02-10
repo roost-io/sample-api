@@ -1,0 +1,331 @@
+# Comprehensive Test Scenarios for BambooHR to Okta User Provisioning System
+
+## **FUNCTIONAL TESTS**
+
+### **1. Constructor and Initialization Tests**
+
+#### **Test Case 1.1: Valid Configuration Initialization**
+- **Input**: Valid bambooHRConfig and oktaConfig objects
+  ```javascript
+  bambooHRConfig = { subdomain: 'testcompany', apiKey: 'valid-api-key' }
+  oktaConfig = { domain: 'testcompany.okta.com', apiToken: 'valid-token' }
+  ```
+- **Expected Output**: 
+  - BambooHROktaProvisioning instance created successfully
+  - Axios clients configured with correct base URLs and headers
+  - BambooHR baseURL: `https://api.bamboohr.com/api/gateway.php/testcompany/v1`
+  - Okta baseURL: `https://testcompany.okta.com/api/v1`
+
+#### **Test Case 1.2: Missing Configuration Parameters**
+- **Input**: Incomplete configuration objects
+  ```javascript
+  bambooHRConfig = { subdomain: null, apiKey: '' }
+  oktaConfig = { domain: '', apiToken: null }
+  ```
+- **Expected Output**: Constructor should handle gracefully or throw appropriate error
+
+### **2. BambooHR Employee Fetching Tests**
+
+#### **Test Case 2.1: Successful Employee Retrieval**
+- **Input**: Default fields array
+- **Expected Output**: 
+  - Array of active employees with work emails
+  - Only employees with status 'Active' and valid workEmail
+  - Console log showing number of retrieved employees
+
+#### **Test Case 2.2: Custom Fields Retrieval**
+- **Input**: Custom fields array `['firstName', 'lastName', 'workEmail', 'customField']`
+- **Expected Output**: API call with custom fields parameter
+
+#### **Test Case 2.3: Empty Employee Response**
+- **Input**: BambooHR API returns empty employees array
+- **Expected Output**: Empty array returned, no errors thrown
+
+#### **Test Case 2.4: BambooHR API Error Handling**
+- **Input**: Invalid API credentials or network error
+- **Expected Output**: Error caught and re-thrown with appropriate message
+
+#### **Test Case 2.5: Employee Filtering Logic**
+- **Input**: Mixed employee data (some without email, some inactive)
+  ```javascript
+  employees = [
+    { firstName: 'John', lastName: 'Doe', workEmail: 'john@test.com', status: 'Active' },
+    { firstName: 'Jane', lastName: 'Smith', workEmail: null, status: 'Active' },
+    { firstName: 'Bob', lastName: 'Wilson', workEmail: 'bob@test.com', status: 'Inactive' }
+  ]
+  ```
+- **Expected Output**: Only John Doe returned in filtered array
+
+### **3. Okta User Management Tests**
+
+#### **Test Case 3.1: Check User Exists - User Found**
+- **Input**: Valid email address of existing Okta user
+- **Expected Output**: Okta user object returned
+
+#### **Test Case 3.2: Check User Exists - User Not Found**
+- **Input**: Email address of non-existent user
+- **Expected Output**: null returned (404 error handled)
+
+#### **Test Case 3.3: Check User Exists - API Error**
+- **Input**: Invalid email format or API error
+- **Expected Output**: Error thrown (non-404 errors)
+
+#### **Test Case 3.4: Create Okta User - Success**
+- **Input**: Valid user profile object
+- **Expected Output**: 
+  - User created successfully in Okta
+  - Created user object returned
+  - Success message logged
+
+#### **Test Case 3.5: Create Okta User - Duplicate Email**
+- **Input**: User profile with existing email
+- **Expected Output**: Error thrown and logged appropriately
+
+#### **Test Case 3.6: Update Okta User - Success**
+- **Input**: Valid userId and updated profile data
+- **Expected Output**: 
+  - User updated successfully
+  - Updated user object returned
+  - Success message logged
+
+### **4. Password Generation Tests**
+
+#### **Test Case 4.1: Password Generation Format**
+- **Input**: Call generateTemporaryPassword()
+- **Expected Output**: 
+  - Password length: 16 characters
+  - Contains base64 characters + 'Aa1!'
+  - Meets complexity requirements
+
+#### **Test Case 4.2: Password Uniqueness**
+- **Input**: Multiple calls to generateTemporaryPassword()
+- **Expected Output**: Each call returns unique password
+
+### **5. User Profile Creation Tests**
+
+#### **Test Case 5.1: Complete Employee Data**
+- **Input**: Employee object with all fields populated
+  ```javascript
+  employee = {
+    firstName: 'John', lastName: 'Doe', workEmail: 'john@test.com',
+    employeeNumber: '12345', jobTitle: 'Developer', department: 'Engineering',
+    mobilePhone: '555-1234', supervisor: 'Jane Smith'
+  }
+  ```
+- **Expected Output**: Complete Okta user profile with all fields mapped
+
+#### **Test Case 5.2: Minimal Employee Data**
+- **Input**: Employee with only required fields (firstName, lastName, workEmail)
+- **Expected Output**: Okta profile with required fields, optional fields as null/undefined
+
+#### **Test Case 5.3: Phone Number Priority**
+- **Input**: Employee with both mobilePhone and homePhone
+- **Expected Output**: mobilePhone used as primaryPhone
+
+### **6. Group Assignment Tests**
+
+#### **Test Case 6.1: Department Group Assignment**
+- **Input**: userId, department='Engineering', jobTitle='Developer'
+- **Expected Output**: User assigned to ENGINEERING_GROUP_ID
+
+#### **Test Case 6.2: Manager Group Assignment**
+- **Input**: userId, department='Sales', jobTitle='Sales Manager'
+- **Expected Output**: 
+  - User assigned to SALES_GROUP_ID
+  - User assigned to MANAGERS_GROUP_ID
+
+#### **Test Case 6.3: Unknown Department**
+- **Input**: userId, department='Unknown Department', jobTitle='Analyst'
+- **Expected Output**: No department group assignment, no errors
+
+#### **Test Case 6.4: Group Assignment API Error**
+- **Input**: Invalid groupId or userId
+- **Expected Output**: Error logged but not thrown (graceful handling)
+
+### **7. Main Provisioning Function Tests**
+
+#### **Test Case 7.1: Dry Run Mode**
+- **Input**: options = { dryRun: true }
+- **Expected Output**: 
+  - No actual API calls to create/update users
+  - Dry run messages logged
+  - Results object with processed count
+
+#### **Test Case 7.2: Full Provisioning - New Users**
+- **Input**: BambooHR employees not in Okta, options = { dryRun: false }
+- **Expected Output**: 
+  - Users created in Okta
+  - Group assignments completed
+  - Results object with created count
+
+#### **Test Case 7.3: Full Provisioning - Existing Users**
+- **Input**: BambooHR employees already in Okta, options = { updateExisting: true }
+- **Expected Output**: 
+  - Existing users updated
+  - Results object with updated count
+
+#### **Test Case 7.4: Skip Existing Users**
+- **Input**: options = { updateExisting: false }
+- **Expected Output**: Existing users skipped, logged appropriately
+
+#### **Test Case 7.5: Mixed Scenario Processing**
+- **Input**: Mix of new and existing employees
+- **Expected Output**: 
+  - New users created
+  - Existing users updated (if updateExisting=true)
+  - Accurate results summary
+
+#### **Test Case 7.6: Error Handling During Provisioning**
+- **Input**: Some employees cause API errors
+- **Expected Output**: 
+  - Errors logged in errorDetails array
+  - Processing continues for other employees
+  - Error count tracked in results
+
+#### **Test Case 7.7: Rate Limiting**
+- **Input**: Multiple employees to process
+- **Expected Output**: 200ms delay between API requests
+
+### **8. Single Employee Sync Tests**
+
+#### **Test Case 8.1: Sync Active Employee - New User**
+- **Input**: employeeId of active employee not in Okta
+- **Expected Output**: User created in Okta with group assignments
+
+#### **Test Case 8.2: Sync Active Employee - Existing User**
+- **Input**: employeeId of active employee already in Okta
+- **Expected Output**: User profile updated in Okta
+
+#### **Test Case 8.3: Sync Inactive Employee**
+- **Input**: employeeId of inactive employee
+- **Expected Output**: Employee skipped, appropriate message logged
+
+#### **Test Case 8.4: Sync Employee Without Email**
+- **Input**: employeeId of employee without workEmail
+- **Expected Output**: Employee skipped, appropriate message logged
+
+#### **Test Case 8.5: Invalid Employee ID**
+- **Input**: Non-existent employeeId
+- **Expected Output**: Error thrown and logged
+
+### **9. Edge Cases and Error Scenarios**
+
+#### **Test Case 9.1: Network Connectivity Issues**
+- **Input**: Network timeout or connection error
+- **Expected Output**: Appropriate error handling and logging
+
+#### **Test Case 9.2: API Rate Limiting**
+- **Input**: Exceed API rate limits
+- **Expected Output**: Proper error handling, possible retry logic
+
+#### **Test Case 9.3: Invalid API Responses**
+- **Input**: Malformed JSON or unexpected response structure
+- **Expected Output**: Graceful error handling
+
+#### **Test Case 9.4: Large Dataset Processing**
+- **Input**: 1000+ employees
+- **Expected Output**: 
+  - Memory efficient processing
+  - Rate limiting respected
+  - Progress logging
+
+## **NON-FUNCTIONAL TESTS**
+
+### **1. Performance Tests**
+
+#### **Test Case P1: Response Time - Employee Fetching**
+- **Input**: Request for 100 employees
+- **Expected Output**: Response time < 5 seconds
+
+#### **Test Case P2: Response Time - User Creation**
+- **Input**: Single user creation request
+- **Expected Output**: Response time < 2 seconds
+
+#### **Test Case P3: Bulk Processing Performance**
+- **Input**: 500 employees for provisioning
+- **Expected Output**: 
+  - Complete processing within reasonable time
+  - Memory usage remains stable
+
+### **2. Security Tests**
+
+#### **Test Case S1: API Key Protection**
+- **Input**: Configuration with API keys
+- **Expected Output**: 
+  - API keys not logged in console output
+  - Secure transmission in headers
+
+#### **Test Case S2: Password Security**
+- **Input**: Generated temporary passwords
+- **Expected Output**: 
+  - Passwords meet complexity requirements
+  - Passwords not logged in plain text
+
+#### **Test Case S3: Input Validation**
+- **Input**: Malicious input in employee data
+- **Expected Output**: Input properly sanitized/validated
+
+### **3. Reliability Tests**
+
+#### **Test Case R1: Error Recovery**
+- **Input**: Intermittent API failures
+- **Expected Output**: 
+  - Graceful error handling
+  - Processing continues for other records
+
+#### **Test Case R2: Data Consistency**
+- **Input**: Multiple provisioning runs
+- **Expected Output**: 
+  - No duplicate users created
+  - Data remains consistent
+
+### **4. Scalability Tests**
+
+#### **Test Case SC1: Large Organization Support**
+- **Input**: 5000+ employees
+- **Expected Output**: 
+  - System handles large datasets
+  - Memory usage remains reasonable
+
+#### **Test Case SC2: Concurrent Processing**
+- **Input**: Multiple provisioning processes
+- **Expected Output**: No conflicts or data corruption
+
+### **5. Usability Tests**
+
+#### **Test Case U1: Logging and Monitoring**
+- **Input**: Various provisioning scenarios
+- **Expected Output**: 
+  - Clear, informative log messages
+  - Progress indicators
+  - Comprehensive error reporting
+
+#### **Test Case U2: Configuration Validation**
+- **Input**: Invalid configuration parameters
+- **Expected Output**: Clear error messages for configuration issues
+
+## **SUGGESTIONS AND COMMENTS**
+
+### **Code Improvements:**
+1. **Template Literal Fix**: The string templates use `${}` instead of `${}` - this should be corrected
+2. **Error Handling**: Consider implementing retry logic for transient API failures
+3. **Validation**: Add input validation for configuration parameters
+4. **Logging**: Implement structured logging with different log levels
+5. **Testing**: Add unit tests using Jest or similar framework
+
+### **Security Considerations:**
+1. **Credential Management**: Use secure credential storage (environment variables, key vaults)
+2. **API Rate Limiting**: Implement exponential backoff for rate limit handling
+3. **Audit Logging**: Add audit trails for user creation/modification activities
+
+### **Operational Considerations:**
+1. **Monitoring**: Add health checks and monitoring endpoints
+2. **Configuration**: Support for different environments (dev, staging, prod)
+3. **Backup**: Consider backup/rollback mechanisms for bulk operations
+4. **Documentation**: Add comprehensive API documentation and usage examples
+
+### **Technology Stack Recommendations:**
+- **Testing Framework**: Jest for unit testing, Supertest for API testing
+- **Monitoring**: Winston for logging, Prometheus for metrics
+- **Configuration**: dotenv for environment management
+- **Validation**: Joi or Yup for input validation
