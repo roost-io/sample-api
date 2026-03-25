@@ -1,0 +1,327 @@
+{
+  "item": [
+    {
+      "name": "example",
+      "item": [
+        {
+          "name": "example - Example GET endpoint",
+          "request": {
+            "name": "Example GET endpoint",
+            "description": {
+              "content": "An example endpoint for GET requests.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "example"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "example"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "name": "Bad Request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "example"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "name": "Internal Server Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "example"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "name": "example - Example POST endpoint",
+          "request": {
+            "name": "Example POST endpoint",
+            "description": {
+              "content": "An example endpoint for POST requests.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "example"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"data\": \"{{data_*string}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "name": "Resource created successfully",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "example"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"data\": \"{{data_*string}}\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "name": "Bad Request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "example"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"data\": \"{{data_*string}}\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "name": "Internal Server Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "example"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"data\": \"{{data_*string}}\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "// ********RoostGPT********\n/*\nTest generated by RoostGPT for test PostmanApiTest using AI Type Open AI and AI Model gpt-4o\n\n\nTest generated for example for http method type post in postman framework\n\n*/\n\n// ********RoostGPT********\n\n\nconst ld = require('lodash');\nlet responseData;\nconst contentType = pm.response.headers.get('Content-Type');\nif (contentType === \"application/xml\") {\n  var parseString = require('xml2js').parseString;\n  parseString(pm.response.body, function(err, result) {\n    if (err) {\n      console.error('Error parsing XML:', err);\n    } else {\n      responseData = result;\n    }\n  });\n} else {\n  responseData = pm.response.json();\n}\n// Status code check with early exit\nconst expectedStatusCode = parseInt(pm.variables.get(\"statusCode\"));\nlet statusMatches = true;\nif (pm.variables.get(\"statusCode\")) {\n  statusMatches = (pm.response.code === expectedStatusCode);\n  pm.test(\"Status code matches expected value\", function() {\n    pm.expect(pm.response.code).to.equal(expectedStatusCode);\n  });\n}\n\nif (pm.response.code == 201 && statusMatches) {\n  pm.test(\"Resource created successfully\", function() {\n    pm.expect(pm.response.status).to.be.eql(\"Created\");\n    try {\n      if (responseData !== null && responseData !== undefined) {\n        {\n          // Condition: Raw data type and parent property is not an array\n          // pathStr: responseData\n          // subKey: id\n          // required: []\n          let requiredField = false\n          if (requiredField || ld.get(responseData, 'id')) {\n            pm.test(`'responseData field has id that is of type string'`, function() {\n              let parent = responseData;\n              if (pm.expect(parent).to.have.nested.property(`id`)) {\n                const value = responseData?.id;\n\n                if (!ld.isEmpty(value)) {\n                  pm.expect(typeof value).to.equal(\"string\");\n                }\n              }\n            })\n\n          }\n        }\n      }\n    } catch (error) {\n      console.error('Error during response validation:', error.message);\n    }\n  });\n\n}\nif (pm.response.code == 400 && statusMatches) {\n  pm.test(\"Bad Request\", function() {\n    pm.expect(pm.response.status).to.be.eql(\"Bad Request\");\n  });\n\n}\nif (pm.response.code == 500 && statusMatches) {\n  pm.test(\"Internal Server Error\", function() {\n    pm.expect(pm.response.status).to.be.eql(\"Internal Server Error\");\n  });\n\n}"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    },
+    {
+      "type": "number",
+      "value": 200,
+      "key": "statusCode"
+    }
+  ],
+  "info": {
+    "_postman_id": "25af90d9-55fb-4883-9d9e-38ab30f664e5",
+    "name": "Sample API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "This is a sample API generated from the provided file content.",
+      "type": "text/plain"
+    }
+  }
+}
