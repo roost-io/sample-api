@@ -1,0 +1,108 @@
+[
+  {
+    "config": {
+      "setting": "value1"
+    },
+    "statusCode": 200,
+    "scenario": "Configuration updated successfully"
+  },
+  {
+    "config": {
+      "setting": "value2",
+      "optionalSetting": "optionalValue"
+    },
+    "statusCode": 200,
+    "scenario": "Configuration updated successfully"
+  },
+  {
+    "config": {},
+    "statusCode": 400,
+    "scenario": "Bad Request"
+  },
+  {
+    "config": {
+      "setting": 123
+    },
+    "statusCode": 400,
+    "scenario": "Bad Request"
+  },
+  {
+    "config": {
+      "setting": "invalid_enum_value"
+    },
+    "statusCode": 400,
+    "scenario": "Bad Request"
+  },
+  {
+    "config": {
+      "setting": "value3"
+    },
+    "statusCode": 500,
+    "scenario": "Internal Server Error"
+  },
+  {
+    "config": {
+      "setting": "value4"
+    },
+    "statusCode": 200,
+    "scenario": "Configuration updated successfully"
+  },
+  {
+    "config": {
+      "setting": "value5",
+      "optionalSetting": "optionalValue2"
+    },
+    "statusCode": 200,
+    "scenario": "Configuration updated successfully"
+  },
+  {
+    "config": {
+      "optionalSetting": "optionalValue3"
+    },
+    "statusCode": 400,
+    "scenario": "Bad Request"
+  },
+  {
+    "config": {
+      "setting": true
+    },
+    "statusCode": 400,
+    "scenario": "Bad Request"
+  },
+  {
+    "config": {
+      "setting": "value6"
+    },
+    "statusCode": 500,
+    "scenario": "Internal Server Error"
+  },
+  {
+    "config": {
+      "setting": "value7"
+    },
+    "statusCode": 200,
+    "scenario": "Configuration updated successfully"
+  },
+  {
+    "config": {
+      "setting": "value8",
+      "optionalSetting": "optionalValue4"
+    },
+    "statusCode": 200,
+    "scenario": "Configuration updated successfully"
+  },
+  {
+    "config": {
+      "setting": null
+    },
+    "statusCode": 400,
+    "scenario": "Bad Request"
+  },
+  {
+    "config": {
+      "setting": "value9"
+    },
+    "statusCode": 500,
+    "scenario": "Internal Server Error"
+  }
+]
