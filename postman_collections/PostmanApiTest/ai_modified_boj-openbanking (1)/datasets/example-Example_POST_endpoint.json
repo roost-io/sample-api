@@ -1,0 +1,77 @@
+[
+  {
+    "data": "SampleData1",
+    "statusCode": 201,
+    "scenario": "Resource created successfully"
+  },
+  {
+    "data": "SampleData2",
+    "statusCode": 201,
+    "scenario": "Resource created successfully"
+  },
+  {
+    "data": "SampleData3",
+    "statusCode": 201,
+    "scenario": "Resource created successfully"
+  },
+  {
+    "data": "SampleData4",
+    "statusCode": 201,
+    "scenario": "Resource created successfully"
+  },
+  {
+    "data": "SampleData5",
+    "statusCode": 201,
+    "scenario": "Resource created successfully"
+  },
+  {
+    "data": "SampleData6",
+    "statusCode": 201,
+    "scenario": "Resource created successfully"
+  },
+  {
+    "data": "SampleData7",
+    "statusCode": 201,
+    "scenario": "Resource created successfully"
+  },
+  {
+    "data": "SampleData8",
+    "statusCode": 201,
+    "scenario": "Resource created successfully"
+  },
+  {
+    "data": "SampleData9",
+    "statusCode": 201,
+    "scenario": "Resource created successfully"
+  },
+  {
+    "data": "SampleData10",
+    "statusCode": 201,
+    "scenario": "Resource created successfully"
+  },
+  {
+    "data": "",
+    "statusCode": 400,
+    "scenario": "Bad Request"
+  },
+  {
+    "data": "InvalidData@#",
+    "statusCode": 400,
+    "scenario": "Bad Request"
+  },
+  {
+    "data": "123456",
+    "statusCode": 400,
+    "scenario": "Bad Request"
+  },
+  {
+    "data": "NonExistentResource",
+    "statusCode": 400,
+    "scenario": "Bad Request"
+  },
+  {
+    "data": "ErrorData",
+    "statusCode": 500,
+    "scenario": "Internal Server Error"
+  }
+]
