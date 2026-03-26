@@ -1,0 +1,143 @@
+[
+  {
+    "standingOrderId": "SO-20260326-001",
+    "signId": "SIG-739102",
+    "X-Request-ID": "3a0a5b9a-8b2d-4f90-9c7c-3a3a1e4b8f10",
+    "statusCode": 200,
+    "scenario": "OK  The URL for the status page was successfully generated"
+  },
+  {
+    "X-Request-ID": "bfa4c2be-64a5-4f5e-8f24-8d9d3a5f2c31",
+    "Date": "Thu, 26 Mar 2026 10:15:30 GMT",
+    "Digest": "SHA-256=K2R1bW15ZGlnZXN0YmFzZTY0KQ==",
+    "Signature": "keyId=\"tpp-key-01\",algorithm=\"rsa-sha256\",headers=\"(request-target) date digest\",signature=\"bG9uZ3NpZ25hdHVyZWJhc2U2NA==\"",
+    "TPP-Signature-Certificate": "MIIDdzCCAl+gAwIBAgIUXYZ12345o6p9Kf3G9xv2u7zF9v8wDQYJKoZIhvcNAQELBQAwEjEQMA4GA1UEAwwHVFBQIENBMB4XDTI2MDMyNjA5MDAwMFoXDTI3MDMyNjA5MDAwMFowEjEQMA4GA1UEAwwHVENlcnQgMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDbJb4XQ2f9U8GQ0k7w0f2M5Tt7J0X2h3L0+8Lr3Wf3z2g2k3ZbW1HcF9p8oYVg5wN0pT6uXnY0f0m8t2q0q8xQw4qkQ3m5nC7o9oYkS4gD5v2p4F6P6bK3VxwqH1wGd9JjQxZrQIDAQABo1MwUTAdBgNVHQ4EFgQUoP3Yk3v9wZqv2m3Cw9cQb9iP7jQwHwYDVR0jBBgwFoAUoP3Yk3v9wZqv2m3Cw9cQb9iP7jQwDwYDVR0TAQH/BAUwAwEB/zANBgkqhkiG9w0BAQsFAAOBgQCAWqEoFQpKumN+",
+    "User-Involved": true,
+    "TPP-Name": "Acme TPP Ltd",
+    "standingOrderId": "SO-20260326-002",
+    "signId": "SIG-739103",
+    "redirectToTPPUrl": "https://tpp.client.com/auth/success?sid=SIG-739103",
+    "statusCode": 200,
+    "scenario": "OK  The URL for the status page was successfully generated"
+  },
+  {
+    "X-Request-ID": "1b1c0d2e-2345-4e6f-9a0b-c1d2e3f4a5b6",
+    "Date": "Wed, 25 Mar 2026 08:22:10 GMT",
+    "standingOrderId": "SO-20260326-003",
+    "signId": "SIG-739104",
+    "User-Involved": false,
+    "redirectToTPPUrl": "https://tpp.client.com/auth/success?sid=SIG-739104&continue=true",
+    "statusCode": 200,
+    "scenario": "OK  The URL for the status page was successfully generated"
+  },
+  {
+    "X-Request-ID": "6d7f8a9b-0c1d-4e2f-8a7b-9c0d1e2f3a4b",
+    "standingOrderId": "SO-20260326-004",
+    "Date": "Wed, 25 Mar 2026 12:00:00 GMT",
+    "statusCode": 400,
+    "scenario": "BAD REQUEST\nRequest validation failed or required input is missing"
+  },
+  {
+    "X-Request-ID": "12345",
+    "standingOrderId": "SO-20260326-005",
+    "signId": "SIG-739105",
+    "Digest": "SHA-256=YWJjZGVmZw==",
+    "statusCode": 400,
+    "scenario": "BAD REQUEST\nRequest validation failed or required input is missing"
+  },
+  {
+    "X-Request-ID": "90ab12cd-34ef-45ab-89cd-ef0123456789",
+    "standingOrderId": "SO-20260326-006",
+    "signId": "SIG-739106",
+    "redirectToTPPUrl": "htp:/bad_url",
+    "statusCode": 400,
+    "scenario": "BAD REQUEST\nRequest validation failed or required input is missing"
+  },
+  {
+    "X-Request-ID": "b1c2d3e4-f5a6-47b8-9c0d-1e2f3a4b5c6d",
+    "standingOrderId": "SO-20260326-007",
+    "signId": "SIG-739107",
+    "Signature": "keyId=\"tpp-key-02\",algorithm=\"rsa-sha256\",headers=\"(request-target) date digest\",signature=\"c2lnbmF0dXJl\"",
+    "TPP-Signature-Certificate": "INVALID_CERT_DATA",
+    "statusCode": 401,
+    "scenario": "UNAUTHORISED\nInvalid/missing access token or certificate"
+  },
+  {
+    "X-Request-ID": "0e1f2a3b-4c5d-46e7-8f90-a1b2c3d4e5f6",
+    "standingOrderId": "SO-20260326-008",
+    "signId": "SIG-739108",
+    "Signature": "keyId=\"tpp-key-02\",algorithm=\"rsa-sha256\",headers=\"(request-target) date digest\",signature=\"YWJjZHNpZ24=\"",
+    "Digest": "SHA-256=ZGlnaXN0aGFzaA==",
+    "statusCode": 401,
+    "scenario": "UNAUTHORISED\nInvalid/missing access token or certificate"
+  },
+  {
+    "X-Request-ID": "7e5c3a1b-2d4f-48a9-b0c1-d2e3f4a5b6c7",
+    "standingOrderId": "SO-20260326-009",
+    "signId": "SIG-739109",
+    "TPP-Name": "Unprivileged Integrator",
+    "statusCode": 403,
+    "scenario": "FORBIDDEN\nCaller is not allowed to invoke this operation"
+  },
+  {
+    "X-Request-ID": "4a3b2c1d-5e6f-47a8-9b0c-1d2e3f4a5b6c",
+    "standingOrderId": "SO-20260326-010",
+    "signId": "SIG-739110",
+    "TPP-Name": "Blocked TPP Ltd",
+    "User-Involved": true,
+    "statusCode": 403,
+    "scenario": "FORBIDDEN\nCaller is not allowed to invoke this operation"
+  },
+  {
+    "X-Request-ID": "c1d2e3f4-a5b6-47c8-9d0e-1f2a3b4c5d6e",
+    "standingOrderId": "SO-UNKNOWN-9999",
+    "signId": "SIG-739111",
+    "statusCode": 404,
+    "scenario": "ID_NOT_FOUND\nThe standingOrderId or signId does not exist or is invalid"
+  },
+  {
+    "X-Request-ID": "d2e3f4a5-b6c7-48d9-0e1f-2a3b4c5d6e7f",
+    "standingOrderId": "SO-20260326-012",
+    "signId": "SIG-00000000-XXXX",
+    "statusCode": 404,
+    "scenario": "ID_NOT_FOUND\nThe standingOrderId or signId does not exist or is invalid"
+  },
+  {
+    "X-Request-ID": "e3f4a5b6-c7d8-49e0-1f2a-3b4c5d6e7f80",
+    "standingOrderId": "SO-20260326-013",
+    "signId": "SIG-739113",
+    "Date": "Thu, 26 Mar 2026 14:45:00 GMT",
+    "statusCode": 500,
+    "scenario": "INTERNAL SERVER ERROR\nUnexpected error occurred"
+  },
+  {
+    "X-Request-ID": "f4a5b6c7-d8e9-401f-2a3b-4c5d6e7f8091",
+    "Date": "Thu, 26 Mar 2026 15:00:00 GMT",
+    "Digest": "SHA-256=YW5vdGhlcmhleGR1bW1kaWdlc3Q=",
+    "Signature": "keyId=\"tpp-key-03\",algorithm=\"rsa-sha256\",headers=\"(request-target) date digest\",signature=\"YWJjMTIzc2lnbg==\"",
+    "TPP-Signature-Certificate": "MIICpDCCAYwCCQC7b0xWz0l3sjANBgkqhkiG9w0BAQsFADASMRAwDgYDVQQDDAdUUFAgQ0EwHhcNMjYwMzI2MTUwMDAwWhcNMjcwMzI2MTUwMDAwWjASMRAwDgYDVQQDDAdUUCBTYW5kMHYwEAYHKoZIzj0CAQYFK4EEACIDYgAEwN1VZ9z1wXf3mG1q2mYv8n7sOq3mT7oFJv7sQqz5R0v2yq4m2wD1Zb8Jm2uX2qvM4r9hJv8u9Wk8h1n2p2k3ZElxJxwqI2r9E4m1eU3x4Q2m9b3k1h0Yh2o0jAjAiBgNVHREEGzAZggZ0cHAuY29tgg93d3cudHBwLmNvbTAKBggqhkjOPQQDAgNoADBlAjEAmqH6W6o8tJk2x2lZKQ0cJxB2e8g6+o7i4K9w3k3T1gq8G8z6sGQ2j0M2b5QK2V7Y0lAjB2a0mS4q4Qn1GvH0Gx9m6rH3k2i4n5d6x8f9j0k1l2m3n4o5p6q7r8s9t",
+    "User-Involved": false,
+    "TPP-Name": "Acme TPP Sandbox",
+    "standingOrderId": "SO-20260326-014",
+    "signId": "SIG-739114",
+    "redirectToTPPUrl": "https://tpp.client.com/auth/success?sid=SIG-739114",
+    "statusCode": 500,
+    "scenario": "INTERNAL SERVER ERROR\nUnexpected error occurred"
+  },
+  {
+    "X-Request-ID": "05b6c7d8-e9f0-412a-3b4c-5d6e7f8091a2",
+    "standingOrderId": "SO-20260326-015",
+    "signId": "SIG-739115",
+    "Digest": "MD5=dGVzdGhhc2g=",
+    "statusCode": 400,
+    "scenario": "BAD REQUEST\nRequest validation failed or required input is missing"
+  },
+  {
+    "X-Request-ID": "16c7d8e9-f001-423a-b4c5-d6e7f8091a2b3",
+    "standingOrderId": "SO-20260326-016",
+    "signId": "SIG-739116",
+    "Signature": "keyId=\"tpp-key-04\",algorithm=\"hmac-sha1\",headers=\"(request-target) date digest\",signature=\"ZmFrZWQ=\"",
+    "statusCode": 400,
+    "scenario": "BAD REQUEST\nRequest validation failed or required input is missing"
+  }
+]

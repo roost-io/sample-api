@@ -1,0 +1,149 @@
+[
+  {
+    "paymentId": "pay_20260326_0001",
+    "X-Request-ID": "7f9c1a6e-3d7a-4f81-8b7a-12d3a4567890",
+    "statusCode": 200,
+    "scenario": "OK  The URL for the status page was successfully generated"
+  },
+  {
+    "signId": "sig_20260326_A1",
+    "X-Request-ID": "3e1be9af-d93a-4f42-9a4c-2b064b1de8f2",
+    "statusCode": 200,
+    "scenario": "OK  The URL for the status page was successfully generated"
+  },
+  {
+    "paymentId": "pay_20260326_0002",
+    "signId": "sig_20260326_B2",
+    "X-Request-ID": "5a8c7d32-9c01-4a9a-b302-bf1a2c4e7d55",
+    "Date": "Thu, 26 Mar 2026 10:15:30 GMT",
+    "Digest": "SHA-256=r4nd0mBase64HashValue1234567890==",
+    "Signature": "keyId=\"tpp-key-01\",algorithm=\"rsa-sha256\",headers=\"(request-target) date digest x-request-id\",signature=\"oS6l7F9wJxS0y2t9o0b4vQ==\"",
+    "TPP-Signature-Certificate": "MIICeDCCAhGgAwIBAgIUQ1V1G7p5l8pH6GvYwY0qZ3QFf2EwDQYJKoZIhvcNAQELBQAwEjEQMA4GA1UEAwwHVFBQIENBMB4XDTI2MDMyNjA5MDAwMFoXDTI3MDMyNjA5MDAwMFowFjEUMBIGA1UEAwwLVFBQIFNpZ25lciBDMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvu9v7w8mWwL5H3t2pG7kZgQJkz8O1k2zB3kK8HcVb8hC9vPZk0o5zWg7xL2dY1o0P3k3cYz2mGq2dR0q7eQqX9eV8WbV2aP0u3nZ0PZbQh3k9Qw3f4lJd1m2D2G3j5h6r7t8u9v0w1x2y3z4a5b6c7d8e9f0IDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQCMq3cU7Yw9b2f1e0r4s5t6u7v8w9x0y1z2a3b4c5d6e7f8g9h0i1j2k3l4m5",
+    "User-Involved": true,
+    "TPP-Name": "Acme TPP Ltd",
+    "redirectToTPPUrl": "https://tpp.client.com/auth/success?paymentId=pay_20260326_0002",
+    "statusCode": 200,
+    "scenario": "OK  The URL for the status page was successfully generated"
+  },
+  {
+    "signId": "sig_20260326_B2",
+    "X-Request-ID": "b0f0e46a-2d6b-4b34-8c4d-66d9a96f1a33",
+    "Date": "Thu, 26 Mar 2026 11:22:10 GMT",
+    "Digest": "SHA-256=QWxhZGRpbjpvcGVuIHNlc2FtZQ==",
+    "Signature": "keyId=\"tpp-key-02\",algorithm=\"rsa-sha256\",headers=\"(request-target) date digest x-request-id\",signature=\"X1yZ2a3b4c5d6e7f8g9h0w==\"",
+    "TPP-Signature-Certificate": "MIIDdzCCAl+gAwIBAgIUT0PpE3P6kS3YjN8zqzq2b9xQ5L9lMA0GCSqGSIb3DQEBCwUAMBIxEDAOBgNVBAMMB1RQUCBDQTAeFw0yNjAzMjYxMTAwMDBaFw0yNzAzMjYxMTAwMDBaMBYxFDASBgNVBAMMC1RQUCBTaWduZXIgQzCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAK1r4b0yWm8X8lYxg2Q3x3r7e8zv9pQvVwZ5XrTq1FhQqzQOq6zV8+6x2kT6J8u8bJzv3JQx1Jq3eGQb5iQ6+2J4p6O3o3f7b3n5z2n1v0oP1kN5mK0tqX5pYb8kJ2bFj3s4Y9wIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQBW8tq3H3m8m1Q2r7u5Wc1yY3p0ZbJcT5i2",
+    "User-Involved": false,
+    "TPP-Name": "PayBuddy EU",
+    "redirectToTPPUrl": "https://tpp.client.com/auth/success?signId=sig_20260326_B2",
+    "statusCode": 200,
+    "scenario": "OK  The URL for the status page was successfully generated"
+  },
+  {
+    "paymentId": "pay_20260326_0003",
+    "X-Request-ID": "c1a2b3c4-d5e6-4f89-9ab1-c2d3e4f5a6b7",
+    "Date": "Thu, 26 Mar 2026 09:05:00 GMT",
+    "TPP-Name": "Finware Solutions",
+    "User-Involved": true,
+    "statusCode": 200,
+    "scenario": "OK  The URL for the status page was successfully generated"
+  },
+  {
+    "X-Request-ID": "1623ab45-7890-4cde-8fab-0055aa33cc77",
+    "Date": "Thu, 26 Mar 2026 12:00:00 GMT",
+    "statusCode": 400,
+    "scenario": "BAD REQUEST\nRequest validation failed or required input is missing"
+  },
+  {
+    "paymentId": "pay_20260326_0004",
+    "X-Request-ID": "not-a-uuid",
+    "Date": "Thu, 26 Mar 2026 12:05:00 GMT",
+    "statusCode": 400,
+    "scenario": "BAD REQUEST\nRequest validation failed or required input is missing"
+  },
+  {
+    "paymentId": "pay_20260326_0005",
+    "X-Request-ID": "2b4d6f80-1234-4a67-9dea-1f2e3d4c5b6a",
+    "redirectToTPPUrl": "ht!tp:/bad_uri",
+    "statusCode": 400,
+    "scenario": "BAD REQUEST\nRequest validation failed or required input is missing"
+  },
+  {
+    "paymentId": "pay_20260326_0006",
+    "X-Request-ID": "8d3a1b5e-6c7d-4f2a-8b1c-d4e5f6a7b8c9",
+    "Digest": "INVALID_DIGEST_VALUE",
+    "statusCode": 400,
+    "scenario": "BAD REQUEST\nRequest validation failed or required input is missing"
+  },
+  {
+    "paymentId": "pay_20260326_0007",
+    "X-Request-ID": "e1f2a3b4-c5d6-4e7f-9a80-b1c2d3e4f5a6",
+    "Date": "Thu, 26 Mar 2026 13:10:45 GMT",
+    "Digest": "SHA-256=ZHVtbXk=",
+    "Signature": "keyId=\"tpp-key-unauth\",algorithm=\"rsa-sha256\",headers=\"date digest x-request-id\",signature=\"abcd==\"",
+    "statusCode": 401,
+    "scenario": "UNAUTHORISED\nInvalid/missing access token or certificate"
+  },
+  {
+    "paymentId": "pay_20260326_0008",
+    "X-Request-ID": "9a8b7c6d-5e4f-4d3c-8b2a-0f1e2d3c4b5a",
+    "Digest": "SHA-256=QmFzZTY0Q2VydA==",
+    "Signature": "keyId=\"tpp-key-unauth2\",algorithm=\"rsa-sha256\",headers=\"date digest x-request-id\",signature=\"EFGH==\"",
+    "TPP-Signature-Certificate": "MALFORMED_CERT",
+    "statusCode": 401,
+    "scenario": "UNAUTHORISED\nInvalid/missing access token or certificate"
+  },
+  {
+    "paymentId": "pay_20260326_0009",
+    "X-Request-ID": "a1b2c3d4-e5f6-4a78-9b0c-d1e2f3a4b5c6",
+    "TPP-Name": "Blocked TPP AG",
+    "Digest": "SHA-256=U29tZURpZ2VzdFZhbHVl",
+    "Signature": "keyId=\"tpp-key-forbidden\",algorithm=\"rsa-sha256\",headers=\"date digest x-request-id\",signature=\"ijkLMN==\"",
+    "TPP-Signature-Certificate": "MIICfzCCAXegAwIBAgIUY2Y3a2J4c2d5eGZha2VjZXJ0aWZ5MA0GCSqGSIb3DQEBCwUAMBIxEDAOBgNVBAMMB1RQUCBDQTAeFw0yNjAzMjYxMzAwMDBaFw0yNzAzMjYxMzAwMDBaMBYxFDASBgNVBAMMC1RQUCBTaWduZXIgQzCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAK9Yp2W6y7c1Zz1C0qXzV8o8b2XjV6v1fY6s2m7p4r5t6y7u8v9w0x1y2z3a4b5c6d7e8f9g0IDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQBTx3k2Vb7Lw8mQ1n2s3t4u5v6w7x8y9z0a1b2c3",
+    "statusCode": 403,
+    "scenario": "FORBIDDEN\nCaller is not allowed to invoke this operation"
+  },
+  {
+    "signId": "sig_20260326_C3",
+    "X-Request-ID": "d0c9b8a7-6e5d-4c3b-8a29-1f0e2d3c4b5a",
+    "TPP-Name": "Unapproved PSP",
+    "Digest": "SHA-256=VGVzdERpZ2VzdA==",
+    "Signature": "keyId=\"tpp-key-forbidden-2\",algorithm=\"rsa-sha256\",headers=\"date digest x-request-id\",signature=\"pqrsTU==\"",
+    "TPP-Signature-Certificate": "MIIDgjCCAmoCAQEwDQYJKoZIhvcNAQELBQAwEjEQMA4GA1UEAwwHVFBQIENBMB4XDTI2MDMyNjE0MDAwMFoXDTI3MDMyNjE0MDAwMFowFjEUMBIGA1UEAwwLVFBQIFNpZ25lciBDMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtV8qk7u3Wb2cP0hJfN2w5Qh3m4p6u8y9z0A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5IDAQAB",
+    "statusCode": 403,
+    "scenario": "FORBIDDEN\nCaller is not allowed to invoke this operation"
+  },
+  {
+    "paymentId": "pay_nonexistent_9999",
+    "X-Request-ID": "f1e2d3c4-b5a6-4c7d-9e80-a1b2c3d4e5f6",
+    "statusCode": 404,
+    "scenario": "ID_NOT_FOUND\nThe paymentId or signId does not exist or is invalid"
+  },
+  {
+    "signId": "sig_XX_404_NOT_FOUND",
+    "X-Request-ID": "0a1b2c3d-4e5f-4a6b-8c9d-0e1f2a3b4c5d",
+    "statusCode": 404,
+    "scenario": "ID_NOT_FOUND\nThe paymentId or signId does not exist or is invalid"
+  },
+  {
+    "paymentId": "pay_20260326_0010",
+    "X-Request-ID": "11223344-5566-4477-8899-aabbccddeeff",
+    "Date": "Thu, 26 Mar 2026 14:15:30 GMT",
+    "statusCode": 500,
+    "scenario": "INTERNAL SERVER ERROR\nUnexpected error occurred"
+  },
+  {
+    "X-Request-ID": "22334455-6677-4879-9abb-bbccddeeff00",
+    "Date": "Thu, 26 Mar 2026 15:00:00 GMT",
+    "Digest": "SHA-256=YmFkcmVxdWVzdA==",
+    "Signature": "keyId=\"tpp-key-03\",algorithm=\"rsa-sha256\",headers=\"date digest x-request-id\",signature=\"mnoPQR==\"",
+    "statusCode": 400,
+    "scenario": "BAD REQUEST\nRequest validation failed or required input is missing"
+  },
+  {
+    "paymentId": "pay_20260326_0011",
+    "X-Request-ID": "33445566-7788-4a9b-8acc-ccddeeff0011",
+    "redirectToTPPUrl": "https://tpp.client.com/auth/success?ref=ok",
+    "statusCode": 200,
+    "scenario": "OK  The URL for the status page was successfully generated"
+  }
+]
