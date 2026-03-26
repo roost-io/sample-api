@@ -1,0 +1,127 @@
+[
+  {
+    "X-Request-ID": "123e4567-e89b-12d3-a456-426614174000",
+    "PSU-ID": "DE-123456789",
+    "PSU-ID-Type": "individual",
+    "statusCode": 201,
+    "scenario": "Created"
+  },
+  {
+    "X-Request-ID": "123e4567-e89b-12d3-a456-426614174001",
+    "PSU-ID": "DE-987654321",
+    "PSU-ID-Type": "corporate",
+    "TPP-Redirect-Preferred": true,
+    "TPP-Redirect-URI": "https://example.com/redirect",
+    "statusCode": 201,
+    "scenario": "Created"
+  },
+  {
+    "X-Request-ID": "123e4567-e89b-12d3-a456-426614174002",
+    "PSU-ID": "DE-123456789",
+    "statusCode": 400,
+    "scenario": "Bad Request"
+  },
+  {
+    "X-Request-ID": "invalid-uuid",
+    "PSU-ID": "DE-123456789",
+    "PSU-ID-Type": "individual",
+    "statusCode": 400,
+    "scenario": "Bad Request"
+  },
+  {
+    "X-Request-ID": "123e4567-e89b-12d3-a456-426614174003",
+    "PSU-ID": "DE-123456789",
+    "PSU-ID-Type": "individual",
+    "PSU-Http-Method": "INVALID_METHOD",
+    "statusCode": 400,
+    "scenario": "Bad Request"
+  },
+  {
+    "X-Request-ID": "123e4567-e89b-12d3-a456-426614174004",
+    "PSU-ID": "DE-123456789",
+    "PSU-ID-Type": "individual",
+    "PSU-Http-Method": "GET",
+    "statusCode": 401,
+    "scenario": "Unauthorized"
+  },
+  {
+    "X-Request-ID": "123e4567-e89b-12d3-a456-426614174005",
+    "PSU-ID": "DE-123456789",
+    "PSU-ID-Type": "individual",
+    "PSU-Http-Method": "POST",
+    "statusCode": 403,
+    "scenario": "Forbidden"
+  },
+  {
+    "X-Request-ID": "123e4567-e89b-12d3-a456-426614174006",
+    "PSU-ID": "DE-123456789",
+    "PSU-ID-Type": "individual",
+    "PSU-Http-Method": "DELETE",
+    "statusCode": 404,
+    "scenario": "Not found"
+  },
+  {
+    "X-Request-ID": "123e4567-e89b-12d3-a456-426614174007",
+    "PSU-ID": "DE-123456789",
+    "PSU-ID-Type": "individual",
+    "PSU-Http-Method": "PATCH",
+    "statusCode": 405,
+    "scenario": "Method Not Allowed"
+  },
+  {
+    "X-Request-ID": "123e4567-e89b-12d3-a456-426614174008",
+    "PSU-ID": "DE-123456789",
+    "PSU-ID-Type": "individual",
+    "PSU-Http-Method": "PUT",
+    "statusCode": 406,
+    "scenario": "Not Acceptable"
+  },
+  {
+    "X-Request-ID": "123e4567-e89b-12d3-a456-426614174009",
+    "PSU-ID": "DE-123456789",
+    "PSU-ID-Type": "individual",
+    "PSU-Http-Method": "GET",
+    "statusCode": 408,
+    "scenario": "Request Timeout"
+  },
+  {
+    "X-Request-ID": "123e4567-e89b-12d3-a456-426614174010",
+    "PSU-ID": "DE-123456789",
+    "PSU-ID-Type": "individual",
+    "PSU-Http-Method": "POST",
+    "statusCode": 409,
+    "scenario": "Conflict"
+  },
+  {
+    "X-Request-ID": "123e4567-e89b-12d3-a456-426614174011",
+    "PSU-ID": "DE-123456789",
+    "PSU-ID-Type": "individual",
+    "PSU-Http-Method": "PUT",
+    "statusCode": 415,
+    "scenario": "Unsupported Media Type"
+  },
+  {
+    "X-Request-ID": "123e4567-e89b-12d3-a456-426614174012",
+    "PSU-ID": "DE-123456789",
+    "PSU-ID-Type": "individual",
+    "PSU-Http-Method": "PATCH",
+    "statusCode": 429,
+    "scenario": "Too Many Requests"
+  },
+  {
+    "X-Request-ID": "123e4567-e89b-12d3-a456-426614174013",
+    "PSU-ID": "DE-123456789",
+    "PSU-ID-Type": "individual",
+    "PSU-Http-Method": "DELETE",
+    "statusCode": 500,
+    "scenario": "Internal Server Error"
+  },
+  {
+    "X-Request-ID": "123e4567-e89b-12d3-a456-426614174014",
+    "PSU-ID": "DE-123456789",
+    "PSU-ID-Type": "individual",
+    "PSU-Http-Method": "GET",
+    "statusCode": 503,
+    "scenario": "Service Unavailable"
+  }
+]
